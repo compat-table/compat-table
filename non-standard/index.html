@@ -1762,6 +1762,58 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no" data-browser="android41">No</td>
 <td class="no" data-browser="android50">No</td>
 </tr>
+<tr significance="1"><td id="test-Date.parse_produces_NaN_for_invalid_dates"><span><a class="anchor" href="#test-Date.parse_produces_NaN_for_invalid_dates">&#xA7;</a>Date.parse produces NaN for invalid dates</span><script data-source="function () {
+var brokenOnFirefox = !isNaN(Date.parse(&apos;2012-04-04T24:00:00.500Z&apos;));
+var brokenOnIE10 = !isNaN(Date.parse(&apos;2012-12-31T24:01:00.000Z&apos;));
+var brokenOnChrome = !isNaN(Date.parse(&apos;2011-02-29T12:00:00.000Z&apos;));
+return !brokenOnFirefox &amp;&amp; !brokenOnIE10 &amp;&amp; !brokenOnChrome;
+  }">test(
+function () {
+var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
+var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
+var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
+return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
+  }())</script></td>
+<td class="no" data-browser="ie7">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no" data-browser="iojs">No</td>
+<td class="yes obsolete" data-browser="firefox3">Yes</td>
+<td class="no obsolete" data-browser="firefox3_5">No</td>
+<td class="no obsolete" data-browser="firefox4">No</td>
+<td class="no obsolete" data-browser="firefox5">No</td>
+<td class="no obsolete" data-browser="firefox7">No</td>
+<td class="no obsolete" data-browser="firefox12">No</td>
+<td class="no obsolete" data-browser="firefox16">No</td>
+<td class="no obsolete" data-browser="firefox17">No</td>
+<td class="no obsolete" data-browser="firefox20">No</td>
+<td class="no obsolete" data-browser="firefox28">No</td>
+<td class="no obsolete" data-browser="firefox30">No</td>
+<td class="no obsolete" data-browser="firefox37">No</td>
+<td class="no" data-browser="firefox44">No</td>
+<td class="no" data-browser="firefox46">No</td>
+<td class="no unstable" data-browser="firefox47">No</td>
+<td class="no obsolete" data-browser="safari3">No</td>
+<td class="yes obsolete" data-browser="safari4">Yes</td>
+<td class="yes obsolete" data-browser="safari5">Yes</td>
+<td class="yes" data-browser="safari7">Yes</td>
+<td class="yes" data-browser="safari71_8">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="chrome7">No</td>
+<td class="no obsolete" data-browser="chrome11">No</td>
+<td class="no obsolete" data-browser="chrome36">No</td>
+<td class="no" data-browser="chrome49">No</td>
+<td class="yes obsolete" data-browser="opera10_10">Yes</td>
+<td class="yes obsolete" data-browser="opera10_50">Yes</td>
+<td class="no obsolete" data-browser="konq44">No</td>
+<td class="no" data-browser="konq49">No</td>
+<td class="yes" data-browser="besen">Yes</td>
+<td class="yes" data-browser="rhino">Yes</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="yes obsolete" data-browser="android40">Yes</td>
+<td class="yes" data-browser="android41">Yes</td>
+<td class="yes" data-browser="android50">Yes</td>
+</tr>
 <tr><th colspan="42" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Object.prototype.watch"><span><a class="anchor" href="#test-Object.prototype.watch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a></span><script data-source="function () { return typeof Object.prototype.watch == &apos;function&apos; }">test(
@@ -1894,7 +1946,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 </tr>
 <tr significance="1"><td id="test-Object.observe"><span><a class="anchor" href="#test-Object.observe">&#xA7;</a><a href="https://arv.github.io/ecmascript-object-observe/">Object.observe</a></span><script data-source="
 return typeof Object.observe == &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>

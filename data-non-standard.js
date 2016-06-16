@@ -8,11 +8,13 @@ exports.browsers = {
   ie7: {
     full: 'Internet Explorer 7-10',
     short: 'IE 7-10',
+    family: 'Chakra',
     obsolete: false
   },
   ie11: {
     full: 'Internet Explorer 11',
     short: 'IE 11',
+    family: 'Chakra',
     obsolete: false
   },
   iojs: {
@@ -28,146 +30,175 @@ exports.browsers = {
   firefox3_5: {
     full: 'Firefox 3.5, Firefox 3.6',
     short: 'FF 3.5, 3.6',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox4: {
     full: 'Firefox 4.0b12pre',
     short: 'FF 4',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox5: {
     full: 'Firefox 5-6',
     short: 'FF 5-6',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox7: {
     full: 'Firefox 7-11',
     short: 'FF 7-11',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox12: {
     full: 'Firefox 12',
     short: 'FF 12',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox16: {
     full: 'Firefox 16',
     short: 'FF 16',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox17: {
     full: 'Firefox 17',
     short: 'FF 17',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox20: {
     full: 'Firefox 20',
     short: 'FF 20',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox28: {
     full: 'Firefox 28-29',
     short: 'FF 28-29',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox30: {
     full: 'Firefox 30-36',
     short: 'FF 30-36',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox37: {
     full: 'Firefox 37-43',
     short: 'FF 37-43',
+    family: 'SpiderMonkey',
     obsolete: true
   },
   firefox44: {
     full: 'Firefox 44-45',
     short: 'FF 44-45',
+    family: 'SpiderMonkey',
     obsolete: false
   },
   firefox46: {
     full: 'Firefox 46',
     short: 'FF 46',
+    family: 'SpiderMonkey',
     obsolete: false
   },
   firefox47: {
     full: 'Firefox 47',
     short: 'FF 47',
+    family: 'SpiderMonkey',
     unstable: true
   },
   safari3: {
     full: 'Safari 3.2',
     short: 'SF 3.2',
+    family: 'JavaScriptCore',
     obsolete: true
   },
   safari4: {
     full: 'Safari 4.0.5',
     short: 'SF 4',
+    family: 'JavaScriptCore',
     obsolete: true
   },
   safari5: {
     full: 'Safari 5',
     short: 'SF 5',
+    family: 'JavaScriptCore',
     obsolete: true
   },
   safari7: {
     full: 'Safari 7.0',
     short: 'SF 7.0',
+    family: 'JavaScriptCore',
     obsolete: false
   },
   safari71_8: {
     full: 'Safari 7.1, Safari 8',
     short: 'SF 7.1, SF 8',
+    family: 'JavaScriptCore',
     obsolete: false
   },
   safaritp: {
     full: 'Safari Technology Preview Release 5',
     short: 'SF TP',
+    family: 'JavaScriptCore',
     unstable: true
   },
   webkit: {
     full: 'Webkit r200167 (April 28, 2016)',
     short: 'WebKit',
+    family: 'JavaScriptCore',
     obsolete: false
   },
   chrome7: {
     full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)',
     short: 'CH 7-10',
+    family: 'V8',
     obsolete: true
   },
   chrome11: {
     full: 'Chrome 11-35',
     short: 'CH 11-35',
+    family: 'V8',
     obsolete: true
   },
   chrome36: {
     full: 'Chrome 36-48',
     short: 'CH 36-48',
+    family: 'V8',
     obsolete: true
   },
   chrome49: {
     full: 'Chrome 49+',
     short: 'CH 49+',
+    family: 'V8',
     obsolete: false
   },
   opera10_10: {
     full: 'Opera 10.10',
     short: 'OP 10.10',
+    family: 'Carakan',
     obsolete: true
   },
   opera10_50: {
     full: 'Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)',
     short: 'OP 10.50-11.10',
+    family: 'Carakan',
     obsolete: true
   },
   konq44: {
     full: 'Konqueror 4.4',
     short: 'Konq 4.4',
+    family: 'KJS',
     obsolete: true
   },
   konq49: {
     full: 'Konqueror 4.9',
     short: 'Konq 4.9',
+    family: 'KJS',
     obsolete: false
   },
   besen: {
@@ -1559,6 +1590,27 @@ exports.tests = [
     besen: false,
     rhino: false,
     phantom: false
+  },
+},
+{
+  name: 'Date.parse produces NaN for invalid dates',
+  exec: function () {
+    var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
+    var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
+    var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
+    return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
+  },
+  res: {
+    firefox3: true,
+    firefox4: false,
+    safari4: true,
+    webkit: true,
+    opera10_10: true,
+    konq43: true,
+    besen: true,
+    rhino: true,
+    ejs: true,
+    android40: true,
   },
   separator: 'after'
 },

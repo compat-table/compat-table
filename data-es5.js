@@ -92,6 +92,7 @@ exports.browsers = {
   },
   safaritp: {
     full: 'Safari Technology Preview Release 5',
+    family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true
   },
@@ -1200,29 +1201,6 @@ exports.tests = [
       ejs: null,
       android40: true,
     },
-  },
-  {
-    name: 'Date.parse produces NaN for invalid dates',
-    exec: function () {
-      var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
-      var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
-      var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
-      return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
-    },
-    res: {
-      es5shim: true,
-      firefox3: true,
-      firefox4: false,
-      safari4: true,
-      safaritp: true,
-      webkit: true,
-      opera10_10: true,
-      konq43: true,
-      besen: true,
-      rhino: true,
-      ejs: true,
-      android40: true,
-    }
   },
   {
     name: 'Function.prototype.apply permits array-likes',
