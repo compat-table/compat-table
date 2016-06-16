@@ -2603,7 +2603,7 @@ exports.tests = [
   name: 'Metadata reflection API',
   category: 'pre-strawman',
   significance: 'medium',
-  link: 'https://github.com/jonathandturner/decorators/blob/master/specs/metadata.md',
+  link: 'https://github.com/rbuckton/ReflectDecorators',
   subtests: [
     {
       name: 'Reflect.defineMetadata',
