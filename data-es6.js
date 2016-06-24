@@ -448,7 +448,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'WebKit r200505 (May 6, 2016)',
+    full: 'WebKit r202419 (June 24, 2016)',
     short: 'WK',
     unstable: true,
   },
@@ -8882,7 +8882,7 @@ exports.tests = [
         xs6:         true,
         ejs:         true,
         safaritp:    false,
-        webkit:      false,
+        webkit:      true,
       },
     },
     {
@@ -13448,7 +13448,7 @@ exports.tests = [
         xs6:         true,
         jxa:         true,
         safaritp:    false,
-        webkit:      false,
+        webkit:      true,
       },
     },
     {
