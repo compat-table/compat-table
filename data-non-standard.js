@@ -103,7 +103,7 @@ exports.browsers = {
     full: 'Firefox 46',
     short: 'FF 46',
     family: 'SpiderMonkey',
-    obsolete: false
+    obsolete: true
   },
   firefox47: {
     full: 'Firefox 47',
@@ -133,7 +133,7 @@ exports.browsers = {
     full: 'Safari 7.0',
     short: 'SF 7.0',
     family: 'JavaScriptCore',
-    obsolete: false
+    obsolete: true
   },
   safari71_8: {
     full: 'Safari 7.1, Safari 8',

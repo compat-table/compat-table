@@ -212,7 +212,7 @@ exports.browsers = {
   firefox38: {
     full: 'Firefox',
     short: 'FF 38<br> ESR',
-    obsolete: false, // ESR (EOL at May 2016)
+    obsolete: true, // ESR (EOL at May 2016)
   },
   firefox39: {
     full: 'Firefox',
@@ -252,7 +252,7 @@ exports.browsers = {
   firefox46: {
     full: 'Firefox',
     short: 'FF 46',
-    obsolete: false,
+    obsolete: true,
   },
   firefox47: {
     full: 'Firefox',
@@ -431,7 +431,7 @@ exports.browsers = {
   safari7: {
     full: 'Safari',
     short: 'SF 6.1,<br>SF 7',
-    obsolete: false
+    obsolete: true
   },
   safari71_8: {
     full: 'Safari',
@@ -591,12 +591,14 @@ exports.browsers = {
     short: 'iOS 7',
     platformtype: 'mobile',
     equals: 'safari7',
+    obsolete: true,
   },
   ios8: {
     full: 'iOS Safari',
     short: 'iOS 8',
     platformtype: 'mobile',
     equals: 'safari71_8',
+    obsolete: true,
   },
   ios9: {
     full: 'iOS Safari',

@@ -136,7 +136,7 @@ exports.browsers = {
   firefox38: {
     full: 'Firefox',
     short: 'FF 38 ESR',
-    obsolete: false,
+    obsolete: true,
   },
   firefox39: {
     full: 'Firefox',
@@ -170,7 +170,7 @@ exports.browsers = {
   firefox46: {
     full: 'Firefox',
     short: 'FF 46',
-    obsolete: false,
+    obsolete: true,
   },
   firefox47: {
     full: 'Firefox',
@@ -391,7 +391,7 @@ exports.browsers = {
     short: 'iOS<br />6-8',
     platformtype: 'mobile',
     equals: 'safari51',
-    obsolete: false,
+    obsolete: true,
   },
   ios9: {
     full: 'iOS 9',
