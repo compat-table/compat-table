@@ -109,7 +109,7 @@ exports.browsers = {
   safari7: {
     full: 'Safari',
     short: 'SF 7.0',
-    obsolete: false
+    obsolete: true
   },
   safari71_8: {
     full: 'Safari',
@@ -197,10 +197,11 @@ exports.browsers = {
     full: 'iOS Safari',
     short: 'iOS 7',
     platformtype: 'mobile',
+    obsolete: true,
   },
   ios8: {
     full: 'iOS Safari',
-    short: 'iOS 8',
+    short: 'iOS 8/9',
     platformtype: 'mobile',
   }
 };
