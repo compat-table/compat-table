@@ -175,7 +175,6 @@ exports.browsers = {
   firefox47: {
     full: 'Firefox',
     short: 'FF 47',
-    unstable: true,
   },
   firefox48: {
     full: 'Firefox',

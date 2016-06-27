@@ -109,7 +109,6 @@ exports.browsers = {
     full: 'Firefox 47',
     short: 'FF 47',
     family: 'SpiderMonkey',
-    unstable: true
   },
   safari3: {
     full: 'Safari 3.2',
