@@ -4,38 +4,35 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
     <meta name="viewport" content="width=device-width">
-    <title>ECMAScript 5 compatibility table</title>
+    <title>ECMAScript Next compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
-    <script>
-      var __script_executed = {};
-      if (typeof global === 'undefined') {
-        var global = this;
-      }
-    </script>
     <script>
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
+      if (typeof global === 'undefined') {
+        var global = this;
+      }
     </script>
 </head>
-<body class="es5">
+<body class="es2016plus">
   <div id="header">
     <a href="../" id="logo"><img src="../logo.png" alt="JS compat"></a>
     <div id="nav">
       <span class="hidden-mobile">ECMAScript</span>
       <span class="versions">
-        <a href="../es5" class="current">5</a><!--
+        <a href="../es5">5</a><!--
         --><a href="../es6">6</a><!--
-        --><a href="../es2016plus">ES2016+</a><!--
-        --><a href="../esnext">next</a><!--
+        --><a href="../es2016plus" class="current">ES2016+</a><!--
+        --><a href="../esnext" >next</a><!--
         --><a href="../esintl">intl</a><!--
         --><a href="../non-standard">non-standard</a>
       </span>
@@ -90,9 +87,12 @@
       <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
       <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
       <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
-      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
-      <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
       <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+      <br>
+      <span><span style="opacity:0.2;font-size:3px;">⬤</span> Minor difference (1 point)</span>
+      <span><span style="opacity:0.2;font-size:6px;">⬤</span> Useful feature (2 points)</span>
+      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Significant feature (4 points)</span>
+      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Landmark feature (8 points)</span>
     </div>
 
     <table id="table-wrapper">
