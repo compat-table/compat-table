@@ -5427,9 +5427,8 @@ return &quot;&#x1D306;&quot;.match(/\u{1d306}/u)[0].length === 2;
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="RegExp_y_and_u_flags" id="test-RegExp_y_and_u_flags_u_flag,_case_folding"><td><span><a class="anchor" href="#test-RegExp_y_and_u_flags_u_flag,_case_folding">&#xA7;</a>&quot;u&quot; flag, case folding</span><script data-source="
-return &quot;&#x17F;&quot;.match(/S/iu) &amp;&amp; &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; &quot;&#x17F;&quot;.match(/\W/iu)
- &amp;&amp; &quot;S&quot;.match(/&#x17F;/iu) &amp;&amp; &quot;S&quot;.match(/\w/iu) &amp;&amp; &quot;S&quot;.match(/\W/iu);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nreturn \"ſ\".match(/S/iu) && \"ſ\".match(/\\w/iu) && \"ſ\".match(/\\W/iu)\n && \"S\".match(/ſ/iu) && \"S\".match(/\\w/iu) && \"S\".match(/\\W/iu);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nreturn \"ſ\".match(/S/iu) && \"ſ\".match(/\\w/iu) && \"ſ\".match(/\\W/iu)\n && \"S\".match(/ſ/iu) && \"S\".match(/\\w/iu) && \"S\".match(/\\W/iu);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return &quot;&#x17F;&quot;.match(/S/iu) &amp;&amp; &quot;S&quot;.match(/&#x17F;/iu);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nreturn \"ſ\".match(/S/iu) && \"S\".match(/ſ/iu);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nreturn \"ſ\".match(/S/iu) && \"S\".match(/ſ/iu);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>

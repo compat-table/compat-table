@@ -5388,8 +5388,7 @@ exports.tests = [
     {
       name: '"u" flag, case folding',
       exec: function() {/*
-        return "ſ".match(/S/iu) && "ſ".match(/\w/iu) && "ſ".match(/\W/iu)
-         && "S".match(/ſ/iu) && "S".match(/\w/iu) && "S".match(/\W/iu);
+        return "ſ".match(/S/iu) && "S".match(/ſ/iu);
       */},
       res: {
         tr:          true,

@@ -2988,13 +2988,27 @@ exports.tests = [
         }
       });
       return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
-    */},
-    res: {
-        safari10: true,
-        safaritp: true,
-        webkit:   true,
-    },
+  */},
+  res: {
+    safari10: true,
+    safaritp: true,
+    webkit:   true,
   },
+},
+{
+  name: 'RegExp "u" flag, case folding',
+  category: '2017 misc',
+  significance: 'tiny',
+  link: 'https://github.com/tc39/ecma262/pull/525',
+  exec: function() {/*
+    return "ſ".match(/\w/iu) && !"ſ".match(/\W/iu)
+      && "K".match(/\w/iu) && !"K".match(/\W/iu)
+      && "K ".match(/.\b/iu) && "ſ ".match(/.\b/iu)
+      && !"K ".match(/.\B/iu) && !"ſ ".match(/.\B/iu);
+  */},
+  res: {
+  },
+},
 ];
 
 //Shift annex B features to the bottom
