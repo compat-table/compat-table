@@ -1,5 +1,8 @@
 var very = "very";
 
+// exports browsers
+// new browsers should only be added once they have at least a single 'true' result.
+
 module.exports = {
   tr: {
     full: 'Traceur',

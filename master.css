@@ -58,6 +58,7 @@ body:not(.es6) td {
     padding-left:0.5rem;
 }
 .es6 [significance] td:first-child:before,
+.es2016plus [significance] td:first-child:before,
 .esnext [significance] td:first-child:before {
     content: "⬤";
     opacity:0.2;
@@ -66,16 +67,19 @@ body:not(.es6) td {
     display:inline-block;
 }
 .es6 [significance="0.125"]  td:first-child:before,
+.es2016plus [significance="0.125"]  td:first-child:before,
 .esnext [significance="0.125"]  td:first-child:before {
     content: "⬤";
     font-size:3px;
 }
 .es6 [significance="0.25"] td:first-child:before,
+.es2016plus [significance="0.25"] td:first-child:before,
 .esnext [significance="0.25"] td:first-child:before {
     content: "⬤";
     font-size:6px;
 }
 .es6 [significance="0.5"] td:first-child:before,
+.es2016-plus [significance="0.5"] td:first-child:before,
 .esnext [significance="0.5"] td:first-child:before {
     content: "⬤";
     font-size:9px;

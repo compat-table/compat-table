@@ -1,7 +1,5 @@
 var browsers = require('./esnext-browsers');
 
-// exports browsers and tests
-// new browsers should only be added once they have at least a single 'true' result.
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
