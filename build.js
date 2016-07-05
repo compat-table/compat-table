@@ -41,6 +41,8 @@ process.nextTick(function () {
   handle(es5);
   var es6 = require('./data-es6');
   handle(es6);
+  var es2016plus = require('./data-es2016plus');
+  handle(es2016plus);
   var esnext = require('./data-esnext');
   handle(esnext);
   handle(require('./data-esintl'));
@@ -55,6 +57,9 @@ process.nextTick(function () {
   }
   if (!fs.existsSync('es6/compilers')) {
     fs.mkdirSync('es6/compilers');
+  }
+  if (!fs.existsSync('es2016plus/compilers')) {
+    fs.mkdirSync('es2016plus/compilers');
   }
   if (!fs.existsSync('esnext/compilers')) {
     fs.mkdirSync('esnext/compilers');
@@ -302,6 +307,46 @@ process.nextTick(function () {
     esnext.browsers = {};
     esnext.skeleton_file = 'esnext/compiler-skeleton.html';
     handle(esnext);
+  });
+  [
+    {
+      name: 'babel + core-js',
+      url: 'https://babeljs.io/',
+      target_file: 'es2016plus/compilers/babel-core-js.html',
+      polyfills: ['node_modules/babel-polyfill/browser.js'],
+      compiler: function(code) {
+        return babel.transform(code, {presets: ['es2015', 'babel-preset-stage-0']}).code;
+      },
+    },
+    {
+      name: 'es7-shim',
+      url: 'https://github.com/es-shims/es7-shim/',
+      target_file: 'es2016plus/compilers/es7-shim.html',
+      polyfills: ['node_modules/es7-shim/dist/es7-shim.js'],
+      compiler: String,
+    },
+    {
+      name: 'JSX',
+      url: 'https://github.com/facebook/react',
+      target_file: 'es2016plus/compilers/jsx.html',
+      polyfills: [],
+      compiler: function(code) {
+        var ret = jstransform.transform(code, { harmony:true });
+        return ret.code || ret;
+      },
+    },
+    {
+      name: 'TypeScript + core-js',
+      url: 'https://www.typescriptlang.org/',
+      target_file: 'es2016plus/compilers/typescript-core-js.html',
+      polyfills: ["node_modules/core-js/client/core.js"],
+      compiler: ts.transpile
+    },
+  ].forEach(function(e){
+    Object.assign(es2016plus, e);
+    es2016plus.browsers = {};
+    es2016plus.skeleton_file = 'es2016plus/compiler-skeleton.html';
+    handle(es2016plus);
   });
 });
 
