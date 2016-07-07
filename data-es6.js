@@ -447,7 +447,7 @@ exports.browsers = {
     unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 5',
+    full: 'Safari Technology Preview Release 8',
     short: 'SF TP',
     unstable: true
   },
@@ -9193,7 +9193,7 @@ exports.tests = [
         firefox49:   true,
         xs6:         true,
         ejs:         true,
-        safaritp:    false,
+        safaritp:    true,
         safari10:    true,
         webkit:      true,
       },
