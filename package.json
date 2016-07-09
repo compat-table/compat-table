@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "main": "node.js",
   "engine": {
-    "node" : ">= 0.11.12",
-    "npm"  : ">= 3.0"
+    "node": ">= 0.11.12",
+    "npm": ">= 3.0"
   },
   "repository": {
     "type": "git",
@@ -12,27 +12,27 @@
   },
   "private": true,
   "dependencies": {
-    "chalk":               "~0.5.0-1",
-    "cheerio":             "~0.18.0",
-    "object.assign":       "^3.0.1",
+    "chalk": "~0.5.0-1",
+    "cheerio": "~0.18.0",
+    "object.assign": "^3.0.1",
 
-    "babel-core":          "latest",
+    "babel-core": "latest",
     "babel-preset-es2015": "latest",
-    "babel-preset-stage-0":"latest",
-    "babel-polyfill":      "latest",
-    "es6-transpiler":      "latest",
-    "closurecompiler":     "latest",
-    "traceur":             "latest",
-    "typescript":          "latest",
-    "jstransform":         "latest",
-    "esprima":             "latest",
-    "espree":              "latest",
-    "jshint":              "latest",
-    "es5-shim":            "latest",
-    "es6-shim":            "latest",
-    "es7-shim":            "latest",
-    "core-js":             "latest",
-    "esdown":              "latest"
+    "babel-preset-stage-0": "latest",
+    "babel-polyfill": "latest",
+    "es6-transpiler": "latest",
+    "closurecompiler": "latest",
+    "traceur": "latest",
+    "typescript": "latest",
+    "jstransform": "latest",
+    "esprima": "latest",
+    "espree": "latest",
+    "jshint": "latest",
+    "es5-shim": "latest",
+    "es6-shim": "latest",
+    "es7-shim": "latest",
+    "core-js": "latest",
+    "esdown": "latest"
   },
   "scripts": {
     "lint": "jshint data-es5.js data-es6.js data-esnext.js",
