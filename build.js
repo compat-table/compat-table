@@ -731,7 +731,9 @@ function testScript(fn, transformFn, rowNum) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
+      /* jshint unused: true */ // this appears unused, but removing it might break things.
       var async = !!/asyncTestPassed/.exec(fn);
+      /* jshint unused: false */
       var codeString = JSON.stringify(expr).replace(/\\r/g,'');
       var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
       var strictAsyncFn = 'global.__strictAsyncPassedFn && __strictAsyncPassedFn("' + rowNum + '")';
