@@ -257,10 +257,10 @@ return 'toSource' in Object.prototype
 <tr><th colspan="42" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-function_caller_property"><span><a class="anchor" href="#test-function_caller_property">&#xA7;</a>function &quot;caller&quot; property</span><script data-source="function () {
-return &apos;caller&apos; in (function(){});
+return &apos;caller&apos; in function(){};
   }">test(
 function () {
-return 'caller' in (function(){});
+return 'caller' in function(){};
   }())</script></td>
 <td class="yes" data-browser="ie7">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -303,14 +303,14 @@ return 'caller' in (function(){});
 <td class="yes" data-browser="android50">Yes</td>
 </tr>
 <tr significance="1"><td id="test-function_arity_property"><span><a class="anchor" href="#test-function_arity_property">&#xA7;</a>function &quot;arity&quot; property</span><script data-source="function () {
-return (function (){}).arity === 0 &amp;&amp;
-  (function (x){}).arity === 1 &amp;&amp;
-  (function (x, y){}).arity === 2;
+return (function () {}).arity === 0 &amp;&amp;
+  (function (x) { return x; }).arity === 1 &amp;&amp;
+  (function (x, y) { return y; }).arity === 2;
   }">test(
 function () {
-return (function (){}).arity === 0 &&
-  (function (x){}).arity === 1 &&
-  (function (x, y){}).arity === 2;
+return (function () {}).arity === 0 &&
+  (function (x) { return x; }).arity === 1 &&
+  (function (x, y) { return y; }).arity === 2;
   }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -354,13 +354,13 @@ return (function (){}).arity === 0 &&
 </tr>
 <tr significance="1"><td id="test-function_arguments_property"><span><a class="anchor" href="#test-function_arguments_property">&#xA7;</a>function &quot;arguments&quot; property</span><script data-source="function () {
 function f(a, b) {
-  return f.arguments &amp;&amp; f.arguments[0] === 1 &amp;&amp; f.arguments[1] === &apos;boo&apos;;
+  return f.arguments &amp;&amp; a === 1 &amp;&amp; f.arguments[0] === 1 &amp;&amp; b === &apos;boo&apos; &amp;&amp; f.arguments[1] === &apos;boo&apos;;
 }
 return f(1, &apos;boo&apos;);
   }">test(
 function () {
 function f(a, b) {
-  return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
+  return f.arguments && a === 1 && f.arguments[0] === 1 && b === 'boo' && f.arguments[1] === 'boo';
 }
 return f(1, 'boo');
   }())</script></td>
@@ -548,7 +548,7 @@ return typeof ({}).__parent__ !== 'undefined';
 </tr>
 <tr significance="1"><td id="test-__noSuchMethod__"><span><a class="anchor" href="#test-__noSuchMethod__">&#xA7;</a><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod">__noSuchMethod__</a></span><script data-source="function () {
 var o = { }, executed = false;
-o.__noSuchMethod__ = function () { executed = true; }
+o.__noSuchMethod__ = function () { executed = true; };
 try {
   o.__i_dont_exist();
 } catch (e) { }
@@ -556,7 +556,7 @@ return executed;
   }">test(
 function () {
 var o = { }, executed = false;
-o.__noSuchMethod__ = function () { executed = true; }
+o.__noSuchMethod__ = function () { executed = true; };
 try {
   o.__i_dont_exist();
 } catch (e) { }
@@ -970,8 +970,11 @@ return arr[1] === arr;
 <tr><th colspan="42" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Iterator"><span><a class="anchor" href="#test-Iterator">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></span><script data-source="function () {
+/* global Iterator */
 try {
+  // jshint newcap:false
   var it = Iterator({ foo: 1, bar: 2 });
+  // jshint newcap:true
   var keys = &quot;&quot;;
   var values = 0;
   for (var pair in it) {
@@ -985,8 +988,11 @@ catch(e) {
 }
   }">test(
 function () {
+/* global Iterator */
 try {
+  // jshint newcap:false
   var it = Iterator({ foo: 1, bar: 2 });
+  // jshint newcap:true
   var keys = "";
   var values = 0;
   for (var pair in it) {
@@ -1044,14 +1050,17 @@ try {
   var x = 5;
   var iter = {
     next: function() {
+      /* global StopIteration */
       if (x &gt; 0) return { foo: --x };
       else throw StopIteration;
     }
   };
   var total = 0;
-  for (var item in { __iterator__ : function() { return iter; }}) {
+  // jshint iterator: true
+  for (var item in { __iterator__: function() { return iter; }}) {
     total += item.foo;
   }
+  // jshint iterator: false
   return total === 10;
 }
 catch(e) {
@@ -1063,14 +1072,17 @@ try {
   var x = 5;
   var iter = {
     next: function() {
+      /* global StopIteration */
       if (x > 0) return { foo: --x };
       else throw StopIteration;
     }
   };
   var total = 0;
-  for (var item in { __iterator__ : function() { return iter; }}) {
+  // jshint iterator: true
+  for (var item in { __iterator__: function() { return iter; }}) {
     total += item.foo;
   }
+  // jshint iterator: false
   return total === 10;
 }
 catch(e) {
@@ -1117,7 +1129,7 @@ catch(e) {
 <td class="no" data-browser="android41">No</td>
 <td class="no" data-browser="android50">No</td>
 </tr>
-<tr significance="1"><td id="test-Generators_(JS_1.8)"><span><a class="anchor" href="#test-Generators_(JS_1.8)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span><script type="application/javascript;version=1.8" data-source="test(function () {
+<tr significance="1"><td id="test-Generators_(JS_1.8)"><span><a class="anchor" href="#test-Generators_(JS_1.8)">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators (JS 1.8)</a></span><script type="application/javascript;version=1.8" data-source="global.test((function () {
 try {
   var g = eval(&apos;(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})&apos;)();
   var passed = g.next() === &quot;foo&quot;;
@@ -1126,8 +1138,8 @@ try {
 catch(e) {
   return false;
 }
-        }());
-        __script_executed[&quot;generators&quot;] = true;">test(function () {
+        }()));
+        global.__script_executed[&quot;generators&quot;] = true;">global.test((function () {
 try {
   var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
   var passed = g.next() === "foo";
@@ -1136,9 +1148,9 @@ try {
 catch(e) {
   return false;
 }
-        }());
-        __script_executed["generators"] = true;</script><script data-source="if (!__script_executed[&quot;generators&quot;]) {
-test(function () {
+        }()));
+        global.__script_executed["generators"] = true;</script><script data-source="if (!global.__script_executed[&quot;generators&quot;]) {
+global.test((function () {
   try {
     var g = eval(&apos;(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})&apos;)();
     var passed = g.next() === &quot;foo&quot;;
@@ -1147,9 +1159,9 @@ test(function () {
   catch(e) {
     return false;
   }
-}());
-        }">if (!__script_executed["generators"]) {
-test(function () {
+}()));
+        }">if (!global.__script_executed["generators"]) {
+global.test((function () {
   try {
     var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
     var passed = g.next() === "foo";
@@ -1158,7 +1170,7 @@ test(function () {
   catch(e) {
     return false;
   }
-}());
+}()));
         }</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1301,7 +1313,7 @@ return passed;
 </tr>
 <tr significance="1"><td id="test-RegExp_x_flag"><span><a class="anchor" href="#test-RegExp_x_flag">&#xA7;</a>RegExp &quot;x&quot; flag</span><script data-source="function () {
 try {
-  var re = RegExp(&apos;^ ( \\d+ ) \
+  var re = new RegExp(&apos;^ ( \\d+ ) \
                      ( \\w+ ) \
                      ( foo  )&apos;, &apos;x&apos;);
   return re.exec(&apos;23xfoo&apos;)[0] === &apos;23xfoo&apos;;
@@ -1311,7 +1323,7 @@ try {
   }">test(
 function () {
 try {
-  var re = RegExp('^ ( \\d+ ) \
+  var re = new RegExp('^ ( \\d+ ) \
                      ( \\w+ ) \
                      ( foo  )', 'x');
   return re.exec('23xfoo')[0] === '23xfoo';
@@ -1993,14 +2005,14 @@ return typeof Object.observe == &apos;function&apos;;
 </tr>
 <tr significance="1"><td id="test-error_stack"><span><a class="anchor" href="#test-error_stack">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack">error &quot;stack&quot;</a></span><script data-source="function () {
 try {
-  throw new Error;
+  throw new Error();
 } catch (err) {
   return &apos;stack&apos; in err;
 }
   }">test(
 function () {
 try {
-  throw new Error;
+  throw new Error();
 } catch (err) {
   return 'stack' in err;
 }
@@ -2046,10 +2058,10 @@ try {
 <td class="yes" data-browser="android50">Yes</td>
 </tr>
 <tr significance="1"><td id="test-error_lineNumber"><span><a class="anchor" href="#test-error_lineNumber">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber">error &quot;lineNumber&quot;</a></span><script data-source="function () {
-return &apos;lineNumber&apos; in new Error;
+return &apos;lineNumber&apos; in new Error();
   }">test(
 function () {
-return 'lineNumber' in new Error;
+return 'lineNumber' in new Error();
   }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2092,10 +2104,10 @@ return 'lineNumber' in new Error;
 <td class="no" data-browser="android50">No</td>
 </tr>
 <tr significance="1"><td id="test-error_columnNumber"><span><a class="anchor" href="#test-error_columnNumber">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber">error &quot;columnNumber&quot;</a></span><script data-source="function () {
-return &apos;columnNumber&apos; in new Error;
+return &apos;columnNumber&apos; in new Error();
   }">test(
 function () {
-return 'columnNumber' in new Error;
+return 'columnNumber' in new Error();
   }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2138,10 +2150,10 @@ return 'columnNumber' in new Error;
 <td class="no" data-browser="android50">No</td>
 </tr>
 <tr significance="1"><td id="test-error_fileName"><span><a class="anchor" href="#test-error_fileName">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName">error &quot;fileName&quot;</a></span><script data-source="function () {
-return &apos;fileName&apos; in new Error;
+return &apos;fileName&apos; in new Error();
   }">test(
 function () {
-return 'fileName' in new Error;
+return 'fileName' in new Error();
   }())</script></td>
 <td class="no" data-browser="ie7">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2184,10 +2196,10 @@ return 'fileName' in new Error;
 <td class="no" data-browser="android50">No</td>
 </tr>
 <tr significance="1"><td id="test-error_description"><span><a class="anchor" href="#test-error_description">&#xA7;</a><a href="http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx">error &quot;description&quot;</a></span><script data-source="function () {
-return &apos;description&apos; in new Error;
+return &apos;description&apos; in new Error();
   }">test(
 function () {
-return 'description' in new Error;
+return 'description' in new Error();
   }())</script></td>
 <td class="yes" data-browser="ie7">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
