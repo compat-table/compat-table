@@ -34,8 +34,9 @@
     "esdown": "latest"
   },
   "scripts": {
-    "lint": "jshint data-es5.js data-es6.js data-esnext.js",
+    "lint": "jshint .",
     "build": "node build.js",
+    "pretest": "npm run lint",
     "build:compilers": "node build.js compilers"
   },
   "config": {

@@ -22,10 +22,10 @@
 
 require('object.assign').shim();
 
-var fs         = require('fs');
-var path       = require('path');
-var os         = require('os');
-var cheerio    = require('cheerio');
+var fs = require('fs');
+var path = require('path');
+var os = require('os');
+var cheerio = require('cheerio');
 // requires Node v0.11.12
 var child_process = require('child_process');
 
@@ -64,7 +64,7 @@ process.nextTick(function () {
   if (!fs.existsSync('esnext/compilers')) {
     fs.mkdirSync('esnext/compilers');
   }
-  var closure     = require('closurecompiler');
+  require('closurecompiler'); // not sure if this is actually needed or not
   var babel       = require('babel-core');
   var traceur     = require('traceur');
   var esdown      = require('esdown');
@@ -250,9 +250,10 @@ process.nextTick(function () {
       polyfills: [],
       compiler: function(code) {
         var fpath = os.tmpDir() + path.sep + 'temp.js';
-        var file = fs.writeFileSync(fpath, code);
+        fs.writeFileSync(fpath, code);
+        var output;
         try {
-          output = ""+child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
+          output = "" + child_process.execSync('node_modules/closurecompiler/bin/ccjs ' +
             fpath +
             ' --language_in=ECMASCRIPT6 --language_out=ECMASCRIPT5 --rewrite_polyfills'
           );
@@ -351,7 +352,7 @@ process.nextTick(function () {
 });
 
 
-function handle(options, compiler) {
+function handle(options) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
   var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
 
@@ -398,10 +399,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   },{});
 
   function interpolateResults(res) {
-    var browser, prevBrowser, result, prevResult, bid, prevBid, j;
+    var browser, prevBrowser, result, prevResult, bid, prevBid;
     // For each browser, check if the previous browser has the same
     // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
-    for (var bid in rawBrowsers) {
+    for (bid in rawBrowsers) {
       browser = rawBrowsers[bid];
       if (prevBrowser &&
           (prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'') ||
@@ -419,7 +420,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     }
     // For browsers that are essentially equal to other browsers,
     // copy over the results.
-    for (var bid in rawBrowsers) {
+    for (bid in rawBrowsers) {
       browser = rawBrowsers[bid];
       if (browser.equals) {
         result = res[browser.equals];
@@ -490,7 +491,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
   // Now print the results.
   tests.forEach(function(t, testNum) {
-    var subtests;
     // Calculate the result totals for tests which consist solely of subtests.
     if ("subtests" in t) {
       t.subtests.forEach(function(e) {
@@ -584,12 +584,12 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
     // Print all the results for the subtests
     if ("subtests" in t) {
-      t.subtests.forEach(function(subtest, subtestNum) {
+      t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
 
         var subtestId = id + '_' + escapeTestName(subtestName);
 
-        subtestRow = $('<tr class="subtest"></tr>')
+        var subtestRow = $('<tr class="subtest"></tr>')
           .attr('data-parent', id)
           .attr('id', getHtmlId(subtestId))
 
@@ -676,7 +676,7 @@ function replaceAndIndent(str, replacements) {
     replacement = replacements[i];
     indent = new RegExp('(\n[ \t]*)' + replacement[0]).exec(str);
     if (!indent) {
-      indent = [,''];
+      indent = [null, ''];
     }
     str = str
       .split(replacement[0])
@@ -725,7 +725,7 @@ function testScript(fn, transformFn, rowNum) {
           if (expr.search(/Function\s*\(|eval\s*\(/) > -1) {
             throw new Error("This test's code invokes eval() and cannot be compiled.");
           }
-          expr = transformFn("(function(){" + expr + "})")
+          expr = transformFn("(function(){" + expr + "})");
           transformed = true;
         } catch(e) {
           expr = "/* Error during compilation: " + e.message + "*/";

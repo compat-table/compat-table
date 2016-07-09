@@ -336,7 +336,7 @@ exports.tests = [
 {
   name: 'function "caller" property',
   exec: function () {
-    return 'caller' in (function(){});
+    return 'caller' in function(){};
   },
   res: {
     ie7: true,
@@ -381,9 +381,9 @@ exports.tests = [
 {
   name: 'function "arity" property',
   exec: function () {
-    return (function (){}).arity === 0 &&
-      (function (x){}).arity === 1 &&
-      (function (x, y){}).arity === 2;
+    return (function () {}).arity === 0 &&
+      (function (x) { return x; }).arity === 1 &&
+      (function (x, y) { return y; }).arity === 2;
   },
   res: {
     ie7: false,
@@ -418,7 +418,7 @@ exports.tests = [
   name: 'function "arguments" property',
   exec: function () {
     function f(a, b) {
-      return f.arguments && f.arguments[0] === 1 && f.arguments[1] === 'boo';
+      return f.arguments && a === 1 && f.arguments[0] === 1 && b === 'boo' && f.arguments[1] === 'boo';
     }
     return f(1, 'boo');
   },
@@ -582,7 +582,7 @@ exports.tests = [
   link: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod',
   exec: function () {
     var o = { }, executed = false;
-    o.__noSuchMethod__ = function () { executed = true; }
+    o.__noSuchMethod__ = function () { executed = true; };
     try {
       o.__i_dont_exist();
     } catch (e) { }
@@ -926,8 +926,11 @@ exports.tests = [
   name: 'Iterator',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
   exec: function () {
+    /* global Iterator */
     try {
+      // jshint newcap:false
       var it = Iterator({ foo: 1, bar: 2 });
+      // jshint newcap:true
       var keys = "";
       var values = 0;
       for (var pair in it) {
@@ -985,14 +988,17 @@ exports.tests = [
       var x = 5;
       var iter = {
         next: function() {
+          /* global StopIteration */
           if (x > 0) return { foo: --x };
           else throw StopIteration;
         }
       };
       var total = 0;
-      for (var item in { __iterator__ : function() { return iter; }}) {
+      // jshint iterator: true
+      for (var item in { __iterator__: function() { return iter; }}) {
         total += item.foo;
       }
+      // jshint iterator: false
       return total === 10;
     }
     catch(e) {
@@ -1042,7 +1048,7 @@ exports.tests = [
   exec:[{
       type: 'application/javascript;version=1.8',
       script: function () {
-        test(function () {
+        global.test((function () {
           try {
             var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
             var passed = g.next() === "foo";
@@ -1051,13 +1057,13 @@ exports.tests = [
           catch(e) {
             return false;
           }
-        }());
-        __script_executed["generators"] = true;
+        }()));
+        global.__script_executed["generators"] = true;
       }
   },{
       script: function () {
-        if (!__script_executed["generators"]) {
-          test(function () {
+        if (!global.__script_executed["generators"]) {
+          global.test((function () {
             try {
               var g = eval('(function() { var a = yield "foo"; yield a + "baz";})')();
               var passed = g.next() === "foo";
@@ -1066,7 +1072,7 @@ exports.tests = [
             catch(e) {
               return false;
             }
-          }());
+          }()));
         }
       }
   }],
@@ -1178,7 +1184,7 @@ exports.tests = [
   name: 'RegExp "x" flag',
   exec: function () {
     try {
-      var re = RegExp('^ ( \\d+ ) \
+      var re = new RegExp('^ ( \\d+ ) \
                          ( \\w+ ) \
                          ( foo  )', 'x');
       return re.exec('23xfoo')[0] === '23xfoo';
@@ -1749,7 +1755,7 @@ exports.tests = [
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
   exec: function () {
     try {
-      throw new Error;
+      throw new Error();
     } catch (err) {
       return 'stack' in err;
     }
@@ -1798,7 +1804,7 @@ exports.tests = [
   name: 'error "lineNumber"',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber',
   exec: function () {
-    return 'lineNumber' in new Error;
+    return 'lineNumber' in new Error();
   },
   res: {
     ie7: false,
@@ -1841,7 +1847,7 @@ exports.tests = [
   name: 'error "columnNumber"',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber',
   exec: function () {
-    return 'columnNumber' in new Error;
+    return 'columnNumber' in new Error();
   },
   res: {
     ie7: false,
@@ -1883,7 +1889,7 @@ exports.tests = [
   name: 'error "fileName"',
   link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName',
   exec: function () {
-    return 'fileName' in new Error;
+    return 'fileName' in new Error();
   },
   res: {
     ie7: false,
@@ -1926,7 +1932,7 @@ exports.tests = [
   name: 'error "description"',
   link: 'http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx',
   exec: function () {
-    return 'description' in new Error;
+    return 'description' in new Error();
   },
   res: {
     ie7: true,

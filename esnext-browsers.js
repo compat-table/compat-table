@@ -358,4 +358,4 @@ module.exports = {
       equals: 'safari9',
       obsolete: false,
   },
-}
+};

@@ -726,7 +726,6 @@ exports.tests = [
         ie9: false,
         ie10: false,
         ie11: false,
-        ie11: false,
         edge: false,
         edge14: true,
         firefox29: false, // Firefox bug #1266290

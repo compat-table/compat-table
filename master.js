@@ -30,14 +30,15 @@ function makeAsyncPassedFn(className, textContent) {
       var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
       elem.className = className;
       elem.textContent = textContent;
-      if (global.__updateHeaderTotal) {
-        $(elem).parent().prevAll('.supertest').first().each(__updateSupertest);
-        $('th.current').each(__updateHeaderTotal);
+      if (window.__updateHeaderTotal) {
+        $(elem).parent().prevAll('.supertest').first().each(window.__updateSupertest);
+        $('th.current').each(window.__updateHeaderTotal);
       }
-    }
-  }
+    };
+  };
 }
-var __asyncPassedFn = makeAsyncPassedFn('yes', "Yes"), __strictAsyncPassedFn = makeAsyncPassedFn("no strict", "Strict")
+window.__asyncPassedFn = makeAsyncPassedFn('yes', "Yes");
+window.__strictAsyncPassedFn = makeAsyncPassedFn("no strict", "Strict");
 
 $(function() {
   'use strict';
@@ -48,10 +49,10 @@ $(function() {
     // Remove floatThead when native position:sticky is usable.
     // Currently, only Safari (which floatThead incidentally does not support),
     // and its -webkit-sticky prefix, works correctly with <thead>.
-    $.fn.floatThead = function(){ return this };
+    $.fn.floatThead = function() { return this };
   }
 
-  var initFloatingHeaders = function(){
+  var initFloatingHeaders = function() {
     table.floatThead({
       headerCellSelector: 'tr:last>*:visible'
     });
@@ -79,11 +80,11 @@ $(function() {
       setColSpans();
       table.triggerHandler('reflow'); //refresh floatThead
     }, 100);
-  }).each(function(){
-    if(this.checked) $(this).triggerHandler("click");
-  })
+  }).each(function() {
+    if (this.checked) $(this).triggerHandler("click");
+  });
 
-  window.__updateSupertest = function(){
+  window.__updateSupertest = function() {
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
     if (subtests.length === 0) {
@@ -100,7 +101,7 @@ $(function() {
       + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
-  }
+  };
 
   $('tr.supertest').each(function() {
     var tr = $(this);
@@ -131,7 +132,7 @@ $(function() {
     });
 
     // Also, work out tallies for the current browser's tally features
-    tr.each(__updateSupertest);
+    tr.each(window.__updateSupertest);
   });
 
 
@@ -150,7 +151,7 @@ $(function() {
     globalFoldDown.data('is-expanded', !globalFoldDown.data('is-expanded'));
 
     var deg = globalFoldDown.data('is-expanded') ? '90deg' : '0deg';
-    globalFoldDown.css('transform', 'rotate(' + deg + ')')
+    globalFoldDown.css('transform', 'rotate(' + deg + ')');
   })
   .css('cursor', 'pointer')
   .prop('title', 'Expand/Collapse all tests');
@@ -206,7 +207,7 @@ $(function() {
       })
       .on('mousemove', function (e) {
         if (!infoTooltip.data('locked-from')) {
-          infoTooltip.moveHere(e)
+          infoTooltip.moveHere(e);
         }
       })
       .on('click', function (e) {
@@ -222,11 +223,11 @@ $(function() {
           elem.addClass('tooltip-locked');
         }
         e.stopPropagation();
-      })
+      });
   });
 
   // Hide locked tooltip when clicking outside of it
-  $(window).on('click', function (event) {
+  $(window).on('click', function () {
     var lockedFrom = infoTooltip.data('locked-from');
     if (lockedFrom) {
       infoTooltip.unlockAndHide(lockedFrom);
@@ -405,7 +406,7 @@ $(function() {
           ? ',' + gradient(colour.replace(".5",".2"), flaggedFeaturesCount)
           : '')});
   };
-  $('.browser-name, th.current').each(__updateHeaderTotal);
+  $('.browser-name, th.current').each(window.__updateHeaderTotal);
 
   setColSpans();
   initFloatingHeaders();
@@ -414,8 +415,8 @@ $(function() {
   var ordering = { };
 
   var defaultSortVal = 'engine-types';
-  var noPlatformtype = $(".platformtype").length == 0;
-  if(noPlatformtype){
+  var noPlatformtype = $(".platformtype").length === 0;
+  if (noPlatformtype) {
     $('body').addClass('hide-platformtype');
   }
 
@@ -465,7 +466,7 @@ $(function() {
 
     initFloatingHeaders();
   });
-  if($("#sort").val() !== defaultSortVal){
+  if ($("#sort").val() !== defaultSortVal) {
     $("#sort").triggerHandler('change');
   }
 });
