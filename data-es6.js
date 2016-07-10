@@ -55,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20160517',
+    full: 'Closure Compiler v20160619',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -2531,6 +2531,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         jsx:         true,
+        closure:     true,
         ejs:         true,
         edge12:      flag,
         edge13:      true,
@@ -2557,6 +2558,7 @@ exports.tests = [
         typescript:  true,
         es6tr:       true,
         jsx:         true,
+        closure:     true,
         ejs:         true,
         edge12:      flag,
         edge13:      true,
@@ -16636,6 +16638,7 @@ exports.tests = [
         return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
+        closure:     true,
         safaritp:    true,
         safari10:    true,
         webkit:      true,
@@ -16662,6 +16665,7 @@ exports.tests = [
         return set instanceof S && set.has(123);
       */},
       res: {
+        closure:     true,
         safaritp:    true,
         safari10:    true,
         webkit:      true,
