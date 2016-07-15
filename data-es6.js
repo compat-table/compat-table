@@ -17069,7 +17069,6 @@ exports.tests = [
         typescript:  true,
         xs6:         true,
         jxa:         true,
-        chrome52:    true,
         safaritp:    true,
         safari10:    true,
         webkit:      true,
