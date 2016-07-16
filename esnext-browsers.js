@@ -13,7 +13,7 @@ module.exports = {
     full: 'Babel 6.5 + core-js 2.4',
       short: 'Babel +<br><nobr>core-js</nobr>',
       platformtype: 'compiler',
-      note_id: 'experimental-flag',
+      note_id: 'babel-optional',
       note_html: 'Have to be enabled via <code>babel-preset-stage-0</code> preset'
   },
   jsx: {
