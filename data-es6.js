@@ -15191,6 +15191,7 @@ exports.tests = [
         es6shim:     true,
         edge12:      true,
         chrome51:    true,
+        chrome52:    false,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
