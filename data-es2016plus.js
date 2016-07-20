@@ -175,7 +175,6 @@ exports.tests = [
           chrome47:        true,
           edge14:          true,
           firefox43:       true,
-          safaritp:        true,
         }
       },
       {
