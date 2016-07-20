@@ -245,12 +245,12 @@ module.exports = {
   chrome51: {
     full: 'Chrome',
       short: 'CH 51',
+      obsolete: true,
       note_id: 'experimental-flag',
   },
   chrome52: {
     full: 'Chrome',
       short: 'CH 52',
-      unstable: true,
       note_id: 'experimental-flag',
   },
   safari51: {
