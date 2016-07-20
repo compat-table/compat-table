@@ -175,6 +175,7 @@ exports.tests = [
           chrome47:        true,
           edge14:          true,
           firefox43:       true,
+          safaritp:        true,
         }
       },
       {
@@ -233,6 +234,7 @@ exports.tests = [
           chrome47:        true,
           edge14:          true,
           firefox43:       true,
+          safaritp:        true,
         }
       },
     ],
@@ -787,6 +789,7 @@ exports.tests = [
          */},
         res: {
           firefox49:   true,
+          safaritp:    true,
         }
       },
       {
@@ -805,6 +808,7 @@ exports.tests = [
          */},
         res: {
           firefox49:   true,
+          safaritp:    true,
         }
       }
     ]

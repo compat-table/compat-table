@@ -269,7 +269,7 @@ module.exports = {
       unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 8',
+    full: 'Safari Technology Preview Release 9',
       short: 'SF TP',
       unstable: true
   },
