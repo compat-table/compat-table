@@ -164,7 +164,8 @@ exports.browsers = {
     full: 'Webkit r200167 (April 28, 2016)',
     short: 'WebKit',
     family: 'JavaScriptCore',
-    obsolete: false
+    obsolete: false,
+    unstable: true
   },
   chrome7: {
     full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)',
