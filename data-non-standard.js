@@ -17,6 +17,12 @@ exports.browsers = {
     family: 'Chakra',
     obsolete: false
   },
+  edge13: {
+    full: 'Edge 13',
+    short: 'Edge 13',
+    family: 'Chakra',
+    obsolete: false
+  },
   iojs: {
     full: 'io.js 1.0.0',
     short: 'io.js',
@@ -107,8 +113,16 @@ exports.browsers = {
   },
   firefox47: {
     full: 'Firefox 47',
-    short: 'FF 47',
+    short: 'FF 47-48',
     family: 'SpiderMonkey',
+    obsolete: false
+  },
+  firefox49: {
+    full: 'Firefox 49',
+    short: 'FF 49',
+    family: 'SpiderMonkey',
+    obsolete: false,
+    unstable: true
   },
   safari3: {
     full: 'Safari 3.2',
@@ -135,8 +149,8 @@ exports.browsers = {
     obsolete: true
   },
   safari71_8: {
-    full: 'Safari 7.1, Safari 8',
-    short: 'SF 7.1, SF 8',
+    full: 'Safari 7.1-9.1',
+    short: 'SF 7.1-9.1',
     family: 'JavaScriptCore',
     obsolete: false
   },
@@ -150,7 +164,8 @@ exports.browsers = {
     full: 'Webkit r200167 (April 28, 2016)',
     short: 'WebKit',
     family: 'JavaScriptCore',
-    obsolete: false
+    obsolete: false,
+    unstable: true
   },
   chrome7: {
     full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)',
@@ -1395,6 +1410,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: false,
+    edge13: true,
     iojs: true,
     firefox3: false,
     firefox3_5: true,
@@ -1439,6 +1455,7 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: false,
+    edge13: true,
     iojs: true,
     firefox3: false,
     firefox3_5: true,
@@ -1535,7 +1552,8 @@ exports.tests = [
     firefox37: true,
     firefox44: true,
     firefox46: true,
-    firefox47: false,
+    firefox47: true /* false in non-release builds */,
+    firefox49: false,
     //safari3: false,
     //safari4: false,
     safari5: false,
@@ -1608,6 +1626,7 @@ exports.tests = [
   res: {
     firefox3: true,
     firefox4: false,
+    firefox49: true,
     safari4: true,
     webkit: true,
     opera10_10: true,
