@@ -665,6 +665,27 @@ exports.tests = [
         },
       },
       {
+        name: '__lookupGetter__, data properties can shadow accessors',
+        exec: function () {/*
+         var a = { };
+         var b = Object.create(a);
+         b.foo = 1;
+         a.__defineGetter__("foo", function () {})
+         return b.__lookupGetter__("foo") === undefined
+         */},
+        res: (temp.lookupGetterShadowResults = {
+          babel:       true,
+          typescript:  typescript.corejs,
+          firefox31:   true,
+          safari51:    true,
+          safari9:     true,
+          safari10:    true,
+          safaritp:    true,
+          webkit:      true,
+          ios51:       true,
+        }),
+      },
+      {
         name: '__lookupSetter__',
         exec: function () {/*
          var obj = {
@@ -728,6 +749,17 @@ exports.tests = [
           safaritp:    true,
           webkit:      true,
         },
+      },
+      {
+        name: '__lookupSetter__, data properties can shadow accessors',
+        exec: function () {/*
+         var a = { };
+         var b = Object.create(a);
+         b.foo = 1;
+         a.__defineSetter__("foo", function () {})
+         return b.__lookupSetter__("foo") === undefined
+         */},
+        res: temp.lookupGetterShadowResults,
       }
     ]
   },
