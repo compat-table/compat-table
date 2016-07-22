@@ -12096,12 +12096,12 @@ exports.tests = [
       name: 'Promise.all',
       exec: function () {/*
         var fulfills = Promise.all([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
         ]);
         var rejects = Promise.all([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
         ]);
         var score = 0;
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -12131,12 +12131,12 @@ exports.tests = [
       name: 'Promise.all, generic iterables',
       exec: function () {/*
         var fulfills = Promise.all(global.__createIterableObject([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
         ]));
         var rejects = Promise.all(global.__createIterableObject([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
         ]));
         var score = 0;
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -12165,12 +12165,12 @@ exports.tests = [
       name: 'Promise.race',
       exec: function () {/*
         var fulfills = Promise.race([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
         ]);
         var rejects = Promise.race([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
         ]);
         var score = 0;
         fulfills.then(function(result) { score += (result === "foo"); check(); });
@@ -12200,12 +12200,12 @@ exports.tests = [
       name: 'Promise.race, generic iterables',
       exec: function () {/*
         var fulfills = Promise.race(global.__createIterableObject([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
         ]));
         var rejects = Promise.race(global.__createIterableObject([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
         ]));
         var score = 0;
         fulfills.then(function(result) { score += (result === "foo"); check(); });
@@ -16464,12 +16464,12 @@ exports.tests = [
       exec: function () {/*
         class P extends Promise {}
         var fulfills = P.all([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,100,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
         ]);
         var rejects = P.all([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 100,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
         ]);
         var score = +(fulfills instanceof P);
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -16497,12 +16497,12 @@ exports.tests = [
       exec: function () {/*
         class P extends Promise {}
         var fulfills = P.race([
-          new Promise(function(resolve)   { setTimeout(resolve,200,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 300,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
         ]);
         var rejects = P.race([
-          new Promise(function(_, reject) { setTimeout(reject, 200,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,300,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
         ]);
         var score = +(fulfills instanceof P);
         fulfills.then(function(result) { score += (result === "foo"); check(); });

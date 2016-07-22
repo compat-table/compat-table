@@ -34875,12 +34875,12 @@ try {
 </tr>
 <tr class="subtest" data-parent="Promise" id="test-Promise_Promise.all"><td><span><a class="anchor" href="#test-Promise_Promise.all">&#xA7;</a>Promise.all</span><script data-source="
 var fulfills = Promise.all([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]);
 var rejects = Promise.all([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]);
 var score = 0;
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -34889,7 +34889,7 @@ rejects.catch(function(result) { score += (result === &quot;qux&quot;); check();
 function check() {
   if (score === 2) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("424");try{return Function("asyncTestPassed","\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("424");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("424");try{return Function("asyncTestPassed","\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("424");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.all([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]);\nvar rejects = Promise.all([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -34966,12 +34966,12 @@ function check() {
 </tr>
 <tr class="subtest" data-parent="Promise" id="test-Promise_Promise.all,_generic_iterables"><td><span><a class="anchor" href="#test-Promise_Promise.all,_generic_iterables">&#xA7;</a>Promise.all, generic iterables</span><script data-source="
 var fulfills = Promise.all(global.__createIterableObject([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]));
 var rejects = Promise.all(global.__createIterableObject([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]));
 var score = 0;
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -34980,7 +34980,7 @@ rejects.catch(function(result) { score += (result === &quot;qux&quot;); check();
 function check() {
   if (score === 2) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("425");try{return Function("asyncTestPassed","\nvar fulfills = Promise.all(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]));\nvar rejects = Promise.all(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("425");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.all(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]));\nvar rejects = Promise.all(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("425");try{return Function("asyncTestPassed","\nvar fulfills = Promise.all(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]));\nvar rejects = Promise.all(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("425");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.all(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]));\nvar rejects = Promise.all(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -35057,12 +35057,12 @@ function check() {
 </tr>
 <tr class="subtest" data-parent="Promise" id="test-Promise_Promise.race"><td><span><a class="anchor" href="#test-Promise_Promise.race">&#xA7;</a>Promise.race</span><script data-source="
 var fulfills = Promise.race([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]);
 var rejects = Promise.race([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]);
 var score = 0;
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -35071,7 +35071,7 @@ rejects.catch(function(result) { score += (result === &quot;baz&quot;); check();
 function check() {
   if (score === 2) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("426");try{return Function("asyncTestPassed","\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("426");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("426");try{return Function("asyncTestPassed","\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("426");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.race([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]);\nvar rejects = Promise.race([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]);\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -35148,12 +35148,12 @@ function check() {
 </tr>
 <tr class="subtest" data-parent="Promise" id="test-Promise_Promise.race,_generic_iterables"><td><span><a class="anchor" href="#test-Promise_Promise.race,_generic_iterables">&#xA7;</a>Promise.race, generic iterables</span><script data-source="
 var fulfills = Promise.race(global.__createIterableObject([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]));
 var rejects = Promise.race(global.__createIterableObject([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]));
 var score = 0;
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -35162,7 +35162,7 @@ rejects.catch(function(result) { score += (result === &quot;baz&quot;); check();
 function check() {
   if (score === 2) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("427");try{return Function("asyncTestPassed","\nvar fulfills = Promise.race(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]));\nvar rejects = Promise.race(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("427");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.race(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]));\nvar rejects = Promise.race(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("427");try{return Function("asyncTestPassed","\nvar fulfills = Promise.race(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]));\nvar rejects = Promise.race(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("427");return Function("asyncTestPassed","'use strict';"+"\nvar fulfills = Promise.race(global.__createIterableObject([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]));\nvar rejects = Promise.race(global.__createIterableObject([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]));\nvar score = 0;\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -47999,12 +47999,12 @@ return c instanceof C &amp;&amp; c instanceof Promise &amp;&amp; Object.getProto
 <tr class="subtest" data-parent="Promise_is_subclassable" id="test-Promise_is_subclassable_Promise.all"><td><span><a class="anchor" href="#test-Promise_is_subclassable_Promise.all">&#xA7;</a>Promise.all</span><script data-source="
 class P extends Promise {}
 var fulfills = P.all([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]);
 var rejects = P.all([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]);
 var score = +(fulfills instanceof P);
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -48013,7 +48013,7 @@ rejects.catch(function(result) { score += (result === &quot;qux&quot;); check();
 function check() {
   if (score === 3) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("589");try{return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("589");return Function("asyncTestPassed","'use strict';"+"\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,100,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 100,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("589");try{return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("589");return Function("asyncTestPassed","'use strict';"+"\nclass P extends Promise {}\nvar fulfills = P.all([\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"foo\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"bar\"); }),\n]);\nvar rejects = P.all([\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"baz\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result + \"\" === \"foo,bar\"); check(); });\nrejects.catch(function(result) { score += (result === \"qux\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -48091,12 +48091,12 @@ function check() {
 <tr class="subtest" data-parent="Promise_is_subclassable" id="test-Promise_is_subclassable_Promise.race"><td><span><a class="anchor" href="#test-Promise_is_subclassable_Promise.race">&#xA7;</a>Promise.race</span><script data-source="
 class P extends Promise {}
 var fulfills = P.race([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]);
 var rejects = P.race([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]);
 var score = +(fulfills instanceof P);
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -48105,7 +48105,7 @@ rejects.catch(function(result) { score += (result === &quot;baz&quot;); check();
 function check() {
   if (score === 3) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("590");try{return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("590");return Function("asyncTestPassed","'use strict';"+"\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,200,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 300,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 200,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,300,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("590");try{return Function("asyncTestPassed","\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("590");return Function("asyncTestPassed","'use strict';"+"\nclass P extends Promise {}\nvar fulfills = P.race([\n  new Promise(function(resolve)   { setTimeout(resolve,1000,\"foo\"); }),\n  new Promise(function(_, reject) { setTimeout(reject, 2000,\"bar\"); }),\n]);\nvar rejects = P.race([\n  new Promise(function(_, reject) { setTimeout(reject, 1000,\"baz\"); }),\n  new Promise(function(resolve)   { setTimeout(resolve,2000,\"qux\"); }),\n]);\nvar score = +(fulfills instanceof P);\nfulfills.then(function(result) { score += (result === \"foo\"); check(); });\nrejects.catch(function(result) { score += (result === \"baz\"); check(); });\n\nfunction check() {\n  if (score === 3) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
