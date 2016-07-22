@@ -33,7 +33,13 @@ exports.browsers = {
   ie10: {
     full: 'Internet Explorer 10, 11',
     family: 'Chakra',
-    short: 'IE 10+',
+    short: 'IE 10-11',
+    obsolete: false
+  },
+  edge13: {
+    full: 'Edge 13+',
+    family: 'Chakra',
+    short: 'Edge 13+',
     obsolete: false
   },
   firefox3: {
@@ -55,9 +61,15 @@ exports.browsers = {
     obsolete: true
   },
   firefox21: {
-    full: 'Firefox 21+',
+    full: 'Firefox 21-45',
     family: 'SpiderMonkey',
-    short: 'FF 21+',
+    short: 'FF 21-45',
+    obsolete: false
+  },
+  firefox46: {
+    full: 'Firefox 46+',
+    family: 'SpiderMonkey',
+    short: 'FF 46+',
     obsolete: false
   },
   safari3: {
@@ -1375,6 +1387,7 @@ exports.tests = [
     res: {
       ie7: null,
       ie9: false,
+      edge13: true,
       firefox3: true,
       safari3: false,
       chrome5: false,
@@ -1469,12 +1482,33 @@ exports.tests = [
         && (function(){ return typeof this === 'number' }).call(1)
         && (function(){ return typeof this === 'boolean' }).call(true);
     */},
+    res: temp.strict,
+  },
+  {
+    name: '"this" is not coerced to object in primitive accessors',
+    exec: function() {/*
+      'use strict';
+
+      function test(Class, instance) {
+        Object.defineProperty(Class.prototype, 'test', {
+          get: function () { passed = passed && this === instance; },
+          set: function () { passed = passed && this === instance; },
+          configurable: true
+        });
+
+        var passed = true;
+        instance.test;
+        instance.test = 42;
+        return passed;
+      }
+
+      return test(String, '')
+        && test(Number, 1)
+        && test(Boolean, true);
+    */},
     res: Object.assign({}, temp.strict, {
-      firefox4: {
-        val: true,
-        note_id: 'strict-mode-ff21',
-        note_html: 'In Firefox, strict getters on String, Boolean and Number prototypes receive wrapped <code>this</code> values (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=603201">Bugzilla reference</a>).'
-      },
+      firefox4: false,
+      firefox46: true,
     }),
   },
   {
