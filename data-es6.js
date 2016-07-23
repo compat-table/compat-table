@@ -4027,6 +4027,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  false,
+        edge14:      true,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
@@ -4052,6 +4053,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  false,
+        edge14:      true,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
@@ -5396,6 +5398,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
+        edge14:      true,
         firefox46:   true,
         chrome50:    true,
         safaritp:    true,
@@ -6272,6 +6275,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -6759,6 +6763,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -7262,6 +7267,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -7529,6 +7535,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -8762,6 +8769,7 @@ exports.tests = [
         return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
       */},
       res: {
+        edge14:      flag,
         chrome50:    flag,
         chrome51:    true,
         xs6:         true,
@@ -9003,6 +9011,7 @@ exports.tests = [
       */},
       res: {
         firefox42:   true,
+        edge14:      flag,
         chrome50:    true,
         xs6:         true,
         ejs:         true,
@@ -9043,6 +9052,7 @@ exports.tests = [
       */},
       res: {
         firefox46:   true,
+        edge14:      flag,
         chrome51:    true,
         xs6:         true,
         safaritp:    true,
@@ -9062,6 +9072,7 @@ exports.tests = [
       res: {
         firefox39:   null,
         firefox44:   true,
+        edge14:      flag,
         chrome50:    true,
         xs6:         null,
         echojs:      null,
@@ -9190,6 +9201,7 @@ exports.tests = [
           && get.length === 7;
       */},
       res: {
+        edge14:      flag,
         chrome50:    flag,
         chrome51:    true,
         firefox49:   true,
@@ -10698,6 +10710,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  false,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -11174,6 +11187,7 @@ exports.tests = [
         babel:       true,
         typescript:  false,
         chrome51:    true,
+        edge14:      true,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
@@ -11691,6 +11705,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  false,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -13025,7 +13040,7 @@ exports.tests = [
         babel:        true,
         edge12:       flag,
         edge13:       true,
-        edge14:       false,
+        edge14:       true,
         firefox45:    true,
         safari9:      true,
         safaritp:     true,
@@ -13910,6 +13925,7 @@ exports.tests = [
       res: {
         babel:       flag,
         typescript:  typescript.fallthrough,
+        edge14:      flag,
         chrome50:    flag,
         chrome51:    true,
         ejs:         true,
@@ -13930,6 +13946,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+        edge14:      flag,
         ejs:         true,
         chrome48:    true,
         firefox49:   true,
@@ -13951,6 +13968,7 @@ exports.tests = [
         closure:     true,
         typescript:  typescript.corejs,
         edge12:      true,
+        edge14:      true,
         firefox36:   true,
         safari9:     true,
         safaritp:    true,
@@ -14162,6 +14180,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         edge13:      false,
+        edge14:      true,
         firefox45:   true,
         chrome50:    flag,
         chrome51:    true,
@@ -14277,6 +14296,7 @@ exports.tests = [
         babel:       true,
         ejs:         true,
         typescript:  typescript.corejs,
+        edge14:      flag,
         firefox40:   true,
         chrome50:    true,
         xs6:         true,
@@ -14987,6 +15007,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      true,
         chrome51:    true,
         safari9:     true,
         safaritp:    true,
@@ -17149,6 +17170,7 @@ exports.tests = [
       res: {
         babel:       true,
         typescript:  typescript.corejs,
+        edge14:      flag,
         firefox39:   true,
         chrome50:    true,
         ejs:         null,
