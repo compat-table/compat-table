@@ -55,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20160619',
+    full: 'Closure Compiler v20160713',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -7120,6 +7120,7 @@ exports.tests = [
       res: (temp.basicWeakMap = {
         tr:          true,
         babel:       true,
+        closure:     true,
         ejs:         true,
         typescript:  typescript.corejs,
         ie11:        true,
@@ -7147,6 +7148,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
         ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -7213,6 +7215,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
         ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -7238,6 +7241,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox11:   true,
@@ -7287,6 +7291,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  typescript.corejs,
         ejs:         true,
         edge12:      true,
@@ -7309,6 +7314,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
         ejs:         true,
         typescript:  typescript.corejs,
         ie11:        true,
@@ -7338,6 +7344,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
         ejs:         true,
         typescript:  typescript.corejs,
         chrome43:    true,
@@ -7362,6 +7369,7 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
         typescript:  typescript.corejs,
         ie11:        true,
         firefox38:   true,
@@ -7389,6 +7397,7 @@ exports.tests = [
         }
       */},
       res: Object.assign({}, temp.basicWeakMap, {
+          closure:   false,
           firefox11: false,
           firefox40: true,
       }),
@@ -7415,6 +7424,7 @@ exports.tests = [
       res: (temp.basicWeakSet = {
         tr:          true,
         babel:       true,
+        closure:     true,
         typescript:  typescript.corejs,
         ejs:         true,
         edge12:      true,
@@ -7440,6 +7450,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         typescript:  typescript.corejs,
         ejs:         true,
         edge12:      true,
@@ -7506,6 +7518,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         ejs:         true,
         typescript:  typescript.corejs,
         edge12:      true,
@@ -7555,6 +7569,8 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         typescript:  typescript.corejs,
         ejs:         true,
         edge12:      true,
@@ -7577,6 +7593,8 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         typescript:  typescript.corejs,
         ejs:         true,
         edge12:      true,
@@ -7606,6 +7624,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         typescript:  typescript.corejs,
         ejs:         true,
         chrome43:    true,
@@ -7629,6 +7649,8 @@ exports.tests = [
       */},
       res: {
         babel:       true,
+        closure:     true,
+        typescript:  typescript.corejs,
         typescript:  typescript.corejs,
         edge12:      true,
         firefox36:   true,
@@ -7655,7 +7677,9 @@ exports.tests = [
           return true;
         }
       */},
-      res: temp.basicWeakSet,
+      res: Object.assign({}, temp.basicWeakSet, {
+          closure: false,
+      }),
     },
   ],
 },
