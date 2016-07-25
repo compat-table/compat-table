@@ -361,27 +361,49 @@ $(function() {
     else {
       name = currentBrowserSelector;
     }
-    var results = table.find('tr:not([class*=test]):not(.optional-feature) td:not(.not-applicable)' + name);
-    var yesResults = results.filter('.yes').length;
-    var totalResults = results.length;
-    /*
-        Add annex b results
-    */
-    results = table.find('tr:not([class*=test]).optional-feature td:not(.not-applicable)' + name);
-    yesResults += results.filter('.yes').length;
-    totalResults += results.length;
 
-    var flaggedResults = yesResults;
+    var yesPoints = 0;
+    var flaggedPoints = 0;
+    var totalPoints = 0;
 
-    table.find('tr.supertest td[data-tally]:not(.not-applicable)' + name).each(function() {
-      var weight = +$(this).parent().attr('significance') || 1;
-      var yes = (+$(this).attr('data-tally') || 0) * weight;
-      yesResults += yes;
-      flaggedResults += yes + (+$(this).attr('data-flagged-tally') || 0) * weight;
-      totalResults += weight;
+    var rows = table.find('tbody tr:not([class=subtest]):not([class=category])');
+    rows.each(function() {
+      var row = $(this);
+      var points = Number(row.attr('significance') || 1);
+      var cell = row.children('td' + name);
+
+      if (cell.hasClass('not-applicable')) {
+        // doesn't affect score
+        return;
+      }
+
+      totalPoints += points;
+
+      if (row.hasClass('supertest')) {
+        // test with subtests
+        var tally = Number(cell.attr('data-tally') || 0);
+        var flaggedTally = Number(cell.attr('data-flagged-tally') || 0);
+
+        yesPoints += tally * points;
+
+        if (flaggedTally > tally) {
+          flaggedPoints += flaggedTally * points;
+        } else {
+          flaggedPoints += tally * points;
+        }
+      } else {
+        // test with yes/no
+        if (cell.hasClass('yes')) {
+          yesPoints += points;
+          flaggedPoints += points;
+        } else if (cell.hasClass('flagged')) {
+          flaggedPoints += points;
+        }
+      }
     });
-    var featuresCount = yesResults / totalResults;
-    var flaggedFeaturesCount = flaggedResults / totalResults;
+
+    var featuresCount = yesPoints / totalPoints;
+    var flaggedFeaturesCount = flaggedPoints / totalPoints;
 
     function gradient(colour, percent) {
       return 'linear-gradient(to top, ' +
