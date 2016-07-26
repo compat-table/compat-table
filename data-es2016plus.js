@@ -820,6 +820,7 @@ exports.tests = [
          */},
         res: {
           firefox49:   true,
+          safari10:    true,
           safaritp:    true,
         }
       },
@@ -839,6 +840,7 @@ exports.tests = [
          */},
         res: {
           firefox49:   true,
+          safari10:    true,
           safaritp:    true,
         }
       }
