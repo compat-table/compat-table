@@ -366,23 +366,20 @@ $(function() {
     var flaggedPoints = 0;
     var totalPoints = 0;
 
-    var rows = table.find('tbody tr:not([class=subtest]):not([class=category])');
-    rows.each(function() {
+    table.find('tbody tr:not(.subtest):not(.category):not(.not-applicable)').each(function() {
       var row = $(this);
-      var points = Number(row.attr('significance') || 1);
-      var cell = row.children('td' + name);
+      var points = +(row.attr('significance') || 1);
+      var cell = row.find('td' + name);
 
-      if (cell.hasClass('not-applicable')) {
-        // doesn't affect score
+      if (row.find('.separator').length || cell.length === 0) {
         return;
       }
-
       totalPoints += points;
 
-      if (row.hasClass('supertest')) {
+      if (row.is('.supertest')) {
         // test with subtests
-        var tally = Number(cell.attr('data-tally') || 0);
-        var flaggedTally = Number(cell.attr('data-flagged-tally') || 0);
+        var tally = +(cell.attr('data-tally') || 0);
+        var flaggedTally = +(cell.attr('data-flagged-tally') || 0);
 
         yesPoints += tally * points;
 
@@ -393,10 +390,10 @@ $(function() {
         }
       } else {
         // test with yes/no
-        if (cell.hasClass('yes')) {
+        if (cell.is('.yes')) {
           yesPoints += points;
           flaggedPoints += points;
-        } else if (cell.hasClass('flagged')) {
+        } else if (cell.is('.flagged')) {
           flaggedPoints += points;
         }
       }
