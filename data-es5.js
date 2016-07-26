@@ -145,10 +145,16 @@ exports.browsers = {
     obsolete: true
   },
   chrome23: {
-    full: 'Chrome 23+, Opera 15+',
+    full: 'Chrome 23-53, Opera 15+',
     family: 'V8',
-    short: 'CH 23+,<br>OP 15+',
+    short: 'CH 23-53,<br>OP 15+',
     obsolete: false
+  },
+  chrome54: {
+    full: 'Chrome 54 (54.0.2808.0 canary)',
+    family: 'V8',
+    short: 'CH 54',
+    unstable: true
   },
   opera10_10: {
     full: 'Opera 10.10',
@@ -1392,6 +1398,7 @@ exports.tests = [
       safari3: false,
       chrome5: false,
       chrome13: false,
+      chrome54: true,
       opera10_10: null,
       opera10_50: true,
       konq43: null,
