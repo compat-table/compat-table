@@ -14701,27 +14701,53 @@ exports.tests = [
   category: 'annex b',
   significance: 'tiny',
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
-  exec: function () {/*
-    return typeof RegExp.prototype.compile === 'function';
-  */},
-  res: {
-    tr:          false,
-    ejs:         false,
-    closure:     false,
-    ie10:        true,
-    firefox11:   true,
-    chrome:      true,
-    safari51:    true,
-    safaritp:    true,
-    safari10:    true,
-    webkit:      true,
-    opera:       true,
-    konq49:      true,
-    rhino17:     true,
-    node012:     true,
-    android40:   true,
-    xs6:         true,
-  }
+  subtests: [
+    {
+      name: "basic functionality",
+      exec: function () {/*
+        if (typeof RegExp.prototype.compile !== 'function')
+          return false
+        var rx = /a/;
+        rx.compile('b');
+        return rx.test('b');
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      true,
+        safari51:    true,
+        safaritp:    true,
+        safari10:    true,
+        webkit:      true,
+        konq49:      true,
+        rhino17:     true,
+        node012:     true,
+        android40:   true,
+        xs6:         true,
+      }
+    },
+    {
+      name: "returns the RegExp object",
+      exec: function () {/*
+        var rx = /a/;
+        return rx.compile('b') === rx;
+      */},
+      res: {
+        ie10:        true,
+        firefox11:   true,
+        chrome:      false,
+        safari51:    false,
+        safaritp:    true,
+        safari10:    null,
+        webkit:      true,
+        konq49:      null,
+        rhino17:     null,
+        node012:     false,
+        android40:   false,
+        xs6:         null,
+      }
+    },
+  ]
 },
 {
   name: 'RegExp syntax extensions',
