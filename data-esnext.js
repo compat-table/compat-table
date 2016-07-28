@@ -108,60 +108,6 @@ exports.tests = [
   }
 },
 {
-  name: 'async functions',
-  category: 'candidate (stage 3)',
-  significance: 'large',
-  link: 'https://tc39.github.io/ecmascript-asyncawait/',
-  subtests: [
-    {
-      name: 'basic support',
-      exec: function () {/*
-        return (async function(){
-          return 42;
-        })() instanceof Promise
-      */},
-      res: {
-        tr:          true,
-        babel:       babel.regenerator,
-        typescript:  typescript.asyncawait,
-        chrome52:    flag,
-        edge13:      flag,
-        edge14:      true,
-      }
-    },
-    {
-      name: 'await support',
-      exec: function () {/*
-        return (async function(){
-          return 10 + await Promise.resolve(10);
-        })() instanceof Promise
-      */},
-      res: {
-        tr:          true,
-        babel:       babel.regenerator,
-        typescript:  typescript.asyncawait,
-        chrome52:    flag,
-        edge13:      flag,
-        edge14:      true,
-      }
-    },
-    {
-      name: 'arrow async functions',
-      exec: function () {/*
-        return (async () => 42 + await Promise.resolve(42))() instanceof Promise
-      */},
-      res: {
-        tr:          true,
-        babel:       babel.regenerator,
-        typescript:  false, // still buggy output
-        chrome52:    flag,
-        edge13:      flag,
-        edge14:      true,
-      }
-    }
-  ]
-},
-{
   name: 'ArrayBuffer.transfer',
   link: 'https://gist.github.com/lukewagner/2735af7eea411e18cf20',
   category: 'proposal (stage 1)',

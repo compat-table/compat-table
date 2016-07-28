@@ -349,6 +349,60 @@ exports.tests = [
     ],
   },
   {
+    name: 'async functions',
+    category: '2017 features',
+    significance: 'large',
+    link: 'https://tc39.github.io/ecmascript-asyncawait/',
+    subtests: [
+      {
+        name: 'basic support',
+        exec: function () {/*
+          return (async function(){
+            return 42;
+          })() instanceof Promise
+        */},
+        res: {
+          tr:          true,
+          babel:       babel.regenerator,
+          typescript:  typescript.asyncawait,
+          chrome52:    flag,
+          edge13:      flag,
+          edge14:      true,
+        }
+      },
+      {
+        name: 'await support',
+        exec: function () {/*
+          return (async function(){
+            return 10 + await Promise.resolve(10);
+          })() instanceof Promise
+        */},
+        res: {
+          tr:          true,
+          babel:       babel.regenerator,
+          typescript:  typescript.asyncawait,
+          chrome52:    flag,
+          edge13:      flag,
+          edge14:      true,
+        }
+      },
+      {
+        name: 'arrow async functions',
+        exec: function () {/*
+          return (async () => 42 + await Promise.resolve(42))() instanceof Promise
+        */},
+        res: {
+          tr:          true,
+          babel:       babel.regenerator,
+          typescript:  false, // still buggy output
+          chrome52:    flag,
+          edge13:      flag,
+          edge14:      true,
+        }
+      }
+    ]
+  },
+  {
     name: 'generator functions can\'t be used with "new"',
     category: '2016 misc',
     significance: 'tiny',
