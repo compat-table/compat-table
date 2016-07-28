@@ -782,7 +782,7 @@ exports.tests = [
 },
 {
   name: 'class properties',
-  category: 'proposal (stage 1)',
+  category: 'draft (stage 2)',
   significance: 'medium',
   link: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
