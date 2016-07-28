@@ -313,6 +313,42 @@ exports.tests = [
     ]
   },
   {
+    name: 'trailing commas in function syntax',
+    link: 'https://jeffmo.github.io/es-trailing-function-commas/',
+    category: '2017 features',
+    significance: 'small',
+    subtests: [
+      {
+        name: 'in parameter lists',
+        exec: function(){/*
+          return typeof function f( a, b, ){} === 'function';
+        */},
+        res: {
+          babel:       true,
+          typescript:  true,
+          edge14:      true,
+          safari10:    true,
+          safaritp:    true,
+          webkit:      true,
+        }
+      },
+      {
+        name: 'in argument lists',
+        exec: function(){/*
+          return Math.min(1,2,3,) === 1;
+        */},
+        res: {
+          babel:       true,
+          typescript:  true,
+          edge14:      true,
+          safari10:    true,
+          safaritp:    true,
+          webkit:      true,
+        }
+      },
+    ],
+  },
+  {
     name: 'generator functions can\'t be used with "new"',
     category: '2016 misc',
     significance: 'tiny',

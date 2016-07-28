@@ -108,42 +108,6 @@ exports.tests = [
   }
 },
 {
-  name: 'trailing commas in function syntax',
-  link: 'https://jeffmo.github.io/es-trailing-function-commas/',
-  category: 'candidate (stage 3)',
-  significance: 'small',
-  subtests: [
-    {
-      name: 'in parameter lists',
-      exec: function(){/*
-        return typeof function f( a, b, ){} === 'function';
-      */},
-      res: {
-        babel:       true,
-        typescript:  true,
-        edge14:      true,
-        safari10:    true,
-        safaritp:    true,
-        webkit:      true,
-      }
-    },
-    {
-      name: 'in argument lists',
-      exec: function(){/*
-        return Math.min(1,2,3,) === 1;
-      */},
-      res: {
-        babel:       true,
-        typescript:  true,
-        edge14:      true,
-        safari10:    true,
-        safaritp:    true,
-        webkit:      true,
-      }
-    },
-  ],
-},
-{
   name: 'async functions',
   category: 'candidate (stage 3)',
   significance: 'large',
