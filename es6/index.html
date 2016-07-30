@@ -59120,7 +59120,7 @@ return rx.test(&apos;b&apos;);
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="RegExp.prototype.compile" id="test-RegExp.prototype.compile_returns_the_RegExp_object"><td><span><a class="anchor" href="#test-RegExp.prototype.compile_returns_the_RegExp_object">&#xA7;</a>returns the RegExp object</span><script data-source="
+<tr class="subtest" data-parent="RegExp.prototype.compile" id="test-RegExp.prototype.compile_returns_this"><td><span><a class="anchor" href="#test-RegExp.prototype.compile_returns_this">&#xA7;</a>returns this</span><script data-source="
 var rx = /a/;
 return rx.compile(&apos;b&apos;) === rx;
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("725");try{return Function("asyncTestPassed","\nvar rx = /a/;\nreturn rx.compile('b') === rx;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("725");return Function("asyncTestPassed","'use strict';"+"\nvar rx = /a/;\nreturn rx.compile('b') === rx;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());

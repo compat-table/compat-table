@@ -14727,7 +14727,7 @@ exports.tests = [
       }
     },
     {
-      name: "returns the RegExp object",
+      name: "returns this",
       exec: function () {/*
         var rx = /a/;
         return rx.compile('b') === rx;
