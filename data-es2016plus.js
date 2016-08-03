@@ -270,6 +270,7 @@ exports.tests = [
           es7shim:     true,
           typescript:  typescript.corejs,
           chrome51:    flag,
+          firefox50:   firefox.nightly,
           safari10:    true,
           safaritp:    true,
           webkit:      true,
@@ -286,6 +287,7 @@ exports.tests = [
         res: {
           safaritp:    true,
           webkit:      true,
+          firefox50:   firefox.nightly,
         },
       },
     ]

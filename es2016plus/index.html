@@ -123,9 +123,10 @@
 <th class="platform firefox44 desktop obsolete" data-browser="firefox44"><a href="#firefox44" class="browser-name"><abbr title="Firefox">FF 44</abbr></a></th>
 <th class="platform firefox45 desktop" data-browser="firefox45"><a href="#firefox45" class="browser-name"><abbr title="Firefox">FF 45 ESR</abbr></a></th>
 <th class="platform firefox46 desktop obsolete" data-browser="firefox46"><a href="#firefox46" class="browser-name"><abbr title="Firefox">FF 46</abbr></a></th>
-<th class="platform firefox47 desktop" data-browser="firefox47"><a href="#firefox47" class="browser-name"><abbr title="Firefox">FF 47</abbr></a></th>
-<th class="platform firefox48 desktop unstable" data-browser="firefox48"><a href="#firefox48" class="browser-name"><abbr title="Firefox">FF 48</abbr></a></th>
+<th class="platform firefox47 desktop obsolete" data-browser="firefox47"><a href="#firefox47" class="browser-name"><abbr title="Firefox">FF 47</abbr></a></th>
+<th class="platform firefox48 desktop" data-browser="firefox48"><a href="#firefox48" class="browser-name"><abbr title="Firefox">FF 48</abbr></a></th>
 <th class="platform firefox49 desktop unstable" data-browser="firefox49"><a href="#firefox49" class="browser-name"><abbr title="Firefox">FF 49</abbr></a></th>
+<th class="platform firefox50 desktop unstable" data-browser="firefox50"><a href="#firefox50" class="browser-name"><abbr title="Firefox">FF 50</abbr></a></th>
 <th class="platform chrome30 desktop obsolete" data-browser="chrome30"><a href="#chrome30" class="browser-name"><abbr title="Chrome">CH 30</abbr></a><a href="#experimental-flag-note"><sup>[3]</sup></a></th>
 <th class="platform chrome40 desktop obsolete" data-browser="chrome40"><a href="#chrome40" class="browser-name"><abbr title="Chrome">CH 40</abbr></a><a href="#experimental-flag-note"><sup>[3]</sup></a></th>
 <th class="platform chrome41 desktop obsolete" data-browser="chrome41"><a href="#chrome41" class="browser-name"><abbr title="Chrome">CH 41</abbr></a><a href="#experimental-flag-note"><sup>[3]</sup></a></th>
@@ -160,7 +161,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="53">2016 features</td>
+      <tr class="category"><td colspan="54">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -182,9 +183,10 @@
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/3</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/3</td>
+<td class="tally" data-browser="firefox48" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/3</td>
@@ -238,9 +240,10 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no unstable" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -294,9 +297,10 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no unstable" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
+<td class="no unstable" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -355,9 +359,10 @@ return true;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -408,9 +413,10 @@ return true;
 <td class="tally obsolete" data-browser="firefox44" data-tally="1">3/3</td>
 <td class="tally" data-browser="firefox45" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="1">3/3</td>
-<td class="tally" data-browser="firefox47" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="1">3/3</td>
+<td class="tally" data-browser="firefox48" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="1">3/3</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/3</td>
@@ -468,9 +474,10 @@ return [1, 2, 3].includes(1)
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -546,9 +553,10 @@ return 24;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -607,9 +615,10 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -640,7 +649,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="53">2016 misc</td>
+<tr class="category"><td colspan="54">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
@@ -672,9 +681,10 @@ return true;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -741,9 +751,10 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -802,9 +813,10 @@ return true;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -859,9 +871,10 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -917,9 +930,10 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -980,9 +994,10 @@ return passed;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1045,9 +1060,10 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1078,7 +1094,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="53">2017 features</td>
+<tr class="category"><td colspan="54">2017 features</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1106,9 +1122,10 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1169,9 +1186,10 @@ return Array.isArray(e)
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="firefox46">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1222,9 +1240,10 @@ return Array.isArray(e)
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox48" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
@@ -1286,9 +1305,10 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1345,9 +1365,10 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1398,9 +1419,10 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox48" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
@@ -1457,9 +1479,10 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1516,9 +1539,10 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1569,9 +1593,10 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox48" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
@@ -1625,9 +1650,10 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1681,9 +1707,10 @@ return Math.min(1,2,3,) === 1;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1734,9 +1761,10 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/3</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/3</td>
+<td class="tally" data-browser="firefox48" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/3</td>
@@ -1792,9 +1820,10 @@ return (async function(){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1850,9 +1879,10 @@ return (async function(){
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1906,9 +1936,10 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -1939,7 +1970,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="53">2017 misc</td>
+<tr class="category"><td colspan="54">2017 misc</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="test-class_extends_null"><span><a class="anchor" href="#test-class_extends_null">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/543">class extends null</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -1961,9 +1992,10 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox47" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox48" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/2</td>
@@ -2018,9 +2050,10 @@ return new C instanceof C;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2081,9 +2114,10 @@ return passed;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2142,9 +2176,10 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2201,9 +2236,10 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2234,7 +2270,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="53">2017 annex b</td>
+<tr class="category"><td colspan="54">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -2256,9 +2292,10 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="tally obsolete" data-browser="firefox44" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td class="tally" data-browser="firefox45" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
-<td class="tally" data-browser="firefox47" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
+<td class="tally" data-browser="firefox48" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="1">16/16</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0.375" style="background-color:hsl(45,69%,50%)" data-flagged-tally="0.625">6/16</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
@@ -2317,9 +2354,10 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2379,9 +2417,10 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2441,9 +2480,10 @@ return true;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2502,9 +2542,10 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2564,9 +2605,10 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2626,9 +2668,10 @@ return true;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2689,9 +2732,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2752,9 +2796,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2816,9 +2861,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -2877,9 +2923,10 @@ return true;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -2937,9 +2984,10 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3000,9 +3048,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -3063,9 +3112,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="chrome30">Yes</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -3127,9 +3177,10 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no flagged obsolete" data-browser="chrome30">Flag</td>
 <td class="yes obsolete" data-browser="chrome40">Yes</td>
 <td class="yes obsolete" data-browser="chrome41">Yes</td>
@@ -3188,9 +3239,10 @@ return true;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3248,9 +3300,10 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3301,9 +3354,10 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally obsolete" data-browser="firefox44" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="firefox45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox46" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
-<td class="tally" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
-<td class="tally unstable" data-browser="firefox48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="firefox48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="chrome30" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome41" data-tally="0">0/4</td>
@@ -3361,9 +3415,10 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3421,9 +3476,10 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes obsolete" data-browser="firefox44">Yes</td>
 <td class="yes" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox46">Yes</td>
-<td class="yes" data-browser="firefox47">Yes</td>
-<td class="yes unstable" data-browser="firefox48">Yes</td>
+<td class="yes obsolete" data-browser="firefox47">Yes</td>
+<td class="yes" data-browser="firefox48">Yes</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3486,9 +3542,10 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>
@@ -3551,9 +3608,10 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="firefox44">No</td>
 <td class="no" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no" data-browser="firefox47">No</td>
-<td class="no unstable" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no" data-browser="firefox48">No</td>
 <td class="yes unstable" data-browser="firefox49">Yes</td>
+<td class="yes unstable" data-browser="firefox50">Yes</td>
 <td class="no obsolete" data-browser="chrome30">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
 <td class="no obsolete" data-browser="chrome41">No</td>

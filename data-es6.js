@@ -273,6 +273,11 @@ exports.browsers = {
     short: 'FF 49',
     unstable: true,
   },
+  firefox50: {
+    full: 'Firefox',
+    short: 'FF 50',
+    unstable: true,
+  },
   chrome: {
     full: 'Chrome',
     short: 'CH &lt;19',
@@ -13975,6 +13980,7 @@ exports.tests = [
         edge14:      flag,
         chrome50:    flag,
         chrome51:    true,
+        firefox50:   true,
         ejs:         true,
         xs6:         true,
         safaritp:    true,
