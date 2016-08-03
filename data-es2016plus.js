@@ -234,6 +234,8 @@ exports.tests = [
           edge14:          true,
           firefox43:       true,
           safaritp:        true,
+          safari10:        true,
+          webkit:          true,
         }
       },
     ],
@@ -489,6 +491,8 @@ exports.tests = [
     res: {
       edge12:      true,
       chrome47:    true,
+      safari10:    true,
+      webkit:      true,
     }
   },
   {
