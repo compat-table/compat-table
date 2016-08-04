@@ -12130,6 +12130,8 @@ exports.tests = [
         es6shim:     true,
         edge12:      true,
         firefox29:   true,
+        firefox38:   false,
+        firefox39:   true,
         chrome33:    true,
         safari71_8:  true,
         safaritp:    true,
@@ -13305,8 +13307,6 @@ exports.tests = [
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17:   false,
         firefox31:   true,
-        firefox32:   false,
-        firefox40:   true,
         chrome30:    false,
         chrome34:    flag,
       })),
@@ -13331,8 +13331,6 @@ exports.tests = [
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17:   false,
         firefox31:   true,
-        firefox32:   false,
-        firefox40:   true,
         chrome30:    false,
         chrome34:    flag,
       })),
