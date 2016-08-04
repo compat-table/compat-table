@@ -90,7 +90,7 @@ exports.browsers = {
     full: 'Internet Explorer',
     family: 'Chakra',
     short: 'IE 11',
-    obsolete: false
+    obsolete: false // no EOL any time soon
   },
   edge12: {
     full: 'Microsoft Edge',
@@ -121,7 +121,7 @@ exports.browsers = {
   },
   firefox11: {
     full: 'Firefox',
-    short: 'FF 11-12',
+    short: 'FF 11',
     obsolete: very
   },
   firefox13: {
@@ -182,7 +182,7 @@ exports.browsers = {
   firefox31: {
     full: 'Firefox',
     short: 'FF 31<br> ESR',
-    obsolete: very // ESR (EOL on August 11, 2015)
+    obsolete: true // ESR (EOL on August 11, 2015)
   },
   firefox32: {
     full: 'Firefox',
@@ -202,17 +202,17 @@ exports.browsers = {
   firefox35: {
     full: 'Firefox',
     short: 'FF 35',
-    obsolete: true
+    obsolete: very
   },
   firefox36: {
     full: 'Firefox',
     short: 'FF 36',
-    obsolete: true
+    obsolete: very
   },
   firefox37: {
     full: 'Firefox',
     short: 'FF 37',
-    obsolete: true,
+    obsolete: very,
   },
   firefox38: {
     full: 'Firefox',
@@ -1032,7 +1032,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -1141,7 +1141,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -1234,7 +1234,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      flag,
         chrome41:    true,
         safaritp:    true,
@@ -1324,7 +1324,7 @@ exports.tests = [
         es6tr:       true,
         closure:     true,
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome21dev: flag,
         chrome41:    true,
         safaritp:    true,
@@ -1352,7 +1352,7 @@ exports.tests = [
         es6tr:       true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         chrome19dev: flag,
         chrome41:    true,
@@ -1461,7 +1461,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   {
+        firefox10:   {
           val: flag,
           note_id: 'fx-let',
           note_html: 'Available for code in a <code>&lt;script type="application/javascript;version=1.7"></code> (or <code>version=1.8</code>) tag.'
@@ -1624,7 +1624,7 @@ exports.tests = [
         chrome41:    true,
         node012:     flag,
         node4:       true,
-        firefox11:   { val: flag, note_id: 'fx-let' },
+        firefox10:   { val: flag, note_id: 'fx-let' },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -3647,7 +3647,7 @@ exports.tests = [
       */},
       res: {
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         rhino17:     true,
         chrome49:    true,
         jxa:         true,
@@ -3667,7 +3667,7 @@ exports.tests = [
       */},
       res: {
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -3696,7 +3696,7 @@ exports.tests = [
       */},
       res: {
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -3729,7 +3729,7 @@ exports.tests = [
       */},
       res: {
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safari9:     true,
@@ -5321,7 +5321,7 @@ exports.tests = [
         return (re.exec('xy')[0] === 'y');
       */},
       res: {
-        firefox11:   true,
+        firefox10:   true,
         chrome39:    flag,
         chrome40:    false,
         chrome49:    true,
@@ -5344,7 +5344,7 @@ exports.tests = [
         return result === 'yy' && re.lastIndex === 5;
       */},
       res: {
-        firefox11:   true,
+        firefox10:   true,
         chrome39:    flag,
         chrome40:    false,
         chrome49:    true,
@@ -5431,7 +5431,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         ejs:         true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -5464,7 +5464,7 @@ exports.tests = [
       res: (temp.clampedArrayResults = {
         babel:       true,
         typescript:  typescript.corejs,
-        firefox11:   true,
+        firefox10:   true,
         edge12:      true,
         chrome:      true,
         safari6:     true,
@@ -5686,7 +5686,7 @@ exports.tests = [
         safaritp: true,
         safari10: true,
         webkit:   true,
-        firefox11:false,
+        firefox10:false,
         firefox44:true,
         xs6:      true,
         ejs:      true,
@@ -7129,7 +7129,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome21dev: flag,
         chrome36:    true,
         safari71_8:  true,
@@ -7249,7 +7249,7 @@ exports.tests = [
         closure:     true,
         typescript:  typescript.corejs,
         edge12:      true,
-        firefox11:   true,
+        firefox10:   true,
         chrome21dev: flag,
         chrome36:    true,
         safari71_8:  true,
@@ -7323,7 +7323,7 @@ exports.tests = [
         ejs:         true,
         typescript:  typescript.corejs,
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome21dev: flag,
         chrome36:    true,
         safari71_8:  true,
@@ -7354,6 +7354,8 @@ exports.tests = [
         typescript:  typescript.corejs,
         chrome43:    true,
         edge12:      true,
+        firefox10:   true,
+        firefox11:   false,
         firefox46:   true,
         safari9:     true,
         safaritp:    true,
@@ -7403,7 +7405,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicWeakMap, {
           closure:   false,
-          firefox11: false,
+          firefox10: false,
           firefox40: true,
       }),
     },
@@ -10563,7 +10565,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         typescript:  true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -10589,7 +10591,7 @@ exports.tests = [
         jsx:         true,
         closure:     true,
         typescript:  true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -10615,7 +10617,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         typescript:  true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -10863,7 +10865,7 @@ exports.tests = [
         jsx:         true,
         ejs:         true,
         closure:     true,
-        firefox11:   true,
+        firefox10:   true,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
@@ -10901,7 +10903,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         closure:     true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -10952,7 +10954,7 @@ exports.tests = [
         }
       */},
       res: {
-        firefox11:   true,
+        firefox10:   true,
         babel:       true,
         tr:          true,
         jsx:         true,
@@ -11602,7 +11604,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         typescript:  true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -11763,7 +11765,7 @@ exports.tests = [
         }({c:7, x:8});
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        firefox11:    {
+        firefox10:    {
           val: true,
           note_id: "ff11-object-destructuring",
           note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
@@ -11864,7 +11866,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         closure:     true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -11908,7 +11910,7 @@ exports.tests = [
         es6tr:       true,
         jsx:         true,
         closure:     true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -12651,7 +12653,7 @@ exports.tests = [
       */},
       res: (temp.basicProtoResults = {
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -12687,7 +12689,7 @@ exports.tests = [
       */},
       res: (temp.advancedProtoResults = {
         ie11:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome30:    true,
         safari6:     true,
         safaritp:    true,
@@ -12728,7 +12730,7 @@ exports.tests = [
           && !desc.enumerable);
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
-        firefox11: false,
+        firefox10: false,
         rhino17:   false,
         firefox17: true,
         xs6:       true,
@@ -12741,7 +12743,7 @@ exports.tests = [
         return Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
-        firefox11: false,
+        firefox10: false,
         firefox39: true,
         rhino17:   false,
         xs6:       true,
@@ -12767,7 +12769,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         ejs:         true,
-        firefox11:   true,
+        firefox10:   true,
         edge12:      true,
         chrome:      true,
         safari51:    true,
@@ -12799,7 +12801,7 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
-        firefox11:   true,
+        firefox10:   true,
         edge12:      true,
         safari51:    true,
         safaritp:    true,
@@ -13431,7 +13433,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es6shim:     true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -13463,7 +13465,7 @@ exports.tests = [
         typescript:  typescript.corejs,
         es6shim:     true,
         edge12:      true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -14719,7 +14721,7 @@ exports.tests = [
       */},
       res: {
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -14740,7 +14742,7 @@ exports.tests = [
       */},
       res: {
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      false,
         safari51:    false,
         safaritp:    true,
@@ -14769,7 +14771,7 @@ exports.tests = [
       res: (temp.regExpExtensions = {
         ejs:         true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -16799,6 +16801,8 @@ exports.tests = [
       res: {
         ie10:          true,
         chrome:        true,
+        firefox10:     true,
+        firefox11:     false,
         firefox31:     true,
         node012:       true,
         opera:         true,
@@ -16956,6 +16960,8 @@ exports.tests = [
           note_id:   'ie_property_order',
           note_html: 'Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.'
         },
+        firefox10:     true,
+        firefox11:     false,
         firefox23:     true, // Actually Firefox 21
         chrome:        true,
         node012:       true,
@@ -17068,7 +17074,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         safari9:     true,
         safaritp:    true,
         safari10:    true,
@@ -17110,7 +17116,7 @@ exports.tests = [
         closure:     true,
         typescript:  true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -17177,7 +17183,7 @@ exports.tests = [
         es6shim:     true,
         ejs:         true,
         ie10:        true,
-        firefox11:   true,
+        firefox10:   true,
         chrome:      true,
         safari51:    true,
         safaritp:    true,
@@ -17298,7 +17304,7 @@ exports.tests = [
   */},
   res: {
     ejs:         true,
-    firefox11:   true,
+    firefox10:   true,
     chrome:      true,
     safari51:    true,
     edge14:      true,

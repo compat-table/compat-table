@@ -55,9 +55,15 @@ exports.browsers = {
     obsolete: true
   },
   firefox4: {
-    full: 'Firefox 4-20',
+    full: 'Firefox 4-9',
     family: 'SpiderMonkey',
-    short: 'FF 4-20',
+    short: 'FF 4-9',
+    obsolete: true
+  },
+  firefox10: {
+    full: 'Firefox 10-20',
+    family: 'SpiderMonkey',
+    short: 'FF 10-20',
     obsolete: true
   },
   firefox21: {
@@ -1179,7 +1185,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox21: true,
+      firefox10: true,
       opera10_10: null,
       opera10_50: true,
       konq43: null,
