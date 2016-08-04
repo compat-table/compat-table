@@ -3919,7 +3919,7 @@ exports.tests = [
         typescript:  false,
         ejs:         true,
         edge12:      true,
-        firefox18:   true,
+        firefox25:   true,
         chrome38:    true,
         safari9:     true,
         safaritp:    true,
@@ -6232,7 +6232,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicMap, {
           firefox16: false,
-          firefox18: true,
+          firefox25: true,
       }),
     },
     {
@@ -6720,7 +6720,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicSet, {
           firefox16: false,
-          firefox18: true,
+          firefox25: true,
       }),
     },
     {
@@ -16813,10 +16813,6 @@ exports.tests = [
         ie10:          true,
         chrome:        true,
         firefox10:     true,
-        firefox11:     false,
-        firefox17:     true,
-        firefox18:     false,
-        firefox31:     true,
         node012:       true,
         opera:         true,
         safari51:      true,

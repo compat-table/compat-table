@@ -548,6 +548,8 @@ exports.tests = [
      return passed;
      */},
     res: {
+      firefox24:   true,
+      firefox25:   false,
       firefox47:   true,
       chrome50:    true,
       safari10:    true,
@@ -766,7 +768,7 @@ exports.tests = [
           babel:       true,
           typescript:  typescript.corejs,
           ie11:        true,
-          firefox31:   true,
+          firefox24:   true,
           safari51:    true,
           safari9:     true,
           safari10:    true,
@@ -852,7 +854,7 @@ exports.tests = [
           babel:       true,
           typescript:  typescript.corejs,
           ie11:        true,
-          firefox31:   true,
+          firefox24:   true,
           safari51:    true,
           safari9:     true,
           safari10:    true,
@@ -888,7 +890,7 @@ exports.tests = [
        return def + '' === "foo";
        */},
       res: {
-        firefox31:   true,
+        firefox24:   true,
         edge14:      true,
         chrome52:    true,
         safari10:    true,
@@ -906,7 +908,7 @@ exports.tests = [
          return def + '' === "foo";
          */},
         res: {
-          firefox31:   true,
+          firefox24:   true,
           edge14:      true,
           chrome52:    true,
           safari10:    true,
