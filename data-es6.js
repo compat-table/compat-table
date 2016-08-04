@@ -4616,7 +4616,7 @@ exports.tests = [
       res: {
         tr:          true,
         babel:       false,
-        firefox36:   true,
+        firefox31:   true,
         chrome35:    flag,
         chrome39:    true,
         node012:     flag,
@@ -6232,7 +6232,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicMap, {
           firefox16: false,
-          firefox25: true,
+          firefox32: true,
       }),
     },
     {
@@ -6720,7 +6720,7 @@ exports.tests = [
       */},
       res: Object.assign({}, temp.basicSet, {
           firefox16: false,
-          firefox25: true,
+          firefox32: true,
       }),
     },
     {
@@ -9266,7 +9266,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        firefox31:   true,
+        firefox32:   true,
         chrome51:    true,
         edge12:      true,
         xs6:         true,
@@ -9557,7 +9557,7 @@ exports.tests = [
       res: {
         edge12:      true,
         ejs:         true,
-        firefox31:   true,
+        firefox32:   true,
         xs6:         true,
         chrome49:    true,
         safaritp:    true,
@@ -13304,6 +13304,8 @@ exports.tests = [
       */},
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17:   false,
+        firefox31:   true,
+        firefox32:   false,
         firefox40:   true,
         chrome30:    false,
         chrome34:    flag,
@@ -13328,6 +13330,8 @@ exports.tests = [
       */},
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17:   false,
+        firefox31:   true,
+        firefox32:   false,
         firefox40:   true,
         chrome30:    false,
         chrome34:    flag,
