@@ -67,10 +67,25 @@ module.exports = {
       note_id: 'edge-experimental-flag',
       note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
+  firefox10: {
+    full: 'Firefox',
+      short: 'FF 10<br> ESR',
+      obsolete: very // ESR (EOL on February 12, 2013)
+  },
+  firefox17: {
+    full: 'Firefox',
+      short: 'FF 17<br> ESR',
+      obsolete: very // ESR (EOL on December 3, 2013)
+  },
+  firefox24: {
+    full: 'Firefox',
+      short: 'FF 24<br> ESR',
+      obsolete: very // ESR (EOL on October 14, 2014)
+  },
   firefox31: {
     full: 'Firefox',
-      short: 'FF 31',
-      obsolete: very
+      short: 'FF 31<br> ESR',
+      obsolete: true // ESR (EOL on August 11, 2015)
   },
   firefox32: {
     full: 'Firefox',
@@ -85,17 +100,17 @@ module.exports = {
   firefox35: {
     full: 'Firefox',
       short: 'FF 35',
-      obsolete: true,
+      obsolete: very
   },
   firefox36: {
     full: 'Firefox',
       short: 'FF 36',
-      obsolete: true,
+      obsolete: very
   },
   firefox38: {
     full: 'Firefox',
-      short: 'FF 38 ESR',
-      obsolete: true,
+      short: 'FF 38<br> ESR',
+      obsolete: true, // ESR (EOL on June 7, 2016)
   },
   firefox39: {
     full: 'Firefox',
@@ -125,6 +140,7 @@ module.exports = {
   firefox45: {
     full: 'Firefox',
       short: 'FF 45 ESR',
+      obsolete: false, // ESR (EOL at Mar 2017)
   },
   firefox46: {
     full: 'Firefox',
