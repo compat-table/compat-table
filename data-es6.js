@@ -1490,7 +1490,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -1518,7 +1518,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -1543,7 +1543,7 @@ exports.tests = [
         typescript:  true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -1648,7 +1648,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         chrome19dev: flag,
         chrome41:    true,
@@ -1679,7 +1679,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         safaritp:    true,
         safari10:    true,
@@ -1707,7 +1707,7 @@ exports.tests = [
         es6tr:       true,
         closure:     true,
         ie11:        true,
-        firefox11:   { val: flag, note_id: 'fx-let', },
+        firefox10:   { val: flag, note_id: 'fx-let', },
         firefox44:   true,
         chrome19dev: flag,
         chrome41:    true,
@@ -5797,7 +5797,7 @@ exports.tests = [
       typescript:  typescript.corejs,
       ejs:         true,
       edge12:      true,
-      firefox16:   true,
+      firefox10:   true,
       chrome:      true,
       safari6:     true,
       safaritp:    true,
@@ -10775,7 +10775,7 @@ exports.tests = [
         return c === 7 && d === 8 && e === undefined;
       */},
       res: Object.assign({}, temp.destructuringResults, {
-        firefox11:    {
+        firefox10:    {
           val: true,
           note_id: "ff11-object-destructuring",
           note_html: "Firefox < 16 incorrectly treats <code>({f,g} = {f:9,g:10})</code> as assigning to global variables instead of locals."
@@ -11095,7 +11095,7 @@ exports.tests = [
         ejs:         true,
         closure:     true,
         typescript:  true,
-        firefox11:   true,
+        firefox10:   true,
         safari71_8:  true,
         safaritp:    true,
         safari10:    true,
@@ -11240,7 +11240,7 @@ exports.tests = [
         ejs:          true,
         typescript:   true,
         es6tr:        true,
-        firefox11:    true,
+        firefox10:    true,
         safari71_8:   true,
         safaritp:     true,
         safari10:     true,
@@ -11265,7 +11265,7 @@ exports.tests = [
         ejs:          true,
         typescript:   true,
         es6tr:        true,
-        firefox11:    true,
+        firefox10:    true,
         safari71_8:   true,
         safaritp:     true,
         safari10:     true,
@@ -11302,6 +11302,7 @@ exports.tests = [
         return c === 7 && d === 8 && e === undefined;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        firefox10:    false,
         firefox11:    {
           val: true,
           note_id: "ff11-object-destructuring",
@@ -11323,7 +11324,10 @@ exports.tests = [
         return toFixed === Number.prototype.toFixed
           && slice === String.prototype.slice;
       */},
-      res: temp.destructuringResults,
+      res: Object.assign({}, temp.destructuringResults, {
+        firefox10:    false,
+        firefox11:    true,
+      }),
     },
     {
       name: 'trailing commas in object patterns',
@@ -11333,6 +11337,8 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        firefox10:    false,
+        firefox11:    true,
         safari71_8:   false,
         safari9:      true,
         chrome49:     true,
@@ -11351,7 +11357,7 @@ exports.tests = [
         babel:        true,
         typescript:   true,
         es6tr:        true,
-        firefox16:    true,
+        firefox10:    true,
         safari71_8:   true,
         safaritp:     true,
         safari10:     true,
@@ -11470,6 +11476,8 @@ exports.tests = [
           && h === 11 && i === 12;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        firefox10:    false,
+        firefox11:    true,
         ejs:          false,
         chrome49:     true,
         edge14:       true,
@@ -16972,10 +16980,6 @@ exports.tests = [
           note_html: 'Unlike other engines, Chakra sorts properties removed by <code>delete</code>, then recreated by assignment, to their original creation positions, not their latest positions.'
         },
         firefox10:     true,
-        firefox11:     false,
-        firefox17:     true,
-        firefox18:     false,
-        firefox23:     true, // Actually Firefox 21
         chrome:        true,
         node012:       true,
         opera:         true,
