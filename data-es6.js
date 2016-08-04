@@ -3919,7 +3919,7 @@ exports.tests = [
         typescript:  false,
         ejs:         true,
         edge12:      true,
-        firefox17:   true,
+        firefox18:   true,
         chrome38:    true,
         safari9:     true,
         safaritp:    true,
@@ -6230,7 +6230,10 @@ exports.tests = [
         new Map(null);
         return true;
       */},
-      res: temp.basicMap,
+      res: Object.assign({}, temp.basicMap, {
+          firefox16: false,
+          firefox18: true,
+      }),
     },
     {
       name: 'constructor invokes set',
@@ -6715,7 +6718,10 @@ exports.tests = [
         new Set(null);
         return true;
       */},
-      res: temp.basicSet,
+      res: Object.assign({}, temp.basicSet, {
+          firefox16: false,
+          firefox18: true,
+      }),
     },
     {
       name: 'constructor invokes add',
@@ -7355,7 +7361,7 @@ exports.tests = [
         chrome43:    true,
         edge12:      true,
         firefox10:   true,
-        firefox11:   false,
+        firefox18:   false,
         firefox46:   true,
         safari9:     true,
         safaritp:    true,
@@ -13320,7 +13326,12 @@ exports.tests = [
           return typeof String.prototype.endsWith === 'function';
         }
       */},
-      res: temp.startsWith,
+      res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
+        firefox17:   false,
+        firefox40:   true,
+        chrome30:    false,
+        chrome34:    flag,
+      })),
     },
     {
       name: 'String.prototype.includes',
@@ -16803,6 +16814,8 @@ exports.tests = [
         chrome:        true,
         firefox10:     true,
         firefox11:     false,
+        firefox17:     true,
+        firefox18:     false,
         firefox31:     true,
         node012:       true,
         opera:         true,
@@ -16962,6 +16975,8 @@ exports.tests = [
         },
         firefox10:     true,
         firefox11:     false,
+        firefox17:     true,
+        firefox18:     false,
         firefox23:     true, // Actually Firefox 21
         chrome:        true,
         node012:       true,
