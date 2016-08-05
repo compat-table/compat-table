@@ -32,7 +32,7 @@ exports.browsers = {
     full: 'Microsoft Edge',
     family: 'Chakra',
     short: 'Edge 14',
-    unstable: true
+    unstable: false
   },
   firefox10: {
     full: 'Firefox',
