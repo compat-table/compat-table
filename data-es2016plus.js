@@ -66,6 +66,8 @@ exports.tests = [
           firefox48:   firefox.nightly,
           chrome51:    flag,
           chrome52:    true,
+          safaritp:    true,
+          webkit:      true,
         }
       },
       {
@@ -82,6 +84,8 @@ exports.tests = [
           firefox48:   firefox.nightly,
           chrome51:    flag,
           chrome52:    true,
+          safaritp:    true,
+          webkit:      true,
         }
       },
       {
@@ -99,6 +103,8 @@ exports.tests = [
           edge14:      true,
           chrome51:    flag,
           chrome52:    true,
+          safaritp:    true,
+          webkit:      true,
         }
       },
     ],
@@ -278,6 +284,8 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
+          safaritp:    true,
+          webkit:      true,
         },
       },
     ]
@@ -492,6 +500,7 @@ exports.tests = [
       edge12:      true,
       chrome47:    true,
       safari10:    true,
+      safaritp:    true,
       webkit:      true,
     }
   },
@@ -934,6 +943,7 @@ exports.tests = [
           firefox49:   true,
           safari10:    true,
           safaritp:    true,
+          webkit:      true,
         }
       },
       {
@@ -954,6 +964,7 @@ exports.tests = [
           firefox49:   true,
           safari10:    true,
           safaritp:    true,
+          webkit:      true,
         }
       }
     ]

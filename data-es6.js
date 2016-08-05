@@ -17164,8 +17164,6 @@ exports.tests = [
         typescript:  true,
         xs6:         true,
         jxa:         true,
-        safaritp:    true,
-        webkit:      true,
       },
     },
     {

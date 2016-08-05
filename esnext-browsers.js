@@ -285,12 +285,12 @@ module.exports = {
       unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 9',
+    full: 'Safari Technology Preview Release 10',
       short: 'SF TP',
       unstable: true
   },
   webkit: {
-    full: 'WebKit r204024 (August 2, 2016)',
+    full: 'WebKit r204050 (August 3, 2016)',
       short: 'WK',
       unstable: true,
   },
