@@ -900,7 +900,7 @@ exports.tests = [
        */},
       res: {
         firefox24:   true,
-        edge14:      true,
+        edge13:      true,
         chrome52:    true,
         safari10:    true,
         safaritp:    true,
@@ -918,7 +918,7 @@ exports.tests = [
          */},
         res: {
           firefox24:   true,
-          edge14:      true,
+          edge13:      true,
           chrome52:    true,
           safari10:    true,
           safaritp:    true,
