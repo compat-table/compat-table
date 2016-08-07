@@ -707,7 +707,7 @@ exports.tests = [
 },
 {
   name: 'class decorators',
-  category: 'proposal (stage 1)',
+  category: 'draft (stage 2)',
   significance: 'medium',
   link: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
