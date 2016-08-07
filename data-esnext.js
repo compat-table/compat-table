@@ -1518,7 +1518,7 @@ exports.tests = [
 },
 {
   name: 'zones',
-  category: 'proposal (stage 1)',
+  category: 'strawman (stage 0)',
   significance: 'large',
   link: 'https://github.com/domenic/zones',
   subtests: [
