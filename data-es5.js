@@ -55,9 +55,21 @@ exports.browsers = {
     obsolete: true
   },
   firefox4: {
-    full: 'Firefox 4-9',
+    full: 'Firefox 4',
     family: 'SpiderMonkey',
-    short: 'FF 4-9',
+    short: 'FF 4',
+    obsolete: true
+  },
+  firefox5: {
+    full: 'Firefox 5-7',
+    family: 'SpiderMonkey',
+    short: 'FF 5-7',
+    obsolete: true
+  },
+  firefox8: {
+    full: 'Firefox 8-9',
+    family: 'SpiderMonkey',
+    short: 'FF 8-9',
     obsolete: true
   },
   firefox10: {
@@ -1185,7 +1197,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox10: true,
+      firefox5: true,
       opera10_10: null,
       opera10_50: true,
       konq43: null,
@@ -1335,11 +1347,7 @@ exports.tests = [
       ie9: true,
       firefox3: false,
       firefox3_5: false,
-      firefox4: {
-        val: true,
-        note_id: 'zero-width-char',
-        note_html: 'Firefox 4 &amp; 5 fail this test'
-      },
+      firefox8: true,
       firefox21: true,
       safari6: true,
       safaritp: true,
