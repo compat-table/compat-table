@@ -4989,7 +4989,7 @@ return cr.length === 3 &amp;&amp; lf.length === 3 &amp;&amp; crlf.length === 3
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/5</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="edge12" data-tally="0.4" style="background-color:hsl(48,68%,50%)" data-flagged-tally="0.8">2/5</td>
-<td class="tally" data-browser="edge13" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td class="tally" data-browser="edge13" data-tally="1">5/5</td>
 <td class="tally" data-browser="edge14" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="firefox31" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
 <td class="tally obsolete" data-browser="firefox38" data-tally="0.4" style="background-color:hsl(48,68%,50%)">2/5</td>
@@ -5374,7 +5374,7 @@ return &quot;&#x17F;&quot;.match(/S/iu) &amp;&amp; &quot;S&quot;.match(/&#x17F;/
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="no obsolete" data-browser="firefox31">No</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -6443,13 +6443,19 @@ return a === 1;
 try {
   var {a} = null;
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 try {
   var {b} = undefined;
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\ntry {\n  var {a} = null;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  var {a} = null;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\ntry {\n  var {a} = null;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  var {a} = null;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -14047,7 +14053,7 @@ return f() === 1;
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/13</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/13</td>
 <td class="tally obsolete" data-browser="edge12" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)" data-flagged-tally="0.7692307692307693">8/13</td>
-<td class="tally" data-browser="edge13" data-tally="0.9230769230769231" style="background-color:hsl(110,45%,50%)">12/13</td>
+<td class="tally" data-browser="edge13" data-tally="1">13/13</td>
 <td class="tally" data-browser="edge14" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="firefox31" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)">8/13</td>
 <td class="tally obsolete" data-browser="firefox38" data-tally="0.6153846153846154" style="background-color:hsl(73,58%,50%)">8/13</td>
@@ -14821,7 +14827,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="no" data-browser="edge13">No</td>
+<td class="yes" data-browser="edge13">Yes</td>
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes obsolete" data-browser="firefox31">Yes</td>
 <td class="yes obsolete" data-browser="firefox38">Yes</td>

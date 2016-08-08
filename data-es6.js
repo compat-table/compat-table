@@ -916,7 +916,7 @@ exports.tests = [
         chrome39:    flag,
         chrome40:    false,
         chrome45:    true,
-        edge14:      true,
+        edge13:      true,
         safaritp:    true,
         safari10:    true,
         webkit:      true,
@@ -5408,7 +5408,7 @@ exports.tests = [
         tr:          true,
         babel:       true,
         typescript:  typescript.fallthrough,
-        edge14:      true,
+        edge13:      true,
         firefox46:   true,
         chrome50:    true,
         safaritp:    true,
@@ -10826,11 +10826,17 @@ exports.tests = [
         try {
           var {a} = null;
           return false;
-        } catch(e) {}
+        } catch(e) {
+          if (!(e instanceof TypeError))
+            return false;
+        }
         try {
           var {b} = undefined;
           return false;
-        } catch(e) {}
+        } catch(e) {
+          if (!(e instanceof TypeError))
+            return false;
+        }
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
