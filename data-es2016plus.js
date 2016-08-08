@@ -270,6 +270,7 @@ exports.tests = [
           es7shim:     true,
           typescript:  typescript.corejs,
           chrome51:    flag,
+          firefox50:   true,
           safari10:    true,
           safaritp:    true,
           webkit:      true,
@@ -284,6 +285,7 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
+          firefox50:   true,
           safaritp:    true,
           webkit:      true,
         },
