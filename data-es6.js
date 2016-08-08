@@ -11440,11 +11440,17 @@ exports.tests = [
         try {
           ({a} = null);
           return false;
-        } catch(e) {}
+        } catch(e) {
+          if (!(e instanceof TypeError))
+            return false;
+        }
         try {
           ({b} = undefined);
           return false;
-        } catch(e) {}
+        } catch(e) {
+          if (!(e instanceof TypeError))
+            return false;
+        }
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
