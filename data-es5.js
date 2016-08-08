@@ -67,15 +67,9 @@ exports.browsers = {
     obsolete: true
   },
   firefox8: {
-    full: 'Firefox 8-9',
+    full: 'Firefox 8-20',
     family: 'SpiderMonkey',
-    short: 'FF 8-9',
-    obsolete: true
-  },
-  firefox10: {
-    full: 'Firefox 10-20',
-    family: 'SpiderMonkey',
-    short: 'FF 10-20',
+    short: 'FF 8-20',
     obsolete: true
   },
   firefox21: {
