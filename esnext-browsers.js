@@ -320,8 +320,15 @@ module.exports = {
   node4: {
     full: 'Node.js',
       family: 'Node.js',
-      short: 'Node 4 - 5',
+      short: 'Node 4',
       platformtype: 'engine',
+  },
+  node5: {
+    full: 'Node.js',
+      family: 'Node.js',
+      short: 'Node 5',
+      platformtype: 'engine',
+      obsolete: true,
   },
   node6: {
     full: 'Node.js',
