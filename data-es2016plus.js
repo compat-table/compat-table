@@ -613,7 +613,7 @@ exports.tests = [
         babel:       true,
         typescript:  typescript.corejs,
         ie11:        true,
-        firefox10:   true,
+        firefox4:    true,
         chrome30:    true,
         node:        true,
         iojs:        true,
@@ -799,7 +799,7 @@ exports.tests = [
         res: (temp.lookupGetterShadowResults = {
           babel:       true,
           typescript:  typescript.corejs,
-          firefox10:   true,
+          firefox4:    true,
           safari51:    true,
           safari9:     true,
           safari10:    true,
