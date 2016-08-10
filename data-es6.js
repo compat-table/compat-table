@@ -533,7 +533,7 @@ exports.browsers = {
     short: 'Node<br>5',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    obsolete: false // Long-term support ends April 2019.
+    obsolete: true,
   },
   node6:  {
     full: 'Node.js',
