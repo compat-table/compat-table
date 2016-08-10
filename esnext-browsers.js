@@ -67,6 +67,11 @@ module.exports = {
       note_id: 'edge-experimental-flag',
       note_html: 'Flagged features have to be enabled via "Enable experimental Javascript features" setting under about:flags'
   },
+  firefox4: {
+    full: 'Firefox',
+      short: 'FF 4-9',
+      obsolete: very,
+  },
   firefox10: {
     full: 'Firefox',
       short: 'FF 10<br> ESR',
