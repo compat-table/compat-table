@@ -8659,13 +8659,19 @@ var a,b;
 try {
   ({a} = null);
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 try {
   ({b} = undefined);
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 return true;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nvar a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nvar a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nvar a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nvar a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
