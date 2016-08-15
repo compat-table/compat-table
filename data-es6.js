@@ -8816,6 +8816,7 @@ exports.tests = [
       */},
       res: {
         edge14:      flag,
+        firefox50:   true,
         chrome50:    flag,
         chrome51:    true,
         xs6:         true,
