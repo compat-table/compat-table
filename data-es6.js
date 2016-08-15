@@ -467,12 +467,12 @@ exports.browsers = {
     unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 8',
+    full: 'Safari Technology Preview Release 10',
     short: 'SF TP',
     unstable: true
   },
   webkit: {
-    full: 'WebKit r202419 (June 24, 2016)',
+    full: 'WebKit r204466 (August 15, 2016)',
     short: 'WK',
     unstable: true,
   },
