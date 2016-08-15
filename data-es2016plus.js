@@ -736,8 +736,10 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
-        res: temp.basicDefineGetterResults,
-      },
+        res: Object.assign({}, temp.basicDefineGetterResults, {
+          firefox2:   true,
+        }),
+	  },
       {
         name: '__lookupGetter__, prototype chain',
         exec: function () {/*
@@ -820,7 +822,9 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
-        res: temp.basicDefineGetterResults,
+        res: Object.assign({}, temp.basicDefineGetterResults, {
+          firefox2:   true,
+        }),
       },
       {
         name: '__lookupSetter__, prototype chain',
