@@ -17244,8 +17244,9 @@ exports.tests = [
     {
       name: 'accessors aren\'t constructors',
       exec: function(){/*
+        var f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
         try {
-          new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
+          new f;
         } catch(e) {
           return true;
         }

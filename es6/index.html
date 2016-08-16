@@ -56202,12 +56202,13 @@ catch(e) {
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_accessors_aren&apos;t_constructors"><td><span><a class="anchor" href="#test-miscellaneous_accessors_aren&apos;t_constructors">&#xA7;</a>accessors aren&apos;t constructors</span><script data-source="
+var f = (Object.getOwnPropertyDescriptor({get a(){}}, &apos;a&apos;)).get;
 try {
-  new (Object.getOwnPropertyDescriptor({get a(){}}, &apos;a&apos;)).get;
+  new f;
 } catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("697");try{return Function("asyncTestPassed","\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("697");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("697");try{return Function("asyncTestPassed","\nvar f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\ntry {\n  new f;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("697");return Function("asyncTestPassed","'use strict';"+"\nvar f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\ntry {\n  new f;\n} catch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
