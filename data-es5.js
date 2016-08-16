@@ -1537,8 +1537,8 @@ exports.tests = [
     name: 'legacy octal is a SyntaxError',
     exec: function() {/*
       'use strict';
-      try { eval('010'); }     catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('"\\010"'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('010');     return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('"\\010"'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
     res: temp.strict,
@@ -1555,10 +1555,10 @@ exports.tests = [
     name: 'assignment to eval or arguments is a SyntaxError',
     exec: function() {/*
       'use strict';
-      try { eval('eval = 1'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('arguments = 1'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('eval++'); }        catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('arguments++'); }   catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('eval = 1');      return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('arguments = 1'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('eval++');        return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('arguments++');   return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
     res: temp.strict,
@@ -1567,10 +1567,10 @@ exports.tests = [
     name: 'assignment to non-writable properties is a TypeError',
     exec: function() {/*
       'use strict';
-      try { Object.defineProperty({},"x",{ writable: false }).x = 1 } catch (err) { if (!(err instanceof TypeError)) return false; }
-      try { Object.preventExtensions({}).x = 1 }                      catch (err) { if (!(err instanceof TypeError)) return false; }
-      try { ({ get x(){ } }).x = 1; }                                 catch (err) { if (!(err instanceof TypeError)) return false; }
-      try { (function f() { f = 123; })() }                           catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { Object.defineProperty({},"x",{ writable: false }).x = 1; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { Object.preventExtensions({}).x = 1;                      return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { ({ get x(){ } }).x = 1;                                  return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { (function f() { f = 123; })();                           return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
     res: temp.strict,
@@ -1579,12 +1579,12 @@ exports.tests = [
     name: 'eval or arguments bindings is a SyntaxError',
     exec: function() {/*
       'use strict';
-      try { eval('var eval'); }                catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('var arguments'); }           catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('(function(eval){})'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('(function(arguments){})'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('try{}catch(eval){}'); }      catch (err) { if (!(err instanceof SyntaxError)) return false; }
-      try { eval('try{}catch(arguments){}'); } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('var eval');                return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('var arguments');           return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('(function(eval){})');      return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('(function(arguments){})'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('try{}catch(eval){}');      return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
+      try { eval('try{}catch(arguments){}'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
     res: temp.strict,
@@ -1593,8 +1593,8 @@ exports.tests = [
     name: 'arguments.caller and arguments.callee is a TypeError',
     exec: function() {/*
       'use strict';
-      try { arguments.caller; } catch (err) { if (!(err instanceof TypeError)) return false; }
-      try { arguments.callee; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { arguments.callee; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
     res: temp.strict,
@@ -1603,8 +1603,8 @@ exports.tests = [
     name: '(function(){}).caller and (function(){}).arguments is a TypeError',
     exec: function() {/*
       'use strict';
-      try { (function(){}).caller; }    catch (err) { if (!(err instanceof TypeError)) return false; }
-      try { (function(){}).arguments; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { (function(){}).caller;    return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      try { (function(){}).arguments; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
     res: temp.strict,
