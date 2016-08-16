@@ -127,6 +127,7 @@ exports.tests = [
       firefox45: firefox.nightly,
       firefox47: true,
       chrome51: flag,
+      chrome54: true,
       edge14: true,
       webkit: true,
     }
@@ -153,6 +154,7 @@ exports.tests = [
       firefox45: firefox.nightly,
       firefox47: true,
       chrome51: flag,
+      chrome54: true,
       edge14: true,
       webkit: true,
     }
@@ -270,6 +272,7 @@ exports.tests = [
           es7shim: true,
           typescript: typescript.corejs,
           chrome51: flag,
+          chrome54: true,
           firefox50: true,
           safari10: true,
           safaritp: true,
@@ -286,6 +289,7 @@ exports.tests = [
         */},
         res: {
           firefox50: true,
+          chrome54: true,
           safaritp: true,
           webkit: true,
         },

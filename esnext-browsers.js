@@ -284,6 +284,18 @@ module.exports = {
       short: 'CH 52',
       note_id: 'experimental-flag',
   },
+  chrome53: {
+    full: 'Chrome',
+      short: 'CH 53',
+      note_id: 'experimental-flag',
+      unstable: true,
+  },
+  chrome54: {
+    full: 'Chrome',
+      short: 'CH 54',
+      note_id: 'experimental-flag',
+      unstable: true,
+  },
   safari51: {
     full: 'Safari',
       short: 'SF<br />5.1 - 8',
