@@ -122,6 +122,11 @@ module.exports = {
       short: 'FF 39',
       obsolete: true,
   },
+  firefox40: {
+    full: 'Firefox',
+      short: 'FF 40',
+      obsolete: true,
+  },
   firefox41: {
     full: 'Firefox',
       short: 'FF 41',
@@ -280,17 +285,17 @@ module.exports = {
       note_id: 'experimental-flag',
   },
   safari51: {
-    full: 'Safari 5.1 - 8',
+    full: 'Safari',
       short: 'SF<br />5.1 - 8',
       obsolete: false,
   },
   safari9: {
-    full: 'Safari 9',
+    full: 'Safari',
       short: 'SF 9',
       obsolete: false,
   },
   safari10: {
-    full: 'Safari 10',
+    full: 'Safari',
       short: 'SF 10',
       unstable: true,
   },

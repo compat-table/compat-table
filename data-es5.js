@@ -111,7 +111,7 @@ exports.browsers = {
   safari6: {
     full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8, Safari 9',
     family: 'JavaScriptCore',
-    short: 'SF 6+',
+    short: 'SF 6-9',
     obsolete: false
   },
   safari10: {

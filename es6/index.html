@@ -186,7 +186,7 @@
 <th class="platform safari7 desktop obsolete" data-browser="safari7"><a href="#safari7" class="browser-name"><abbr title="Safari">SF 6.1,<br>SF 7</abbr></a></th>
 <th class="platform safari71_8 desktop" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
 <th class="platform safari9 desktop" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari">SF 9</abbr></a></th>
-<th class="platform safari10 desktop unstable" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari 10">SF 10</abbr></a></th>
+<th class="platform safari10 desktop unstable" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari">SF 10</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 10">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="WebKit r204466 (August 15, 2016)">WK</abbr></a></th>
 <th class="platform opera desktop obsolete" data-browser="opera"><a href="#opera" class="browser-name"><abbr title="Opera 12.16">OP 12</abbr></a></th>
@@ -34944,8 +34944,8 @@ return &apos;get&apos; in prop &amp;&amp; Promise[Symbol.species] === Promise;
 <td class="tally obsolete" data-browser="safari7" data-tally="0">0/12</td>
 <td class="tally" data-browser="safari71_8" data-tally="0">0/12</td>
 <td class="tally" data-browser="safari9" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
-<td class="tally unstable" data-browser="safari10" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
+<td class="tally unstable" data-browser="safari10" data-tally="1">12/12</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">12/12</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">12/12</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0">0/12</td>
 <td class="tally" data-browser="konq49" data-tally="0">0/12</td>
@@ -35851,8 +35851,8 @@ return testSymbolObject(objSym) &amp;&amp; testSymbolObject(symNoToJSON);
 <td class="no obsolete" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
 <td class="yes" data-browser="safari9">Yes</td>
-<td class="no unstable" data-browser="safari10">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safari10">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
@@ -48793,7 +48793,7 @@ return correctProtoBound(function(){})
 <td class="tally obsolete" data-browser="firefox47" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">24/36</td>
 <td class="tally" data-browser="firefox48" data-tally="0.75" style="background-color:hsl(90,53%,50%)">27/36</td>
 <td class="tally unstable" data-browser="firefox49" data-tally="0.9722222222222222" style="background-color:hsl(116,43%,50%)">35/36</td>
-<td class="tally unstable" data-browser="firefox50" data-tally="1">36/36</td>
+<td class="tally unstable" data-browser="firefox50" data-tally="0.9722222222222222" style="background-color:hsl(116,43%,50%)">35/36</td>
 <td class="tally obsolete" data-browser="chrome" data-tally="0">0/36</td>
 <td class="tally obsolete" data-browser="chrome39" data-tally="0">0/36</td>
 <td class="tally obsolete" data-browser="chrome40" data-tally="0">0/36</td>
@@ -49034,7 +49034,7 @@ return get[0] === Symbol.hasInstance &amp;&amp; get.slice(1) + &apos;&apos; === 
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no" data-browser="firefox48">No</td>
 <td class="no unstable" data-browser="firefox49">No</td>
-<td class="yes unstable" data-browser="firefox50">Yes</td>
+<td class="no unstable" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="chrome">No</td>
 <td class="no obsolete" data-browser="chrome39">No</td>
 <td class="no obsolete" data-browser="chrome40">No</td>
@@ -55847,22 +55847,22 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 <td class="tally obsolete" data-browser="chrome42" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
 <td class="tally obsolete" data-browser="chrome43" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally obsolete" data-browser="chrome44" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally obsolete" data-browser="chrome45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally obsolete" data-browser="chrome46" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally obsolete" data-browser="chrome47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally obsolete" data-browser="chrome48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally obsolete" data-browser="chrome49" data-tally="0.7" style="background-color:hsl(84,55%,50%)">7/10</td>
-<td class="tally obsolete" data-browser="chrome50" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td class="tally obsolete" data-browser="chrome51" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td class="tally" data-browser="chrome52" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td class="tally obsolete" data-browser="chrome45" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td class="tally obsolete" data-browser="chrome46" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td class="tally obsolete" data-browser="chrome48" data-tally="0.6" style="background-color:hsl(72,59%,50%)">6/10</td>
+<td class="tally obsolete" data-browser="chrome49" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td class="tally obsolete" data-browser="chrome50" data-tally="1">10/10</td>
+<td class="tally obsolete" data-browser="chrome51" data-tally="1">10/10</td>
+<td class="tally" data-browser="chrome52" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="safari51" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally obsolete" data-browser="safari6" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally obsolete" data-browser="safari7" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally" data-browser="safari71_8" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
-<td class="tally" data-browser="safari9" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
-<td class="tally unstable" data-browser="safari10" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td class="tally" data-browser="safari9" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
+<td class="tally unstable" data-browser="safari10" data-tally="1">10/10</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">10/10</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="opera" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
 <td class="tally" data-browser="konq49" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td class="tally obsolete" data-browser="rhino17" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
@@ -55871,7 +55871,7 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 <td class="tally obsolete" data-browser="iojs" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally" data-browser="node4" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
-<td class="tally" data-browser="node6" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td class="tally" data-browser="node6" data-tally="1">10/10</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 <td class="tally" data-browser="xs6" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally" data-browser="jxa" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
@@ -55884,7 +55884,7 @@ return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-
 <td class="tally" data-browser="android51" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally obsolete" data-browser="ios7" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
-<td class="tally" data-browser="ios9" data-tally="0.4" style="background-color:hsl(48,68%,50%)">4/10</td>
+<td class="tally" data-browser="ios9" data-tally="0.5" style="background-color:hsl(60,64%,50%)">5/10</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_no_escaped_reserved_words_as_identifiers"><td><span><a class="anchor" href="#test-miscellaneous_no_escaped_reserved_words_as_identifiers">&#xA7;</a>no escaped reserved words as identifiers</span><script data-source="
 var \u0061;
@@ -56120,14 +56120,15 @@ do {} while (false) return true;
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 </tr>
-<tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_no_assignments_allowed_in_for-in_head"><td><span><a class="anchor" href="#test-miscellaneous_no_assignments_allowed_in_for-in_head">&#xA7;</a>no assignments allowed in for-in head</span><script data-source="
+<tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_no_assignments_allowed_in_for-in_head_in_strict_mode"><td><span><a class="anchor" href="#test-miscellaneous_no_assignments_allowed_in_for-in_head_in_strict_mode">&#xA7;</a>no assignments allowed in for-in head in strict mode</span><script data-source="
+&apos;use strict&apos;;
 try {
   eval(&apos;for (var i = 0 in {}) {}&apos;);
 }
 catch(e) {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("696");try{return Function("asyncTestPassed","\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("696");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("696");try{return Function("asyncTestPassed","\n'use strict';\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("696");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -56162,22 +56163,22 @@ catch(e) {
 <td class="no obsolete" data-browser="chrome42">No</td>
 <td class="no obsolete" data-browser="chrome43">No</td>
 <td class="no obsolete" data-browser="chrome44">No</td>
-<td class="no obsolete" data-browser="chrome45">No</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no obsolete" data-browser="chrome47">No</td>
-<td class="no obsolete" data-browser="chrome48">No</td>
-<td class="no obsolete" data-browser="chrome49">No</td>
-<td class="no obsolete" data-browser="chrome50">No</td>
-<td class="no obsolete" data-browser="chrome51">No</td>
-<td class="no" data-browser="chrome52">No</td>
+<td class="yes obsolete" data-browser="chrome45">Yes</td>
+<td class="yes obsolete" data-browser="chrome46">Yes</td>
+<td class="yes obsolete" data-browser="chrome47">Yes</td>
+<td class="yes obsolete" data-browser="chrome48">Yes</td>
+<td class="yes obsolete" data-browser="chrome49">Yes</td>
+<td class="yes obsolete" data-browser="chrome50">Yes</td>
+<td class="yes obsolete" data-browser="chrome51">Yes</td>
+<td class="yes" data-browser="chrome52">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
 <td class="no" data-browser="safari71_8">No</td>
-<td class="no" data-browser="safari9">No</td>
-<td class="no unstable" data-browser="safari10">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes" data-browser="safari9">Yes</td>
+<td class="yes unstable" data-browser="safari10">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera">No</td>
 <td class="no" data-browser="konq49">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -56186,7 +56187,7 @@ catch(e) {
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="yes" data-browser="node6">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
 <td class="yes" data-browser="xs6">Yes</td>
 <td class="yes" data-browser="jxa">Yes</td>
@@ -56199,7 +56200,7 @@ catch(e) {
 <td class="no" data-browser="android51">No</td>
 <td class="no obsolete" data-browser="ios7">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios9">Yes</td>
 </tr>
 <tr class="subtest" data-parent="miscellaneous" id="test-miscellaneous_accessors_aren&apos;t_constructors"><td><span><a class="anchor" href="#test-miscellaneous_accessors_aren&apos;t_constructors">&#xA7;</a>accessors aren&apos;t constructors</span><script data-source="
 var f = (Object.getOwnPropertyDescriptor({get a(){}}, &apos;a&apos;)).get;
