@@ -114,14 +114,20 @@ exports.browsers = {
     short: 'SF 6+',
     obsolete: false
   },
+  safari10: {
+    full: 'Safari 10',
+    family: 'JavaScriptCore',
+    short: 'SF 10',
+    obsolete: false
+  },
   safaritp: {
-    full: 'Safari Technology Preview Release 5',
+    full: 'Safari Technology Preview Release 10',
     family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true
   },
   webkit: {
-    full: 'Webkit r200167 (April 28, 2016)',
+    full: 'Webkit r204466 (August 15, 2016)',
     family: 'JavaScriptCore',
     short: 'WebKit',
     obsolete: false
@@ -1005,6 +1011,7 @@ exports.tests = [
       es5shim: true,
       ie9: true,
       firefox4: true,
+      safari10: true,
       safaritp: true,
       webkit: true,
       chrome5: true,
@@ -1666,7 +1673,8 @@ exports.tests = [
       ie10: true,
       firefox4: true,
       safari51: false,
-      safaritp: false,
+      safari10: true,
+      safaritp: true,
       webkit: true,
       chrome13: true,
       opera12: true,
