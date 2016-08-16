@@ -13967,12 +13967,16 @@ return passed;
 </tr>
 <tr significance="0.25"><td id="test-block-level_function_declaration"><span><a class="anchor" href="#test-block-level_function_declaration">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation">block-level function declaration</a><a href="#block-level-function-note"><sup>[13]</sup></a></span><script data-source="
 &apos;use strict&apos;;
+if (f() !== 1) return false;
 function f() { return 1; }
 {
+  if (f() !== 2) return false;
   function f() { return 2; }
+  if (f() !== 2) return false;
 }
-return f() === 1;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\n'use strict';\nfunction f() { return 1; }\n{\n  function f() { return 2; }\n}\nreturn f() === 1;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nfunction f() { return 1; }\n{\n  function f() { return 2; }\n}\nreturn f() === 1;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+if (f() !== 1) return false;
+return true;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\n'use strict';\nif (f() !== 1) return false;\nfunction f() { return 1; }\n{\n  if (f() !== 2) return false;\n  function f() { return 2; }\n  if (f() !== 2) return false;\n}\nif (f() !== 1) return false;\nreturn true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nif (f() !== 1) return false;\nfunction f() { return 1; }\n{\n  if (f() !== 2) return false;\n  function f() { return 2; }\n  if (f() !== 2) return false;\n}\nif (f() !== 1) return false;\nreturn true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
