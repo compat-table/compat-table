@@ -17158,8 +17158,6 @@ exports.tests = [
         edge12:      true,
         chrome42:    true,
         node4:       true,
-        firefox2:    true,
-        firefox4:    false,
         firefox41:   true,
         safaritp:    true,
         safari10:    true,
