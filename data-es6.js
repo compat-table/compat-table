@@ -10504,8 +10504,6 @@ exports.tests = [
     tr: true,
     closure: true,
     ie11: true,
-    firefox2: true,
-    firefox3_5: false,
     firefox46: true,
     chrome21dev: flag,
     chrome41: true,
