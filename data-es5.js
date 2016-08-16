@@ -1553,9 +1553,7 @@ exports.tests = [
       try { eval('"\\010"'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
-    res: Object.assign({}, temp.strict, {
-      firefox2: true,
-    }),
+    res: temp.strict,
   },
   {
     name: 'assignment to unresolvable identifiers is a ReferenceError',
@@ -1587,9 +1585,7 @@ exports.tests = [
       try { (function f() { f = 123; })();                           return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: Object.assign({}, temp.strict, {
-      firefox2: true,
-    }),
+    res: temp.strict,
   },
   {
     name: 'eval or arguments bindings is a SyntaxError',
@@ -1613,9 +1609,7 @@ exports.tests = [
       try { arguments.callee; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: Object.assign({}, temp.strict, {
-      firefox2: true,
-    }),
+    res: temp.strict,
   },
   {
     name: '(function(){}).caller and (function(){}).arguments is a TypeError',
@@ -1625,9 +1619,7 @@ exports.tests = [
       try { (function(){}).arguments; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: Object.assign({}, temp.strict, {
-      firefox2: true,
-    }),
+    res: temp.strict,
   },
   {
     name: 'arguments is unmapped',
