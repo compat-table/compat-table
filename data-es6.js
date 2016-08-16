@@ -10469,11 +10469,15 @@ exports.tests = [
   link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
+    if (f() !== 1) return false;
     function f() { return 1; }
     {
+      if (f() !== 2) return false;
       function f() { return 2; }
+      if (f() !== 2) return false;
     }
-    return f() === 1;
+    if (f() !== 1) return false;
+    return true;
   */},
   res: {
     babel:       true,
