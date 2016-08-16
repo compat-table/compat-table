@@ -739,7 +739,7 @@ exports.tests = [
         res: Object.assign({}, temp.basicDefineGetterResults, {
           firefox2:   true,
         }),
-	  },
+      },
       {
         name: '__lookupGetter__, prototype chain',
         exec: function () {/*
