@@ -59,7 +59,7 @@ exports.tests = [
          */},
         res: {
           tr:          true,
-          babel:       false,
+          babel:       true,
           typescript:  true,
           edge13:      flag,
           edge14:      true,
