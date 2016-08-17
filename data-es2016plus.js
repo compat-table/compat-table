@@ -128,6 +128,7 @@ exports.tests = [
       firefox47:  true,
       chrome51:   flag,
       edge14:     true,
+      webkit:     true,
     }
   },
   {
@@ -153,6 +154,7 @@ exports.tests = [
       firefox47:  true,
       chrome51:   flag,
       edge14:     true,
+      webkit:     true,
     }
   },
   {
@@ -520,6 +522,7 @@ exports.tests = [
       firefox47:   true,
       typescript:  true,
       chrome49:    true,
+      webkit:      true,
     }
   },
   {
@@ -539,6 +542,7 @@ exports.tests = [
       firefox47:   true,
       typescript:  true,
       chrome49:    true,
+      webkit:      true,
     }
   },
   {
@@ -974,7 +978,9 @@ exports.tests = [
          class C extends null {}
          return new C instanceof C;
          */},
-        res: {},
+        res: {
+          webkit:      true,
+        },
       },
       {
         name: 'proper "this" binding',
@@ -988,7 +994,9 @@ exports.tests = [
          };
          return passed;
          */},
-        res: {},
+        res: {
+          webkit:      true,
+        },
       },
     ]
   },
