@@ -42,6 +42,12 @@ exports.browsers = {
     short: 'Edge 13+',
     obsolete: false
   },
+  firefox2: {
+    full: 'Firefox 2',
+    family: 'SpiderMonkey',
+    short: 'FF 2',
+    obsolete: true
+  },
   firefox3: {
     full: 'Firefox 3',
     family: 'SpiderMonkey',
@@ -49,9 +55,15 @@ exports.browsers = {
     obsolete: true
   },
   firefox3_5: {
-    full: 'Firefox 3.5, Firefox 3.6',
+    full: 'Firefox 3.5',
     family: 'SpiderMonkey',
-    short: 'FF 3.5, 3.6',
+    short: 'FF 3.5',
+    obsolete: true
+  },
+  firefox3_6: {
+    full: 'Firefox 3.6',
+    family: 'SpiderMonkey',
+    short: 'FF 3.6',
     obsolete: true
   },
   firefox4: {
@@ -287,7 +299,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -309,7 +321,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -329,7 +341,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: null,
       safari4: true,
       safaritp: true,
@@ -352,7 +364,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: null,
       safari4: true,
       safaritp: true,
@@ -375,7 +387,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari51: true,
       safaritp: true,
       webkit: true,
@@ -721,7 +733,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -742,7 +754,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -763,7 +775,7 @@ exports.tests = [
     res: {
       es5shim: sparseNote,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -784,7 +796,7 @@ exports.tests = [
     res: {
       es5shim: sparseNote,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -805,7 +817,7 @@ exports.tests = [
     res: {
       es5shim: sparseNote,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -826,7 +838,7 @@ exports.tests = [
     res: {
       es5shim: sparseNote,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -847,7 +859,7 @@ exports.tests = [
     res: {
       es5shim: sparseNote,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -914,7 +926,7 @@ exports.tests = [
     res: {
       ie7: false,
       ie8: true,
-      firefox3: true,
+      firefox2: true,
       safari3: true,
       safaritp: true,
       webkit: true,
@@ -985,7 +997,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari4: true,
       safaritp: true,
       webkit: true,
@@ -1271,7 +1283,7 @@ exports.tests = [
     res: {
       es5shim: true,
       ie9: true,
-      firefox3: false,
+      firefox2: false,
       firefox21: true,
       safari6: true,
       safaritp: true,
@@ -1295,7 +1307,7 @@ exports.tests = [
     res: {
       ie7: null,
       ie9: true,
-      firefox4: true,
+      firefox3_6: true,
       safari3: null,
       safari4: true,
       safaritp: true,
@@ -1346,7 +1358,7 @@ exports.tests = [
     */},
     res: {
       ie9: true,
-      firefox3: false,
+      firefox2: false,
       firefox3_5: false,
       firefox8: true,
       firefox21: true,
@@ -1376,7 +1388,7 @@ exports.tests = [
     res: {
       ie7: null,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: null,
       safari4: true,
       safaritp: true,
@@ -1409,7 +1421,7 @@ exports.tests = [
       ie7: null,
       ie9: false,
       edge13: true,
-      firefox3: true,
+      firefox2: true,
       safari3: false,
       chrome5: false,
       chrome13: false,
@@ -1437,7 +1449,7 @@ exports.tests = [
     res: {
       ie7: null,
       ie9: true,
-      firefox3: true,
+      firefox2: true,
       safari3: null,
       safari4: true,
       safaritp: true,
@@ -1671,7 +1683,7 @@ exports.tests = [
     */},
     res: {
       ie10: true,
-      firefox4: true,
+      firefox2: true,
       safari51: false,
       safari10: true,
       safaritp: true,
