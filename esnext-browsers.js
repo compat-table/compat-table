@@ -317,9 +317,9 @@ module.exports = {
     unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 10',
+    full: 'Safari Technology Preview Release 11',
     short: 'SF TP',
-    unstable: true
+    unstable: true,
   },
   webkit: {
     full: 'WebKit r204915 (August 24, 2016)',
