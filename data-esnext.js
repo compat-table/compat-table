@@ -1686,6 +1686,42 @@ exports.tests = [
     }
   ]
 },
+{
+  name: 'Promise.prototype.finally',
+  category: 'draft (stage 2)',
+  significance: 'small',
+  link: 'https://github.com/tc39/proposal-promise-finally',
+  exec: function(){/*
+    var p1 = Promise.resolve("foo");
+    var p2 = Promise.reject("bar");
+    var score = 0;
+
+    function thenFn(result)  {
+      score += (result === "foo");
+      check();
+    }
+    function catchFn(result) {
+      score += (result === "bar");
+      check();
+    }
+    function finallyFn(result) {
+      score += (typeof result === "undefined");
+      check();
+    }
+
+    p1.then(thenFn);
+    p1.finally(finallyFn);
+
+    p2.catch(catchFn);
+    p2.finally(finallyFn);
+
+    function check() {
+      if (score === 4) asyncTestPassed();
+    }
+  */},
+  res: {
+  }
+}
 ];
 
 //Shift annex B features to the bottom
