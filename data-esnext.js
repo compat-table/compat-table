@@ -1686,6 +1686,56 @@ exports.tests = [
     }
   ]
 },
+{
+  name: 'Math extensions',
+  category: 'proposal (stage 1)',
+  significance: 'small',
+  link: 'https://github.com/rwaldron/proposal-math-extensions',
+  subtests: [
+    {
+      name: 'Math.clamp',
+      exec: function() {/*
+        return typeof Math.clamp === "function";
+      */},
+      res: {},
+    },
+    {
+      name: 'Math.scale',
+      exec: function() {/*
+        return typeof Math.scale === "function";
+      */},
+      res: {},
+    },
+    {
+      name: 'Math.radians',
+      exec: function() {/*
+        return typeof Math.radians === "function";
+      */},
+      res: {},
+    },
+    {
+      name: 'Math.degrees',
+      exec: function() {/*
+        return typeof Math.degrees === "function";
+      */},
+      res: {},
+    },
+    {
+      name: 'Math.RAD_PER_DEG',
+      exec: function() {/*
+        return typeof Math.RAD_PER_DEG === "number";
+      */},
+      res: {},
+    },
+    {
+      name: 'Math.DEG_PER_RAD',
+      exec: function() {/*
+        return typeof Math.DEG_PER_RAD === "number";
+      */},
+      res: {},
+    }
+  ]
+}
 ];
 
 //Shift annex B features to the bottom
