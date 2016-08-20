@@ -1700,16 +1700,16 @@ exports.tests = [
         var score = 0;
 
         function thenFn(result)  {
-        	score += (result === "foo");
-        	check();
+          score += (result === "foo");
+          check();
         }
         function catchFn(result) {
-        	score += (result === "bar");
-        	check();
+          score += (result === "bar");
+          check();
         }
         function finallyFn() {
-        	score += (arguments.length === 0);
-        	check();
+          score += (arguments.length === 0);
+          check();
         }
 
         p1.then(thenFn);
@@ -1725,7 +1725,7 @@ exports.tests = [
         p2.finally(finallyFn);
 
         function check() {
-        	if (score === 5) asyncTestPassed();
+          if (score === 5) asyncTestPassed();
         }
       */},
       res: {
@@ -1737,24 +1737,24 @@ exports.tests = [
         var score = 0;
 
         function thenFn(result)  {
-        	score += (result === "foo");
-        	check();
+          score += (result === "foo");
+          check();
         }
         function catchFn(result) {
-        	score += (result === "bar");
-        	check();
+          score += (result === "bar");
+          check();
         }
         function finallyFn() {
-        	score += (arguments.length === 0);
-        	check();
-        	return Promise.resolve("foobar");
+          score += (arguments.length === 0);
+          check();
+          return Promise.resolve("foobar");
         }
 
         Promise.resolve("foo").finally(finallyFn).then(thenFn);
         Promise.reject("bar").finally(finallyFn).catch(catchFn);
 
         function check() {
-        	if (score === 4) asyncTestPassed();
+          if (score === 4) asyncTestPassed();
         }
       */},
       res: {
