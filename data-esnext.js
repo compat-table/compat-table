@@ -1691,36 +1691,92 @@ exports.tests = [
   category: 'draft (stage 2)',
   significance: 'small',
   link: 'https://github.com/tc39/proposal-promise-finally',
-  exec: function(){/*
-    var p1 = Promise.resolve("foo");
-    var p2 = Promise.reject("bar");
-    var score = 0;
+  subtests: [
+    {
+      name: 'basic support',
+      exec: function(){/*
+        var p1 = Promise.resolve("foo");
+        var p2 = Promise.reject("bar");
+        var score = 0;
 
-    function thenFn(result)  {
-      score += (result === "foo");
-      check();
-    }
-    function catchFn(result) {
-      score += (result === "bar");
-      check();
-    }
-    function finallyFn(result) {
-      score += (typeof result === "undefined");
-      check();
-    }
+        function thenFn(result)  {
+        	score += (result === "foo");
+        	check();
+        }
+        function catchFn(result) {
+        	score += (result === "bar");
+        	check();
+        }
+        function finallyFn() {
+        	score += (arguments.length === 0);
+        	check();
+        }
 
-    p1.then(thenFn);
-    p1.finally(finallyFn);
+        p1.then(thenFn);
+        p1.finally(finallyFn);
 
-    p2.catch(catchFn);
-    p2.finally(finallyFn);
+        p1.finally(function() {
+          // should return a new Promise
+          score += p1.finally() !== p1;
+          check();
+        });
 
-    function check() {
-      if (score === 4) asyncTestPassed();
+        p2.catch(catchFn);
+        p2.finally(finallyFn);
+
+        function check() {
+        	if (score === 5) asyncTestPassed();
+        }
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'don\'t change resolution value',
+      exec: function(){/*
+        var score = 0;
+
+        function thenFn(result)  {
+        	score += (result === "foo");
+        	check();
+        }
+        function catchFn(result) {
+        	score += (result === "bar");
+        	check();
+        }
+        function finallyFn() {
+        	score += (arguments.length === 0);
+        	check();
+        	return Promise.resolve("foobar");
+        }
+
+        Promise.resolve("foo").finally(finallyFn).then(thenFn);
+        Promise.reject("bar").finally(finallyFn).catch(catchFn);
+
+        function check() {
+        	if (score === 4) asyncTestPassed();
+        }
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'change rejection value',
+      exec: function(){/*
+        Promise
+          .reject("bar")
+          .finally(function() {
+            return Promise.reject("foo");
+          })
+          .catch(function(result) {
+            if (result === "foo") asyncTestPassed();
+          });
+        }
+      */},
+      res: {
+      }
     }
-  */},
-  res: {
-  }
+  ]
 }
 ];
 
