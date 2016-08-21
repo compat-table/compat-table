@@ -5387,7 +5387,7 @@ function catchFn(result) {
   check();
 }
 function finallyFn() {
-  score += (arguments.length === 0);
+  score++;
   check();
   return Promise.resolve(&quot;foobar&quot;);
 }
@@ -5398,7 +5398,7 @@ Promise.reject(&quot;bar&quot;).finally(finallyFn).catch(catchFn);
 function check() {
   if (score === 4) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nvar score = 0;\n\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score += (arguments.length === 0);\n  check();\n  return Promise.resolve(\"foobar\");\n}\n\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\n\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score += (arguments.length === 0);\n  check();\n  return Promise.resolve(\"foobar\");\n}\n\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nvar score = 0;\n\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score++;\n  check();\n  return Promise.resolve(\"foobar\");\n}\n\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\n\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score++;\n  check();\n  return Promise.resolve(\"foobar\");\n}\n\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\n\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5456,16 +5456,30 @@ function check() {
 <td class="no" data-browser="ios9">No</td>
 </tr>
 <tr class="subtest" data-parent="Promise.prototype.finally" id="test-Promise.prototype.finally_change_rejection_value"><td><span><a class="anchor" href="#test-Promise.prototype.finally_change_rejection_value">&#xA7;</a>change rejection value</span><script data-source="
+var score = 0;
+
 Promise
-  .reject(&quot;bar&quot;)
+  .reject(&quot;foobar&quot;)
   .finally(function() {
     return Promise.reject(&quot;foo&quot;);
   })
   .catch(function(result) {
-    if (result === &quot;foo&quot;) asyncTestPassed();
+    score += (result === &quot;foo&quot;);
+    check();
+    return Promise.reject(&quot;foobar&quot;);
+  })
+  .finally(function() {
+    throw new Error(&apos;bar&apos;);
+  })
+  .catch(function(result) {
+    score += (result.message === &quot;bar&quot;);
+    check();
   });
+
+function check() {
+  if (score === 2) asyncTestPassed();
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nPromise\n  .reject(\"bar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    if (result === \"foo\") asyncTestPassed();\n  });\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nPromise\n  .reject(\"bar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    if (result === \"foo\") asyncTestPassed();\n  });\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nvar score = 0;\n\nPromise\n  .reject(\"foobar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    score += (result === \"foo\");\n    check();\n    return Promise.reject(\"foobar\");\n  })\n  .finally(function() {\n    throw new Error('bar');\n  })\n  .catch(function(result) {\n    score += (result.message === \"bar\");\n    check();\n  });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\n\nPromise\n  .reject(\"foobar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    score += (result === \"foo\");\n    check();\n    return Promise.reject(\"foobar\");\n  })\n  .finally(function() {\n    throw new Error('bar');\n  })\n  .catch(function(result) {\n    score += (result.message === \"bar\");\n    check();\n  });\n\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

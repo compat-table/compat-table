@@ -1745,7 +1745,7 @@ exports.tests = [
           check();
         }
         function finallyFn() {
-          score += (arguments.length === 0);
+          score++;
           check();
           return Promise.resolve("foobar");
         }
@@ -1763,14 +1763,28 @@ exports.tests = [
     {
       name: 'change rejection value',
       exec: function(){/*
+        var score = 0;
+
         Promise
-          .reject("bar")
+          .reject("foobar")
           .finally(function() {
             return Promise.reject("foo");
           })
           .catch(function(result) {
-            if (result === "foo") asyncTestPassed();
+            score += (result === "foo");
+            check();
+            return Promise.reject("foobar");
+          })
+          .finally(function() {
+            throw new Error('bar');
+          })
+          .catch(function(result) {
+            score += (result.message === "bar");
+            check();
           });
+
+        function check() {
+          if (score === 2) asyncTestPassed();
         }
       */},
       res: {
