@@ -1761,11 +1761,11 @@ exports.tests = [
     return typeof Object.observe == 'function';
   */},
   res: {
-    chrome36:        true,
-    chrome49:        false,
-    node:            true,
-    iojs:            true,
-    android50:       true,
+    chrome36: true,
+    chrome49: false,
+    node: true,
+    iojs: true,
+    android50: true,
   },
   separator: 'after'
 },

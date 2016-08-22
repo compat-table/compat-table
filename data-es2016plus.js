@@ -58,16 +58,16 @@ exports.tests = [
          return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
          */},
         res: {
-          tr:          true,
-          babel:       true,
-          typescript:  true,
-          edge13:      flag,
-          edge14:      true,
-          firefox48:   firefox.nightly,
-          chrome51:    flag,
-          chrome52:    true,
-          safaritp:    true,
-          webkit:      true,
+          tr: true,
+          babel: true,
+          typescript: true,
+          edge13: flag,
+          edge14: true,
+          firefox48: firefox.nightly,
+          chrome51: flag,
+          chrome52: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -76,16 +76,16 @@ exports.tests = [
          var a = 2; a **= 3; return a === 8;
          */},
         res: {
-          tr:          true,
-          babel:       true,
-          typescript:  true,
-          edge13:      flag,
-          edge14:      true,
-          firefox48:   firefox.nightly,
-          chrome51:    flag,
-          chrome52:    true,
-          safaritp:    true,
-          webkit:      true,
+          tr: true,
+          babel: true,
+          typescript: true,
+          edge13: flag,
+          edge14: true,
+          firefox48: firefox.nightly,
+          chrome51: flag,
+          chrome52: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -99,12 +99,12 @@ exports.tests = [
          }
          */},
         res: {
-          babel:       true,
-          edge14:      true,
-          chrome51:    flag,
-          chrome52:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          edge14: true,
+          chrome51: flag,
+          chrome52: true,
+          safaritp: true,
+          webkit: true,
         }
       },
     ],
@@ -121,14 +121,14 @@ exports.tests = [
      return Array.isArray(v) && String(v) === "foo,bar,baz";
      */},
     res: {
-      babel:      true,
-      es7shim:    true,
+      babel: true,
+      es7shim: true,
       typescript: typescript.corejs,
-      firefox45:  firefox.nightly,
-      firefox47:  true,
-      chrome51:   flag,
-      edge14:     true,
-      webkit:     true,
+      firefox45: firefox.nightly,
+      firefox47: true,
+      chrome51: flag,
+      edge14: true,
+      webkit: true,
     }
   },
   {
@@ -147,14 +147,14 @@ exports.tests = [
      && String(e[2]) === "c,baz";
      */},
     res: {
-      babel:      true,
-      es7shim:    true,
+      babel: true,
+      es7shim: true,
       typescript: typescript.corejs,
-      firefox45:  firefox.nightly,
-      firefox47:  true,
-      chrome51:   flag,
-      edge14:     true,
-      webkit:     true,
+      firefox45: firefox.nightly,
+      firefox47: true,
+      chrome51: flag,
+      edge14: true,
+      webkit: true,
     }
   },
   {
@@ -173,15 +173,15 @@ exports.tests = [
          && Array(1).includes();
          */},
         res: {
-          babel:           true,
-          es7shim:         true,
-          typescript:      typescript.corejs,
-          safari9:         true,
-          safaritp:        true,
-          webkit:          true,
-          chrome47:        true,
-          edge14:          true,
-          firefox43:       true,
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          chrome47: true,
+          edge14: true,
+          firefox43: true,
         }
       },
       {
@@ -212,15 +212,15 @@ exports.tests = [
          }, 'foo', 6) === true && passed === 3;
          */},
         res: {
-          babel:           true,
-          es7shim:         true,
-          typescript:      typescript.corejs,
-          safari9:         true,
-          safaritp:        true,
-          webkit:          true,
-          chrome47:        true,
-          edge14:          true,
-          firefox43:       true,
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          chrome47: true,
+          edge14: true,
+          firefox43: true,
         }
       },
       {
@@ -234,14 +234,14 @@ exports.tests = [
          });
          */},
         res: {
-          babel:           true,
-          typescript:      typescript.corejs,
-          chrome47:        true,
-          edge14:          true,
-          firefox43:       true,
-          safaritp:        true,
-          safari10:        true,
-          webkit:          true,
+          babel: true,
+          typescript: typescript.corejs,
+          chrome47: true,
+          edge14: true,
+          firefox43: true,
+          safaritp: true,
+          safari10: true,
+          webkit: true,
         }
       },
     ],
@@ -266,14 +266,14 @@ exports.tests = [
           && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
           */},
         res: {
-          babel:       true,
-          es7shim:     true,
-          typescript:  typescript.corejs,
-          chrome51:    flag,
-          firefox50:   true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          chrome51: flag,
+          firefox50: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         },
       },
       {
@@ -285,9 +285,9 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
-          firefox50:   true,
-          safaritp:    true,
-          webkit:      true,
+          firefox50: true,
+          safaritp: true,
+          webkit: true,
         },
       },
     ]
@@ -307,15 +307,15 @@ exports.tests = [
          && 'hello'.padStart(6, '123') === '1hello';
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          es7shim:     true,
-          firefox48:   true,
-          edge14:      flag,
-          chrome52:    flag,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          es7shim: true,
+          firefox48: true,
+          edge14: flag,
+          chrome52: flag,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -327,15 +327,15 @@ exports.tests = [
          && 'hello'.padEnd(6, '123') === 'hello1';
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          es7shim:     true,
-          firefox48:   true,
-          edge14:      flag,
-          chrome52:    flag,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          es7shim: true,
+          firefox48: true,
+          edge14: flag,
+          chrome52: flag,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       }
     ]
@@ -352,12 +352,12 @@ exports.tests = [
           return typeof function f( a, b, ){} === 'function';
         */},
         res: {
-          babel:       true,
-          typescript:  true,
-          edge14:      true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: true,
+          edge14: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -366,12 +366,12 @@ exports.tests = [
           return Math.min(1,2,3,) === 1;
         */},
         res: {
-          babel:       true,
-          typescript:  true,
-          edge14:      true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: true,
+          edge14: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       },
     ],
@@ -390,12 +390,12 @@ exports.tests = [
           })() instanceof Promise
         */},
         res: {
-          tr:          true,
-          babel:       babel.regenerator,
-          typescript:  typescript.asyncawait,
-          chrome52:    flag,
-          edge13:      flag,
-          edge14:      true,
+          tr: true,
+          babel: babel.regenerator,
+          typescript: typescript.asyncawait,
+          chrome52: flag,
+          edge13: flag,
+          edge14: true,
         }
       },
       {
@@ -406,12 +406,12 @@ exports.tests = [
           })() instanceof Promise
         */},
         res: {
-          tr:          true,
-          babel:       babel.regenerator,
-          typescript:  typescript.asyncawait,
-          chrome52:    flag,
-          edge13:      flag,
-          edge14:      true,
+          tr: true,
+          babel: babel.regenerator,
+          typescript: typescript.asyncawait,
+          chrome52: flag,
+          edge13: flag,
+          edge14: true,
         }
       },
       {
@@ -420,12 +420,12 @@ exports.tests = [
           return (async () => 42 + await Promise.resolve(42))() instanceof Promise
         */},
         res: {
-          tr:          true,
-          babel:       babel.regenerator,
-          typescript:  false, // still buggy output
-          chrome52:    flag,
-          edge13:      flag,
-          edge14:      true,
+          tr: true,
+          babel: babel.regenerator,
+          typescript: false, // still buggy output
+          chrome52: flag,
+          edge13: flag,
+          edge14: true,
         }
       }
     ]
@@ -446,12 +446,12 @@ exports.tests = [
      }
      */},
     res: {
-      edge13:    true,
+      edge13: true,
       firefox43: true,
-      chrome50:  true,
-      safari10:  true,
-      safaritp:  true,
-      webkit:    true,
+      chrome50: true,
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     }
   },
   {
@@ -477,12 +477,12 @@ exports.tests = [
      */},
     res: {
       firefox31: true,
-      chrome39:  true,
-      node:      flag,
-      node4:     true,
-      safari10:  true,
-      safaritp:  true,
-      webkit:    true,
+      chrome39: true,
+      node: flag,
+      node4: true,
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     }
   },
   {
@@ -499,11 +499,11 @@ exports.tests = [
      }
      */},
     res: {
-      edge12:      true,
-      chrome47:    true,
-      safari10:    true,
-      safaritp:    true,
-      webkit:      true,
+      edge12: true,
+      chrome47: true,
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     }
   },
   {
@@ -516,13 +516,13 @@ exports.tests = [
      return x === 1 && y === 2 && z + '' === '3,4';
      */},
     res: {
-      babel:       true,
-      edge13:      flag,
-      edge14:      true,
-      firefox47:   true,
-      typescript:  true,
-      chrome49:    true,
-      webkit:      true,
+      babel: true,
+      edge13: flag,
+      edge14: true,
+      firefox47: true,
+      typescript: true,
+      chrome49: true,
+      webkit: true,
     }
   },
   {
@@ -536,13 +536,13 @@ exports.tests = [
      }([1,2,3,4]);
      */},
     res: {
-      babel:       true,
-      edge13:      flag,
-      edge14:      true,
-      firefox47:   true,
-      typescript:  true,
-      chrome49:    true,
-      webkit:      true,
+      babel: true,
+      edge13: flag,
+      edge14: true,
+      firefox47: true,
+      typescript: true,
+      chrome49: true,
+      webkit: true,
     }
   },
   {
@@ -561,13 +561,13 @@ exports.tests = [
      return passed;
      */},
     res: {
-      firefox24:   true,
-      firefox25:   false,
-      firefox47:   true,
-      chrome50:    true,
-      safari10:    true,
-      safaritp:    true,
-      webkit:      true,
+      firefox24: true,
+      firefox25: false,
+      firefox47: true,
+      chrome50: true,
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     },
   },
   {
@@ -588,12 +588,12 @@ exports.tests = [
      return (get + '' === "length,1,2");
      */},
     res: {
-      firefox43:       true,
-      chrome49:        true,
-      edge14:          true,
-      safari10:        true,
-      safaritp:        true,
-      webkit:          true,
+      firefox43: true,
+      chrome49: true,
+      edge14: true,
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     },
   },
   {
@@ -612,19 +612,19 @@ exports.tests = [
        && prop.enumerable;
        */},
       res: (temp.basicDefineGetterResults = {
-        babel:       true,
-        typescript:  typescript.corejs,
-        ie11:        true,
-        firefox4:    true,
-        chrome30:    true,
-        node:        true,
-        iojs:        true,
-        safari51:    true,
-        safari9:     true,
-        safaritp:    true,
-        webkit:      true,
-        android40:   true,
-        ios51:       true,
+        babel: true,
+        typescript: typescript.corejs,
+        ie11: true,
+        firefox4: true,
+        chrome30: true,
+        node: true,
+        iojs: true,
+        safari51: true,
+        safari9: true,
+        safaritp: true,
+        webkit: true,
+        android40: true,
+        ios51: true,
       })
     },
       {
@@ -639,18 +639,18 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: (temp.defineGetterSymbolsResults = {
-          babel:       true,
-          typescript:  typescript.corejs,
-          edge12:      true,
-          firefox36:   true,
-          chrome30:    flag,
-          chrome38:    true,
-          node:        true,
-          iojs:        true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
-          android40:   true,
+          babel: true,
+          typescript: typescript.corejs,
+          edge12: true,
+          firefox36: true,
+          chrome30: flag,
+          chrome38: true,
+          node: true,
+          iojs: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
         })
       },
       {
@@ -665,13 +665,13 @@ exports.tests = [
          }
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          firefox48:   true,
-          safari51:    true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          firefox48: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
         },
       },
       {
@@ -711,13 +711,13 @@ exports.tests = [
          }
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          firefox48:   true,
-          safari51:    true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          firefox48: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
         },
       },
       {
@@ -774,14 +774,14 @@ exports.tests = [
          }
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          ie11:        true,
-          firefox24:   true,
-          safari51:    true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox24: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
         },
       },
       {
@@ -794,14 +794,14 @@ exports.tests = [
          return b.__lookupGetter__("foo") === undefined
          */},
         res: (temp.lookupGetterShadowResults = {
-          babel:       true,
-          typescript:  typescript.corejs,
-          firefox4:    true,
-          safari51:    true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
-          ios51:       true,
+          babel: true,
+          typescript: typescript.corejs,
+          firefox4: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          ios51: true,
         }),
       },
       {
@@ -858,14 +858,14 @@ exports.tests = [
          }
          */},
         res: {
-          babel:       true,
-          typescript:  typescript.corejs,
-          ie11:        true,
-          firefox24:   true,
-          safari51:    true,
-          safari9:     true,
-          safaritp:    true,
-          webkit:      true,
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox24: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
         },
       },
       {
@@ -896,12 +896,12 @@ exports.tests = [
        return def + '' === "foo";
        */},
       res: {
-        firefox24:   true,
-        edge13:      true,
-        chrome52:    true,
-        safari10:    true,
-        safaritp:    true,
-        webkit:      true,
+        firefox24: true,
+        edge13: true,
+        chrome52: true,
+        safari10: true,
+        safaritp: true,
+        webkit: true,
       }
     },
       {
@@ -914,12 +914,12 @@ exports.tests = [
          return def + '' === "foo";
          */},
         res: {
-          firefox24:   true,
-          edge13:      true,
-          chrome52:    true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          firefox24: true,
+          edge13: true,
+          chrome52: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -937,10 +937,10 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
-          firefox49:   true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          firefox49: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       },
       {
@@ -958,10 +958,10 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
-          firefox49:   true,
-          safari10:    true,
-          safaritp:    true,
-          webkit:      true,
+          firefox49: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
         }
       }
     ]
@@ -979,7 +979,7 @@ exports.tests = [
          return new C instanceof C;
          */},
         res: {
-          webkit:     true,
+          webkit: true,
         },
       },
       {
@@ -995,7 +995,7 @@ exports.tests = [
          return passed;
          */},
         res: {
-          webkit:     true,
+          webkit: true,
         },
       },
     ]
@@ -1017,7 +1017,7 @@ exports.tests = [
       chrome51: true,
       safari10: true,
       safaritp: true,
-      webkit:   true,
+      webkit: true,
     },
   },
   {
@@ -1044,19 +1044,19 @@ exports.tests = [
      return i === 0;
      */},
     res: {
-      tr:          true,
-      ie10:        true,
-      edge12:      true,
-      firefox31:   true,
-      firefox40:   false,
-      chrome30:    true,
-      safari51:    true,
-      safari9:     false,
-      safaritp:    false,
-      webkit:      false,
-      node:        true,
-      android40:   true,
-      ios51:       true,
+      tr: true,
+      ie10: true,
+      edge12: true,
+      firefox31: true,
+      firefox40: false,
+      chrome30: true,
+      safari51: true,
+      safari9: false,
+      safaritp: false,
+      webkit: false,
+      node: true,
+      android40: true,
+      ios51: true,
     },
   },
 ];

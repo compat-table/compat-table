@@ -55147,15 +55147,15 @@ return s.length === 1 &amp;&amp; s[0] === &apos;0&apos;;
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_Object.keys"><td><span><a class="anchor" href="#test-own_property_order_Object.keys">&#xA7;</a>Object.keys</span><script data-source="
 var obj = {
   // Non-negative integer names appear first in value order
-  2:    true,
-  0:    true,
-  1:    true,
+  2: true,
+  0: true,
+  1: true,
   // Other string names appear in source order
-  &apos; &apos;:  true,
+  &apos; &apos;: true,
   // Non-negative integers are sorted above other names
-  9:    true,
-  D:    true,
-  B:    true,
+  9: true,
+  D: true,
+  B: true,
   // Negative integers are treated as other names
   &apos;-1&apos;: true,
 };
@@ -55178,7 +55178,7 @@ var forInOrder = &apos;&apos;;
 for(var key in obj)forInOrder += key;
 
 return Object.keys(obj).join(&apos;&apos;) === forInOrder;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("685");try{return Function("asyncTestPassed","\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar forInOrder = '';\nfor(var key in obj)forInOrder += key;\n\nreturn Object.keys(obj).join('') === forInOrder;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("685");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2:    true,\n  0:    true,\n  1:    true,\n  // Other string names appear in source order\n  ' ':  true,\n  // Non-negative integers are sorted above other names\n  9:    true,\n  D:    true,\n  B:    true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar forInOrder = '';\nfor(var key in obj)forInOrder += key;\n\nreturn Object.keys(obj).join('') === forInOrder;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("685");try{return Function("asyncTestPassed","\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2: true,\n  0: true,\n  1: true,\n  // Other string names appear in source order\n  ' ': true,\n  // Non-negative integers are sorted above other names\n  9: true,\n  D: true,\n  B: true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar forInOrder = '';\nfor(var key in obj)forInOrder += key;\n\nreturn Object.keys(obj).join('') === forInOrder;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("685");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  // Non-negative integer names appear first in value order\n  2: true,\n  0: true,\n  1: true,\n  // Other string names appear in source order\n  ' ': true,\n  // Non-negative integers are sorted above other names\n  9: true,\n  D: true,\n  B: true,\n  // Negative integers are treated as other names\n  '-1': true,\n};\n// Other string names are added in order of creation\nobj.A = true;\n// Non-negative integer names, conversely, ignore order of creation\nobj[3] = true;\n// Having a total of 20+ properties doesn't affect property order\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\n// Object.defineProperty doesn't affect the above rules\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\n// Deleting and reinserting a property doesn't preserve its position\ndelete obj[2];\nobj[2] = true;\n\nvar forInOrder = '';\nfor(var key in obj)forInOrder += key;\n\nreturn Object.keys(obj).join('') === forInOrder;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -55254,13 +55254,13 @@ return Object.keys(obj).join(&apos;&apos;) === forInOrder;
 </tr>
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_Object.getOwnPropertyNames"><td><span><a class="anchor" href="#test-own_property_order_Object.getOwnPropertyNames">&#xA7;</a>Object.getOwnPropertyNames</span><script data-source="
 var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  &apos; &apos;:  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  &apos; &apos;: true,
+  9: true,
+  D: true,
+  B: true,
   &apos;-1&apos;: true
 };
 obj.A = true;
@@ -55274,7 +55274,7 @@ delete obj[2];
 obj[2] = true;
 
 return Object.getOwnPropertyNames(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("686");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("686");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("686");try{return Function("asyncTestPassed","\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("686");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Object.getOwnPropertyNames(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -55451,13 +55451,13 @@ return result === &quot;012349 DB-1ACEFGHIJKLMNOPQRST&quot;;
 </tr>
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_JSON.stringify"><td><span><a class="anchor" href="#test-own_property_order_JSON.stringify">&#xA7;</a>JSON.stringify</span><script data-source="
 var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  &apos; &apos;:  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  &apos; &apos;: true,
+  9: true,
+  D: true,
+  B: true,
   &apos;-1&apos;: true
 };
 obj.A = true;
@@ -55472,7 +55472,7 @@ obj[2] = true;
 
 return JSON.stringify(obj) ===
   &apos;{&quot;0&quot;:true,&quot;1&quot;:true,&quot;2&quot;:true,&quot;3&quot;:true,&quot;4&quot;:true,&quot;9&quot;:true,&quot; &quot;:true,&quot;D&quot;:true,&quot;B&quot;:true,&quot;-1&quot;:true,&quot;A&quot;:true,&quot;E&quot;:true,&quot;F&quot;:true,&quot;G&quot;:true,&quot;H&quot;:true,&quot;I&quot;:true,&quot;J&quot;:true,&quot;K&quot;:true,&quot;L&quot;:true,&quot;M&quot;:true,&quot;N&quot;:true,&quot;O&quot;:true,&quot;P&quot;:true,&quot;Q&quot;:true,&quot;R&quot;:true,&quot;S&quot;:true,&quot;T&quot;:true,&quot;U&quot;:true,&quot;V&quot;:true,&quot;W&quot;:true,&quot;X&quot;:true,&quot;Y&quot;:true,&quot;Z&quot;:true,&quot;C&quot;:true}&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("688");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("688");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("688");try{return Function("asyncTestPassed","\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("688");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn JSON.stringify(obj) ===\n  '{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"9\":true,\" \":true,\"D\":true,\"B\":true,\"-1\":true,\"A\":true,\"E\":true,\"F\":true,\"G\":true,\"H\":true,\"I\":true,\"J\":true,\"K\":true,\"L\":true,\"M\":true,\"N\":true,\"O\":true,\"P\":true,\"Q\":true,\"R\":true,\"S\":true,\"T\":true,\"U\":true,\"V\":true,\"W\":true,\"X\":true,\"Y\":true,\"Z\":true,\"C\":true}';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -55632,13 +55632,13 @@ return result === &quot;012349 DB-1EFGHIJKLAC&quot;;
 </tr>
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_Reflect.ownKeys,_string_key_order"><td><span><a class="anchor" href="#test-own_property_order_Reflect.ownKeys,_string_key_order">&#xA7;</a>Reflect.ownKeys, string key order</span><script data-source="
 var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  &apos; &apos;:  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  &apos; &apos;: true,
+  9: true,
+  D: true,
+  B: true,
   &apos;-1&apos;: true
 };
 obj.A = true;
@@ -55652,7 +55652,7 @@ delete obj[2];
 obj[2] = true;
 
 return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("690");try{return Function("asyncTestPassed","\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("690");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2:    true,\n  0:    true,\n  1:    true,\n  ' ':  true,\n  9:    true,\n  D:    true,\n  B:    true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("690");try{return Function("asyncTestPassed","\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("690");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\n  2: true,\n  0: true,\n  1: true,\n  ' ': true,\n  9: true,\n  D: true,\n  B: true,\n  '-1': true\n};\nobj.A = true;\nobj[3] = true;\n\"EFGHIJKLMNOPQRSTUVWXYZ\".split('').forEach(function(key){\n  obj[key] = true;\n});\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, '4', { value: true, enumerable: true });\ndelete obj[2];\nobj[2] = true;\n\nreturn Reflect.ownKeys(obj).join('') === \"012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#forin-order-note"><sup>[28]</sup></a></td>
@@ -55729,8 +55729,8 @@ return Reflect.ownKeys(obj).join(&apos;&apos;) === &quot;012349 DB-1AEFGHIJKLMNO
 <tr class="subtest" data-parent="own_property_order" id="test-own_property_order_Reflect.ownKeys,_symbol_key_order"><td><span><a class="anchor" href="#test-own_property_order_Reflect.ownKeys,_symbol_key_order">&#xA7;</a>Reflect.ownKeys, symbol key order</span><script data-source="
 var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
 var obj = {
-  1:    true,
-  A:    true,
+  1: true,
+  A: true,
 };
 obj.B = true;
 obj[sym1] = true;
@@ -55743,7 +55743,7 @@ Object.defineProperty(obj, &apos;D&apos;, { value: true, enumerable: true });
 var result = Reflect.ownKeys(obj);
 var l = result.length;
 return result[l-3] === sym1 &amp;&amp; result[l-2] === sym2 &amp;&amp; result[l-1] === sym3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("691");try{return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("691");return Function("asyncTestPassed","'use strict';"+"\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1:    true,\n  A:    true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("691");try{return Function("asyncTestPassed","\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1: true,\n  A: true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("691");return Function("asyncTestPassed","'use strict';"+"\nvar sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();\nvar obj = {\n  1: true,\n  A: true,\n};\nobj.B = true;\nobj[sym1] = true;\nobj[2] = true;\nobj[sym2] = true;\nObject.defineProperty(obj, 'C', { value: true, enumerable: true });\nObject.defineProperty(obj, sym3,{ value: true, enumerable: true });\nObject.defineProperty(obj, 'D', { value: true, enumerable: true });\n\nvar result = Reflect.ownKeys(obj);\nvar l = result.length;\nreturn result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>

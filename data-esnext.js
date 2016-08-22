@@ -60,7 +60,7 @@ exports.tests = [
         return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
       */},
       res: {
-        babel:       true,
+        babel: true,
       }
     },
     {
@@ -70,7 +70,7 @@ exports.tests = [
         return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
       */},
       res: {
-        babel:       true,
+        babel: true,
       },
     },
   ],
@@ -87,7 +87,7 @@ exports.tests = [
     } === 42;
   */},
   res: {
-    babel:       true,
+    babel: true,
   }
 },
 {
@@ -120,7 +120,7 @@ exports.tests = [
       && new Uint8Array(buffer2)[0] === 1;
   */},
   res : {
-    edge13:    flag,
+    edge13: flag,
   }
 },
 {
@@ -135,7 +135,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge12:    flag,
+        edge12: flag,
         firefox39: true,
         firefox42: false,
         firefox44: false,
@@ -148,7 +148,7 @@ exports.tests = [
         return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -158,7 +158,7 @@ exports.tests = [
         return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -169,7 +169,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:      flag,
+        edge14: flag,
       }
     },
     {
@@ -178,7 +178,7 @@ exports.tests = [
         return typeof SIMD.Int8x16 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -189,7 +189,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -199,7 +199,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -209,7 +209,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -219,7 +219,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -229,7 +229,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -239,7 +239,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -248,7 +248,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.abs === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -258,7 +258,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.add === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -269,7 +269,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -279,7 +279,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -289,7 +289,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -299,7 +299,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -308,7 +308,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.check === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -318,7 +318,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.equal === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -328,7 +328,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -338,7 +338,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -348,7 +348,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -358,7 +358,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -368,7 +368,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -378,7 +378,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.mul === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -388,7 +388,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.div === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -399,7 +399,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -409,7 +409,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -419,7 +419,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -429,7 +429,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -438,7 +438,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.max === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -449,7 +449,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -458,7 +458,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.min === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -469,7 +469,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -478,7 +478,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.neg === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -489,7 +489,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -498,7 +498,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -509,7 +509,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -519,7 +519,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -529,7 +529,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -538,7 +538,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -548,7 +548,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.select === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -559,7 +559,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -569,7 +569,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -578,7 +578,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -588,7 +588,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.splat === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -598,7 +598,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -608,7 +608,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -618,7 +618,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -628,7 +628,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store2 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -638,7 +638,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store3 === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -648,7 +648,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.sub === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -667,7 +667,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
       res: {
-        edge13:    flag,
+        edge13: flag,
         firefox48: firefox.nightly,
       }
     },
@@ -678,7 +678,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -690,7 +690,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14:    flag,
+        edge14: flag,
       }
     },
     {
@@ -722,8 +722,8 @@ exports.tests = [
     return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
   */},
   res: {
-    babel:       {val: false, note_id: "babel-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."},
-    typescript:  true,
+    babel: {val: false, note_id: "babel-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."},
+    typescript: true,
   }
 },
 {
@@ -739,9 +739,9 @@ exports.tests = [
     return new C().x + C.y === 'xy';
   */},
   res: {
-    babel:       true,
-    tr:          true,
-    typescript:  true,
+    babel: true,
+    tr: true,
+    typescript: true,
   }
 },
 {
@@ -768,8 +768,8 @@ exports.tests = [
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
   */},
   res: {
-    babel:       true,
-    jsx:         true,
+    babel: true,
+    jsx: true,
   }
 },
 {
@@ -783,8 +783,8 @@ exports.tests = [
     return O.a + O.b + O.c === 6;
   */},
   res: {
-    babel:       true,
-    jsx:         true,
+    babel: true,
+    jsx: true,
   }
 },
 {
@@ -796,9 +796,9 @@ exports.tests = [
     return 'a𠮷b'.at(1) === '𠮷';
   */},
   res: {
-    babel:       true,
-    typescript:  typescript.corejs,
-    es7shim:     true,
+    babel: true,
+    typescript: typescript.corejs,
+    es7shim: true,
   }
 },
 {
@@ -813,20 +813,20 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        edge12:      true,
-        firefox4:    true,
-        chrome30:    true,
-        node:        true,
-        iojs:        true,
-        safari51:    true,
-        safari9:     true,
-        safaritp:    true,
-        webkit:      true,
-        es7shim:     true,
-        android40:   true,
-        ios51:       true,
+        babel: true,
+        typescript: typescript.corejs,
+        edge12: true,
+        firefox4: true,
+        chrome30: true,
+        node: true,
+        iojs: true,
+        safari51: true,
+        safari9: true,
+        safaritp: true,
+        webkit: true,
+        es7shim: true,
+        android40: true,
+        ios51: true,
       }
     },
     {
@@ -835,20 +835,20 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
-        edge12:      true,
-        firefox4:    true,
-        chrome30:    true,
-        node:        true,
-        iojs:        true,
-        safari51:    true,
-        safari9:     true,
-        safaritp:    true,
-        webkit:      true,
-        es7shim:     true,
-        android40:   true,
-        ios51:       true,
+        babel: true,
+        typescript: typescript.corejs,
+        edge12: true,
+        firefox4: true,
+        chrome30: true,
+        node: true,
+        iojs: true,
+        safari51: true,
+        safari9: true,
+        safaritp: true,
+        webkit: true,
+        es7shim: true,
+        android40: true,
+        ios51: true,
       }
     },
     {
@@ -857,8 +857,8 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -867,8 +867,8 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     }
   ]
@@ -883,8 +883,8 @@ exports.tests = [
     return System.global.__system_global_test__ === 42;
   */},
   res: {
-    babel:       true,
-    typescript:  typescript.corejs,
+    babel: true,
+    typescript: typescript.corejs,
   }
 },
 {
@@ -899,8 +899,8 @@ exports.tests = [
         return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -909,8 +909,8 @@ exports.tests = [
         return Math.isubh(0, 4, 1, 1) === 2;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -919,8 +919,8 @@ exports.tests = [
         return Math.imulh(0xffffffff, 7) === -1;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     },
     {
@@ -929,8 +929,8 @@ exports.tests = [
         return Math.umulh(0xffffffff, 7) === 6;
       */},
       res: {
-        babel:       true,
-        typescript:  typescript.corejs,
+        babel: true,
+        typescript: typescript.corejs,
       }
     },
   ]
@@ -947,7 +947,7 @@ exports.tests = [
         return typeof Observable !== 'undefined';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -957,7 +957,7 @@ exports.tests = [
         return typeof Symbol.observable === 'symbol';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -967,7 +967,7 @@ exports.tests = [
         return 'subscribe' in Observable.prototype;
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -987,7 +987,7 @@ exports.tests = [
         return nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -998,7 +998,7 @@ exports.tests = [
         return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1009,7 +1009,7 @@ exports.tests = [
         return Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1019,7 +1019,7 @@ exports.tests = [
         return Observable.of(1, 2, 3) instanceof Observable;
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1029,7 +1029,7 @@ exports.tests = [
         return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     }
@@ -1054,8 +1054,8 @@ exports.tests = [
       && c === 'ab';
   */},
   res: {
-    babel:       true,
-    typescript:  typescript.corejs,
+    babel: true,
+    typescript: typescript.corejs,
   }
 },
 {
@@ -1070,7 +1070,7 @@ exports.tests = [
         return typeof SharedArrayBuffer === 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1087,7 +1087,7 @@ exports.tests = [
         return 'byteLength' in SharedArrayBuffer.prototype;
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1112,7 +1112,7 @@ exports.tests = [
         return typeof Atomics.add == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1121,7 +1121,7 @@ exports.tests = [
         return typeof Atomics.and == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1130,7 +1130,7 @@ exports.tests = [
         return typeof Atomics.compareExchange == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1139,7 +1139,7 @@ exports.tests = [
         return typeof Atomics.exchange == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1148,7 +1148,7 @@ exports.tests = [
         return typeof Atomics.wait == 'function';
       */},
       res: {
-        firefox48:    firefox.nightly,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1157,7 +1157,7 @@ exports.tests = [
         return typeof Atomics.wake == 'function';
       */},
       res: {
-        firefox48:    firefox.nightly,
+        firefox48: firefox.nightly,
       }
     },
     {
@@ -1166,7 +1166,7 @@ exports.tests = [
         return typeof Atomics.isLockFree == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1175,7 +1175,7 @@ exports.tests = [
         return typeof Atomics.load == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1184,7 +1184,7 @@ exports.tests = [
         return typeof Atomics.or == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1193,7 +1193,7 @@ exports.tests = [
         return typeof Atomics.store == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1202,7 +1202,7 @@ exports.tests = [
         return typeof Atomics.sub == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     },
     {
@@ -1211,7 +1211,7 @@ exports.tests = [
         return typeof Atomics.xor == 'function';
       */},
       res: {
-        firefox46:    firefox.nightly,
+        firefox46: firefox.nightly,
       }
     }
   ]
@@ -1274,7 +1274,7 @@ exports.tests = [
       && index === 0;
   */},
   res : {
-    typescript:  true,
+    typescript: true,
   }
 },
 {
@@ -1385,7 +1385,7 @@ exports.tests = [
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
   */},
   res : {
-    chrome50:    flag,
+    chrome50: flag,
   }
 },
 {
@@ -1428,7 +1428,7 @@ exports.tests = [
         return typeof Reflect.defineMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1438,7 +1438,7 @@ exports.tests = [
         return typeof Reflect.hasMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1448,7 +1448,7 @@ exports.tests = [
         return typeof Reflect.hasOwnMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1458,7 +1458,7 @@ exports.tests = [
         return typeof Reflect.getMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1468,7 +1468,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1478,7 +1478,7 @@ exports.tests = [
         return typeof Reflect.getMetadataKeys == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1488,7 +1488,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadataKeys == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1498,7 +1498,7 @@ exports.tests = [
         return typeof Reflect.deleteMetadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     },
@@ -1508,7 +1508,7 @@ exports.tests = [
         return typeof Reflect.metadata == 'function';
       */},
       res: {
-        babel:      true,
+        babel: true,
         typescript: typescript.corejs,
       }
     }
@@ -1641,7 +1641,7 @@ exports.tests = [
     passed = true;
   */},
   res : {
-    babel:      true,
+    babel: true,
     typescript: typescript.corejs,
   }
 },
