@@ -1053,7 +1053,7 @@ exports.tests = [
       safari51: true,
       safari9: false,
       safaritp: false,
-      webkit: false,
+      webkit: true,
       node: true,
       android40: true,
       ios51: true,
