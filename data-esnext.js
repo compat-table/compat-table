@@ -108,22 +108,6 @@ exports.tests = [
   }
 },
 {
-  name: 'ArrayBuffer.transfer',
-  link: 'https://gist.github.com/lukewagner/2735af7eea411e18cf20',
-  category: 'proposal (stage 1)',
-  significance: 'small',
-  exec: function(){/*
-    var buffer1 = new Uint8Array([1, 2, 3]).buffer;
-    var buffer2 = ArrayBuffer.transfer(buffer1, 2);
-    return buffer1.byteLength === 0
-      && buffer2.byteLength === 2
-      && new Uint8Array(buffer2)[0] === 1;
-  */},
-  res : {
-    edge13: flag,
-  }
-},
-{
   name: 'SIMD (Single Instruction, Multiple Data)',
   category: 'candidate (stage 3)',
   significance: 'large',
