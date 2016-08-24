@@ -102,6 +102,11 @@ module.exports = {
     short: 'FF 17<br> ESR',
     obsolete: very // ESR (EOL on December 3, 2013)
   },
+  firefox18: {
+    full: 'Firefox',
+      short: 'FF 18',
+      obsolete: very
+  },
   firefox24: {
     full: 'Firefox',
     short: 'FF 24<br> ESR',
