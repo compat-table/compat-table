@@ -36,7 +36,7 @@ module.exports = {
   ie10: {
     full: 'Internet Explorer',
       family: 'Chakra',
-      short: 'IE 10-',
+      short: 'IE &lt; 11',
       obsolete: true,
   },
   ie11: {
