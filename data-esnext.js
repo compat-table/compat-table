@@ -1686,6 +1686,275 @@ exports.tests = [
     }
   ]
 },
+{
+  name: 'cancelable Promises',
+  category: 'proposal (stage 1)',
+  significance: 'large',
+  link: 'https://github.com/domenic/cancelable-promise',
+  subtests: [
+    {
+      name: 'Cancel, basic support',
+      exec: function(){/*
+        return (new Cancel('foo').message === 'foo');
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Cancel, does not require new',
+      exec: function(){/*
+        var cancel = Cancel('foo');
+        return (cancel instanceof Cancel && cancel.message === 'foo');
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Cancel, must not derive from Error',
+      exec: function(){/*
+        return (new Cancel instanceof Error === false &&
+          Cancel() instanceof Error === false);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken, basic support',
+      exec: function(){/*
+        var passed = false;
+        new CancelToken(function(cancel) {
+          passed = (typeof cancel === 'function');
+        });
+        return passed;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken, constructor requires new',
+      exec: function(){/*
+        try {
+          CancelToken(function(){});
+        } catch(e) {
+          return (e instanceof TypeError);
+        }
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken.prototype.promise',
+      exec: function(){/*
+        var cancelToken = new CancelToken(function(cancel) {
+
+          cancelToken.promise.then(function(cancelation) {
+            if (cancelation instanceof Cancel && cancelation.message === 'foo' &&
+              typeof Object.getOwnPropertyDescriptor(CancelToken.prototype, 'promise').set === 'undefined') {
+                asyncTestPassed();
+            }
+          });
+
+          cancel('foo');
+        });
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken.prototype.throwIfRequested',
+      exec: function(){/*
+        var passed = false;
+        var cancelToken = new CancelToken(function(cancel) {
+          cancel('foo');
+
+          try {
+            cancelToken.throwIfRequested();
+          } catch (e) {
+            passed = (e instanceof Cancel && e.message === 'foo');
+          }
+        });
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken.prototype.requested',
+      exec: function(){/*
+        var passed = false;
+        var cancelTokenSource = new CancelToken(function(cancel) {
+          cancel();
+          passed = (cancelTokenSource.token.requested &&
+            typeof Object.getOwnPropertyDescriptor(CancelToken.prototype, 'requested').set === 'undefined');
+        });
+        return passed;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken.source',
+      exec: function(){/*
+        var cancelTokenSource = CancelToken.source();
+        return (typeof cancelTokenSource.cancel === 'function' &&
+          cancelTokenSource.token instanceof CancelToken);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'CancelToken.any',
+      exec: function(){/*
+        var passed = false;
+        var cancelToken = new CancelToken(function(cancel) {
+
+          var anyToken = CancelToken.any([
+            new CancelToken(function() {}),
+            cancelToken
+          ]);
+
+          cancel('foo');
+
+          passed = (anyToken instanceof CancelToken && anyToken.requested === true);
+        });
+        return passed;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Promise.withCancelToken',
+      exec: function(){/*
+        var cancelToken = new CancelToken(function(cancel) {
+          Promise.withCancelToken(cancelToken, function(resolve, reject) {
+            return asyncTestPassed;
+          });
+          cancel();
+        });
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Promise.prototype.else',
+      exec: function(){/*
+        var score = 0;
+
+        function fnShouldRunCancel(e) {
+          score += (e instanceof Cancel && e.message === 'foo');
+        }
+
+        function fnShouldRunError(e) {
+          score += (e instanceof Error && e.message === 'bar');
+        }
+
+        function fnShouldNotRun() {
+          score += -Infinity;
+        }
+
+        function fnShouldRunFinally() {
+          score += (arguments.length === 0);
+          check();
+        }
+
+        var p1 = new Promise(function() { throw new Cancel('foo'); });
+        p1.else(fnShouldNotRun);
+        p1.then(fnShouldNotRun, fnShouldRunCancel);
+        p1.catch(fnShouldRunCancel);
+        p1.finally(fnShouldRunFinally);
+
+        var p2 = new Promise(function() { throw new Error('bar'); })
+        p2.else(fnShouldRunError);
+        p2.then(fnShouldNotRun, fnShouldRunError);
+        p2.catch(fnShouldRunError);
+        p2.finally(fnShouldRunFinally);
+
+        function check() {
+          if (score === 7) asyncTestPassed();
+        }
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'try..else..catch..finally statements',
+      exec: function(){/*
+        var score = 0;
+
+        throw new Cancel; // no exception
+
+        try {
+          throw new Cancel;
+        } else (e) {
+          score += -Infinity;
+        }
+        finally {
+          score++;
+        }
+
+        try {
+          throw new Error('foo');
+        } else (e) {
+          score += (e instanceof Error && e.message === 'foo');
+        }
+        finally {
+          score++;
+        }
+
+        // "legacy"
+        try {
+          throw new Cancel('bar');
+        } catch (e) {
+          score += (e instanceof Cancel && e.message === 'bar');
+        }
+        finally {
+          score++;
+        }
+
+        try {
+          eval("try {} else (e) {} catch (e) {} finally {}");
+        } catch (e) {
+          score += (e instanceof SyntaxError);
+        }
+
+        return (score === 6);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'throw Cancel async/await',
+      exec: function(){/*
+        (async function() {
+
+          function fn() {
+            throw new Cancel;
+          }
+
+          if (typeof await fn() === 'undefined') {
+            asyncTestPassed();
+          }
+        })();
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'await.cancelToken',
+      exec: function(){/*
+        var cancelToken = new CancelToken(async function(cancel) {
+          cancel();
+          await.cancelToken = cancelToken;
+
+          if (typeof await Promise.resolve('foo') === 'undefined') {
+            asyncTestPassed();
+          };
+        });
+      */},
+      res: {
+      }
+    }
+  ]
+}
 ];
 
 //Shift annex B features to the bottom
