@@ -127,7 +127,7 @@ exports.browsers = {
     unstable: true
   },
   webkit: {
-    full: 'Webkit r204559 (August 17, 2016)',
+    full: 'WebKit r204915 (August 24, 2016)',
     family: 'JavaScriptCore',
     short: 'WebKit',
     unstable: true
