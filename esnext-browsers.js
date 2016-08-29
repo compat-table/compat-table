@@ -176,6 +176,11 @@ module.exports = {
     short: 'FF 50',
     unstable: true,
   },
+  firefox51: {
+    full: 'Firefox',
+      short: 'FF 51',
+      unstable: true,
+  },
   chrome30: {
     full: 'Chrome',
     short: 'CH 30',
