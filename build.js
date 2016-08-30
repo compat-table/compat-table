@@ -249,7 +249,7 @@ process.nextTick(function () {
       target_file: 'es6/compilers/closure.html',
       polyfills: [],
       compiler: function(code) {
-        var fpath = os.tmpDir() + path.sep + 'temp.js';
+        var fpath = path.join(os.tmpDir(), 'temp.js');
         fs.writeFileSync(fpath, code);
         var output;
         try {
@@ -353,20 +353,20 @@ process.nextTick(function () {
 
 
 function handle(options) {
-  var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
+  var skeleton = fs.readFileSync(path.join(__dirname, options.skeleton_file), 'utf-8');
   var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
 
   var html_result = replaceAndIndent(html, [
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
-      return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8').replace(/<(?=\/script>)/g,'\\u003c') + '</script>\n';
+      return '<script>' + fs.readFileSync(path.join(__dirname, e), 'utf-8').replace(/<(?=\/script>)/g,'\\u003c') + '</script>\n';
     })],
   ]).replace(/\t/g, '  ');
   var json_result = JSON.stringify(options.tests, null, 2);
 
-  var html_target_file = __dirname + path.sep + options.html_target_file;
-  var json_target_file = __dirname + path.sep + options.json_target_file;
+  var html_target_file = path.join(__dirname, options.html_target_file);
+  var json_target_file = path.join(__dirname, options.json_target_file);
 
   var old_html_result, old_json_result;
 
@@ -442,7 +442,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       browser = rawBrowsers[bid];
       if (browser.equals) {
         result = res[browser.equals];
-        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result; 
+        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result;
       }
     }
   }
