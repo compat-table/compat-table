@@ -1,8 +1,10 @@
 language: node_js
 node_js:
   - "node"
-  - "0.10"
-script: 'if [ "${TRAVIS_NODE_VERSION}" = "node" ]; then npm run test:no_change; else npm run lint; fi'
+env:
+  - LINT=true
+  - TEST=true
+script: 'if [ -n "${TEST-}" ]; then npm run test:no_change; elif [ -n "${LINT-}" ]; then npm run lint; else false; fi'
 branches:
   only:
     - gh-pages
