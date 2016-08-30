@@ -1,6 +1,7 @@
 // exports browsers and tests
 exports.name = 'ES Intl';
-exports.target_file = 'esintl/index.html';
+exports.html_target_file = 'esintl/index.html';
+exports.json_target_file = 'esintl/index.json';
 exports.skeleton_file = 'esintl/skeleton.html';
 
 exports.browsers = {

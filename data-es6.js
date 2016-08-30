@@ -30,7 +30,8 @@ var typescript = {
 };
 
 exports.name = 'ES6';
-exports.target_file = 'es6/index.html';
+exports.html_target_file = 'es6/index.html';
+exports.json_target_file = 'es6/index.json';
 exports.skeleton_file = 'es6/skeleton.html';
 
 exports.browsers = {

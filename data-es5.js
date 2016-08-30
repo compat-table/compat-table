@@ -3,7 +3,8 @@ var temp = {};
 
 // exports browsers and tests
 exports.name = 'ES5';
-exports.target_file = 'es5/index.html';
+exports.html_target_file = 'es5/index.html';
+exports.json_target_file = 'es5/index.json';
 exports.skeleton_file = 'es5/skeleton.html';
 exports.browsers = {
   es5shim: {
