@@ -121,16 +121,16 @@ exports.browsers = {
     obsolete: false
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 10',
+    full: 'Safari Technology Preview Release 12',
     family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true
   },
   webkit: {
-    full: 'Webkit r204466 (August 15, 2016)',
+    full: 'WebKit r204915 (August 24, 2016)',
     family: 'JavaScriptCore',
     short: 'WebKit',
-    obsolete: false
+    unstable: true
   },
   chrome5: {
     full: 'Chrome 5 (5.0.375.127)',

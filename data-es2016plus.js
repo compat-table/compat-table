@@ -129,6 +129,7 @@ exports.tests = [
       chrome51: flag,
       chrome54: true,
       edge14: true,
+      safaritp: true,
       webkit: true,
     }
   },
@@ -156,6 +157,7 @@ exports.tests = [
       chrome51: flag,
       chrome54: true,
       edge14: true,
+      safaritp: true,
       webkit: true,
     }
   },
@@ -526,6 +528,7 @@ exports.tests = [
       firefox47: true,
       typescript: true,
       chrome49: true,
+      safaritp: true,
       webkit: true,
     }
   },
@@ -546,6 +549,7 @@ exports.tests = [
       firefox47: true,
       typescript: true,
       chrome49: true,
+      safaritp: true,
       webkit: true,
     }
   },
@@ -983,6 +987,7 @@ exports.tests = [
          return new C instanceof C;
          */},
         res: {
+          safaritp: true,
           webkit: true,
         },
       },
@@ -999,6 +1004,7 @@ exports.tests = [
          return passed;
          */},
         res: {
+          safaritp: true,
           webkit: true,
         },
       },
