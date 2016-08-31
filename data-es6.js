@@ -472,7 +472,7 @@ exports.browsers = {
     unstable: true,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 11',
+    full: 'Safari Technology Preview Release 12',
     short: 'SF TP',
     unstable: true
   },

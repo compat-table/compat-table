@@ -129,6 +129,7 @@ exports.tests = [
       chrome51: flag,
       chrome54: true,
       edge14: true,
+      safaritp: true,
       webkit: true,
     }
   },
@@ -156,6 +157,7 @@ exports.tests = [
       chrome51: flag,
       chrome54: true,
       edge14: true,
+      safaritp: true,
       webkit: true,
     }
   },
