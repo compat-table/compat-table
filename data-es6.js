@@ -464,7 +464,13 @@ exports.browsers = {
   },
   chrome52: {
     full: 'Chrome, Opera',
-    short: 'CH&nbsp;52+,<br>OP&nbsp;39+',
+    short: 'CH&nbsp;52,<br>OP&nbsp;39',
+    obsolete: true,
+    note_id: 'experimental-flag',
+  },
+  chrome53: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;53+,<br>OP&nbsp;40+',
     note_id: 'experimental-flag',
   },
   safari51: {
