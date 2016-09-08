@@ -55,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20160713',
+    full: 'Closure Compiler v20160822',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -10072,6 +10072,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10093,6 +10094,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10112,6 +10114,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10133,6 +10136,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         edge12: true,
         es6shim: true,
@@ -10154,6 +10158,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10176,6 +10181,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         es6shim: true,
         safaritp: true,
@@ -10194,6 +10200,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10215,6 +10222,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: 'compiler-proto' },
+        closure: { val: false, note_id: 'compiler-proto' },
         typescript: { val: false, note_id: 'compiler-proto' },
         ejs: true,
         edge12: true,
@@ -10235,6 +10243,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10256,6 +10265,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10279,6 +10289,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -10306,6 +10317,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -10325,6 +10337,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         edge12: true,
@@ -10346,6 +10359,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -10389,6 +10403,7 @@ exports.tests = [
       res: {
         ejs: true,
         babel: true,
+        closure: true,
         es6shim: true,
         typescript: typescript.corejs,
         edge13: true,
@@ -12410,6 +12425,7 @@ exports.tests = [
       res: {
         ejs: true,
         babel: { val: false, note_id: 'compiler-proto' },
+        closure: { val: false, note_id: 'compiler-proto' },
         typescript: { val: false, note_id: 'compiler-proto' },
         es6shim: { val: false, note_id: 'compiler-proto' },
         ie11: true,
@@ -15354,6 +15370,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         edge12: true,
@@ -17008,6 +17025,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
+        closure: { val: false, note_id: "forin-order" },
         typescript: { val: false, note_id: "forin-order" },
         es6shim: { val: false, note_id: "forin-order" },
         firefox44: true,
