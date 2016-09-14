@@ -87,8 +87,8 @@ exports.browsers = {
     obsolete: true
   },
   firefox20: {
-    full: 'Firefox 20',
-    short: 'FF 20',
+    full: 'Firefox 20-27',
+    short: 'FF 20-27',
     family: 'SpiderMonkey',
     obsolete: true
   },
@@ -1248,7 +1248,7 @@ exports.tests = [
     firefox12: false,
     firefox16: false,
     firefox17: false,
-    firefox20: true,
+    firefox20: false,
     firefox28: false,
     safari3: false,
     safari4: false,
