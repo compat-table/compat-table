@@ -194,6 +194,11 @@ exports.browsers = {
     short: 'FF 25',
     obsolete: very
   },
+  firefox26: {
+    full: 'Firefox',
+    short: 'FF 26',
+    obsolete: very
+  },
   firefox27: {
     full: 'Firefox',
     short: 'FF 27',
@@ -3939,7 +3944,7 @@ exports.tests = [
         typescript: false,
         ejs: true,
         edge12: true,
-        firefox25: true,
+        firefox27: true,
         chrome38: true,
         safari9: true,
         safaritp: true,
@@ -4631,7 +4636,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: false,
-        firefox31: true,
+        firefox27: true,
         chrome35: flag,
         chrome39: true,
         node012: flag,
@@ -7692,6 +7697,8 @@ exports.tests = [
         typescript: typescript.fallthrough,
         edge12: true,
         firefox18: true,
+        firefox25: false,
+        firefox45: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -8652,7 +8659,7 @@ exports.tests = [
       res: {
         typescript: typescript.fallthrough,
         edge12: true,
-        firefox45: true,
+        firefox31: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -12133,7 +12140,7 @@ exports.tests = [
         typescript: typescript.corejs,
         ejs: true,
         es6shim: true,
-        firefox37: true,
+        firefox30: true,
         edge12: true,
         chrome33: true,
         node4: true,
@@ -12161,7 +12168,7 @@ exports.tests = [
         es6shim: true,
         edge12: true,
         firefox29: true,
-        firefox38: false,
+        firefox31: false,
         firefox39: true,
         chrome33: true,
         safari71_8: true,
@@ -13319,7 +13326,7 @@ exports.tests = [
       */},
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17: false,
-        firefox31: true,
+        firefox29: true,
         chrome30: false,
         chrome34: flag,
       })),
@@ -13343,7 +13350,7 @@ exports.tests = [
       */},
       res: (temp.startsWithThrows = Object.assign({}, temp.startsWith, {
         firefox17: false,
-        firefox31: true,
+        firefox29: true,
         chrome30: false,
         chrome34: flag,
       })),
@@ -15921,12 +15928,7 @@ exports.tests = [
         tr: true,
         es6shim: true,
         edge12: true,
-        firefox27: {
-          val: true,
-          note_id: 'fx-fround',
-          note_html: 'Available since Firefox 26'
-        },
-        firefox28: true,
+        firefox26: true,
         chrome35: flag,
         chrome38: true,
         safari71_8: true,

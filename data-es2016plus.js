@@ -482,7 +482,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
-      firefox31: true,
+      firefox27: true,
       chrome39: true,
       node: flag,
       node4: true,
