@@ -175,15 +175,15 @@ exports.browsers = {
     obsolete: true
   },
   chrome23: {
-    full: 'Chrome 23-53, Opera 15+',
+    full: 'Chrome 23-53, Opera 15-40',
     family: 'V8',
-    short: 'CH 23-53,<br>OP 15+',
+    short: 'CH 23-53,<br>OP 15-40',
     obsolete: false
   },
   chrome54: {
-    full: 'Chrome 54 (54.0.2808.0 canary)',
+    full: 'Chrome 54+, Opera 41+',
     family: 'V8',
-    short: 'CH 54',
+    short: 'CH 54+,<br>OP 41+',
     unstable: true
   },
   opera10_10: {
