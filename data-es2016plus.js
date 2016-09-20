@@ -401,7 +401,7 @@ exports.tests = [
           typescript: typescript.asyncawait,
           chrome52: flag,
           edge13: flag,
-          edge14: true,
+          edge14: flag,
         }
       },
       {
@@ -417,7 +417,7 @@ exports.tests = [
           typescript: typescript.asyncawait,
           chrome52: flag,
           edge13: flag,
-          edge14: true,
+          edge14: flag,
         }
       },
       {
@@ -431,7 +431,7 @@ exports.tests = [
           typescript: false, // still buggy output
           chrome52: flag,
           edge13: flag,
-          edge14: true,
+          edge14: flag,
         }
       }
     ]
@@ -482,6 +482,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
+      edge14: true,
       firefox27: true,
       chrome39: true,
       node: flag,
@@ -949,6 +950,7 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
+          edge14: true,
           firefox49: true,
           safari10: true,
           safaritp: true,
@@ -970,6 +972,7 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
+          edge14: true,
           firefox49: true,
           safari10: true,
           safaritp: true,
