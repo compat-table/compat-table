@@ -121,9 +121,15 @@ exports.browsers = {
     obsolete: true
   },
   safari6: {
-    full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8, Safari 9',
+    full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8',
     family: 'JavaScriptCore',
-    short: 'SF 6-9',
+    short: 'SF 6-8',
+    obsolete: true
+  },
+  safari9: {
+    full: 'Safari 9',
+    family: 'JavaScriptCore',
+    short: 'SF 9',
     obsolete: false
   },
   safari10: {
@@ -133,7 +139,7 @@ exports.browsers = {
     obsolete: false
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 12',
+    full: 'Safari Technology Preview Release 13',
     family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true

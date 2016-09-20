@@ -160,13 +160,25 @@ exports.browsers = {
     obsolete: true
   },
   safari71_8: {
-    full: 'Safari 7.1-9.1',
-    short: 'SF 7.1-9.1',
+    full: 'Safari 7.1-8',
+    short: 'SF 7.1-8',
+    family: 'JavaScriptCore',
+    obsolete: true
+  },
+  safari9: {
+    full: 'Safari 9',
+    short: 'SF 9',
+    family: 'JavaScriptCore',
+    obsolete: false
+  },
+  safari10: {
+    full: 'Safari 10',
+    short: 'SF 10',
     family: 'JavaScriptCore',
     obsolete: false
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 12',
+    full: 'Safari Technology Preview Release 13',
     short: 'SF TP',
     family: 'JavaScriptCore',
     unstable: true
@@ -175,7 +187,6 @@ exports.browsers = {
     full: 'Webkit r200167 (April 28, 2016)',
     short: 'WebKit',
     family: 'JavaScriptCore',
-    obsolete: false,
     unstable: true
   },
   chrome7: {

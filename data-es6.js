@@ -508,19 +508,20 @@ exports.browsers = {
   safari71_8: {
     full: 'Safari',
     short: 'SF 7.1,<br>SF 8',
-    obsolete: false
+    obsolete: true
   },
   safari9: {
     full: 'Safari',
     short: 'SF 9',
+    obsolete: false,
   },
   safari10: {
     full: 'Safari',
     short: 'SF 10',
-    unstable: true,
+    obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 12',
+    full: 'Safari Technology Preview Release 13',
     short: 'SF TP',
     unstable: true
   },

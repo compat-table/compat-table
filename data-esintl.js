@@ -113,18 +113,28 @@ exports.browsers = {
   },
   safari71_8: {
     full: 'Safari',
-    short: 'SF 7.1,<br>SF 8',
-    obsolete: false
+    short: 'SF 7.1-8',
+    obsolete: true,
+  },
+  safari9: {
+    full: 'Safari',
+    short: 'SF 9',
+    obsolete: false,
+  },
+  safari10: {
+    full: 'Safari',
+    short: 'SF 10',
+    obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 12',
+    full: 'Safari Technology Preview Release 13',
     short: 'SF TP',
     unstable: true
   },
   webkit: {
     full: 'WebKit r200167 (April 28, 2016)',
     short: 'WK',
-    obsolete: false // always up-to-date
+    unstable: true,
   },
   opera: {
     full: 'Opera 12.16',
