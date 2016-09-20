@@ -4074,7 +4074,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
-        edge14: true,
+        edge14: false,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -4099,7 +4099,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
-        edge14: true,
+        edge14: false,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -6311,7 +6311,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -6795,7 +6795,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -7300,7 +7300,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -7571,7 +7571,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -8808,7 +8808,7 @@ exports.tests = [
         return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
       */},
       res: {
-        edge14: flag,
+        edge14: false,
         firefox50: true,
         chrome50: flag,
         chrome51: true,
@@ -9241,7 +9241,7 @@ exports.tests = [
           && get.length === 7;
       */},
       res: {
-        edge14: flag,
+        edge14: false,
         chrome50: flag,
         chrome51: true,
         firefox48: true,
@@ -10767,7 +10767,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -11251,7 +11251,7 @@ exports.tests = [
         babel: true,
         typescript: false,
         chrome51: true,
-        edge14: true,
+        edge14: false,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -11789,7 +11789,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: false,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
@@ -14038,7 +14038,7 @@ exports.tests = [
       res: {
         babel: flag,
         typescript: typescript.fallthrough,
-        edge14: flag,
+        edge14: false,
         chrome50: flag,
         chrome51: true,
         firefox50: true,
@@ -14060,7 +14060,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
-        edge14: flag,
+        edge14: false,
         ejs: true,
         chrome48: true,
         firefox48: true,
@@ -15138,7 +15138,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
-        edge14: true,
+        edge14: false,
         chrome51: true,
         safari9: true,
         safaritp: true,
