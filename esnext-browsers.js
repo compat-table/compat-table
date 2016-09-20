@@ -340,7 +340,7 @@ module.exports = {
   safari51: {
     full: 'Safari',
     short: 'SF<br />5.1 - 8',
-    obsolete: false,
+    obsolete: true,
   },
   safari9: {
     full: 'Safari',
@@ -350,10 +350,10 @@ module.exports = {
   safari10: {
     full: 'Safari',
     short: 'SF 10',
-    unstable: true,
+    obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 12',
+    full: 'Safari Technology Preview Release 13',
     short: 'SF TP',
     unstable: true,
   },
