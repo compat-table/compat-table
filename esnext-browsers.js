@@ -155,7 +155,7 @@ module.exports = {
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
-    obsolete: true,
+    obsolete: very,
   },
   firefox40: {
     full: 'Firefox',
@@ -200,21 +200,26 @@ module.exports = {
   firefox48: {
     full: 'Firefox',
     short: 'FF 48',
+    obsolete: true,
   },
   firefox49: {
     full: 'Firefox',
     short: 'FF 49',
-    unstable: true,
   },
   firefox50: {
     full: 'Firefox',
-    short: 'FF 50',
+    short: 'FF 50 Beta',
     unstable: true,
   },
   firefox51: {
     full: 'Firefox',
-      short: 'FF 51',
-      unstable: true,
+    short: 'FF 51 Aurora',
+    unstable: true,
+  },
+  firefox52: {
+    full: 'Firefox',
+    short: 'FF 52 Nightly',
+    unstable: true,
   },
   chrome30: {
     full: 'Chrome',

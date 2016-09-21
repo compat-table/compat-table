@@ -282,7 +282,7 @@ exports.browsers = {
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
-    obsolete: true,
+    obsolete: very,
   },
   firefox40: {
     full: 'Firefox',
@@ -327,20 +327,25 @@ exports.browsers = {
   firefox48: {
     full: 'Firefox',
     short: 'FF 48',
+    obsolete: true,
   },
   firefox49: {
     full: 'Firefox',
     short: 'FF 49',
-    unstable: true,
   },
   firefox50: {
     full: 'Firefox',
-    short: 'FF 50',
+    short: 'FF 50 Beta',
     unstable: true,
   },
   firefox51: {
     full: 'Firefox',
-    short: 'FF 51',
+    short: 'FF 51 Aurora',
+    unstable: true,
+  },
+  firefox52: {
+    full: 'Firefox',
+    short: 'FF 52 Nightly',
     unstable: true,
   },
   chrome: {
@@ -14559,6 +14564,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+        firefox51: true,
         chrome40: flag,
         chrome49: true,
         node4: flag,
@@ -14595,6 +14601,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+        firefox51: true,
         chrome40: flag,
         chrome49: true,
         chrome55: false,
@@ -14637,6 +14644,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.corejs,
+        firefox51: true,
         chrome49: true,
         xs6: true,
         safaritp: true,
@@ -14656,6 +14664,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+        firefox51: true,
         chrome40: flag,
         chrome49: true,
         node4: flag,
