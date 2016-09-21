@@ -80,6 +80,12 @@ exports.browsers = {
     obsolete: false,
     platformtype: 'compiler',
   },
+  jscrambler: {
+    full: 'Jscrambler',
+    short: 'Jscrambler',
+    obsolete: false,
+    platformtype: 'compiler',
+  },
   ie10: {
     full: 'Internet Explorer',
     family: 'Chakra',
@@ -706,6 +712,7 @@ exports.tests = [
         },
         babel: false,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         chrome51: flag,
         chrome55: true,
         safaritp: true,
@@ -735,6 +742,7 @@ exports.tests = [
       res: {
         tr: { val: flag, note_id: 'tr-tco' },
         typescript: typescript.fallthrough,
+				jscrambler: true,
         chrome51: flag,
         chrome55: true,
         safaritp: true,
@@ -762,6 +770,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -789,6 +798,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -816,6 +826,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -844,6 +855,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -870,6 +882,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox23: true,
@@ -894,6 +907,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -917,6 +931,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         edge12: true,
         firefox23: true,
         firefox24: false,
@@ -977,6 +992,7 @@ exports.tests = [
         return !a.hasOwnProperty("prototype");
       */},
       res: {
+        jscrambler: true,
         firefox23: true,
         chrome39: flag,
         chrome40: false,
@@ -1014,6 +1030,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -1049,6 +1066,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -1070,6 +1088,7 @@ exports.tests = [
         return new C()() === C && C()() === undefined;
       */},
       res: {
+        jscrambler: true,
         firefox41: true,
         chrome46: true,
         edge13: true,
@@ -1098,6 +1117,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1126,6 +1146,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         tr: true,
         ejs: true,
@@ -1209,6 +1230,7 @@ exports.tests = [
         es6tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         ie11: true,
         firefox4: { val: flag, note_id: 'fx-let', },
@@ -1234,6 +1256,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         safaritp: true,
         safari10: true,
@@ -1258,6 +1281,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         safaritp: true,
         safari10: true,
@@ -1280,6 +1304,7 @@ exports.tests = [
       */},
       res: {
         babel: flag,
+        jscrambler: true,
         ie11: true,
         firefox36: true,
         chrome48: flag,
@@ -1302,6 +1327,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1330,6 +1356,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         tr: true,
         ejs: true,
@@ -1421,6 +1448,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         ie11: true,
@@ -1450,6 +1478,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         chrome40: flag,
         chrome41: true,
@@ -1477,6 +1506,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         safaritp: true,
         safari10: true,
@@ -1500,6 +1530,7 @@ exports.tests = [
       */},
       res: {
         babel: flag,
+        jscrambler: true,
         ie11: true,
         firefox36: true,
         chrome19dev: flag,
@@ -1531,6 +1562,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1560,6 +1592,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1615,6 +1648,7 @@ exports.tests = [
         es6tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         ie11: true,
         firefox4: { val: flag, note_id: 'fx-let', },
@@ -1638,6 +1672,7 @@ exports.tests = [
       */},
       res: {
         babel: flag,
+        jscrambler: true,
         ie11: true,
         firefox35: { val: flag, note_id: 'fx-let', },
         firefox44: true,
@@ -1669,6 +1704,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         safaritp: true,
         safari10: true,
@@ -1691,6 +1727,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1719,6 +1756,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1779,6 +1817,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         ie11: true,
@@ -1806,6 +1845,7 @@ exports.tests = [
       */},
       res: {
         babel: flag,
+        jscrambler: true,
         ie11: true,
         firefox35: { val: flag, note_id: 'fx-let', },
         firefox44: true,
@@ -1840,6 +1880,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         chrome37: flag,
         chrome41: true,
@@ -1873,6 +1914,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox15: true,
         chrome48: flag,
         chrome49: true,
@@ -1896,6 +1938,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox18: true,
         chrome48: flag,
         chrome49: true,
@@ -1919,6 +1962,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox15: true,
         chrome48: flag,
         chrome49: true,
@@ -1946,6 +1990,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         safaritp: true,
@@ -2000,6 +2045,7 @@ exports.tests = [
       res: {
         babel: false,
         closure: true,
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -2054,6 +2100,7 @@ exports.tests = [
         closure: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox15: true,
         chrome44: flag,
@@ -2076,6 +2123,7 @@ exports.tests = [
         es6tr: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox15: true,
         chrome44: flag,
@@ -2103,6 +2151,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         tr: true,
         ejs: true,
         chrome44: flag,
@@ -2181,6 +2230,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2208,6 +2258,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -2235,6 +2286,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -2260,6 +2312,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
+        jscrambler: true,
         firefox16: true,
         safari71_8: true,
         safaritp: true,
@@ -2283,6 +2336,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         edge12: true,
         firefox27: true,
         chrome44: flag,
@@ -2304,6 +2358,7 @@ exports.tests = [
         tr: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         edge12: true,
         firefox17: true,
         safari9: true,
@@ -2325,6 +2380,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         babel: true,
+        jscrambler: true,
         firefox27: true,
         chrome44: flag,
         chrome46: true,
@@ -2345,6 +2401,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        jscrambler: true,
         firefox27: true,
         safari9: true,
         safaritp: true,
@@ -2367,6 +2424,7 @@ exports.tests = [
         tr: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         ejs: true,
         firefox27: true,
         chrome44: flag,
@@ -2391,6 +2449,7 @@ exports.tests = [
         tr: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome46: true,
         edge12: flag,
@@ -2418,6 +2477,7 @@ exports.tests = [
           note_id: 'compiler-iterable',
           note_html: 'This compiler requires generic iterables have either a <code>Symbol.iterator</code> or non-standard <code>"@@iterator"</code> method.'
         },
+        jscrambler: true,
         ejs: true,
         firefox36: true,
         chrome44: flag,
@@ -2443,6 +2503,7 @@ exports.tests = [
         babel: true,
         closure: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox36: true,
@@ -2468,6 +2529,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
+        jscrambler: true,
         firefox36: true,
         chrome44: flag,
         chrome46: true,
@@ -2493,6 +2555,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
+        jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome46: true,
@@ -2518,6 +2581,7 @@ exports.tests = [
         tr: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         edge12: true,
         firefox27: true,
@@ -2554,6 +2618,7 @@ exports.tests = [
         ejs: true,
         jsx: true,
         closure: true,
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -2564,6 +2629,7 @@ exports.tests = [
         chrome41: strict,
         chrome49: true,
         typescript: true,
+				jscrambler: true,
         xs6: true,
         jxa: true,
       },
@@ -2582,6 +2648,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         jsx: true,
         closure: true,
         ejs: true,
@@ -2607,6 +2674,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -2633,6 +2701,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -2663,6 +2732,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2693,6 +2763,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2724,6 +2795,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         edge12: flag,
@@ -2753,6 +2825,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2786,6 +2859,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2816,6 +2890,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2847,6 +2922,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -2879,6 +2955,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         jsx: true,
         es6tr: true,
         ejs: true,
@@ -2911,6 +2988,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         edge12: flag,
@@ -2941,6 +3019,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         jsx: true,
         es6tr: true,
         ejs: true,
@@ -2972,6 +3051,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         edge12: flag,
@@ -3001,6 +3081,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         edge12: flag,
         edge13: true,
@@ -3028,6 +3109,7 @@ exports.tests = [
       */},
       res: {
         typescript: true,
+				jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -3053,6 +3135,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         jsx: true,
+        jscrambler: true,
         chrome42: strict,
         chrome49: true,
         safari9: true,
@@ -3077,6 +3160,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -3106,6 +3190,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -3146,6 +3231,7 @@ exports.tests = [
           note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
         },
         jsx: { val: false, note_id: 'compiled-extends' },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -3177,6 +3263,7 @@ exports.tests = [
         },
         ejs: true,
         jsx: { val: false, note_id: 'compiled-extends' },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -3202,6 +3289,7 @@ exports.tests = [
       res: {
         babel: false,
         typescript: true,
+				jscrambler: true,
         tr: true,
         es6tr: true,
         jsx: true,
@@ -3236,6 +3324,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -3274,6 +3363,7 @@ exports.tests = [
         babel: false,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         es6tr: true,
         edge12: flag,
@@ -3305,6 +3395,7 @@ exports.tests = [
         babel: false,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         es6tr: true,
         edge12: flag,
@@ -3338,6 +3429,7 @@ exports.tests = [
         babel: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         edge12: flag,
@@ -3369,6 +3461,7 @@ exports.tests = [
         babel: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         es6tr: true,
         ejs: true,
@@ -3403,6 +3496,7 @@ exports.tests = [
         babel: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         es6tr: true,
         ejs: true,
@@ -3433,6 +3527,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -3465,6 +3560,7 @@ exports.tests = [
         babel: true,
         jsx: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         edge12: flag,
@@ -3509,6 +3605,7 @@ exports.tests = [
         jsx: true,
         es6tr: true,
         typescript: true,
+				jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -3534,6 +3631,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         jsx: true,
@@ -3564,6 +3662,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox33: true,
         chrome41: flag,
@@ -3589,6 +3688,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox34: { val: true, note_id: "ff-shorthand-methods", note_html: 'Firefox incorrectly produces an error in strict mode if the method is named <code>"arguments"</code>, <code>"eval"</code>, or <code>"delete"</code>.' },
         chrome41: flag,
@@ -3627,6 +3727,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: true,
+				jscrambler: true,
         jsx: true,
         es6tr: true,
         firefox34: true,
@@ -3654,6 +3755,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         tr: true,
         es6tr: true,
@@ -3696,6 +3798,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         ie11: true,
         firefox3_5: true,
         rhino17: true,
@@ -3716,6 +3819,7 @@ exports.tests = [
         return foo() === 2;
       */},
       res: {
+        jscrambler: true,
         ie10: true,
         firefox2: true,
         chrome: true,
@@ -3745,6 +3849,7 @@ exports.tests = [
         return foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;
       */},
       res: {
+        jscrambler: true,
         ie10: true,
         firefox2: true,
         chrome: true,
@@ -3778,6 +3883,7 @@ exports.tests = [
           && !({ __proto__ : null } instanceof Object);
       */},
       res: {
+        jscrambler: true,
         ie11: true,
         firefox2: true,
         chrome: true,
@@ -3826,6 +3932,7 @@ exports.tests = [
         return !({ [a] : [] } instanceof Array);
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox34: true,
         safari71_8: true,
@@ -3848,6 +3955,7 @@ exports.tests = [
         return !({ __proto__ } instanceof Array);
       */},
       res: {
+        jscrambler: true,
         firefox35: true,
         safari9: true,
         safaritp: true,
@@ -3868,6 +3976,7 @@ exports.tests = [
         return !({ __proto__(){} } instanceof Function);
       */},
       res: {
+        jscrambler: true,
         firefox35: true,
         safari9: true,
         safaritp: true,
@@ -3898,6 +4007,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         jsx: true,
@@ -3937,6 +4047,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         ejs: true,
         closure: true,
         edge12: true,
@@ -3962,6 +4073,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox27: true,
@@ -3987,6 +4099,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        jscrambler: true,
         ejs: true,
         closure: true,
         edge12: flag,
@@ -4018,6 +4131,7 @@ exports.tests = [
         closure: true,
         typescript: false,
         es6tr: { val: true, note_id: 'compiler-iterable' },
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox36: true,
@@ -4048,6 +4162,7 @@ exports.tests = [
         ejs: true,
         typescript: false,
         es6tr: { val: true, note_id: 'compiler-iterable' },
+        jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -4074,6 +4189,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
+        jscrambler: true,
         edge14: true,
         safari9: true,
         safaritp: true,
@@ -4099,6 +4215,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
+        jscrambler: true,
         edge14: true,
         safari9: true,
         safaritp: true,
@@ -4135,6 +4252,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4197,6 +4315,7 @@ exports.tests = [
         }
       */},
       res: {
+        jscrambler: true,
         firefox43: true,
         chrome50: true,
         edge13: true,
@@ -4224,6 +4343,7 @@ exports.tests = [
         babel: babel.regenerator,
         ejs: true,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4254,6 +4374,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4288,6 +4409,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         firefox45: true,
         chrome45: true,
         node012: flag,
@@ -4318,6 +4440,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4351,6 +4474,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4383,6 +4507,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         firefox38: true,
         edge12: flag,
         edge13: true,
@@ -4409,6 +4534,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4441,6 +4567,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome38: flag,
         chrome39: true,
@@ -4489,6 +4616,7 @@ exports.tests = [
         babel: babel.regenerator,
         closure: true,
         tr: true,
+        jscrambler: true,
         firefox27: true,
         chrome38: flag,
         chrome39: true,
@@ -4521,6 +4649,7 @@ exports.tests = [
         babel: babel.regenerator,
         ejs: true,
         tr: true,
+        jscrambler: true,
         firefox27: true,
         chrome38: flag,
         chrome39: true,
@@ -4555,6 +4684,7 @@ exports.tests = [
         babel: babel.regenerator,
         ejs: true,
         closure: true,
+        jscrambler: true,
         firefox27: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4589,6 +4719,7 @@ exports.tests = [
         babel: babel.regenerator,
         ejs: true,
         closure: true,
+        jscrambler: true,
         firefox36: true,
         chrome21dev: flag,
         chrome39: true,
@@ -4623,6 +4754,7 @@ exports.tests = [
         ejs: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox36: true,
         chrome35: flag,
         chrome39: true,
@@ -4656,6 +4788,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: false,
+        jscrambler: true,
         firefox27: true,
         chrome35: flag,
         chrome39: true,
@@ -4693,6 +4826,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         chrome50: true,
@@ -4725,6 +4859,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         edge13: true,
         chrome50: true,
         xs6: true,
@@ -4754,6 +4889,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         chrome41: flag,
         chrome42: true,
         firefox34: true,
@@ -4787,6 +4923,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         chrome41: flag,
         chrome42: true,
         firefox34: true,
@@ -4822,6 +4959,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         firefox34: true,
         ejs: true,
         chrome44: true,
@@ -4855,6 +4993,7 @@ exports.tests = [
         tr: true,
         babel: babel.regenerator,
         closure: true,
+        jscrambler: true,
         chrome41: strict,
         chrome49: true,
         node4: strict,
@@ -4888,6 +5027,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: babel.regenerator,
+        jscrambler: true,
         closure: true,
         edge12: flag,
         chrome45: strict,
@@ -4956,6 +5096,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        jscrambler: true,
         chrome46: true,
         edge13: true,
         firefox45: true,
@@ -4987,6 +5128,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        jscrambler: true,
         chrome46: true,
         edge13: true,
         firefox45: true,
@@ -5017,6 +5159,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        jscrambler: true,
         chrome46: true,
         edge13: true,
         firefox45: true,
@@ -5047,6 +5190,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        jscrambler: true,
         chrome46: strict,
         chrome49: true,
         edge13: true,
@@ -5077,6 +5221,7 @@ exports.tests = [
             && correctProtoBound(null);
       */},
       res: {
+        jscrambler: true,
         chrome46: strict,
         chrome49: true,
         edge13: true,
@@ -5109,6 +5254,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox25: true,
         chrome30: flag,
@@ -5134,6 +5280,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox25: true,
         chrome30: flag,
@@ -5155,6 +5302,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         edge12: true,
         es6shim: true,
@@ -5178,6 +5326,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         edge12: true,
         es6shim: true,
@@ -5215,6 +5364,7 @@ exports.tests = [
         jsx: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox34: true,
         chrome41: true,
@@ -5236,6 +5386,7 @@ exports.tests = [
         return `${a}` === "foo";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         firefox34: true,
         chrome41: true,
@@ -5272,6 +5423,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge12: true,
         firefox34: true,
         chrome41: true,
@@ -5296,6 +5448,7 @@ exports.tests = [
         babel: true,
         es6tr: true,
         jsx: true,
+        jscrambler: true,
         edge12: true,
         firefox34: true,
         chrome41: true,
@@ -5359,6 +5512,7 @@ exports.tests = [
         ejs: true,
         edge12: flag,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge13: true,
         xs6: true,
         safaritp: true,
@@ -5382,6 +5536,7 @@ exports.tests = [
         ejs: true,
         edge12: flag,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge13: true,
         xs6: true,
         safaritp: true,
@@ -5398,6 +5553,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         edge13: true,
         firefox46: true,
@@ -5416,6 +5572,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         edge13: true,
         firefox46: true,
@@ -5434,6 +5591,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge13: true,
         firefox46: true,
         chrome50: true,
@@ -5460,6 +5618,7 @@ exports.tests = [
       res: (temp.basicTypedArrayResults = {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         ie10: true,
         firefox4: true,
@@ -5495,6 +5654,7 @@ exports.tests = [
       res: (temp.clampedArrayResults = {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox4: true,
         edge12: true,
         chrome: true,
@@ -5577,6 +5737,7 @@ exports.tests = [
       res: (temp.basicDataViewResults = {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         ie10: true,
         firefox15: true,
@@ -5670,6 +5831,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox48: true,
         xs6: true,
@@ -5746,6 +5908,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome45: true,
         edge14: true,
         node4: true,
@@ -5785,6 +5948,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        jscrambler: true,
         firefox35: true,
         edge12: true,
         chrome51: true,
@@ -5799,6 +5963,7 @@ exports.tests = [
     { name: '.from', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       chrome45: true,
@@ -5812,6 +5977,7 @@ exports.tests = [
     { name: '.of', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       chrome45: true,
@@ -5826,6 +5992,7 @@ exports.tests = [
     { name: '.prototype.subarray', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       ejs: true,
       edge12: true,
       firefox4: true,
@@ -5842,6 +6009,7 @@ exports.tests = [
     { name: '.prototype.join', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5856,6 +6024,7 @@ exports.tests = [
     { name: '.prototype.indexOf', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5870,6 +6039,7 @@ exports.tests = [
     { name: '.prototype.lastIndexOf', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5884,6 +6054,7 @@ exports.tests = [
     { name: '.prototype.slice', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       chrome45: true,
@@ -5897,6 +6068,7 @@ exports.tests = [
     { name: '.prototype.every', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5911,6 +6083,7 @@ exports.tests = [
     { name: '.prototype.filter', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       chrome45: true,
@@ -5924,6 +6097,7 @@ exports.tests = [
     { name: '.prototype.forEach', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       ejs: true,
@@ -5938,6 +6112,7 @@ exports.tests = [
     { name: '.prototype.map', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox38: true,
       chrome45: true,
@@ -5951,6 +6126,7 @@ exports.tests = [
     { name: '.prototype.reduce', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5965,6 +6141,7 @@ exports.tests = [
     { name: '.prototype.reduceRight', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5979,6 +6156,7 @@ exports.tests = [
     { name: '.prototype.reverse', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -5993,6 +6171,7 @@ exports.tests = [
     { name: '.prototype.some', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -6007,6 +6186,7 @@ exports.tests = [
     { name: '.prototype.sort', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox46: true,
       chrome45: true,
@@ -6020,6 +6200,7 @@ exports.tests = [
     { name: '.prototype.copyWithin', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox34: true,
       ejs: true,
@@ -6034,6 +6215,7 @@ exports.tests = [
     { name: '.prototype.find', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -6048,6 +6230,7 @@ exports.tests = [
     { name: '.prototype.findIndex', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -6062,6 +6245,7 @@ exports.tests = [
     { name: '.prototype.fill', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       firefox37: true,
       ejs: true,
@@ -6076,6 +6260,7 @@ exports.tests = [
     { name: '.prototype.keys', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       chrome38: true,
       node012: true,
@@ -6090,6 +6275,7 @@ exports.tests = [
     { name: '.prototype.values', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       chrome38: true,
       node012: true,
@@ -6104,6 +6290,7 @@ exports.tests = [
     { name: '.prototype.entries', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       chrome38: true,
       node012: true,
@@ -6117,6 +6304,7 @@ exports.tests = [
     { name: '.prototype[Symbol.iterator]', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge12: true,
       chrome38: true,
       node012: true,
@@ -6131,6 +6319,7 @@ exports.tests = [
     { name: '[Symbol.species]', res: {
       babel: true,
       typescript: typescript.corejs,
+			jscrambler: true,
       edge13: true,
       firefox48: true,
       xs6: true,
@@ -6182,6 +6371,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6212,6 +6402,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6241,6 +6432,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         ie11: true,
         chrome38: true,
@@ -6283,6 +6475,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         edge12: true,
@@ -6311,6 +6504,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -6330,6 +6524,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6360,6 +6555,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox29: true,
@@ -6387,6 +6583,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6412,6 +6609,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6437,6 +6635,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6462,6 +6661,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6487,6 +6687,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6512,6 +6713,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6537,6 +6739,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6562,6 +6765,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         firefox36: true,
@@ -6610,6 +6814,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -6631,6 +6836,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox41: true,
         chrome50: flag,
         chrome51: true,
@@ -6664,6 +6870,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6693,6 +6900,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6722,6 +6930,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         ie11: true,
         chrome38: true,
@@ -6764,6 +6973,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         edge12: true,
@@ -6795,6 +7005,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -6814,6 +7025,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6844,6 +7056,7 @@ exports.tests = [
         babel: true,
         es6shim: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox29: true,
         chrome39: true,
@@ -6873,6 +7086,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6898,6 +7112,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6923,6 +7138,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6948,6 +7164,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6973,6 +7190,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -6997,6 +7215,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -7022,6 +7241,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -7047,6 +7267,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         chrome51: true,
         ejs: true,
@@ -7095,6 +7316,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         safari9: true,
         safaritp: true,
@@ -7117,6 +7339,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: flag,
         chrome51: true,
         firefox41: true,
@@ -7151,6 +7374,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ie11: true,
         firefox6: true,
         chrome21dev: flag,
@@ -7179,6 +7403,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome38: true,
@@ -7205,6 +7430,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ie11: true,
         chrome36: true,
         safari71_8: true,
@@ -7248,6 +7474,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox37: true,
         chrome38: true,
@@ -7272,6 +7499,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox6: true,
         chrome21dev: flag,
@@ -7300,6 +7528,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -7321,6 +7550,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         chrome38: true,
@@ -7345,6 +7575,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ie11: true,
         firefox6: true,
         chrome21dev: flag,
@@ -7375,6 +7606,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome43: true,
         edge12: true,
         firefox6: true,
@@ -7400,6 +7632,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ie11: true,
         firefox38: true,
         chrome41: true,
@@ -7454,6 +7687,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox34: true,
@@ -7479,6 +7713,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox34: true,
@@ -7505,6 +7740,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         firefox37: true,
         edge12: true,
@@ -7545,6 +7781,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox37: true,
         chrome38: true,
@@ -7571,6 +7808,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -7592,6 +7830,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         chrome38: true,
@@ -7614,6 +7853,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox34: true,
@@ -7643,6 +7883,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         chrome43: true,
         safari9: true,
@@ -7666,6 +7907,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome41: true,
@@ -7718,6 +7960,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox25: false,
@@ -7738,6 +7981,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7761,6 +8005,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7784,6 +8029,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: {
           val: false,
@@ -7833,6 +8079,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7858,6 +8105,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7883,6 +8131,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox37: true,
         xs6: true,
@@ -7927,6 +8176,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7951,6 +8201,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -7975,6 +8226,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8016,6 +8268,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8040,6 +8293,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8072,6 +8326,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8101,6 +8356,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: {
           val: false,
@@ -8173,6 +8429,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox32: true,
         xs6: true,
@@ -8202,6 +8459,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8247,6 +8505,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox32: true,
         xs6: true,
@@ -8271,6 +8530,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox49: true,
         xs6: true,
@@ -8301,6 +8561,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox49: true,
         xs6: true,
@@ -8330,6 +8591,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox49: true,
         xs6: true,
@@ -8362,6 +8624,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox49: true,
         xs6: true,
@@ -8388,6 +8651,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox31: true,
         edge12: true,
         xs6: true,
@@ -8426,6 +8690,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox31: true,
         edge12: true,
         xs6: true,
@@ -8453,6 +8718,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox23: true,
         edge12: true,
         xs6: true,
@@ -8483,6 +8749,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox23: true,
         edge12: true,
         xs6: true,
@@ -8508,6 +8775,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox18: {
           val: false,
           note_id: 'fx-proxy-ownkeys',
@@ -8561,6 +8829,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox18: { val: false, note_id: 'fx-proxy-ownkeys' },
         firefox37: true,
         edge12: true,
@@ -8589,6 +8858,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8618,6 +8888,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         chrome50: true,
@@ -8642,6 +8913,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -8681,6 +8953,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox31: true,
         xs6: true,
@@ -8705,6 +8978,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox34: true,
         xs6: true,
@@ -8722,6 +8996,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox18: true,
         edge12: true,
         xs6: true,
@@ -8739,6 +9014,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox18: true,  // a bug in FF18
         firefox23: false,
         firefox40: true,
@@ -8787,6 +9063,7 @@ exports.tests = [
         return get + '' === "length,0,1";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox18: true,
@@ -8831,6 +9108,7 @@ exports.tests = [
         return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
       */},
       res: {
+        jscrambler: true,
         xs6: true,
         ejs: { val: false, note_id: 'ejs-no-with' },
         firefox48: true,
@@ -8851,6 +9129,7 @@ exports.tests = [
         return get + '' === "prototype";
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox45: true,
         xs6: true,
@@ -8902,6 +9181,7 @@ exports.tests = [
         return get + '' === "done,value,done,value";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox36: true,
@@ -8950,6 +9230,7 @@ exports.tests = [
         return get + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox34: true,
         xs6: true,
@@ -8969,6 +9250,7 @@ exports.tests = [
         return get + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -9007,6 +9289,7 @@ exports.tests = [
         return get + '' === "name,message";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox18: true,
@@ -9028,6 +9311,7 @@ exports.tests = [
         return get + '' === "raw,length,0,1";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         xs6: true,
@@ -9050,6 +9334,7 @@ exports.tests = [
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       */},
       res: {
+        jscrambler: true,
         firefox42: true,
         edge14: flag,
         chrome50: true,
@@ -9070,6 +9355,7 @@ exports.tests = [
         return get + '' === "global,ignoreCase,multiline,unicode,sticky";
       */},
       res: {
+        jscrambler: true,
         firefox37: true,
         firefox39: false,
         firefox46: true,
@@ -9091,6 +9377,7 @@ exports.tests = [
         return get + '' === "exec";
       */},
       res: {
+        jscrambler: true,
         firefox46: true,
         edge14: flag,
         chrome51: true,
@@ -9110,6 +9397,7 @@ exports.tests = [
         return get + '' === "source,flags";
       */},
       res: {
+        jscrambler: true,
         firefox39: null,
         firefox44: true,
         edge14: flag,
@@ -9133,6 +9421,7 @@ exports.tests = [
         return get + '' === "global,exec,global,unicode,exec";
       */},
       res: {
+        jscrambler: true,
         edge14: flag,
         firefox49: true,
         chrome51: true,
@@ -9154,6 +9443,7 @@ exports.tests = [
         return get + '' === "global,exec,global,unicode,exec";
       */},
       res: {
+        jscrambler: true,
         edge14: flag,
         firefox49: true,
         chrome51: true,
@@ -9173,6 +9463,7 @@ exports.tests = [
         return get + '' === "lastIndex,exec";
       */},
       res: {
+        jscrambler: true,
         edge14: flag,
         firefox49: true,
         chrome51: true,
@@ -9214,6 +9505,7 @@ exports.tests = [
         return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         firefox36: true,
         edge13: true,
@@ -9241,6 +9533,7 @@ exports.tests = [
           && get.length === 7;
       */},
       res: {
+        jscrambler: true,
         edge14: flag,
         chrome50: flag,
         chrome51: true,
@@ -9294,6 +9587,7 @@ exports.tests = [
         return get + '' === "length,3";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox18: true,
@@ -9314,6 +9608,7 @@ exports.tests = [
         return get + '' === "length,0,4,2";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -9333,6 +9628,7 @@ exports.tests = [
         return get + '' === "length,0,1,2,3";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox18: true,
@@ -9354,6 +9650,7 @@ exports.tests = [
         return get + '' === "length,constructor,1,2,3,length,constructor,2,1";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge13: true,
         firefox48: true,
@@ -9395,6 +9692,7 @@ exports.tests = [
         return get + '' === "toJSON";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         xs6: true,
@@ -9415,6 +9713,7 @@ exports.tests = [
         return get + '' === "then";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox29: true,
@@ -9544,6 +9843,7 @@ exports.tests = [
         return set + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox34: true,
@@ -9564,6 +9864,7 @@ exports.tests = [
         return set + '' === "length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         ejs: true,
         firefox32: true,
@@ -9584,6 +9885,7 @@ exports.tests = [
         return set + '' === "length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         ejs: true,
         firefox25: true,
@@ -9604,6 +9906,7 @@ exports.tests = [
         return set + '' === "0,1,2";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox41: true,
         xs6: true,
@@ -9623,6 +9926,7 @@ exports.tests = [
         return set + '' === "3,4,5";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox41: true,
         xs6: true,
@@ -9642,6 +9946,7 @@ exports.tests = [
         return set + '' === "length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -9661,6 +9966,7 @@ exports.tests = [
         return set + '' === "0,1,2,length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -9680,6 +9986,7 @@ exports.tests = [
         return set + '' === "3,1,2";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox41: true,
         xs6: true,
@@ -9699,6 +10006,7 @@ exports.tests = [
         return set + '' === "0,2,length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox23: false,
@@ -9720,6 +10028,7 @@ exports.tests = [
         return set + '' === "3,2,1,length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox42: true,
         xs6: true,
@@ -9739,6 +10048,7 @@ exports.tests = [
         return set + '' === "5,3,2,0,1,length";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox42: true,
         xs6: true,
@@ -9766,6 +10076,7 @@ exports.tests = [
         return def + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox37: true,
         chrome49: true,
@@ -9785,6 +10096,7 @@ exports.tests = [
         return def + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         xs6: true,
@@ -9812,6 +10124,7 @@ exports.tests = [
         return del + '' === "0,1,2";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox41: true,
         xs6: true,
@@ -9831,6 +10144,7 @@ exports.tests = [
         return del + '' === "2";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox18: true,
@@ -9853,6 +10167,7 @@ exports.tests = [
         return del + '' === "0,4,2";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox23: false,
@@ -9874,6 +10189,7 @@ exports.tests = [
         return del + '' === "0,2,5";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox23: false,
@@ -9895,6 +10211,7 @@ exports.tests = [
         return del + '' === "3,5";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox23: false,
@@ -9916,6 +10233,7 @@ exports.tests = [
         return del + '' === "5,3";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox18: true,
         firefox23: false,
@@ -9946,6 +10264,7 @@ exports.tests = [
         return gopd + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox37: true,
@@ -9967,6 +10286,7 @@ exports.tests = [
         return gopd + '' === "foo,bar";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox34: true,
         xs6: true,
@@ -9987,6 +10307,7 @@ exports.tests = [
         return gopd + '' === "garply";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox33: true,
@@ -10035,6 +10356,7 @@ exports.tests = [
         return ownKeysCalled === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox33: true,
@@ -10055,6 +10377,7 @@ exports.tests = [
         return ownKeysCalled === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox33: true,
@@ -10075,6 +10398,7 @@ exports.tests = [
         return ownKeysCalled === 2;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         firefox33: true,
         edge13: true,
@@ -10105,6 +10429,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         firefox42: true,
@@ -10127,6 +10452,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         firefox42: true,
@@ -10147,6 +10473,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         safaritp: true,
@@ -10168,6 +10495,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         safaritp: true,
@@ -10191,6 +10519,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         firefox42: true,
@@ -10213,6 +10542,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         safaritp: true,
         safari10: true,
@@ -10233,6 +10563,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         safaritp: true,
@@ -10254,6 +10585,7 @@ exports.tests = [
         babel: { val: false, note_id: 'compiler-proto' },
         closure: { val: false, note_id: 'compiler-proto' },
         typescript: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         ejs: true,
         edge12: true,
         es6shim: { val: false, note_id: 'compiler-proto' },
@@ -10276,6 +10608,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         safaritp: true,
@@ -10298,6 +10631,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         safaritp: true,
@@ -10321,6 +10655,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -10349,6 +10684,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -10369,6 +10705,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         es6shim: true,
@@ -10392,6 +10729,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         firefox42: true,
@@ -10413,6 +10751,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox42: true,
         edge13: true,
         xs6: true,
@@ -10436,6 +10775,7 @@ exports.tests = [
         closure: true,
         es6shim: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox44: true,
         xs6: true,
@@ -10456,6 +10796,7 @@ exports.tests = [
       res: {
         ejs: null,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox45: true,
         xs6: null,
@@ -10476,6 +10817,7 @@ exports.tests = [
       res: {
         ejs: null,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox45: true,
         firefox46: false,
@@ -10497,6 +10839,7 @@ exports.tests = [
       res: {
         ejs: null,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox45: true,
         xs6: null,
@@ -10533,6 +10876,7 @@ exports.tests = [
       res: {
         ejs: null,
         typescript: typescript.corejs,
+				jscrambler: true,
         xs6: null,
         edge13: true,
         firefox44: true,
@@ -10567,6 +10911,7 @@ exports.tests = [
     babel: true,
     tr: true,
     closure: true,
+    jscrambler: true,
     ie11: true,
     firefox46: true,
     chrome21dev: flag,
@@ -10599,6 +10944,7 @@ exports.tests = [
         jsx: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox2: true,
         safari71_8: true,
         safaritp: true,
@@ -10625,6 +10971,7 @@ exports.tests = [
         jsx: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox2: true,
         safari71_8: true,
         safaritp: true,
@@ -10651,6 +10998,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox2: true,
         safari71_8: true,
         safaritp: true,
@@ -10674,6 +11022,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox34: true,
         safari9: true,
         safaritp: true,
@@ -10694,6 +11043,7 @@ exports.tests = [
       res: {
         tr: true,
         typescript: false,
+        jscrambler: true,
         firefox34: true,
         babel: true,
         closure: true,
@@ -10717,6 +11067,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox36: true,
         safari9: true,
         safaritp: true,
@@ -10742,6 +11093,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox36: true,
         safari9: true,
         safaritp: true,
@@ -10767,6 +11119,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: false,
+        jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -10783,6 +11136,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         safari71_8: false,
         safari9: true,
         tr: false,
@@ -10799,6 +11153,7 @@ exports.tests = [
         return c === 7 && d === 8 && e === undefined;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: {
           val: true,
@@ -10821,6 +11176,7 @@ exports.tests = [
           && slice === String.prototype.slice;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         chrome49: true,
@@ -10835,6 +11191,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         safari71_8: false,
@@ -10864,6 +11221,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         chrome49: true,
@@ -10881,6 +11239,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6tr: true,
@@ -10904,6 +11263,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -10928,6 +11288,7 @@ exports.tests = [
           && h === 11 && i === 12;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         ejs: false,
@@ -10947,6 +11308,7 @@ exports.tests = [
         tr: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         firefox3: true,
         safari71_8: true,
         safaritp: true,
@@ -10970,6 +11332,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         firefox13: true,
@@ -10998,6 +11361,7 @@ exports.tests = [
         }
       */},
       res: {
+        jscrambler: true,
         firefox3: true,
         babel: true,
         tr: true,
@@ -11022,6 +11386,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -11048,6 +11413,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         safari9: true,
@@ -11130,6 +11496,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox2: true,
         safari71_8: true,
         safaritp: true,
@@ -11154,6 +11521,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox34: true,
         safari9: true,
         safaritp: true,
@@ -11175,6 +11543,7 @@ exports.tests = [
       res: {
         tr: true,
         typescript: false,
+        jscrambler: true,
         firefox34: true,
         babel: true,
         closure: true,
@@ -11199,6 +11568,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox36: true,
         safari9: true,
         safaritp: true,
@@ -11225,6 +11595,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox36: true,
         safari9: true,
         safaritp: true,
@@ -11250,6 +11621,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: false,
+        jscrambler: true,
         chrome51: true,
         edge14: true,
         safari9: true,
@@ -11270,6 +11642,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         firefox2: true,
         safari71_8: true,
@@ -11295,6 +11668,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         firefox2: true,
         safari71_8: true,
@@ -11316,6 +11690,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         safari71_8: false,
         safari9: true,
         tr: true,
@@ -11333,6 +11708,7 @@ exports.tests = [
         return c === 7 && d === 8 && e === undefined;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: {
           val: false,
@@ -11356,6 +11732,7 @@ exports.tests = [
           && slice === String.prototype.slice;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         firefox3_5: false,
@@ -11371,6 +11748,7 @@ exports.tests = [
         return a === 1;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         firefox4: false,
@@ -11392,6 +11770,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         firefox3: true,
         safari71_8: true,
@@ -11448,6 +11827,7 @@ exports.tests = [
         firefox15: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         safaritp: true,
         safari10: true,
@@ -11481,6 +11861,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         closure: false,
@@ -11499,6 +11880,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6tr: true,
@@ -11522,6 +11904,7 @@ exports.tests = [
           && h === 11 && i === 12;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         ejs: false,
         chrome49: true,
         edge14: true,
@@ -11546,6 +11929,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -11572,6 +11956,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         edge13: flag,
         edge14: true,
         firefox47: true,
@@ -11590,6 +11975,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         ejs: true,
         safari71_8: false,
         safari9: true,
@@ -11611,6 +11997,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         safari9: true,
@@ -11665,6 +12052,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         firefox2: true,
         safari71_8: true,
         safaritp: true,
@@ -11689,6 +12077,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox34: true,
         safari9: true,
         safaritp: true,
@@ -11713,6 +12102,7 @@ exports.tests = [
         firefox34: true,
         babel: true,
         closure: true,
+        jscrambler: true,
         ejs: true,
         edge13: flag,
         edge14: true,
@@ -11737,6 +12127,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
+        jscrambler: true,
         ejs: true,
         typescript: false,
         firefox36: true,
@@ -11765,6 +12156,7 @@ exports.tests = [
         closure: true,
         ejs: true,
         typescript: false,
+        jscrambler: true,
         firefox36: true,
         safari9: true,
         safaritp: true,
@@ -11789,6 +12181,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: false,
+        jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -11806,6 +12199,7 @@ exports.tests = [
         }([1]);
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         safari71_8: false,
         safari9: true,
         tr: true,
@@ -11822,6 +12216,7 @@ exports.tests = [
         }({c:7, x:8});
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: {
           val: true,
@@ -11841,6 +12236,7 @@ exports.tests = [
         }(2,'');
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
       }),
@@ -11853,6 +12249,7 @@ exports.tests = [
         }({a:1});
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         safari71_8: false,
@@ -11873,6 +12270,7 @@ exports.tests = [
         return true;
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         closure: false,
@@ -11890,6 +12288,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: true,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6tr: true,
@@ -11912,6 +12311,7 @@ exports.tests = [
         }([9, {x:10}],{h:11, x:[12]});
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         firefox2: false,
         firefox3: true,
         ejs: false,
@@ -11930,6 +12330,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -11974,6 +12375,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12001,6 +12403,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12023,6 +12426,7 @@ exports.tests = [
         }([3,4],{x:"foo"});
       */},
       res: Object.assign({}, temp.destructuringResults, {
+        jscrambler: true,
         ejs: true,
         safari71_8: false,
         safari9: true,
@@ -12042,6 +12446,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         closure: true,
         safaritp: true,
@@ -12067,6 +12472,7 @@ exports.tests = [
       res: {
         babel: false,
         closure: true,
+        jscrambler: true,
         edge13: flag,
         edge14: true,
         firefox51: true,
@@ -12134,6 +12540,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12161,6 +12568,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         firefox30: true,
@@ -12187,6 +12595,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12225,6 +12634,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox29: true,
@@ -12260,6 +12670,7 @@ exports.tests = [
         babel: true,
         es6shim: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome43: true,
@@ -12293,6 +12704,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox29: true,
@@ -12328,6 +12740,7 @@ exports.tests = [
         babel: true,
         es6shim: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome43: true,
@@ -12348,6 +12761,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox45: true,
         chrome50: flag,
@@ -12377,6 +12791,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         edge12: true,
@@ -12403,6 +12818,7 @@ exports.tests = [
         es6shim: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         edge12: true,
         firefox23: true,
@@ -12433,6 +12849,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         tr: true,
         ejs: true,
         edge12: true,
@@ -12458,6 +12875,7 @@ exports.tests = [
         closure: { val: false, note_id: 'compiler-proto' },
         typescript: { val: false, note_id: 'compiler-proto' },
         es6shim: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         ie11: true,
         firefox31: true,
         chrome34: true,
@@ -12485,6 +12903,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12508,6 +12927,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12531,6 +12951,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox33: true,
@@ -12553,6 +12974,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12574,6 +12996,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12595,6 +13018,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12616,6 +13040,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12637,6 +13062,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12658,6 +13084,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -12680,6 +13107,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox35: true,
@@ -12708,6 +13136,7 @@ exports.tests = [
         return (new A()).__proto__ === A.prototype;
       */},
       res: (temp.basicProtoResults = {
+        jscrambler: true,
         ie11: true,
         firefox2: true,
         chrome: true,
@@ -12733,6 +13162,7 @@ exports.tests = [
         return o instanceof Array;
       */},
       res: Object.assign({}, temp.basicProtoResults, {
+        jscrambler: true,
         ejs: false,
       }),
     },
@@ -12744,6 +13174,7 @@ exports.tests = [
         return Object.getPrototypeOf(o) !== p;
       */},
       res: (temp.advancedProtoResults = {
+        jscrambler: true,
         ie11: true,
         firefox4: true,
         chrome30: true,
@@ -12765,6 +13196,7 @@ exports.tests = [
         return Object.prototype.hasOwnProperty('__proto__');
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
+        jscrambler: true,
         firefox2: true,
         konq49: true,
         safari51: true,
@@ -12787,6 +13219,7 @@ exports.tests = [
           && !desc.enumerable);
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
+        jscrambler: true,
         firefox4: false,
         rhino17: false,
         firefox17: true,
@@ -12800,6 +13233,7 @@ exports.tests = [
         return Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;
       */},
       res: Object.assign({}, temp.advancedProtoResults, {
+        jscrambler: true,
         firefox4: false,
         firefox7: true,
         firefox10: false,
@@ -12827,6 +13261,7 @@ exports.tests = [
       res: (temp.legacyFunctionNameResults = {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         firefox2: true,
         edge12: true,
@@ -12860,6 +13295,7 @@ exports.tests = [
         return (new Function).name === "anonymous";
       */},
       res: {
+        jscrambler: true,
         firefox2: true,
         edge12: true,
         safari51: true,
@@ -12884,6 +13320,7 @@ exports.tests = [
           (function(){}).bind({}).name === "bound ";
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox47: true,
@@ -12904,6 +13341,7 @@ exports.tests = [
         return foo.name === "foo" && bar.name === "baz";
       */},
       res: {
+        jscrambler: true,
         edge12: flag,
         chrome50: flag,
         chrome51: true,
@@ -12926,6 +13364,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         chrome50: flag,
@@ -12946,6 +13385,7 @@ exports.tests = [
                descriptor.set.name === "set foo";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox49: true,
         chrome50: flag,
@@ -12965,6 +13405,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         firefox34: true,
         edge12: flag,
         edge13: true,
@@ -12987,6 +13428,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox34: true,
         edge12: true,
         chrome41: flag,
@@ -13014,6 +13456,7 @@ exports.tests = [
                o[sym2].name === "";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         chrome50: flag,
         chrome51: true,
@@ -13038,6 +13481,7 @@ exports.tests = [
           note_id: "name-configurable",
           note_html: 'Requires function <code>"name"</code> properties to be natively configurable',
         },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -13058,6 +13502,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: "name-configurable" },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -13082,6 +13527,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: "name-configurable" },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         chrome50: flag,
@@ -13103,6 +13549,7 @@ exports.tests = [
       */},
       res: {
         babel: false,
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         chrome50: flag,
@@ -13122,6 +13569,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         edge14: true,
@@ -13144,6 +13592,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         ejs: true,
         edge12: flag,
         edge13: true,
@@ -13167,6 +13616,7 @@ exports.tests = [
                descriptor.configurable === true;
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox38: true,
         chrome43: true,
@@ -13195,6 +13645,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -13217,6 +13668,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -13250,6 +13702,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -13274,6 +13727,7 @@ exports.tests = [
           && "\u1e09".normalize("NFD") === "c\u0327\u0301";
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         firefox31: true,
         chrome34: true,
@@ -13296,6 +13750,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -13322,6 +13777,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -13388,6 +13844,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -13418,6 +13875,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox36: true,
@@ -13450,6 +13908,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -13484,6 +13943,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         ie10: true,
         firefox3: true,
@@ -13516,6 +13976,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox2: true,
@@ -13547,6 +14008,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox17: true,
@@ -13580,6 +14042,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: true,
+				jscrambler: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -13601,6 +14064,7 @@ exports.tests = [
         return \u{102C0}['\ud800\udec0'] === 2;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         chrome44: true,
@@ -13633,6 +14097,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         firefox41: true,
         safaritp: true,
         safari10: true,
@@ -13693,6 +14158,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -13714,6 +14180,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         firefox36: true,
@@ -13747,6 +14214,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -13776,6 +14244,7 @@ exports.tests = [
       res: {
         tr: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         babel: true,
         closure: true,
@@ -13805,6 +14274,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -13837,6 +14307,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -13855,6 +14326,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         chrome39: true,
         firefox36: true,
@@ -13880,6 +14352,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         safari9: true,
@@ -13906,6 +14379,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome30: flag,
@@ -13929,6 +14403,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         es6shim: true,
         firefox35: false,
@@ -13970,6 +14445,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         es6shim: true,
         firefox35: false,
@@ -13998,6 +14474,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox36: true,
         chrome35: flag,
@@ -14038,6 +14515,7 @@ exports.tests = [
       res: {
         babel: flag,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge14: flag,
         chrome50: flag,
         chrome51: true,
@@ -14060,6 +14538,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
+				jscrambler: true,
         edge14: flag,
         ejs: true,
         chrome48: true,
@@ -14081,6 +14560,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         edge14: true,
         firefox36: true,
@@ -14104,6 +14584,7 @@ exports.tests = [
         }());
       */},
       res: {
+        jscrambler: true,
         chrome37: flag,
         chrome38: true,
         safari9: true,
@@ -14128,6 +14609,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox41: true,
         edge13: true,
         chrome50: flag,
@@ -14150,6 +14632,7 @@ exports.tests = [
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge13: true,
         firefox48: true,
@@ -14173,6 +14656,7 @@ exports.tests = [
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge13: true,
         firefox48: true,
@@ -14196,6 +14680,7 @@ exports.tests = [
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge13: true,
         firefox48: true,
@@ -14219,6 +14704,7 @@ exports.tests = [
         return Array.prototype.slice.call(obj, 0).foo === 1;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -14242,6 +14728,7 @@ exports.tests = [
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge13: true,
         firefox48: true,
@@ -14268,6 +14755,7 @@ exports.tests = [
         return passed;
       */},
       res: {
+        jscrambler: true,
         edge14: flag,
         firefox49: true,
         chrome51: true,
@@ -14291,6 +14779,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: false,
         edge14: true,
         firefox45: true,
@@ -14316,6 +14805,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14337,8 +14827,10 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        jscrambler: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14362,6 +14854,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14385,6 +14878,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14408,6 +14902,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: flag,
         firefox40: true,
         chrome50: true,
@@ -14433,6 +14928,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox40: true,
         edge14: flag,
         chrome51: true,
@@ -14457,6 +14953,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox40: true,
         edge14: flag,
         chrome51: true,
@@ -14481,6 +14978,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         firefox40: true,
         edge14: flag,
         chrome51: true,
@@ -14507,6 +15005,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         firefox44: true,
         chrome47: true,
         xs6: true,
@@ -14527,6 +15026,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome40: flag,
         chrome49: true,
         node4: flag,
@@ -14563,6 +15063,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome40: flag,
         chrome49: true,
         chrome55: false,
@@ -14605,6 +15106,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome49: true,
         xs6: true,
         safaritp: true,
@@ -14624,6 +15126,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome40: flag,
         chrome49: true,
         node4: flag,
@@ -14656,6 +15159,7 @@ exports.tests = [
           note_html: '<code>with</code> is not supported in ejs'
         },
         typescript: typescript.fallthrough,
+				jscrambler: true,
         node012: true,
         xs6: true,
         jxa: true,
@@ -14678,6 +15182,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         firefox37: true,
         safari9: true,
@@ -14699,6 +15204,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14718,6 +15224,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14737,6 +15244,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14756,6 +15264,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         chrome50: true,
         edge14: flag,
         firefox49: true,
@@ -14776,6 +15285,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox49: true,
         chrome50: flag,
@@ -14805,6 +15315,7 @@ exports.tests = [
         return rx.test('b');
       */},
       res: {
+        jscrambler: true,
         ie10: true,
         firefox2: true,
         chrome: true,
@@ -14826,6 +15337,7 @@ exports.tests = [
         return rx.compile('b') === rx;
       */},
       res: {
+        jscrambler: true,
         ie10: true,
         firefox2: true,
         chrome: false,
@@ -14854,6 +15366,7 @@ exports.tests = [
         return /[\w-_]/.exec("-")[0] === "-";
       */},
       res: (temp.regExpExtensions = {
+        jscrambler: true,
         ejs: true,
         ie10: true,
         firefox2: true,
@@ -14877,14 +15390,23 @@ exports.tests = [
         return /\z/.exec("\\z")[0] === "z"
           && /[\z]/.exec("[\\z]")[0] === "z";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { xs6: false, ejs: false, }),
+      res: Object.assign({}, temp.regExpExtensions,
+        {
+          jscrambler: true,
+          xs6: false,
+          ejs: false
+        }),
     },
     {
       name: 'invalid control-character escapes',
       exec: function() {/*
         return /\c2/.exec("\\c2")[0] === "\\c2";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { xs6: false, ejs: false, }),
+      res: Object.assign({}, temp.regExpExtensions,
+        { jscrambler: true,
+          xs6: false,
+          ejs: false
+        }),
     },
     {
       name: 'invalid Unicode escapes',
@@ -14892,7 +15414,13 @@ exports.tests = [
         return /\u1/.exec("u1")[0] === "u1"
           && /[\u1]/.exec("u")[0] === "u";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { firefox2: false, firefox4: true, opera: false, ejs: false }),
+      res: Object.assign({}, temp.regExpExtensions,
+        { jscrambler: true,
+          firefox2: false,
+          firefox4: true,
+          opera: false,
+          ejs: false
+        }),
     },
     {
       name: 'invalid hexadecimal escapes',
@@ -14900,7 +15428,14 @@ exports.tests = [
         return /\x1/.exec("x1")[0] === "x1"
           && /[\x1]/.exec("x")[0] === "x";
       */},
-      res: Object.assign({}, temp.regExpExtensions, { firefox2: false, firefox4: true, opera: false, xs6: false, ejs: false, }),
+      res: Object.assign({}, temp.regExpExtensions,
+        { jscrambler: true,
+          firefox2: false,
+          firefox4: true,
+          opera: false,
+          xs6: false,
+          ejs: false
+        }),
     },
     {
       name: 'incomplete patterns and quantifiers',
@@ -14943,6 +15478,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         ejs: true,
@@ -14968,6 +15504,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         firefox32: true,
@@ -14992,6 +15529,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         edge12: true,
         es6shim: true,
@@ -15014,6 +15552,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         tr: true,
@@ -15039,6 +15578,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         firefox32: true,
@@ -15063,6 +15603,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.fallthrough,
+				jscrambler: true,
         es6shim: true,
         firefox32: true,
         chrome45: true,
@@ -15087,6 +15628,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         es6shim: true,
         firefox36: true,
@@ -15110,6 +15652,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         tr: true,
         edge12: true,
         firefox36: true,
@@ -15138,6 +15681,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: true,
         chrome51: true,
         safari9: true,
@@ -15157,6 +15701,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15183,6 +15728,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -15210,6 +15756,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         edge12: true,
@@ -15232,6 +15779,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15258,6 +15806,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15284,6 +15833,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15310,6 +15860,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15335,6 +15886,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15377,6 +15929,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15403,6 +15956,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         edge12: true,
         safari9: true,
@@ -15443,6 +15997,7 @@ exports.tests = [
         babel: true,
         ejs: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -15469,6 +16024,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge12: true,
         firefox48: true,
         chrome38: true,
@@ -15497,6 +16053,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15522,6 +16079,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15546,6 +16104,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15570,6 +16129,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15595,6 +16155,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15618,6 +16179,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15642,6 +16204,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         ejs: true,
         es6shim: true,
@@ -15671,6 +16234,7 @@ exports.tests = [
         tr: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         es6shim: true,
         edge12: true,
@@ -15688,6 +16252,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15712,6 +16277,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15731,6 +16297,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15751,6 +16318,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15771,6 +16339,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15791,6 +16360,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15810,6 +16380,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15830,6 +16401,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15850,6 +16422,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15870,6 +16443,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15890,6 +16464,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15909,6 +16484,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15929,6 +16505,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         closure: true,
         tr: true,
         es6shim: true,
@@ -15949,6 +16526,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         tr: true,
         es6shim: true,
         edge12: true,
@@ -15968,6 +16546,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         tr: true,
         es6shim: true,
         edge12: true,
@@ -16004,6 +16583,7 @@ exports.tests = [
         ejs: true,
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         tr: true,
         es6shim: true,
         firefox27: true,
@@ -16037,6 +16617,7 @@ exports.tests = [
     ejs: true,
     babel: true,
     typescript: typescript.corejs,
+				jscrambler: true,
     firefox44: true,
     chrome47: true,
     xs6: true,
@@ -16062,6 +16643,7 @@ exports.tests = [
         return len1 === 0 && len2 === 3;
       */},
       res: {
+        jscrambler: true,
         node4: strict,
         chrome43: strict,
         chrome49: true,
@@ -16085,6 +16667,7 @@ exports.tests = [
         return c.length === 1 && !(2 in c);
       */},
       res: {
+        jscrambler: true,
         node4: strict,
         chrome43: strict,
         chrome49: true,
@@ -16107,6 +16690,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         node4: strict,
         chrome43: strict,
         chrome49: true,
@@ -16128,6 +16712,7 @@ exports.tests = [
         return Array.isArray(new C());
       */},
       res: {
+        jscrambler: true,
         safari9: true,
         safaritp: true,
         webkit: true,
@@ -16148,6 +16733,7 @@ exports.tests = [
         return c.concat(1) instanceof C;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -16168,6 +16754,7 @@ exports.tests = [
         return c.filter(Boolean) instanceof C;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -16188,6 +16775,7 @@ exports.tests = [
         return c.map(Boolean) instanceof C;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -16209,6 +16797,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -16230,6 +16819,7 @@ exports.tests = [
         return c.splice(1,2) instanceof C;
       */},
       res: {
+        jscrambler: true,
         edge13: true,
         firefox48: true,
         chrome50: flag,
@@ -16251,6 +16841,7 @@ exports.tests = [
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
         babel: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -16273,6 +16864,7 @@ exports.tests = [
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
         babel: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -16303,6 +16895,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+        jscrambler: true,
         chrome43: strict,
         chrome49: true,
         safari9: true,
@@ -16325,6 +16918,7 @@ exports.tests = [
       */},
       res: {
         babel: { val: false, note_id: 'compiler-proto' },
+        jscrambler: true,
         node4: strict,
         chrome43: strict,
         chrome49: true,
@@ -16349,6 +16943,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+        jscrambler: true,
         chrome43: strict,
         chrome49: true,
         safari9: true,
@@ -16371,6 +16966,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+        jscrambler: true,
         chrome43: strict,
         chrome49: true,
         safari9: true,
@@ -16401,6 +16997,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+        jscrambler: true,
         chrome43: strict,
         chrome49: true,
         node4: strict,
@@ -16422,6 +17019,7 @@ exports.tests = [
       res: {
         babel: { val: false, note_id: 'compiler-proto' },
         typescript: false,
+				jscrambler: true,
         edge12: flag,
         edge13: true,
         firefox45: true,
@@ -16443,6 +17041,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome48: false,
         chrome49: true,
@@ -16464,6 +17063,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         node4: strict,
@@ -16484,6 +17084,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         node4: strict,
@@ -16504,6 +17105,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         edge13: true,
         firefox45: true,
         xs6: true,
@@ -16551,6 +17153,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         edge13: true,
@@ -16572,6 +17175,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         node4: strict,
@@ -16607,6 +17211,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         edge13: true,
@@ -16640,6 +17245,7 @@ exports.tests = [
       */},
       res: {
         typescript: false,
+				jscrambler: true,
         chrome43: strict,
         chrome49: true,
         edge13: true,
@@ -16669,6 +17275,7 @@ exports.tests = [
           && c == true;
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16692,6 +17299,7 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16717,6 +17325,7 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16740,6 +17349,7 @@ exports.tests = [
           && Object.prototype.toString.call(c) === "[object Error]";
       */},
       res: {
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16766,6 +17376,7 @@ exports.tests = [
       */},
       res: {
         closure: true,
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16793,6 +17404,7 @@ exports.tests = [
       */},
       res: {
         closure: true,
+        jscrambler: true,
         safaritp: true,
         safari10: true,
         webkit: true,
@@ -16852,6 +17464,7 @@ exports.tests = [
         return Object.keys(obj).join('') === forInOrder;
       */},
       res: {
+        jscrambler: true,
         ie10: true,
         chrome: true,
         firefox4: true,
@@ -16896,6 +17509,7 @@ exports.tests = [
         return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
+        jscrambler: true,
         ie10: { val: true, note_id: 'ie_property_order' },
         firefox44: true,
         opera: true,
@@ -16939,6 +17553,7 @@ exports.tests = [
         return result === "012349 DB-1ACEFGHIJKLMNOPQRST";
       */},
       res: {
+        jscrambler: true,
         edge12: { val: true, note_id: 'ie_property_order' },
         firefox44: true,
         safari9: true,
@@ -16976,6 +17591,7 @@ exports.tests = [
           '{"0":true,"1":true,"2":true,"3":true,"4":true,"9":true," ":true,"D":true,"B":true,"-1":true,"A":true,"E":true,"F":true,"G":true,"H":true,"I":true,"J":true,"K":true,"L":true,"M":true,"N":true,"O":true,"P":true,"Q":true,"R":true,"S":true,"T":true,"U":true,"V":true,"W":true,"X":true,"Y":true,"Z":true,"C":true}';
       */},
       res: {
+        jscrambler: true,
         ie10: { val: true, note_id: 'ie_property_order' },
         firefox44: true,
         ejs: true,
@@ -17005,6 +17621,7 @@ exports.tests = [
         return result === "012349 DB-1EFGHIJKLAC";
       */},
       res: {
+        jscrambler: true,
         ie10: {
           val: true,
           note_id: 'ie_property_order',
@@ -17054,6 +17671,7 @@ exports.tests = [
         closure: { val: false, note_id: "forin-order" },
         typescript: { val: false, note_id: "forin-order" },
         es6shim: { val: false, note_id: "forin-order" },
+        jscrambler: true,
         firefox44: true,
         edge12: true,
         safaritp: true,
@@ -17087,6 +17705,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         edge12: true,
         safaritp: true,
@@ -17141,6 +17760,7 @@ exports.tests = [
         return this === undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
+        jscrambler: true,
         ejs: true,
         edge12: true,
         firefox34: true,
@@ -17163,6 +17783,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+				jscrambler: true,
         ie10: true,
         firefox2: true,
         chrome: true,
@@ -17213,6 +17834,7 @@ exports.tests = [
         }
       */},
       res: {
+        jscrambler: true,
         edge12: true,
         chrome42: true,
         node4: true,
@@ -17232,6 +17854,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         es6shim: true,
         ejs: true,
         ie10: true,
@@ -17258,6 +17881,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         ejs: true,
         es6shim: true,
         edge12: true,
@@ -17277,6 +17901,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+				jscrambler: true,
         edge14: flag,
         firefox39: true,
         chrome50: true,
@@ -17307,6 +17932,7 @@ exports.tests = [
         return true;
       */},
       res: {
+        jscrambler: true,
         xs6: false,
         jxa: true,
         edge14: flag,
@@ -17330,6 +17956,7 @@ exports.tests = [
         return false;
       */},
       res: {
+        jscrambler: true,
         firefox37: true,
         chrome43: true,
         edge12: true,
@@ -17355,6 +17982,7 @@ exports.tests = [
     return a === 3;
   */},
   res: {
+    jscrambler: true,
     ejs: true,
     firefox2: true,
     chrome: true,
