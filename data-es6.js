@@ -81,8 +81,8 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   jscrambler: {
-    full: 'Jscrambler',
-    short: 'Jscrambler',
+    full: 'Jscrambler 4.0',
+    short: 'Jscrambler <br> 4.0',
     obsolete: false,
     platformtype: 'compiler',
   },
