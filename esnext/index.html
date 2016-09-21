@@ -159,7 +159,8 @@
 <th class="platform iojs engine obsolete" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js">io.js</abbr></a></th>
 <th class="platform node4 engine" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node.js">Node 4</abbr></a></th>
 <th class="platform node5 engine obsolete" data-browser="node5"><a href="#node5" class="browser-name"><abbr title="Node.js">Node 5</abbr></a></th>
-<th class="platform node6 engine" data-browser="node6"><a href="#node6" class="browser-name"><abbr title="Node.js">Node 6</abbr></a></th>
+<th class="platform node64 engine obsolete" data-browser="node64"><a href="#node64" class="browser-name"><abbr title="Node.js">Node 6.0-6.4</abbr></a></th>
+<th class="platform node65 engine" data-browser="node65"><a href="#node65" class="browser-name"><abbr title="Node.js">Node 6.5</abbr></a></th>
 <th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">AN 4.0</abbr></a></th>
 <th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">AN 4.1 - 4.3</abbr></a></th>
 <th class="platform android44 mobile" data-browser="android44"><a href="#android44" class="browser-name"><abbr title="Android Browser">AN 4.4</abbr></a></th>
@@ -173,7 +174,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="60">Candidate (stage 3)</td>
+      <tr class="category"><td colspan="61">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-SIMD_(Single_Instruction,_Multiple_Data)"><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/">SIMD (Single Instruction, Multiple Data)</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/57</td>
@@ -225,7 +226,8 @@
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/57</td>
 <td class="tally" data-browser="node4" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/57</td>
-<td class="tally" data-browser="node6" data-tally="0">0/57</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0">0/57</td>
+<td class="tally" data-browser="node65" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/57</td>
 <td class="tally" data-browser="android44" data-tally="0">0/57</td>
@@ -288,7 +290,8 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -351,7 +354,8 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -414,7 +418,8 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -477,7 +482,8 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -540,7 +546,8 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -603,7 +610,8 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -666,7 +674,8 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -729,7 +738,8 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -792,7 +802,8 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -855,7 +866,8 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -918,7 +930,8 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -981,7 +994,8 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1044,7 +1058,8 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1107,7 +1122,8 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1170,7 +1186,8 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1233,7 +1250,8 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1296,7 +1314,8 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1359,7 +1378,8 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1422,7 +1442,8 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1485,7 +1506,8 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1548,7 +1570,8 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1611,7 +1634,8 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1674,7 +1698,8 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1737,7 +1762,8 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1800,7 +1826,8 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1863,7 +1890,8 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1926,7 +1954,8 @@ return typeof SIMD.Float32x4.load === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1989,7 +2018,8 @@ return typeof SIMD.Float32x4.load1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2052,7 +2082,8 @@ return typeof SIMD.Float32x4.load2 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2115,7 +2146,8 @@ return typeof SIMD.Float32x4.load3 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2178,7 +2210,8 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2241,7 +2274,8 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2304,7 +2338,8 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2367,7 +2402,8 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2430,7 +2466,8 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2493,7 +2530,8 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2556,7 +2594,8 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2619,7 +2658,8 @@ return typeof SIMD.Bool16x8.or === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2682,7 +2722,8 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2745,7 +2786,8 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2808,7 +2850,8 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2871,7 +2914,8 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2934,7 +2978,8 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2997,7 +3042,8 @@ return typeof SIMD.Int32x4.shiftRightByScalar === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3060,7 +3106,8 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3123,7 +3170,8 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3186,7 +3234,8 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3249,7 +3298,8 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3312,7 +3362,8 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3375,7 +3426,8 @@ return typeof SIMD.Float32x4.store2 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3438,7 +3490,8 @@ return typeof SIMD.Float32x4.store3 === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3501,7 +3554,8 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3564,7 +3618,8 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3627,7 +3682,8 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3690,7 +3746,8 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3755,7 +3812,8 @@ return &apos;Float32x4,Int32x4,Int8x16,Uint32x4,Uint16x8,Uint8x16&apos;.split(&a
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3820,7 +3878,8 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3830,7 +3889,7 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="60">Draft (stage 2)</td>
+<tr class="category"><td colspan="61">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-function.sent"><span><a class="anchor" href="#test-function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
@@ -3891,7 +3950,8 @@ return result === &apos;tromple&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3962,7 +4022,8 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4029,7 +4090,8 @@ return new C().x + C.y === &apos;xy&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4093,7 +4155,8 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4158,7 +4221,8 @@ return O.a + O.b + O.c === 6;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4222,7 +4286,8 @@ return System.global.__system_global_test__ === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4282,7 +4347,8 @@ return System.global.__system_global_test__ === 42;
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/17</td>
 <td class="tally" data-browser="node4" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/17</td>
-<td class="tally" data-browser="node6" data-tally="0">0/17</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0">0/17</td>
+<td class="tally" data-browser="node65" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/17</td>
 <td class="tally" data-browser="android44" data-tally="0">0/17</td>
@@ -4345,7 +4411,8 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4408,7 +4475,8 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4471,7 +4539,8 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4534,7 +4603,8 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4597,7 +4667,8 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4660,7 +4731,8 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4723,7 +4795,8 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4786,7 +4859,8 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4849,7 +4923,8 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4912,7 +4987,8 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4975,7 +5051,8 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5038,7 +5115,8 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5101,7 +5179,8 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5164,7 +5243,8 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5227,7 +5307,8 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5290,7 +5371,8 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5353,7 +5435,8 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5413,7 +5496,8 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
-<td class="tally" data-browser="node6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
+<td class="tally" data-browser="node65" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -5483,7 +5567,8 @@ iterator.next().then(function(step){
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5563,7 +5648,8 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5573,7 +5659,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="60">Proposal (stage 1)</td>
+<tr class="category"><td colspan="61">Proposal (stage 1)</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-string_trimming"><span><a class="anchor" href="#test-string_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">string trimming</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
@@ -5625,7 +5711,8 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="tally obsolete" data-browser="iojs" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="node4" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
-<td class="tally" data-browser="node6" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="node65" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="android44" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -5688,7 +5775,8 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
-<td class="yes" data-browser="node6">Yes</td>
+<td class="yes obsolete" data-browser="node64">Yes</td>
+<td class="yes" data-browser="node65">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -5751,7 +5839,8 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes obsolete" data-browser="iojs">Yes</td>
 <td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
-<td class="yes" data-browser="node6">Yes</td>
+<td class="yes obsolete" data-browser="node64">Yes</td>
+<td class="yes" data-browser="node65">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -5814,7 +5903,8 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5877,7 +5967,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -5937,7 +6028,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/8</td>
 <td class="tally" data-browser="node4" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/8</td>
-<td class="tally" data-browser="node6" data-tally="0">0/8</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0">0/8</td>
+<td class="tally" data-browser="node65" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/8</td>
 <td class="tally" data-browser="android44" data-tally="0">0/8</td>
@@ -6000,7 +6092,8 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6063,7 +6156,8 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6126,7 +6220,8 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6199,7 +6294,8 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6263,7 +6359,8 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6327,7 +6424,8 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6390,7 +6488,8 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6453,7 +6552,8 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6526,7 +6626,8 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6593,7 +6694,8 @@ return works &amp;&amp; weakref.get() === undefined;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6657,7 +6759,8 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6717,7 +6820,8 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
-<td class="tally" data-browser="node6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
+<td class="tally" data-browser="node65" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -6789,7 +6893,8 @@ return new C(42).x() === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6858,7 +6963,8 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no" data-browser="node6">No</td>
+<td class="no obsolete" data-browser="node64">No</td>
+<td class="no" data-browser="node65">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -6868,7 +6974,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
 </tr>
-<tr class="category"><td colspan="60">Strawman (stage 0)</td>
+<tr class="category"><td colspan="61">Strawman (stage 0)</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -6920,7 +7026,8 @@ return new C().x() === 42;
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -6985,7 +7092,8 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7049,7 +7157,8 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7115,7 +7224,8 @@ return do {
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7181,7 +7291,8 @@ return typeof Realm === &quot;function&quot;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7244,7 +7355,8 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7304,7 +7416,8 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -7367,7 +7480,8 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7430,7 +7544,8 @@ return Math.isubh(0, 4, 1, 1) === 2;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7493,7 +7608,8 @@ return Math.imulh(0xffffffff, 7) === -1;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7556,7 +7672,8 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7616,7 +7733,8 @@ return Math.umulh(0xffffffff, 7) === 6;
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -7680,7 +7798,8 @@ return f();
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7743,7 +7862,8 @@ return (_ =&gt; function.count)(1, 2, 3) === 3;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7811,7 +7931,8 @@ return Array.isArray(arr)
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7885,7 +8006,8 @@ return target === C.prototype
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7955,7 +8077,8 @@ return (@inverse function(it){
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8025,7 +8148,8 @@ return result.groups.year === &apos;2016&apos;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8088,7 +8212,8 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no flagged not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag</td>
+<td class="no flagged obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag</td>
+<td class="no flagged not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8148,7 +8273,8 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -8213,7 +8339,8 @@ return Reflect.isCallable(function(){})
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8278,7 +8405,8 @@ return Reflect.isConstructor(function(){})
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8338,7 +8466,8 @@ return Reflect.isConstructor(function(){})
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -8401,7 +8530,8 @@ return typeof Zone == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8464,7 +8594,8 @@ return &apos;current&apos; in Zone;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8527,7 +8658,8 @@ return &apos;name&apos; in Zone.prototype;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8590,7 +8722,8 @@ return &apos;parent&apos; in Zone.prototype;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8653,7 +8786,8 @@ return typeof Zone.prototype.fork == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8716,7 +8850,8 @@ return typeof Zone.prototype.run == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8779,7 +8914,8 @@ return typeof Zone.prototype.wrap == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8845,7 +8981,8 @@ passed = true;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8905,7 +9042,8 @@ passed = true;
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -8974,7 +9112,8 @@ return (function f(n){
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9050,7 +9189,8 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9060,7 +9200,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="no obsolete not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr class="category"><td colspan="60">Pre-strawman</td>
+<tr class="category"><td colspan="61">Pre-strawman</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-Metadata_reflection_API"><span><a class="anchor" href="#test-Metadata_reflection_API">&#xA7;</a><a href="https://github.com/rbuckton/ReflectDecorators">Metadata reflection API</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
@@ -9112,7 +9252,8 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
-<td class="tally not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
+<td class="tally obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
+<td class="tally not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
@@ -9175,7 +9316,8 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9238,7 +9380,8 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9301,7 +9444,8 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9364,7 +9508,8 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9427,7 +9572,8 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9490,7 +9636,8 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9553,7 +9700,8 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9616,7 +9764,8 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9679,7 +9828,8 @@ return typeof Reflect.metadata == &apos;function&apos;;
 <td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node64" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node65" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="android44" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>

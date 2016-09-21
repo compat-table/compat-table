@@ -388,12 +388,20 @@ module.exports = {
     platformtype: 'engine',
     obsolete: true,
   },
-  node6: {
+  node64: {
     full: 'Node.js',
     family: 'Node.js',
-    short: 'Node 6',
+    short: 'Node 6.0-6.4',
     platformtype: 'engine',
     equals: 'chrome50',
+    obsolete: true,
+  },
+  node65: {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node 6.5',
+    platformtype: 'engine',
+    equals: 'chrome51',
     obsolete: false,
   },
   android40: {
