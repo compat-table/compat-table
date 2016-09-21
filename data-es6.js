@@ -562,7 +562,7 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
-    obsolete: false // Long-term support ends April 2017.
+    obsolete: false // Long-term support ends December 2016.
   },
   iojs: {
     full: 'io.js',
@@ -589,13 +589,22 @@ exports.browsers = {
     note_id: 'harmony-flag',
     obsolete: true,
   },
-  node6: {
+  node64: {
     full: 'Node.js',
     family: 'Node.js',
-    short: 'Node<br>6',
+    short: 'Node<br>6.0-6.4',
     platformtype: 'engine',
     note_id: 'harmony-flag',
     equals: 'chrome50',
+    obsolete: true,
+  },
+  node65: {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node<br>6.5',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+    equals: 'chrome51',
     obsolete: false,
   },
   ejs: {
@@ -13939,7 +13948,7 @@ exports.tests = [
         chrome52: true,
         node012: true,
         node4: true,
-        node6: true,
+        node64: true,
         safari9: false,
         safaritp: true,
         safari10: true,
@@ -13976,7 +13985,7 @@ exports.tests = [
         firefox48: true,
         node012: false,
         node4: false,
-        node6: true,
+        node64: true,
         chrome38: false,
         chrome48: false,
         chrome49: true,
