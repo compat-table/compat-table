@@ -570,7 +570,7 @@ exports.tests = [
      return passed;
      */},
     res: {
-      firefox24: true,
+      firefox18: true,
       firefox25: false,
       firefox47: true,
       chrome50: true,
@@ -909,7 +909,7 @@ exports.tests = [
        return def + '' === "foo";
        */},
       res: {
-        firefox24: true,
+        firefox18: true,
         edge13: true,
         chrome52: true,
         safari10: true,
@@ -927,7 +927,7 @@ exports.tests = [
          return def + '' === "foo";
          */},
         res: {
-          firefox24: true,
+          firefox18: true,
           edge13: true,
           chrome52: true,
           safari10: true,
