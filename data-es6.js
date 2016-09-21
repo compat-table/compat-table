@@ -562,7 +562,7 @@ exports.browsers = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
-    obsolete: false // Long-term support ends April 2017.
+    obsolete: false // Long-term support ends December 2016.
   },
   iojs: {
     full: 'io.js',
