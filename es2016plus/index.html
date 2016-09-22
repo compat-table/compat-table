@@ -171,7 +171,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="62">2016 features</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
+<tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="babel" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/3</td>
@@ -433,7 +433,7 @@ return true;
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
+<tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/3</td>
@@ -723,7 +723,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 </tr>
 <tr class="category"><td colspan="62">2016 misc</td>
 </tr>
-<tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
+<tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
 yield 3;
 }
@@ -795,7 +795,7 @@ return true;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/293">generator throw() caught by inner generator</a></span><script data-source="
+<tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects">generator throw() caught by inner generator</a></span><script data-source="
 function * generator() {
 yield * (function * () {
 try {
@@ -873,7 +873,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
+<tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
 function foo(...a){}
 try {
 Function(&quot;function bar(...a){&apos;use strict&apos;;}&quot;)();
@@ -943,7 +943,7 @@ return true;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, declarations</a></span><script data-source="
+<tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, declarations</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
 return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
@@ -1009,7 +1009,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, parameters</a></span><script data-source="
+<tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, parameters</a></span><script data-source="
 return function([x, ...[y, ...z]]) {
 return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
 }([1,2,3,4]);
@@ -1076,7 +1076,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/367">Proxy, &quot;enumerate&quot; handler removed</a></span><script data-source="
+<tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects">Proxy, &quot;enumerate&quot; handler removed</a></span><script data-source="
 var passed = true;
 var proxy = new Proxy({}, {
 enumerate: function() {
@@ -1148,7 +1148,7 @@ return passed;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-Proxy_internal_calls,_Array.prototype.includes"><span><a class="anchor" href="#test-Proxy_internal_calls,_Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Proxy internal calls, Array.prototype.includes</a></span><script data-source="
+<tr significance="0.125"><td id="test-Proxy_internal_calls,_Array.prototype.includes"><span><a class="anchor" href="#test-Proxy_internal_calls,_Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Proxy internal calls, Array.prototype.includes</a></span><script data-source="
 // Array.prototype.includes -&gt; Get -&gt; [[Get]]
 var get = [];
 var p = new Proxy({length: 3, 0: &apos;&apos;, 1: &apos;&apos;, 2: &apos;&apos;, 3: &apos;&apos;}, { get: function(o, k) { get.push(k); return o[k]; }});

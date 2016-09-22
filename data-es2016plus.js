@@ -50,7 +50,7 @@ exports.tests = [
     name: 'exponentiation (**) operator',
     category: '2016 features',
     significance: 'small',
-    link: 'https://github.com/rwaldron/exponentiation-operator',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator',
     subtests: [
       {
         name: 'basic support',
@@ -163,7 +163,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.includes',
-    link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
     category: '2016 features',
     significance: 'small',
     subtests: [
@@ -443,7 +443,7 @@ exports.tests = [
     name: 'generator functions can\'t be used with "new"',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction',
     exec: function(){/*
      function * generator() {
      yield 3;
@@ -467,7 +467,7 @@ exports.tests = [
     name: 'generator throw() caught by inner generator',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/issues/293',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects',
     exec: function(){/*
      function * generator() {
      yield * (function * () {
@@ -499,7 +499,7 @@ exports.tests = [
     name: 'strict fn w/ non-strict non-simple params is error',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation',
     exec: function(){/*
      function foo(...a){}
      try {
@@ -520,7 +520,7 @@ exports.tests = [
     name: 'nested rest destructuring, declarations',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment',
     exec: function(){/*
      var [x, ...[y, ...z]] = [1,2,3,4];
      return x === 1 && y === 2 && z + '' === '3,4';
@@ -540,7 +540,7 @@ exports.tests = [
     name: 'nested rest destructuring, parameters',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment',
     exec: function(){/*
      return function([x, ...[y, ...z]]) {
      return x === 1 && y === 2 && z + '' === '3,4';
@@ -561,7 +561,7 @@ exports.tests = [
     name: 'Proxy, "enumerate" handler removed',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/pull/367',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects',
     exec: function() {/*
      var passed = true;
      var proxy = new Proxy({}, {
@@ -586,7 +586,7 @@ exports.tests = [
     name: 'Proxy internal calls, Array.prototype.includes',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
+    link: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
     exec: function() {/*
      // Array.prototype.includes -> Get -> [[Get]]
      var get = [];
