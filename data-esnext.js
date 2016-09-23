@@ -120,9 +120,6 @@ exports.tests = [
       */},
       res: {
         edge12: flag,
-        firefox39: true,
-        firefox42: false,
-        firefox44: false,
         firefox48: firefox.nightly,
       }
     },

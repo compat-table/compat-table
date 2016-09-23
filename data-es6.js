@@ -117,157 +117,157 @@ exports.browsers = {
   firefox2: {
     full: 'Firefox',
     short: 'FF 2',
-    obsolete: very
+    obsolete: very,
   },
   firefox3: {
     full: 'Firefox',
     short: 'FF 3',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_5: {
     full: 'Firefox',
     short: 'FF 3.5',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_6: {
     full: 'Firefox',
     short: 'FF 3.6',
-    obsolete: very
+    obsolete: very,
   },
   firefox4:{
     full: 'Firefox',
     short: 'FF 4',
-    obsolete: very
+    obsolete: very,
   },
   firefox6:{
     full: 'Firefox',
     short: 'FF 6',
-    obsolete: very
+    obsolete: very,
   },
   firefox7: {
     full: 'Firefox',
     short: 'FF 7',
-    obsolete: very
+    obsolete: very,
   },
   firefox10: {
     full: 'Firefox',
     short: 'FF 10<br> ESR',
-    obsolete: very // ESR (EOL on February 12, 2013)
+    obsolete: very, // ESR (EOL on February 12, 2013)
   },
   firefox13: {
     full: 'Firefox',
     short: 'FF 13',
-    obsolete: very
+    obsolete: very,
   },
   firefox15: {
     full: 'Firefox',
     short: 'FF 15',
-    obsolete: very
+    obsolete: very,
   },
   firefox16: {
     full: 'Firefox',
     short: 'FF 16',
-    obsolete: very
+    obsolete: very,
   },
   firefox17: {
     full: 'Firefox',
     short: 'FF 17<br> ESR',
-    obsolete: very // ESR (EOL on December 3, 2013)
+    obsolete: very, // ESR (EOL on December 3, 2013)
   },
   firefox18: {
     full: 'Firefox',
     short: 'FF 18',
-    obsolete: very
+    obsolete: very,
   },
   firefox19: {
     full: 'Firefox',
     short: 'FF 19',
-    obsolete: very
+    obsolete: very,
   },
   firefox20: {
     full: 'Firefox',
     short: 'FF 20',
-    obsolete: very
+    obsolete: very,
   },
   firefox21: {
     full: 'Firefox',
     short: 'FF 21',
-    obsolete: very
+    obsolete: very,
   },
   firefox22: {
     full: 'Firefox',
     short: 'FF 22',
-    obsolete: very
+    obsolete: very,
   },
   firefox23: {
     full: 'Firefox',
     short: 'FF 23',
-    obsolete: very
+    obsolete: very,
   },
   firefox24: {
     full: 'Firefox',
     short: 'FF 24<br> ESR',
-    obsolete: very // ESR (EOL on October 14, 2014)
+    obsolete: very, // ESR (EOL on October 14, 2014)
   },
   firefox25: {
     full: 'Firefox',
     short: 'FF 25',
-    obsolete: very
+    obsolete: very,
   },
   firefox26: {
     full: 'Firefox',
     short: 'FF 26',
-    obsolete: very
+    obsolete: very,
   },
   firefox27: {
     full: 'Firefox',
     short: 'FF 27',
-    obsolete: very
+    obsolete: very,
   },
   firefox28: {
     full: 'Firefox',
     short: 'FF 28',
-    obsolete: very
+    obsolete: very,
   },
   firefox29: {
     full: 'Firefox',
     short: 'FF 29',
-    obsolete: very
+    obsolete: very,
   },
   firefox30: {
     full: 'Firefox',
     short: 'FF 30',
-    obsolete: very
+    obsolete: very,
   },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31<br> ESR',
-    obsolete: true // ESR (EOL on August 11, 2015)
+    obsolete: true, // ESR (EOL on August 11, 2015)
   },
   firefox32: {
     full: 'Firefox',
     short: 'FF 32',
-    obsolete: very
+    obsolete: very,
   },
   firefox33: {
     full: 'Firefox',
     short: 'FF 33',
-    obsolete: very
+    obsolete: very,
   },
   firefox34: {
     full: 'Firefox',
     short: 'FF 34',
-    obsolete: very
+    obsolete: very,
   },
   firefox35: {
     full: 'Firefox',
     short: 'FF 35',
-    obsolete: very
+    obsolete: very,
   },
   firefox36: {
     full: 'Firefox',
     short: 'FF 36',
-    obsolete: very
+    obsolete: very,
   },
   firefox37: {
     full: 'Firefox',
@@ -7754,7 +7754,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox25: false,
-        firefox45: true,
+        firefox38: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -8595,7 +8595,7 @@ exports.tests = [
       res: {
         typescript: typescript.fallthrough,
         firefox18: { val: false, note_id: 'fx-proxy-ownkeys' },
-        firefox37: true,
+        firefox42: true,
         edge12: true,
         xs6: true,
         ejs: true,
@@ -9083,7 +9083,7 @@ exports.tests = [
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       */},
       res: {
-        firefox42: true,
+        firefox40: true,
         edge14: flag,
         chrome50: true,
         xs6: true,
@@ -9143,8 +9143,7 @@ exports.tests = [
         return get + '' === "source,flags";
       */},
       res: {
-        firefox39: null,
-        firefox44: true,
+        firefox39: true,
         edge14: flag,
         chrome50: true,
         xs6: null,
@@ -9638,7 +9637,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9657,7 +9656,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9714,7 +9713,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9735,7 +9734,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9756,7 +9755,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox42: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9777,7 +9776,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox42: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9850,7 +9849,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -10572,7 +10571,7 @@ exports.tests = [
         typescript: typescript.corejs,
         xs6: null,
         edge13: true,
-        firefox44: true,
+        firefox42: true,
         chrome49: true,
         safaritp: true,
         safari10: true,
@@ -12229,7 +12228,7 @@ exports.tests = [
         edge12: true,
         firefox29: true,
         firefox31: false,
-        firefox39: true,
+        firefox45: true,
         chrome33: true,
         safari71_8: true,
         safaritp: true,
