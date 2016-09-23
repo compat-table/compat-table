@@ -70,47 +70,47 @@ module.exports = {
   firefox2: {
     full: 'Firefox',
     short: 'FF 2',
-    obsolete: very
+    obsolete: very,
   },
   firefox3: {
     full: 'Firefox',
     short: 'FF 3',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_5: {
     full: 'Firefox',
     short: 'FF 3.5',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_6: {
     full: 'Firefox',
     short: 'FF 3.6',
-    obsolete: very
+    obsolete: very,
   },
   firefox4: {
     full: 'Firefox',
     short: 'FF 4-9',
-    obsolete: very
+    obsolete: very,
   },
   firefox10: {
     full: 'Firefox',
     short: 'FF 10<br> ESR',
-    obsolete: very // ESR (EOL on February 12, 2013)
+    obsolete: very, // ESR (EOL on February 12, 2013)
   },
   firefox17: {
     full: 'Firefox',
     short: 'FF 17<br> ESR',
-    obsolete: very // ESR (EOL on December 3, 2013)
+    obsolete: very, // ESR (EOL on December 3, 2013)
   },
   firefox18: {
     full: 'Firefox',
       short: 'FF 18',
-      obsolete: very
+      obsolete: very,
   },
   firefox24: {
     full: 'Firefox',
     short: 'FF 24<br> ESR',
-    obsolete: very // ESR (EOL on October 14, 2014)
+    obsolete: very, // ESR (EOL on October 14, 2014)
   },
   firefox25: {
     full: 'Firefox',
@@ -120,32 +120,32 @@ module.exports = {
   firefox27: {
     full: 'Firefox',
     short: 'FF 27',
-    obsolete: very
+    obsolete: very,
   },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31<br> ESR',
-    obsolete: true // ESR (EOL on August 11, 2015)
+    obsolete: true, // ESR (EOL on August 11, 2015)
   },
   firefox32: {
     full: 'Firefox',
     short: 'FF 32',
-    obsolete: very
+    obsolete: very,
   },
   firefox34: {
     full: 'Firefox',
     short: 'FF 34',
-    obsolete: very
+    obsolete: very,
   },
   firefox35: {
     full: 'Firefox',
     short: 'FF 35',
-    obsolete: very
+    obsolete: very,
   },
   firefox36: {
     full: 'Firefox',
     short: 'FF 36',
-    obsolete: very
+    obsolete: very,
   },
   firefox38: {
     full: 'Firefox',

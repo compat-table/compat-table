@@ -117,162 +117,162 @@ exports.browsers = {
   firefox2: {
     full: 'Firefox',
     short: 'FF 2',
-    obsolete: very
+    obsolete: very,
   },
   firefox3: {
     full: 'Firefox',
     short: 'FF 3',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_5: {
     full: 'Firefox',
     short: 'FF 3.5',
-    obsolete: very
+    obsolete: very,
   },
   firefox3_6: {
     full: 'Firefox',
     short: 'FF 3.6',
-    obsolete: very
+    obsolete: very,
   },
   firefox4:{
     full: 'Firefox',
     short: 'FF 4',
-    obsolete: very
+    obsolete: very,
   },
   firefox6:{
     full: 'Firefox',
     short: 'FF 6',
-    obsolete: very
+    obsolete: very,
   },
   firefox7: {
     full: 'Firefox',
     short: 'FF 7',
-    obsolete: very
+    obsolete: very,
   },
   firefox10: {
     full: 'Firefox',
     short: 'FF 10<br> ESR',
-    obsolete: very // ESR (EOL on February 12, 2013)
+    obsolete: very, // ESR (EOL on February 12, 2013)
   },
   firefox13: {
     full: 'Firefox',
     short: 'FF 13',
-    obsolete: very
+    obsolete: very,
   },
   firefox15: {
     full: 'Firefox',
     short: 'FF 15',
-    obsolete: very
+    obsolete: very,
   },
   firefox16: {
     full: 'Firefox',
     short: 'FF 16',
-    obsolete: very
+    obsolete: very,
   },
   firefox17: {
     full: 'Firefox',
     short: 'FF 17<br> ESR',
-    obsolete: very // ESR (EOL on December 3, 2013)
+    obsolete: very, // ESR (EOL on December 3, 2013)
   },
   firefox18: {
     full: 'Firefox',
     short: 'FF 18',
-    obsolete: very
+    obsolete: very,
   },
   firefox19: {
     full: 'Firefox',
     short: 'FF 19',
-    obsolete: very
+    obsolete: very,
   },
   firefox20: {
     full: 'Firefox',
     short: 'FF 20',
-    obsolete: very
+    obsolete: very,
   },
   firefox21: {
     full: 'Firefox',
     short: 'FF 21',
-    obsolete: very
+    obsolete: very,
   },
   firefox22: {
     full: 'Firefox',
     short: 'FF 22',
-    obsolete: very
+    obsolete: very,
   },
   firefox23: {
     full: 'Firefox',
     short: 'FF 23',
-    obsolete: very
+    obsolete: very,
   },
   firefox24: {
     full: 'Firefox',
     short: 'FF 24<br> ESR',
-    obsolete: very // ESR (EOL on October 14, 2014)
+    obsolete: very, // ESR (EOL on October 14, 2014)
   },
   firefox25: {
     full: 'Firefox',
     short: 'FF 25',
-    obsolete: very
+    obsolete: very,
   },
   firefox26: {
     full: 'Firefox',
     short: 'FF 26',
-    obsolete: very
+    obsolete: very,
   },
   firefox27: {
     full: 'Firefox',
     short: 'FF 27',
-    obsolete: very
+    obsolete: very,
   },
   firefox28: {
     full: 'Firefox',
     short: 'FF 28',
-    obsolete: very
+    obsolete: very,
   },
   firefox29: {
     full: 'Firefox',
     short: 'FF 29',
-    obsolete: very
+    obsolete: very,
   },
   firefox30: {
     full: 'Firefox',
     short: 'FF 30',
-    obsolete: very
+    obsolete: very,
   },
   firefox31: {
     full: 'Firefox',
     short: 'FF 31<br> ESR',
-    obsolete: true // ESR (EOL on August 11, 2015)
+    obsolete: true, // ESR (EOL on August 11, 2015)
   },
   firefox32: {
     full: 'Firefox',
     short: 'FF 32',
-    obsolete: very
+    obsolete: very,
   },
   firefox33: {
     full: 'Firefox',
     short: 'FF 33',
-    obsolete: very
+    obsolete: very,
   },
   firefox34: {
     full: 'Firefox',
     short: 'FF 34',
-    obsolete: very
+    obsolete: very,
   },
   firefox35: {
     full: 'Firefox',
     short: 'FF 35',
-    obsolete: very
+    obsolete: very,
   },
   firefox36: {
     full: 'Firefox',
     short: 'FF 36',
-    obsolete: very
+    obsolete: very,
   },
   firefox37: {
     full: 'Firefox',
     short: 'FF 37',
-    obsolete: very
+    obsolete: very,
   },
   firefox38: {
     full: 'Firefox',
@@ -282,7 +282,7 @@ exports.browsers = {
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
-    obsolete: very
+    obsolete: very,
   },
   firefox40: {
     full: 'Firefox',
