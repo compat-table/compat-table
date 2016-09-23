@@ -272,7 +272,7 @@ exports.browsers = {
   firefox37: {
     full: 'Firefox',
     short: 'FF 37',
-    obsolete: very,
+    obsolete: very
   },
   firefox38: {
     full: 'Firefox',
@@ -282,7 +282,7 @@ exports.browsers = {
   firefox39: {
     full: 'Firefox',
     short: 'FF 39',
-    obsolete: very,
+    obsolete: very
   },
   firefox40: {
     full: 'Firefox',
@@ -7754,7 +7754,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox25: false,
-        firefox45: true,
+        firefox38: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -8595,7 +8595,7 @@ exports.tests = [
       res: {
         typescript: typescript.fallthrough,
         firefox18: { val: false, note_id: 'fx-proxy-ownkeys' },
-        firefox37: true,
+        firefox42: true,
         edge12: true,
         xs6: true,
         ejs: true,
@@ -9083,7 +9083,7 @@ exports.tests = [
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       */},
       res: {
-        firefox42: true,
+        firefox40: true,
         edge14: flag,
         chrome50: true,
         xs6: true,
@@ -9143,8 +9143,7 @@ exports.tests = [
         return get + '' === "source,flags";
       */},
       res: {
-        firefox39: null,
-        firefox44: true,
+        firefox39: true,
         edge14: flag,
         chrome50: true,
         xs6: null,
@@ -9638,7 +9637,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9657,7 +9656,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9714,7 +9713,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9735,7 +9734,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9756,7 +9755,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox42: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9777,7 +9776,7 @@ exports.tests = [
         edge12: true,
         firefox18: true,
         firefox21: false,
-        firefox42: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -9850,7 +9849,7 @@ exports.tests = [
       */},
       res: {
         edge12: true,
-        firefox41: true,
+        firefox40: true,
         xs6: true,
         chrome49: true,
         safaritp: true,
@@ -10572,7 +10571,7 @@ exports.tests = [
         typescript: typescript.corejs,
         xs6: null,
         edge13: true,
-        firefox44: true,
+        firefox42: true,
         chrome49: true,
         safaritp: true,
         safari10: true,
@@ -12229,7 +12228,7 @@ exports.tests = [
         edge12: true,
         firefox29: true,
         firefox31: false,
-        firefox39: true,
+        firefox45: true,
         chrome33: true,
         safari71_8: true,
         safaritp: true,
