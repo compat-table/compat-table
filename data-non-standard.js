@@ -105,29 +105,28 @@ exports.browsers = {
     obsolete: true
   },
   firefox44: {
-    full: 'Firefox 44-45',
-    short: 'FF 44-45',
-    family: 'SpiderMonkey',
-    obsolete: false
-  },
-  firefox46: {
-    full: 'Firefox 46',
-    short: 'FF 46',
+    full: 'Firefox',
+    short: 'FF 44',
     family: 'SpiderMonkey',
     obsolete: true
   },
-  firefox47: {
-    full: 'Firefox 47',
-    short: 'FF 47-48',
+  firefox45: {
+    full: 'Firefox',
+    short: 'FF 45 ESR',
     family: 'SpiderMonkey',
-    obsolete: false
+    obsolete: false // ESR (EOL at Mar 2017)
+  },
+  firefox46: {
+    full: 'Firefox 46-48',
+    short: 'FF 46-48',
+    family: 'SpiderMonkey',
+    obsolete: true
   },
   firefox49: {
-    full: 'Firefox 49',
-    short: 'FF 49',
+    full: 'Firefox 49+',
+    short: 'FF 49+',
     family: 'SpiderMonkey',
-    obsolete: false,
-    unstable: true
+    obsolete: false
   },
   safari3: {
     full: 'Safari 3.2',
