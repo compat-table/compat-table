@@ -363,7 +363,7 @@ module.exports = {
     obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 13',
+    full: 'Safari Technology Preview Release 14',
     short: 'SF TP',
     unstable: true,
   },

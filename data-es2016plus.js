@@ -1071,7 +1071,7 @@ exports.tests = [
       chrome30: true,
       safari51: true,
       safari9: false,
-      safaritp: false,
+      safaritp: true,
       webkit: true,
       node: true,
       android40: true,
