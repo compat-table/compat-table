@@ -400,6 +400,7 @@ exports.tests = [
           babel: babel.regenerator,
           typescript: typescript.asyncawait,
           chrome52: flag,
+          chrome55: true,
           edge13: flag,
           edge14: flag,
         }
@@ -416,6 +417,7 @@ exports.tests = [
           babel: babel.regenerator,
           typescript: typescript.asyncawait,
           chrome52: flag,
+          chrome55: true,
           edge13: flag,
           edge14: flag,
         }
@@ -430,6 +432,7 @@ exports.tests = [
           babel: babel.regenerator,
           typescript: false, // still buggy output
           chrome52: flag,
+          chrome55: true,
           edge13: flag,
           edge14: flag,
         }
