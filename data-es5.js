@@ -139,7 +139,7 @@ exports.browsers = {
     obsolete: false
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 13',
+    full: 'Safari Technology Preview Release 14',
     family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true
