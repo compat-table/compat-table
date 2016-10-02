@@ -467,4 +467,11 @@ module.exports = {
     equals: 'safari9',
     obsolete: false,
   },
+  ios10: {
+    full: 'iOS 10',
+    short: 'iOS 10',
+    platformtype: 'mobile',
+    equals: 'safari10',
+    obsolete: false,
+  },
 };

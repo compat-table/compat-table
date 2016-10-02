@@ -283,9 +283,15 @@ exports.browsers = {
     ignore_flagged: true,
   },
   ios78: {
-    full: 'iOS Safari 7/8/9',
-    short: 'iOS7/8/9',
+    full: 'iOS Safari 7-9',
+    short: 'iOS 7-9',
     equals: 'safari6',
+    platformtype: 'mobile',
+  },
+  ios10: {
+    full: 'iOS Safari 10',
+    short: 'iOS 10',
+    equals: 'safari10',
     platformtype: 'mobile',
   }
 };

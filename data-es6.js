@@ -712,6 +712,12 @@ exports.browsers = {
     short: 'iOS 9',
     platformtype: 'mobile',
     equals: 'safari9',
+  },
+  ios10: {
+    full: 'iOS Safari',
+    short: 'iOS 10',
+    platformtype: 'mobile',
+    equals: 'safari10',
   }
 };
 
