@@ -163,12 +163,13 @@
 <th class="platform ios51 mobile obsolete" data-browser="ios51"><a href="#ios51" class="browser-name"><abbr title="iOS 5.1">iOS 5.1</abbr></a></th>
 <th class="platform ios6 mobile obsolete" data-browser="ios6"><a href="#ios6" class="browser-name"><abbr title="iOS 6-8">iOS<br>6-8</abbr></a></th>
 <th class="platform ios9 mobile" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS 9">iOS 9</abbr></a></th>
+<th class="platform ios10 mobile" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS 10">iOS 10</abbr></a></th>
 </tr>
 
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="61">2016 features</td>
+      <tr class="category"><td colspan="62">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="https://github.com/rwaldron/exponentiation-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -230,6 +231,7 @@
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios10" data-tally="0">0/3</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_basic_support"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_basic_support">&#xA7;</a>basic support</span><script data-source="
 return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
@@ -294,6 +296,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_assignment"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_assignment">&#xA7;</a>assignment</span><script data-source="
 var a = 2; a **= 3; return a === 8;
@@ -358,6 +361,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens">&#xA7;</a>early syntax error for unary negation without parens</span><script data-source="
 if (2 ** 3 !== 8) { return false; }
@@ -427,6 +431,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
@@ -488,6 +493,7 @@ return true;
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally" data-browser="ios10" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes">&#xA7;</a>Array.prototype.includes</span><script data-source="
 return [1, 2, 3].includes(1)
@@ -556,6 +562,7 @@ return [1, 2, 3].includes(1)
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes_is_generic"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes_is_generic">&#xA7;</a>Array.prototype.includes is generic</span><script data-source="
 var passed = 0;
@@ -642,6 +649,7 @@ return 24;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_%TypedArray%.prototype.includes"><td><span><a class="anchor" href="#test-Array.prototype.includes_%TypedArray%.prototype.includes">&#xA7;</a>%TypedArray%.prototype.includes</span><script data-source="
 return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
@@ -711,8 +719,9 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="61">2016 misc</td>
+<tr class="category"><td colspan="62">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">generator functions can&apos;t be used with &quot;new&quot;</a></span><script data-source="
 function * generator() {
@@ -784,6 +793,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/293">generator throw() caught by inner generator</a></span><script data-source="
 function * generator() {
@@ -861,6 +871,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">strict fn w/ non-strict non-simple params is error</a></span><script data-source="
 function foo(...a){}
@@ -930,6 +941,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, declarations</a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
@@ -995,6 +1007,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">nested rest destructuring, parameters</a></span><script data-source="
 return function([x, ...[y, ...z]]) {
@@ -1061,6 +1074,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/367">Proxy, &quot;enumerate&quot; handler removed</a></span><script data-source="
 var passed = true;
@@ -1132,6 +1146,7 @@ return passed;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_internal_calls,_Array.prototype.includes"><span><a class="anchor" href="#test-Proxy_internal_calls,_Array.prototype.includes">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-array.prototype.includes">Proxy internal calls, Array.prototype.includes</a></span><script data-source="
 // Array.prototype.includes -&gt; Get -&gt; [[Get]]
@@ -1205,8 +1220,9 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="61">2017 features</td>
+<tr class="category"><td colspan="62">2017 features</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1274,6 +1290,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.entries"><span><a class="anchor" href="#test-Object.entries">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.entries</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1345,6 +1362,7 @@ return Array.isArray(e)
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Object.getOwnPropertyDescriptors</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -1406,6 +1424,7 @@ return Array.isArray(e)
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios10" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 </tr>
 <tr class="subtest" data-parent="Object.getOwnPropertyDescriptors" id="test-Object.getOwnPropertyDescriptors_basic_support"><td><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors_basic_support">&#xA7;</a>basic support</span><script data-source="
 var object = {a: 1};
@@ -1478,6 +1497,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.getOwnPropertyDescriptors" id="test-Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors"><td><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors">&#xA7;</a>doesn&apos;t provide undefined descriptors</span><script data-source="
 var P = new Proxy({a:1}, {
@@ -1545,6 +1565,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -1606,6 +1627,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios10" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_String.prototype.padStart"><td><span><a class="anchor" href="#test-String_padding_String.prototype.padStart">&#xA7;</a>String.prototype.padStart</span><script data-source="
 return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
@@ -1673,6 +1695,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_String.prototype.padEnd"><td><span><a class="anchor" href="#test-String_padding_String.prototype.padEnd">&#xA7;</a>String.prototype.padEnd</span><script data-source="
 return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
@@ -1740,6 +1763,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://jeffmo.github.io/es-trailing-function-commas/">trailing commas in function syntax</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -1801,6 +1825,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios10" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_parameter_lists"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_parameter_lists">&#xA7;</a>in parameter lists</span><script data-source="
 return typeof function f( a, b, ){} === &apos;function&apos;;
@@ -1865,6 +1890,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_argument_lists"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_argument_lists">&#xA7;</a>in argument lists</span><script data-source="
 return Math.min(1,2,3,) === 1;
@@ -1929,6 +1955,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecmascript-asyncawait/">async functions</a></span></td>
 <td class="tally" data-browser="tr" data-tally="1">3/3</td>
@@ -1990,6 +2017,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios10" data-tally="0">0/3</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_basic_support"><td><span><a class="anchor" href="#test-async_functions_basic_support">&#xA7;</a>basic support</span><script data-source="
 return (async function(){
@@ -2056,6 +2084,7 @@ return (async function(){
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_await_support"><td><span><a class="anchor" href="#test-async_functions_await_support">&#xA7;</a>await support</span><script data-source="
 return (async function(){
@@ -2122,6 +2151,7 @@ return (async function(){
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_arrow_async_functions"><td><span><a class="anchor" href="#test-async_functions_arrow_async_functions">&#xA7;</a>arrow async functions</span><script data-source="
 return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
@@ -2186,8 +2216,9 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="61">2017 misc</td>
+<tr class="category"><td colspan="62">2017 misc</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="test-class_extends_null"><span><a class="anchor" href="#test-class_extends_null">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/543">class extends null</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -2249,6 +2280,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios10" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="class_extends_null" id="test-class_extends_null_proper_default_constructor"><td><span><a class="anchor" href="#test-class_extends_null_proper_default_constructor">&#xA7;</a>proper default constructor</span><script data-source="
 class C extends null {}
@@ -2314,6 +2346,7 @@ return new C instanceof C;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="class_extends_null" id="test-class_extends_null_proper_this_binding"><td><span><a class="anchor" href="#test-class_extends_null_proper_this_binding">&#xA7;</a>proper &quot;this&quot; binding</span><script data-source="
 var passed = false;
@@ -2385,6 +2418,7 @@ return passed;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets</a></span><script data-source="
 var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
@@ -2454,6 +2488,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-RegExp_u_flag,_case_folding"><span><a class="anchor" href="#test-RegExp_u_flag,_case_folding">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/525">RegExp &quot;u&quot; flag, case folding</a></span><script data-source="
 return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/\W/iu)
@@ -2521,8 +2556,9 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="61">2017 annex b</td>
+<tr class="category"><td colspan="62">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -2584,6 +2620,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="tally obsolete" data-browser="ios51" data-tally="0.5" style="background-color:hsl(60,64%,50%)">8/16</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
 <td class="tally" data-browser="ios9" data-tally="1">16/16</td>
+<td class="tally" data-browser="ios10" data-tally="1">16/16</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__">&#xA7;</a>__defineGetter__</span><script data-source="
 var obj = {};
@@ -2653,6 +2690,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_symbols">&#xA7;</a>__defineGetter__, symbols</span><script data-source="
 var obj = {};
@@ -2723,6 +2761,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)">&#xA7;</a>__defineGetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -2793,6 +2832,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__">&#xA7;</a>__defineSetter__</span><script data-source="
 var obj = {};
@@ -2862,6 +2902,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_symbols">&#xA7;</a>__defineSetter__, symbols</span><script data-source="
 var obj = {};
@@ -2932,6 +2973,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)">&#xA7;</a>__defineSetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -3002,6 +3044,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__">&#xA7;</a>__lookupGetter__</span><script data-source="
 var obj = {
@@ -3073,6 +3116,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain">&#xA7;</a>__lookupGetter__, prototype chain</span><script data-source="
 var obj = {
@@ -3144,6 +3188,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols">&#xA7;</a>__lookupGetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -3216,6 +3261,7 @@ return foo() === &quot;bar&quot;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)">&#xA7;</a>__lookupGetter__, ToObject(this)</span><script data-source="
 __lookupGetter__.call(1, &apos;key&apos;);
@@ -3285,6 +3331,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_data_properties_can_shadow_accessors"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_data_properties_can_shadow_accessors">&#xA7;</a>__lookupGetter__, data properties can shadow accessors</span><script data-source="
 var a = { };
@@ -3353,6 +3400,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__">&#xA7;</a>__lookupSetter__</span><script data-source="
 var obj = {
@@ -3424,6 +3472,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain">&#xA7;</a>__lookupSetter__, prototype chain</span><script data-source="
 var obj = {
@@ -3495,6 +3544,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols">&#xA7;</a>__lookupSetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -3567,6 +3617,7 @@ return foo() === &quot;bar&quot;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)">&#xA7;</a>__lookupSetter__, ToObject(this)</span><script data-source="
 __lookupSetter__.call(1, &apos;key&apos;);
@@ -3636,6 +3687,7 @@ return true;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_data_properties_can_shadow_accessors"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_data_properties_can_shadow_accessors">&#xA7;</a>__lookupSetter__, data properties can shadow accessors</span><script data-source="
 var a = { };
@@ -3704,6 +3756,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -3765,6 +3818,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally obsolete" data-browser="ios51" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios6" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios10" data-tally="1">4/4</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineGetter__">&#xA7;</a>__defineGetter__</span><script data-source="
 // Object.prototype.__defineGetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -3833,6 +3887,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineSetter__">&#xA7;</a>__defineSetter__</span><script data-source="
 // Object.prototype.__defineSetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -3901,6 +3956,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__">&#xA7;</a>__lookupGetter__</span><script data-source="
 // Object.prototype.__lookupGetter__ -&gt; [[GetOwnProperty]]
@@ -3974,6 +4030,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__">&#xA7;</a>__lookupSetter__</span><script data-source="
 // Object.prototype.__lookupSetter__ -&gt; [[GetOwnProperty]]
@@ -4047,6 +4104,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete" data-browser="ios51">No</td>
 <td class="no obsolete" data-browser="ios6">No</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="yes" data-browser="ios10">Yes</td>
 </tr>
 <tr significance="0.125" class="optional-feature"><td id="test-assignments_allowed_in_for-in_head_in_non-strict_mode"><span><a class="anchor" href="#test-assignments_allowed_in_for-in_head_in_non-strict_mode">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads">assignments allowed in for-in head in non-strict mode</a></span><script data-source="
 for (var i = 0 in {}) {}
@@ -4112,6 +4170,7 @@ return i === 0;
 <td class="yes obsolete" data-browser="ios51">Yes</td>
 <td class="yes obsolete" data-browser="ios6">Yes</td>
 <td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
 </tr>
 </tbody>
     </table>

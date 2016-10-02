@@ -154,7 +154,8 @@
 <th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">Android 4.0</abbr></a></th>
 <th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">Android 4.1 - 4.3</abbr></a></th>
 <th class="platform android44 mobile" data-browser="android44"><a href="#android44" class="browser-name"><abbr title="Android Browser">Android 4.4+</abbr></a></th>
-<th class="platform ios78 mobile" data-browser="ios78"><a href="#ios78" class="browser-name"><abbr title="iOS Safari 7/8/9">iOS7/8/9</abbr></a></th>
+<th class="platform ios78 mobile obsolete" data-browser="ios78"><a href="#ios78" class="browser-name"><abbr title="iOS Safari 7/8">iOS7/8</abbr></a></th>
+<th class="platform ios910 mobile" data-browser="ios910"><a href="#ios910" class="browser-name"><abbr title="iOS Safari 9/10">iOS9/10</abbr></a></th>
 </tr>
 
       </thead>
@@ -206,7 +207,8 @@
 <td class="tally obsolete" data-browser="android40" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally" data-browser="android44" data-tally="1">5/5</td>
-<td class="tally" data-browser="ios78" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="1">5/5</td>
+<td class="tally" data-browser="ios910" data-tally="1">5/5</td>
 </tr>
 <tr class="subtest" data-parent="Object/array_literal_extensions" id="test-Object/array_literal_extensions_Getter_accessors"><td><span><a class="anchor" href="#test-Object/array_literal_extensions_Getter_accessors">&#xA7;</a>Getter accessors</span><script data-source="
 return ({ get x(){ return 1 } }).x === 1;
@@ -257,7 +259,8 @@ return ({ get x(){ return 1 } }).x === 1;
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object/array_literal_extensions" id="test-Object/array_literal_extensions_Setter_accessors"><td><span><a class="anchor" href="#test-Object/array_literal_extensions_Setter_accessors">&#xA7;</a>Setter accessors</span><script data-source="
 var value = 0;
@@ -310,7 +313,8 @@ return value === 1;
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object/array_literal_extensions" id="test-Object/array_literal_extensions_Trailing_commas_in_object_literals"><td><span><a class="anchor" href="#test-Object/array_literal_extensions_Trailing_commas_in_object_literals">&#xA7;</a>Trailing commas in object literals</span><script data-source="
 return { a: true, }.a === true;
@@ -361,7 +365,8 @@ return { a: true, }.a === true;
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object/array_literal_extensions" id="test-Object/array_literal_extensions_Trailing_commas_in_array_literals"><td><span><a class="anchor" href="#test-Object/array_literal_extensions_Trailing_commas_in_array_literals">&#xA7;</a>Trailing commas in array literals</span><script data-source="
 return [1,].length === 1;
@@ -412,7 +417,8 @@ return [1,].length === 1;
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object/array_literal_extensions" id="test-Object/array_literal_extensions_Reserved_words_as_property_names"><td><span><a class="anchor" href="#test-Object/array_literal_extensions_Reserved_words_as_property_names">&#xA7;</a>Reserved words as property names</span><script data-source="
 return ({ if: 1 }).if === 1;
@@ -463,9 +469,10 @@ return ({ if: 1 }).if === 1;
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
-<tr><th colspan="49" class="separator"></th>
+<tr><th colspan="50" class="separator"></th>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a>Object static methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0.07692307692307693" style="background-color:hsl(9,82%,50%)">1/13</td>
@@ -513,7 +520,8 @@ return ({ if: 1 }).if === 1;
 <td class="tally obsolete" data-browser="android40" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">13/13</td>
 <td class="tally" data-browser="android44" data-tally="1">13/13</td>
-<td class="tally" data-browser="ios78" data-tally="1">13/13</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="1">13/13</td>
+<td class="tally" data-browser="ios910" data-tally="1">13/13</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.create"><td><span><a class="anchor" href="#test-Object_static_methods_Object.create">&#xA7;</a>Object.create</span><script data-source="function () {
 return typeof Object.create == &apos;function&apos;;
@@ -566,7 +574,8 @@ return typeof Object.create == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.defineProperty"><td><span><a class="anchor" href="#test-Object_static_methods_Object.defineProperty">&#xA7;</a>Object.defineProperty</span><script data-source="function () {
 return typeof Object.defineProperty == &apos;function&apos;;
@@ -619,7 +628,8 @@ return typeof Object.defineProperty == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.defineProperties"><td><span><a class="anchor" href="#test-Object_static_methods_Object.defineProperties">&#xA7;</a>Object.defineProperties</span><script data-source="function () {
 return typeof Object.defineProperties == &apos;function&apos;;
@@ -672,7 +682,8 @@ return typeof Object.defineProperties == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getPrototypeOf"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getPrototypeOf">&#xA7;</a>Object.getPrototypeOf</span><script data-source="function () {
 return typeof Object.getPrototypeOf == &apos;function&apos;;
@@ -725,7 +736,8 @@ return typeof Object.getPrototypeOf == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.keys"><td><span><a class="anchor" href="#test-Object_static_methods_Object.keys">&#xA7;</a>Object.keys</span><script data-source="function () {
 return typeof Object.keys == &apos;function&apos;;
@@ -778,7 +790,8 @@ return typeof Object.keys == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.seal"><td><span><a class="anchor" href="#test-Object_static_methods_Object.seal">&#xA7;</a>Object.seal</span><script data-source="function () {
 return typeof Object.seal == &apos;function&apos;;
@@ -831,7 +844,8 @@ return typeof Object.seal == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.freeze"><td><span><a class="anchor" href="#test-Object_static_methods_Object.freeze">&#xA7;</a>Object.freeze</span><script data-source="function () {
 return typeof Object.freeze == &apos;function&apos;;
@@ -884,7 +898,8 @@ return typeof Object.freeze == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.preventExtensions"><td><span><a class="anchor" href="#test-Object_static_methods_Object.preventExtensions">&#xA7;</a>Object.preventExtensions</span><script data-source="function () {
 return typeof Object.preventExtensions == &apos;function&apos;;
@@ -937,7 +952,8 @@ return typeof Object.preventExtensions == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.isSealed"><td><span><a class="anchor" href="#test-Object_static_methods_Object.isSealed">&#xA7;</a>Object.isSealed</span><script data-source="function () {
 return typeof Object.isSealed == &apos;function&apos;;
@@ -990,7 +1006,8 @@ return typeof Object.isSealed == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.isFrozen"><td><span><a class="anchor" href="#test-Object_static_methods_Object.isFrozen">&#xA7;</a>Object.isFrozen</span><script data-source="function () {
 return typeof Object.isFrozen == &apos;function&apos;;
@@ -1043,7 +1060,8 @@ return typeof Object.isFrozen == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.isExtensible"><td><span><a class="anchor" href="#test-Object_static_methods_Object.isExtensible">&#xA7;</a>Object.isExtensible</span><script data-source="function () {
 return typeof Object.isExtensible == &apos;function&apos;;
@@ -1096,7 +1114,8 @@ return typeof Object.isExtensible == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getOwnPropertyDescriptor"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getOwnPropertyDescriptor">&#xA7;</a>Object.getOwnPropertyDescriptor</span><script data-source="function () {
 return typeof Object.getOwnPropertyDescriptor == &apos;function&apos;;
@@ -1149,7 +1168,8 @@ return typeof Object.getOwnPropertyDescriptor == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getOwnPropertyNames"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getOwnPropertyNames">&#xA7;</a>Object.getOwnPropertyNames</span><script data-source="function () {
 return typeof Object.getOwnPropertyNames == &apos;function&apos;;
@@ -1202,7 +1222,8 @@ return typeof Object.getOwnPropertyNames == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Array_methods"><span><a class="anchor" href="#test-Array_methods">&#xA7;</a>Array methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="1">10/10</td>
@@ -1250,7 +1271,8 @@ return typeof Object.getOwnPropertyNames == 'function';
 <td class="tally obsolete" data-browser="android40" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">10/10</td>
 <td class="tally" data-browser="android44" data-tally="1">10/10</td>
-<td class="tally" data-browser="ios78" data-tally="1">10/10</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="1">10/10</td>
+<td class="tally" data-browser="ios910" data-tally="1">10/10</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.isArray"><td><span><a class="anchor" href="#test-Array_methods_Array.isArray">&#xA7;</a>Array.isArray</span><script data-source="function () {
 return typeof Array.isArray == &apos;function&apos;;
@@ -1303,7 +1325,8 @@ return typeof Array.isArray == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.indexOf"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.indexOf">&#xA7;</a>Array.prototype.indexOf</span><script data-source="function () {
 return typeof Array.prototype.indexOf == &apos;function&apos;;
@@ -1356,7 +1379,8 @@ return typeof Array.prototype.indexOf == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.lastIndexOf"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.lastIndexOf">&#xA7;</a>Array.prototype.lastIndexOf</span><script data-source="function () {
 return typeof Array.prototype.lastIndexOf == &apos;function&apos;;
@@ -1409,7 +1433,8 @@ return typeof Array.prototype.lastIndexOf == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.every"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.every">&#xA7;</a>Array.prototype.every</span><script data-source="function () {
 return typeof Array.prototype.every == &apos;function&apos;;
@@ -1462,7 +1487,8 @@ return typeof Array.prototype.every == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.some"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.some">&#xA7;</a>Array.prototype.some</span><script data-source="function () {
 return typeof Array.prototype.some == &apos;function&apos;;
@@ -1515,7 +1541,8 @@ return typeof Array.prototype.some == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.forEach"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.forEach">&#xA7;</a>Array.prototype.forEach</span><script data-source="function () {
 return typeof Array.prototype.forEach == &apos;function&apos;;
@@ -1568,7 +1595,8 @@ return typeof Array.prototype.forEach == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.map"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.map">&#xA7;</a>Array.prototype.map</span><script data-source="function () {
 return typeof Array.prototype.map == &apos;function&apos;;
@@ -1621,7 +1649,8 @@ return typeof Array.prototype.map == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.filter"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.filter">&#xA7;</a>Array.prototype.filter</span><script data-source="function () {
 return typeof Array.prototype.filter == &apos;function&apos;;
@@ -1674,7 +1703,8 @@ return typeof Array.prototype.filter == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.reduce"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.reduce">&#xA7;</a>Array.prototype.reduce</span><script data-source="function () {
 return typeof Array.prototype.reduce == &apos;function&apos;;
@@ -1727,7 +1757,8 @@ return typeof Array.prototype.reduce == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array_methods" id="test-Array_methods_Array.prototype.reduceRight"><td><span><a class="anchor" href="#test-Array_methods_Array.prototype.reduceRight">&#xA7;</a>Array.prototype.reduceRight</span><script data-source="function () {
 return typeof Array.prototype.reduceRight == &apos;function&apos;;
@@ -1780,7 +1811,8 @@ return typeof Array.prototype.reduceRight == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_properties_and_methods"><span><a class="anchor" href="#test-String_properties_and_methods">&#xA7;</a>String properties and methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
@@ -1828,7 +1860,8 @@ return typeof Array.prototype.reduceRight == 'function';
 <td class="tally obsolete" data-browser="android40" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">2/2</td>
 <td class="tally" data-browser="android44" data-tally="1">2/2</td>
-<td class="tally" data-browser="ios78" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios910" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="String_properties_and_methods" id="test-String_properties_and_methods_Property_access_on_strings"><td><span><a class="anchor" href="#test-String_properties_and_methods_Property_access_on_strings">&#xA7;</a>Property access on strings</span><script data-source="function () {
 return &quot;foobar&quot;[3] === &quot;b&quot;;
@@ -1881,7 +1914,8 @@ return "foobar"[3] === "b";
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="String_properties_and_methods" id="test-String_properties_and_methods_String.prototype.trim"><td><span><a class="anchor" href="#test-String_properties_and_methods_String.prototype.trim">&#xA7;</a>String.prototype.trim</span><script data-source="function () {
 return typeof String.prototype.trim == &apos;function&apos;;
@@ -1934,7 +1968,8 @@ return typeof String.prototype.trim == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Date_methods"><span><a class="anchor" href="#test-Date_methods">&#xA7;</a>Date methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="1">3/3</td>
@@ -1982,7 +2017,8 @@ return typeof String.prototype.trim == 'function';
 <td class="tally obsolete" data-browser="android40" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">3/3</td>
 <td class="tally" data-browser="android44" data-tally="1">3/3</td>
-<td class="tally" data-browser="ios78" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally" data-browser="ios910" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 </tr>
 <tr class="subtest" data-parent="Date_methods" id="test-Date_methods_Date.prototype.toISOString"><td><span><a class="anchor" href="#test-Date_methods_Date.prototype.toISOString">&#xA7;</a>Date.prototype.toISOString</span><script data-source="function () {
 return typeof Date.prototype.toISOString == &apos;function&apos;;
@@ -2035,7 +2071,8 @@ return typeof Date.prototype.toISOString == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Date_methods" id="test-Date_methods_Date.now"><td><span><a class="anchor" href="#test-Date_methods_Date.now">&#xA7;</a>Date.now</span><script data-source="function () {
 return typeof Date.now == &apos;function&apos;;
@@ -2088,7 +2125,8 @@ return typeof Date.now == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Date_methods" id="test-Date_methods_Date.prototype.toJSON"><td><span><a class="anchor" href="#test-Date_methods_Date.prototype.toJSON">&#xA7;</a>Date.prototype.toJSON</span><script data-source="function () {
 try {
@@ -2149,7 +2187,8 @@ try {
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="no" data-browser="ios78">No</td>
+<td class="no obsolete" data-browser="ios78">No</td>
+<td class="no" data-browser="ios910">No</td>
 </tr>
 <tr significance="0.5"><td id="test-Function.prototype.bind"><span><a class="anchor" href="#test-Function.prototype.bind">&#xA7;</a>Function.prototype.bind</span><script data-source="function () {
 return typeof Function.prototype.bind == &apos;function&apos;;
@@ -2202,7 +2241,8 @@ return typeof Function.prototype.bind == 'function';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr significance="0.5"><td id="test-JSON"><span><a class="anchor" href="#test-JSON">&#xA7;</a>JSON</span><script data-source="function () {
 return typeof JSON == &apos;object&apos;;
@@ -2255,9 +2295,10 @@ return typeof JSON == 'object';
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
-<tr><th colspan="49" class="separator"></th>
+<tr><th colspan="50" class="separator"></th>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Immutable_globals"><span><a class="anchor" href="#test-Immutable_globals">&#xA7;</a>Immutable globals</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0">0/3</td>
@@ -2305,7 +2346,8 @@ return typeof JSON == 'object';
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">3/3</td>
 <td class="tally" data-browser="android44" data-tally="1">3/3</td>
-<td class="tally" data-browser="ios78" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="1">3/3</td>
+<td class="tally" data-browser="ios910" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="Immutable_globals" id="test-Immutable_globals_undefined"><td><span><a class="anchor" href="#test-Immutable_globals_undefined">&#xA7;</a>undefined</span><script data-source="
 undefined = 12345;
@@ -2359,7 +2401,8 @@ return result;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Immutable_globals" id="test-Immutable_globals_NaN"><td><span><a class="anchor" href="#test-Immutable_globals_NaN">&#xA7;</a>NaN</span><script data-source="
 NaN = false;
@@ -2413,7 +2456,8 @@ return result;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Immutable_globals" id="test-Immutable_globals_Infinity"><td><span><a class="anchor" href="#test-Immutable_globals_Infinity">&#xA7;</a>Infinity</span><script data-source="
 Infinity = false;
@@ -2467,7 +2511,8 @@ return result;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Miscellaneous"><span><a class="anchor" href="#test-Miscellaneous">&#xA7;</a>Miscellaneous</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0.3" style="background-color:hsl(36,72%,50%)">3/10</td>
@@ -2515,7 +2560,8 @@ return result;
 <td class="tally obsolete" data-browser="android40" data-tally="0.1" style="background-color:hsl(12,81%,50%)">1/10</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0.2" style="background-color:hsl(24,77%,50%)">2/10</td>
 <td class="tally" data-browser="android44" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
-<td class="tally" data-browser="ios78" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
+<td class="tally" data-browser="ios910" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Array.prototype.sort:_compareFn_must_be_function_or_undefined"><td><span><a class="anchor" href="#test-Miscellaneous_Array.prototype.sort:_compareFn_must_be_function_or_undefined">&#xA7;</a>Array.prototype.sort: compareFn must be function or undefined</span><script data-source="function () {
 try {
@@ -2608,7 +2654,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="ios78">No</td>
+<td class="no obsolete" data-browser="ios78">No</td>
+<td class="no" data-browser="ios910">No</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Array.prototype.sort:_compareFn_may_be_explicit_undefined"><td><span><a class="anchor" href="#test-Miscellaneous_Array.prototype.sort:_compareFn_may_be_explicit_undefined">&#xA7;</a>Array.prototype.sort: compareFn may be explicit undefined</span><script data-source="function () {
 try {
@@ -2671,7 +2718,8 @@ try {
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Function.prototype.apply_permits_array-likes"><td><span><a class="anchor" href="#test-Miscellaneous_Function.prototype.apply_permits_array-likes">&#xA7;</a>Function.prototype.apply permits array-likes</span><script data-source="function () {
 return (function(a,b) { return a === 1 &amp;&amp; b === 2; }).apply({}, {0:1, 1:2, length:2});
@@ -2724,7 +2772,8 @@ return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, lengt
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_parseInt_ignores_leading_zeros"><td><span><a class="anchor" href="#test-Miscellaneous_parseInt_ignores_leading_zeros">&#xA7;</a>parseInt ignores leading zeros</span><script data-source="function () {
 return parseInt(&apos;010&apos;) === 10;
@@ -2777,7 +2826,8 @@ return parseInt('010') === 10;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Function_prototype_property_is_non-enumerable"><td><span><a class="anchor" href="#test-Miscellaneous_Function_prototype_property_is_non-enumerable">&#xA7;</a>Function &quot;prototype&quot; property is non-enumerable</span><script data-source="
 return !Function().propertyIsEnumerable(&apos;prototype&apos;);
@@ -2828,7 +2878,8 @@ return !Function().propertyIsEnumerable(&apos;prototype&apos;);
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Arguments_toStringTag_is_Arguments"><td><span><a class="anchor" href="#test-Miscellaneous_Arguments_toStringTag_is_Arguments">&#xA7;</a>Arguments toStringTag is &quot;Arguments&quot;</span><script data-source="
 return (function(){ return Object.prototype.toString.call(arguments) === &apos;[object Arguments]&apos;; }());
@@ -2879,7 +2930,8 @@ return (function(){ return Object.prototype.toString.call(arguments) === &apos;[
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Zero-width_chars_in_identifiers"><td><span><a class="anchor" href="#test-Miscellaneous_Zero-width_chars_in_identifiers">&#xA7;</a>Zero-width chars in identifiers</span><script data-source="
 var _\u200c\u200d = true;
@@ -2931,7 +2983,8 @@ return _\u200c\u200d;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Unreserved_words"><td><span><a class="anchor" href="#test-Miscellaneous_Unreserved_words">&#xA7;</a>Unreserved words</span><script data-source="
 var abstract, boolean, byte, char, double, final, float, goto, int, long,
@@ -2984,7 +3037,8 @@ return true;
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Enumerable_properties_can_be_shadowed_by_non-enumerables"><td><span><a class="anchor" href="#test-Miscellaneous_Enumerable_properties_can_be_shadowed_by_non-enumerables">&#xA7;</a>Enumerable properties can be shadowed by non-enumerables</span><script data-source="
 var result = true;
@@ -3043,7 +3097,8 @@ return result;
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="ios78">No</td>
+<td class="no obsolete" data-browser="ios78">No</td>
+<td class="no" data-browser="ios910">No</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Thrown_functions_have_proper_this_values"><td><span><a class="anchor" href="#test-Miscellaneous_Thrown_functions_have_proper_this_values">&#xA7;</a>Thrown functions have proper &quot;this&quot; values</span><script data-source="
 try {
@@ -3100,7 +3155,8 @@ catch(e) {
 <td class="unknown obsolete" data-browser="android40">?</td>
 <td class="unknown obsolete" data-browser="android41">?</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Strict_mode"><span><a class="anchor" href="#test-Strict_mode">&#xA7;</a>Strict mode</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0">0/18</td>
@@ -3148,7 +3204,8 @@ catch(e) {
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/18</td>
 <td class="tally obsolete" data-browser="android41" data-tally="1">18/18</td>
 <td class="tally" data-browser="android44" data-tally="1">18/18</td>
-<td class="tally" data-browser="ios78" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
+<td class="tally obsolete" data-browser="ios78" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
+<td class="tally" data-browser="ios910" data-tally="0.9444444444444444" style="background-color:hsl(113,44%,50%)">17/18</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_reserved_words"><td><span><a class="anchor" href="#test-Strict_mode_reserved_words">&#xA7;</a>reserved words</span><script data-source="
 &apos;use strict&apos;;
@@ -3204,7 +3261,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_this_is_undefined_in_functions"><td><span><a class="anchor" href="#test-Strict_mode_this_is_undefined_in_functions">&#xA7;</a>&quot;this&quot; is undefined in functions</span><script data-source="
 &apos;use strict&apos;;
@@ -3256,7 +3314,8 @@ return this === undefined &amp;&amp; (function(){ return this === undefined; }).
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_this_is_not_coerced_to_object_in_primitive_methods"><td><span><a class="anchor" href="#test-Strict_mode_this_is_not_coerced_to_object_in_primitive_methods">&#xA7;</a>&quot;this&quot; is not coerced to object in primitive methods</span><script data-source="
 &apos;use strict&apos;;
@@ -3310,7 +3369,8 @@ return (function(){ return typeof this === &apos;string&apos; }).call(&apos;&apo
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_this_is_not_coerced_to_object_in_primitive_accessors"><td><span><a class="anchor" href="#test-Strict_mode_this_is_not_coerced_to_object_in_primitive_accessors">&#xA7;</a>&quot;this&quot; is not coerced to object in primitive accessors</span><script data-source="
 &apos;use strict&apos;;
@@ -3378,7 +3438,8 @@ return test(String, &apos;&apos;)
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_legacy_octal_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_legacy_octal_is_a_SyntaxError">&#xA7;</a>legacy octal is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -3432,7 +3493,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_unresolvable_identifiers_is_a_ReferenceError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_unresolvable_identifiers_is_a_ReferenceError">&#xA7;</a>assignment to unresolvable identifiers is a ReferenceError</span><script data-source="
 &apos;use strict&apos;;
@@ -3484,7 +3546,8 @@ try { eval(&apos;__i_dont_exist = 1&apos;); } catch (err) { return err instanceo
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_eval_or_arguments_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_eval_or_arguments_is_a_SyntaxError">&#xA7;</a>assignment to eval or arguments is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -3540,7 +3603,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_assignment_to_non-writable_properties_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_assignment_to_non-writable_properties_is_a_TypeError">&#xA7;</a>assignment to non-writable properties is a TypeError</span><script data-source="
 &apos;use strict&apos;;
@@ -3596,7 +3660,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_eval_or_arguments_bindings_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_eval_or_arguments_bindings_is_a_SyntaxError">&#xA7;</a>eval or arguments bindings is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -3654,7 +3719,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_arguments.caller_and_arguments.callee_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_arguments.caller_and_arguments.callee_is_a_TypeError">&#xA7;</a>arguments.caller and arguments.callee is a TypeError</span><script data-source="
 &apos;use strict&apos;;
@@ -3708,7 +3774,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_(function(){}).caller_and_(function(){}).arguments_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_(function(){}).caller_and_(function(){}).arguments_is_a_TypeError">&#xA7;</a>(function(){}).caller and (function(){}).arguments is a TypeError</span><script data-source="
 &apos;use strict&apos;;
@@ -3762,7 +3829,8 @@ return true;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_arguments_is_unmapped"><td><span><a class="anchor" href="#test-Strict_mode_arguments_is_unmapped">&#xA7;</a>arguments is unmapped</span><script data-source="
 &apos;use strict&apos;;
@@ -3820,7 +3888,8 @@ return (function(x){
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_eval()_can&apos;t_create_bindings"><td><span><a class="anchor" href="#test-Strict_mode_eval()_can&apos;t_create_bindings">&#xA7;</a>eval() can&apos;t create bindings</span><script data-source="
 &apos;use strict&apos;;
@@ -3872,7 +3941,8 @@ try { eval(&apos;var __some_unique_variable;&apos;); __some_unique_variable; } c
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_deleting_bindings_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_deleting_bindings_is_a_SyntaxError">&#xA7;</a>deleting bindings is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -3924,7 +3994,8 @@ try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof 
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_deleting_non-configurable_properties_is_a_TypeError">&#xA7;</a>deleting non-configurable properties is a TypeError</span><script data-source="
 &apos;use strict&apos;;
@@ -3976,7 +4047,8 @@ try { delete Object.prototype; } catch (err) { return err instanceof TypeError; 
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_with_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_with_is_a_SyntaxError">&#xA7;</a>&quot;with&quot; is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -4028,7 +4100,8 @@ try { eval(&apos;with({}){}&apos;); } catch (err) { return err instanceof Syntax
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_repeated_parameter_names_is_a_SyntaxError"><td><span><a class="anchor" href="#test-Strict_mode_repeated_parameter_names_is_a_SyntaxError">&#xA7;</a>repeated parameter names is a SyntaxError</span><script data-source="
 &apos;use strict&apos;;
@@ -4080,7 +4153,8 @@ try { eval(&apos;function f(x, x) { }&apos;); } catch (err) { return err instanc
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="yes" data-browser="ios78">Yes</td>
+<td class="yes obsolete" data-browser="ios78">Yes</td>
+<td class="yes" data-browser="ios910">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_function_expressions_with_matching_name_and_argument_are_valid"><td><span><a class="anchor" href="#test-Strict_mode_function_expressions_with_matching_name_and_argument_are_valid">&#xA7;</a>function expressions with matching name and argument are valid</span><script data-source="
 var foo = function bar(bar) {&apos;use strict&apos;};
@@ -4132,7 +4206,8 @@ return typeof foo === &apos;function&apos;;
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
-<td class="no" data-browser="ios78">No</td>
+<td class="no obsolete" data-browser="ios78">No</td>
+<td class="no" data-browser="ios910">No</td>
 </tr>
 </tbody>
     </table>
