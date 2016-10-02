@@ -211,14 +211,7 @@ exports.browsers = {
   },
   ios8: {
     full: 'iOS Safari',
-    short: 'iOS 8',
-    platformtype: 'mobile',
-    obsolete: true,
-  },
-  ios9: {
-    full: 'iOS Safari',
-    short: 'iOS 9',
-    equals: 'safari9',
+    short: 'iOS 8-9',
     platformtype: 'mobile',
   },
   ios10: {
