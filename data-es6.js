@@ -726,7 +726,7 @@ exports.tests = [
   name: 'proper tail calls (tail call optimisation)',
   category: 'optimisation',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
   subtests: [
     {
       name: 'direct recursion',
@@ -788,7 +788,7 @@ exports.tests = [
   name: 'arrow functions',
   category: 'functions',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
   subtests: [
     {
       name: '0 parameters',
@@ -1125,7 +1125,7 @@ exports.tests = [
   name: 'const',
   category: 'bindings',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: [
     {
       name: 'basic support',
@@ -1558,7 +1558,7 @@ exports.tests = [
   name: 'let',
   category: 'bindings',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
   subtests: [
     {
       name: 'basic support',
@@ -1898,7 +1898,7 @@ exports.tests = [
   name: 'default function parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   subtests: [
     {
       name: 'basic functionality',
@@ -2076,7 +2076,7 @@ exports.tests = [
   name: 'rest parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
   subtests: [
     {
       name: 'basic functionality',
@@ -2209,7 +2209,7 @@ exports.tests = [
   name: 'spread (...) operator',
   category: 'syntax',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
   subtests: [
     {
       name: 'with arrays, in function calls',
@@ -2578,7 +2578,7 @@ exports.tests = [
   name: 'class',
   category: 'functions',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
   subtests: [
     {
       name: 'class statement',
@@ -3293,7 +3293,7 @@ exports.tests = [
   name: 'super',
   category: 'functions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
   subtests: [
     {
       name: 'statement in constructors',
@@ -3561,7 +3561,7 @@ exports.tests = [
   name: 'object literal extensions',
   category: 'syntax',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-initialiser',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-initialiser',
   subtests: [
     {
       name: 'computed properties',
@@ -3713,7 +3713,7 @@ exports.tests = [
   note_html: 'The 2015 version of the specification contains <a href="https://esdiscuss.org/topic/block-level-function-declarations-web-legacy-compatibility-bug">multiple bugs</a> for hoisted block-level function declaration semantics, which these tests disregard.',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations',
   subtests: [
     {
       name: 'hoisted block-level function declaration',
@@ -3808,7 +3808,7 @@ exports.tests = [
   significance: 'tiny',
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
   subtests: [
     {
       name: 'basic support',
@@ -3924,7 +3924,7 @@ exports.tests = [
   name: 'for..of loops',
   category: 'syntax',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
   subtests: [
     {
       name: 'with arrays',
@@ -4153,7 +4153,7 @@ exports.tests = [
   name: 'generators',
   category: 'functions',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
   subtests: [
     {
       name: 'basic functionality',
@@ -4974,7 +4974,7 @@ exports.tests = [
   name: 'prototype of bound functions',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boundfunctioncreate',
   subtests: [
     {
       name: 'basic functions',
@@ -5134,7 +5134,7 @@ exports.tests = [
   name: 'octal and binary literals',
   category: 'syntax',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-numeric-literals',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-numeric-literals',
   subtests: [
     {
       name: 'octal literals',
@@ -5238,7 +5238,7 @@ exports.tests = [
   name: 'template literals',
   category: 'syntax',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
   subtests: [
     {
       name: 'basic functionality',
@@ -5381,7 +5381,7 @@ exports.tests = [
   name: 'RegExp "y" and "u" flags',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
   subtests: [
     {
       name: '"y" flag',
@@ -5487,7 +5487,7 @@ exports.tests = [
   name: 'typed arrays',
   category: 'built-ins',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
   subtests: [
     {
       name: 'Int8Array',
@@ -6205,7 +6205,7 @@ exports.tests = [
   name: 'Map',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
   subtests: [
     {
       name: 'basic functionality',
@@ -6686,7 +6686,7 @@ exports.tests = [
   name: 'Set',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
   subtests: [
     {
       name: 'basic functionality',
@@ -7172,7 +7172,7 @@ exports.tests = [
   name: 'WeakMap',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
   subtests: [
     {
       name: 'basic functionality',
@@ -7475,7 +7475,7 @@ exports.tests = [
   name: 'WeakSet',
   category: 'built-ins',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
   subtests: [
     {
       name: 'basic functionality',
@@ -7739,7 +7739,7 @@ exports.tests = [
   name: 'Proxy',
   category: 'built-ins',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   note_id: 'proxy-enumerate',
   note_html: 'The 2015 version of the specification also specifies an <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots-enumerate">"enumerate" handler</a>, which was removed in the 2016 version.',
   subtests: [
@@ -8795,7 +8795,7 @@ exports.tests = [
   name: 'Proxy, internal \'get\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: 'ToPrimitive',
@@ -9570,7 +9570,7 @@ exports.tests = [
   name: 'Proxy, internal \'set\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: 'Object.assign',
@@ -9796,7 +9796,7 @@ exports.tests = [
   name: 'Proxy, internal \'defineProperty\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: '[[Set]]',
@@ -9842,7 +9842,7 @@ exports.tests = [
   name: 'Proxy, internal \'deleteProperty\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: 'Array.prototype.copyWithin',
@@ -9975,7 +9975,7 @@ exports.tests = [
   name: 'Proxy, internal \'getOwnPropertyDescriptor\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: '[[Set]]',
@@ -10065,7 +10065,7 @@ exports.tests = [
   name: 'Proxy, internal \'ownKeys\' calls',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
   subtests: [
     {
       name: 'SetIntegrityLevel',
@@ -10133,7 +10133,7 @@ exports.tests = [
   name: 'Reflect',
   category: 'built-ins',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
   note_id: 'reflect-enumerate',
   note_html: 'The 2015 version of the specification also specifies <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.enumerate">Reflect.enumerate</a>, which was removed in the 2016 version.',
   subtests: [
@@ -10592,7 +10592,7 @@ exports.tests = [
   significance: 'small',
   note_id: 'block-level-function',
   note_html: 'Note that prior to ES6, it was <a href="http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls">recommended</a> that ES5 implementations forbid block-level declarations in strict mode.',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
   exec: function () {/*
     'use strict';
     if (f() !== 1) return false;
@@ -10625,7 +10625,7 @@ exports.tests = [
   name: 'destructuring, declarations',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -11137,7 +11137,7 @@ exports.tests = [
   name: 'destructuring, assignment',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -11672,7 +11672,7 @@ exports.tests = [
   name: 'destructuring, parameters',
   category: 'syntax',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -12144,7 +12144,7 @@ exports.tests = [
   name: 'Promise',
   category: 'built-ins',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
   subtests: [
     {
       name: 'basic functionality',
@@ -12406,7 +12406,7 @@ exports.tests = [
   name: 'Object static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
   subtests: [
     {
       name: 'Object.assign',
@@ -12517,7 +12517,7 @@ exports.tests = [
   name: 'Object static methods accept primitives',
   category: 'misc',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-object-constructor',
   subtests: [
     {
       name: 'Object.getPrototypeOf',
@@ -12741,7 +12741,7 @@ exports.tests = [
   name: 'Object.prototype.__proto__',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
   subtests: [
     {
       name: 'get prototype',
@@ -12857,7 +12857,7 @@ exports.tests = [
   name: 'function "name" property',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
   subtests: [
     {
       name: 'function statements',
@@ -13226,7 +13226,7 @@ exports.tests = [
   name: 'String static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-constructor',
   subtests: [
     {
       name: 'String.raw',
@@ -13281,7 +13281,7 @@ exports.tests = [
   name: 'String.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-prototype-object',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-string-prototype-object',
   subtests: [
     {
       name: 'String.prototype.codePointAt',
@@ -13509,7 +13509,7 @@ exports.tests = [
   name: 'String.prototype HTML methods',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.anchor',
   subtests: [
     {
       name: 'existence',
@@ -13611,7 +13611,7 @@ exports.tests = [
   name: 'Unicode code point escapes',
   category: 'syntax',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-string-literals',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-literals-string-literals',
   subtests: [
     {
       name: 'in strings',
@@ -13660,7 +13660,7 @@ exports.tests = [
   name: 'new.target',
   category: 'syntax',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
   subtests: [
     {
       name: 'in constructors',
@@ -13718,7 +13718,7 @@ exports.tests = [
   name: 'Symbol',
   category: 'built-ins',
   significance: 'large',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
   subtests: [
     {
       name: 'basic functionality',
@@ -14058,7 +14058,7 @@ exports.tests = [
   name: 'well-known symbols',
   category: 'built-ins',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols',
   note_id: 'symbol-iterator-functionality',
   note_html: 'Functionality for <code>Symbol.iterator</code> is tested by the "generic iterators" subtests for '
     + 'the <a href="#test-spread_(...)_operator">spread (...) operator</a>, <a href="#test-for..of_loops">for..of loops</a>, '
@@ -14713,7 +14713,7 @@ exports.tests = [
   name: 'RegExp.prototype properties',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype',
   subtests: [
     {
       name: 'RegExp.prototype.flags',
@@ -14839,7 +14839,7 @@ exports.tests = [
   name: 'RegExp.prototype.compile',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
   subtests: [
     {
       name: "basic functionality",
@@ -14892,7 +14892,7 @@ exports.tests = [
   name: 'RegExp syntax extensions',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns',
   subtests: [
     {
       name: 'hyphens in character sets',
@@ -14978,7 +14978,7 @@ exports.tests = [
   name: 'Array static methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-constructor',
   subtests: [
     {
       name: 'Array.from, array-like objects',
@@ -15245,7 +15245,7 @@ exports.tests = [
   name: 'Array.prototype methods',
   category: 'built-in extensions',
   significance: 'medium',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-prototype-object',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-properties-of-the-array-prototype-object',
   subtests: [
     {
       name: 'Array.prototype.copyWithin',
@@ -15532,7 +15532,7 @@ exports.tests = [
   name: 'Number properties',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number',
   subtests: [
     {
       name: 'Number.isFinite',
@@ -15709,7 +15709,7 @@ exports.tests = [
   name: 'Math methods',
   category: 'built-in extensions',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-math',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-math',
   subtests: (function(){
     var methods = {
       'clz32': {
@@ -16072,7 +16072,7 @@ exports.tests = [
   name: 'Date.prototype[Symbol.toPrimitive]',
   category: 'built-in extensions',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-date.prototype-@@toprimitive',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-date.prototype-@@toprimitive',
   exec: function () {/*
     var tp = Date.prototype[Symbol.toPrimitive];
     return tp.call(Object(2), "number") === 2
@@ -16095,7 +16095,7 @@ exports.tests = [
   name: 'Array is subclassable',
   category: 'subclassing',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-array-constructor',
   subtests: [
     {
       name: 'length property (accessing)',
@@ -16336,7 +16336,7 @@ exports.tests = [
 },
 {
   name: 'RegExp is subclassable',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor',
   category: 'subclassing',
   significance: 'tiny',
   subtests: [
@@ -16434,7 +16434,7 @@ exports.tests = [
 },
 {
   name: 'Function is subclassable',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'tiny',
   subtests: [
@@ -16564,7 +16564,7 @@ exports.tests = [
 },
 {
   name: 'Promise is subclassable',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-constructor',
   category: 'subclassing',
   significance: 'small',
   subtests: [
@@ -16701,7 +16701,7 @@ exports.tests = [
 },
 {
   name: 'miscellaneous subclassables',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-boolean-constructor',
   category: 'subclassing',
   significance: 'tiny',
   subtests: [
@@ -16856,7 +16856,7 @@ exports.tests = [
 },
 {
   name: 'own property order',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys',
   category: 'misc',
   significance: 'tiny',
   subtests: [
@@ -17150,7 +17150,7 @@ exports.tests = [
   name: 'miscellaneous',
   category: 'misc',
   significance: 'small',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
   subtests: [
     {
       name: 'no escaped reserved words as identifiers',
@@ -17393,7 +17393,7 @@ exports.tests = [
   name: 'HTML-style comments',
   category: 'annex b',
   significance: 'tiny',
-  link: 'http://www.ecma-international.org/ecma-262/6.0/#sec-html-like-comments',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-html-like-comments',
   exec: function () {/*
     --> A comment
     <!-- Another comment

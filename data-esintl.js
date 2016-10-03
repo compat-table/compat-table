@@ -225,7 +225,7 @@ exports.browsers = {
 exports.tests = [
 {
   name: 'Intl object',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-8',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-8',
   subtests: [
     {
       name: 'exists on global',
@@ -267,7 +267,7 @@ exports.tests = [
 },
 {
   name: 'Intl.Collator',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
   subtests: [
     {
       name: 'exists on intl object',
@@ -289,7 +289,7 @@ exports.tests = [
     },
     {
       name: 'creates new Collator instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.Collator() instanceof Intl.Collator;
       */},
@@ -308,7 +308,7 @@ exports.tests = [
     },
     {
       name: 'constructor called without new creates instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.Collator() instanceof Intl.Collator;
       */},
@@ -327,7 +327,7 @@ exports.tests = [
     },
     {
       name: 'calling Collator with Collator instance throws error',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
           Intl.Collator.call(Intl.Collator());
@@ -394,7 +394,7 @@ exports.tests = [
 },
 {
   name: 'Intl.Collator.prototype.compare',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
   subtests: [
     {
       name: 'exists on Collator prototype',
@@ -418,7 +418,7 @@ exports.tests = [
 },
 {
   name: 'Intl.Collator.prototype.resolvedOptions',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
   subtests: [
     {
       name: 'exists on Collator prototype',
@@ -442,7 +442,7 @@ exports.tests = [
 },
 {
   name: 'NumberFormat',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-11',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-11',
   subtests: [
     {
       name: 'exists on intl object',
@@ -482,7 +482,7 @@ exports.tests = [
     },
     {
       name: 'creates new NumberFormat instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.NumberFormat() instanceof Intl.NumberFormat;
       */},
@@ -501,7 +501,7 @@ exports.tests = [
     },
     {
       name: 'constructor called without new creates instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.NumberFormat() instanceof Intl.NumberFormat;
       */},
@@ -520,7 +520,7 @@ exports.tests = [
     },
     {
       name: 'calling NumberFormat with NumberFormat instance throws error',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
           Intl.NumberFormat.call(Intl.NumberFormat());
@@ -587,7 +587,7 @@ exports.tests = [
 },
 {
   name: 'DateTimeFormat',
-  link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-12',
+  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-12',
   subtests: [
     {
       name: 'exists on intl object',
@@ -609,7 +609,7 @@ exports.tests = [
     },
     {
       name: 'creates new DateTimeFormat instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       */},
@@ -628,7 +628,7 @@ exports.tests = [
     },
     {
       name: 'constructor called without new creates instances',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       */},
@@ -647,7 +647,7 @@ exports.tests = [
     },
     {
       name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
-      link: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
       exec: function(){/*
         try {
           Intl.DateTimeFormat.call(Intl.DateTimeFormat());
@@ -773,7 +773,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.localeCompare',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare',
   subtests: [
     {
       name: 'exists on String prototype',
@@ -811,7 +811,7 @@ exports.tests = [
 },
 {
   name: 'Number.prototype.toLocaleString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
   subtests: [
     {
       name: 'exists on Number prototype',
@@ -849,7 +849,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.toLocaleString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
   subtests: [
     {
       name: 'exists on Array prototype',
@@ -887,7 +887,7 @@ exports.tests = [
 },
 {
   name: 'Object.prototype.toLocaleString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
   subtests: [
     {
       name: 'exists on Object prototype',
@@ -925,7 +925,7 @@ exports.tests = [
 },
 {
   name: 'Date.prototype.toLocaleString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
   subtests: [
     {
       name: 'exists on Date prototype',
@@ -963,7 +963,7 @@ exports.tests = [
 },
 {
   name: 'Date.prototype.toLocaleDateString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
   subtests: [
     {
       name: 'exists on Date prototype',
@@ -1001,7 +1001,7 @@ exports.tests = [
 },
 {
   name: 'Date.prototype.toLocaleTimeString',
-  link: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
+  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
   subtests: [
     {
       name: 'exists on Date prototype',

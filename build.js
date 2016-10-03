@@ -500,7 +500,13 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     else interpolateResults(t.res);
 
     var id = escapeTestName(t.name);
-    var name = t.link ? ('<a href="' + t.link + '">' + t.name + '</a>') : t.name;
+    var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
+    if (t.links) {
+      t.links.forEach(function(link) {
+        name += footnoteHTML(link);
+        footnoteIndex[link.note_id] = link.note_html;
+      });
+    }
 
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')

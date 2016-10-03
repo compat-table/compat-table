@@ -48,7 +48,7 @@ exports.browsers = browsers;
 exports.tests = [
 {
   name: 'bind (::) operator',
-  link: 'https://github.com/zenparsing/es-function-bind',
+  spec: 'https://github.com/zenparsing/es-function-bind',
   category: 'strawman (stage 0)',
   significance: 'medium',
   subtests: [
@@ -79,7 +79,7 @@ exports.tests = [
   name: 'do expression',
   category: 'strawman (stage 0)',
   significance: 'small',
-  link: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
+  spec: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
     return do {
       let x = 23;
@@ -94,7 +94,7 @@ exports.tests = [
   name: 'function.sent',
   category: 'draft (stage 2)',
   significance: 'small',
-  link: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
+  spec: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
   exec: function () {/*
     var result;
     function* generator() {
@@ -111,7 +111,7 @@ exports.tests = [
   name: 'SIMD (Single Instruction, Multiple Data)',
   category: 'candidate (stage 3)',
   significance: 'large',
-  link: 'https://tc39.github.io/ecmascript_simd/',
+  spec: 'https://tc39.github.io/ecmascript_simd/',
   subtests: [
     {
       name: 'basic support',
@@ -690,7 +690,7 @@ exports.tests = [
   name: 'class decorators',
   category: 'draft (stage 2)',
   significance: 'medium',
-  link: 'https://github.com/wycats/javascript-decorators',
+  spec: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
     class A {
       @nonconf
@@ -711,7 +711,7 @@ exports.tests = [
   name: 'class properties',
   category: 'draft (stage 2)',
   significance: 'medium',
-  link: 'https://github.com/jeffmo/es-class-properties',
+  spec: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
     class C {
       x = 'x';
@@ -729,7 +729,7 @@ exports.tests = [
   name: 'Realms',
   category: 'strawman (stage 0)',
   significance: 'large',
-  link: 'https://github.com/caridy/proposal-realms',
+  spec: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*
     return typeof Realm === "function"
       && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
@@ -742,7 +742,7 @@ exports.tests = [
 {
   name: 'object rest properties',
   significance: 'small',
-  link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
+  spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   category: 'draft (stage 2)',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
@@ -757,7 +757,7 @@ exports.tests = [
   name: 'object spread properties',
   category: 'draft (stage 2)',
   significance: 'medium',
-  link: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
+  spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
     var O = {a: 1, ...spread};
@@ -771,7 +771,7 @@ exports.tests = [
 {
   name: 'String.prototype.at',
   significance: 'small',
-  link: 'https://github.com/mathiasbynens/String.prototype.at',
+  spec: 'https://github.com/mathiasbynens/String.prototype.at',
   category: 'strawman (stage 0)',
   exec: function () {/*
     return 'a𠮷b'.at(1) === '𠮷';
@@ -786,7 +786,7 @@ exports.tests = [
   name: 'string trimming',
   category: 'proposal (stage 1)',
   significance: 'small',
-  link: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
+  spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: [
     {
       name: 'String.prototype.trimLeft',
@@ -864,7 +864,7 @@ exports.tests = [
   name: 'System.global',
   category: 'draft (stage 2)',
   significance: 'small',
-  link: 'https://github.com/tc39/proposal-global',
+  spec: 'https://github.com/tc39/proposal-global',
   exec: function(){/*
     Function('return this')().__system_global_test__ = 42;
     return System.global.__system_global_test__ === 42;
@@ -878,7 +878,7 @@ exports.tests = [
   name: 'Math methods for 64-bit integers',
   category: 'strawman (stage 0)',
   significance: 'tiny',
-  link: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
+  spec: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
   subtests: [
     {
       name: 'Math.iaddh',
@@ -926,7 +926,7 @@ exports.tests = [
   name: 'Observable',
   category: 'proposal (stage 1)',
   significance: 'medium',
-  link: 'https://github.com/zenparsing/es-observable',
+  spec: 'https://github.com/zenparsing/es-observable',
   'subtests': [
     {
       name: 'basic support',
@@ -1026,7 +1026,7 @@ exports.tests = [
   name: 'String.prototype.matchAll',
   category: 'proposal (stage 1)',
   significance: 'small',
-  link: 'https://github.com/tc39/String.prototype.matchAll',
+  spec: 'https://github.com/tc39/String.prototype.matchAll',
   exec: function(){/*
     var iterator = '11a2bb'.matchAll(/(\d)(\D)/);
     if(iterator[Symbol.iterator]() !== iterator)return false;
@@ -1049,7 +1049,7 @@ exports.tests = [
   name: 'shared memory and atomics',
   category: 'draft (stage 2)',
   significance: 'large',
-  link: 'https://github.com/tc39/ecmascript_sharedmem',
+  spec: 'https://github.com/tc39/ecmascript_sharedmem',
   'subtests': [
     {
       name: 'SharedArrayBuffer',
@@ -1207,7 +1207,7 @@ exports.tests = [
   name: 'additional meta properties',
   category: 'strawman (stage 0)',
   significance: 'medium',
-  link: 'https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md',
+  spec: 'https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md',
   subtests: [
     {
       name: 'function.callee',
@@ -1243,7 +1243,7 @@ exports.tests = [
 },
 {
   name: 'method parameter decorators',
-  link: 'https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0',
+  spec: 'https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0',
   category: 'strawman (stage 0)',
   significance: 'small',
   exec: function(){/*
@@ -1266,7 +1266,7 @@ exports.tests = [
 },
 {
   name: 'function expression decorators',
-  link: 'https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#',
+  spec: 'https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#',
   category: 'strawman (stage 0)',
   significance: 'small',
   exec: function(){/*
@@ -1284,7 +1284,7 @@ exports.tests = [
 },
 {
   name: 'weak references',
-  link: 'https://github.com/tc39/proposal-weakrefs',
+  spec: 'https://github.com/tc39/proposal-weakrefs',
   category: 'proposal (stage 1)',
   significance: 'large',
   exec: function(){/*
@@ -1301,7 +1301,7 @@ exports.tests = [
   name: 'Async iteration',
   category: 'draft (stage 2)',
   significance: 'medium',
-  link: 'https://github.com/tc39/proposal-async-iteration',
+  spec: 'https://github.com/tc39/proposal-async-iteration',
   subtests: [
     {
       name: 'async generators',
@@ -1347,7 +1347,7 @@ exports.tests = [
 },
 {
   name: 'RegExp named capture groups',
-  link: 'https://github.com/goyakin/es-regexp-named-groups',
+  spec: 'https://github.com/goyakin/es-regexp-named-groups',
   category: 'strawman (stage 0)',
   significance: 'small',
   exec: function(){/*
@@ -1365,7 +1365,7 @@ exports.tests = [
 },
 {
   name: 'RegExp lookbehind',
-  link: 'https://github.com/goyakin/es-regexp-lookbehind',
+  spec: 'https://github.com/goyakin/es-regexp-lookbehind',
   category: 'strawman (stage 0)',
   significance: 'small',
   exec: function(){/*
@@ -1379,7 +1379,7 @@ exports.tests = [
   name: 'Reflect.isCallable / Reflect.isConstructor',
   category: 'strawman (stage 0)',
   significance: 'small',
-  link: 'https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md',
+  spec: 'https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md',
   subtests: [
     {
       name: 'Reflect.isCallable',
@@ -1407,7 +1407,7 @@ exports.tests = [
   name: 'Metadata reflection API',
   category: 'pre-strawman',
   significance: 'medium',
-  link: 'https://github.com/rbuckton/ReflectDecorators',
+  spec: 'https://github.com/rbuckton/ReflectDecorators',
   subtests: [
     {
       name: 'Reflect.defineMetadata',
@@ -1505,7 +1505,7 @@ exports.tests = [
   name: 'zones',
   category: 'strawman (stage 0)',
   significance: 'large',
-  link: 'https://github.com/domenic/zones',
+  spec: 'https://github.com/domenic/zones',
   subtests: [
     {
       name: 'Zone',
@@ -1569,7 +1569,7 @@ exports.tests = [
   name: 'frozen realms',
   category: 'proposal (stage 1)',
   significance: 'medium',
-  link: 'https://github.com/FUDCo/frozen-realms',
+  spec: 'https://github.com/FUDCo/frozen-realms',
   exec: function () {/*
     return typeof Reflect.Realm.immutableRoot === 'function'
       && typeof Reflect.Realm.prototype.spawn === 'function';
@@ -1581,7 +1581,7 @@ exports.tests = [
   name: 'private fields',
   category: 'proposal (stage 1)',
   significance: 'medium',
-  link: 'https://github.com/zenparsing/es-private-fields',
+  spec: 'https://github.com/zenparsing/es-private-fields',
   subtests: [
     {
       name: 'basic support',
@@ -1618,7 +1618,7 @@ exports.tests = [
 },
 {
   name: 'asap',
-  link: 'https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask',
+  spec: 'https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask',
   category: 'strawman (stage 0)',
   significance: 'medium',
   exec: function(){/*
@@ -1636,7 +1636,7 @@ exports.tests = [
   name: 'syntactic tail calls',
   category: 'strawman (stage 0)',
   significance: 'medium',
-  link: 'https://github.com/tc39/proposal-ptc-syntax',
+  spec: 'https://github.com/tc39/proposal-ptc-syntax',
   subtests: [
     {
       name: 'direct recursion',
