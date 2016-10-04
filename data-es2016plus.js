@@ -35,13 +35,6 @@ var typescript = {
     note_html: "TypeScript <code>async</code> / <code>await</code> requires native generators support."
   },
 };
-var firefox = {
-  nightly: {
-    val: false,
-    note_id: "firefox-nightly",
-    note_html: "The feature is enabled by default only in Firefox Nightly."
-  }
-};
 
 exports.browsers = browsers;
 
@@ -63,7 +56,6 @@ exports.tests = [
           typescript: true,
           edge13: flag,
           edge14: true,
-          firefox48: firefox.nightly,
           chrome51: flag,
           chrome52: true,
           safaritp: true,
@@ -81,7 +73,6 @@ exports.tests = [
           typescript: true,
           edge13: flag,
           edge14: true,
-          firefox48: firefox.nightly,
           chrome51: flag,
           chrome52: true,
           safaritp: true,
@@ -124,7 +115,6 @@ exports.tests = [
       babel: true,
       es7shim: true,
       typescript: typescript.corejs,
-      firefox45: firefox.nightly,
       firefox47: true,
       chrome51: flag,
       chrome54: true,
@@ -152,7 +142,6 @@ exports.tests = [
       babel: true,
       es7shim: true,
       typescript: typescript.corejs,
-      firefox45: firefox.nightly,
       firefox47: true,
       chrome51: flag,
       chrome54: true,
