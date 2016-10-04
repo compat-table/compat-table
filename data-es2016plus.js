@@ -1048,9 +1048,9 @@ exports.tests = [
     link: 'https://github.com/tc39/ecma262/pull/525',
     exec: function() {/*
      return "ſ".match(/\w/iu) && !"ſ".match(/\W/iu)
-     && "K".match(/\w/iu) && !"K".match(/\W/iu)
-     && "K ".match(/.\b/iu) && "ſ ".match(/.\b/iu)
-     && !"K ".match(/.\B/iu) && !"ſ ".match(/.\B/iu);
+     && "\u212a".match(/\w/iu) && !"\u212a".match(/\W/iu)
+     && "\u212a".match(/.\b/iu) && "ſ".match(/.\b/iu)
+     && !"\u212a".match(/.\B/iu) && !"ſ".match(/.\B/iu);
      */},
     res: {
     },

@@ -2492,10 +2492,10 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 </tr>
 <tr significance="0.125"><td id="test-RegExp_u_flag,_case_folding"><span><a class="anchor" href="#test-RegExp_u_flag,_case_folding">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/525">RegExp &quot;u&quot; flag, case folding</a></span><script data-source="
 return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/\W/iu)
-&amp;&amp; &quot;K&quot;.match(/\w/iu) &amp;&amp; !&quot;K&quot;.match(/\W/iu)
-&amp;&amp; &quot;K &quot;.match(/.\b/iu) &amp;&amp; &quot;&#x17F; &quot;.match(/.\b/iu)
-&amp;&amp; !&quot;K &quot;.match(/.\B/iu) &amp;&amp; !&quot;&#x17F; &quot;.match(/.\B/iu);
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"K\".match(/\\w/iu) && !\"K\".match(/\\W/iu)\n&& \"K \".match(/.\\b/iu) && \"ſ \".match(/.\\b/iu)\n&& !\"K \".match(/.\\B/iu) && !\"ſ \".match(/.\\B/iu);\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"K\".match(/\\w/iu) && !\"K\".match(/\\W/iu)\n&& \"K \".match(/.\\b/iu) && \"ſ \".match(/.\\b/iu)\n&& !\"K \".match(/.\\B/iu) && !\"ſ \".match(/.\\B/iu);\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+&amp;&amp; &quot;\u212a&quot;.match(/\w/iu) &amp;&amp; !&quot;\u212a&quot;.match(/\W/iu)
+&amp;&amp; &quot;\u212a&quot;.match(/.\b/iu) &amp;&amp; &quot;&#x17F;&quot;.match(/.\b/iu)
+&amp;&amp; !&quot;\u212a&quot;.match(/.\B/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/.\B/iu);
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"\\u212a\".match(/\\w/iu) && !\"\\u212a\".match(/\\W/iu)\n&& \"\\u212a\".match(/.\\b/iu) && \"ſ\".match(/.\\b/iu)\n&& !\"\\u212a\".match(/.\\B/iu) && !\"ſ\".match(/.\\B/iu);\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"\\u212a\".match(/\\w/iu) && !\"\\u212a\".match(/\\W/iu)\n&& \"\\u212a\".match(/.\\b/iu) && \"ſ\".match(/.\\b/iu)\n&& !\"\\u212a\".match(/.\\B/iu) && !\"ſ\".match(/.\\B/iu);\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
