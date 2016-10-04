@@ -50,7 +50,7 @@ exports.tests = [
     name: 'exponentiation (**) operator',
     category: '2016 features',
     significance: 'small',
-    link: 'https://github.com/rwaldron/exponentiation-operator',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator',
     subtests: [
       {
         name: 'basic support',
@@ -111,7 +111,7 @@ exports.tests = [
   },
   {
     name: 'Object.values',
-    link: 'https://github.com/ljharb/proposal-object-values-entries',
+    spec: 'https://github.com/ljharb/proposal-object-values-entries',
     category: '2017 features',
     significance: 'small',
     exec: function () {/*
@@ -135,7 +135,7 @@ exports.tests = [
   },
   {
     name: 'Object.entries',
-    link: 'https://github.com/ljharb/proposal-object-values-entries',
+    spec: 'https://github.com/ljharb/proposal-object-values-entries',
     category: '2017 features',
     significance: 'small',
     exec: function () {/*
@@ -163,7 +163,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.includes',
-    link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
     category: '2016 features',
     significance: 'small',
     subtests: [
@@ -252,7 +252,7 @@ exports.tests = [
   },
   {
     name: 'Object.getOwnPropertyDescriptors',
-    link: 'https://github.com/tc39/proposal-object-getownpropertydescriptors',
+    spec: 'https://github.com/tc39/proposal-object-getownpropertydescriptors',
     category: '2017 features',
     significance: 'small',
     subtests: [
@@ -302,7 +302,7 @@ exports.tests = [
     name: 'String padding',
     category: '2017 features',
     significance: 'small',
-    link: 'https://github.com/tc39/proposal-string-pad-start-end',
+    spec: 'https://github.com/tc39/proposal-string-pad-start-end',
     subtests: [
       {
         name: 'String.prototype.padStart',
@@ -348,7 +348,7 @@ exports.tests = [
   },
   {
     name: 'trailing commas in function syntax',
-    link: 'https://jeffmo.github.io/es-trailing-function-commas/',
+    spec: 'https://jeffmo.github.io/es-trailing-function-commas/',
     category: '2017 features',
     significance: 'small',
     subtests: [
@@ -386,7 +386,7 @@ exports.tests = [
     name: 'async functions',
     category: '2017 features',
     significance: 'large',
-    link: 'https://tc39.github.io/ecmascript-asyncawait/',
+    spec: 'https://tc39.github.io/ecmascript-asyncawait/',
     subtests: [
       {
         name: 'basic support',
@@ -443,7 +443,13 @@ exports.tests = [
     name: 'generator functions can\'t be used with "new"',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction',
+    links: [
+      {
+        note_id: 'new-gen-fn',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a>',
+      }
+    ],
     exec: function(){/*
      function * generator() {
      yield 3;
@@ -467,7 +473,13 @@ exports.tests = [
     name: 'generator throw() caught by inner generator',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/issues/293',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects',
+    links: [
+      {
+        note_id: 'gen-throw',
+        note_html: '<a href="https://github.com/tc39/ecma262/issues/293">\'Semantics of yield* in throw case\' GitHub issue in ECMA-262 repo.</a>',
+      }
+    ],
     exec: function(){/*
      function * generator() {
      yield * (function * () {
@@ -499,7 +511,13 @@ exports.tests = [
     name: 'strict fn w/ non-strict non-simple params is error',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation',
+    links: [
+      {
+        note_id: 'strict-fn-non-strict-params',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a>',
+      },
+    ],
     exec: function(){/*
      function foo(...a){}
      try {
@@ -520,7 +538,13 @@ exports.tests = [
     name: 'nested rest destructuring, declarations',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment',
+    links: [
+      {
+        note_id: 'nested-rest-destruct-decl',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
+      }
+    ],
     exec: function(){/*
      var [x, ...[y, ...z]] = [1,2,3,4];
      return x === 1 && y === 2 && z + '' === '3,4';
@@ -540,7 +564,13 @@ exports.tests = [
     name: 'nested rest destructuring, parameters',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment',
+    links: [
+      {
+        note_id: 'nested-rest-destruct-params',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
+      },
+    ],
     exec: function(){/*
      return function([x, ...[y, ...z]]) {
      return x === 1 && y === 2 && z + '' === '3,4';
@@ -561,7 +591,13 @@ exports.tests = [
     name: 'Proxy, "enumerate" handler removed',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/pull/367',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects',
+    links: [
+      {
+        note_id: 'proxy-enumerate-removed',
+        note_html: '<a href="https://github.com/tc39/ecma262/pull/367">\'Normative: Remove [[Enumerate]] and associated reflective capabilities\' GitHub Pull Request in ECMA-262 repo.</a>',
+      },
+    ],
     exec: function() {/*
      var passed = true;
      var proxy = new Proxy({}, {
@@ -586,7 +622,7 @@ exports.tests = [
     name: 'Proxy internal calls, Array.prototype.includes',
     category: '2016 misc',
     significance: 'tiny',
-    link: 'https://tc39.github.io/ecma262/#sec-array.prototype.includes',
+    spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
     exec: function() {/*
      // Array.prototype.includes -> Get -> [[Get]]
      var get = [];
@@ -610,7 +646,7 @@ exports.tests = [
   },
   {
     name: 'Object.prototype getter/setter methods',
-    link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
+    spec: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
     category: '2017 annex b',
     significance: 'tiny',
     subtests: [{
@@ -899,7 +935,7 @@ exports.tests = [
   },
   {
     name: 'Proxy internal calls, getter/setter methods',
-    link: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
+    spec: 'https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__',
     category: '2017 annex b',
     significance: 'tiny',
     subtests: [{
@@ -988,7 +1024,7 @@ exports.tests = [
     name: 'class extends null',
     category: '2017 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/issues/543',
+    spec: 'https://github.com/tc39/ecma262/issues/543',
     subtests: [
       {
         name: 'proper default constructor',
@@ -1024,7 +1060,7 @@ exports.tests = [
     name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
     category: '2017 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/pull/594',
+    spec: 'https://github.com/tc39/ecma262/pull/594',
     exec: function() {/*
      var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
      ownKeys: function() {
@@ -1045,7 +1081,7 @@ exports.tests = [
     name: 'RegExp "u" flag, case folding',
     category: '2017 misc',
     significance: 'tiny',
-    link: 'https://github.com/tc39/ecma262/pull/525',
+    spec: 'https://github.com/tc39/ecma262/pull/525',
     exec: function() {/*
      return "ſ".match(/\w/iu) && !"ſ".match(/\W/iu)
      && "\u212a".match(/\w/iu) && !"\u212a".match(/\W/iu)
@@ -1057,7 +1093,7 @@ exports.tests = [
   },
   {
     name: 'assignments allowed in for-in head in non-strict mode',
-    link: 'https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads',
+    spec: 'https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads',
     category: '2017 annex b',
     significance: 'tiny',
     exec: function(){/*
