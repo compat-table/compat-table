@@ -1089,6 +1089,9 @@ exports.tests = [
      && !"\u212a".match(/.\B/iu) && !"ſ".match(/.\B/iu);
      */},
     res: {
+      safari10: true,
+      safaritp: true,
+      webkit: true,
     },
   },
   {
