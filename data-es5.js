@@ -28,12 +28,18 @@ exports.browsers = {
     full: 'Internet Explorer 9',
     family: 'Chakra',
     short: 'IE 9',
-    obsolete: false
+    obsolete: true
   },
   ie10: {
-    full: 'Internet Explorer 10, 11',
+    full: 'Internet Explorer 10',
     family: 'Chakra',
-    short: 'IE 10-11',
+    short: 'IE 10',
+    obsolete: true
+  },
+  ie11: {
+    full: 'Internet Explorer 11',
+    family: 'Chakra',
+    short: 'IE 11',
     obsolete: false
   },
   edge13: {
