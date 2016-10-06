@@ -743,7 +743,7 @@ exports.tests = [
   name: 'object rest properties',
   significance: 'small',
   spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'draft (stage 2)',
+  category: 'candidate (stage 3)',
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -755,13 +755,13 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'draft (stage 2)',
+  category: 'candidate (stage 3)',
   significance: 'medium',
   spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
     var spread = {b: 2, c: 3};
     var O = {a: 1, ...spread};
-    return O.a + O.b + O.c === 6;
+    return O !== spread && (O.a + O.b + O.c) === 6;
   */},
   res: {
     babel: true,
@@ -783,95 +783,16 @@ exports.tests = [
   }
 },
 {
-  name: 'string trimming',
-  category: 'proposal (stage 1)',
-  significance: 'small',
-  spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
-  subtests: [
-    {
-      name: 'String.prototype.trimLeft',
-      exec: function(){/*
-        return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
-      */},
-      res: {
-        babel: true,
-        typescript: typescript.corejs,
-        edge12: true,
-        firefox3: false,
-        firefox3_5: true,
-        firefox3_6: true,
-        firefox4: true,
-        chrome30: true,
-        node: true,
-        iojs: true,
-        safari51: true,
-        safari9: true,
-        safaritp: true,
-        webkit: true,
-        es7shim: true,
-        android40: true,
-        ios51: true,
-      }
-    },
-    {
-      name: 'String.prototype.trimRight',
-      exec: function(){/*
-        return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
-      */},
-      res: {
-        babel: true,
-        typescript: typescript.corejs,
-        edge12: true,
-        firefox3: false,
-        firefox3_5: true,
-        firefox3_6: true,
-        firefox4: true,
-        chrome30: true,
-        node: true,
-        iojs: true,
-        safari51: true,
-        safari9: true,
-        safaritp: true,
-        webkit: true,
-        es7shim: true,
-        android40: true,
-        ios51: true,
-      }
-    },
-    {
-      name: 'String.prototype.trimStart',
-      exec: function(){/*
-        return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
-      */},
-      res: {
-        babel: true,
-        typescript: typescript.corejs,
-      }
-    },
-    {
-      name: 'String.prototype.trimEnd',
-      exec: function(){/*
-        return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
-      */},
-      res: {
-        babel: true,
-        typescript: typescript.corejs,
-      }
-    }
-  ]
-},
-{
-  name: 'System.global',
-  category: 'draft (stage 2)',
+  name: 'global',
+  category: 'candidate (stage 3)',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-global',
   exec: function(){/*
     Function('return this')().__system_global_test__ = 42;
-    return System.global.__system_global_test__ === 42;
+    return typeof global === 'object' && global && !global.lacksGlobal && global.__system_global_test__ === 42;
   */},
   res: {
-    babel: true,
-    typescript: typescript.corejs,
+    node: true,
   }
 },
 {
@@ -1299,7 +1220,7 @@ exports.tests = [
 },
 {
   name: 'Async iteration',
-  category: 'draft (stage 2)',
+  category: 'candidate (stage 3)',
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-async-iteration',
   subtests: [

@@ -12,6 +12,7 @@
     <script>
       var __script_executed = {};
       if (typeof global === 'undefined') {
+        this.lacksGlobal = true;
         var global = this;
       }
       (function() {

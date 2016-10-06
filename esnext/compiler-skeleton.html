@@ -10,6 +10,7 @@
     <!-- POLYFILLS -->
     <script>
       if (typeof global === "undefined") {
+        this.lacksGlobal = true;
         window.global = this;
       }
       function __createIterableObject(a, b, c) {
@@ -20,7 +21,7 @@
           var arr = [a, b, c, ,];
           var iterable = {
             next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
+              return { value: arr.shift(), done: arr.length <= 0 };
             },
           };
           iterable[Symbol.iterator] = function(){ return iterable; }
@@ -41,7 +42,7 @@
   </div>
   <div id="body">
     <p class="warning">Please note that <em>some</em> compiled output <strong>may be buggy</strong> or not representative of the compiler's true support.</p>
-      
+
     <table id="table-wrapper" style="width:50%;">
       <colgroup>
         <col>

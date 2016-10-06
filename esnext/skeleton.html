@@ -19,6 +19,7 @@
         t.parentNode.insertBefore(s, t);
       })();
       if (typeof global === 'undefined') {
+        this.lacksGlobal = true;
         var global = this;
       }
     </script>
