@@ -1005,6 +1005,7 @@ exports.tests = [
         safari10: true,
         webkit: true,
         chrome47: true,
+        node65: true,
         edge13: true,
         xs6: false,
       },
