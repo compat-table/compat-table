@@ -9,7 +9,7 @@ exports.browsers = {
     full: 'Internet Explorer 7-10',
     short: 'IE 7-10',
     family: 'Chakra',
-    obsolete: false
+    obsolete: true
   },
   ie11: {
     full: 'Internet Explorer 11',
