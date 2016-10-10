@@ -783,6 +783,84 @@ exports.tests = [
   }
 },
 {
+  name: 'string trimming',
+  category: 'draft (stage 2)',
+  significance: 'small',
+  spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
+  subtests: [
+    {
+      name: 'String.prototype.trimLeft',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+        edge12: true,
+        firefox3: false,
+        firefox3_5: true,
+        firefox3_6: true,
+        firefox4: true,
+        chrome30: true,
+        node: true,
+        iojs: true,
+        safari51: true,
+        safari9: true,
+        safaritp: true,
+        webkit: true,
+        es7shim: true,
+        android40: true,
+        ios51: true,
+      }
+    },
+    {
+      name: 'String.prototype.trimRight',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+        edge12: true,
+        firefox3: false,
+        firefox3_5: true,
+        firefox3_6: true,
+        firefox4: true,
+        chrome30: true,
+        node: true,
+        iojs: true,
+        safari51: true,
+        safari9: true,
+        safaritp: true,
+        webkit: true,
+        es7shim: true,
+        android40: true,
+        ios51: true,
+      }
+    },
+    {
+      name: 'String.prototype.trimStart',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'String.prototype.trimEnd',
+      exec: function(){/*
+        return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    }
+  ]
+},
+{
   name: 'global',
   category: 'candidate (stage 3)',
   significance: 'small',
