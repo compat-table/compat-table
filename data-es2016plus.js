@@ -103,6 +103,7 @@ exports.tests = [
         res: {
           babel: true,
           edge14: true,
+          firefox52: true,
           chrome51: flag,
           chrome52: true,
           safaritp: true,
@@ -441,6 +442,7 @@ exports.tests = [
           babel: true,
           typescript: true,
           edge14: true,
+          firefox52: true,
           safari10: true,
           safaritp: true,
           webkit: true,
@@ -455,6 +457,7 @@ exports.tests = [
           babel: true,
           typescript: true,
           edge14: true,
+          firefox52: true,
           safari10: true,
           safaritp: true,
           webkit: true,
