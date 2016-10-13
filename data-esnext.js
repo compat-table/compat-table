@@ -1315,6 +1315,7 @@ exports.tests = [
         });
       */},
       res: {
+        babel: true,
       }
     },
     {
@@ -1340,6 +1341,7 @@ exports.tests = [
         })();
       */},
       res: {
+        babel: true,
       }
     }
   ]
