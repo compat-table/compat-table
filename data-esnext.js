@@ -1326,7 +1326,7 @@ exports.tests = [
           var i = 0;
           return {
             next: function(){
-              switch(i++){
+              switch(++i){
                 case 1: return Promise.resolve({done: false, value: 'a'});
                 case 2: return Promise.resolve({done: false, value: 'b'});
               } return Promise.resolve({done: true});
