@@ -1115,6 +1115,7 @@ exports.tests = [
       firefox2: true,
       firefox31: true,
       firefox40: false,
+      firefox52: true,
       chrome30: true,
       safari51: true,
       safari9: false,
