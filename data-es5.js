@@ -190,13 +190,12 @@ exports.browsers = {
     full: 'Chrome 23-53, Opera 15-40',
     family: 'V8',
     short: 'CH 23-53,<br>OP 15-40',
-    obsolete: false
+    obsolete: true
   },
   chrome54: {
     full: 'Chrome 54+, Opera 41+',
     family: 'V8',
     short: 'CH 54+,<br>OP 41+',
-    unstable: true
   },
   opera10_10: {
     full: 'Opera 10.10',
