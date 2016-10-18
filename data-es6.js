@@ -17358,6 +17358,7 @@ exports.tests = [
         babel: true,
         closure: true,
         typescript: true,
+        firefox52: true,
         chrome45: true,
         safari9: true,
         safaritp: true,
