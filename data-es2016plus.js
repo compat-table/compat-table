@@ -533,6 +533,7 @@ exports.tests = [
      */},
     res: {
       edge12: true,
+      firefox52: true,
       chrome47: true,
       safari10: true,
       safaritp: true,
