@@ -1127,6 +1127,20 @@ exports.tests = [
       ios51: true,
     },
   },
+  {
+    name: 'arguments.caller removed',
+    category: '2017 misc',
+    significance: 'tiny',
+    spec: 'https://github.com/tc39/ecma262/pull/689',
+    exec: function() {/*
+     return (function(){
+       'use strict';
+       return !Object.getOwnPropertyDescriptor(arguments,'caller');
+     })();
+     */},
+    res: {
+    },
+  },
 ];
 
 //Shift annex B features to the bottom
