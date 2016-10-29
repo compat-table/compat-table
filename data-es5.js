@@ -145,13 +145,13 @@ exports.browsers = {
     obsolete: false
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 14',
+    full: 'Safari Technology Preview Release 16',
     family: 'JavaScriptCore',
     short: 'SF TP',
     unstable: true
   },
   webkit: {
-    full: 'WebKit r204915 (August 24, 2016)',
+    full: 'Webkit r208102 (October 29, 2016)',
     family: 'JavaScriptCore',
     short: 'WebKit',
     unstable: true
@@ -1228,6 +1228,8 @@ exports.tests = [
       es5shim: true,
       ie9: true,
       firefox5: true,
+      safaritp: true,
+      webkit: true,
       opera10_10: null,
       opera10_50: true,
       konq43: null,
