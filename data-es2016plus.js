@@ -60,6 +60,7 @@ exports.tests = [
         res: {
           tr: true,
           babel: true,
+          closure: true,
           typescript: true,
           edge13: flag,
           edge14: true,
@@ -79,6 +80,7 @@ exports.tests = [
         res: {
           tr: true,
           babel: true,
+          closure: true,
           typescript: true,
           edge13: flag,
           edge14: true,
@@ -102,6 +104,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           edge14: true,
           firefox52: true,
           chrome51: flag,
@@ -403,6 +406,7 @@ exports.tests = [
         res: {
           tr: true,
           babel: babel.regenerator,
+          closure: true,
           typescript: typescript.asyncawait,
           chrome52: flag,
           chrome55: true,
@@ -420,6 +424,7 @@ exports.tests = [
         res: {
           tr: true,
           babel: babel.regenerator,
+          closure: true,
           typescript: typescript.asyncawait,
           chrome52: flag,
           chrome55: true,
@@ -435,6 +440,7 @@ exports.tests = [
         res: {
           tr: true,
           babel: babel.regenerator,
+          closure: true,
           typescript: false, // still buggy output
           chrome52: flag,
           chrome55: true,
@@ -502,6 +508,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
+      closure: true,
       edge14: true,
       firefox27: true,
       chrome39: true,
@@ -557,6 +564,7 @@ exports.tests = [
      */},
     res: {
       babel: true,
+      closure: true,
       edge13: flag,
       edge14: true,
       firefox47: true,
@@ -584,6 +592,7 @@ exports.tests = [
      */},
     res: {
       babel: true,
+      closure: true,
       edge13: flag,
       edge14: true,
       firefox47: true,
