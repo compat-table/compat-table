@@ -55,7 +55,7 @@ exports.browsers = {
     platformtype: 'compiler',
   },
   closure: {
-    full: 'Closure Compiler v20160822',
+    full: 'Closure Compiler v20161024',
     short: 'Closure',
     obsolete: false,
     platformtype: 'compiler',
@@ -12287,6 +12287,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -12314,6 +12315,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -12378,6 +12380,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -12412,6 +12415,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         es6shim: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -12446,6 +12450,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -12480,6 +12485,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         es6shim: true,
         typescript: typescript.corejs,
         edge12: true,
@@ -12501,6 +12507,7 @@ exports.tests = [
       res: {
         ejs: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         edge13: true,
         firefox45: true,
@@ -16132,6 +16139,7 @@ exports.tests = [
       'cbrt': {
         ejs: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         tr: true,
         es6shim: true,
