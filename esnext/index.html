@@ -113,6 +113,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.4">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[1]</sup></a></th>
+<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20161024">Closure</abbr></a></th>
 <th class="platform jsx compiler obsolete" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
 <th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.4">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
@@ -177,11 +178,12 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="63">Candidate (stage 3)</td>
+      <tr class="category"><td colspan="64">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-SIMD_(Single_Instruction,_Multiple_Data)"><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/">SIMD (Single Instruction, Multiple Data)</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/57</td>
 <td class="tally" data-browser="babel" data-tally="0">0/57</td>
+<td class="tally" data-browser="closure" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/57</td>
 <td class="tally" data-browser="typescript" data-tally="0">0/57</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/57</td>
@@ -248,6 +250,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -314,6 +317,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -380,6 +384,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -446,6 +451,7 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -512,6 +518,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -578,6 +585,7 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -644,6 +652,7 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -710,6 +719,7 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -776,6 +786,7 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -842,6 +853,7 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -908,6 +920,7 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -974,6 +987,7 @@ return typeof SIMD.Float32x4.abs === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1040,6 +1054,7 @@ return typeof SIMD.Float32x4.add === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1106,6 +1121,7 @@ return typeof SIMD.Int16x8.addSaturate === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1172,6 +1188,7 @@ return typeof SIMD.Bool16x8.and === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1238,6 +1255,7 @@ return typeof SIMD.Bool32x4.anyTrue === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1304,6 +1322,7 @@ return typeof SIMD.Bool32x4.allTrue === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1370,6 +1389,7 @@ return typeof SIMD.Float32x4.check === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1436,6 +1456,7 @@ return typeof SIMD.Float32x4.equal === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1502,6 +1523,7 @@ return typeof SIMD.Float32x4.extractLane === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1568,6 +1590,7 @@ return typeof SIMD.Float32x4.greaterThan === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1634,6 +1657,7 @@ return typeof SIMD.Float32x4.greaterThanOrEqual === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1700,6 +1724,7 @@ return typeof SIMD.Float32x4.lessThan === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1766,6 +1791,7 @@ return typeof SIMD.Float32x4.lessThanOrEqual === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1832,6 +1858,7 @@ return typeof SIMD.Float32x4.mul === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1898,6 +1925,7 @@ return typeof SIMD.Float32x4.div === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1964,6 +1992,7 @@ return typeof SIMD.Float32x4.load === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2030,6 +2059,7 @@ return typeof SIMD.Float32x4.load1 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2096,6 +2126,7 @@ return typeof SIMD.Float32x4.load2 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2162,6 +2193,7 @@ return typeof SIMD.Float32x4.load3 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2228,6 +2260,7 @@ return typeof SIMD.Float32x4.max === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2294,6 +2327,7 @@ return typeof SIMD.Float32x4.maxNum === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2360,6 +2394,7 @@ return typeof SIMD.Float32x4.min === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2426,6 +2461,7 @@ return typeof SIMD.Float32x4.minNum === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2492,6 +2528,7 @@ return typeof SIMD.Float32x4.neg === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2558,6 +2595,7 @@ return typeof SIMD.Bool16x8.not === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2624,6 +2662,7 @@ return typeof SIMD.Float32x4.notEqual === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2690,6 +2729,7 @@ return typeof SIMD.Bool16x8.or === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2756,6 +2796,7 @@ return typeof SIMD.Float32x4.reciprocalApproximation === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2822,6 +2863,7 @@ return typeof SIMD.Float32x4.reciprocalSqrtApproximation === &apos;function&apos
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2888,6 +2930,7 @@ return typeof SIMD.Float32x4.replaceLane === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2954,6 +2997,7 @@ return typeof SIMD.Float32x4.select === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3020,6 +3064,7 @@ return typeof SIMD.Int32x4.shiftLeftByScalar === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3086,6 +3131,7 @@ return typeof SIMD.Int32x4.shiftRightByScalar === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3152,6 +3198,7 @@ return typeof SIMD.Float32x4.shuffle === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3218,6 +3265,7 @@ return typeof SIMD.Float32x4.splat === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3284,6 +3332,7 @@ return typeof SIMD.Float32x4.sqrt === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3350,6 +3399,7 @@ return typeof SIMD.Float32x4.store === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3416,6 +3466,7 @@ return typeof SIMD.Float32x4.store1 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3482,6 +3533,7 @@ return typeof SIMD.Float32x4.store2 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3548,6 +3600,7 @@ return typeof SIMD.Float32x4.store3 === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3614,6 +3667,7 @@ return typeof SIMD.Float32x4.sub === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3680,6 +3734,7 @@ return typeof SIMD.Int16x8.subSaturate === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3746,6 +3801,7 @@ return typeof SIMD.Float32x4.swizzle === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3812,6 +3868,7 @@ return typeof SIMD.Bool16x8.xor === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3880,6 +3937,7 @@ return &apos;Float32x4,Int32x4,Int8x16,Uint32x4,Uint16x8,Uint8x16&apos;.split(&a
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3948,6 +4006,7 @@ return &apos;Float32x4,Uint32x4&apos;.split(&apos;,&apos;).every(function(type){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4015,6 +4074,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4083,6 +4143,7 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="jsx">Yes</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4150,6 +4211,7 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; !global
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4213,6 +4275,7 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; !global
 <tr class="supertest" significance="0.5"><td id="test-Async_iteration"><span><a class="anchor" href="#test-Async_iteration">&#xA7;</a><a href="https://github.com/tc39/proposal-async-iteration">Async iteration</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="0">0/2</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
@@ -4286,6 +4349,7 @@ iterator.next().then(function(step){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4369,6 +4433,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4429,7 +4494,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="63">Draft (stage 2)</td>
+<tr class="category"><td colspan="64">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-function.sent"><span><a class="anchor" href="#test-function.sent">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">function.sent</a></span><script data-source="
 var result;
@@ -4443,6 +4508,7 @@ return result === &apos;tromple&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4517,6 +4583,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#babel-decorators-legacy-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4587,6 +4654,7 @@ return new C().x + C.y === &apos;xy&apos;;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4650,6 +4718,7 @@ return new C().x + C.y === &apos;xy&apos;;
 <tr class="supertest" significance="0.25"><td id="test-string_trimming"><span><a class="anchor" href="#test-string_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">string trimming</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
 <td class="tally" data-browser="babel" data-tally="1">4/4</td>
+<td class="tally" data-browser="closure" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/4</td>
 <td class="tally" data-browser="typescript" data-tally="1">4/4</td>
 <td class="tally" data-browser="es7shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -4716,6 +4785,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -4782,6 +4852,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -4848,6 +4919,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4914,6 +4986,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -4977,6 +5050,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <tr class="supertest" significance="1"><td id="test-shared_memory_and_atomics"><span><a class="anchor" href="#test-shared_memory_and_atomics">&#xA7;</a><a href="https://github.com/tc39/ecmascript_sharedmem">shared memory and atomics</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/17</td>
 <td class="tally" data-browser="babel" data-tally="0">0/17</td>
+<td class="tally" data-browser="closure" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/17</td>
 <td class="tally" data-browser="typescript" data-tally="0">0/17</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/17</td>
@@ -5043,6 +5117,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5109,6 +5184,7 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5175,6 +5251,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5241,6 +5318,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5307,6 +5385,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5373,6 +5452,7 @@ return typeof Atomics.add == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5439,6 +5519,7 @@ return typeof Atomics.and == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5505,6 +5586,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5571,6 +5653,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5637,6 +5720,7 @@ return typeof Atomics.wait == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5703,6 +5787,7 @@ return typeof Atomics.wake == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5769,6 +5854,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5835,6 +5921,7 @@ return typeof Atomics.load == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5901,6 +5988,7 @@ return typeof Atomics.or == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -5967,6 +6055,7 @@ return typeof Atomics.store == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6033,6 +6122,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6099,6 +6189,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6159,11 +6250,12 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="63">Proposal (stage 1)</td>
+<tr class="category"><td colspan="64">Proposal (stage 1)</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Observable"><span><a class="anchor" href="#test-Observable">&#xA7;</a><a href="https://github.com/zenparsing/es-observable">Observable</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/8</td>
 <td class="tally" data-browser="babel" data-tally="1">8/8</td>
+<td class="tally" data-browser="closure" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/8</td>
 <td class="tally" data-browser="typescript" data-tally="1">8/8</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/8</td>
@@ -6230,6 +6322,7 @@ return typeof Observable !== &apos;undefined&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6296,6 +6389,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6362,6 +6456,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6438,6 +6533,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6505,6 +6601,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6572,6 +6669,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6638,6 +6736,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6704,6 +6803,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6780,6 +6880,7 @@ return a === &apos;1a2b&apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6850,6 +6951,7 @@ return works &amp;&amp; weakref.get() === undefined;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6917,6 +7019,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -6980,6 +7083,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <tr class="supertest" significance="0.5"><td id="test-private_fields"><span><a class="anchor" href="#test-private_fields">&#xA7;</a><a href="https://github.com/zenparsing/es-private-fields">private fields</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="0">0/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="0">0/2</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
@@ -7055,6 +7159,7 @@ return new C(42).x() === 42;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -7127,6 +7232,7 @@ return new C().x() === 42;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -7187,11 +7293,12 @@ return new C().x() === 42;
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="63">Strawman (stage 0)</td>
+<tr class="category"><td colspan="64">Strawman (stage 0)</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-bind_(::)_operator"><span><a class="anchor" href="#test-bind_(::)_operator">&#xA7;</a><a href="https://github.com/zenparsing/es-function-bind">bind (::) operator</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">2/2</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -7260,6 +7367,7 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7327,6 +7435,7 @@ return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply =
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7396,6 +7505,7 @@ return do {
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7465,6 +7575,7 @@ return typeof Realm === &quot;function&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7531,6 +7642,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -7594,6 +7706,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Math_methods_for_64-bit_integers"><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers">&#xA7;</a><a href="https://gist.github.com/BrendanEich/4294d5c212a6d2254703">Math methods for 64-bit integers</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">4/4</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">4/4</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -7660,6 +7773,7 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7726,6 +7840,7 @@ return Math.isubh(0, 4, 1, 1) === 2;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7792,6 +7907,7 @@ return Math.imulh(0xffffffff, 7) === -1;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7858,6 +7974,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7921,6 +8038,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 <tr class="supertest optional-feature" significance="0.5"><td id="test-additional_meta_properties"><span><a class="anchor" href="#test-additional_meta_properties">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md">additional meta properties</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -7988,6 +8106,7 @@ return f();
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8054,6 +8173,7 @@ return (_ =&gt; function.count)(1, 2, 3) === 3;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8125,6 +8245,7 @@ return Array.isArray(arr)
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8202,6 +8323,7 @@ return target === C.prototype
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8275,6 +8397,7 @@ return (@inverse function(it){
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8348,6 +8471,7 @@ return result.groups.year === &apos;2016&apos;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8414,6 +8538,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8477,6 +8602,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <tr class="supertest optional-feature" significance="0.25"><td id="test-Reflect.isCallable_/_Reflect.isConstructor"><span><a class="anchor" href="#test-Reflect.isCallable_/_Reflect.isConstructor">&#xA7;</a><a href="https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md">Reflect.isCallable / Reflect.isConstructor</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -8545,6 +8671,7 @@ return Reflect.isCallable(function(){})
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8613,6 +8740,7 @@ return Reflect.isConstructor(function(){})
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8676,6 +8804,7 @@ return Reflect.isConstructor(function(){})
 <tr class="supertest optional-feature" significance="1"><td id="test-zones"><span><a class="anchor" href="#test-zones">&#xA7;</a><a href="https://github.com/domenic/zones">zones</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -8742,6 +8871,7 @@ return typeof Zone == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8808,6 +8938,7 @@ return &apos;current&apos; in Zone;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8874,6 +9005,7 @@ return &apos;name&apos; in Zone.prototype;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8940,6 +9072,7 @@ return &apos;parent&apos; in Zone.prototype;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9006,6 +9139,7 @@ return typeof Zone.prototype.fork == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9072,6 +9206,7 @@ return typeof Zone.prototype.run == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9138,6 +9273,7 @@ return typeof Zone.prototype.wrap == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9207,6 +9343,7 @@ passed = true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9270,6 +9407,7 @@ passed = true;
 <tr class="supertest optional-feature" significance="0.5"><td id="test-syntactic_tail_calls"><span><a class="anchor" href="#test-syntactic_tail_calls">&#xA7;</a><a href="https://github.com/tc39/proposal-ptc-syntax">syntactic tail calls</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -9342,6 +9480,7 @@ return (function f(n){
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9421,6 +9560,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9481,11 +9621,12 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;
 <td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="ios10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr class="category"><td colspan="63">Pre-strawman</td>
+<tr class="category"><td colspan="64">Pre-strawman</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-Metadata_reflection_API"><span><a class="anchor" href="#test-Metadata_reflection_API">&#xA7;</a><a href="https://github.com/rbuckton/ReflectDecorators">Metadata reflection API</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">9/9</td>
+<td class="tally not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 <td class="tally not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">9/9</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
@@ -9552,6 +9693,7 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9618,6 +9760,7 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9684,6 +9827,7 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9750,6 +9894,7 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9816,6 +9961,7 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9882,6 +10028,7 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9948,6 +10095,7 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -10014,6 +10162,7 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -10080,6 +10229,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>

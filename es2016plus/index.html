@@ -107,6 +107,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.4">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[1]</sup></a></th>
+<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20161024">Closure</abbr></a></th>
 <th class="platform jsx compiler obsolete" data-browser="jsx"><a href="#jsx" class="browser-name"><abbr title="JSX">JSX</abbr></a></th>
 <th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.4">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform es7shim compiler" data-browser="es7shim"><a href="#es7shim" class="browser-name"><abbr title="es7-shim">es7-shim</abbr></a></th>
@@ -171,11 +172,12 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="63">2016 features</td>
+      <tr class="category"><td colspan="64">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="closure" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/3</td>
 <td class="tally" data-browser="typescript" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/3</td>
@@ -242,6 +244,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -308,6 +311,7 @@ var a = 2; a **= 3; return a === 8;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -379,6 +383,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -442,6 +447,7 @@ return true;
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Array.prototype.includes</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="closure" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/3</td>
 <td class="tally" data-browser="typescript" data-tally="1">3/3</td>
 <td class="tally" data-browser="es7shim" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -512,6 +518,7 @@ return [1, 2, 3].includes(1)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -600,6 +607,7 @@ return 24;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -671,6 +679,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -731,7 +740,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="63">2016 misc</td>
+<tr class="category"><td colspan="64">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a><a href="#new-gen-fn-note"><sup>[6]</sup></a></span><script data-source="
 function * generator() {
@@ -746,6 +755,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -825,6 +835,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -896,6 +907,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -963,6 +975,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1031,6 +1044,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1104,6 +1118,7 @@ return passed;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1179,6 +1194,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1239,7 +1255,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="63">2017 features</td>
+<tr class="category"><td colspan="64">2017 features</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1250,6 +1266,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -1323,6 +1340,7 @@ return Array.isArray(e)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -1386,6 +1404,7 @@ return Array.isArray(e)
 <tr class="supertest" significance="0.25"><td id="test-Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Object.getOwnPropertyDescriptors</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally" data-browser="es7shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
@@ -1460,6 +1479,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -1529,6 +1549,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1592,6 +1613,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="1">2/2</td>
 <td class="tally" data-browser="es7shim" data-tally="1">2/2</td>
@@ -1661,6 +1683,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -1730,6 +1753,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
@@ -1793,6 +1817,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://jeffmo.github.io/es-trailing-function-commas/">trailing commas in function syntax</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="1">2/2</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
@@ -1859,6 +1884,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1925,6 +1951,7 @@ return Math.min(1,2,3,) === 1;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -1988,6 +2015,7 @@ return Math.min(1,2,3,) === 1;
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecmascript-asyncawait/">async functions</a></span></td>
 <td class="tally" data-browser="tr" data-tally="1">3/3</td>
 <td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="closure" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/3</td>
 <td class="tally" data-browser="typescript" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/3</td>
@@ -2056,6 +2084,7 @@ return (async function(){
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[12]</sup></a></td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2124,6 +2153,7 @@ return (async function(){
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[12]</sup></a></td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[13]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2190,6 +2220,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[12]</sup></a></td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2250,11 +2281,12 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="63">2017 misc</td>
+<tr class="category"><td colspan="64">2017 misc</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="test-class_extends_null"><span><a class="anchor" href="#test-class_extends_null">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/543">class extends null</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel" data-tally="0">0/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="jsx" data-tally="0">0/2</td>
 <td class="tally" data-browser="typescript" data-tally="0">0/2</td>
 <td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
@@ -2322,6 +2354,7 @@ return new C instanceof C;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2395,6 +2428,7 @@ return passed;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2466,6 +2500,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2535,6 +2570,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2604,6 +2640,7 @@ return (function(){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="jsx">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -2664,11 +2701,12 @@ return (function(){
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="63">2017 annex b</td>
+<tr class="category"><td colspan="64">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
+<td class="tally not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -2740,6 +2778,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -2812,6 +2851,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -2884,6 +2924,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -2955,6 +2996,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3027,6 +3069,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3099,6 +3142,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3172,6 +3216,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3245,6 +3290,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3319,6 +3365,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3390,6 +3437,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3460,6 +3508,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3533,6 +3582,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3606,6 +3656,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3680,6 +3731,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3751,6 +3803,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3821,6 +3874,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3884,6 +3938,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -3954,6 +4009,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4024,6 +4080,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4099,6 +4156,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4174,6 +4232,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4241,6 +4300,7 @@ return i === 0;
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="jsx" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>

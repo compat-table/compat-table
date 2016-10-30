@@ -16,6 +16,11 @@ module.exports = {
     note_id: 'babel-optional',
     note_html: 'Have to be enabled via <code>babel-preset-stage-0</code> preset'
   },
+  closure: {
+    full: 'Closure Compiler v20161024',
+    short: 'Closure',
+    platformtype: 'compiler',
+  },
   jsx: {
     full: 'JSX',
     short: 'JSX',
