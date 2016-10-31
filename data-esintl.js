@@ -176,8 +176,8 @@ exports.browsers = {
     note_html: 'Intl support is not enabled by default, it needs to build with <code>--with-intl</code> option if needed'
   },
   node4: {
-    full: 'Node 4.0',
-    short: 'Node<br>4.0',
+    full: 'Node 4.0+',
+    short: 'Node<br>4.0+',
     family: 'Node.js',
     obsolete: false, // current version
     platformtype: 'engine',

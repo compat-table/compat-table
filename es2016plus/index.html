@@ -158,6 +158,7 @@
 <th class="platform node5 engine obsolete" data-browser="node5"><a href="#node5" class="browser-name"><abbr title="Node.js">Node 5</abbr></a></th>
 <th class="platform node64 engine obsolete" data-browser="node64"><a href="#node64" class="browser-name"><abbr title="Node.js">Node 6.0-6.4</abbr></a></th>
 <th class="platform node65 engine" data-browser="node65"><a href="#node65" class="browser-name"><abbr title="Node.js">Node 6.5</abbr></a></th>
+<th class="platform node7 engine" data-browser="node7"><a href="#node7" class="browser-name"><abbr title="Node.js">Node 7</abbr></a></th>
 <th class="platform android40 mobile obsolete" data-browser="android40"><a href="#android40" class="browser-name"><abbr title="Android Browser">AN 4.0</abbr></a></th>
 <th class="platform android41 mobile obsolete" data-browser="android41"><a href="#android41" class="browser-name"><abbr title="Android Browser">AN 4.1 - 4.3</abbr></a></th>
 <th class="platform android44 mobile" data-browser="android44"><a href="#android44" class="browser-name"><abbr title="Android Browser">AN 4.4</abbr></a></th>
@@ -172,7 +173,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="64">2016 features</td>
+      <tr class="category"><td colspan="65">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -228,6 +229,7 @@
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/3</td>
 <td class="tally" data-browser="node65" data-tally="0" data-flagged-tally="1">0/3</td>
+<td class="tally" data-browser="node7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/3</td>
 <td class="tally" data-browser="android44" data-tally="0">0/3</td>
@@ -295,6 +297,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -362,6 +365,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -434,6 +438,7 @@ return true;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -498,6 +503,7 @@ return true;
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">3/3</td>
 <td class="tally" data-browser="node65" data-tally="1">3/3</td>
+<td class="tally" data-browser="node7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/3</td>
 <td class="tally" data-browser="android44" data-tally="0">0/3</td>
@@ -569,6 +575,7 @@ return [1, 2, 3].includes(1)
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -658,6 +665,7 @@ return 24;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -730,6 +738,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -740,7 +749,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="64">2016 misc</td>
+<tr class="category"><td colspan="65">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a><a href="#new-gen-fn-note"><sup>[6]</sup></a></span><script data-source="
 function * generator() {
@@ -806,6 +815,7 @@ return true;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -886,6 +896,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -958,6 +969,7 @@ return true;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1026,6 +1038,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1095,6 +1108,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1169,6 +1183,7 @@ return passed;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1245,6 +1260,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1255,7 +1271,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="category"><td colspan="64">2017 features</td>
+<tr class="category"><td colspan="65">2017 features</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1317,6 +1333,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1391,6 +1408,7 @@ return Array.isArray(e)
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1455,6 +1473,7 @@ return Array.isArray(e)
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
 <td class="tally" data-browser="node65" data-tally="0" data-flagged-tally="0.5">0/2</td>
+<td class="tally" data-browser="node7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -1530,6 +1549,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no flagged" data-browser="node65">Flag</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1600,6 +1620,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1664,6 +1685,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
 <td class="tally" data-browser="node65" data-tally="0">0/2</td>
+<td class="tally" data-browser="node7" data-tally="0" data-flagged-tally="1">0/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -1734,6 +1756,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no flagged" data-browser="node7">Flag</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1804,6 +1827,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no flagged" data-browser="node7">Flag</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -1868,6 +1892,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
 <td class="tally" data-browser="node65" data-tally="0">0/2</td>
+<td class="tally" data-browser="node7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -1935,6 +1960,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2002,6 +2028,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2066,6 +2093,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/3</td>
 <td class="tally" data-browser="node65" data-tally="0">0/3</td>
+<td class="tally" data-browser="node7" data-tally="0" data-flagged-tally="1">0/3</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/3</td>
 <td class="tally" data-browser="android44" data-tally="0">0/3</td>
@@ -2135,6 +2163,7 @@ return (async function(){
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no flagged" data-browser="node7">Flag</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2204,6 +2233,7 @@ return (async function(){
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no flagged" data-browser="node7">Flag</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2271,6 +2301,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no flagged" data-browser="node7">Flag</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2281,7 +2312,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="64">2017 misc</td>
+<tr class="category"><td colspan="65">2017 misc</td>
 </tr>
 <tr class="supertest" significance="0.125"><td id="test-class_extends_null"><span><a class="anchor" href="#test-class_extends_null">&#xA7;</a><a href="https://github.com/tc39/ecma262/issues/543">class extends null</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -2337,6 +2368,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0">0/2</td>
 <td class="tally" data-browser="node65" data-tally="0">0/2</td>
+<td class="tally" data-browser="node7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
 <td class="tally" data-browser="android44" data-tally="0">0/2</td>
@@ -2405,6 +2437,7 @@ return new C instanceof C;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2479,6 +2512,7 @@ return passed;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2551,6 +2585,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="yes" data-browser="node65">Yes</td>
+<td class="yes" data-browser="node7">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2621,6 +2656,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2691,6 +2727,7 @@ return (function(){
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No</td>
 <td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -2701,7 +2738,7 @@ return (function(){
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="category"><td colspan="64">2017 annex b</td>
+<tr class="category"><td colspan="65">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -2757,6 +2794,7 @@ return (function(){
 <td class="tally obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
 <td class="tally obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
 <td class="tally not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
+<td class="tally not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally" data-browser="android44" data-tally="0.375" style="background-color:hsl(45,69%,50%)">6/16</td>
@@ -2829,6 +2867,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -2902,6 +2941,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="no" data-browser="android44">No</td>
@@ -2975,6 +3015,7 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3047,6 +3088,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -3120,6 +3162,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="no" data-browser="android44">No</td>
@@ -3193,6 +3236,7 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3267,6 +3311,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -3341,6 +3386,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -3416,6 +3462,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="no" data-browser="android44">No</td>
@@ -3488,6 +3535,7 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3559,6 +3607,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3633,6 +3682,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -3707,6 +3757,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>
@@ -3782,6 +3833,7 @@ return foo() === &quot;bar&quot;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="no" data-browser="android44">No</td>
@@ -3854,6 +3906,7 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3925,6 +3978,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -3989,6 +4043,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.5">2/4</td>
 <td class="tally obsolete" data-browser="android40" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="android41" data-tally="0">0/4</td>
 <td class="tally" data-browser="android44" data-tally="0">0/4</td>
@@ -4060,6 +4115,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4131,6 +4187,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4207,6 +4264,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4283,6 +4341,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="android40">No</td>
 <td class="no obsolete" data-browser="android41">No</td>
 <td class="no" data-browser="android44">No</td>
@@ -4351,6 +4410,7 @@ return i === 0;
 <td class="yes obsolete not-applicable" data-browser="node5" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="node64" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node65" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android40">Yes</td>
 <td class="yes obsolete" data-browser="android41">Yes</td>
 <td class="yes" data-browser="android44">Yes</td>

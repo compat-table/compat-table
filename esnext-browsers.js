@@ -426,6 +426,14 @@ module.exports = {
     equals: 'chrome51',
     obsolete: false,
   },
+  node7: {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node 7',
+    platformtype: 'engine',
+    equals: 'chrome54',
+    obsolete: false,
+  },
   android40: {
     full: 'Android Browser',
     short: 'AN 4.0',
