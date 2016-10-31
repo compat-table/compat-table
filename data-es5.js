@@ -219,7 +219,7 @@ exports.browsers = {
     full: 'Opera 12.15',
     family: 'Carakan',
     short: 'OP 12.10',
-    obsolete: false
+    obsolete: true
   },
   konq43: {
     full: 'Konqueror 4.3',
