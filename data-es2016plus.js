@@ -64,7 +64,7 @@ exports.tests = [
           typescript: true,
           edge13: flag,
           edge14: true,
-          firefox48: firefox.nightly,
+          firefox42: firefox.nightly,
           firefox52: true,
           chrome51: flag,
           chrome52: true,
