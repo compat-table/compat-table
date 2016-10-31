@@ -639,6 +639,15 @@ exports.browsers = {
     equals: 'chrome51',
     obsolete: false,
   },
+  node7: {
+    full: 'Node.js',
+    family: 'Node.js',
+    short: 'Node<br>7',
+    platformtype: 'engine',
+    note_id: 'harmony-flag',
+    equals: 'chrome54',
+    obsolete: false,
+  },
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
