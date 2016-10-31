@@ -41,42 +41,7 @@ exports.browsers = {
   },
   firefox29: {
     full: 'Firefox',
-    short: 'FF 29',
-    obsolete: true
-  },
-  firefox30: {
-    full: 'Firefox',
-    short: 'FF 30',
-    obsolete: true
-  },
-  firefox31: {
-    full: 'Firefox',
-    short: 'FF 31',
-    obsolete: true
-  },
-  firefox32: {
-    full: 'Firefox',
-    short: 'FF 32',
-    obsolete: true
-  },
-  firefox33: {
-    full: 'Firefox',
-    short: 'FF 33',
-    obsolete: true
-  },
-  firefox34: {
-    full: 'Firefox',
-    short: 'FF 34',
-    obsolete: true
-  },
-  firefox35: {
-    full: 'Firefox',
-    short: 'FF 35',
-    obsolete: true
-  },
-  firefox36: {
-    full: 'Firefox',
-    short: 'FF 36+'
+    short: 'FF 29+',
   },
   chrome22: {
     full: 'Chrome 22',
