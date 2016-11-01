@@ -41,7 +41,12 @@ exports.browsers = {
   },
   firefox29: {
     full: 'Firefox',
-    short: 'FF 29+',
+    short: 'FF 29-51',
+  },
+  firefox52: {
+    full: 'Firefox',
+    short: 'FF 52+',
+    unstable: true
   },
   chrome22: {
     full: 'Chrome 22',
@@ -688,6 +693,7 @@ exports.tests = [
         edge: false,
         edge14: true,
         firefox29: false,
+        firefox52: true,
         chrome24: null,
         chrome29: true,
         safari51: null,
@@ -725,6 +731,7 @@ exports.tests = [
         edge: false,
         edge14: true,
         firefox29: false, // Firefox bug #1266290
+        firefox52: true,
         chrome24: true,
         chrome29: true,
         safari10: true,
