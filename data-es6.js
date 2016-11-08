@@ -9270,6 +9270,7 @@ exports.tests = [
         edge14: flag,
         firefox49: true,
         chrome51: true,
+        chrome56: false,
         xs6: true,
         safaritp: true,
         safari10: true,
