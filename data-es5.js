@@ -193,9 +193,14 @@ exports.browsers = {
     obsolete: true
   },
   chrome54: {
-    full: 'Chrome 54+, Opera 41+',
+    full: 'Chrome 54-55, Opera 41-42',
     family: 'V8',
-    short: 'CH 54+,<br>OP 41+',
+    short: 'CH 54-55,<br>OP 41-42',
+  },
+  chrome56: {
+    full: 'Chrome 56, Opera 43',
+    family: 'V8',
+    short: 'CH 56,<br>OP 43',
   },
   opera10_10: {
     full: 'Opera 10.10',
@@ -1628,7 +1633,21 @@ exports.tests = [
       try { arguments.callee; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      safaritp: true,
+      webkit: true,
+      chrome13: true,
+      chrome56: false,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios78: true,
+      android41: true,
+    },
   },
   {
     name: '(function(){}).caller and (function(){}).arguments is a TypeError',

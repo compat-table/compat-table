@@ -1151,6 +1151,7 @@ exports.tests = [
      })();
      */},
     res: {
+      chrome56: true,
     },
   },
 ];
