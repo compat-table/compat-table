@@ -1099,6 +1099,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1108,6 +1109,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1117,6 +1119,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1126,6 +1129,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1135,6 +1139,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1144,6 +1149,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1153,6 +1159,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1162,6 +1169,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1171,6 +1179,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1180,6 +1189,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1189,6 +1199,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     },
     {
@@ -1198,6 +1209,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        safaritp: true,
       }
     }
   ]
