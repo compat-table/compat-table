@@ -1621,12 +1621,33 @@ exports.tests = [
     res: temp.strict,
   },
   {
-    name: 'arguments.caller removed or is a TypeError and arguments.callee is a TypeError',
+    name: 'arguments.caller removed or is a TypeError',
     exec: function() {/*
       'use strict';
       if (Object.getOwnPropertyDescriptor(arguments,'caller')) {
         try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       }
+      return true;
+    */},
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      safaritp: true,
+      webkit: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios78: true,
+      android41: true,
+    },
+  },
+  {
+    name: 'arguments.callee is a TypeError',
+    exec: function() {/*
+      'use strict';
       try { arguments.callee; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
