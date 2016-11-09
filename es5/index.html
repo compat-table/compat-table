@@ -3791,11 +3791,11 @@ return true;
 </tr>
 <tr class="subtest" data-parent="Strict_mode" id="test-Strict_mode_arguments.caller_removed_or_is_a_TypeError"><td><span><a class="anchor" href="#test-Strict_mode_arguments.caller_removed_or_is_a_TypeError">&#xA7;</a>arguments.caller removed or is a TypeError</span><script data-source="
 &apos;use strict&apos;;
-if (Object.getOwnPropertyDescriptor(arguments,&apos;caller&apos;)) {
+if (&apos;caller&apos; in arguments) {
   try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
 }
 return true;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\n'use strict';\nif (Object.getOwnPropertyDescriptor(arguments,'caller')) {\n  try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nif (Object.getOwnPropertyDescriptor(arguments,'caller')) {\n  try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\n'use strict';\nif ('caller' in arguments) {\n  try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\n'use strict';\nif ('caller' in arguments) {\n  try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }\n}\nreturn true;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="no obsolete" data-browser="ie7">No</td>

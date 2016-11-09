@@ -1624,7 +1624,7 @@ exports.tests = [
     name: 'arguments.caller removed or is a TypeError',
     exec: function() {/*
       'use strict';
-      if (Object.getOwnPropertyDescriptor(arguments,'caller')) {
+      if ('caller' in arguments) {
         try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       }
       return true;
