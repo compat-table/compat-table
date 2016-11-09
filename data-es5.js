@@ -193,14 +193,9 @@ exports.browsers = {
     obsolete: true
   },
   chrome54: {
-    full: 'Chrome 54-55, Opera 41-42',
+    full: 'Chrome 54+, Opera 41+',
     family: 'V8',
-    short: 'CH 54-55,<br>OP 41-42',
-  },
-  chrome56: {
-    full: 'Chrome 56, Opera 43',
-    family: 'V8',
-    short: 'CH 56,<br>OP 43',
+    short: 'CH 54+,<br>OP 41+',
   },
   opera10_10: {
     full: 'Opera 10.10',
@@ -1626,10 +1621,12 @@ exports.tests = [
     res: temp.strict,
   },
   {
-    name: 'arguments.caller and arguments.callee is a TypeError',
+    name: 'arguments.caller removed or is a TypeError and arguments.callee is a TypeError',
     exec: function() {/*
       'use strict';
-      try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      if (Object.getOwnPropertyDescriptor(arguments,'caller')) {
+        try { arguments.caller; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
+      }
       try { arguments.callee; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
@@ -1640,7 +1637,6 @@ exports.tests = [
       safaritp: true,
       webkit: true,
       chrome13: true,
-      chrome56: false,
       opera12: true,
       besen: true,
       phantom: true,
