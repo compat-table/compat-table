@@ -35,6 +35,11 @@ var typescript = {
     },
 };
 var firefox = {
+  developer: {
+    val: false,
+    note_id: "firefox-developer",
+    note_html: "The feature is enabled by default only in Firefox Developer and Firefox Nightly."
+  },
   nightly: {
     val: false,
     note_id: "firefox-nightly",
@@ -1057,6 +1062,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
       }
     },
     {
@@ -1074,6 +1080,8 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
+
       }
     },
     {
@@ -1082,6 +1090,7 @@ exports.tests = [
         return typeof SharedArrayBuffer.prototype.slice === 'function';
       */},
       res: {
+        firefox52: firefox.developer,
       }
     },
     {
@@ -1090,6 +1099,7 @@ exports.tests = [
         return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
       */},
       res: {
+        firefox52: firefox.developer,
       }
     },
     {
@@ -1099,6 +1109,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1109,6 +1120,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1119,6 +1131,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1129,6 +1142,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1139,6 +1153,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1149,6 +1164,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1159,6 +1175,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1169,6 +1186,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1179,6 +1197,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1189,6 +1208,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1199,6 +1219,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     },
@@ -1209,6 +1230,7 @@ exports.tests = [
       */},
       res: {
         firefox46: firefox.nightly,
+        firefox51: firefox.developer,
         safaritp: true,
       }
     }
