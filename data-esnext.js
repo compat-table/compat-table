@@ -1090,7 +1090,7 @@ exports.tests = [
         return typeof SharedArrayBuffer.prototype.slice === 'function';
       */},
       res: {
-        firefox52: firefox.developer,
+        firefox52: firefox.nightly,
       }
     },
     {
@@ -1099,7 +1099,7 @@ exports.tests = [
         return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
       */},
       res: {
-        firefox52: firefox.developer,
+        firefox52: firefox.nightly,
       }
     },
     {
