@@ -380,7 +380,7 @@ module.exports = {
     unstable: true,
   },
   webkit: {
-    full: 'Webkit r208102 (October 29, 2016)',
+    full: 'Webkit r208586 (November 11, 2016)',
     short: 'WK',
     unstable: true,
   },
