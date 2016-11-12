@@ -157,7 +157,7 @@
 <th class="platform safari9 desktop" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari">SF 9</abbr></a></th>
 <th class="platform safari10 desktop" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari">SF 10</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 17">SF TP</abbr></a></th>
-<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r208102 (October 29, 2016)">WK</abbr></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r208586 (November 11, 2016)">WK</abbr></a></th>
 <th class="platform node engine" data-browser="node"><a href="#node" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a></th>
 <th class="platform iojs engine obsolete" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js">io.js</abbr></a></th>
 <th class="platform node4 engine" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node.js">Node 4</abbr></a></th>
@@ -5167,7 +5167,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally" data-browser="safari9" data-tally="0">0/17</td>
 <td class="tally" data-browser="safari10" data-tally="0">0/17</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/17</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
 <td class="tally" data-browser="node" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/17</td>
 <td class="tally" data-browser="node4" data-tally="0">0/17</td>
@@ -5575,7 +5575,7 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5643,7 +5643,7 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5711,7 +5711,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5779,7 +5779,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5847,7 +5847,7 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5915,7 +5915,7 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -5983,7 +5983,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -6051,7 +6051,7 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -6119,7 +6119,7 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -6187,7 +6187,7 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -6255,7 +6255,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -6323,7 +6323,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="node">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>

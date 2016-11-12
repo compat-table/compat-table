@@ -1111,6 +1111,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1122,6 +1123,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1133,6 +1135,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1144,6 +1147,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1155,6 +1159,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1166,6 +1171,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1177,6 +1183,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1188,6 +1195,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1199,6 +1207,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1210,6 +1219,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1221,6 +1231,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     },
     {
@@ -1232,6 +1243,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         safaritp: true,
+        webkit: true,
       }
     }
   ]
