@@ -1,4 +1,4 @@
-exports.browsers = require('./esnext-browsers');
+exports.browsers = require('./browsers');
 
 require('object.assign').shim();
 
