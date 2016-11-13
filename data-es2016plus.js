@@ -1,4 +1,4 @@
-var browsers = require('./browsers');
+var browsers = require('./environments');
 
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';

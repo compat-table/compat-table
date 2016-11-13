@@ -1,4 +1,4 @@
-exports.browsers = require('./browsers');
+exports.browsers = require('./environments');
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';

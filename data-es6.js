@@ -1,4 +1,4 @@
-exports.browsers = require('./browsers');
+exports.browsers = require('./environments');
 
 require('object.assign').shim();
 

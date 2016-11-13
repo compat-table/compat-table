@@ -9,6 +9,7 @@ module.exports = {
     short: 'ES6<br>Trans-<br>piler',
     obsolete: true,
     platformtype: 'compiler',
+    test_suites: ['es6'],
   },
   tr: {
     full: 'Traceur',
@@ -35,6 +36,7 @@ module.exports = {
     short: 'JSX',
     platformtype: 'compiler',
     obsolete: true,
+    test_suites: ['es6'],
   },
   typescript: {
     full: 'TypeScript 1.8 + core-js 2.4',
@@ -47,18 +49,21 @@ module.exports = {
     short: 'es6-shim',
     platformtype: 'compiler',
     obsolete: false,
+    test_suites: ['es6'],
   },
   es7shim: {
     full: 'es7-shim',
     short: 'es7-shim',
     platformtype: 'compiler',
     obsolete: false,
+    test_suites: ['es2016plus'],
   },
   konq49: {
     full: 'Konqueror 4.14',
     short: 'KQ<br>4.14',
     note_id: 'khtml',
-    note_html: 'Results are only applicable for the KHTML rendering engine.'
+    note_html: 'Results are only applicable for the KHTML rendering engine.',
+    test_suites: ['es6'],
   },
   ie10: {
     full: 'Internet Explorer',
@@ -329,9 +334,10 @@ module.exports = {
     unstable: true,
   },
   opera: {
-    full: 'Opera 12.16',
+    full: 'Opera 12',
     short: 'OP 12',
-    obsolete: true
+    obsolete: true,
+    test_suites: ['es6'],
   },
   chrome: {
     full: 'Chrome',
@@ -552,6 +558,7 @@ module.exports = {
     short: 'RH',
     platformtype: 'engine',
     obsolete: true,
+    test_suites: ['es6'],
   },
   phantom: {
     full: 'PhantomJS 2.0',
@@ -564,18 +571,21 @@ module.exports = {
   ejs: {
     full: 'Echo JS',
     short: 'Echo JS',
-    unstable: true,
     platformtype: 'engine',
+    unstable: true,
+    test_suites: ['es6'],
   },
   xs6: {
     full: 'Kinoma XS6',
     short: 'XS6',
-    platformtype: 'engine'
+    platformtype: 'engine',
+    test_suites: ['es6'],
   },
   jxa: {
     full: 'JavaScript Automation for OS X',
     short: 'JXA',
-    platformtype: 'engine'
+    platformtype: 'engine',
+    test_suites: ['es6'],
   },
   node: {
     full: 'Node.js',
