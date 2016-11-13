@@ -1,4 +1,4 @@
-var browsers = require('./esnext-browsers');
+exports.browsers = require('./esnext-browsers');
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -46,9 +46,6 @@ var firefox = {
     note_html: "The feature is enabled by default only in Firefox Nightly."
   }
 };
-
-exports.browsers = browsers;
-
 
 exports.tests = [
 {
@@ -876,6 +873,7 @@ exports.tests = [
   */},
   res: {
     node: true,
+    node4: true,
   }
 },
 {
