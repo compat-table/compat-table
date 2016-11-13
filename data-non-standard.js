@@ -1,7 +1,8 @@
 // exports browsers and tests
 
 exports.name = 'Non-standard';
-exports.target_file = 'non-standard/index.html';
+exports.html_target_file = 'non-standard/index.html';
+exports.json_target_file = 'non-standard/index.json';
 exports.skeleton_file = 'non-standard/skeleton.html';
 
 exports.browsers = {

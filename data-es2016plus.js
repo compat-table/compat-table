@@ -1,7 +1,8 @@
 var browsers = require('./esnext-browsers');
 
 exports.name = 'ES2016+';
-exports.target_file = 'es2016plus/index.html';
+exports.html_target_file = 'es2016plus/index.html';
+exports.json_target_file = 'es2016plus/index.json';
 exports.skeleton_file = 'es2016plus/skeleton.html';
 
 var temp = {};

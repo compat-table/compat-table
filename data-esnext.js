@@ -1,7 +1,8 @@
 var browsers = require('./esnext-browsers');
 
 exports.name = 'ES Next';
-exports.target_file = 'esnext/index.html';
+exports.html_target_file = 'esnext/index.html';
+exports.json_target_file = 'esnext/index.json';
 exports.skeleton_file = 'esnext/skeleton.html';
 
 var flag = "flagged";

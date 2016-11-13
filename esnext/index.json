@@ -1,0 +1,2394 @@
+[
+  {
+    "name": "SIMD (Single Instruction, Multiple Data)",
+    "category": "candidate (stage 3)",
+    "significance": "large",
+    "link": "https://tc39.github.io/ecmascript_simd/",
+    "subtests": [
+      {
+        "name": "basic support",
+        "res": {
+          "edge12": "flagged",
+          "firefox39": true,
+          "firefox42": false,
+          "firefox44": false,
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge13": "flagged",
+          "edge14": "flagged",
+          "firefox40": true,
+          "firefox41": true,
+          "firefox43": false,
+          "firefox45": false,
+          "firefox46": false,
+          "firefox47": false,
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Float32x4",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Int32x4",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Int16x8",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Int8x16",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Uint32x4",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Uint16x8",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Uint8x16",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Bool32x4",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Bool16x8",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Bool8x16",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.abs",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.add",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%integerType%.addSaturate",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.and",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.anyTrue",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.allTrue",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.check",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.equal",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.extractLane",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.greaterThan",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.greaterThanOrEqual",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.lessThan",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.lessThanOrEqual",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.mul",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.div",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.load",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.load1",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.load2",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.load3",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.max",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.maxNum",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.min",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.minNum",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.neg",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.not",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.notEqual",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.or",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.reciprocalApproximation",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.reciprocalSqrtApproximation",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.replaceLane",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.select",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%integerType%.shiftLeftByScalar",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%integerType%.shiftRightByScalar",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.shuffle",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.splat",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.sqrt",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.store",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.store1",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.store2",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.store3",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.sub",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%integerType%.subSaturate",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.swizzle",
+        "res": {
+          "edge13": "flagged",
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%booleanType%.xor",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.fromTIMDBits",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "edge14": "flagged",
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SIMD.%type%.fromTIMD",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "function.sent",
+    "category": "draft (stage 2)",
+    "significance": "small",
+    "link": "https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md",
+    "res": {}
+  },
+  {
+    "name": "class decorators",
+    "category": "draft (stage 2)",
+    "significance": "medium",
+    "link": "https://github.com/wycats/javascript-decorators",
+    "res": {
+      "babel": {
+        "val": false,
+        "note_id": "babel-decorators-legacy",
+        "note_html": "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."
+      },
+      "typescript": true
+    }
+  },
+  {
+    "name": "class properties",
+    "category": "draft (stage 2)",
+    "significance": "medium",
+    "link": "https://github.com/jeffmo/es-class-properties",
+    "res": {
+      "babel": true,
+      "tr": true,
+      "typescript": true
+    }
+  },
+  {
+    "name": "object rest properties",
+    "significance": "small",
+    "link": "https://github.com/sebmarkbage/ecmascript-rest-spread",
+    "category": "draft (stage 2)",
+    "res": {
+      "babel": true,
+      "jsx": true
+    }
+  },
+  {
+    "name": "object spread properties",
+    "category": "draft (stage 2)",
+    "significance": "medium",
+    "link": "https://github.com/sebmarkbage/ecmascript-rest-spread",
+    "res": {
+      "babel": true,
+      "jsx": true
+    }
+  },
+  {
+    "name": "System.global",
+    "category": "draft (stage 2)",
+    "significance": "small",
+    "link": "https://github.com/tc39/proposal-global",
+    "res": {
+      "babel": true,
+      "typescript": {
+        "val": true,
+        "note_id": "typescript-core-js",
+        "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+      }
+    }
+  },
+  {
+    "name": "shared memory and atomics",
+    "category": "draft (stage 2)",
+    "significance": "large",
+    "link": "https://github.com/tc39/ecmascript_sharedmem",
+    "subtests": [
+      {
+        "name": "SharedArrayBuffer",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SharedArrayBuffer[Symbol.species]",
+        "res": {}
+      },
+      {
+        "name": "SharedArrayBuffer.prototype.byteLength",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "SharedArrayBuffer.prototype.slice",
+        "res": {}
+      },
+      {
+        "name": "SharedArrayBuffer.prototype[Symbol.toStringTag]",
+        "res": {}
+      },
+      {
+        "name": "Atomics.add",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.and",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.compareExchange",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.exchange",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.wait",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.wake",
+        "res": {
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.isLockFree",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.load",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.or",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.store",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.sub",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      },
+      {
+        "name": "Atomics.xor",
+        "res": {
+          "firefox46": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox47": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox48": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox49": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          },
+          "firefox50": {
+            "val": false,
+            "note_id": "firefox-nightly",
+            "note_html": "The feature is enabled by default only in Firefox Nightly."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Async iteration",
+    "category": "draft (stage 2)",
+    "significance": "medium",
+    "link": "https://github.com/tc39/proposal-async-iteration",
+    "subtests": [
+      {
+        "name": "async generators",
+        "res": {}
+      },
+      {
+        "name": "for-await-of loops",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "string trimming",
+    "category": "proposal (stage 1)",
+    "significance": "small",
+    "link": "https://github.com/sebmarkbage/ecmascript-string-left-right-trim",
+    "subtests": [
+      {
+        "name": "String.prototype.trimLeft",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          },
+          "edge12": true,
+          "firefox4": true,
+          "chrome30": true,
+          "node": true,
+          "iojs": true,
+          "safari51": true,
+          "safari9": true,
+          "safaritp": true,
+          "webkit": true,
+          "es7shim": true,
+          "android40": true,
+          "ios51": true,
+          "edge13": true,
+          "edge14": true,
+          "firefox10": true,
+          "firefox17": true,
+          "firefox24": true,
+          "firefox31": true,
+          "firefox32": true,
+          "firefox34": true,
+          "firefox35": true,
+          "firefox36": true,
+          "firefox38": true,
+          "firefox39": true,
+          "firefox40": true,
+          "firefox41": true,
+          "firefox42": true,
+          "firefox43": true,
+          "firefox44": true,
+          "firefox45": true,
+          "firefox46": true,
+          "firefox47": true,
+          "firefox48": true,
+          "firefox49": true,
+          "firefox50": true,
+          "chrome33": true,
+          "chrome34": true,
+          "chrome35": true,
+          "chrome37": true,
+          "chrome38": true,
+          "chrome39": true,
+          "chrome40": true,
+          "chrome41": true,
+          "chrome42": true,
+          "chrome43": true,
+          "chrome46": true,
+          "chrome47": true,
+          "chrome48": true,
+          "chrome49": true,
+          "chrome50": true,
+          "chrome51": true,
+          "chrome52": true,
+          "safari10": true,
+          "node4": true,
+          "node5": true,
+          "node6": true,
+          "android41": true,
+          "android44": true,
+          "android50": true,
+          "android51": true,
+          "ios6": true,
+          "ios9": true
+        }
+      },
+      {
+        "name": "String.prototype.trimRight",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          },
+          "edge12": true,
+          "firefox4": true,
+          "chrome30": true,
+          "node": true,
+          "iojs": true,
+          "safari51": true,
+          "safari9": true,
+          "safaritp": true,
+          "webkit": true,
+          "es7shim": true,
+          "android40": true,
+          "ios51": true,
+          "edge13": true,
+          "edge14": true,
+          "firefox10": true,
+          "firefox17": true,
+          "firefox24": true,
+          "firefox31": true,
+          "firefox32": true,
+          "firefox34": true,
+          "firefox35": true,
+          "firefox36": true,
+          "firefox38": true,
+          "firefox39": true,
+          "firefox40": true,
+          "firefox41": true,
+          "firefox42": true,
+          "firefox43": true,
+          "firefox44": true,
+          "firefox45": true,
+          "firefox46": true,
+          "firefox47": true,
+          "firefox48": true,
+          "firefox49": true,
+          "firefox50": true,
+          "chrome33": true,
+          "chrome34": true,
+          "chrome35": true,
+          "chrome37": true,
+          "chrome38": true,
+          "chrome39": true,
+          "chrome40": true,
+          "chrome41": true,
+          "chrome42": true,
+          "chrome43": true,
+          "chrome46": true,
+          "chrome47": true,
+          "chrome48": true,
+          "chrome49": true,
+          "chrome50": true,
+          "chrome51": true,
+          "chrome52": true,
+          "safari10": true,
+          "node4": true,
+          "node5": true,
+          "node6": true,
+          "android41": true,
+          "android44": true,
+          "android50": true,
+          "android51": true,
+          "ios6": true,
+          "ios9": true
+        }
+      },
+      {
+        "name": "String.prototype.trimStart",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "String.prototype.trimEnd",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Observable",
+    "category": "proposal (stage 1)",
+    "significance": "medium",
+    "link": "https://github.com/zenparsing/es-observable",
+    "subtests": [
+      {
+        "name": "basic support",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Symbol.observable well known symbol",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable.prototype.subscribe",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable constructor behavior",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable.prototype.forEach",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable.prototype[Symbol.observable]",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable.of",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Observable.from",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "String.prototype.matchAll",
+    "category": "proposal (stage 1)",
+    "significance": "small",
+    "link": "https://github.com/tc39/String.prototype.matchAll",
+    "res": {
+      "babel": true,
+      "typescript": {
+        "val": true,
+        "note_id": "typescript-core-js",
+        "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+      }
+    }
+  },
+  {
+    "name": "weak references",
+    "link": "https://github.com/tc39/proposal-weakrefs",
+    "category": "proposal (stage 1)",
+    "significance": "large",
+    "res": {}
+  },
+  {
+    "name": "frozen realms",
+    "category": "proposal (stage 1)",
+    "significance": "medium",
+    "link": "https://github.com/FUDCo/frozen-realms",
+    "res": {}
+  },
+  {
+    "name": "private fields",
+    "category": "proposal (stage 1)",
+    "significance": "medium",
+    "link": "https://github.com/zenparsing/es-private-fields",
+    "subtests": [
+      {
+        "name": "basic support",
+        "res": {}
+      },
+      {
+        "name": "initializers",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "bind (::) operator",
+    "link": "https://github.com/zenparsing/es-function-bind",
+    "category": "strawman (stage 0)",
+    "significance": "medium",
+    "subtests": [
+      {
+        "name": "binary form",
+        "res": {
+          "babel": true
+        }
+      },
+      {
+        "name": "unary form",
+        "res": {
+          "babel": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "do expression",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "link": "http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions",
+    "res": {
+      "babel": true
+    }
+  },
+  {
+    "name": "Realms",
+    "category": "strawman (stage 0)",
+    "significance": "large",
+    "link": "https://github.com/caridy/proposal-realms",
+    "res": {}
+  },
+  {
+    "name": "String.prototype.at",
+    "significance": "small",
+    "link": "https://github.com/mathiasbynens/String.prototype.at",
+    "category": "strawman (stage 0)",
+    "res": {
+      "babel": true,
+      "typescript": {
+        "val": true,
+        "note_id": "typescript-core-js",
+        "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+      },
+      "es7shim": true
+    }
+  },
+  {
+    "name": "Math methods for 64-bit integers",
+    "category": "strawman (stage 0)",
+    "significance": "tiny",
+    "link": "https://gist.github.com/BrendanEich/4294d5c212a6d2254703",
+    "subtests": [
+      {
+        "name": "Math.iaddh",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Math.isubh",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Math.imulh",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Math.umulh",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "additional meta properties",
+    "category": "strawman (stage 0)",
+    "significance": "medium",
+    "link": "https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md",
+    "subtests": [
+      {
+        "name": "function.callee",
+        "res": {}
+      },
+      {
+        "name": "function.count",
+        "res": {}
+      },
+      {
+        "name": "function.arguments",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "method parameter decorators",
+    "link": "https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "res": {
+      "typescript": true
+    }
+  },
+  {
+    "name": "function expression decorators",
+    "link": "https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "res": {}
+  },
+  {
+    "name": "RegExp named capture groups",
+    "link": "https://github.com/goyakin/es-regexp-named-groups",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "res": {}
+  },
+  {
+    "name": "RegExp lookbehind",
+    "link": "https://github.com/goyakin/es-regexp-lookbehind",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "res": {
+      "chrome50": "flagged",
+      "chrome51": "flagged",
+      "chrome52": "flagged",
+      "node6": "flagged"
+    }
+  },
+  {
+    "name": "Reflect.isCallable / Reflect.isConstructor",
+    "category": "strawman (stage 0)",
+    "significance": "small",
+    "link": "https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md",
+    "subtests": [
+      {
+        "name": "Reflect.isCallable",
+        "res": {}
+      },
+      {
+        "name": "Reflect.isConstructor",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "zones",
+    "category": "strawman (stage 0)",
+    "significance": "large",
+    "link": "https://github.com/domenic/zones",
+    "subtests": [
+      {
+        "name": "Zone",
+        "res": {}
+      },
+      {
+        "name": "Zone.current",
+        "res": {}
+      },
+      {
+        "name": "Zone.prototype.name",
+        "res": {}
+      },
+      {
+        "name": "Zone.prototype.parent",
+        "res": {}
+      },
+      {
+        "name": "Zone.prototype.fork",
+        "res": {}
+      },
+      {
+        "name": "Zone.prototype.run",
+        "res": {}
+      },
+      {
+        "name": "Zone.prototype.wrap",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "asap",
+    "link": "https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask",
+    "category": "strawman (stage 0)",
+    "significance": "medium",
+    "res": {
+      "babel": true,
+      "typescript": {
+        "val": true,
+        "note_id": "typescript-core-js",
+        "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+      }
+    }
+  },
+  {
+    "name": "syntactic tail calls",
+    "category": "strawman (stage 0)",
+    "significance": "medium",
+    "link": "https://github.com/tc39/proposal-ptc-syntax",
+    "subtests": [
+      {
+        "name": "direct recursion",
+        "res": {}
+      },
+      {
+        "name": "mutual recursion",
+        "res": {}
+      }
+    ]
+  },
+  {
+    "name": "Metadata reflection API",
+    "category": "pre-strawman",
+    "significance": "medium",
+    "link": "https://github.com/rbuckton/ReflectDecorators",
+    "subtests": [
+      {
+        "name": "Reflect.defineMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.hasMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.hasOwnMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.getMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.getOwnMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.getMetadataKeys",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.getOwnMetadataKeys",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.deleteMetadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      },
+      {
+        "name": "Reflect.metadata",
+        "res": {
+          "babel": true,
+          "typescript": {
+            "val": true,
+            "note_id": "typescript-core-js",
+            "note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>, or when a native ES6 host is used."
+          }
+        }
+      }
+    ]
+  }
+]
