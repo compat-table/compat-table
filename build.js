@@ -38,7 +38,7 @@ var isOptional = function isOptional(category) {
 
 var byTestSuite = function(suite) {
   return function(browser) {
-    return ('test_suites' in browser) ? browser.test_suites.indexOf(suite)>-1 : true;
+    return Array.isArray(browser.test_suites) ? browser.test_suites.indexOf(suite)>-1 : true;
   };
 };
 
