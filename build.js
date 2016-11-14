@@ -21,6 +21,7 @@
 
 
 require('object.assign').shim();
+var pickBy = require('lodash.pickby');
 
 var fs = require('fs');
 var path = require('path');
@@ -35,18 +36,32 @@ var isOptional = function isOptional(category) {
   return (category || '').indexOf('annex b')>-1 || category === 'pre-strawman' || category === 'strawman (stage 0)';
 };
 
+var byTestSuite = function(suite) {
+  return function(browser) {
+    return Array.isArray(browser.test_suites) ? browser.test_suites.indexOf(suite)>-1 : true;
+  };
+};
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   var es5 = require('./data-es5');
+  es5.browsers = pickBy(es5.browsers, byTestSuite('es5'));
   handle(es5);
   var es6 = require('./data-es6');
+  es6.browsers = pickBy(es6.browsers, byTestSuite('es6'));
   handle(es6);
   var es2016plus = require('./data-es2016plus');
+  es2016plus.browsers = pickBy(es2016plus.browsers, byTestSuite('es2016plus'));
   handle(es2016plus);
   var esnext = require('./data-esnext');
+  esnext.browsers = pickBy(esnext.browsers, byTestSuite('esnext'));
   handle(esnext);
-  handle(require('./data-esintl'));
-  handle(require('./data-non-standard'));
+  var esintl = require('./data-esintl');
+  esintl.browsers = pickBy(esintl.browsers, byTestSuite('esintl'));
+  handle(esintl);
+  var nonStandard = require('./data-non-standard');
+  nonStandard.browsers = pickBy(nonStandard.browsers, byTestSuite('non-standard'));
+  handle(nonStandard);
 
   // ES6 compilers
   if (!useCompilers) {
@@ -276,7 +291,7 @@ process.nextTick(function () {
       target_file: 'esnext/compilers/babel-core-js.html',
       polyfills: ['node_modules/babel-polyfill/browser.js'],
       compiler: function(code) {
-        return babel.transform(code, {presets: ['es2015', 'babel-preset-stage-0']}).code;
+        return babel.transform(code, {presets: ['es2015', 'es2016', 'es2017', 'babel-preset-stage-0']}).code;
       },
     },
     {
@@ -316,7 +331,7 @@ process.nextTick(function () {
       target_file: 'es2016plus/compilers/babel-core-js.html',
       polyfills: ['node_modules/babel-polyfill/browser.js'],
       compiler: function(code) {
-        return babel.transform(code, {presets: ['es2015', 'babel-preset-stage-0']}).code;
+        return babel.transform(code, {presets: ['es2015', 'es2016', 'es2017']}).code;
       },
     },
     {
@@ -400,11 +415,16 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid;
-    // For each browser, check if the previous browser has the same
-    // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
     for (bid in rawBrowsers) {
+      // For browsers that are essentially equal to other browsers,
+      // copy over the results.
       browser = rawBrowsers[bid];
-      if (prevBrowser &&
+      if (browser.equals && res[bid] === undefined) {
+        result = res[browser.equals];
+        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result;
+      // For each browser, check if the previous browser has the same
+      // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
+      } else if (prevBrowser &&
           (prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'') ||
           (browser.family !== undefined && prevBrowser.family === browser.family))) {
         // For each test, check if the previous browser has a result
@@ -417,15 +437,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }
       prevBrowser = browser;
       prevBid = bid;
-    }
-    // For browsers that are essentially equal to other browsers,
-    // copy over the results.
-    for (bid in rawBrowsers) {
-      browser = rawBrowsers[bid];
-      if (browser.equals) {
-        result = res[browser.equals];
-        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result; 
-      }
     }
   }
 

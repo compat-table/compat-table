@@ -1,4 +1,4 @@
-var browsers = require('./esnext-browsers');
+var browsers = require('./environments');
 
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
@@ -515,7 +515,7 @@ exports.tests = [
       edge14: true,
       firefox27: true,
       chrome39: true,
-      node: flag,
+      node012: flag,
       node4: true,
       safari10: true,
       safaritp: true,
@@ -683,7 +683,7 @@ exports.tests = [
         ie11: true,
         firefox4: true,
         chrome30: true,
-        node: true,
+        node012: true,
         iojs: true,
         safari51: true,
         safari9: true,
@@ -711,7 +711,7 @@ exports.tests = [
           firefox36: true,
           chrome30: flag,
           chrome38: true,
-          node: true,
+          node012: true,
           iojs: true,
           safari9: true,
           safaritp: true,
@@ -1134,7 +1134,7 @@ exports.tests = [
       safari9: false,
       safaritp: true,
       webkit: true,
-      node: true,
+      node012: true,
       android40: true,
       ios51: true,
     },
