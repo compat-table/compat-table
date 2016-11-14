@@ -804,7 +804,7 @@ exports.tests = [
         firefox3_6: true,
         firefox4: true,
         chrome30: true,
-        node: true,
+        node012: true,
         iojs: true,
         safari51: true,
         safari9: true,
@@ -829,7 +829,7 @@ exports.tests = [
         firefox3_6: true,
         firefox4: true,
         chrome30: true,
-        node: true,
+        node012: true,
         iojs: true,
         safari51: true,
         safari9: true,
@@ -872,8 +872,9 @@ exports.tests = [
     return typeof global === 'object' && global && !global.lacksGlobal && global.__system_global_test__ === 42;
   */},
   res: {
-    node: true,
+    node012: true,
     node4: true,
+    node6: false,
   }
 },
 {

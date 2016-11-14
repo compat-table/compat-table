@@ -1187,7 +1187,7 @@ return new Function(&quot;a = 1&quot;, &quot;b = 2&quot;,
 <td class="tally" data-browser="jxa" data-tally="0">0/5</td>
 <td class="tally" data-browser="node012" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/5</td>
-<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="0.8">0/5</td>
+<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="1">0/5</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0" data-flagged-tally="1">0/5</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">5/5</td>
 <td class="tally" data-browser="node65" data-tally="1">5/5</td>
@@ -1519,7 +1519,7 @@ return (function (...args) {
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="no flagged obsolete" data-browser="node5">Flag</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -1676,7 +1676,7 @@ return new Function(&quot;a&quot;, &quot;...b&quot;,
 <td class="tally" data-browser="jxa" data-tally="0.7333333333333333" style="background-color:hsl(88,53%,50%)">11/15</td>
 <td class="tally" data-browser="node012" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/15</td>
-<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="0.5333333333333333">0/15</td>
+<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="1">0/15</td>
 <td class="tally obsolete" data-browser="node5" data-tally="1">15/15</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">15/15</td>
 <td class="tally" data-browser="node65" data-tally="1">15/15</td>
@@ -1834,7 +1834,7 @@ return [...[1, 2, 3]][2] === 3;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -1994,7 +1994,7 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; &apos;&apos; 
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -2152,7 +2152,7 @@ return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -2310,7 +2310,7 @@ return [...&quot;&#x20BB7;&#x20BB6;&quot;][0] === &quot;&#x20BB7;&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -2470,7 +2470,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -2630,7 +2630,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -2790,7 +2790,7 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no flagged" data-browser="node4">Flag</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -14641,7 +14641,7 @@ return true;
 <td class="tally" data-browser="jxa" data-tally="0">0/13</td>
 <td class="tally" data-browser="node012" data-tally="0" data-flagged-tally="0.23076923076923078">0/13</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0" data-flagged-tally="0.23076923076923078">0/13</td>
-<td class="tally" data-browser="node4" data-tally="0">0/13</td>
+<td class="tally" data-browser="node4" data-tally="0.6923076923076923" style="background-color:hsl(83,55%,50%)" data-flagged-tally="0.8461538461538461">9/13</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.7692307692307693" style="background-color:hsl(92,52%,50%)" data-flagged-tally="0.9230769230769231">10/13</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">13/13</td>
 <td class="tally" data-browser="node65" data-tally="1">13/13</td>
@@ -14720,7 +14720,7 @@ return (() =&gt; 5)() === 5;
 <td class="no" data-browser="jxa">No</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -14800,7 +14800,7 @@ return (b(&quot;fee fie foe &quot;) === &quot;fee fie foe foo&quot;);
 <td class="no" data-browser="jxa">No</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -14880,7 +14880,7 @@ return (c(6, 5, 4, 3, 2) === &quot;65432&quot;);
 <td class="no" data-browser="jxa">No</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -14961,7 +14961,7 @@ return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;)
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15042,7 +15042,7 @@ return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15123,7 +15123,7 @@ return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15203,7 +15203,7 @@ return f(6) === 5;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15284,7 +15284,7 @@ return (() =&gt; {
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15445,7 +15445,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15537,7 +15537,7 @@ return new C instanceof C &amp;&amp; received === &apos;foo&apos;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15627,7 +15627,7 @@ return arrow() === &quot;quux&quot;;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -15785,7 +15785,7 @@ return new C()() === C &amp;&amp; C()() === undefined;
 <td class="tally" data-browser="jxa" data-tally="0.75" style="background-color:hsl(90,53%,50%)">18/24</td>
 <td class="tally" data-browser="node012" data-tally="0">0/24</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/24</td>
-<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="0.75">0/24</td>
+<td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="0.9583333333333334">0/24</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0" data-flagged-tally="1">0/24</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">24/24</td>
 <td class="tally" data-browser="node65" data-tally="1">24/24</td>
@@ -16441,7 +16441,7 @@ return typeof C.prototype.method === &quot;function&quot;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -16695,7 +16695,7 @@ return typeof C.method === &quot;function&quot;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -16865,7 +16865,7 @@ return new C().foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -17035,7 +17035,7 @@ return C.foo === &quot;foo&quot; &amp;&amp; baz;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -17204,7 +17204,7 @@ try {
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -18641,7 +18641,7 @@ return passed;
 <td class="tally" data-browser="jxa" data-tally="0">0/27</td>
 <td class="tally" data-browser="node012" data-tally="0" data-flagged-tally="0.6296296296296297">0/27</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0" data-flagged-tally="0.6296296296296297">0/27</td>
-<td class="tally" data-browser="node4" data-tally="0.7037037037037037" style="background-color:hsl(84,55%,50%)" data-flagged-tally="0.7777777777777778">19/27</td>
+<td class="tally" data-browser="node4" data-tally="0.7407407407407407" style="background-color:hsl(88,53%,50%)" data-flagged-tally="0.8518518518518519">20/27</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.7407407407407407" style="background-color:hsl(88,53%,50%)" data-flagged-tally="0.8518518518518519">20/27</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">27/27</td>
 <td class="tally" data-browser="node65" data-tally="1">27/27</td>
@@ -19262,7 +19262,7 @@ return passed;
 <td class="no" data-browser="jxa">No</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -20977,7 +20977,7 @@ return passed;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
 <td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -21143,7 +21143,7 @@ try {
 <td class="tally" data-browser="jxa" data-tally="1">46/46</td>
 <td class="tally" data-browser="node012" data-tally="0.5" style="background-color:hsl(60,64%,50%)">23/46</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.5" style="background-color:hsl(60,64%,50%)">23/46</td>
-<td class="tally" data-browser="node4" data-tally="0.5" style="background-color:hsl(60,64%,50%)">23/46</td>
+<td class="tally" data-browser="node4" data-tally="0.9347826086956522" style="background-color:hsl(112,44%,50%)">43/46</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.9347826086956522" style="background-color:hsl(112,44%,50%)">43/46</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.9347826086956522" style="background-color:hsl(112,44%,50%)" data-flagged-tally="0.9782608695652174">43/46</td>
 <td class="tally" data-browser="node65" data-tally="1">46/46</td>
@@ -22803,7 +22803,7 @@ return true;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -22992,7 +22992,7 @@ typeof Float64Array.from === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23079,7 +23079,7 @@ typeof Float64Array.of === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23253,7 +23253,7 @@ typeof Float64Array.prototype.join === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23340,7 +23340,7 @@ typeof Float64Array.prototype.indexOf === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23427,7 +23427,7 @@ typeof Float64Array.prototype.lastIndexOf === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23514,7 +23514,7 @@ typeof Float64Array.prototype.slice === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23601,7 +23601,7 @@ typeof Float64Array.prototype.every === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23688,7 +23688,7 @@ typeof Float64Array.prototype.filter === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23775,7 +23775,7 @@ typeof Float64Array.prototype.forEach === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23862,7 +23862,7 @@ typeof Float64Array.prototype.map === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -23949,7 +23949,7 @@ typeof Float64Array.prototype.reduce === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24036,7 +24036,7 @@ typeof Float64Array.prototype.reduceRight === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24123,7 +24123,7 @@ typeof Float64Array.prototype.reverse === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24210,7 +24210,7 @@ typeof Float64Array.prototype.some === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24297,7 +24297,7 @@ typeof Float64Array.prototype.sort === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24384,7 +24384,7 @@ typeof Float64Array.prototype.copyWithin === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24471,7 +24471,7 @@ typeof Float64Array.prototype.find === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24558,7 +24558,7 @@ typeof Float64Array.prototype.findIndex === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -24645,7 +24645,7 @@ typeof Float64Array.prototype.fill === &quot;function&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -25156,7 +25156,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;
 <td class="tally" data-browser="jxa" data-tally="0.9473684210526315" style="background-color:hsl(113,44%,50%)">18/19</td>
 <td class="tally" data-browser="node012" data-tally="0.6842105263157895" style="background-color:hsl(82,55%,50%)" data-flagged-tally="0.7368421052631579">13/19</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.6842105263157895" style="background-color:hsl(82,55%,50%)" data-flagged-tally="0.7368421052631579">13/19</td>
-<td class="tally" data-browser="node4" data-tally="0.8421052631578947" style="background-color:hsl(101,48%,50%)">16/19</td>
+<td class="tally" data-browser="node4" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)">17/19</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)">17/19</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)" data-flagged-tally="0.9473684210526315">17/19</td>
 <td class="tally" data-browser="node65" data-tally="1">19/19</td>
@@ -26641,7 +26641,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -26797,7 +26797,7 @@ return &apos;get&apos; in prop &amp;&amp; Map[Symbol.species] === Map;
 <td class="tally" data-browser="jxa" data-tally="0.9473684210526315" style="background-color:hsl(113,44%,50%)">18/19</td>
 <td class="tally" data-browser="node012" data-tally="0.6842105263157895" style="background-color:hsl(82,55%,50%)" data-flagged-tally="0.7368421052631579">13/19</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.6842105263157895" style="background-color:hsl(82,55%,50%)" data-flagged-tally="0.7368421052631579">13/19</td>
-<td class="tally" data-browser="node4" data-tally="0.8421052631578947" style="background-color:hsl(101,48%,50%)">16/19</td>
+<td class="tally" data-browser="node4" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)">17/19</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)">17/19</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.8947368421052632" style="background-color:hsl(107,46%,50%)" data-flagged-tally="0.9473684210526315">17/19</td>
 <td class="tally" data-browser="node65" data-tally="1">19/19</td>
@@ -28287,7 +28287,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -39624,7 +39624,7 @@ with (a) {
 <td class="tally" data-browser="jxa" data-tally="1">4/4</td>
 <td class="tally" data-browser="node012" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
-<td class="tally" data-browser="node4" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
+<td class="tally" data-browser="node4" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="node5" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">4/4</td>
 <td class="tally" data-browser="node65" data-tally="1">4/4</td>
@@ -39704,7 +39704,7 @@ return &quot;a&quot; in o &amp;&amp; &quot;b&quot; in o &amp;&amp; &quot;c&quot;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -40027,7 +40027,7 @@ return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 <td class="tally" data-browser="jxa" data-tally="0.8235294117647058" style="background-color:hsl(98,49%,50%)">14/17</td>
 <td class="tally" data-browser="node012" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)">2/17</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.11764705882352941" style="background-color:hsl(14,80%,50%)">2/17</td>
-<td class="tally" data-browser="node4" data-tally="0.29411764705882354" style="background-color:hsl(35,73%,50%)" data-flagged-tally="0.5294117647058824">5/17</td>
+<td class="tally" data-browser="node4" data-tally="0.35294117647058826" style="background-color:hsl(42,70%,50%)" data-flagged-tally="0.5882352941176471">6/17</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.35294117647058826" style="background-color:hsl(42,70%,50%)" data-flagged-tally="0.5882352941176471">6/17</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.6470588235294118" style="background-color:hsl(77,57%,50%)" data-flagged-tally="1">11/17</td>
 <td class="tally" data-browser="node65" data-tally="1">17/17</td>
@@ -40348,7 +40348,7 @@ return foo.bind({}).name === &quot;bound foo&quot; &amp;&amp;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -41722,7 +41722,7 @@ return typeof String.fromCodePoint === &apos;function&apos;;
 <td class="tally" data-browser="jxa" data-tally="1">10/10</td>
 <td class="tally" data-browser="node012" data-tally="0.1" style="background-color:hsl(12,81%,50%)" data-flagged-tally="0.8">1/10</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.1" style="background-color:hsl(12,81%,50%)" data-flagged-tally="0.8">1/10</td>
-<td class="tally" data-browser="node4" data-tally="0.9" style="background-color:hsl(108,46%,50%)">9/10</td>
+<td class="tally" data-browser="node4" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="node5" data-tally="1">10/10</td>
 <td class="tally obsolete" data-browser="node64" data-tally="1">10/10</td>
 <td class="tally" data-browser="node65" data-tally="1">10/10</td>
@@ -42536,7 +42536,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43163,7 +43163,7 @@ return &apos;get&apos; in prop &amp;&amp; RegExp[Symbol.species] === RegExp;
 <td class="tally" data-browser="jxa" data-tally="0.7272727272727273" style="background-color:hsl(87,54%,50%)">8/11</td>
 <td class="tally" data-browser="node012" data-tally="0">0/11</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/11</td>
-<td class="tally" data-browser="node4" data-tally="0">0/11</td>
+<td class="tally" data-browser="node4" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)">9/11</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.8181818181818182" style="background-color:hsl(98,50%,50%)" data-flagged-tally="0.9090909090909091">9/11</td>
 <td class="tally" data-browser="node65" data-tally="1">11/11</td>
@@ -43242,7 +43242,7 @@ return Array.from({ 0: &quot;foo&quot;, 1: &quot;bar&quot;, length: 2 }) + &apos
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43322,7 +43322,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43402,7 +43402,7 @@ return Array.from(iterable) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43482,7 +43482,7 @@ return Array.from(Object.create(iterable)) + &apos;&apos; === &quot;1,2,3&quot;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43563,7 +43563,7 @@ return Array.from({ 0: &quot;foo&quot;, 1: &quot;bar&quot;, length: 2 }, functio
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43645,7 +43645,7 @@ return Array.from(iterable, function(e, i) {
 <td class="no" data-browser="jxa">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43727,7 +43727,7 @@ return Array.from(iterable, function(e, i) {
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43809,7 +43809,7 @@ return Array.from(Object.create(iterable), function(e, i) {
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -43975,7 +43975,7 @@ return typeof Array.of === &apos;function&apos; &amp;&amp;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -44131,7 +44131,7 @@ return &apos;get&apos; in prop &amp;&amp; Array[Symbol.species] === Array;
 <td class="tally" data-browser="jxa" data-tally="1">10/10</td>
 <td class="tally" data-browser="node012" data-tally="0.5" style="background-color:hsl(60,64%,50%)" data-flagged-tally="0.8">5/10</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0.5" style="background-color:hsl(60,64%,50%)" data-flagged-tally="0.8">5/10</td>
-<td class="tally" data-browser="node4" data-tally="0.4" style="background-color:hsl(48,68%,50%)" data-flagged-tally="0.7">4/10</td>
+<td class="tally" data-browser="node4" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally obsolete" data-browser="node5" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.8" style="background-color:hsl(96,50%,50%)">8/10</td>
 <td class="tally" data-browser="node65" data-tally="1">10/10</td>
@@ -44210,7 +44210,7 @@ return typeof Array.prototype.copyWithin === &apos;function&apos;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -44289,7 +44289,7 @@ return typeof Array.prototype.find === &apos;function&apos;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no flagged" data-browser="node4">Flag</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -44368,7 +44368,7 @@ return typeof Array.prototype.findIndex === &apos;function&apos;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no flagged" data-browser="node4">Flag</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -44447,7 +44447,7 @@ return typeof Array.prototype.fill === &apos;function&apos;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
-<td class="no flagged" data-browser="node4">Flag</td>
+<td class="yes" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node5">Yes</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -44605,7 +44605,7 @@ return typeof Array.prototype.values === &apos;function&apos;;
 <td class="yes" data-browser="jxa">Yes</td>
 <td class="yes" data-browser="node012">Yes</td>
 <td class="yes obsolete" data-browser="iojs">Yes</td>
-<td class="no" data-browser="node4">No<a href="#array-prototype-iterator-note"><sup>[25]</sup></a></td>
+<td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
 <td class="no obsolete" data-browser="node64">No<a href="#array-prototype-iterator-note"><sup>[25]</sup></a></td>
 <td class="yes" data-browser="node65">Yes</td>
@@ -47151,7 +47151,7 @@ return tp.call(Object(2), &quot;number&quot;) === 2
 <td class="tally" data-browser="node012" data-tally="0">0/11</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/11</td>
 <td class="tally" data-browser="node4" data-tally="0" data-flagged-tally="0.36363636363636365">0/11</td>
-<td class="tally obsolete" data-browser="node5" data-tally="0" data-flagged-tally="0.2727272727272727">0/11</td>
+<td class="tally obsolete" data-browser="node5" data-tally="0" data-flagged-tally="0.36363636363636365">0/11</td>
 <td class="tally obsolete" data-browser="node64" data-tally="0.5454545454545454" style="background-color:hsl(65,62%,50%)" data-flagged-tally="1">6/11</td>
 <td class="tally" data-browser="node65" data-tally="1">11/11</td>
 <td class="tally" data-browser="node7" data-tally="1">11/11</td>
@@ -47479,7 +47479,7 @@ return Array.isArray(new C());
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no strict" title="Support for this feature incorrectly requires strict mode." data-browser="node4">Strict</td>
-<td class="no obsolete" data-browser="node5">No</td>
+<td class="no strict obsolete" title="Support for this feature incorrectly requires strict mode." data-browser="node5">Strict</td>
 <td class="yes obsolete" data-browser="node64">Yes</td>
 <td class="yes" data-browser="node65">Yes</td>
 <td class="yes" data-browser="node7">Yes</td>

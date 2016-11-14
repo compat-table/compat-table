@@ -415,11 +415,16 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
   function interpolateResults(res) {
     var browser, prevBrowser, result, prevResult, bid, prevBid;
-    // For each browser, check if the previous browser has the same
-    // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
     for (bid in rawBrowsers) {
+      // For browsers that are essentially equal to other browsers,
+      // copy over the results.
       browser = rawBrowsers[bid];
-      if (prevBrowser &&
+      if (browser.equals && res[bid] === undefined) {
+        result = res[browser.equals];
+        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result;
+      // For each browser, check if the previous browser has the same
+      // browser full name (e.g. Firefox) or family name (e.g. Chakra) as this one.
+      } else if (prevBrowser &&
           (prevBrowser.full.replace(/,.+$/,'') === browser.full.replace(/,.+$/,'') ||
           (browser.family !== undefined && prevBrowser.family === browser.family))) {
         // For each test, check if the previous browser has a result
@@ -432,15 +437,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }
       prevBrowser = browser;
       prevBid = bid;
-    }
-    // For browsers that are essentially equal to other browsers,
-    // copy over the results.
-    for (bid in rawBrowsers) {
-      browser = rawBrowsers[bid];
-      if (browser.equals) {
-        result = res[browser.equals];
-        res[bid] = browser.ignore_flagged && result === 'flagged' ? false : result; 
-      }
     }
   }
 
