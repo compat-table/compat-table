@@ -587,7 +587,7 @@ module.exports = {
     platformtype: 'engine',
     test_suites: ['es6'],
   },
-  node: {
+  node012: {
     full: 'Node.js',
     family: 'Node.js',
     short: 'Node 0.12',
