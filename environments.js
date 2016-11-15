@@ -317,20 +317,20 @@ module.exports = {
   firefox49: {
     full: 'Firefox',
     short: 'FF 49',
+    obsolete: true,
   },
   firefox50: {
     full: 'Firefox',
-    short: 'FF 50 Beta',
-    unstable: true,
+    short: 'FF 50',
   },
   firefox51: {
     full: 'Firefox',
-    short: 'FF 51 Aurora',
+    short: 'FF 51 Beta',
     unstable: true,
   },
   firefox52: {
     full: 'Firefox',
-    short: 'FF 52 Nightly',
+    short: 'FF 52 Aurora',
     unstable: true,
   },
   opera: {
