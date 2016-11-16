@@ -549,7 +549,7 @@ module.exports = {
     obsolete: false,
   },
   safaritp: {
-    full: 'Safari Technology Preview Release 17',
+    full: 'Safari Technology Preview Release 18',
     short: 'SF TP',
     unstable: true,
   },
