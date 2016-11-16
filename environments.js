@@ -333,6 +333,11 @@ module.exports = {
     short: 'FF 52 Aurora',
     unstable: true,
   },
+  firefox53: {
+    full: 'Firefox',
+    short: 'FF 53 Nightly',
+    unstable: true,
+  },
   opera: {
     full: 'Opera 12',
     short: 'OP 12',
