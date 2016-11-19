@@ -518,6 +518,12 @@ module.exports = {
     note_id: 'experimental-flag',
     unstable: true,
   },
+  chrome57: {
+    full: 'Chrome, Opera',
+    short: 'CH&nbsp;57,<br>OP&nbsp;44',
+    note_id: 'experimental-flag',
+    unstable: true,
+  },
   safari51: {
     full: 'Safari',
     short: 'SF<br />5.1',
