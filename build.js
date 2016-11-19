@@ -23,6 +23,8 @@
 require('object.assign').shim();
 var pickBy = require('lodash.pickby');
 
+var environments = require('./environments');
+
 var fs = require('fs');
 var path = require('path');
 var os = require('os');
@@ -45,22 +47,22 @@ var byTestSuite = function(suite) {
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
   var es5 = require('./data-es5');
-  es5.browsers = pickBy(es5.browsers, byTestSuite('es5'));
+  es5.browsers = pickBy(environments, byTestSuite('es5'));
   handle(es5);
   var es6 = require('./data-es6');
-  es6.browsers = pickBy(es6.browsers, byTestSuite('es6'));
+  es6.browsers = pickBy(environments, byTestSuite('es6'));
   handle(es6);
   var es2016plus = require('./data-es2016plus');
-  es2016plus.browsers = pickBy(es2016plus.browsers, byTestSuite('es2016plus'));
+  es2016plus.browsers = pickBy(environments, byTestSuite('es2016plus'));
   handle(es2016plus);
   var esnext = require('./data-esnext');
-  esnext.browsers = pickBy(esnext.browsers, byTestSuite('esnext'));
+  esnext.browsers = pickBy(environments, byTestSuite('esnext'));
   handle(esnext);
   var esintl = require('./data-esintl');
-  esintl.browsers = pickBy(esintl.browsers, byTestSuite('esintl'));
+  esintl.browsers = pickBy(environments, byTestSuite('esintl'));
   handle(esintl);
   var nonStandard = require('./data-non-standard');
-  nonStandard.browsers = pickBy(nonStandard.browsers, byTestSuite('non-standard'));
+  nonStandard.browsers = pickBy(environments, byTestSuite('non-standard'));
   handle(nonStandard);
 
   // ES6 compilers

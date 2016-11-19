@@ -1,271 +1,6 @@
-// exports browsers and tests
-
 exports.name = 'Non-standard';
 exports.target_file = 'non-standard/index.html';
 exports.skeleton_file = 'non-standard/skeleton.html';
-
-exports.browsers = {
-  ie7: {
-    full: 'Internet Explorer 7-10',
-    short: 'IE 7-10',
-    family: 'Chakra',
-    obsolete: true
-  },
-  ie11: {
-    full: 'Internet Explorer 11',
-    short: 'IE 11',
-    family: 'Chakra',
-    obsolete: false
-  },
-  edge13: {
-    full: 'Edge 13',
-    short: 'Edge 13',
-    family: 'Chakra',
-    obsolete: false
-  },
-  iojs: {
-    full: 'io.js 1.0.0',
-    short: 'io.js',
-    platformtype: 'engine',
-  },
-  firefox2: {
-    full: 'Firefox 2',
-    short: 'FF 2',
-    obsolete: true
-  },
-  firefox3: {
-    full: 'Firefox 3',
-    short: 'FF 3',
-    obsolete: true
-  },
-  firefox3_5: {
-    full: 'Firefox 3.5',
-    short: 'FF 3.5',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox3_6: {
-    full: 'Firefox 3.6',
-    short: '3.6',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox4: {
-    full: 'Firefox 4.0b12pre',
-    short: 'FF 4',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox5: {
-    full: 'Firefox 5-6',
-    short: 'FF 5-6',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox7: {
-    full: 'Firefox 7-11',
-    short: 'FF 7-11',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox12: {
-    full: 'Firefox 12',
-    short: 'FF 12',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox16: {
-    full: 'Firefox 16',
-    short: 'FF 16',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox17: {
-    full: 'Firefox 17',
-    short: 'FF 17',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox20: {
-    full: 'Firefox 20-29',
-    short: 'FF 20-29',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox30: {
-    full: 'Firefox 30-36',
-    short: 'FF 30-36',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox37: {
-    full: 'Firefox 37-43',
-    short: 'FF 37-43',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox44: {
-    full: 'Firefox',
-    short: 'FF 44',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox45: {
-    full: 'Firefox',
-    short: 'FF 45 ESR',
-    family: 'SpiderMonkey',
-    obsolete: false // ESR (EOL at Mar 2017)
-  },
-  firefox46: {
-    full: 'Firefox 46-48',
-    short: 'FF 46-48',
-    family: 'SpiderMonkey',
-    obsolete: true
-  },
-  firefox49: {
-    full: 'Firefox 49+',
-    short: 'FF 49+',
-    family: 'SpiderMonkey',
-    obsolete: false
-  },
-  safari3: {
-    full: 'Safari 3.2',
-    short: 'SF 3.2',
-    family: 'JavaScriptCore',
-    obsolete: true
-  },
-  safari4: {
-    full: 'Safari 4.0.5',
-    short: 'SF 4',
-    family: 'JavaScriptCore',
-    obsolete: true
-  },
-  safari5: {
-    full: 'Safari 5',
-    short: 'SF 5',
-    family: 'JavaScriptCore',
-    obsolete: true
-  },
-  safari7: {
-    full: 'Safari 7.0',
-    short: 'SF 7.0',
-    family: 'JavaScriptCore',
-    obsolete: true
-  },
-  safari71_8: {
-    full: 'Safari 7.1-8',
-    short: 'SF 7.1-8',
-    family: 'JavaScriptCore',
-    obsolete: true
-  },
-  safari9: {
-    full: 'Safari 9',
-    short: 'SF 9',
-    family: 'JavaScriptCore',
-    obsolete: false
-  },
-  safari10: {
-    full: 'Safari 10',
-    short: 'SF 10',
-    family: 'JavaScriptCore',
-    obsolete: false
-  },
-  safaritp: {
-    full: 'Safari Technology Preview Release 18',
-    short: 'SF TP',
-    family: 'JavaScriptCore',
-    unstable: true
-  },
-  webkit: {
-    full: 'Webkit r208586 (November 11, 2016)',
-    short: 'WebKit',
-    family: 'JavaScriptCore',
-    unstable: true
-  },
-  chrome7: {
-    full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev)',
-    short: 'CH 7-10',
-    family: 'V8',
-    obsolete: true
-  },
-  chrome11: {
-    full: 'Chrome 11-35',
-    short: 'CH 11-35',
-    family: 'V8',
-    obsolete: true
-  },
-  chrome36: {
-    full: 'Chrome 36-48',
-    short: 'CH 36-48',
-    family: 'V8',
-    obsolete: true
-  },
-  chrome49: {
-    full: 'Chrome 49+',
-    short: 'CH 49+',
-    family: 'V8',
-    obsolete: false
-  },
-  opera10_10: {
-    full: 'Opera 10.10',
-    short: 'OP 10.10',
-    family: 'Carakan',
-    obsolete: true
-  },
-  opera10_50: {
-    full: 'Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156)',
-    short: 'OP 10.50-11.10',
-    family: 'Carakan',
-    obsolete: true
-  },
-  konq44: {
-    full: 'Konqueror 4.4',
-    short: 'Konq 4.4',
-    family: 'KJS',
-    obsolete: true
-  },
-  konq49: {
-    full: 'Konqueror 4.9',
-    short: 'Konq 4.9',
-    family: 'KJS',
-    obsolete: false
-  },
-  besen: {
-    full: 'Bero\'s EcmaScript Engine (version 1.0.0.489)',
-    short: 'BESEN',
-    link: 'http://besen.sourceforge.net/',
-    obsolete: false,
-    platformtype: 'engine',
-  },
-  rhino: {
-    full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
-    short: 'Rhino 1.7',
-    obsolete: false,
-    platformtype: 'engine',
-  },
-  phantom: {
-    full: 'PhantomJS 1.9.7 AppleWebKit/534.34',
-    short: 'Phantom',
-    obsolete: false,
-    platformtype: 'engine',
-  },
-  android40: {
-    full: 'Android Browser',
-    short: 'Android 4.0',
-    platformtype: 'mobile',
-    obsolete: true,
-  },
-  android41: {
-    full: 'Android Browser',
-    short: 'Android 4.1-4.4',
-    platformtype: 'mobile',
-  },
-  android50: {
-    full: 'Android Browser',
-    short: 'Android 5.0+',
-    platformtype: 'mobile',
-  },
-};
 
 exports.tests = [
 {
@@ -308,7 +43,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false,
   }
 },
@@ -360,7 +95,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: true,
+    rhino17: true,
     phantom: false
   },
   separator: 'after'
@@ -406,7 +141,7 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: true,
     android40: true,
   }
@@ -444,7 +179,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -492,7 +227,7 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: true,
     android40: true,
   }
@@ -537,7 +272,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
   separator: 'after'
@@ -575,7 +310,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -611,7 +346,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -658,7 +393,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -701,7 +436,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -744,7 +479,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   },
   separator: 'after'
@@ -790,7 +525,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -848,7 +583,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -884,7 +619,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -926,7 +661,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -963,7 +698,7 @@ exports.tests = [
     konq44: null,
     konq49: false,
     besen: null,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
   separator: 'after'
@@ -1023,7 +758,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1086,7 +821,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1157,7 +892,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   },
 },
@@ -1201,7 +936,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1269,7 +1004,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1316,7 +1051,7 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: true,
     android40: true,
   }
@@ -1365,7 +1100,7 @@ exports.tests = [
     konq44: true,
     konq49: true,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: true,
     android40: true,
   }
@@ -1402,7 +1137,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -1437,7 +1172,7 @@ exports.tests = [
     konq44: null,
     konq49: true,
     besen: null,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
   separator: 'after'
@@ -1483,7 +1218,7 @@ exports.tests = [
     konq44: false,
     konq49: true,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: true,
     android40: true,
   }
@@ -1529,7 +1264,7 @@ exports.tests = [
     konq44: false,
     konq49: true,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: true,
     android40: true,
   }
@@ -1569,7 +1304,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: null,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1612,7 +1347,7 @@ exports.tests = [
     //konq44: false,
     //konq49: false,
     //besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   },
   separator: 'after'
@@ -1655,7 +1390,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
 },
@@ -1678,7 +1413,7 @@ exports.tests = [
     opera10_10: true,
     konq43: true,
     besen: true,
-    rhino: true,
+    rhino17: true,
     ejs: true,
     android40: true,
   },
@@ -1722,7 +1457,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1764,7 +1499,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1798,7 +1533,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: true,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
   separator: 'after'
@@ -1864,7 +1599,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false,
     android40: true,
   }
@@ -1909,7 +1644,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -1952,7 +1687,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   }
 },
@@ -1996,7 +1731,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: true,
+    rhino17: true,
     phantom: false
   }
 },
@@ -2032,7 +1767,7 @@ exports.tests = [
     konq44: false,
     konq49: false,
     besen: false,
-    rhino: false,
+    rhino17: false,
     phantom: false
   },
   separator: 'after'

@@ -1,5 +1,3 @@
-var browsers = require('./environments');
-
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
 exports.skeleton_file = 'es2016plus/skeleton.html';
@@ -42,8 +40,6 @@ var firefox = {
     note_html: "The feature is enabled by default only in Firefox Nightly."
   }
 };
-
-exports.browsers = browsers;
 
 exports.tests = [
   {
