@@ -413,6 +413,7 @@ exports.tests = [
           edge13: flag,
           edge14: flag,
           firefox52: true,
+          webkit: true,
         }
       },
       {
@@ -432,6 +433,7 @@ exports.tests = [
           edge13: flag,
           edge14: flag,
           firefox52: true,
+          webkit: true,
         }
       },
       {
@@ -449,6 +451,7 @@ exports.tests = [
           edge13: flag,
           edge14: flag,
           firefox52: true,
+          webkit: true,
         }
       }
     ]
@@ -1152,6 +1155,7 @@ exports.tests = [
      */},
     res: {
       chrome56: true,
+      webkit: true,
     },
   },
 ];
