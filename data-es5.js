@@ -5,301 +5,7 @@ var temp = {};
 exports.name = 'ES5';
 exports.target_file = 'es5/index.html';
 exports.skeleton_file = 'es5/skeleton.html';
-exports.browsers = {
-  es5shim: {
-    full: 'es5-shim',
-    short: 'es5-shim',
-    obsolete: false,
-    platformtype: 'compiler'
-  },
-  ie7: {
-    full: 'Internet Explorer 7',
-    family: 'Chakra',
-    short: 'IE 7',
-    obsolete: true
-  },
-  ie8: {
-    full: 'Internet Explorer 8',
-    family: 'Chakra',
-    short: 'IE 8',
-    obsolete: true
-  },
-  ie9: {
-    full: 'Internet Explorer 9',
-    family: 'Chakra',
-    short: 'IE 9',
-    obsolete: true
-  },
-  ie10: {
-    full: 'Internet Explorer 10',
-    family: 'Chakra',
-    short: 'IE 10',
-    obsolete: true
-  },
-  ie11: {
-    full: 'Internet Explorer 11',
-    family: 'Chakra',
-    short: 'IE 11',
-    obsolete: false
-  },
-  edge13: {
-    full: 'Edge 13+',
-    family: 'Chakra',
-    short: 'Edge 13+',
-    obsolete: false
-  },
-  firefox2: {
-    full: 'Firefox 2',
-    family: 'SpiderMonkey',
-    short: 'FF 2',
-    obsolete: true
-  },
-  firefox3: {
-    full: 'Firefox 3',
-    family: 'SpiderMonkey',
-    short: 'FF 3',
-    obsolete: true
-  },
-  firefox3_5: {
-    full: 'Firefox 3.5',
-    family: 'SpiderMonkey',
-    short: 'FF 3.5',
-    obsolete: true
-  },
-  firefox3_6: {
-    full: 'Firefox 3.6',
-    family: 'SpiderMonkey',
-    short: 'FF 3.6',
-    obsolete: true
-  },
-  firefox4: {
-    full: 'Firefox 4',
-    family: 'SpiderMonkey',
-    short: 'FF 4',
-    obsolete: true
-  },
-  firefox5: {
-    full: 'Firefox 5-7',
-    family: 'SpiderMonkey',
-    short: 'FF 5-7',
-    obsolete: true
-  },
-  firefox8: {
-    full: 'Firefox 8-20',
-    family: 'SpiderMonkey',
-    short: 'FF 8-20',
-    obsolete: true
-  },
-  firefox21: {
-    full: 'Firefox 21-45',
-    family: 'SpiderMonkey',
-    short: 'FF 21-45',
-    obsolete: false
-  },
-  firefox46: {
-    full: 'Firefox 46+',
-    family: 'SpiderMonkey',
-    short: 'FF 46+',
-    obsolete: false
-  },
-  safari3: {
-    full: 'Safari 3.2',
-    family: 'JavaScriptCore',
-    short: 'SF 3.2',
-    obsolete: true
-  },
-  safari4: {
-    full: 'Safari 4.0.5',
-    family: 'JavaScriptCore',
-    short: 'SF 4',
-    obsolete: true
-  },
-  safari5: {
-    full: 'Safari 5.0.5',
-    family: 'JavaScriptCore',
-    short: 'SF 5',
-    obsolete: true
-  },
-  safari51: {
-    full: 'Safari 5.1.4',
-    family: 'JavaScriptCore',
-    short: 'SF 5.1.4',
-    obsolete: true
-  },
-  safari6: {
-    full: 'Safari 6.0, Safari 7.0, Safari 7.1, Safari 8',
-    family: 'JavaScriptCore',
-    short: 'SF 6-8',
-    obsolete: true
-  },
-  safari9: {
-    full: 'Safari 9',
-    family: 'JavaScriptCore',
-    short: 'SF 9',
-    obsolete: false
-  },
-  safari10: {
-    full: 'Safari 10',
-    family: 'JavaScriptCore',
-    short: 'SF 10',
-    obsolete: false
-  },
-  safaritp: {
-    full: 'Safari Technology Preview Release 18',
-    family: 'JavaScriptCore',
-    short: 'SF TP',
-    unstable: true
-  },
-  webkit: {
-    full: 'Webkit r208897 (November 19, 2016)',
-    family: 'JavaScriptCore',
-    short: 'WebKit',
-    unstable: true
-  },
-  chrome5: {
-    full: 'Chrome 5 (5.0.375.127)',
-    family: 'V8',
-    short: 'CH 5',
-    obsolete: true
-  },
-  chrome6: {
-    full: 'Chrome 6 (6.0.472.55)',
-    family: 'V8',
-    short: 'CH 6',
-    obsolete: true
-  },
-  chrome7: {
-    full: 'Chrome 7 (7.0.517.5), Chrome 8, Chrome 9 (9.0.587.0 dev), Chrome 10, Chrome 11, Chrome 12 (12.0.742.91)',
-    family: 'V8',
-    short: 'CH 7-12',
-    obsolete: true
-  },
-  chrome13: {
-    full: 'Chrome 13 (13.0.782.107 beta), Chrome 14 (14.0.835.8 dev), Chrome 15, Chrome 16 (16.0.891.0 dev)',
-    family: 'V8',
-    short: 'CH 13-16',
-    obsolete: true
-  },
-  chrome19: {
-    full: 'Chrome 19 (19.0.1084.56 stable), Chrome 22',
-    family: 'V8',
-    short: 'CH 19-22',
-    obsolete: true
-  },
-  chrome23: {
-    full: 'Chrome 23-53, Opera 15-40',
-    family: 'V8',
-    short: 'CH 23-53,<br>OP 15-40',
-    obsolete: true
-  },
-  chrome54: {
-    full: 'Chrome 54+, Opera 41+',
-    family: 'V8',
-    short: 'CH 54+,<br>OP 41+',
-  },
-  opera10_10: {
-    full: 'Opera 10.10',
-    family: 'Carakan',
-    short: 'OP 10.1',
-    obsolete: true
-  },
-  opera10_50: {
-    full: 'Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156), Opera 11.10 (build 2048), Opera 11.11 (build 2109), Opera 11.50 (build 1074)',
-    family: 'Carakan',
-    short: 'OP 10.50-11.50',
-    obsolete: true
-  },
-  opera12: {
-    full: 'Opera 11.60 (build 1185), Opera 11.64 (build 1403), Opera 12 (build 1065)',
-    family: 'Carakan',
-    short: 'OP 11.60-OP 12',
-    obsolete: true
-  },
-  opera12_10: {
-    full: 'Opera 12.15',
-    family: 'Carakan',
-    short: 'OP 12.10',
-    obsolete: true
-  },
-  konq43: {
-    full: 'Konqueror 4.3',
-    family: 'KJS',
-    short: 'Konq 4.3',
-    obsolete: true
-  },
-  konq49: {
-    full: 'Konqueror 4.9',
-    family: 'KJS',
-    short: 'Konq 4.9',
-    obsolete: true
-  },
-  konq413: {
-    full: 'Konqueror 4.13',
-    family: 'KJS',
-    short: 'Konq 4.13',
-    obsolete: false
-  },
-  besen: {
-    full: 'Bero\'s EcmaScript Engine (version 1.0.0.489)',
-    short: 'BESEN',
-    link: 'http://besen.sourceforge.net/',
-    obsolete: false,
-    platformtype: 'engine',
-  },
-  rhino: {
-    full: 'Rhino 1.7 release 3 PRERELEASE 2010 01 14',
-    short: 'Rhino 1.7',
-    obsolete: false,
-    platform: 'engine',
-  },
-  phantom: {
-    full: 'PhantomJS 2.0',
-    short: 'PhantomJS 2.0',
-    obsolete: false,
-    platformtype: 'engine',
-    equals: 'safari6',
-  },
-  ejs: {
-    full: 'Echo JS',
-    short: 'EJS',
-    unstable: true,
-    platformtype: 'compiler',
-  },
-  android40: {
-    full: 'Android Browser',
-    family: 'Android',
-    short: 'Android 4.0',
-    platformtype: 'mobile',
-    obsolete: true,
-  },
-  android41: {
-    full: 'Android Browser',
-    family: 'Android',
-    short: 'Android 4.1 - 4.3',
-    platformtype: 'mobile',
-    obsolete: true,
-  },
-  android44: {
-    full: 'Android Browser',
-    family: 'Android',
-    short: 'Android 4.4+',
-    platformtype: 'mobile',
-    equals: 'chrome23',
-    ignore_flagged: true,
-  },
-  ios78: {
-    full: 'iOS Safari 7-9',
-    short: 'iOS 7-9',
-    equals: 'safari6',
-    platformtype: 'mobile',
-  },
-  ios10: {
-    full: 'iOS Safari 10',
-    short: 'iOS 10',
-    equals: 'safari10',
-    platformtype: 'mobile',
-  }
-};
+
 var sparseNote = {
   val: true,
   note_id: 'sparse_arrays',
@@ -324,7 +30,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -346,7 +52,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     },
@@ -369,7 +75,7 @@ exports.tests = [
       opera12_10: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -392,7 +98,7 @@ exports.tests = [
       opera12_10: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -417,7 +123,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: false,
+      rhino17: false,
       ejs: true,
       android40: true,
     },
@@ -442,7 +148,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -474,7 +180,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -494,7 +200,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -516,7 +222,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -539,7 +245,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -559,7 +265,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -579,7 +285,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -599,7 +305,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -619,7 +325,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -639,7 +345,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -659,7 +365,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -687,7 +393,7 @@ exports.tests = [
       opera12: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -709,7 +415,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     },
@@ -737,7 +443,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -758,7 +464,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -779,7 +485,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -800,7 +506,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -821,7 +527,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -842,7 +548,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -863,7 +569,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -884,7 +590,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -905,7 +611,7 @@ exports.tests = [
       opera10_50: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -926,7 +632,7 @@ exports.tests = [
       opera10_50: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     },
@@ -951,7 +657,7 @@ exports.tests = [
       opera10_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -974,7 +680,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     },
@@ -1001,7 +707,7 @@ exports.tests = [
       opera10_50: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: false,
       android40: true,
     }
@@ -1022,7 +728,7 @@ exports.tests = [
       opera10_50: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -1054,7 +760,7 @@ exports.tests = [
       opera12_10: true,
       konq43: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android40: true,
     }
@@ -1077,10 +783,10 @@ exports.tests = [
     opera12: true,
     konq413: true,
     besen: true,
-    rhino: true,
+    rhino17: true,
     phantom: true,
     ejs: true,
-    ios78: true,
+    ios7: true,
     android40: true,
   },
 },
@@ -1105,10 +811,10 @@ exports.tests = [
     konq49: true,
     konq413: true,
     besen: true,
-    rhino: true,
+    rhino17: true,
     phantom: true,
     ejs: true,
-    ios78: true,
+    ios7: true,
     android40: true,
   },
   separator: 'after'
@@ -1138,7 +844,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: false,
       android41: true,
     }
@@ -1164,7 +870,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: false,
       android41: true,
     }
@@ -1190,7 +896,7 @@ exports.tests = [
       konq49: true,
       konq413: true,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: false,
       android41: true,
     }
@@ -1236,7 +942,7 @@ exports.tests = [
       konq49: null,
       konq413: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: false,
     },
@@ -1265,7 +971,7 @@ exports.tests = [
       konq49: null,
       konq413: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: true,
     },
@@ -1289,7 +995,7 @@ exports.tests = [
       opera10_50: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -1313,7 +1019,7 @@ exports.tests = [
       konq49: false,
       konq413: false,
       besen: true,
-      rhino: false,
+      rhino17: false,
       ejs: true,
       android44: true,
     }
@@ -1338,7 +1044,7 @@ exports.tests = [
       opera12_10: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -1364,7 +1070,7 @@ exports.tests = [
       opera12_10: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -1392,7 +1098,7 @@ exports.tests = [
       konq49: false,
       konq413: false,
       besen: true,
-      rhino: true,
+      rhino17: true,
       ejs: true,
       android41: true,
     }
@@ -1418,7 +1124,7 @@ exports.tests = [
       opera10_50: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     }
@@ -1449,7 +1155,7 @@ exports.tests = [
       opera10_50: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     }
@@ -1478,7 +1184,7 @@ exports.tests = [
       opera10_50: true,
       konq43: null,
       besen: null,
-      rhino: null,
+      rhino17: null,
       ejs: null,
       android40: null,
     },
@@ -1509,7 +1215,7 @@ exports.tests = [
       besen: true,
       phantom: true,
       ejs: true,
-      ios78: true,
+      ios7: true,
       android41: true,
     }),
   },
@@ -1640,7 +1346,7 @@ exports.tests = [
       besen: true,
       phantom: true,
       ejs: true,
-      ios78: true,
+      ios7: true,
       android41: true,
     },
   },
@@ -1662,7 +1368,7 @@ exports.tests = [
       besen: true,
       phantom: true,
       ejs: true,
-      ios78: true,
+      ios7: true,
       android41: true,
     },
   },
@@ -1748,7 +1454,9 @@ exports.tests = [
       besen: true,
       phantom: true,
       ejs: true,
-      ios78: true,
+      ios7: true,
+      ios8: true,
+      ios9: true,
       android41: true,
     }
   }]

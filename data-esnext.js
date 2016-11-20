@@ -1,5 +1,3 @@
-exports.browsers = require('./environments');
-
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
