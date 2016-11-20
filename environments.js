@@ -875,7 +875,7 @@ module.exports = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
-    obsolete: false, // Long-term support ends December 2016.
+    obsolete: true, // Long-term support ends October 31, 2016.
     test_suites: ['es6', 'es2016plus', 'esnext', 'esintl'],
   },
   node012: {
@@ -885,7 +885,7 @@ module.exports = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     note_html: 'Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag',
-    obsolete: false, // Long-term support ends December 2016.
+    obsolete: false, // Long-term support ends December 31, 2016.
     test_suites: ['es6', 'es2016plus', 'esnext', 'esintl'],
   },
   iojs: {
@@ -904,7 +904,7 @@ module.exports = {
     equals: 'chrome44',
     platformtype: 'engine',
     note_id: 'harmony-flag',
-    obsolete: false, // Long-term support ends April 2018.
+    obsolete: false, // Long-term support ends April 1, 2018.
     test_suites: ['es6', 'es2016plus', 'esnext', 'esintl'],
   },
   node5: {
@@ -933,7 +933,7 @@ module.exports = {
     platformtype: 'engine',
     note_id: 'harmony-flag',
     equals: 'chrome51',
-    obsolete: false,
+    obsolete: false, // Long-term support ends April 18, 2019.
     test_suites: ['es6', 'es2016plus', 'esnext', 'esintl'],
   },
   node7: {

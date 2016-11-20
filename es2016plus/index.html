@@ -154,7 +154,7 @@
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 18">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r208586 (November 11, 2016)">WK</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
-<th class="platform node010 engine" data-browser="node010"><a href="#node010" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-note"><sup>[4]</sup></a></th>
+<th class="platform node010 engine obsolete" data-browser="node010"><a href="#node010" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-note"><sup>[4]</sup></a></th>
 <th class="platform node012 engine" data-browser="node012"><a href="#node012" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a><a href="#harmony-flag-note"><sup>[4]</sup></a></th>
 <th class="platform iojs engine obsolete" data-browser="iojs"><a href="#iojs" class="browser-name"><abbr title="io.js">io.js</abbr></a><a href="#harmony-flag-note"><sup>[4]</sup></a></th>
 <th class="platform node4 engine" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node.js">Node 4</abbr></a><a href="#harmony-flag-note"><sup>[4]</sup></a></th>
@@ -232,7 +232,7 @@
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
-<td class="tally" data-browser="node010" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/3</td>
 <td class="tally" data-browser="node012" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/3</td>
 <td class="tally" data-browser="node4" data-tally="0">0/3</td>
@@ -307,7 +307,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -382,7 +382,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -462,7 +462,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -534,7 +534,7 @@ return true;
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
-<td class="tally" data-browser="node010" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/3</td>
 <td class="tally" data-browser="node012" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/3</td>
 <td class="tally" data-browser="node4" data-tally="0">0/3</td>
@@ -613,7 +613,7 @@ return [1, 2, 3].includes(1)
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -710,7 +710,7 @@ return 24;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -790,7 +790,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -874,7 +874,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -962,7 +962,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no flagged" data-browser="node012">Flag</td>
 <td class="no flagged obsolete" data-browser="iojs">Flag</td>
 <td class="yes" data-browser="node4">Yes</td>
@@ -1042,7 +1042,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1118,7 +1118,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1195,7 +1195,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1277,7 +1277,7 @@ return passed;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1361,7 +1361,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1441,7 +1441,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1523,7 +1523,7 @@ return Array.isArray(e)
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1595,7 +1595,7 @@ return Array.isArray(e)
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally" data-browser="node010" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/2</td>
 <td class="tally" data-browser="node012" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
@@ -1678,7 +1678,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1756,7 +1756,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1828,7 +1828,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally" data-browser="node010" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/2</td>
 <td class="tally" data-browser="node012" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
@@ -1906,7 +1906,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -1984,7 +1984,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2056,7 +2056,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally" data-browser="node010" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/2</td>
 <td class="tally" data-browser="node012" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
@@ -2131,7 +2131,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2206,7 +2206,7 @@ return Math.min(1,2,3,) === 1;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2278,7 +2278,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
-<td class="tally" data-browser="node010" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/3</td>
 <td class="tally" data-browser="node012" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/3</td>
 <td class="tally" data-browser="node4" data-tally="0">0/3</td>
@@ -2355,7 +2355,7 @@ return (async function(){
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2432,7 +2432,7 @@ return (async function(){
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2507,7 +2507,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2581,7 +2581,7 @@ return (async () =&gt; 42 + await Promise.resolve(42))() instanceof Promise
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally" data-browser="node010" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/2</td>
 <td class="tally" data-browser="node012" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
 <td class="tally" data-browser="node4" data-tally="0">0/2</td>
@@ -2657,7 +2657,7 @@ return new C instanceof C;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2739,7 +2739,7 @@ return passed;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2819,7 +2819,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2897,7 +2897,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -2975,7 +2975,7 @@ return (function(){
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
@@ -3049,7 +3049,7 @@ return (function(){
 <td class="tally unstable" data-browser="safaritp" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">16/16</td>
 <td class="tally" data-browser="phantom" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
-<td class="tally not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
+<td class="tally obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
 <td class="tally not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0.625">10/16</td>
@@ -3129,7 +3129,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3210,7 +3210,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3291,7 +3291,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3371,7 +3371,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3452,7 +3452,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3533,7 +3533,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3615,7 +3615,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3697,7 +3697,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3780,7 +3780,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -3860,7 +3860,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -3939,7 +3939,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4021,7 +4021,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -4103,7 +4103,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -4186,7 +4186,7 @@ return foo() === &quot;bar&quot;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -4266,7 +4266,7 @@ return true;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4345,7 +4345,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4417,7 +4417,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally unstable" data-browser="safaritp" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">4/4</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/4</td>
-<td class="tally not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -4496,7 +4496,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4575,7 +4575,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4659,7 +4659,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4743,7 +4743,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -4819,7 +4819,7 @@ return i === 0;
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
-<td class="no not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no obsolete not-applicable" data-browser="node010" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="node012" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete not-applicable" data-browser="iojs" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="node4" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
