@@ -1,11 +1,7 @@
-require('object.assign').shim();
-var util = require('./data-common');
+var common = require('./data-common');
 
-var sparseNote = util.sparseNote;
+var sparseNote = common.sparseNote;
 
-var temp = {};
-
-// exports browsers and tests
 exports.name = 'ES5';
 exports.target_file = 'es5/index.html';
 exports.skeleton_file = 'es5/skeleton.html';
@@ -1203,12 +1199,10 @@ exports.tests = [
       }
       return true;
     */},
-    res: (temp.strict = {
+    res: {
       ie10: true,
       firefox4: true,
       safari51: true,
-      safaritp: true,
-      webkit: true,
       chrome13: true,
       opera12: true,
       besen: true,
@@ -1216,7 +1210,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
-    }),
+    },
   },
   {
     name: '"this" is undefined in functions',
@@ -1224,13 +1218,22 @@ exports.tests = [
       'use strict';
       return this === undefined && (function(){ return this === undefined; }).call();
     */},
-    res: Object.assign({}, temp.strict, {
+    res: {
       ie10: {
         val: true,
         note_id: 'strict-mode-ie10',
         note_html: 'IE10 PP2 fails this test.</code>'
-      }
-    }),
+      },
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: '"this" is not coerced to object in primitive methods',
@@ -1240,7 +1243,18 @@ exports.tests = [
         && (function(){ return typeof this === 'number' }).call(1)
         && (function(){ return typeof this === 'boolean' }).call(true);
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: '"this" is not coerced to object in primitive accessors',
@@ -1264,10 +1278,19 @@ exports.tests = [
         && test(Number, 1)
         && test(Boolean, true);
     */},
-    res: Object.assign({}, temp.strict, {
+    res: {
+      ie10: true,
       firefox4: false,
       firefox46: true,
-    }),
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'legacy octal is a SyntaxError',
@@ -1277,7 +1300,18 @@ exports.tests = [
       try { eval('"\\010"'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'assignment to unresolvable identifiers is a ReferenceError',
@@ -1285,7 +1319,18 @@ exports.tests = [
       'use strict';
       try { eval('__i_dont_exist = 1'); } catch (err) { return err instanceof ReferenceError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'assignment to eval or arguments is a SyntaxError',
@@ -1297,7 +1342,18 @@ exports.tests = [
       try { eval('arguments++');   return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'assignment to non-writable properties is a TypeError',
@@ -1309,7 +1365,18 @@ exports.tests = [
       try { (function f() { f = 123; })();                           return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'eval or arguments bindings is a SyntaxError',
@@ -1323,7 +1390,18 @@ exports.tests = [
       try { eval('try{}catch(arguments){}'); return false; } catch (err) { if (!(err instanceof SyntaxError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'arguments.caller removed or is a TypeError',
@@ -1379,7 +1457,18 @@ exports.tests = [
       try { (function(){}).arguments; return false; } catch (err) { if (!(err instanceof TypeError)) return false; }
       return true;
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'arguments is unmapped',
@@ -1393,7 +1482,18 @@ exports.tests = [
         return x === 1;
       })(1);
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'eval() can\'t create bindings',
@@ -1401,7 +1501,18 @@ exports.tests = [
       'use strict';
       try { eval('var __some_unique_variable;'); __some_unique_variable; } catch (err) { return err instanceof ReferenceError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'deleting bindings is a SyntaxError',
@@ -1409,7 +1520,18 @@ exports.tests = [
       'use strict';
       try { eval('var x; delete x;'); } catch (err) { return err instanceof SyntaxError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'deleting non-configurable properties is a TypeError',
@@ -1417,7 +1539,18 @@ exports.tests = [
       'use strict';
       try { delete Object.prototype; } catch (err) { return err instanceof TypeError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: '"with" is a SyntaxError',
@@ -1425,7 +1558,18 @@ exports.tests = [
       'use strict';
       try { eval('with({}){}'); } catch (err) { return err instanceof SyntaxError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'repeated parameter names is a SyntaxError',
@@ -1433,7 +1577,18 @@ exports.tests = [
       'use strict';
       try { eval('function f(x, x) { }'); } catch (err) { return err instanceof SyntaxError; }
     */},
-    res: temp.strict,
+    res: {
+      ie10: true,
+      firefox4: true,
+      safari51: true,
+      chrome13: true,
+      opera12: true,
+      besen: true,
+      phantom: true,
+      ejs: true,
+      ios7: true,
+      android41: true,
+    },
   },
   {
     name: 'function expressions with matching name and argument are valid',

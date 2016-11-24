@@ -1,11 +1,8 @@
-var util = require('./data-common');
+var common = require('./data-common');
 
-var flag = util.flag;
-var babel = util.babel;
-var typescript = util.typescript;
-var firefox = util.firefox;
-
-var temp = {};
+var babel = common.babel;
+var typescript = common.typescript;
+var firefox = common.firefox;
 
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
@@ -28,11 +25,11 @@ exports.tests = [
           babel: true,
           closure: true,
           typescript: true,
-          edge13: flag,
+          edge13: "flagged",
           edge14: true,
           firefox42: firefox.nightly,
           firefox52: true,
-          chrome51: flag,
+          chrome51: "flagged",
           chrome52: true,
           safaritp: true,
           webkit: true,
@@ -48,11 +45,11 @@ exports.tests = [
           babel: true,
           closure: true,
           typescript: true,
-          edge13: flag,
+          edge13: "flagged",
           edge14: true,
           firefox48: firefox.nightly,
           firefox52: true,
-          chrome51: flag,
+          chrome51: "flagged",
           chrome52: true,
           safaritp: true,
           webkit: true,
@@ -73,7 +70,7 @@ exports.tests = [
           closure: true,
           edge14: true,
           firefox52: true,
-          chrome51: flag,
+          chrome51: "flagged",
           chrome52: true,
           safaritp: true,
           webkit: true,
@@ -98,7 +95,7 @@ exports.tests = [
       typescript: typescript.corejs,
       firefox45: firefox.nightly,
       firefox47: true,
-      chrome51: flag,
+      chrome51: "flagged",
       chrome54: true,
       edge14: true,
       safaritp: true,
@@ -126,7 +123,7 @@ exports.tests = [
       typescript: typescript.corejs,
       firefox45: firefox.nightly,
       firefox47: true,
-      chrome51: flag,
+      chrome51: "flagged",
       chrome54: true,
       edge14: true,
       safaritp: true,
@@ -245,7 +242,7 @@ exports.tests = [
           babel: true,
           es7shim: true,
           typescript: typescript.corejs,
-          chrome51: flag,
+          chrome51: "flagged",
           chrome54: true,
           firefox50: true,
           safari10: true,
@@ -289,8 +286,8 @@ exports.tests = [
           typescript: typescript.corejs,
           es7shim: true,
           firefox48: true,
-          edge14: flag,
-          chrome52: flag,
+          edge14: "flagged",
+          chrome52: "flagged",
           safari10: true,
           safaritp: true,
           webkit: true,
@@ -309,8 +306,8 @@ exports.tests = [
           typescript: typescript.corejs,
           es7shim: true,
           firefox48: true,
-          edge14: flag,
-          chrome52: flag,
+          edge14: "flagged",
+          chrome52: "flagged",
           safari10: true,
           safaritp: true,
           webkit: true,
@@ -333,7 +330,7 @@ exports.tests = [
           babel: true,
           typescript: true,
           edge14: true,
-          chrome57: flag,
+          chrome57: "flagged",
           firefox52: true,
           safari10: true,
           safaritp: true,
@@ -349,7 +346,7 @@ exports.tests = [
           babel: true,
           typescript: true,
           edge14: true,
-          chrome57: flag,
+          chrome57: "flagged",
           firefox52: true,
           safari10: true,
           safaritp: true,
@@ -376,10 +373,10 @@ exports.tests = [
           babel: babel.regenerator,
           closure: true,
           typescript: typescript.asyncawait,
-          chrome52: flag,
+          chrome52: "flagged",
           chrome55: true,
-          edge13: flag,
-          edge14: flag,
+          edge13: "flagged",
+          edge14: "flagged",
           firefox52: true,
           webkit: true,
         }
@@ -396,10 +393,10 @@ exports.tests = [
           babel: babel.regenerator,
           closure: true,
           typescript: typescript.asyncawait,
-          chrome52: flag,
+          chrome52: "flagged",
           chrome55: true,
-          edge13: flag,
-          edge14: flag,
+          edge13: "flagged",
+          edge14: "flagged",
           firefox52: true,
           webkit: true,
         }
@@ -414,10 +411,10 @@ exports.tests = [
           babel: babel.regenerator,
           closure: true,
           typescript: false, // still buggy output
-          chrome52: flag,
+          chrome52: "flagged",
           chrome55: true,
-          edge13: flag,
-          edge14: flag,
+          edge13: "flagged",
+          edge14: "flagged",
           firefox52: true,
           webkit: true,
         }
@@ -486,7 +483,7 @@ exports.tests = [
       edge14: true,
       firefox27: true,
       chrome39: true,
-      node012: flag,
+      node012: "flagged",
       node4: true,
       safari10: true,
       safaritp: true,
@@ -539,7 +536,7 @@ exports.tests = [
     res: {
       babel: true,
       closure: true,
-      edge13: flag,
+      edge13: "flagged",
       edge14: true,
       firefox47: true,
       typescript: true,
@@ -567,7 +564,7 @@ exports.tests = [
     res: {
       babel: true,
       closure: true,
-      edge13: flag,
+      edge13: "flagged",
       edge14: true,
       firefox47: true,
       typescript: true,
@@ -648,7 +645,7 @@ exports.tests = [
        return prop.get === bar && !prop.writable && prop.configurable
        && prop.enumerable;
        */},
-      res: (temp.basicDefineGetterResults = {
+      res: {
         babel: true,
         typescript: typescript.corejs,
         ie11: true,
@@ -662,7 +659,7 @@ exports.tests = [
         webkit: true,
         android40: true,
         ios51: true,
-      })
+      }
     },
       {
         name: '__defineGetter__, symbols',
@@ -675,12 +672,12 @@ exports.tests = [
          return prop.get === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: (temp.defineGetterSymbolsResults = {
+        res: {
           babel: true,
           typescript: typescript.corejs,
           edge12: true,
           firefox36: true,
-          chrome30: flag,
+          chrome30: "flagged",
           chrome38: true,
           node012: true,
           iojs: true,
@@ -688,7 +685,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           android40: true,
-        })
+        }
       },
       {
         name: '__defineGetter__, ToObject(this)',
@@ -721,7 +718,21 @@ exports.tests = [
          return prop.set === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: temp.basicDefineGetterResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox4: true,
+          chrome30: true,
+          node012: true,
+          iojs: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+          ios51: true,
+        },
       },
       {
         name: '__defineSetter__, symbols',
@@ -734,7 +745,20 @@ exports.tests = [
          return prop.set === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: temp.defineGetterSymbolsResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          edge12: true,
+          firefox36: true,
+          chrome30: "flagged",
+          chrome38: true,
+          node012: true,
+          iojs: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+        },
       },
       {
         name: '__defineSetter__, ToObject(this)',
@@ -769,9 +793,21 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
-        res: Object.assign({}, temp.basicDefineGetterResults, {
-          firefox2:   true,
-        }),
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox2: true,
+          chrome30: true,
+          node012: true,
+          iojs: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+          ios51: true,
+        },
       },
       {
         name: '__lookupGetter__, prototype chain',
@@ -785,7 +821,21 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
-        res: temp.basicDefineGetterResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox4: true,
+          chrome30: true,
+          node012: true,
+          iojs: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+          ios51: true,
+        },
       },
       {
         name: '__lookupGetter__, symbols',
@@ -800,7 +850,20 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
          && Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
          */},
-        res: temp.defineGetterSymbolsResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          edge12: true,
+          firefox36: true,
+          chrome30: "flagged",
+          chrome38: true,
+          node012: true,
+          iojs: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+        },
       },
       {
         name: '__lookupGetter__, ToObject(this)',
@@ -832,7 +895,7 @@ exports.tests = [
          a.__defineGetter__("foo", function () {})
          return b.__lookupGetter__("foo") === undefined
          */},
-        res: (temp.lookupGetterShadowResults = {
+        res: {
           babel: true,
           typescript: typescript.corejs,
           firefox4: true,
@@ -841,7 +904,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           ios51: true,
-        }),
+        },
       },
       {
         name: '__lookupSetter__',
@@ -855,9 +918,21 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
-        res: Object.assign({}, temp.basicDefineGetterResults, {
-          firefox2:   true,
-        }),
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox2: true,
+          chrome30: true,
+          node012: true,
+          iojs: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+          ios51: true,
+        },
       },
       {
         name: '__lookupSetter__, prototype chain',
@@ -871,7 +946,21 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
-        res: temp.basicDefineGetterResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          ie11: true,
+          firefox4: true,
+          chrome30: true,
+          node012: true,
+          iojs: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+          ios51: true,
+        },
       },
       {
         name: '__lookupSetter__, symbols',
@@ -886,7 +975,20 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
          && Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;
          */},
-        res: temp.defineGetterSymbolsResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          edge12: true,
+          firefox36: true,
+          chrome30: "flagged",
+          chrome38: true,
+          node012: true,
+          iojs: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          android40: true,
+        },
       },
       {
         name: '__lookupSetter__, ToObject(this)',
@@ -918,7 +1020,16 @@ exports.tests = [
          a.__defineSetter__("foo", function () {})
          return b.__lookupSetter__("foo") === undefined
          */},
-        res: temp.lookupGetterShadowResults,
+        res: {
+          babel: true,
+          typescript: typescript.corejs,
+          firefox4: true,
+          safari51: true,
+          safari9: true,
+          safaritp: true,
+          webkit: true,
+          ios51: true,
+        },
       }
     ]
   },

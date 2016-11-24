@@ -1,8 +1,7 @@
-var util = require('./data-common');
+var common = require('./data-common');
 
-var flag = util.flag;
-var typescript = util.typescript;
-var firefox = util.firefox;
+var typescript = common.typescript;
+var firefox = common.firefox;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -82,7 +81,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge12: flag,
+        edge12: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -92,7 +91,7 @@ exports.tests = [
         return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -102,7 +101,7 @@ exports.tests = [
         return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -113,7 +112,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -122,7 +121,7 @@ exports.tests = [
         return typeof SIMD.Int8x16 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -133,7 +132,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -143,7 +142,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -153,7 +152,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -163,7 +162,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -173,7 +172,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -183,7 +182,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -192,7 +191,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.abs === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -202,7 +201,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.add === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -213,7 +212,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -223,7 +222,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -233,7 +232,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -243,7 +242,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -252,7 +251,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.check === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -262,7 +261,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.equal === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -272,7 +271,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -282,7 +281,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -292,7 +291,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -302,7 +301,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -312,7 +311,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -322,7 +321,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.mul === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -332,7 +331,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.div === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -343,7 +342,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -353,7 +352,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -363,7 +362,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -373,7 +372,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -382,7 +381,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.max === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -393,7 +392,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -402,7 +401,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.min === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -413,7 +412,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -422,7 +421,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.neg === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -433,7 +432,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -442,7 +441,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -453,7 +452,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -463,7 +462,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -473,7 +472,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -482,7 +481,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -492,7 +491,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.select === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -503,7 +502,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -513,7 +512,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -522,7 +521,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -532,7 +531,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.splat === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -542,7 +541,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -552,7 +551,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -562,7 +561,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -572,7 +571,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store2 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -582,7 +581,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.store3 === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -592,7 +591,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.sub === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -611,7 +610,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
       res: {
-        edge13: flag,
+        edge13: "flagged",
         firefox48: firefox.nightly,
       }
     },
@@ -622,7 +621,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -634,7 +633,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
-        edge14: flag,
+        edge14: "flagged",
       }
     },
     {
@@ -666,7 +665,7 @@ exports.tests = [
     return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
   */},
   res: {
-    babel: {val: false, note_id: "babel-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."},
+    babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
     typescript: true,
   }
 },
@@ -1379,7 +1378,7 @@ exports.tests = [
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
   */},
   res : {
-    chrome50: flag,
+    chrome50: "flagged",
   }
 },
 {

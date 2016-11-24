@@ -29,7 +29,6 @@ var fs = require('fs');
 var path = require('path');
 var os = require('os');
 var cheerio = require('cheerio');
-// requires Node v0.11.12
 var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
