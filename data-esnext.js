@@ -1010,7 +1010,7 @@ exports.tests = [
 },
 {
   name: 'shared memory and atomics',
-  category: 'draft (stage 2)',
+  category: 'candidate (stage 3)',
   significance: 'large',
   spec: 'https://github.com/tc39/ecmascript_sharedmem',
   'subtests': [
