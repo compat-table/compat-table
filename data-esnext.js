@@ -1585,7 +1585,7 @@ exports.tests = [
 },
 {
   name: 'private fields',
-  category: 'proposal (stage 1)',
+  category: 'draft (stage 2)',
   significance: 'medium',
   spec: 'https://github.com/zenparsing/es-private-fields',
   subtests: [
