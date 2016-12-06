@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git://github.com/kangax/compat-table.git"
   },
-  "private": true,
   "dependencies": {
     "babel-core": "latest",
     "babel-polyfill": "latest",
@@ -39,6 +38,7 @@
   "scripts": {
     "lint": "jshint .",
     "build": "node build.js",
+    "gen-data": "node generate-raw-data.js",
     "pretest": "npm run lint",
     "build:compilers": "node build.js compilers",
     "git:clean": "if type git > /dev/null 2>&1; then git stash save --keep-index; fi",
