@@ -378,7 +378,7 @@ exports.tests = [
           edge13: "flagged",
           edge14: "flagged",
           firefox52: true,
-          webkit: true,
+          safaritp: true,
         }
       },
       {
@@ -398,7 +398,7 @@ exports.tests = [
           edge13: "flagged",
           edge14: "flagged",
           firefox52: true,
-          webkit: true,
+          safaritp: true,
         }
       },
       {
@@ -416,7 +416,7 @@ exports.tests = [
           edge13: "flagged",
           edge14: "flagged",
           firefox52: true,
-          webkit: true,
+          safaritp: true,
         }
       }
     ]
@@ -1234,7 +1234,7 @@ exports.tests = [
      */},
     res: {
       chrome56: true,
-      webkit: true,
+      safaritp: true,
     },
   },
 ];
