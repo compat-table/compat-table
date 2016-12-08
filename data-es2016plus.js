@@ -317,7 +317,7 @@ exports.tests = [
   },
   {
     name: 'trailing commas in function syntax',
-    spec: 'https://jeffmo.github.io/es-trailing-function-commas/',
+    spec: 'https://github.com/tc39/proposal-trailing-function-commas',
     category: '2017 features',
     significance: 'small',
     subtests: [
