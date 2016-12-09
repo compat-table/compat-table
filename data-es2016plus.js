@@ -242,6 +242,7 @@ exports.tests = [
           babel: true,
           es7shim: true,
           typescript: typescript.corejs,
+          edge15: true,
           chrome51: "flagged",
           chrome54: true,
           firefox50: true,
@@ -259,6 +260,7 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
+          edge15: true,
           firefox50: true,
           chrome54: true,
           safaritp: true,
@@ -287,6 +289,7 @@ exports.tests = [
           es7shim: true,
           firefox48: true,
           edge14: "flagged",
+          edge15: true,
           chrome52: "flagged",
           safari10: true,
           safaritp: true,
@@ -307,6 +310,7 @@ exports.tests = [
           es7shim: true,
           firefox48: true,
           edge14: "flagged",
+          edge15: true,
           chrome52: "flagged",
           safari10: true,
           safaritp: true,
