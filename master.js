@@ -44,12 +44,18 @@ $(function() {
   'use strict';
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
-
-  if ($('thead').css('position') === "-webkit-sticky") {
+  var thead = $('thead');
+  
+  if (thead.css('position') === "-webkit-sticky") {
     // Remove floatThead when native position:sticky is usable.
     // Currently, only Safari (which floatThead incidentally does not support),
     // and its -webkit-sticky prefix, works correctly with <thead>.
     $.fn.floatThead = function() { return this };
+  }
+
+  // position: sticky is implemented in chrome but buggy. currently makes the background transparent sometimes
+  if (thead.css('position') === "sticky" && window.chrome) {
+    thead.css('position', 'static');
   }
 
   var initFloatingHeaders = function() {
