@@ -839,7 +839,7 @@ exports.tests = [
 },
 {
   name: 'Math methods for 64-bit integers',
-  category: 'strawman (stage 0)',
+  category: 'proposal (stage 1)',
   significance: 'tiny',
   spec: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
   subtests: [
