@@ -827,16 +827,42 @@ exports.tests = [
   category: 'candidate (stage 3)',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-global',
-  exec: function(){/*
-    Function('return this')().__system_global_test__ = 42;
-    return typeof global === 'object' && global && !global.lacksGlobal && global.__system_global_test__ === 42;
-  */},
-  res: {
-    firefox53: true,
-    node012: true,
-    node4: true,
-    node6: false,
-  }
+  subtests: [{
+    name: '"global" global property is global object',
+    exec: function(){/*
+      var actualGlobal = Function('return this')();
+      actualGlobal.__system_global_test__ = 42;
+      return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
+    */},
+    res: {
+      firefox53: true,
+      node010: true,
+      node012: true,
+      node4: true,
+      node6: true,
+      node7: true,
+    }
+  }, {
+    name: '"global" global property has correct property descriptor',
+    exec: function(){/*
+      var actualGlobal = Function('return this')();
+      if (typeof global !== 'object') { return false; }
+      if (!('global' in actualGlobal)) { return false; }
+      if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }
+      if (typeof Object.getOwnPropertyDescriptor !== 'function) { return true; } // ES3
+
+      var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');
+      return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
+    */},
+    res: {
+      firefox53: true,
+      node010: false,
+      node012: false,
+      node4: false,
+      node6: false,
+      node7: false,
+    }
+  }]
 },
 {
   name: 'Math methods for 64-bit integers',
