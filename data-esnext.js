@@ -839,7 +839,8 @@ exports.tests = [
       node010: true,
       node012: true,
       node4: true,
-      node6: true,
+      node64: true,
+      node65: true,
       node7: true,
     }
   }, {
@@ -859,7 +860,8 @@ exports.tests = [
       node010: false,
       node012: false,
       node4: false,
-      node6: false,
+      node64: false,
+      node65: false,
       node7: false,
     }
   }]
