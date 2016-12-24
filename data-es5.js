@@ -631,6 +631,76 @@ exports.tests = [
       ejs: true,
       android40: true,
     },
+  }, {
+    name: 'Array.prototype.sort: compareFn must be function or undefined',
+    exec: function () {
+      try {
+        [1,2].sort(null);
+        return false;
+      } catch (enull) {}
+      try {
+        [1,2].sort(true);
+        return false;
+      } catch (etrue) {}
+      try {
+        [1,2].sort({});
+        return false;
+      } catch (eobj) {}
+      try {
+        [1,2].sort([]);
+        return false;
+      } catch (earr) {}
+      try {
+        [1,2].sort(/a/g);
+        return false;
+      } catch (eregex) {}
+      return true;
+    },
+    res: {
+      es5shim: true,
+      ie9: true,
+      firefox5: true,
+      safaritp: true,
+      webkit: true,
+      opera10_10: null,
+      opera10_50: true,
+      konq43: null,
+      konq49: null,
+      konq413: null,
+      besen: null,
+      rhino17: null,
+      ejs: null,
+      android40: false,
+    },
+  },
+  {
+    name: 'Array.prototype.sort: compareFn may be explicit undefined',
+    exec: function () {
+      try {
+        var arr = [2, 1];
+        return arr.sort(undefined) === arr && arr[0] === 1 && arr[1] === 2;
+      } catch (e) {
+        return false;
+      }
+    },
+    res: {
+      es5shim: true,
+      ie9: true,
+      firefox4: true,
+      safari4: true,
+      safaritp: true,
+      webkit: true,
+      chrome13: true,
+      opera10_10: null,
+      opera10_50: true,
+      konq43: null,
+      konq49: null,
+      konq413: null,
+      besen: null,
+      rhino17: null,
+      ejs: null,
+      android40: true,
+    },
   }],
 },
 {
@@ -901,77 +971,6 @@ exports.tests = [
   name: 'Miscellaneous',
   significance: 'medium',
   subtests: [{
-    name: 'Array.prototype.sort: compareFn must be function or undefined',
-    exec: function () {
-      try {
-        [1,2].sort(null);
-        return false;
-      } catch (enull) {}
-      try {
-        [1,2].sort(true);
-        return false;
-      } catch (etrue) {}
-      try {
-        [1,2].sort({});
-        return false;
-      } catch (eobj) {}
-      try {
-        [1,2].sort([]);
-        return false;
-      } catch (earr) {}
-      try {
-        [1,2].sort(/a/g);
-        return false;
-      } catch (eregex) {}
-      return true;
-    },
-    res: {
-      es5shim: true,
-      ie9: true,
-      firefox5: true,
-      safaritp: true,
-      webkit: true,
-      opera10_10: null,
-      opera10_50: true,
-      konq43: null,
-      konq49: null,
-      konq413: null,
-      besen: null,
-      rhino17: null,
-      ejs: null,
-      android40: false,
-    },
-  },
-  {
-    name: 'Array.prototype.sort: compareFn may be explicit undefined',
-    exec: function () {
-      try {
-        var arr = [2, 1];
-        return arr.sort(undefined) === arr && arr[0] === 1 && arr[1] === 2;
-      } catch (e) {
-        return false;
-      }
-    },
-    res: {
-      es5shim: true,
-      ie9: true,
-      firefox4: true,
-      safari4: true,
-      safaritp: true,
-      webkit: true,
-      chrome13: true,
-      opera10_10: null,
-      opera10_50: true,
-      konq43: null,
-      konq49: null,
-      konq413: null,
-      besen: null,
-      rhino17: null,
-      ejs: null,
-      android40: true,
-    },
-  },
-  {
     name: 'Function.prototype.apply permits array-likes',
     exec: function () {
       return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});
