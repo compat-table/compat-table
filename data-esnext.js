@@ -7,11 +7,17 @@ exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
 
+var STAGE0 = 'strawman (stage 0)';
+var STAGE1 = 'proposal (stage 1)';
+var STAGE2 = 'draft (stage 2)';
+var STAGE3 = 'candidate (stage 3)';
+var PRESTRAWMAN = 'pre-strawman';
+
 exports.tests = [
 {
   name: 'bind (::) operator',
   spec: 'https://github.com/zenparsing/es-function-bind',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'medium',
   subtests: [
     {
@@ -39,7 +45,7 @@ exports.tests = [
 },
 {
   name: 'do expression',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'small',
   spec: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
@@ -54,7 +60,7 @@ exports.tests = [
 },
 {
   name: 'function.sent',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
   exec: function () {/*
@@ -71,7 +77,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   significance: 'large',
   spec: 'https://tc39.github.io/ecmascript_simd/',
   subtests: [
@@ -650,7 +656,7 @@ exports.tests = [
 },
 {
   name: 'class decorators',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'medium',
   spec: 'https://github.com/wycats/javascript-decorators',
   exec: function(){/*
@@ -671,7 +677,7 @@ exports.tests = [
 },
 {
   name: 'class properties',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'medium',
   spec: 'https://github.com/jeffmo/es-class-properties',
   exec: function () {/*
@@ -689,7 +695,7 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'large',
   spec: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*
@@ -705,7 +711,7 @@ exports.tests = [
   name: 'object rest properties',
   significance: 'small',
   spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   exec: function () {/*
     var {a, ...rest} = {a: 1, b: 2, c: 3};
     return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
@@ -717,7 +723,7 @@ exports.tests = [
 },
 {
   name: 'object spread properties',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
   exec: function () {/*
@@ -734,7 +740,7 @@ exports.tests = [
   name: 'String.prototype.at',
   significance: 'small',
   spec: 'https://github.com/mathiasbynens/String.prototype.at',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   exec: function () {/*
     return 'a𠮷b'.at(1) === '𠮷';
   */},
@@ -746,7 +752,7 @@ exports.tests = [
 },
 {
   name: 'string trimming',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: [
@@ -824,7 +830,7 @@ exports.tests = [
 },
 {
   name: 'global',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-global',
   subtests: [{
@@ -868,7 +874,7 @@ exports.tests = [
 },
 {
   name: 'Math methods for 64-bit integers',
-  category: 'proposal (stage 1)',
+  category: STAGE1,
   significance: 'tiny',
   spec: 'https://gist.github.com/BrendanEich/4294d5c212a6d2254703',
   subtests: [
@@ -916,7 +922,7 @@ exports.tests = [
 },
 {
   name: 'Observable',
-  category: 'proposal (stage 1)',
+  category: STAGE1,
   significance: 'medium',
   spec: 'https://github.com/zenparsing/es-observable',
   'subtests': [
@@ -1016,7 +1022,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.matchAll',
-  category: 'proposal (stage 1)',
+  category: STAGE1,
   significance: 'small',
   spec: 'https://github.com/tc39/String.prototype.matchAll',
   exec: function(){/*
@@ -1039,7 +1045,7 @@ exports.tests = [
 },
 {
   name: 'shared memory and atomics',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   significance: 'large',
   spec: 'https://github.com/tc39/ecmascript_sharedmem',
   'subtests': [
@@ -1244,7 +1250,7 @@ exports.tests = [
 },
 {
   name: 'additional meta properties',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'medium',
   spec: 'https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md',
   subtests: [
@@ -1283,7 +1289,7 @@ exports.tests = [
 {
   name: 'method parameter decorators',
   spec: 'https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'small',
   exec: function(){/*
     var target, key, index;
@@ -1306,7 +1312,7 @@ exports.tests = [
 {
   name: 'function expression decorators',
   spec: 'https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'small',
   exec: function(){/*
     function inverse(f){
@@ -1324,7 +1330,7 @@ exports.tests = [
 {
   name: 'weak references',
   spec: 'https://github.com/tc39/proposal-weakrefs',
-  category: 'proposal (stage 1)',
+  category: STAGE1,
   significance: 'large',
   exec: function(){/*
     var O = {};
@@ -1338,7 +1344,7 @@ exports.tests = [
 },
 {
   name: 'Async iteration',
-  category: 'candidate (stage 3)',
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-async-iteration',
   subtests: [
@@ -1389,7 +1395,7 @@ exports.tests = [
 {
   name: 'RegExp named capture groups',
   spec: 'https://github.com/goyakin/es-regexp-named-groups',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'small',
   exec: function(){/*
     var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
@@ -1407,7 +1413,7 @@ exports.tests = [
 {
   name: 'RegExp lookbehind',
   spec: 'https://github.com/tc39/proposal-regexp-lookbehind',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'small',
   exec: function(){/*
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
@@ -1418,7 +1424,7 @@ exports.tests = [
 },
 {
   name: 'Reflect.isCallable / Reflect.isConstructor',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'small',
   spec: 'https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md',
   subtests: [
@@ -1446,7 +1452,7 @@ exports.tests = [
 },
 {
   name: 'Metadata reflection API',
-  category: 'pre-strawman',
+  category: PRESTRAWMAN,
   significance: 'medium',
   spec: 'https://github.com/rbuckton/ReflectDecorators',
   subtests: [
@@ -1544,7 +1550,7 @@ exports.tests = [
 },
 {
   name: 'zones',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'large',
   spec: 'https://github.com/domenic/zones',
   subtests: [
@@ -1608,7 +1614,7 @@ exports.tests = [
 },
 {
   name: 'frozen realms',
-  category: 'proposal (stage 1)',
+  category: STAGE1,
   significance: 'medium',
   spec: 'https://github.com/FUDCo/frozen-realms',
   exec: function () {/*
@@ -1620,7 +1626,7 @@ exports.tests = [
 },
 {
   name: 'private fields',
-  category: 'draft (stage 2)',
+  category: STAGE2,
   significance: 'medium',
   spec: 'https://github.com/zenparsing/es-private-fields',
   subtests: [
@@ -1660,7 +1666,7 @@ exports.tests = [
 {
   name: 'asap',
   spec: 'https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'medium',
   exec: function(){/*
     var passed = false;
@@ -1675,7 +1681,7 @@ exports.tests = [
 },
 {
   name: 'syntactic tail calls',
-  category: 'strawman (stage 0)',
+  category: STAGE0,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-ptc-syntax',
   subtests: [
@@ -1718,7 +1724,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['candidate (stage 3)', 'draft (stage 2)', 'proposal (stage 1)', 'strawman (stage 0)', 'pre-strawman'].indexOf(e.category);
+  var index = [STAGE3, STAGE2, STAGE1, STAGE0, PRESTRAWMAN].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
