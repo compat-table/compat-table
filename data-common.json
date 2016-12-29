@@ -35,6 +35,13 @@
       "note_html": "The feature is enabled by default only in Firefox Nightly."
     }
   },
+  "chrome": {
+    "sharedmem": {
+      "val": "flagged",
+      "note_id": "chrome-sharedmem",
+      "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under about:flags"
+    }
+  },
   "sparseNote": {
     "val": true,
     "note_id": "sparse_arrays",

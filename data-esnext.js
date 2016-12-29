@@ -2,6 +2,7 @@ var common = require('./data-common');
 
 var typescript = common.typescript;
 var firefox = common.firefox;
+var chrome = common.chrome;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -1057,6 +1058,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1077,7 +1079,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
-
+        chrome48: chrome.sharedmem,
       }
     },
     {
@@ -1098,6 +1100,7 @@ exports.tests = [
       */},
       res: {
         firefox52: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1110,6 +1113,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1122,6 +1126,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1134,6 +1139,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1146,6 +1152,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1158,6 +1165,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1170,6 +1178,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1182,6 +1191,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1194,6 +1204,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1206,6 +1217,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1218,6 +1230,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1230,6 +1243,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }
@@ -1242,6 +1256,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
       }

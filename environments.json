@@ -200,24 +200,21 @@
     "family": "Chakra",
     "short": "Edge 13",
     "release": "2015-11-05",
-    "note_id": "edge-experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    "note_id": "edge-experimental-flag"
   },
   "edge14": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 14",
     "release": "2016-08-02",
-    "note_id": "edge-experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    "note_id": "edge-experimental-flag"
   },
   "edge15": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 15",
     "unstable": true,
-    "note_id": "edge-experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    "note_id": "edge-experimental-flag"
   },
   "firefox1": {
     "full": "Firefox",
@@ -869,7 +866,7 @@
     "retire": "2012-06-26",
     "obsolete": "very",
     "note_id": "experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Experimental Javascript features\" flag"
+    "note_html": "Flagged features have to be enabled via \"Experimental Javascript features\" flag unless otherwise stated"
   },
   "chrome20": {
     "full": "Chrome",
@@ -878,8 +875,7 @@
     "release": "2012-06-26",
     "retire": "2012-08-22",
     "obsolete": "very",
-    "note_id": "experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Experimental Javascript features\" flag"
+    "note_id": "experimental-flag"
   },
   "chrome21": {
     "full": "Chrome",
