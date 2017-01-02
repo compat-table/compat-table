@@ -25,11 +25,13 @@
   },
   "firefox": {
     "developer": {
+      "versions": ["firefox52", "firefox53"],
       "val": false,
       "note_id": "firefox-developer",
       "note_html": "The feature is enabled by default only in Firefox Developer and Firefox Nightly."
     },
     "nightly": {
+      "versions": ["firefox53"],
       "val": false,
       "note_id": "firefox-nightly",
       "note_html": "The feature is enabled by default only in Firefox Nightly."

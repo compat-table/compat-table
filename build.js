@@ -471,8 +471,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     return ret;
   }
 
-  function testValue(result) {
+  function testValue(result, browserId) {
     if (result && typeof result === "object" && "val" in result) {
+      if (browserId && "versions" in result) {
+        return result.versions.indexOf(browserId) > -1;
+      }
       return result.val;
     }
     return result;
@@ -543,7 +546,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       if (!browsers[browserId]) {
         return;
       }
-      result = testValue(result);
+      result = testValue(result, browserId);
 
       // Create the cell, and add classes and attributes
       var cell = $('<td></td>');
@@ -641,7 +644,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           t.subtests.forEach(function(e) {
             var result = e.res[browserId];
 
-            tally += testValue(result) === true;
+            tally += testValue(result, browserId) === true;
             flaggedTally += ['flagged','strict'].indexOf(testValue(result)) > -1;
             outOf += 1;
           });
