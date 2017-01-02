@@ -1243,6 +1243,7 @@ exports.tests = [
     res: {
       chrome56: true,
       safaritp: true,
+      firefox53: true,
     },
   },
 ];
