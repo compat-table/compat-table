@@ -90,6 +90,7 @@ exports.tests = [
       res: {
         edge12: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -100,6 +101,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -110,6 +112,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -119,6 +122,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -130,6 +134,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -139,6 +144,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -149,6 +155,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -159,6 +166,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -169,6 +177,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -179,6 +188,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -189,6 +199,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -200,6 +211,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -210,6 +222,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -219,6 +232,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -229,6 +243,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -239,6 +254,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -249,6 +265,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -260,6 +277,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -270,6 +288,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -280,6 +299,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -290,6 +310,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -300,6 +321,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -310,6 +332,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -320,6 +343,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -330,6 +354,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -340,6 +365,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -349,6 +375,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -359,6 +386,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -369,6 +397,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -379,6 +408,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -390,6 +420,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -399,6 +430,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -410,6 +442,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -419,6 +452,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -430,6 +464,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -439,6 +474,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -450,6 +486,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -459,6 +496,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -469,6 +507,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -479,6 +518,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -490,6 +530,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -500,6 +541,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -509,6 +551,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -519,6 +562,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -530,6 +574,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -540,6 +585,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -550,6 +596,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -560,6 +607,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -570,6 +618,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -580,6 +629,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -590,6 +640,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -600,6 +651,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -609,6 +661,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -619,6 +672,7 @@ exports.tests = [
       res: {
         edge13: "flagged",
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
       }
     },
     {
@@ -628,6 +682,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -640,6 +695,7 @@ exports.tests = [
       */},
       res: {
         firefox48: firefox.nightly,
+        chrome37: chrome.simd,
         edge14: "flagged",
       }
     },
@@ -651,6 +707,7 @@ exports.tests = [
         });
       */},
       res: {
+        chrome37: chrome.simd,
       }
     }
   ]

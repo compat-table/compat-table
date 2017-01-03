@@ -40,6 +40,11 @@
       "val": "flagged",
       "note_id": "chrome-sharedmem",
       "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under about:flags"
+    },
+    "simd": {
+      "val": "flagged",
+      "note_id": "chrome-simd",
+      "note_html": "The feature have to be enabled via --js-flags=\"--harmony-simd\" flag"
     }
   },
   "sparseNote": {
