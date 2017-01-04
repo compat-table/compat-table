@@ -2157,7 +2157,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/15</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="edge12" data-tally="0">0/15</td>
-<td class="tally" data-browser="edge13" data-tally="0" data-flagged-tally="0.2">0/15</td>
+<td class="tally" data-browser="edge13" data-tally="0" data-flagged-tally="0.8">0/15</td>
 <td class="tally" data-browser="edge14" data-tally="0" data-flagged-tally="0.2">0/15</td>
 <td class="tally unstable" data-browser="edge15" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
 <td class="tally obsolete" data-browser="firefox38" data-tally="0">0/15</td>
@@ -2171,8 +2171,8 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/15</td>
 <td class="tally" data-browser="firefox50" data-tally="0">0/15</td>
 <td class="tally unstable" data-browser="firefox51" data-tally="0">0/15</td>
-<td class="tally unstable" data-browser="firefox52" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally unstable" data-browser="firefox53" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally unstable" data-browser="firefox52" data-tally="1">15/15</td>
+<td class="tally unstable" data-browser="firefox53" data-tally="1">15/15</td>
 <td class="tally obsolete" data-browser="chrome46" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="chrome47" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="chrome48" data-tally="0">0/15</td>
@@ -2182,9 +2182,9 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="chrome52" data-tally="0" data-flagged-tally="0.2">0/15</td>
 <td class="tally obsolete" data-browser="chrome53" data-tally="0" data-flagged-tally="0.2">0/15</td>
 <td class="tally obsolete" data-browser="chrome54" data-tally="0" data-flagged-tally="0.2">0/15</td>
-<td class="tally" data-browser="chrome55" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally unstable" data-browser="chrome56" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally unstable" data-browser="chrome57" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally" data-browser="chrome55" data-tally="1">15/15</td>
+<td class="tally unstable" data-browser="chrome56" data-tally="1">15/15</td>
+<td class="tally unstable" data-browser="chrome57" data-tally="1">15/15</td>
 <td class="tally obsolete" data-browser="safari51" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="safari6" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="safari7" data-tally="0">0/15</td>
@@ -2216,7 +2216,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="ios9" data-tally="0">0/15</td>
 <td class="tally" data-browser="ios10" data-tally="0">0/15</td>
 </tr>
-<tr class="subtest" data-parent="async_functions" id="test-async_functions_basic_functionality"><td><span><a class="anchor" href="#test-async_functions_basic_functionality">&#xA7;</a>basic functionality</span><script data-source="
+<tr class="subtest" data-parent="async_functions" id="test-async_functions_return"><td><span><a class="anchor" href="#test-async_functions_return">&#xA7;</a>return</span><script data-source="
 async function a(){
   return &quot;foo&quot;;
 }
@@ -2323,7 +2323,7 @@ p.catch(function(result) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2337,8 +2337,8 @@ p.catch(function(result) {
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2348,9 +2348,9 @@ p.catch(function(result) {
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2396,7 +2396,7 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2410,8 +2410,8 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2421,9 +2421,9 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2469,7 +2469,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2483,8 +2483,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2494,9 +2494,9 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2629,7 +2629,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2643,8 +2643,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2654,9 +2654,82 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no obsolete" data-browser="safari7">No</td>
+<td class="no obsolete" data-browser="safari71_8">No</td>
+<td class="no" data-browser="safari9">No</td>
+<td class="no" data-browser="safari10">No</td>
+<td class="unknown unstable" data-browser="safaritp">?</td>
+<td class="unknown unstable" data-browser="webkit">?</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
+<td class="no" data-browser="node012">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node65">No</td>
+<td class="unknown" data-browser="node7">?</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no obsolete" data-browser="android42">No</td>
+<td class="no obsolete" data-browser="android43">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+<td class="no obsolete" data-browser="ios51">No</td>
+<td class="no obsolete" data-browser="ios6">No</td>
+<td class="no obsolete" data-browser="ios7">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
+</tr>
+<tr class="subtest" data-parent="async_functions" id="test-async_functions_must_await_a_value"><td><span><a class="anchor" href="#test-async_functions_must_await_a_value">&#xA7;</a>must await a value</span><script data-source="
+async function a(){ await Promise.resolve(); }
+try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { return true; }
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await; }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await; }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown" data-browser="tr">?</td>
+<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="closure">?</td>
+<td class="unknown" data-browser="typescript">?</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no obsolete" data-browser="ie9">No</td>
+<td class="no obsolete" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
+<td class="unknown" data-browser="edge14">?</td>
+<td class="unknown unstable" data-browser="edge15">?</td>
+<td class="no obsolete" data-browser="firefox38">No</td>
+<td class="no obsolete" data-browser="firefox42">No</td>
+<td class="no obsolete" data-browser="firefox43">No</td>
+<td class="no obsolete" data-browser="firefox44">No</td>
+<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox46">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no" data-browser="firefox50">No</td>
+<td class="no unstable" data-browser="firefox51">No</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
+<td class="no obsolete" data-browser="chrome46">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome48">No</td>
+<td class="no obsolete" data-browser="chrome49">No</td>
+<td class="no obsolete" data-browser="chrome50">No</td>
+<td class="no obsolete" data-browser="chrome51">No</td>
+<td class="unknown obsolete" data-browser="chrome52">?</td>
+<td class="unknown obsolete" data-browser="chrome53">?</td>
+<td class="unknown obsolete" data-browser="chrome54">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2696,7 +2769,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
     asyncTestPassed();
   }
 }());
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
@@ -2707,7 +2780,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2721,8 +2794,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2732,82 +2805,9 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
-<td class="no obsolete" data-browser="safari51">No</td>
-<td class="no obsolete" data-browser="safari6">No</td>
-<td class="no obsolete" data-browser="safari7">No</td>
-<td class="no obsolete" data-browser="safari71_8">No</td>
-<td class="no" data-browser="safari9">No</td>
-<td class="no" data-browser="safari10">No</td>
-<td class="unknown unstable" data-browser="safaritp">?</td>
-<td class="unknown unstable" data-browser="webkit">?</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no obsolete" data-browser="node010">No</td>
-<td class="no" data-browser="node012">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="node5">No</td>
-<td class="no obsolete" data-browser="node6">No</td>
-<td class="no" data-browser="node65">No</td>
-<td class="unknown" data-browser="node7">?</td>
-<td class="no obsolete" data-browser="android40">No</td>
-<td class="no obsolete" data-browser="android41">No</td>
-<td class="no obsolete" data-browser="android42">No</td>
-<td class="no obsolete" data-browser="android43">No</td>
-<td class="no" data-browser="android44">No</td>
-<td class="no" data-browser="android50">No</td>
-<td class="no" data-browser="android51">No</td>
-<td class="no obsolete" data-browser="ios51">No</td>
-<td class="no obsolete" data-browser="ios6">No</td>
-<td class="no obsolete" data-browser="ios7">No</td>
-<td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
-<td class="no" data-browser="ios10">No</td>
-</tr>
-<tr class="subtest" data-parent="async_functions" id="test-async_functions_no_line_break_between_await_and_value"><td><span><a class="anchor" href="#test-async_functions_no_line_break_between_await_and_value">&#xA7;</a>no line break between await and value</span><script data-source="
-async function a(){ await Promise.resolve(); }
-try { Function(&quot;(async function a(){ await\n Promise.resolve(); }())&quot;)(); } catch(e) { return true; }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await\\n Promise.resolve(); }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await\\n Promise.resolve(); }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
-<td class="unknown" data-browser="typescript">?</td>
-<td class="no" data-browser="es7shim">No</td>
-<td class="no obsolete" data-browser="ie9">No</td>
-<td class="no obsolete" data-browser="ie10">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
-<td class="unknown" data-browser="edge14">?</td>
-<td class="unknown unstable" data-browser="edge15">?</td>
-<td class="no obsolete" data-browser="firefox38">No</td>
-<td class="no obsolete" data-browser="firefox42">No</td>
-<td class="no obsolete" data-browser="firefox43">No</td>
-<td class="no obsolete" data-browser="firefox44">No</td>
-<td class="no" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox46">No</td>
-<td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No</td>
-<td class="no obsolete" data-browser="firefox49">No</td>
-<td class="no" data-browser="firefox50">No</td>
-<td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
-<td class="no obsolete" data-browser="chrome46">No</td>
-<td class="no obsolete" data-browser="chrome47">No</td>
-<td class="no obsolete" data-browser="chrome48">No</td>
-<td class="no obsolete" data-browser="chrome49">No</td>
-<td class="no obsolete" data-browser="chrome50">No</td>
-<td class="no obsolete" data-browser="chrome51">No</td>
-<td class="unknown obsolete" data-browser="chrome52">?</td>
-<td class="unknown obsolete" data-browser="chrome53">?</td>
-<td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2853,7 +2853,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2867,8 +2867,8 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2878,9 +2878,9 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -2936,7 +2936,7 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -2950,8 +2950,8 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -2961,9 +2961,9 @@ p.then(function(result) {
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -3019,7 +3019,7 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -3033,8 +3033,8 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -3044,9 +3044,9 @@ p.then(function(result) {
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -3160,12 +3160,11 @@ p.then(function(result) {
 <td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_correct_prototype_chain"><td><span><a class="anchor" href="#test-async_functions_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
-async function a(){}
-var asyncFunctionProto = Object.getPrototypeOf(a());
+var asyncFunctionProto = Object.getPrototypeOf(async function (){});
 return asyncFunctionProto !== function(){}.prototype
-  &amp;&amp; Object.getPrototypeOf(asyncFunctionProto) === function(){}.prototype;
+  &amp;&amp; Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;
 return passed;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nasync function a(){}\nvar asyncFunctionProto = Object.getPrototypeOf(a());\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === function(){}.prototype;\nreturn passed;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){}\nvar asyncFunctionProto = Object.getPrototypeOf(a());\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === function(){}.prototype;\nreturn passed;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\nreturn passed;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\nreturn passed;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
@@ -3176,7 +3175,7 @@ return passed;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no flagged" data-browser="edge13">Flag</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -3190,8 +3189,8 @@ return passed;
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -3201,9 +3200,9 @@ return passed;
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -3248,7 +3247,7 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -3262,8 +3261,8 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -3273,9 +3272,9 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
@@ -3329,7 +3328,7 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
-<td class="unknown" data-browser="edge13">?</td>
+<td class="no" data-browser="edge13">No</td>
 <td class="unknown" data-browser="edge14">?</td>
 <td class="unknown unstable" data-browser="edge15">?</td>
 <td class="no obsolete" data-browser="firefox38">No</td>
@@ -3343,8 +3342,8 @@ p.then(function(result) {
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no" data-browser="firefox50">No</td>
 <td class="no unstable" data-browser="firefox51">No</td>
-<td class="unknown unstable" data-browser="firefox52">?</td>
-<td class="unknown unstable" data-browser="firefox53">?</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
 <td class="no obsolete" data-browser="chrome46">No</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
@@ -3354,9 +3353,9 @@ p.then(function(result) {
 <td class="unknown obsolete" data-browser="chrome52">?</td>
 <td class="unknown obsolete" data-browser="chrome53">?</td>
 <td class="unknown obsolete" data-browser="chrome54">?</td>
-<td class="unknown" data-browser="chrome55">?</td>
-<td class="unknown unstable" data-browser="chrome56">?</td>
-<td class="unknown unstable" data-browser="chrome57">?</td>
+<td class="yes" data-browser="chrome55">Yes</td>
+<td class="yes unstable" data-browser="chrome56">Yes</td>
+<td class="yes unstable" data-browser="chrome57">Yes</td>
 <td class="no obsolete" data-browser="safari51">No</td>
 <td class="no obsolete" data-browser="safari6">No</td>
 <td class="no obsolete" data-browser="safari7">No</td>
