@@ -900,6 +900,7 @@ exports.tests = [
     */},
     res: {
       firefox53: true,
+      webkit: true,
       node010: true,
       node012: true,
       node4: true,
@@ -921,6 +922,7 @@ exports.tests = [
     */},
     res: {
       firefox53: true,
+      webkit: true,
       node010: false,
       node012: false,
       node4: false,
