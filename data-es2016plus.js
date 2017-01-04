@@ -368,11 +368,22 @@ exports.tests = [
     spec: 'https://tc39.github.io/ecmascript-asyncawait/',
     subtests: [
       {
-        name: 'basic support',
+        // Should test that async functions return promises
+        // that (without await) resolve to the returned value.
+        name: 'return',
         exec: function () {/*
-          return (async function(){
-            return 42;
-          })() instanceof Promise
+          async function a(){
+            return "foo";
+          }
+          var p = a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.then(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
         */},
         res: {
           tr: true,
@@ -389,11 +400,86 @@ exports.tests = [
         }
       },
       {
-        name: 'await support',
+        name: 'throw',
         exec: function () {/*
-          return (async function(){
-            return 10 + await Promise.resolve(10);
-          })() instanceof Promise
+          async function a(){
+            throw "foo";
+          }
+          var p = a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.catch(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'no line break between async and function',
+        exec: function () {/*
+          async function a(){}
+          try { Function("async\n function a(){}")(); } catch(e) { return true; }
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'no "prototype" property',
+        exec: function(){/*
+          async function a(){};
+          return !a.hasOwnProperty("prototype");
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        },
+      },
+      {
+        name: 'await',
+        exec: function () {/*
+          (async function (){
+            await Promise.resolve();
+            var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,"foo"); });
+            var a2 = await new Promise(function(resolve) { setTimeout(resolve,800,"bar"); });
+            if (a1 + a2 === "foobar") {
+              asyncTestPassed();
+            }
+          }());
         */},
         res: {
           tr: true,
@@ -410,9 +496,171 @@ exports.tests = [
         }
       },
       {
-        name: 'arrow async functions',
+        name: 'await, rejection',
         exec: function () {/*
-          return (async () => 42 + await Promise.resolve(42))() instanceof Promise
+          (async function (){
+            await Promise.resolve();
+            try {
+              var a1 = await new Promise(function(_, reject) { setTimeout(reject,800,"foo"); });
+            } catch(e) {
+              if (e === "foo") {
+                asyncTestPassed();
+              }
+            }
+          }());
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'can await non-Promise values',
+        exec: function () {/*
+          (async function (){
+            await Promise.resolve();
+            var e = await "foo";
+            if (e === "foo") {
+              asyncTestPassed();
+            }
+          }());
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'no line break between await and value',
+        exec: function () {/*
+          async function a(){ await Promise.resolve(); }
+          try { Function("(async function a(){ await\n Promise.resolve(); }())")(); } catch(e) { return true; }
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'cannot await in parameters',
+        exec: function () {/*
+          async function a(){ await Promise.resolve(); }
+          try { Function("(async function a(b = await Promise.resolve()){}())")(); } catch(e) { return true; }
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'async methods, object literals',
+        exec: function () {/*
+          var o = {
+            async a(){ return await Promise.resolve("foo"); }
+          };
+          var p = o.a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.then(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'async methods, classes',
+        exec: function () {/*
+          class C {
+            async a(){ return await Promise.resolve("foo"); }
+          };
+          var p = new C().a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.then(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        }
+      },
+      {
+        name: 'async arrow functions',
+        exec: function () {/*
+          var a = async () => await Promise.resolve("foo");
+          var p = a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.then(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
         */},
         res: {
           tr: true,
@@ -427,7 +675,77 @@ exports.tests = [
           firefox52: true,
           safaritp: true,
         }
-      }
+      },
+      {
+        name: 'correct prototype chain',
+        exec: function() {/*
+          async function a(){}
+          var asyncFunctionProto = Object.getPrototypeOf(a());
+          return asyncFunctionProto !== function(){}.prototype
+            && Object.getPrototypeOf(asyncFunctionProto) === function(){}.prototype;
+          return passed;
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        },
+      },
+      {
+        name: 'async function prototype, Symbol.toStringTag',
+        exec: function() {/*
+          return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == "AsyncFunction";
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        },
+      },
+      {
+        name: 'async function constructor',
+        exec: function() {/*
+          var a = async function (){}.constructor("return 'foo';");
+          var p = a();
+          if (!(p instanceof Promise)) {
+            return false;
+          }
+          p.then(function(result) {
+            if (result === "foo") {
+              asyncTestPassed();
+            }
+          });
+        */},
+        res: {
+          tr: null,
+          babel: null,
+          closure: null,
+          typescript: null,
+          chrome52: null,
+          chrome55: null,
+          edge13: null,
+          edge14: null,
+          edge15: null,
+          firefox52: null,
+          safaritp: null,
+        },
+      },
     ]
   },
   {
