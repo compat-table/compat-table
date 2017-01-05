@@ -79,56 +79,103 @@ exports.tests = [
     ],
   },
   {
-    name: 'Object.values',
-    spec: 'https://github.com/ljharb/proposal-object-values-entries',
+    name: 'Object static methods',
+    spec: 'https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor',
     category: '2017 features',
-    significance: 'small',
-    exec: function () {/*
-     var obj = Object.create({ a: "qux", d: "qux" });
-     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
-     var v = Object.values(obj);
-     return Array.isArray(v) && String(v) === "foo,bar,baz";
-     */},
-    res: {
-      babel: true,
-      es7shim: true,
-      typescript: typescript.corejs,
-      firefox45: firefox.nightly,
-      firefox47: true,
-      chrome51: "flagged",
-      chrome54: true,
-      edge14: true,
-      safaritp: true,
-      webkit: true,
-    }
-  },
-  {
-    name: 'Object.entries',
-    spec: 'https://github.com/ljharb/proposal-object-values-entries',
-    category: '2017 features',
-    significance: 'small',
-    exec: function () {/*
-     var obj = Object.create({ a: "qux", d: "qux" });
-     obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
-     var e = Object.entries(obj);
-     return Array.isArray(e)
-     && e.length === 3
-     && String(e[0]) === "a,foo"
-     && String(e[1]) === "b,bar"
-     && String(e[2]) === "c,baz";
-     */},
-    res: {
-      babel: true,
-      es7shim: true,
-      typescript: typescript.corejs,
-      firefox45: firefox.nightly,
-      firefox47: true,
-      chrome51: "flagged",
-      chrome54: true,
-      edge14: true,
-      safaritp: true,
-      webkit: true,
-    }
+    significance: 'medium',
+    subtests: [
+      {
+        name: 'Object.values',
+        spec: 'https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor',
+        category: '2017 features',
+        significance: 'medium',
+        exec: function () {/*
+         var obj = Object.create({ a: "qux", d: "qux" });
+         obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+         var v = Object.values(obj);
+         return Array.isArray(v) && String(v) === "foo,bar,baz";
+         */},
+        res: {
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          firefox45: firefox.nightly,
+          firefox47: true,
+          chrome51: "flagged",
+          chrome54: true,
+          edge14: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Object.entries',
+        exec: function () {/*
+         var obj = Object.create({ a: "qux", d: "qux" });
+         obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
+         var e = Object.entries(obj);
+         return Array.isArray(e)
+         && e.length === 3
+         && String(e[0]) === "a,foo"
+         && String(e[1]) === "b,bar"
+         && String(e[2]) === "c,baz";
+         */},
+        res: {
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          firefox45: firefox.nightly,
+          firefox47: true,
+          chrome51: "flagged",
+          chrome54: true,
+          edge14: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Object.getOwnPropertyDescriptors',
+        exec: function () {/*
+          var object = {a: 1};
+          var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
+          object[B] = 2;
+          var O = Object.defineProperty(object, 'c', {value: 3});
+          var D = Object.getOwnPropertyDescriptors(O);
+
+          return D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true
+          && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true
+          && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
+          */},
+        res: {
+          babel: true,
+          es7shim: true,
+          typescript: typescript.corejs,
+          edge15: true,
+          chrome51: "flagged",
+          chrome54: true,
+          firefox50: true,
+          safari10: true,
+          safaritp: true,
+          webkit: true,
+        },
+      },
+      {
+        name: "Object.getOwnPropertyDescriptors doesn't provide undefined descriptors",
+        exec: function () {/*
+          var P = new Proxy({a:1}, {
+            getOwnPropertyDescriptor: function(t, k) {}
+          });
+          return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
+        */},
+        res: {
+          edge15: true,
+          firefox50: true,
+          chrome54: true,
+          safaritp: true,
+          webkit: true,
+        },
+      },
+    ],
   },
   {
     name: 'Array.prototype.includes',
@@ -218,56 +265,6 @@ exports.tests = [
         }
       },
     ],
-  },
-  {
-    name: 'Object.getOwnPropertyDescriptors',
-    spec: 'https://github.com/tc39/proposal-object-getownpropertydescriptors',
-    category: '2017 features',
-    significance: 'small',
-    subtests: [
-      {
-        name: 'basic support',
-        exec: function () {/*
-          var object = {a: 1};
-          var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
-          object[B] = 2;
-          var O = Object.defineProperty(object, 'c', {value: 3});
-          var D = Object.getOwnPropertyDescriptors(O);
-
-          return D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true
-          && D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true
-          && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
-          */},
-        res: {
-          babel: true,
-          es7shim: true,
-          typescript: typescript.corejs,
-          edge15: true,
-          chrome51: "flagged",
-          chrome54: true,
-          firefox50: true,
-          safari10: true,
-          safaritp: true,
-          webkit: true,
-        },
-      },
-      {
-        name: "doesn't provide undefined descriptors",
-        exec: function () {/*
-          var P = new Proxy({a:1}, {
-            getOwnPropertyDescriptor: function(t, k) {}
-          });
-          return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
-        */},
-        res: {
-          edge15: true,
-          firefox50: true,
-          chrome54: true,
-          safaritp: true,
-          webkit: true,
-        },
-      },
-    ]
   },
   {
     name: 'String padding',

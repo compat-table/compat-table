@@ -1337,12 +1337,81 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 </tr>
 <tr class="category"><td colspan="69">2017 features</td>
 </tr>
-<tr significance="0.25"><td id="test-Object.values"><span><a class="anchor" href="#test-Object.values">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.values</a></span><script data-source="
+<tr class="supertest" significance="0.5"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
+<td class="tally" data-browser="tr" data-tally="0">0/4</td>
+<td class="tally" data-browser="babel" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
+<td class="tally" data-browser="closure" data-tally="0">0/4</td>
+<td class="tally" data-browser="typescript" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
+<td class="tally" data-browser="es7shim" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
+<td class="tally obsolete" data-browser="ie9" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ie10" data-tally="0">0/4</td>
+<td class="tally" data-browser="ie11" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="edge12" data-tally="0">0/4</td>
+<td class="tally" data-browser="edge13" data-tally="0">0/4</td>
+<td class="tally" data-browser="edge14" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally unstable" data-browser="edge15" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="firefox38" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox42" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox43" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox44" data-tally="0">0/4</td>
+<td class="tally" data-browser="firefox45" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox46" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="firefox48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="firefox49" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="firefox50" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="firefox51" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="firefox52" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="firefox53" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="chrome46" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome48" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome49" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome50" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="chrome51" data-tally="0" data-flagged-tally="0.75">0/4</td>
+<td class="tally obsolete" data-browser="chrome52" data-tally="0" data-flagged-tally="0.75">0/4</td>
+<td class="tally obsolete" data-browser="chrome53" data-tally="0" data-flagged-tally="0.75">0/4</td>
+<td class="tally obsolete" data-browser="chrome54" data-tally="1">4/4</td>
+<td class="tally" data-browser="chrome55" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="chrome56" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="chrome57" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="safari51" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="safari6" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="safari7" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="safari71_8" data-tally="0">0/4</td>
+<td class="tally" data-browser="safari9" data-tally="0">0/4</td>
+<td class="tally" data-browser="safari10" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">4/4</td>
+<td class="tally" data-browser="phantom" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="node010" data-tally="0">0/4</td>
+<td class="tally" data-browser="node012" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="iojs" data-tally="0">0/4</td>
+<td class="tally" data-browser="node4" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="node5" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="node6" data-tally="0">0/4</td>
+<td class="tally" data-browser="node65" data-tally="0" data-flagged-tally="0.75">0/4</td>
+<td class="tally" data-browser="node7" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="android40" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="android41" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="android42" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="android43" data-tally="0">0/4</td>
+<td class="tally" data-browser="android44" data-tally="0">0/4</td>
+<td class="tally" data-browser="android50" data-tally="0">0/4</td>
+<td class="tally" data-browser="android51" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios51" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios6" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios7" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios8" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios9" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios10" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
+</tr>
+<tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.values"><td><span><a class="anchor" href="#test-Object_static_methods_Object.values">&#xA7;</a>Object.values</span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var v = Object.values(obj);
 return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1412,7 +1481,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr significance="0.25"><td id="test-Object.entries"><span><a class="anchor" href="#test-Object.entries">&#xA7;</a><a href="https://github.com/ljharb/proposal-object-values-entries">Object.entries</a></span><script data-source="
+<tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.entries"><td><span><a class="anchor" href="#test-Object_static_methods_Object.entries">&#xA7;</a>Object.entries</span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var e = Object.entries(obj);
@@ -1421,7 +1490,7 @@ return Array.isArray(e)
 &amp;&amp; String(e[0]) === &quot;a,foo&quot;
 &amp;&amp; String(e[1]) === &quot;b,bar&quot;
 &amp;&amp; String(e[2]) === &quot;c,baz&quot;;
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1491,76 +1560,7 @@ return Array.isArray(e)
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-Object.getOwnPropertyDescriptors"><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors">&#xA7;</a><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Object.getOwnPropertyDescriptors</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally" data-browser="typescript" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally" data-browser="es7shim" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally obsolete" data-browser="ie9" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ie10" data-tally="0">0/2</td>
-<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge12" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge13" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge14" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="edge15" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="firefox38" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox42" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox43" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox44" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox46" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox48" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox49" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox50" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="firefox51" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="firefox52" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="firefox53" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="chrome46" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome47" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome48" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome49" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome50" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome51" data-tally="0" data-flagged-tally="0.5">0/2</td>
-<td class="tally obsolete" data-browser="chrome52" data-tally="0" data-flagged-tally="0.5">0/2</td>
-<td class="tally obsolete" data-browser="chrome53" data-tally="0" data-flagged-tally="0.5">0/2</td>
-<td class="tally obsolete" data-browser="chrome54" data-tally="1">2/2</td>
-<td class="tally" data-browser="chrome55" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="chrome56" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="chrome57" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="safari51" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari7" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari71_8" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari9" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari10" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
-<td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node010" data-tally="0">0/2</td>
-<td class="tally" data-browser="node012" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
-<td class="tally" data-browser="node4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node6" data-tally="0">0/2</td>
-<td class="tally" data-browser="node65" data-tally="0" data-flagged-tally="0.5">0/2</td>
-<td class="tally" data-browser="node7" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="android40" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android41" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android42" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android43" data-tally="0">0/2</td>
-<td class="tally" data-browser="android44" data-tally="0">0/2</td>
-<td class="tally" data-browser="android50" data-tally="0">0/2</td>
-<td class="tally" data-browser="android51" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios51" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios7" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios8" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios10" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
-</tr>
-<tr class="subtest" data-parent="Object.getOwnPropertyDescriptors" id="test-Object.getOwnPropertyDescriptors_basic_support"><td><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors_basic_support">&#xA7;</a>basic support</span><script data-source="
+<tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getOwnPropertyDescriptors"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getOwnPropertyDescriptors">&#xA7;</a>Object.getOwnPropertyDescriptors</span><script data-source="
 var object = {a: 1};
 var B = typeof Symbol === &apos;function&apos; ? Symbol(&apos;b&apos;) : &apos;b&apos;;
 object[B] = 2;
@@ -1640,7 +1640,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Object.getOwnPropertyDescriptors" id="test-Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors"><td><span><a class="anchor" href="#test-Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors">&#xA7;</a>doesn&apos;t provide undefined descriptors</span><script data-source="
+<tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors">&#xA7;</a>Object.getOwnPropertyDescriptors doesn&apos;t provide undefined descriptors</span><script data-source="
 var P = new Proxy({a:1}, {
   getOwnPropertyDescriptor: function(t, k) {}
 });
