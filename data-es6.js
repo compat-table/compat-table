@@ -9769,6 +9769,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        closure: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -10387,6 +10388,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -10970,6 +10972,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         ejs: true,
         es6tr: true,
         jsx: true,
