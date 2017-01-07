@@ -420,10 +420,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -440,10 +440,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -460,10 +460,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         },
       },
       {
@@ -514,10 +514,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -534,10 +534,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -559,10 +559,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -579,10 +579,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -609,10 +609,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -639,10 +639,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: "flagged",
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         }
       },
       {
@@ -689,10 +689,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         },
       },
       {
@@ -708,10 +708,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         },
       },
       {
@@ -736,10 +736,10 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: null,
+          edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
-          safaritp: null,
+          safaritp: true,
         },
       },
     ]
