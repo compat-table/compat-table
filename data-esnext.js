@@ -899,7 +899,6 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
-      firefox53: true,
       webkit: true,
       node010: true,
       node012: true,
@@ -921,7 +920,6 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
-      firefox53: true,
       webkit: true,
       node010: false,
       node012: false,
