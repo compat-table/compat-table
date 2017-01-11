@@ -708,7 +708,7 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: "flagged",
+          edge14: false,
           edge15: "flagged",
           firefox52: true,
           safaritp: true,
