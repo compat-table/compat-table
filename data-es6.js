@@ -8611,9 +8611,8 @@ exports.tests = [
         xs6: true,
         firefox44: true,
         chrome49: true,
-        edge15: true,
         safari10: true,
-        edge15: "flagged"
+        edge15: true
       },
     },
   ],
