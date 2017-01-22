@@ -432,6 +432,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
+        edge15: false
       }
     },
     {
@@ -454,6 +455,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
+        edge15: false
       }
     },
     {
@@ -1118,6 +1120,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1139,6 +1142,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: false,
       }
     },
     {
@@ -1150,6 +1154,7 @@ exports.tests = [
         firefox52: firefox.developer,
         safaritp: true,
         webkit: true,
+        edge15: "flagged",
       }
     },
     {
@@ -1160,6 +1165,7 @@ exports.tests = [
       res: {
         firefox52: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1173,6 +1179,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1186,6 +1193,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1199,6 +1207,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1212,6 +1221,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1225,6 +1235,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1238,6 +1249,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1251,6 +1263,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1264,6 +1277,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1277,6 +1291,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1290,6 +1305,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1303,6 +1319,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
@@ -1316,6 +1333,7 @@ exports.tests = [
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
         chrome48: chrome.sharedmem,
+        edge15: "flagged",
         safaritp: true,
         webkit: true,
       }
