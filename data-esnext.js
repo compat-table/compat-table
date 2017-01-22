@@ -664,6 +664,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
+        edge15: "flagged",
       }
     },
     {
