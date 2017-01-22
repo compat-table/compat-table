@@ -8701,8 +8701,8 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="tally" data-browser="ios10" data-tally="0">0/7</td>
 </tr>
 <tr class="subtest" data-parent="Promise.try" id="test-Promise.try_basic_support"><td><span><a class="anchor" href="#test-Promise.try_basic_support">&#xA7;</a>basic support</span><script data-source="
-return typeof Promise.try !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nreturn typeof Promise.try !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Promise.try !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Promise.try === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>

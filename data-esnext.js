@@ -1803,7 +1803,7 @@ exports.tests = [
     {
       name: 'basic support',
       exec: function () {/*
-        return typeof Promise.try !== 'undefined';
+        return typeof Promise.try === 'function';
       */},
       res: {
       }
