@@ -901,11 +901,15 @@ exports.tests = [
     res: {
       firefox53: {
           val: false,
-          note_id: 'global-property',
-          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">compatibility issue</a>.',
+          note_id: 'ffox-global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
         },
       safaritp: true,
-      webkit: false,
+      webkit: {
+          val: false,
+          note_id: 'wk-global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
+        },
       node010: true,
       node012: true,
       node4: true,
@@ -928,11 +932,15 @@ exports.tests = [
     res: {
       firefox53: {
           val: false,
-          note_id: 'global-property',
-          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">compatibility issue</a>.',
+          note_id: 'ffox-global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
         },
       safaritp: true,
-      webkit: false,
+      webkit: {
+          val: false,
+          note_id: 'wk-global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
+        },
       node010: false,
       node012: false,
       node4: false,
