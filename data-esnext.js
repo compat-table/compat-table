@@ -899,6 +899,11 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
+      firefox53: {
+          val: false,
+          note_id: 'global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">compatibility issue</a>.',
+        },
       safaritp: true,
       webkit: false,
       node010: true,
@@ -921,6 +926,11 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
+      firefox53: {
+          val: false,
+          note_id: 'global-property',
+          note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">compatibility issue</a>.',
+        },
       safaritp: true,
       webkit: false,
       node010: false,
