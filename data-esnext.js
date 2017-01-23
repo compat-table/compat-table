@@ -1135,6 +1135,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1156,6 +1157,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
       }
     },
@@ -1165,7 +1167,7 @@ exports.tests = [
         return typeof SharedArrayBuffer.prototype.slice === 'function';
       */},
       res: {
-        firefox52: firefox.developer,
+        firefox52: true,
         safaritp: true,
         webkit: true,
       }
@@ -1176,7 +1178,7 @@ exports.tests = [
         return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
       */},
       res: {
-        firefox52: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1190,6 +1192,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1203,6 +1206,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1216,6 +1220,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1229,6 +1234,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1242,6 +1248,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1255,6 +1262,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1268,6 +1276,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1281,6 +1290,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1294,6 +1304,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1307,6 +1318,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1320,6 +1332,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
@@ -1333,6 +1346,7 @@ exports.tests = [
       res: {
         firefox46: firefox.nightly,
         firefox51: firefox.developer,
+        firefox52: true,
         chrome48: chrome.sharedmem,
         safaritp: true,
         webkit: true,
