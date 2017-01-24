@@ -569,7 +569,7 @@
     "short": "FF 42",
     "release": "2015-11-03",
     "retire": "2015-12-15",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox43": {
     "full": "Firefox",
@@ -632,29 +632,38 @@
     "family": "SpiderMonkey",
     "short": "FF 50",
     "release": "2016-11-15",
-    "retire": "2017-01-24"
+    "retire": "2017-01-24",
+    "obsolete": true
   },
   "firefox51": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 51 Beta",
+    "short": "FF 51",
     "release": "2017-01-24",
     "retire": "2017-03-07",
-    "unstable": true
+    "obsolete": false
   },
   "firefox52": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 52 Aurora",
+    "short": "FF 52 Beta",
     "release": "2017-03-07",
-    "unstable": true,
-    "obsolete": false
+    "unstable": true
   },
   "firefox53": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 53 Nightly",
+    "short": "FF 53 Aurora",
     "release": "2017-04-18",
+    "retire": "2017-06-13",
+    "unstable": true
+  },
+  "firefox54": {
+    "full": "Firefox",
+    "family": "SpiderMonkey",
+    "short": "FF 54 Nightly",
+    "release": "2017-06-13",
+    "retire": "2017-08-08",
     "unstable": true
   },
   "opera10_10": {
