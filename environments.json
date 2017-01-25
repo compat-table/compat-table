@@ -1117,7 +1117,7 @@
     "short": "CH 46,<br>OP&nbsp;33",
     "release": "2015-10-13",
     "retire": "2015-12-02",
-    "obsolete": true,
+    "obsolete": "very",
     "note_id": "experimental-flag"
   },
   "chrome47": {
@@ -1196,19 +1196,26 @@
     "family": "V8",
     "short": "CH&nbsp;55,<br>OP&nbsp;42",
     "note_id": "experimental-flag",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome56": {
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;56,<br>OP&nbsp;43",
     "note_id": "experimental-flag",
-    "unstable": true
+    "unstable": false
   },
   "chrome57": {
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;57,<br>OP&nbsp;44",
+    "note_id": "experimental-flag",
+    "unstable": true
+  },
+  "chrome58": {
+    "full": "Chrome, Opera",
+    "family": "V8",
+    "short": "CH&nbsp;58,<br>OP&nbsp;45",
     "note_id": "experimental-flag",
     "unstable": true
   },
