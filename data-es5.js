@@ -660,6 +660,7 @@ exports.tests = [
       es5shim: true,
       ie9: true,
       firefox5: true,
+      safari10_1: true,
       safaritp: true,
       webkit: true,
       opera10_10: null,

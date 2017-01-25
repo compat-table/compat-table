@@ -31,6 +31,7 @@ exports.tests = [
           firefox52: true,
           chrome51: "flagged",
           chrome52: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         }
@@ -51,6 +52,7 @@ exports.tests = [
           firefox52: true,
           chrome51: "flagged",
           chrome52: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         }
@@ -72,6 +74,7 @@ exports.tests = [
           firefox52: true,
           chrome51: "flagged",
           chrome52: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         }
@@ -104,6 +107,7 @@ exports.tests = [
           chrome51: "flagged",
           chrome54: true,
           edge14: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         }
@@ -129,6 +133,7 @@ exports.tests = [
           chrome51: "flagged",
           chrome54: true,
           edge14: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         }
@@ -171,6 +176,7 @@ exports.tests = [
           edge15: true,
           firefox50: true,
           chrome54: true,
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         },
@@ -393,6 +399,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -423,6 +430,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -443,6 +451,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -463,6 +472,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         },
       },
@@ -489,6 +499,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -517,6 +528,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -537,6 +549,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -562,6 +575,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -582,6 +596,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -612,6 +627,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -642,6 +658,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -670,6 +687,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         }
       },
@@ -692,6 +710,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         },
       },
@@ -711,6 +730,7 @@ exports.tests = [
           edge14: false,
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         },
       },
@@ -739,6 +759,7 @@ exports.tests = [
           edge14: "flagged",
           edge15: "flagged",
           firefox52: true,
+          safari10_1: true,
           safaritp: true,
         },
       },
@@ -862,6 +883,7 @@ exports.tests = [
       edge13: "flagged",
       edge14: true,
       firefox47: true,
+      safari10_1: true,
       typescript: true,
       chrome49: true,
       safaritp: true,
@@ -892,6 +914,7 @@ exports.tests = [
       firefox47: true,
       typescript: true,
       chrome49: true,
+      safari10_1: true,
       safaritp: true,
       webkit: true,
     }
@@ -1461,6 +1484,7 @@ exports.tests = [
          return new C instanceof C;
          */},
         res: {
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         },
@@ -1478,6 +1502,7 @@ exports.tests = [
          return passed;
          */},
         res: {
+          safari10_1: true,
           safaritp: true,
           webkit: true,
         },
@@ -1501,6 +1526,7 @@ exports.tests = [
       firefox51: true,
       chrome51: true,
       safari10: true,
+      safari10_1: true,
       safaritp: true,
       webkit: true,
     },
@@ -1518,6 +1544,7 @@ exports.tests = [
      */},
     res: {
       safari10: true,
+      safari10_1: true,
       safaritp: true,
       webkit: true,
     },
@@ -1542,6 +1569,7 @@ exports.tests = [
       chrome30: true,
       safari51: true,
       safari9: false,
+      safari10_1: true,
       safaritp: true,
       webkit: true,
       node012: true,
@@ -1562,6 +1590,7 @@ exports.tests = [
      */},
     res: {
       chrome56: true,
+      safari10_1: true,
       safaritp: true,
       firefox53: true,
     },
