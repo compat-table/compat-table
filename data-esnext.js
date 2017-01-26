@@ -1157,9 +1157,13 @@ exports.tests = [
     {
       name: 'SharedArrayBuffer[Symbol.species]',
       exec: function () {/*
-        return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
+        return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
       */},
       res: {
+        firefox52: true,
+        safari10_1: true,
+        safaritp: true,
+        webkit: true,
       }
     },
     {

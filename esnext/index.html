@@ -4947,9 +4947,9 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="firefox50" data-tally="0">0/17</td>
 <td class="tally" data-browser="firefox51" data-tally="0">0/17</td>
-<td class="tally unstable" data-browser="firefox52" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
-<td class="tally unstable" data-browser="firefox53" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
-<td class="tally unstable" data-browser="firefox54" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
+<td class="tally unstable" data-browser="firefox52" data-tally="1">17/17</td>
+<td class="tally unstable" data-browser="firefox53" data-tally="1">17/17</td>
+<td class="tally unstable" data-browser="firefox54" data-tally="1">17/17</td>
 <td class="tally obsolete" data-browser="chrome47" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="chrome48" data-tally="0" data-flagged-tally="0.8823529411764706">0/17</td>
 <td class="tally obsolete" data-browser="chrome49" data-tally="0" data-flagged-tally="0.8823529411764706">0/17</td>
@@ -4969,9 +4969,9 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="safari71_8" data-tally="0">0/17</td>
 <td class="tally" data-browser="safari9" data-tally="0">0/17</td>
 <td class="tally" data-browser="safari10" data-tally="0">0/17</td>
-<td class="tally" data-browser="safari10_1" data-tally="0.8823529411764706" style="background-color:hsl(105,47%,50%)">15/17</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0.8823529411764706" style="background-color:hsl(105,47%,50%)">15/17</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0.8823529411764706" style="background-color:hsl(105,47%,50%)">15/17</td>
+<td class="tally" data-browser="safari10_1" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="node010" data-tally="0">0/17</td>
 <td class="tally" data-browser="node012" data-tally="0">0/17</td>
@@ -5071,8 +5071,8 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no" data-browser="ios10">No</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]">&#xA7;</a>SharedArrayBuffer[Symbol.species]</span><script data-source="
-return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5097,9 +5097,9 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no" data-browser="firefox51">No</td>
-<td class="no unstable" data-browser="firefox52">No</td>
-<td class="no unstable" data-browser="firefox53">No</td>
-<td class="no unstable" data-browser="firefox54">No</td>
+<td class="yes unstable" data-browser="firefox52">Yes</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
+<td class="yes unstable" data-browser="firefox54">Yes</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
 <td class="no obsolete" data-browser="chrome49">No</td>
@@ -5119,9 +5119,9 @@ return SharedArrayBuffer[Symbol.species]() === SharedArrayBuffer;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node010">No</td>
 <td class="no" data-browser="node012">No</td>
