@@ -907,7 +907,11 @@ exports.tests = [
         note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
       },
       safari10_1: false,
-      safaritp: true,
+      safaritp: {
+        val: false,
+        note_id: 'wk-global-property',
+        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
+      },
       webkit: {
         val: false,
         note_id: 'wk-global-property',
@@ -938,7 +942,11 @@ exports.tests = [
         note_id: 'ffox-global-property',
         note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
       },
-      safaritp: true,
+      safaritp: {
+        val: false,
+        note_id: 'wk-global-property',
+        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
+      },
       safari10_1: false,
       webkit: {
         val: false,
