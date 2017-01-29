@@ -146,7 +146,7 @@
 <th class="platform safari71_8 desktop obsolete" data-browser="safari71_8"><a href="#safari71_8" class="browser-name"><abbr title="Safari">SF 7.1,<br>SF 8</abbr></a></th>
 <th class="platform safari9 desktop" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari">SF 9</abbr></a></th>
 <th class="platform safari10 desktop" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari">SF 10</abbr></a></th>
-<th class="platform safari10_1 desktop" data-browser="safari10_1"><a href="#safari10_1" class="browser-name"><abbr title="Safari">SF 10.1</abbr></a></th>
+<th class="platform safari10_1 desktop unstable" data-browser="safari10_1"><a href="#safari10_1" class="browser-name"><abbr title="Safari">SF 10.1</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 22">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r211141 (January 25, 2017)">WK</abbr></a></th>
 <th class="platform rhino17 engine obsolete" data-browser="rhino17"><a href="#rhino17" class="browser-name"><abbr title="Rhino 1.7">Rhino 1.7</abbr></a></th>
@@ -219,7 +219,7 @@ return typeof uneval == 'function';
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -304,7 +304,7 @@ return 'toSource' in Object.prototype
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -375,7 +375,7 @@ return 'caller' in function(){};
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -448,7 +448,7 @@ return (function () {}).arity === 0 &&
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -523,7 +523,7 @@ return f(1, 'boo');
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -592,7 +592,7 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -665,7 +665,7 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -734,7 +734,7 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -813,7 +813,7 @@ return executed;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -882,7 +882,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -951,7 +951,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -1022,7 +1022,7 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1089,7 +1089,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1156,7 +1156,7 @@ return (function(x)x)(1) === 1;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1223,7 +1223,7 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -1294,7 +1294,7 @@ return str === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1362,7 +1362,7 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1463,7 +1463,7 @@ catch(e) {
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1570,7 +1570,7 @@ catch(e) {
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1676,7 +1676,7 @@ global.test((function () {
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -1745,7 +1745,7 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1819,7 +1819,7 @@ return passed;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1904,7 +1904,7 @@ try {
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -1977,7 +1977,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -2052,7 +2052,7 @@ return true;
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -2119,7 +2119,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -2186,7 +2186,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;);
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2253,7 +2253,7 @@ function () { return typeof String.prototype.trimLeft === 'function' }())</scrip
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2318,7 +2318,7 @@ function () { return typeof String.prototype.trimRight === 'function' }())</scri
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2383,7 +2383,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2448,7 +2448,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -2515,7 +2515,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2590,7 +2590,7 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -2657,7 +2657,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2722,7 +2722,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2787,7 +2787,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2856,7 +2856,7 @@ return typeof Object.observe == &apos;function&apos;;
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -2935,7 +2935,7 @@ try {
 <td class="yes obsolete" data-browser="safari71_8">Yes</td>
 <td class="yes" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
-<td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari10_1">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3004,7 +3004,7 @@ return 'lineNumber' in new Error();
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -3073,7 +3073,7 @@ return 'columnNumber' in new Error();
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
@@ -3142,7 +3142,7 @@ return 'fileName' in new Error();
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="yes obsolete" data-browser="rhino17">Yes</td>
@@ -3211,7 +3211,7 @@ return 'description' in new Error();
 <td class="no obsolete" data-browser="safari71_8">No</td>
 <td class="no" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="rhino17">No</td>
