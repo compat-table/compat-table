@@ -3,6 +3,7 @@ var common = require('./data-common');
 var babel = common.babel;
 var typescript = common.typescript;
 var firefox = common.firefox;
+var chrome = common.chrome;
 
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
@@ -763,6 +764,258 @@ exports.tests = [
           safaritp: true,
         },
       },
+    ]
+  },
+  {
+    name: 'shared memory and atomics',
+    category: '2017 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/ecmascript_sharedmem',
+    'subtests': [
+      {
+        name: 'SharedArrayBuffer',
+        exec: function () {/*
+         return typeof SharedArrayBuffer === 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'SharedArrayBuffer[Symbol.species]',
+        exec: function () {/*
+         return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
+         */},
+        res: {
+          firefox52: true,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'SharedArrayBuffer.prototype.byteLength',
+        exec: function () {/*
+         return 'byteLength' in SharedArrayBuffer.prototype;
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+        }
+      },
+      {
+        name: 'SharedArrayBuffer.prototype.slice',
+        exec: function () {/*
+         return typeof SharedArrayBuffer.prototype.slice === 'function';
+         */},
+        res: {
+          firefox52: true,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'SharedArrayBuffer.prototype[Symbol.toStringTag]',
+        exec: function () {/*
+         return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
+         */},
+        res: {
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.add',
+        exec: function () {/*
+         return typeof Atomics.add == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.and',
+        exec: function () {/*
+         return typeof Atomics.and == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.compareExchange',
+        exec: function () {/*
+         return typeof Atomics.compareExchange == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.exchange',
+        exec: function () {/*
+         return typeof Atomics.exchange == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.wait',
+        exec: function () {/*
+         return typeof Atomics.wait == 'function';
+         */},
+        res: {
+          firefox48: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.wake',
+        exec: function () {/*
+         return typeof Atomics.wake == 'function';
+         */},
+        res: {
+          firefox48: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.isLockFree',
+        exec: function () {/*
+         return typeof Atomics.isLockFree == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.load',
+        exec: function () {/*
+         return typeof Atomics.load == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.or',
+        exec: function () {/*
+         return typeof Atomics.or == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.store',
+        exec: function () {/*
+         return typeof Atomics.store == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.sub',
+        exec: function () {/*
+         return typeof Atomics.sub == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      },
+      {
+        name: 'Atomics.xor',
+        exec: function () {/*
+         return typeof Atomics.xor == 'function';
+         */},
+        res: {
+          firefox46: firefox.nightly,
+          firefox51: firefox.developer,
+          firefox52: true,
+          chrome48: chrome.sharedmem,
+          safari10_1: true,
+          safaritp: true,
+          webkit: true,
+        }
+      }
     ]
   },
   {
