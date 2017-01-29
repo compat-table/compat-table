@@ -1474,44 +1474,6 @@ exports.tests = [
     ]
   },
   {
-    name: 'class extends null',
-    category: '2017 misc',
-    significance: 'tiny',
-    spec: 'https://github.com/tc39/ecma262/issues/543',
-    subtests: [
-      {
-        name: 'proper default constructor',
-        exec: function() {/*
-         class C extends null {}
-         return new C instanceof C;
-         */},
-        res: {
-          safari10_1: true,
-          safaritp: true,
-          webkit: true,
-        },
-      },
-      {
-        name: 'proper "this" binding',
-        exec: function() {/*
-         var passed = false;
-         new class C extends null {
-         constructor() {
-         passed = (this instanceof C && !(this instanceof Object));
-         return this;
-         }
-         };
-         return passed;
-         */},
-        res: {
-          safari10_1: true,
-          safaritp: true,
-          webkit: true,
-        },
-      },
-    ]
-  },
-  {
     name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
     category: '2017 misc',
     significance: 'tiny',

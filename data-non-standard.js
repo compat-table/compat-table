@@ -132,6 +132,19 @@ exports.tests = [
   separator: 'after'
 },
 {
+  name: 'class extends null',
+  spec: 'https://github.com/tc39/ecma262/issues/543',
+  exec: function() {/*
+     class C extends null {}
+     return new C instanceof C;
+     */},
+  res: {
+    safari10_1: true,
+    safaritp: true,
+    webkit: true,
+  },
+},
+{
   name: '__count__',
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype',
   exec: function () {
@@ -767,7 +780,6 @@ exports.tests = [
     rhino17: false,
     phantom: false
   },
-  separator: 'after'
 },
 {
   name: 'Object.observe',
