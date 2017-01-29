@@ -777,7 +777,7 @@ exports.tests = [
   res: {
     babel: true,
     jsx: true,
-    // chrome58: true,
+    chrome58: 'flagged',
   }
 },
 {
@@ -793,7 +793,7 @@ exports.tests = [
   res: {
     babel: true,
     jsx: true,
-    // chrome58: true,
+    chrome58: 'flagged',
   }
 },
 {
@@ -1557,7 +1557,6 @@ exports.tests = [
   */},
   res : {
     chrome50: "flagged",
-    // chrome58: true,
   }
 },
 {
