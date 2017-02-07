@@ -9,7 +9,7 @@ exports.tests = [
   exec: function () {
     return typeof uneval == 'function';
   },
-  res: { 
+  res: {
     ie7: false,
     firefox2: true,
     safari3: false,
@@ -45,6 +45,21 @@ exports.tests = [
     besen: true,
     rhino17: true,
     phantom: false
+  },
+},
+{
+  name: 'optional "scope" argument of "eval"',
+  spec: null,
+  exec: function () {/*
+    var x = 1;
+    return eval("x", { x: 2 }) === 2;
+  */},
+  res: {
+    firefox2: true,
+    firefox3: false,
+    firefox3_5: true,
+    firefox4: false,
+    rhino17: null,
   },
   separator: 'after'
 },
