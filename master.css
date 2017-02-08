@@ -262,7 +262,8 @@ td[title] {
 }
 
 /* non-standard no */
-.non-standard .no {
+.non-standard .no,
+.non-standard [data-tally="0"] {
     background: #4444ac;
 }
 

@@ -92,6 +92,7 @@ $(function() {
 
   window.__updateSupertest = function() {
     var tr = $(this);
+    var isNonStandardTable = $('.non-standard table').length > 0;
     var subtests = tr.nextUntil('tr:not(.subtest)');
     if (subtests.length === 0) {
       return;
@@ -103,7 +104,7 @@ $(function() {
       .find('td:first-child')
       .after(
       '<td class="tally current" data-tally="' + tally/subtests.length
-      + '" style="background-color:hsl(' + (120*grade|0) + ',' +((86 - (grade*44))|0)  +'%,50%)'
+      + (isNonStandardTable ? '' : '" style="background-color:hsl(' + (120*grade|0) + ',' +((86 - (grade*44))|0)  +'%,50%)')
       + '">' +
       tally + '/' + subtests.length + '</td><td></td>'
     );
