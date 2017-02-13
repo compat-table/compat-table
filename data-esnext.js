@@ -778,6 +778,7 @@ exports.tests = [
     babel: true,
     jsx: true,
     chrome58: 'flagged',
+    typescript: true,
   }
 },
 {
@@ -794,6 +795,7 @@ exports.tests = [
     babel: true,
     jsx: true,
     chrome58: 'flagged',
+    typescript: true,
   }
 },
 {
