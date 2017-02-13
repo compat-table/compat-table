@@ -1760,6 +1760,7 @@ exports.tests = [
      && !"\u212a".match(/.\B/iu) && !"ſ".match(/.\B/iu);
      */},
     res: {
+      firefox54: true,
       safari10: true,
       safari10_1: true,
       safaritp: true,
