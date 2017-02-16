@@ -811,6 +811,7 @@ exports.tests = [
           firefox51: firefox.developer,
           firefox52: true,
           chrome48: chrome.sharedmem,
+          webkit: true,
         }
       },
       {
