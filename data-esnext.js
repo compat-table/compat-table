@@ -925,6 +925,7 @@ exports.tests = [
       node6: true,
       node65: true,
       node7: true,
+      node76: true,
     }
   }, {
     name: '"global" global property has correct property descriptor',
@@ -961,6 +962,7 @@ exports.tests = [
       node6: false,
       node65: false,
       node7: false,
+      node76: false,
     }
   }]
 },
