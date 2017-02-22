@@ -1443,7 +1443,7 @@
   "node65": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 6.5",
+    "short": "Node &gt;=6.5 &lt;7",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome51",
@@ -1458,10 +1458,25 @@
   "node7": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 7",
+    "short": "Node 7.0-7.5",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome54",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
+  "node76": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=7.6 &lt;8",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome55",
     "obsolete": false,
     "test_suites": [
       "es6",
