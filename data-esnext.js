@@ -45,8 +45,8 @@ exports.tests = [
   ],
 },
 {
-  name: 'do expression',
-  category: STAGE0,
+  name: 'do expressions',
+  category: STAGE1,
   significance: 'small',
   spec: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
@@ -753,7 +753,7 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: STAGE0,
+  category: STAGE1,
   significance: 'large',
   spec: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*

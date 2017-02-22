@@ -6182,6 +6182,162 @@ return new C().x() === 42;
 </tr>
 <tr class="category"><td colspan="72">Proposal (stage 1)</td>
 </tr>
+<tr significance="0.25"><td id="test-do_expressions"><span><a class="anchor" href="#test-do_expressions">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions">do expressions</a></span><script data-source="
+return do {
+  let x = 23;
+  x + 19;
+} === 42;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="typescript">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no obsolete" data-browser="ie9">No</td>
+<td class="no obsolete" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no" data-browser="edge14">No</td>
+<td class="no unstable" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="firefox38">No</td>
+<td class="no obsolete" data-browser="firefox43">No</td>
+<td class="no obsolete" data-browser="firefox44">No</td>
+<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox46">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no" data-browser="firefox51">No</td>
+<td class="no unstable" data-browser="firefox52">No</td>
+<td class="no unstable" data-browser="firefox53">No</td>
+<td class="no unstable" data-browser="firefox54">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome48">No</td>
+<td class="no obsolete" data-browser="chrome49">No</td>
+<td class="no obsolete" data-browser="chrome50">No</td>
+<td class="no obsolete" data-browser="chrome51">No</td>
+<td class="no obsolete" data-browser="chrome52">No</td>
+<td class="no obsolete" data-browser="chrome53">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no" data-browser="chrome56">No</td>
+<td class="no unstable" data-browser="chrome57">No</td>
+<td class="no unstable" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no obsolete" data-browser="safari7">No</td>
+<td class="no obsolete" data-browser="safari71_8">No</td>
+<td class="no" data-browser="safari9">No</td>
+<td class="no" data-browser="safari10">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node012">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no obsolete" data-browser="android42">No</td>
+<td class="no obsolete" data-browser="android43">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+<td class="no obsolete" data-browser="ios51">No</td>
+<td class="no obsolete" data-browser="ios6">No</td>
+<td class="no obsolete" data-browser="ios7">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
+</tr>
+<tr significance="1"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/caridy/proposal-realms">Realms</a></span><script data-source="
+return typeof Realm === &quot;function&quot;
+  &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
+    return key in Realm.prototype;
+  });
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="typescript">No</td>
+<td class="no obsolete" data-browser="ie7">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no obsolete" data-browser="ie9">No</td>
+<td class="no obsolete" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no" data-browser="edge13">No</td>
+<td class="no" data-browser="edge14">No</td>
+<td class="no unstable" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="firefox38">No</td>
+<td class="no obsolete" data-browser="firefox43">No</td>
+<td class="no obsolete" data-browser="firefox44">No</td>
+<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox46">No</td>
+<td class="no obsolete" data-browser="firefox47">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no" data-browser="firefox51">No</td>
+<td class="no unstable" data-browser="firefox52">No</td>
+<td class="no unstable" data-browser="firefox53">No</td>
+<td class="no unstable" data-browser="firefox54">No</td>
+<td class="no obsolete" data-browser="chrome47">No</td>
+<td class="no obsolete" data-browser="chrome48">No</td>
+<td class="no obsolete" data-browser="chrome49">No</td>
+<td class="no obsolete" data-browser="chrome50">No</td>
+<td class="no obsolete" data-browser="chrome51">No</td>
+<td class="no obsolete" data-browser="chrome52">No</td>
+<td class="no obsolete" data-browser="chrome53">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no" data-browser="chrome56">No</td>
+<td class="no unstable" data-browser="chrome57">No</td>
+<td class="no unstable" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="safari5">No</td>
+<td class="no obsolete" data-browser="safari51">No</td>
+<td class="no obsolete" data-browser="safari6">No</td>
+<td class="no obsolete" data-browser="safari7">No</td>
+<td class="no obsolete" data-browser="safari71_8">No</td>
+<td class="no" data-browser="safari9">No</td>
+<td class="no" data-browser="safari10">No</td>
+<td class="no unstable" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node010">No</td>
+<td class="no obsolete" data-browser="node012">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node65">No</td>
+<td class="no" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="android40">No</td>
+<td class="no obsolete" data-browser="android41">No</td>
+<td class="no obsolete" data-browser="android42">No</td>
+<td class="no obsolete" data-browser="android43">No</td>
+<td class="no" data-browser="android44">No</td>
+<td class="no" data-browser="android50">No</td>
+<td class="no" data-browser="android51">No</td>
+<td class="no obsolete" data-browser="ios51">No</td>
+<td class="no obsolete" data-browser="ios6">No</td>
+<td class="no obsolete" data-browser="ios7">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
+</tr>
 <tr class="supertest" significance="0.125"><td id="test-Math_methods_for_64-bit_integers"><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers">&#xA7;</a><a href="https://gist.github.com/BrendanEich/4294d5c212a6d2254703">Math methods for 64-bit integers</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
 <td class="tally" data-browser="babel" data-tally="1">4/4</td>
@@ -6256,7 +6412,7 @@ return new C().x() === 42;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.iaddh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.iaddh">&#xA7;</a>Math.iaddh</span><script data-source="
 return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.iaddh(0xffffffff, 1, 1, 1) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6331,7 +6487,7 @@ return Math.iaddh(0xffffffff, 1, 1, 1) === 3;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.isubh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.isubh">&#xA7;</a>Math.isubh</span><script data-source="
 return Math.isubh(0, 4, 1, 1) === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.isubh(0, 4, 1, 1) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6406,7 +6562,7 @@ return Math.isubh(0, 4, 1, 1) === 2;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.imulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.imulh">&#xA7;</a>Math.imulh</span><script data-source="
 return Math.imulh(0xffffffff, 7) === -1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.imulh(0xffffffff, 7) === -1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6481,7 +6637,7 @@ return Math.imulh(0xffffffff, 7) === -1;
 </tr>
 <tr class="subtest" data-parent="Math_methods_for_64-bit_integers" id="test-Math_methods_for_64-bit_integers_Math.umulh"><td><span><a class="anchor" href="#test-Math_methods_for_64-bit_integers_Math.umulh">&#xA7;</a>Math.umulh</span><script data-source="
 return Math.umulh(0xffffffff, 7) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.umulh(0xffffffff, 7) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6628,7 +6784,7 @@ return Math.umulh(0xffffffff, 7) === 6;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_basic_support"><td><span><a class="anchor" href="#test-Observable_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof Observable !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6703,7 +6859,7 @@ return typeof Observable !== &apos;undefined&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Symbol.observable_well_known_symbol"><td><span><a class="anchor" href="#test-Observable_Symbol.observable_well_known_symbol">&#xA7;</a>Symbol.observable well known symbol</span><script data-source="
 return typeof Symbol.observable === &apos;symbol&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6778,7 +6934,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.subscribe"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.subscribe">&#xA7;</a>Observable.prototype.subscribe</span><script data-source="
 return &apos;subscribe&apos; in Observable.prototype;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6863,7 +7019,7 @@ try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
 try { Observable(function() { }) } catch(e) { newCheckPassed = true }
 
 return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newCheckPassed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -6939,7 +7095,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.forEach"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.forEach">&#xA7;</a>Observable.prototype.forEach</span><script data-source="
 var o = new Observable(function() { });
 return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function(e){return true}) instanceof Promise;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7015,7 +7171,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype[Symbol.observable]"><td><span><a class="anchor" href="#test-Observable_Observable.prototype[Symbol.observable]">&#xA7;</a>Observable.prototype[Symbol.observable]</span><script data-source="
 var o = new Observable(function() { });
 return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]() === o;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7090,7 +7246,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.of"><td><span><a class="anchor" href="#test-Observable_Observable.of">&#xA7;</a>Observable.of</span><script data-source="
 return Observable.of(1, 2, 3) instanceof Observable;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7165,7 +7321,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.from"><td><span><a class="anchor" href="#test-Observable_Observable.from">&#xA7;</a>Observable.from</span><script data-source="
 return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable.from(new Set([1, 2, 3])) instanceof Observable);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7250,7 +7406,7 @@ while(!(step = iterator.next()).done){
 return a === &apos;1a2b&apos;
   &amp;&amp; b === &apos;12&apos;
   &amp;&amp; c === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -7329,7 +7485,7 @@ var weakref = System.makeWeakRef(O);
 var works = weakref.get() === O;
 weakref.clear();
 return works &amp;&amp; weakref.get() === undefined;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7405,7 +7561,7 @@ return works &amp;&amp; weakref.get() === undefined;
 <tr significance="0.5"><td id="test-frozen_realms"><span><a class="anchor" href="#test-frozen_realms">&#xA7;</a><a href="https://github.com/FUDCo/frozen-realms">frozen realms</a></span><script data-source="
 return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
   &amp;&amp; typeof Reflect.Realm.prototype.spawn === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7556,7 +7712,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 function foo() { this.garply += &quot;foo&quot;; return this; }
 var obj = { garply: &quot;bar&quot; };
 return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nfunction foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -7632,166 +7788,10 @@ return typeof obj::foo === &quot;function&quot; &amp;&amp; obj::foo().garply ===
 <tr class="subtest" data-parent="bind_(::)_operator" id="test-bind_(::)_operator_unary_form"><td><span><a class="anchor" href="#test-bind_(::)_operator_unary_form">&#xA7;</a>unary form</span><script data-source="
 var obj = { garply: &quot;bar&quot;, foo: function() { this.garply += &quot;foo&quot;; return this; } };
 return typeof ::obj.foo === &quot;function&quot; &amp;&amp; ::obj.foo().garply === &quot;barfoo&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("98");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("98");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge14" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge15" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox38" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox43" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox48" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox49" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox52" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox53" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox54" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome48" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome49" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome52" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome53" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome54" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome56" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome57" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome58" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari71_8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="safari10_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node010" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node012" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android42" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android43" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-</tr>
-<tr significance="0.25" class="optional-feature"><td id="test-do_expression"><span><a class="anchor" href="#test-do_expression">&#xA7;</a><a href="http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions">do expression</a></span><script data-source="
-return do {
-  let x = 23;
-  x + 19;
-} === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ie10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ie11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge13" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge14" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge15" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox38" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox43" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox45" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox46" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox48" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox49" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox52" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox53" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox54" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome47" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome48" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome49" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome52" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome53" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome54" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome56" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome57" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome58" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari71_8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="safari10_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="phantom" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node010" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node012" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="iojs" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android40" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android41" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android42" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android43" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android44" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android50" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="android51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios51" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-</tr>
-<tr significance="1" class="optional-feature"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/caridy/proposal-realms">Realms</a></span><script data-source="
-return typeof Realm === &quot;function&quot;
-  &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
-    return key in Realm.prototype;
-  });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="ie7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
