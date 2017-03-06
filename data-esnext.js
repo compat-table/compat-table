@@ -891,6 +891,26 @@ exports.tests = [
   ]
 },
 {
+  name: 'template literal revision',
+  spec: 'https://github.com/tc39/proposal-template-literal-revision',
+  category: STAGE3,
+  significance: 'small',
+  exec: function() {/*
+    function fn(strings, a, b) {
+      return typeof strings[0] === "undefined" &&
+        typeof strings[1] === "undefined" &&
+        typeof strings[2] === "undefined" &&
+        strings.raw[0] === "\\unicode " &&
+        strings.raw[1] === " \\xerxes " &&
+        strings.raw[2] === " \\u{55}" &&
+        a === 123 &&
+        b === 456;
+    }
+    return fn`\unicode ${123} \xerxes ${456} \u{55}`;
+  */},
+  res: {},
+},
+{
   name: 'global',
   category: STAGE3,
   significance: 'small',
