@@ -1312,6 +1312,18 @@ exports.tests = [
   }
 },
 {
+  name: 'RegExp Unicode Property Escapes',
+  category: STAGE2,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-regexp-unicode-property-escapes',
+  exec: function () {/*
+    const regexGreekSymbol = /\p{Script=Greek}/u;
+    return regexGreekSymbol.test('π');
+  */},
+  res: {
+  }
+},
+{
   name: 'Reflect.isCallable / Reflect.isConstructor',
   category: STAGE0,
   significance: 'small',
