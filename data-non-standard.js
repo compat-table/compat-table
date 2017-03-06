@@ -4,48 +4,150 @@ exports.skeleton_file = 'non-standard/skeleton.html';
 
 exports.tests = [
 {
-  name: 'uneval',
-  spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
-  exec: function () {
-    return typeof uneval == 'function';
-  },
-  res: {
-    ie7: false,
-    firefox2: true,
-    safari3: false,
-    chrome7: false,
-    opera10_10: false,
-    konq44: false,
-    besen: false,
-    rhino17: true,
-    phantom: false,
-  }
-},
-{
-  name: '"toSource" method',
-  spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource',
-  exec: function () {
-    return 'toSource' in Object.prototype
-        && Number   .prototype.hasOwnProperty('toSource')
-        && Boolean  .prototype.hasOwnProperty('toSource')
-        && String   .prototype.hasOwnProperty('toSource')
-        && Function .prototype.hasOwnProperty('toSource')
-        && Array    .prototype.hasOwnProperty('toSource')
-        && RegExp   .prototype.hasOwnProperty('toSource')
-        && Date     .prototype.hasOwnProperty('toSource')
-        && Error    .prototype.hasOwnProperty('toSource');
-  },
-  res: {
-    ie7: false,
-    firefox2: true,
-    safari3: false,
-    chrome7: false,
-    opera10_10: false,
-    konq44: false,
-    besen: true,
-    rhino17: true,
-    phantom: false
-  },
+  name: 'decompilation',
+  subtests: [
+    {
+      name: 'uneval, existence',
+      spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
+      exec: function () {/*
+        return typeof uneval == 'function';
+      */},
+      res: {
+        firefox2: true,
+        rhino17: true,
+      }
+    },
+    {
+      name: 'built-in "toSource" methods',
+      spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource',
+      exec: function () {/*
+        return 'toSource' in Object.prototype
+            && Number   .prototype.hasOwnProperty('toSource')
+            && Boolean  .prototype.hasOwnProperty('toSource')
+            && String   .prototype.hasOwnProperty('toSource')
+            && Function .prototype.hasOwnProperty('toSource')
+            && Array    .prototype.hasOwnProperty('toSource')
+            && RegExp   .prototype.hasOwnProperty('toSource')
+            && Date     .prototype.hasOwnProperty('toSource')
+            && Error    .prototype.hasOwnProperty('toSource');
+      */},
+      res: {
+        firefox2: true,
+        besen: true,
+        rhino17: true,
+      },
+    },
+    {
+      name: '"toSource" method as hook for uneval',
+      exec: function () {/*
+        return uneval({ toSource: function() { return "pwnd!" } }) === "pwnd!";
+      */} ,
+      res: {
+        firefox2: true,
+        rhino17: null,
+      },
+    },
+    {
+      name: 'eval(uneval(value)) is functionally equivalent to value',
+      exec: function () {/*
+
+        function isEquivalent(x, y) {
+
+            if (x == null || y == null)
+                return x === y;
+
+            if (typeof x !== typeof y)
+                return false;
+
+            switch (typeof x) {
+            case 'number':
+                return x === y && 1/x === 1/y || isNaN(x) && isNaN(y)
+            case 'boolean':
+            case 'string':
+            case 'symbol':
+                return x === y;
+            }
+
+            if ({}.toString.call(x) !== {}.toString.call(y))
+                return false;
+
+            switch ({}.toString.call(x)) {
+
+            case '[object Boolean]':
+            case '[object Number]':
+            case '[object String]':
+            case '[object Date]':
+                return x.valueOf() === y.valueOf();
+
+            case '[object Function]':
+            case '[object RegExp]':
+            case '[object Error]':
+                return x.toString() === y.toString();
+
+            case '[object Array]':
+                if (x.length !== y.length)
+                    return false;
+                for (var i = 0; i < x.length; i++) {
+                    if (!isEquivalent(x[i], y[i]))
+                        return false;
+                }
+                return true;
+
+            default:
+                for (var i in x) {
+                    if ({}.hasOwnProperty.call(x, i)) {
+                        if (!{}.hasOwnProperty.call(y, i) || !isEquivalent(x[i], y[i]))
+                            return false;
+                    }
+                }
+                for (var i in y) {
+                    if ({}.hasOwnProperty.call(y, i) && !{}.hasOwnProperty.call(x, i))
+                        return false;
+                }
+                return true;
+
+            }
+
+        }
+
+
+        var sample = [
+            undefined,
+            null,
+            false,
+            1,
+            NaN,
+            -0,
+            "foo",
+            typeof Symbol !== "undefined" && Symbol.iterator,
+            typeof Symbol !== "undefined" && Symbol.for && Symbol.for('bingo'),
+            Object(true),
+            Object(3),
+            Object("x"),
+            function x(y) { return 42 + y; },
+            new Date(1234567890123),
+            new Error("message"),
+            new EvalError("WTF"),
+            /rx/gim,
+            [ 3, undefined, "%&@", null, function() {} ],
+            { foo: "x", bar: [ 42, new Date ] }
+        ];
+
+        for (var k in sample) {
+            if (!isEquivalent(sample[k], eval(uneval(sample[k])))) {
+                return false;
+            }
+        }
+
+        return true;
+      */} ,
+      res: {
+        firefox2: true,
+        besen: null,
+        rhino17: null,
+      },
+    },
+  ]
 },
 {
   name: 'optional "scope" argument of "eval"',

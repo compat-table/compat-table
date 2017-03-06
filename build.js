@@ -397,6 +397,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
+  var isNonStandardTable = $('.non-standard table').length > 0;
   var footnoteIndex = {};
   var rowNum = 0;
   // rawBrowsers includes very obsolete browsers which mustn't be printed, but should
@@ -649,7 +650,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           var cell = resultCell(browserId, 'tally')
             .text((tally|0) + "/" + outOf)
             .attr('data-tally', grade);
-          if (grade > 0 && grade < 1 && !cell.hasClass('not-applicable')) {
+          if (grade > 0 && grade < 1 && !cell.hasClass('not-applicable') && !isNonStandardTable) {
             cell.attr('style','background-color:hsl(' + (120*grade|0) + ','
               +((86 - (grade*44))|0)  +'%,50%)');
           }
