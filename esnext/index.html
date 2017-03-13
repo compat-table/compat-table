@@ -4817,8 +4817,6 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <tr significance="0.25"><td id="test-template_literal_revision"><span><a class="anchor" href="#test-template_literal_revision">&#xA7;</a><a href="https://github.com/tc39/proposal-template-literal-revision">template literal revision</a></span><script data-source="
 function fn(strings, a, b) {
   return typeof strings[0] === &quot;undefined&quot; &amp;&amp;
-    typeof strings[1] === &quot;undefined&quot; &amp;&amp;
-    typeof strings[2] === &quot;undefined&quot; &amp;&amp;
     strings.raw[0] === &quot;\\unicode &quot; &amp;&amp;
     strings.raw[1] === &quot; \\xerxes &quot; &amp;&amp;
     strings.raw[2] === &quot; \\u{55}&quot; &amp;&amp;
@@ -4826,7 +4824,7 @@ function fn(strings, a, b) {
     b === 456;
 }
 return fn`\unicode ${123} \xerxes ${456} \u{55}`;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    typeof strings[1] === \"undefined\" &&\n    typeof strings[2] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    typeof strings[1] === \"undefined\" &&\n    typeof strings[2] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4851,9 +4849,9 @@ return fn`\unicode ${123} \xerxes ${456} \u{55}`;
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
-<td class="no unstable" data-browser="firefox53">No</td>
-<td class="no unstable" data-browser="firefox54">No</td>
-<td class="no unstable" data-browser="firefox55">No</td>
+<td class="yes unstable" data-browser="firefox53">Yes</td>
+<td class="yes unstable" data-browser="firefox54">Yes</td>
+<td class="yes unstable" data-browser="firefox55">Yes</td>
 <td class="no obsolete" data-browser="chrome47">No</td>
 <td class="no obsolete" data-browser="chrome48">No</td>
 <td class="no obsolete" data-browser="chrome49">No</td>
@@ -4863,8 +4861,8 @@ return fn`\unicode ${123} \xerxes ${456} \u{55}`;
 <td class="no obsolete" data-browser="chrome53">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
 <td class="no obsolete" data-browser="chrome55">No</td>
-<td class="no" data-browser="chrome56">No</td>
-<td class="no unstable" data-browser="chrome57">No</td>
+<td class="no obsolete" data-browser="chrome56">No</td>
+<td class="no" data-browser="chrome57">No</td>
 <td class="no unstable" data-browser="chrome58">No</td>
 <td class="no unstable" data-browser="chrome59">No</td>
 <td class="no obsolete" data-browser="safari5">No</td>

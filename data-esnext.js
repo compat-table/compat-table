@@ -898,8 +898,6 @@ exports.tests = [
   exec: function() {/*
     function fn(strings, a, b) {
       return typeof strings[0] === "undefined" &&
-        typeof strings[1] === "undefined" &&
-        typeof strings[2] === "undefined" &&
         strings.raw[0] === "\\unicode " &&
         strings.raw[1] === " \\xerxes " &&
         strings.raw[2] === " \\u{55}" &&
@@ -908,7 +906,9 @@ exports.tests = [
     }
     return fn`\unicode ${123} \xerxes ${456} \u{55}`;
   */},
-  res: {},
+    res: {
+      firefox53: true,
+    }
 },
 {
   name: 'global',
