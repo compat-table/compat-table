@@ -716,21 +716,23 @@ exports.tests = [
   name: 'class decorators',
   category: STAGE2,
   significance: 'medium',
-  spec: 'https://github.com/wycats/javascript-decorators',
+  spec: 'https://tc39.github.io/proposal-decorators/',
   exec: function(){/*
     class A {
       @nonconf
       get B() {}
     }
-    function nonconf(target, name, descriptor) {
-      descriptor.configurable = false;
-      return descriptor;
+    function nonconf(target) {
+      target.descriptor.configurable = false;
+      target.key = 'C';
+      return target;
     }
-    return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
+    return Object.getOwnPropertyDescriptor(A.prototype, 'B') === undefined &&
+           Object.getOwnPropertyDescriptor(A.prototype, 'C').configurable === false;
   */},
   res: {
-    babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
-    typescript: true,
+    babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Stage 2 decorators are in progress, see <a href='https://github.com/babel/babel/issues/2645'>babel/babel#2645</a>."},
+    typescript: {val: false, note_id: "typescript-decorators-legacy", note_html: "TypeScript currently implements an earlier, incompatible version of the decorator proposal."},
   }
 },
 {
