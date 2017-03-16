@@ -909,6 +909,7 @@ exports.tests = [
   */},
     res: {
       firefox53: true,
+      chrome59: 'flagged',
       safaritp: true,
       webkit: true,
     }
