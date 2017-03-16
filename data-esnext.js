@@ -776,9 +776,10 @@ exports.tests = [
   */},
   res: {
     babel: true,
+    typescript: true,
     jsx: true,
     chrome58: 'flagged',
-    typescript: true,
+    webkit: true,
   }
 },
 {
@@ -908,6 +909,8 @@ exports.tests = [
   */},
     res: {
       firefox53: true,
+      safaritp: true,
+      webkit: true,
     }
 },
 {
