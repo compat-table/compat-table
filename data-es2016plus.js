@@ -1819,11 +1819,33 @@ exports.tests = [
       firefox53: true,
     },
   },
+  {
+    name: 'template literal revision',
+    spec: 'https://github.com/tc39/proposal-template-literal-revision',
+    category: '2018 features',
+    significance: 'small',
+    exec: function() {/*
+     function tag(strings, a) {
+     return strings[0] === void 0 &&
+     strings.raw[0] === "\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}" &&
+     strings[1] === "\0" &&
+     strings.raw[1] === "\\0" &&
+     a === 0;
+     }
+     return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
+     */},
+    res: {
+      firefox53: true,
+      chrome59: 'flagged',
+      safaritp: true,
+      webkit: true,
+    }
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
