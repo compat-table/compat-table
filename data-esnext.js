@@ -1307,7 +1307,7 @@ exports.tests = [
 {
   name: 'RegExp named capture groups',
   spec: 'https://github.com/goyakin/es-regexp-named-groups',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
@@ -1325,7 +1325,7 @@ exports.tests = [
 {
   name: 'RegExp lookbehind',
   spec: 'https://github.com/tc39/proposal-regexp-lookbehind',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
@@ -1336,7 +1336,7 @@ exports.tests = [
 },
 {
   name: 'RegExp Unicode Property Escapes',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-regexp-unicode-property-escapes',
   exec: function () {/*
