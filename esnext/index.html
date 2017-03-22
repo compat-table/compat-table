@@ -4815,16 +4815,15 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="no" data-browser="ios10">No</td>
 </tr>
 <tr significance="0.25"><td id="test-template_literal_revision"><span><a class="anchor" href="#test-template_literal_revision">&#xA7;</a><a href="https://github.com/tc39/proposal-template-literal-revision">template literal revision</a></span><script data-source="
-function fn(strings, a, b) {
-  return typeof strings[0] === &quot;undefined&quot; &amp;&amp;
-    strings.raw[0] === &quot;\\unicode &quot; &amp;&amp;
-    strings.raw[1] === &quot; \\xerxes &quot; &amp;&amp;
-    strings.raw[2] === &quot; \\u{55}&quot; &amp;&amp;
-    a === 123 &amp;&amp;
-    b === 456;
+function tag(strings, a) {
+  return strings[0] === void 0 &amp;&amp;
+    strings.raw[0] === &quot;\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}&quot; &amp;&amp;
+    strings[1] === &quot;\0&quot; &amp;&amp;
+    strings.raw[1] === &quot;\\0&quot; &amp;&amp;
+    a === 0;
 }
-return fn`\unicode ${123} \xerxes ${456} \u{55}`;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nfunction fn(strings, a, b) {\n  return typeof strings[0] === \"undefined\" &&\n    strings.raw[0] === \"\\\\unicode \" &&\n    strings.raw[1] === \" \\\\xerxes \" &&\n    strings.raw[2] === \" \\\\u{55}\" &&\n    a === 123 &&\n    b === 456;\n}\nreturn fn`\\unicode ${123} \\xerxes ${456} \\u{55}`;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nfunction tag(strings, a) {\n  return strings[0] === void 0 &&\n    strings.raw[0] === \"\\\\01\\\\1\\\\xg\\\\xAg\\\\u0\\\\u0g\\\\u00g\\\\u000g\\\\u{g\\\\u{0\\\\u{110000}\" &&\n    strings[1] === \"\\0\" &&\n    strings.raw[1] === \"\\\\0\" &&\n    a === 0;\n}\nreturn tag`\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}${0}\\0`;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nfunction tag(strings, a) {\n  return strings[0] === void 0 &&\n    strings.raw[0] === \"\\\\01\\\\1\\\\xg\\\\xAg\\\\u0\\\\u0g\\\\u00g\\\\u000g\\\\u{g\\\\u{0\\\\u{110000}\" &&\n    strings[1] === \"\\0\" &&\n    strings.raw[1] === \"\\\\0\" &&\n    a === 0;\n}\nreturn tag`\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}${0}\\0`;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
