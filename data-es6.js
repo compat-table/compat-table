@@ -5730,6 +5730,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.size',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size',
       exec: function () {/*
         var key = {};
         var map = new Map();
@@ -5757,6 +5758,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.delete',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete',
       exec: function () {/*
         return typeof Map.prototype.delete === "function";
       */},
@@ -5779,6 +5781,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.clear',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear',
       exec: function () {/*
         return typeof Map.prototype.clear === "function";
       */},
@@ -5801,6 +5804,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.forEach',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach',
       exec: function () {/*
         return typeof Map.prototype.forEach === "function";
       */},
@@ -5823,6 +5827,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys',
       exec: function () {/*
         return typeof Map.prototype.keys === "function";
       */},
@@ -5845,6 +5850,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.values',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values',
       exec: function () {/*
         return typeof Map.prototype.values === "function";
       */},
@@ -5867,6 +5873,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype.entries',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries',
       exec: function () {/*
         return typeof Map.prototype.entries === "function";
       */},
@@ -5889,6 +5896,7 @@ exports.tests = [
     },
     {
       name: 'Map.prototype[Symbol.iterator]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator',
       exec: function () {/*
         return typeof Map.prototype[Symbol.iterator] === "function";
       */},
@@ -5968,6 +5976,7 @@ exports.tests = [
     },
     {
       name: 'Map[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
         return 'get' in prop && Map[Symbol.species] === Map;
@@ -6200,6 +6209,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.size',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size',
       exec: function () {/*
         var obj = {};
         var set = new Set();
@@ -6229,6 +6239,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.delete',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete',
       exec: function () {/*
         return typeof Set.prototype.delete === "function";
       */},
@@ -6251,6 +6262,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.clear',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear',
       exec: function () {/*
         return typeof Set.prototype.clear === "function";
       */},
@@ -6273,6 +6285,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.forEach',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach',
       exec: function () {/*
         return typeof Set.prototype.forEach === "function";
       */},
@@ -6295,6 +6308,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys',
       exec: function () {/*
         return typeof Set.prototype.keys === "function";
       */},
@@ -6316,6 +6330,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.values',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values',
       exec: function () {/*
         return typeof Set.prototype.values === "function";
       */},
@@ -6338,6 +6353,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype.entries',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/entries',
       exec: function () {/*
         return typeof Set.prototype.entries === "function";
       */},
@@ -6360,6 +6376,7 @@ exports.tests = [
     },
     {
       name: 'Set.prototype[Symbol.iterator]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator',
       exec: function () {/*
         return typeof Set.prototype[Symbol.iterator] === "function";
       */},
@@ -6440,6 +6457,7 @@ exports.tests = [
     },
     {
       name: 'Set[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@species',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
         return 'get' in prop && Set[Symbol.species] === Set;
@@ -6638,6 +6656,7 @@ exports.tests = [
     },
     {
       name: 'WeakMap.prototype.set returns this',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set#Return_value',
       exec: function () {/*
         var weakmap = new WeakMap();
         var key = {};
@@ -6660,6 +6679,7 @@ exports.tests = [
     },
     {
       name: 'WeakMap.prototype.delete',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete',
       exec: function () {/*
         return typeof WeakMap.prototype.delete === "function";
       */},
@@ -6681,6 +6701,7 @@ exports.tests = [
     },
     {
       name: 'no WeakMap.prototype.clear method',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear',
       exec: function () {/*
         if (!("clear" in WeakMap.prototype)) {
           return true;
@@ -11495,6 +11516,7 @@ exports.tests = [
   subtests: [
     {
       name: 'basic functionality',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
       exec: function () {/*
         var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
         var p2 = new Promise(function(resolve, reject) { reject("quux"); });
@@ -11587,6 +11609,7 @@ exports.tests = [
     },
     {
       name: 'Promise.all',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all',
       exec: function () {/*
         var fulfills = Promise.all([
           new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
@@ -11652,6 +11675,7 @@ exports.tests = [
     },
     {
       name: 'Promise.race',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race',
       exec: function () {/*
         var fulfills = Promise.race([
           new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
@@ -11745,6 +11769,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Object.assign',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign',
       exec: function () {/*
         var o = Object.assign({a:true}, {b:true}, {c:true});
         return "a" in o && "b" in o && "c" in o;
@@ -11767,6 +11792,7 @@ exports.tests = [
     },
     {
       name: 'Object.is',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is',
       exec: function () {/*
         return typeof Object.is === 'function' &&
           Object.is(NaN, NaN) &&
@@ -11792,6 +11818,7 @@ exports.tests = [
     },
     {
       name: 'Object.getOwnPropertySymbols',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols',
       exec: function () {/*
         var o = {};
         var sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();
@@ -11820,6 +11847,7 @@ exports.tests = [
     },
     {
       name: 'Object.setPrototypeOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf',
       exec: function () {/*
         return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
       */},
@@ -11848,6 +11876,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Object.getPrototypeOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf',
       exec: function () {/*
         return Object.getPrototypeOf('a').constructor === String;
       */},
@@ -11869,6 +11898,7 @@ exports.tests = [
     },
     {
       name: 'Object.getOwnPropertyDescriptor',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor',
       exec: function () {/*
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
@@ -11888,6 +11918,7 @@ exports.tests = [
     },
     {
       name: 'Object.getOwnPropertyNames',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames',
       exec: function () {/*
         var s = Object.getOwnPropertyNames('a');
         return s.length === 2 &&
@@ -11910,6 +11941,7 @@ exports.tests = [
     },
     {
       name: 'Object.seal',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal',
       exec: function () {/*
         return Object.seal('a') === 'a';
       */},
@@ -11929,6 +11961,7 @@ exports.tests = [
     },
     {
       name: 'Object.freeze',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
       exec: function () {/*
         return Object.freeze('a') === 'a';
       */},
@@ -11948,6 +11981,7 @@ exports.tests = [
     },
     {
       name: 'Object.preventExtensions',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions',
       exec: function () {/*
         return Object.preventExtensions('a') === 'a';
       */},
@@ -11967,6 +12001,7 @@ exports.tests = [
     },
     {
       name: 'Object.isSealed',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed',
       exec: function () {/*
         return Object.isSealed('a') === true;
       */},
@@ -11986,6 +12021,7 @@ exports.tests = [
     },
     {
       name: 'Object.isFrozen',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen',
       exec: function () {/*
         return Object.isFrozen('a') === true;
       */},
@@ -12005,6 +12041,7 @@ exports.tests = [
     },
     {
       name: 'Object.isExtensible',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible',
       exec: function () {/*
         return Object.isExtensible('a') === false;
       */},
@@ -12024,6 +12061,7 @@ exports.tests = [
     },
     {
       name: 'Object.keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys',
       exec: function () {/*
         var s = Object.keys('a');
         return s.length === 1 && s[0] === '0';
@@ -12550,6 +12588,7 @@ exports.tests = [
   subtests: [
     {
       name: 'String.raw',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw',
       exec: function() {/*
         return typeof String.raw === 'function';
       */},
@@ -12570,6 +12609,7 @@ exports.tests = [
     },
     {
       name: 'String.fromCodePoint',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint',
       exec: function() {/*
         return typeof String.fromCodePoint === 'function';
       */},
@@ -12601,6 +12641,7 @@ exports.tests = [
   subtests: [
     {
       name: 'String.prototype.codePointAt',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt',
       exec: function () {/*
         return typeof String.prototype.codePointAt === 'function';
       */},
@@ -12624,6 +12665,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.normalize',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize',
       exec: function () {/*
         return typeof String.prototype.normalize === "function"
           && "c\u0327\u0301".normalize("NFC") === "\u1e09"
@@ -12642,6 +12684,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.repeat',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
       exec: function () {/*
         return typeof String.prototype.repeat === 'function'
           && "foo".repeat(3) === "foofoofoo";
@@ -12666,6 +12709,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.startsWith',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
       exec: function () {/*
         return typeof String.prototype.startsWith === 'function'
           && "foobar".startsWith("foo");
@@ -12718,6 +12762,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.endsWith',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith',
       exec: function () {/*
         return typeof String.prototype.endsWith === 'function'
           && "foobar".endsWith("bar");
@@ -12770,6 +12815,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.includes',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
       exec: function () {/*
         return typeof String.prototype.includes === 'function'
           && "foobar".includes("oba");
@@ -12799,6 +12845,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype[Symbol.iterator]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator',
       exec: function () {/*
         return typeof String.prototype[Symbol.iterator] === 'function';
       */},
@@ -12855,6 +12902,7 @@ exports.tests = [
   subtests: [
     {
       name: 'existence',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#HTML_wrapper_methods',
       exec: function () {/*
         var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
           "italics", "link", "small", "strike", "sub", "sup"];
@@ -13462,6 +13510,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.species, existence',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species',
       exec: function() {/*
         return "species" in Symbol;
       */},
@@ -13630,6 +13679,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.replace',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace',
       exec: function () {/*
         var O = {};
         O[Symbol.replace] = function(){
@@ -13651,6 +13701,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.search',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search',
       exec: function () {/*
         var O = {};
         O[Symbol.search] = function(){
@@ -13672,6 +13723,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.split',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split',
       exec: function () {/*
         var O = {};
         O[Symbol.split] = function(){
@@ -13693,6 +13745,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.match',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match',
       exec: function () {/*
         var O = {};
         O[Symbol.match] = function(){
@@ -13801,6 +13854,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.toPrimitive',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive',
       exec: function() {/*
         var a = {}, b = {}, c = {};
         var passed = 0;
@@ -13825,6 +13879,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.toStringTag',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag',
       exec: function() {/*
         var a = {};
         a[Symbol.toStringTag] = "foo";
@@ -13944,6 +13999,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.unscopables',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables',
       exec: function() {/*
         var a = { foo: 1, bar: 2 };
         a[Symbol.unscopables] = { bar: true };
@@ -13974,9 +14030,11 @@ exports.tests = [
   category: 'built-in extensions',
   significance: 'small',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype',
   subtests: [
     {
       name: 'RegExp.prototype.flags',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags',
       exec: function () {/*
         return /./igm.flags === "gim" && /./.flags === "";
       */},
@@ -13996,6 +14054,7 @@ exports.tests = [
     },
     {
       name: 'RegExp.prototype[Symbol.match]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.match] === 'function';
       */},
@@ -14013,6 +14072,7 @@ exports.tests = [
     },
     {
       name: 'RegExp.prototype[Symbol.replace]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.replace] === 'function';
       */},
@@ -14030,6 +14090,7 @@ exports.tests = [
     },
     {
       name: 'RegExp.prototype[Symbol.split]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.split] === 'function';
       */},
@@ -14047,6 +14108,7 @@ exports.tests = [
     },
     {
       name: 'RegExp.prototype[Symbol.search]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search',
       exec: function () {/*
         return typeof RegExp.prototype[Symbol.search] === 'function';
       */},
@@ -14064,6 +14126,7 @@ exports.tests = [
     },
     {
       name: 'RegExp[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);
         return 'get' in prop && RegExp[Symbol.species] === RegExp;
@@ -14088,6 +14151,7 @@ exports.tests = [
   category: 'annex b',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-regexp.prototype.compile',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile',
   subtests: [
     {
       name: "basic functionality",
