@@ -4594,6 +4594,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Int8Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int8Array(buffer);         view[0] = 0x80;
@@ -4617,6 +4618,7 @@ exports.tests = [
     },
     {
       name: 'Uint8Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint8Array(buffer);        view[0] = 0x100;
@@ -4640,6 +4642,7 @@ exports.tests = [
     },
     {
       name: 'Uint8ClampedArray',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
@@ -4660,6 +4663,7 @@ exports.tests = [
     },
     {
       name: 'Int16Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int16Array(buffer);        view[0] = 0x8000;
@@ -4683,6 +4687,7 @@ exports.tests = [
     },
     {
       name: 'Uint16Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint16Array(buffer);       view[0] = 0x10000;
@@ -4706,6 +4711,7 @@ exports.tests = [
     },
     {
       name: 'Int32Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Int32Array(buffer);        view[0] = 0x80000000;
@@ -4729,6 +4735,7 @@ exports.tests = [
     },
     {
       name: 'Uint32Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Uint32Array(buffer);       view[0] = 0x100000000;
@@ -4752,6 +4759,7 @@ exports.tests = [
     },
     {
       name: 'Float32Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Float32Array(buffer);       view[0] = 0.1;
@@ -4775,6 +4783,7 @@ exports.tests = [
     },
     {
       name: 'Float64Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new Float64Array(buffer);       view[0] = 0.1;
@@ -4799,6 +4808,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Int8)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4822,6 +4832,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Uint8)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4845,6 +4856,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Int16)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4868,6 +4880,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Uint16)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4891,6 +4904,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Int32)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4914,6 +4928,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Uint32)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4937,6 +4952,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Float32)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4960,6 +4976,7 @@ exports.tests = [
     },
     {
       name: 'DataView (Float64)',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView',
       exec: function(){/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -4983,6 +5000,7 @@ exports.tests = [
     },
     {
       name: 'ArrayBuffer[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species',
       exec: function(){/*
         return typeof ArrayBuffer[Symbol.species] === 'function';
       */},
@@ -5111,7 +5129,10 @@ exports.tests = [
       },
     },
   ].concat([ //@@ jph
-    { name: '.from', res: {
+    {
+      name: '.from',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5122,7 +5143,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.of', res: {
+    {
+      name: '.of',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5134,7 +5158,10 @@ exports.tests = [
       ejs: true,
       jxa: true,
     }},
-    { name: '.prototype.subarray', res: {
+    {
+      name: '.prototype.subarray',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       ejs: true,
@@ -5147,7 +5174,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.join', res: {
+    {
+      name: '.prototype.join',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5159,7 +5189,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.indexOf', res: {
+    {
+      name: '.prototype.indexOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5171,7 +5204,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.lastIndexOf', res: {
+    {
+      name: '.prototype.lastIndexOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5183,7 +5219,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.slice', res: {
+    {
+      name: '.prototype.slice',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5194,7 +5233,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.every', res: {
+    {
+      name: '.prototype.every',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5206,7 +5248,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.filter', res: {
+    {
+      name: '.prototype.filter',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5217,7 +5262,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.forEach', res: {
+    {
+      name: '.prototype.forEach',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5229,7 +5277,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.map', res: {
+    {
+      name: '.prototype.map',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5240,7 +5291,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.reduce', res: {
+    {
+      name: '.prototype.reduce',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5252,7 +5306,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.reduceRight', res: {
+    {
+      name: '.prototype.reduceRight',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5264,7 +5321,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.reverse', res: {
+    {
+      name: '.prototype.reverse',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5276,7 +5336,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.some', res: {
+    {
+      name: '.prototype.some',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/some',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5288,7 +5351,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.sort', res: {
+    {
+      name: '.prototype.sort',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5299,7 +5365,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.copyWithin', res: {
+    {
+      name: '.prototype.copyWithin',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5311,7 +5380,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.find', res: {
+    {
+      name: '.prototype.find',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5323,7 +5395,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.findIndex', res: {
+    {
+      name: '.prototype.findIndex',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5335,7 +5410,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.fill', res: {
+    {
+      name: '.prototype.fill',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5347,7 +5425,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.keys', res: {
+    {
+      name: '.prototype.keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5359,7 +5440,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.values', res: {
+    {
+      name: '.prototype.values',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5371,7 +5455,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype.entries', res: {
+    {
+      name: '.prototype.entries',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5382,7 +5469,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '.prototype[Symbol.iterator]', res: {
+    {
+      name: '.prototype[Symbol.iterator]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge12: true,
@@ -5394,7 +5484,10 @@ exports.tests = [
       xs6: true,
       jxa: true,
     }},
-    { name: '[Symbol.species]', res: {
+    {
+      name: '[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species',
+      res: {
       babel: true,
       typescript: typescript.corejs,
       edge13: true,
@@ -9159,6 +9252,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Reflect.get',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/get',
       exec: function() {/*
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
@@ -9177,6 +9271,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.set',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/set',
       exec: function() {/*
         var obj = {};
         Reflect.set(obj, "quux", 654);
@@ -9197,6 +9292,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.has',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/has',
       exec: function() {/*
         return Reflect.has({ qux: 987 }, "qux");
       */},
@@ -9215,6 +9311,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.deleteProperty',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty',
       exec: function() {/*
         var obj = { bar: 456 };
         Reflect.deleteProperty(obj, "bar");
@@ -9234,6 +9331,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.getOwnPropertyDescriptor',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor',
       exec: function() {/*
         var obj = { baz: 789 };
         var desc = Reflect.getOwnPropertyDescriptor(obj, "baz");
@@ -9255,6 +9353,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.defineProperty',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty',
       exec: function() {/*
         var obj = {};
         Reflect.defineProperty(obj, "foo", { value: 123 });
@@ -9275,6 +9374,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.getPrototypeOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf',
       exec: function() {/*
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
@@ -9293,6 +9393,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.setPrototypeOf',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf',
       exec: function() {/*
         var obj = {};
         Reflect.setPrototypeOf(obj, Array.prototype);
@@ -9313,6 +9414,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.isExtensible',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible',
       exec: function() {/*
         return Reflect.isExtensible({}) &&
           !Reflect.isExtensible(Object.preventExtensions({}));
@@ -9332,6 +9434,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.preventExtensions',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions',
       exec: function() {/*
         var obj = {};
         Reflect.preventExtensions(obj);
@@ -9352,6 +9455,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.ownKeys, string keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys',
       exec: function() {/*
         var obj = Object.create({ C: true });
         obj.A = true;
@@ -9374,6 +9478,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.ownKeys, symbol keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys',
       exec: function() {/*
         var s1 = Symbol(), s2 = Symbol(), s3 = Symbol();
         var proto = {};
@@ -9400,6 +9505,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.apply',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply',
       exec: function() {/*
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
@@ -9418,6 +9524,7 @@ exports.tests = [
     },
     {
       name: 'Reflect.construct',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct',
       exec: function() {/*
         return Reflect.construct(function(a, b, c) {
           this.qux = a + b + c;
