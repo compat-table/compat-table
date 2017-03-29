@@ -85,25 +85,26 @@ exports.tests = [
         node012: true,
       },
     },
-    {
-      name: 'calling Collator with Collator instance throws error',
-      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
-      exec: function(){/*
-        try {
-          Intl.Collator.call(Intl.Collator());
-          return false;
-        } catch(e) {
-          return e instanceof TypeError;
-        }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox29: true,
-        chrome24: true,
-        node012: true,
-      },
-    },
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
+//    {
+//      name: 'calling Collator with Collator instance throws error',
+//      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+//      exec: function(){/*
+//        try {
+//          Intl.Collator.call(Intl.Collator());
+//          return false;
+//        } catch(e) {
+//          return e instanceof TypeError;
+//        }
+//      */},
+//      res: {
+//        ie11: true,
+//        edge12: true,
+//        firefox29: true,
+//        chrome24: true,
+//        node012: true,
+//      },
+//    },
     {
       name: 'accepts valid language tags',
       exec: function(){/*
@@ -251,25 +252,26 @@ exports.tests = [
         node012: true,
       },
     },
-    {
-      name: 'calling NumberFormat with NumberFormat instance throws error',
-      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
-      exec: function(){/*
-        try {
-          Intl.NumberFormat.call(Intl.NumberFormat());
-          return false;
-        } catch(e) {
-          return e instanceof TypeError;
-        }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox29: true,
-        chrome24: true,
-        node012: true,
-      },
-    },
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
+//    {
+//      name: 'calling NumberFormat with NumberFormat instance throws error',
+//      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+//      exec: function(){/*
+//        try {
+//          Intl.NumberFormat.call(Intl.NumberFormat());
+//          return false;
+//        } catch(e) {
+//          return e instanceof TypeError;
+//        }
+//      */},
+//      res: {
+//        ie11: true,
+//        edge12: true,
+//        firefox29: true,
+//        chrome24: true,
+//        node012: true,
+//      },
+//    },
     {
       name: 'accepts valid language tags',
       exec: function(){/*
@@ -363,25 +365,26 @@ exports.tests = [
         node012: true,
       },
     },
-    {
-      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
-      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
-      exec: function(){/*
-        try {
-          Intl.DateTimeFormat.call(Intl.DateTimeFormat());
-          return false;
-        } catch(e) {
-          return e instanceof TypeError;
-        }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox29: true,
-        chrome24: true,
-        node012: true,
-      },
-    },
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
+//    {
+//      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
+//      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
+//      exec: function(){/*
+//        try {
+//          Intl.DateTimeFormat.call(Intl.DateTimeFormat());
+//          return false;
+//        } catch(e) {
+//          return e instanceof TypeError;
+//        }
+//      */},
+//      res: {
+//        ie11: true,
+//        edge12: true,
+//        firefox29: true,
+//        chrome24: true,
+//        node012: true,
+//      },
+//    },
     {
       name: 'accepts valid language tags',
       exec: function(){/*
