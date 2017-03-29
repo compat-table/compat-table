@@ -13264,6 +13264,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Symbol.hasInstance',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance',
       exec: function() {/*
         var passed = false;
         var obj = { foo: true };
@@ -13289,6 +13290,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.isConcatSpreadable',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable',
       exec: function() {/*
         var a = [], b = [];
         b[Symbol.isConcatSpreadable] = false;
@@ -13308,6 +13310,7 @@ exports.tests = [
     },
     {
       name: 'Symbol.iterator, existence',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator',
       exec: function() {/*
         return "iterator" in Symbol;
       */},

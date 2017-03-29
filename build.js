@@ -612,6 +612,9 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     if ("subtests" in t) {
       t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
+        if (subtest.mdn) {
+          subtestName += ' <a href="' + subtest.mdn + '">(mdn)</a>';
+        }
 
         var subtestId = id + '_' + escapeTestName(subtestName);
 
