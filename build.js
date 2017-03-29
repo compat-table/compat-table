@@ -520,6 +520,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
             name += ' <a href="' + t.mdn + '">(mdn)</a>';
         }
     }
+
+    if (!t.spec && t.mdn) {
+        name += ' <a href="' + t.mdn + '">(mdn)</a>';
+    }
+
     // var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
     if (t.links) {
       t.links.forEach(function(link) {
