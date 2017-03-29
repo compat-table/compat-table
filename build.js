@@ -513,7 +513,14 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     else interpolateResults(t.res);
 
     var id = escapeTestName(t.name);
-    var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
+    var name = t.name;
+    if (t.spec) {
+        name = '<a href="' + t.spec + '">' + t.name + '</a>';
+        if (t.mdn) {
+            name += ' <a href="' + t.mdn + '">(mdn)</a>';
+        }
+    }
+    // var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
     if (t.links) {
       t.links.forEach(function(link) {
         name += footnoteHTML(link);

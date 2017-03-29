@@ -71,6 +71,7 @@ exports.tests = [
   category: 'functions',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-arrow-function-definitions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions',
   subtests: [
     {
       name: '0 parameters',
@@ -384,6 +385,7 @@ exports.tests = [
   category: 'bindings',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const',
   subtests: [
     {
       name: 'basic support',
@@ -800,6 +802,7 @@ exports.tests = [
   category: 'bindings',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let',
   subtests: [
     {
       name: 'basic support',
@@ -1128,6 +1131,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters',
   subtests: [
     {
       name: 'basic functionality',
@@ -1307,6 +1311,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters',
   subtests: [
     {
       name: 'basic functionality',
@@ -1440,6 +1445,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator',
   subtests: [
     {
       name: 'with arrays, in function calls',
@@ -1774,6 +1780,7 @@ exports.tests = [
   category: 'functions',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes',
   subtests: [
     {
       name: 'class statement',
@@ -2441,6 +2448,7 @@ exports.tests = [
   category: 'functions',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-super-keyword',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super',
   subtests: [
     {
       name: 'statement in constructors',
@@ -2693,6 +2701,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-initialiser',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015',
   subtests: [
     {
       name: 'computed properties',
@@ -2931,6 +2940,7 @@ exports.tests = [
   note_id: 'proto-in-object-literals',
   note_html: 'Note that this is distinct from the existence or functionality of <code>Object.prototype.__proto__</code>.',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-__proto__-property-names-in-object-initializers',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto#Specifications',
   subtests: [
     {
       name: 'basic support',
@@ -3035,6 +3045,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-for-in-and-for-of-statements',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of',
   subtests: [
     {
       name: 'with arrays',
@@ -3266,6 +3277,7 @@ exports.tests = [
   category: 'functions',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-function-definitions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
   subtests: [
     {
       name: 'basic functionality',
@@ -4337,6 +4349,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals',
   subtests: [
     {
       name: 'basic functionality',
@@ -4470,6 +4483,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.sticky',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters',
   subtests: [
     {
       name: '"y" flag',
@@ -4576,6 +4590,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-typedarray-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray',
   subtests: [
     {
       name: 'Int8Array',
@@ -5416,6 +5431,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-map-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map',
   subtests: [
     {
       name: 'basic functionality',
@@ -5882,6 +5898,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
   subtests: [
     {
       name: 'basic functionality',
@@ -6353,6 +6370,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakmap-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap',
   subtests: [
     {
       name: 'basic functionality',
@@ -6652,6 +6670,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'small',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-weakset-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet',
   subtests: [
     {
       name: 'basic functionality',
@@ -6924,6 +6943,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy',
   note_id: 'proxy-enumerate',
   note_html: 'The 2015 version of the specification also specifies an <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots-enumerate">"enumerate" handler</a>, which was removed in the 2016 version.',
   subtests: [
@@ -7912,6 +7932,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get',
   subtests: [
     {
       name: 'ToPrimitive',
@@ -8616,6 +8637,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set',
   subtests: [
     {
       name: 'Object.assign',
@@ -8820,6 +8842,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty',
   subtests: [
     {
       name: '[[Set]]',
@@ -8862,6 +8885,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty',
   subtests: [
     {
       name: 'Array.prototype.copyWithin',
@@ -8983,6 +9007,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor',
   subtests: [
     {
       name: '[[Set]]',
@@ -9065,6 +9090,7 @@ exports.tests = [
   category: 'misc',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-proxy-object-internal-methods-and-internal-slots',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
   subtests: [
     {
       name: 'SetIntegrityLevel',
@@ -9127,6 +9153,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'small',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflection',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect',
   note_id: 'reflect-enumerate',
   note_html: 'The 2015 version of the specification also specifies <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.enumerate">Reflect.enumerate</a>, which was removed in the 2016 version.',
   subtests: [
@@ -9577,6 +9604,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -10141,6 +10169,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -10773,6 +10802,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-destructuring-assignment',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment',
   subtests: [
     {
       name: 'with arrays',
@@ -11354,6 +11384,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
   subtests: [
     {
       name: 'basic functionality',
@@ -11911,6 +11942,7 @@ exports.tests = [
   category: 'annex b',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.__proto__',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto',
   subtests: [
     {
       name: 'get prototype',
@@ -12042,6 +12074,7 @@ exports.tests = [
   category: 'built-in extensions',
   significance: 'small',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name',
   subtests: [
     {
       name: 'function statements',
@@ -12851,6 +12884,7 @@ exports.tests = [
   category: 'syntax',
   significance: 'small',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target',
   subtests: [
     {
       name: 'in constructors',
@@ -12905,6 +12939,7 @@ exports.tests = [
   category: 'built-ins',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-constructor',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol',
   subtests: [
     {
       name: 'basic functionality',
@@ -15149,6 +15184,7 @@ exports.tests = [
   category: 'built-in extensions',
   significance: 'tiny',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-date.prototype-@@toprimitive',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive',
   exec: function () {/*
     var tp = Date.prototype[Symbol.toPrimitive];
     return tp.call(Object(2), "number") === 2
