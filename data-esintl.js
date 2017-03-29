@@ -85,7 +85,7 @@ exports.tests = [
         node012: true,
       },
     },
-// The spec was updated making this test ivalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
 //      name: 'calling Collator with Collator instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -252,7 +252,7 @@ exports.tests = [
         node012: true,
       },
     },
-// The spec was updated making this test ivalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
 //      name: 'calling NumberFormat with NumberFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -365,7 +365,7 @@ exports.tests = [
         node012: true,
       },
     },
-// The spec was updated making this test ivalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
 //      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
