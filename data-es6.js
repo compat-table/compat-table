@@ -15355,12 +15355,14 @@ exports.tests = [
     return Object.keys(methods).map(function(m) {
       return {
         name: 'Math.' + m,
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/' + m,
         exec: eval('0,function(){/*\n  return typeof Math.' +
           m + eqFn + ';\n*/}'),
         res: methods[m]
       };
     }).concat({
       name: 'Math.hypot',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot',
       exec: function(){/*
         return Math.hypot() === 0 &&
           Math.hypot(1) === 1 &&

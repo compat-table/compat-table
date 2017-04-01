@@ -6,6 +6,7 @@ exports.tests = [
 {
   name: 'Intl object',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-8',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl',
   subtests: [
     {
       name: 'exists on global',
@@ -40,6 +41,7 @@ exports.tests = [
 {
   name: 'Intl.Collator',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator',
   subtests: [
     {
       name: 'exists on intl object',
@@ -153,6 +155,7 @@ exports.tests = [
 {
   name: 'Intl.Collator.prototype.compare',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare',
   subtests: [
     {
       name: 'exists on Collator prototype',
@@ -173,6 +176,7 @@ exports.tests = [
 {
   name: 'Intl.Collator.prototype.resolvedOptions',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions',
   subtests: [
     {
       name: 'exists on Collator prototype',
@@ -193,6 +197,7 @@ exports.tests = [
 {
   name: 'NumberFormat',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-11',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat',
   subtests: [
     {
       name: 'exists on intl object',
@@ -320,6 +325,7 @@ exports.tests = [
 {
   name: 'DateTimeFormat',
   spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-12',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat',
   subtests: [
     {
       name: 'exists on intl object',
@@ -481,6 +487,7 @@ exports.tests = [
 {
   name: 'String.prototype.localeCompare',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare',
   subtests: [
     {
       name: 'exists on String prototype',
@@ -504,6 +511,7 @@ exports.tests = [
 {
   name: 'Number.prototype.toLocaleString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString',
   subtests: [
     {
       name: 'exists on Number prototype',
@@ -527,6 +535,7 @@ exports.tests = [
 {
   name: 'Array.prototype.toLocaleString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString',
   subtests: [
     {
       name: 'exists on Array prototype',
@@ -550,6 +559,7 @@ exports.tests = [
 {
   name: 'Object.prototype.toLocaleString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString',
   subtests: [
     {
       name: 'exists on Object prototype',
@@ -573,6 +583,7 @@ exports.tests = [
 {
   name: 'Date.prototype.toLocaleString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString',
   subtests: [
     {
       name: 'exists on Date prototype',
@@ -596,6 +607,7 @@ exports.tests = [
 {
   name: 'Date.prototype.toLocaleDateString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString',
   subtests: [
     {
       name: 'exists on Date prototype',
@@ -619,6 +631,7 @@ exports.tests = [
 {
   name: 'Date.prototype.toLocaleTimeString',
   spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString',
   subtests: [
     {
       name: 'exists on Date prototype',
