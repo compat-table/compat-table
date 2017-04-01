@@ -7102,6 +7102,7 @@ exports.tests = [
     },
     {
       name: '"get" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get',
       exec: function () {/*
         var proxied = { };
         var proxy = new Proxy(proxied, {
@@ -7191,6 +7192,7 @@ exports.tests = [
     },
     {
       name: '"set" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set',
       exec: function () {/*
         var proxied = { };
         var passed = false;
@@ -7279,6 +7281,7 @@ exports.tests = [
     },
     {
       name: '"has" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/has',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7362,6 +7365,7 @@ exports.tests = [
     },
     {
       name: '"deleteProperty" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7414,6 +7418,7 @@ exports.tests = [
     },
     {
       name: '"getOwnPropertyDescriptor" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor',
       exec: function () {/*
         var proxied = {};
         var fakeDesc = { value: "foo", configurable: true };
@@ -7511,6 +7516,7 @@ exports.tests = [
     },
     {
       name: '"defineProperty" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7581,6 +7587,7 @@ exports.tests = [
     },
     {
       name: '"getPrototypeOf" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getPrototypeOf',
       exec: function () {/*
         var proxied = {};
         var fakeProto = {};
@@ -7631,6 +7638,7 @@ exports.tests = [
     },
     {
       name: '"setPrototypeOf" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf',
       exec: function () {/*
         var proxied = {};
         var newProto = {};
@@ -7688,6 +7696,7 @@ exports.tests = [
     },
     {
       name: '"isExtensible" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensible',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7748,6 +7757,7 @@ exports.tests = [
     },
     {
       name: '"preventExtensions" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7801,6 +7811,7 @@ exports.tests = [
     },
     {
       name: '"ownKeys" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
       exec: function () {/*
         var proxied = {};
         var passed = false;
@@ -7877,6 +7888,7 @@ exports.tests = [
     },
     {
       name: '"apply" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply',
       exec: function () {/*
         var proxied = function(){};
         var passed = false;
@@ -7928,6 +7940,7 @@ exports.tests = [
     },
     {
       name: '"construct" handler',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct',
       exec: function () {/*
         var proxied = function(){};
         var passed = false;
@@ -7987,6 +8000,7 @@ exports.tests = [
     },
     {
       name: 'Proxy.revocable',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable',
       exec: function () {/*
         var obj = Proxy.revocable({}, { get: function() { return 5; } });
         var passed = (obj.proxy.foo === 5);
@@ -14369,6 +14383,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Array.from, array-like objects',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#Array_from_an_Array-like_object_(arguments)',
       exec: function () {/*
         return Array.from({ 0: "foo", 1: "bar", length: 2 }) + '' === "foo,bar";
       */},
@@ -14565,6 +14580,7 @@ exports.tests = [
     },
     {
       name: 'Array.of',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of',
       exec: function () {/*
         return typeof Array.of === 'function' &&
           Array.of(2)[0] === 2;
@@ -14589,6 +14605,7 @@ exports.tests = [
     },
     {
       name: 'Array[Symbol.species]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species',
       exec: function () {/*
         var prop = Object.getOwnPropertyDescriptor(Array, Symbol.species);
         return 'get' in prop && Array[Symbol.species] === Array;
@@ -14615,6 +14632,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Array.prototype.copyWithin',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin',
       exec: function () {/*
         return typeof Array.prototype.copyWithin === 'function';
       */},
@@ -14635,6 +14653,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.find',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find',
       exec: function () {/*
         return typeof Array.prototype.find === 'function';
       */},
@@ -14658,6 +14677,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.findIndex',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex',
       exec: function () {/*
         return typeof Array.prototype.findIndex === 'function';
       */},
@@ -14681,6 +14701,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.fill',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
       exec: function () {/*
         return typeof Array.prototype.fill === 'function';
       */},
@@ -14704,6 +14725,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.keys',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys',
       exec: function () {/*
         return typeof Array.prototype.keys === 'function';
       */},
@@ -14726,6 +14748,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.values',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values',
       exec: function () {/*
         return typeof Array.prototype.values === 'function';
       */},
@@ -14771,6 +14794,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.entries',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries',
       exec: function () {/*
         return typeof Array.prototype.entries === 'function';
       */},
@@ -14793,6 +14817,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype[Symbol.iterator]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator',
       exec: function () {/*
         return typeof Array.prototype[Symbol.iterator] === 'function';
       */},
@@ -14849,6 +14874,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype[Symbol.unscopables]',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables',
       exec: function () {/*
         var unscopables = Array.prototype[Symbol.unscopables];
         if (!unscopables) {
@@ -14882,6 +14908,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Number.isFinite',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite',
       exec: function () {/*
         return typeof Number.isFinite === 'function';
       */},
@@ -14905,6 +14932,7 @@ exports.tests = [
     },
     {
       name: 'Number.isInteger',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger',
       exec: function () {/*
         return typeof Number.isInteger === 'function';
       */},
@@ -14927,6 +14955,7 @@ exports.tests = [
     },
     {
       name: 'Number.isSafeInteger',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger',
       exec: function () {/*
         return typeof Number.isSafeInteger === 'function';
       */},
@@ -14949,6 +14978,7 @@ exports.tests = [
     },
     {
       name: 'Number.isNaN',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN',
       exec: function () {/*
         return typeof Number.isNaN === 'function';
       */},
@@ -14972,6 +15002,7 @@ exports.tests = [
     },
     {
       name: 'Number.EPSILON',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON',
       exec: function () {/*
         return typeof Number.EPSILON === 'number';
       */},
@@ -14993,6 +15024,7 @@ exports.tests = [
     },
     {
       name: 'Number.MIN_SAFE_INTEGER',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER',
       exec: function () {/*
         return typeof Number.MIN_SAFE_INTEGER === 'number';
       */},
@@ -15015,6 +15047,7 @@ exports.tests = [
     },
     {
       name: 'Number.MAX_SAFE_INTEGER',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER',
       exec: function () {/*
         return typeof Number.MAX_SAFE_INTEGER === 'number';
       */},
