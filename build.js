@@ -517,12 +517,12 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     if (t.spec) {
         name = '<a href="' + t.spec + '">' + t.name + '</a>';
         if (t.mdn) {
-            name += ' <a href="' + t.mdn + '">(mdn)</a>';
+            name += ' <a href="' + t.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>';
         }
     }
 
     if (!t.spec && t.mdn) {
-        name += ' <a href="' + t.mdn + '">(mdn)</a>';
+        name += ' <a href="' + t.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>';
     }
 
     // var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
@@ -618,7 +618,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
         if (subtest.mdn) {
-          subtestName += ' <a href="' + subtest.mdn + '">(mdn)</a>';
+          subtestName += ' <a href="' + subtest.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>';
         }
 
         var subtestId = id + '_' + escapeTestName(subtestName);
