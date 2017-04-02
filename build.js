@@ -483,6 +483,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     return name.replace(/^[\s<>&"',]+|[\s<>&"',]+$/g, '').replace(/[\s<>&"]+/g, '_');
   }
 
+  function generateMdnLink(url) {
+      return ' <a href="' + url + '" title="MDN documentation"><img src="/mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13" /></a>&nbsp;';
+  }
+
   // Write the browser headers
 
   Object.keys(browsers).forEach(function(browserId) {
@@ -516,16 +520,12 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     var name = t.name;
     if (t.spec) {
         name = '<a href="' + t.spec + '">' + t.name + '</a>';
-        if (t.mdn) {
-            name += ' <a href="' + t.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>&nbsp;';
-        }
     }
 
-    if (!t.spec && t.mdn) {
-        name += ' <a href="' + t.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>&nbsp;';
+    if (t.mdn) {
+        name += generateMdnLink(t.mdn);
     }
 
-    // var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
     if (t.links) {
       t.links.forEach(function(link) {
         name += footnoteHTML(link);
@@ -618,7 +618,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
         if (subtest.mdn) {
-          subtestName += ' <a href="' + subtest.mdn + '"><img src="/mdn.png" width="15" height="13" /></a>&nbsp;';
+          subtestName += generateMdnLink(subtest.mdn);
         }
 
         var subtestId = id + '_' + escapeTestName(subtestName);
