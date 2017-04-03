@@ -1310,6 +1310,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox55: firefox.nightly,
       }
     },
     {
@@ -1336,6 +1337,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox55: firefox.nightly,
       }
     }
   ]
