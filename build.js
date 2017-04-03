@@ -484,7 +484,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   }
 
   function generateMdnLink(url) {
-      return ' <a href="' + url + '" title="MDN documentation"><img src="/mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13" /></a>&nbsp;';
+      return ' <a href="' + url + '" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13" /></a>&nbsp;';
   }
 
   // Write the browser headers
