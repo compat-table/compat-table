@@ -483,6 +483,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     return name.replace(/^[\s<>&"',]+|[\s<>&"',]+$/g, '').replace(/[\s<>&"]+/g, '_');
   }
 
+  function generateMdnLink(url) {
+      return ' <a href="' + url + '" title="MDN documentation"><img src="/mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13" /></a>&nbsp;';
+  }
+
   // Write the browser headers
 
   Object.keys(browsers).forEach(function(browserId) {
@@ -513,7 +517,15 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     else interpolateResults(t.res);
 
     var id = escapeTestName(t.name);
-    var name = t.spec ? ('<a href="' + t.spec + '">' + t.name + '</a>') : t.name;
+    var name = t.name;
+    if (t.spec) {
+        name = '<a href="' + t.spec + '">' + t.name + '</a>';
+    }
+
+    if (t.mdn) {
+        name += generateMdnLink(t.mdn);
+    }
+
     if (t.links) {
       t.links.forEach(function(link) {
         name += footnoteHTML(link);
@@ -605,6 +617,9 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     if ("subtests" in t) {
       t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
+        if (subtest.mdn) {
+          subtestName += generateMdnLink(subtest.mdn);
+        }
 
         var subtestId = id + '_' + escapeTestName(subtestName);
 

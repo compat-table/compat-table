@@ -15,6 +15,7 @@ exports.tests = [
     category: '2016 features',
     significance: 'small',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)',
     subtests: [
       {
         name: 'basic support',
@@ -91,6 +92,7 @@ exports.tests = [
       {
         name: 'Object.values',
         spec: 'https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values',
         category: '2017 features',
         significance: 'medium',
         exec: function () {/*
@@ -115,6 +117,7 @@ exports.tests = [
       },
       {
         name: 'Object.entries',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries',
         exec: function () {/*
          var obj = Object.create({ a: "qux", d: "qux" });
          obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
@@ -141,6 +144,7 @@ exports.tests = [
       },
       {
         name: 'Object.getOwnPropertyDescriptors',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors',
         exec: function () {/*
           var object = {a: 1};
           var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
@@ -187,11 +191,13 @@ exports.tests = [
   {
     name: 'Array.prototype.includes',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
     category: '2016 features',
     significance: 'small',
     subtests: [
       {
         name: 'Array.prototype.includes',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
         exec: function(){/*
          return [1, 2, 3].includes(1)
          && ![1, 2, 3].includes(4)
@@ -252,6 +258,7 @@ exports.tests = [
       },
       {
         name: '%TypedArray%.prototype.includes',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes',
         exec: function(){/*
          return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
          Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
@@ -281,6 +288,7 @@ exports.tests = [
     subtests: [
       {
         name: 'String.prototype.padStart',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart',
         exec: function(){/*
          return 'hello'.padStart(10) === '     hello'
          && 'hello'.padStart(10, '1234') === '12341hello'
@@ -303,6 +311,7 @@ exports.tests = [
       },
       {
         name: 'String.prototype.padEnd',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd',
         exec: function(){/*
          return 'hello'.padEnd(10) === 'hello     '
          && 'hello'.padEnd(10, '1234') === 'hello12341'
@@ -328,11 +337,13 @@ exports.tests = [
   {
     name: 'trailing commas in function syntax',
     spec: 'https://github.com/tc39/proposal-trailing-function-commas',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas',
     category: '2017 features',
     significance: 'small',
     subtests: [
       {
         name: 'in parameter lists',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions',
         exec: function(){/*
           return typeof function f( a, b, ){} === 'function';
         */},
@@ -350,6 +361,7 @@ exports.tests = [
       },
       {
         name: 'in argument lists',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls',
         exec: function(){/*
           return Math.min(1,2,3,) === 1;
         */},
@@ -372,6 +384,7 @@ exports.tests = [
     category: '2017 features',
     significance: 'large',
     spec: 'https://tc39.github.io/ecmascript-asyncawait/',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function',
     subtests: [
       {
         // Should test that async functions return promises
@@ -481,6 +494,7 @@ exports.tests = [
       },
       {
         name: 'await',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await',
         exec: function () {/*
           (async function (){
             await Promise.resolve();
@@ -776,6 +790,7 @@ exports.tests = [
     'subtests': [
       {
         name: 'SharedArrayBuffer',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer',
         exec: function () {/*
          return typeof SharedArrayBuffer === 'function';
          */},
@@ -804,6 +819,7 @@ exports.tests = [
       },
       {
         name: 'SharedArrayBuffer.prototype.byteLength',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength',
         exec: function () {/*
          return 'byteLength' in SharedArrayBuffer.prototype;
          */},
@@ -818,6 +834,7 @@ exports.tests = [
       },
       {
         name: 'SharedArrayBuffer.prototype.slice',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice',
         exec: function () {/*
          return typeof SharedArrayBuffer.prototype.slice === 'function';
          */},
@@ -845,6 +862,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.add',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add',
         exec: function () {/*
          return typeof Atomics.add == 'function';
          */},
@@ -860,6 +878,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.and',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and',
         exec: function () {/*
          return typeof Atomics.and == 'function';
          */},
@@ -875,6 +894,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.compareExchange',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange',
         exec: function () {/*
          return typeof Atomics.compareExchange == 'function';
          */},
@@ -890,6 +910,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.exchange',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange',
         exec: function () {/*
          return typeof Atomics.exchange == 'function';
          */},
@@ -905,6 +926,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.wait',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait',
         exec: function () {/*
          return typeof Atomics.wait == 'function';
          */},
@@ -920,6 +942,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.wake',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake',
         exec: function () {/*
          return typeof Atomics.wake == 'function';
          */},
@@ -935,6 +958,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.isLockFree',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree',
         exec: function () {/*
          return typeof Atomics.isLockFree == 'function';
          */},
@@ -950,6 +974,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.load',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load',
         exec: function () {/*
          return typeof Atomics.load == 'function';
          */},
@@ -965,6 +990,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.or',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or',
         exec: function () {/*
          return typeof Atomics.or == 'function';
          */},
@@ -980,6 +1006,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.store',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store',
         exec: function () {/*
          return typeof Atomics.store == 'function';
          */},
@@ -995,6 +1022,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.sub',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub',
         exec: function () {/*
          return typeof Atomics.sub == 'function';
          */},
@@ -1010,6 +1038,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.xor',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor',
         exec: function () {/*
          return typeof Atomics.xor == 'function';
          */},
@@ -1030,6 +1059,7 @@ exports.tests = [
     category: '2016 misc',
     significance: 'tiny',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable',
     links: [
       {
         note_id: 'new-gen-fn',
@@ -1060,6 +1090,7 @@ exports.tests = [
     category: '2016 misc',
     significance: 'tiny',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#IteratorResult_object_returned_instead_of_throwing',
     links: [
       {
         note_id: 'gen-throw',
@@ -1127,6 +1158,7 @@ exports.tests = [
     category: '2016 misc',
     significance: 'tiny',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Nested_object_and_array_destructuring',
     links: [
       {
         note_id: 'nested-rest-destruct-decl',
@@ -1184,6 +1216,7 @@ exports.tests = [
     category: '2016 misc',
     significance: 'tiny',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate',
     links: [
       {
         note_id: 'proxy-enumerate-removed',
@@ -1244,6 +1277,7 @@ exports.tests = [
     significance: 'tiny',
     subtests: [{
       name: '__defineGetter__',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__',
       exec: function () {/*
        var obj = {};
        function bar() { return "bar"; }
@@ -1317,6 +1351,7 @@ exports.tests = [
       },
       {
         name: '__defineSetter__',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__',
         exec: function () {/*
          var obj = {};
          function bar() {}
@@ -1390,6 +1425,7 @@ exports.tests = [
       },
       {
         name: '__lookupGetter__',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
         exec: function () {/*
          var obj = {
          get foo() { return "bar"},
@@ -1516,6 +1552,7 @@ exports.tests = [
       },
       {
         name: '__lookupSetter__',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__',
         exec: function () {/*
          var obj = {
          set foo(baz) { return "bar"; },
@@ -1736,6 +1773,7 @@ exports.tests = [
     category: '2017 misc',
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/594',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
     exec: function() {/*
      var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
      ownKeys: function() {
@@ -1776,6 +1814,7 @@ exports.tests = [
   {
     name: 'assignments allowed in for-in head in non-strict mode',
     spec: 'https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in#Compatibility_Initializer_expressions_in_strict_mode',
     category: '2017 annex b',
     significance: 'tiny',
     exec: function(){/*
@@ -1806,6 +1845,7 @@ exports.tests = [
     category: '2017 misc',
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/689',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller',
     exec: function() {/*
      return (function(){
        'use strict';

@@ -130,6 +130,7 @@ exports.tests = [
   significance: 'large',
   subtests: [{
     name: 'Object.create',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create',
     exec: function () {
       return typeof Object.create == 'function';
     },
@@ -150,6 +151,7 @@ exports.tests = [
   },
   {
     name: 'Object.defineProperty',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty',
     exec: function () {
       return typeof Object.defineProperty == 'function';
     },
@@ -182,6 +184,7 @@ exports.tests = [
   },
   {
     name: 'Object.defineProperties',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties',
     exec: function () {
       return typeof Object.defineProperties == 'function';
     },
@@ -202,6 +205,7 @@ exports.tests = [
   },
   {
     name: 'Object.getPrototypeOf',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf',
     exec: function () {
       return typeof Object.getPrototypeOf == 'function';
     },
@@ -224,6 +228,7 @@ exports.tests = [
   },
   {
     name: 'Object.keys',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys',
     exec: function () {
       return typeof Object.keys == 'function';
     },
@@ -247,6 +252,7 @@ exports.tests = [
   },
   {
     name: 'Object.seal',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal',
     exec: function () {
       return typeof Object.seal == 'function';
     },
@@ -267,6 +273,7 @@ exports.tests = [
   },
   {
     name: 'Object.freeze',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
     exec: function () {
       return typeof Object.freeze == 'function';
     },
@@ -287,6 +294,7 @@ exports.tests = [
   },
   {
     name: 'Object.preventExtensions',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions',
     exec: function () {
       return typeof Object.preventExtensions == 'function';
     },
@@ -307,6 +315,7 @@ exports.tests = [
   },
   {
     name: 'Object.isSealed',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed',
     exec: function () {
       return typeof Object.isSealed == 'function';
     },
@@ -327,6 +336,7 @@ exports.tests = [
   },
   {
     name: 'Object.isFrozen',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen',
     exec: function () {
       return typeof Object.isFrozen == 'function';
     },
@@ -347,6 +357,7 @@ exports.tests = [
   },
   {
     name: 'Object.isExtensible',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible',
     exec: function () {
       return typeof Object.isExtensible == 'function';
     },
@@ -367,6 +378,7 @@ exports.tests = [
   },
   {
     name: 'Object.getOwnPropertyDescriptor',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor',
     exec: function () {
       return typeof Object.getOwnPropertyDescriptor == 'function';
     },
@@ -395,6 +407,7 @@ exports.tests = [
   },
   {
     name: 'Object.getOwnPropertyNames',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames',
     exec: function () {
       return typeof Object.getOwnPropertyNames == 'function';
     },
@@ -422,6 +435,7 @@ exports.tests = [
   significance: 'large',
   subtests: [{
     name: 'Array.isArray',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray',
     exec: function () {
       return typeof Array.isArray == 'function';
     },
@@ -445,6 +459,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.indexOf',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf',
     exec: function () {
       return typeof Array.prototype.indexOf == 'function';
     },
@@ -466,6 +481,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.lastIndexOf',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf',
     exec: function () {
       return typeof Array.prototype.lastIndexOf == 'function';
     },
@@ -487,6 +503,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.every',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every',
     exec: function () {
       return typeof Array.prototype.every == 'function';
     },
@@ -508,6 +525,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.some',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some',
     exec: function () {
       return typeof Array.prototype.some == 'function';
     },
@@ -529,6 +547,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.forEach',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach',
     exec: function () {
       return typeof Array.prototype.forEach == 'function';
     },
@@ -550,6 +569,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.map',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map',
     exec: function () {
       return typeof Array.prototype.map == 'function';
     },
@@ -571,6 +591,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.filter',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter',
     exec: function () {
       return typeof Array.prototype.filter == 'function';
     },
@@ -592,6 +613,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.reduce',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
     exec: function () {
       return typeof Array.prototype.reduce == 'function';
     },
@@ -613,6 +635,7 @@ exports.tests = [
   },
   {
     name: 'Array.prototype.reduceRight',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight',
     exec: function () {
       return typeof Array.prototype.reduceRight == 'function';
     },
@@ -709,6 +732,7 @@ exports.tests = [
   significance: 'small',
   subtests: [{
     name: 'Property access on strings',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Character_access',
     exec: function () {
       return "foobar"[3] === "b";
     },
@@ -730,6 +754,7 @@ exports.tests = [
   },
   {
     name: 'String.prototype.trim',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim',
     exec: function () {
       return typeof String.prototype.trim == 'function';
     },
@@ -759,6 +784,7 @@ exports.tests = [
   significance: 'small',
   subtests: [{
     name: 'Date.prototype.toISOString',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString',
     exec: function () {
       return typeof Date.prototype.toISOString == 'function';
     },
@@ -780,6 +806,7 @@ exports.tests = [
   },
   {
     name: 'Date.now',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now',
     exec: function () {
       return typeof Date.now == 'function';
     },
@@ -801,6 +828,7 @@ exports.tests = [
   },
   {
     name: 'Date.prototype.toJSON',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON',
     exec: function () {
       try {
         return Date.prototype.toJSON.call(new Date(NaN)) === null;
@@ -835,6 +863,7 @@ exports.tests = [
 {
   name: 'Function.prototype.bind',
   significance: 'medium',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind',
   exec: function () {
     return typeof Function.prototype.bind == 'function';
   },
@@ -859,6 +888,7 @@ exports.tests = [
 {
   name: 'JSON',
   significance: 'medium',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON',
   exec: function () {
     return typeof JSON == 'object';
   },
@@ -1188,6 +1218,7 @@ exports.tests = [
 {
   name: 'Strict mode',
   significance: 'large',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode',
   subtests: [
   {
     name: 'reserved words',

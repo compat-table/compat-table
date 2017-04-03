@@ -81,9 +81,11 @@ exports.tests = [
   category: STAGE3,
   significance: 'large',
   spec: 'https://tc39.github.io/ecmascript_simd/',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD',
   subtests: [
     {
       name: 'basic support',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD',
       exec: function () {/*
         return typeof SIMD !== 'undefined';
       */},
@@ -95,6 +97,7 @@ exports.tests = [
     },
     {
       name: 'Float32x4',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4',
       exec: function(){/*
         return typeof SIMD.Float32x4 === 'function';
       */},
@@ -106,6 +109,7 @@ exports.tests = [
     },
     {
       name: 'Int32x4',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4',
       exec: function(){/*
         return typeof SIMD.Int32x4 === 'function';
       */},
@@ -117,6 +121,7 @@ exports.tests = [
     },
     {
       name: 'Int16x8',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8',
       exec: function(){/*
         return typeof SIMD.Int16x8 === 'function';
       */},
@@ -128,6 +133,7 @@ exports.tests = [
     },
     {
       name: 'Int8x16',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16',
       exec: function(){/*
         return typeof SIMD.Int8x16 === 'function';
       */},
@@ -139,6 +145,7 @@ exports.tests = [
     },
     {
       name: 'Uint32x4',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4',
       exec: function(){/*
         return typeof SIMD.Uint32x4 === 'function';
       */},
@@ -150,6 +157,7 @@ exports.tests = [
     },
     {
       name: 'Uint16x8',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8',
       exec: function(){/*
         return typeof SIMD.Uint16x8 === 'function';
       */},
@@ -161,6 +169,7 @@ exports.tests = [
     },
     {
       name: 'Uint8x16',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16',
       exec: function(){/*
         return typeof SIMD.Uint8x16 === 'function';
       */},
@@ -172,6 +181,7 @@ exports.tests = [
     },
     {
       name: 'Bool32x4',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4',
       exec: function(){/*
         return typeof SIMD.Bool32x4 === 'function';
       */},
@@ -183,6 +193,7 @@ exports.tests = [
     },
     {
       name: 'Bool16x8',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8',
       exec: function(){/*
         return typeof SIMD.Bool16x8 === 'function';
       */},
@@ -194,6 +205,7 @@ exports.tests = [
     },
     {
       name: 'Bool8x16',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16',
       exec: function(){/*
         return typeof SIMD.Bool8x16 === 'function';
       */},
@@ -205,6 +217,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.abs',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/abs',
       exec: function(){/*
         return typeof SIMD.Float32x4.abs === 'function';
       */},
@@ -216,6 +229,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.add',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/add',
       exec: function(){/*
         return typeof SIMD.Float32x4.add === 'function';
       */},
@@ -227,6 +241,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.addSaturate',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/addSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.addSaturate === 'function';
       */},
@@ -238,6 +253,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.and',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/and',
       exec: function(){/*
         return typeof SIMD.Bool16x8.and === 'function';
       */},
@@ -249,6 +265,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.anyTrue',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/anyTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.anyTrue === 'function';
       */},
@@ -260,6 +277,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.allTrue',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/allTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.allTrue === 'function';
       */},
@@ -271,6 +289,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.check',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/check',
       exec: function(){/*
         return typeof SIMD.Float32x4.check === 'function';
       */},
@@ -282,6 +301,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.equal',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/equal',
       exec: function(){/*
         return typeof SIMD.Float32x4.equal === 'function';
       */},
@@ -293,6 +313,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.extractLane',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/extractLane',
       exec: function(){/*
         return typeof SIMD.Float32x4.extractLane === 'function';
       */},
@@ -304,6 +325,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.greaterThan',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThan',
       exec: function(){/*
         return typeof SIMD.Float32x4.greaterThan === 'function';
       */},
@@ -315,6 +337,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.greaterThanOrEqual',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThanOrEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
       */},
@@ -326,6 +349,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.lessThan',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThan',
       exec: function(){/*
         return typeof SIMD.Float32x4.lessThan === 'function';
       */},
@@ -337,6 +361,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.lessThanOrEqual',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThanOrEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
       */},
@@ -348,6 +373,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.mul',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/mul',
       exec: function(){/*
         return typeof SIMD.Float32x4.mul === 'function';
       */},
@@ -359,6 +385,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.div',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/div',
       exec: function(){/*
         return typeof SIMD.Float32x4.div === 'function';
       */},
@@ -370,6 +397,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.load',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
         return typeof SIMD.Float32x4.load === 'function';
       */},
@@ -381,6 +409,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.load1',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
         return typeof SIMD.Float32x4.load1 === 'function';
       */},
@@ -392,6 +421,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.load2',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
         return typeof SIMD.Float32x4.load2 === 'function';
       */},
@@ -403,6 +433,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.load3',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
         return typeof SIMD.Float32x4.load3 === 'function';
       */},
@@ -414,6 +445,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.max',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/max',
       exec: function(){/*
         return typeof SIMD.Float32x4.max === 'function';
       */},
@@ -425,6 +457,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.maxNum',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/maxNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.maxNum === 'function';
       */},
@@ -436,6 +469,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.min',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/min',
       exec: function(){/*
         return typeof SIMD.Float32x4.min === 'function';
       */},
@@ -447,6 +481,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.minNum',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/minNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.minNum === 'function';
       */},
@@ -458,6 +493,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.neg',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/neg',
       exec: function(){/*
         return typeof SIMD.Float32x4.neg === 'function';
       */},
@@ -469,6 +505,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.not',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/not',
       exec: function(){/*
         return typeof SIMD.Bool16x8.not === 'function';
       */},
@@ -480,6 +517,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.notEqual',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/notEqual',
       exec: function(){/*
         return typeof SIMD.Float32x4.notEqual === 'function';
       */},
@@ -491,6 +529,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.or',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/or',
       exec: function(){/*
         return typeof SIMD.Bool16x8.or === 'function';
       */},
@@ -502,6 +541,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.reciprocalApproximation',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
       */},
@@ -513,6 +553,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.reciprocalSqrtApproximation',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalSqrtApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
       */},
@@ -524,6 +565,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.replaceLane',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/replaceLane',
       exec: function(){/*
         return typeof SIMD.Float32x4.replaceLane === 'function';
       */},
@@ -535,6 +577,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.select',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/select',
       exec: function(){/*
         return typeof SIMD.Float32x4.select === 'function';
       */},
@@ -546,6 +589,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.shiftLeftByScalar',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftLeftByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function';
       */},
@@ -557,6 +601,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.shiftRightByScalar',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftRightByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftRightByScalar === 'function';
       */},
@@ -568,6 +613,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.shuffle',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shuffle',
       exec: function(){/*
         return typeof SIMD.Float32x4.shuffle === 'function';
       */},
@@ -579,6 +625,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.splat',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/splat',
       exec: function(){/*
         return typeof SIMD.Float32x4.splat === 'function';
       */},
@@ -590,6 +637,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.sqrt',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sqrt',
       exec: function(){/*
         return typeof SIMD.Float32x4.sqrt === 'function';
       */},
@@ -601,6 +649,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.store',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
         return typeof SIMD.Float32x4.store === 'function';
       */},
@@ -612,6 +661,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.store1',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
         return typeof SIMD.Float32x4.store1 === 'function';
       */},
@@ -623,6 +673,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.store2',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
         return typeof SIMD.Float32x4.store2 === 'function';
       */},
@@ -634,6 +685,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.store3',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
         return typeof SIMD.Float32x4.store3 === 'function';
       */},
@@ -645,6 +697,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.sub',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sub',
       exec: function(){/*
         return typeof SIMD.Float32x4.sub === 'function';
       */},
@@ -656,6 +709,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.subSaturate',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/subSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.subSaturate === 'function';
       */},
@@ -666,6 +720,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.swizzle',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/swizzle',
       exec: function(){/*
         return typeof SIMD.Float32x4.swizzle === 'function';
       */},
@@ -677,6 +732,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.xor',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/xor',
       exec: function(){/*
         return typeof SIMD.Bool16x8.xor === 'function';
       */},
@@ -821,6 +877,7 @@ exports.tests = [
   subtests: [
     {
       name: 'String.prototype.trimLeft',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
@@ -846,6 +903,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.trimRight',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
@@ -1627,6 +1685,7 @@ exports.tests = [
   category: STAGE3,
   significance: 'small',
   spec: 'https://tc39.github.io/Function-prototype-toString-revision/',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString',
   subtests: [{
     name: 'functions created with the Function constructor',
     exec: function(){/*

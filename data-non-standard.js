@@ -9,6 +9,7 @@ exports.tests = [
     {
       name: 'uneval, existence',
       spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
       exec: function () {/*
         return typeof uneval == 'function';
       */},
@@ -20,6 +21,7 @@ exports.tests = [
     {
       name: 'built-in "toSource" methods',
       spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource',
+      mdn: 'https://developer.mozilla.org/en-US/search?q=tosource',
       exec: function () {/*
         return 'toSource' in Object.prototype
             && Number   .prototype.hasOwnProperty('toSource')
@@ -167,6 +169,7 @@ exports.tests = [
 },
 {
   name: 'function "caller" property',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller',
   exec: function () {
     return 'caller' in function(){};
   },
@@ -187,6 +190,7 @@ exports.tests = [
 },
 {
   name: 'function "arity" property',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity',
   exec: function () {
     return (function () {}).arity === 0 &&
       (function (x) { return x; }).arity === 1 &&
@@ -207,6 +211,7 @@ exports.tests = [
 },
 {
   name: 'function "arguments" property',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments',
   exec: function () {
     function f(a, b) {
       return f.arguments && a === 1 && f.arguments[0] === 1 && b === 'boo' && f.arguments[1] === 'boo';
@@ -231,6 +236,7 @@ exports.tests = [
 {
   name: 'Function.prototype.isGenerator',
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator',
   exec: function () {
     return typeof Function.prototype.isGenerator == 'function';
   },
@@ -264,6 +270,7 @@ exports.tests = [
 {
   name: '__count__',
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count',
   exec: function () {
     return typeof ({}).__count__ === 'number' &&
       ({ x: 1, y: 2 }).__count__ === 2;
@@ -284,6 +291,7 @@ exports.tests = [
 {
   name: '__parent__',
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent',
   exec: function () {
     return typeof ({}).__parent__ !== 'undefined';
   },
@@ -303,6 +311,7 @@ exports.tests = [
 {
   name: '__noSuchMethod__',
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod',
   exec: function () {
     var o = { }, executed = false;
     o.__noSuchMethod__ = function () { executed = true; };
@@ -362,6 +371,7 @@ exports.tests = [
 {
   name: 'Array comprehensions (JS 1.8 style)',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions#Differences_to_the_older_JS1.7JS1.8_comprehensions',
   exec: function () {/*
     var obj = { 2: true, "foo": true, 4: true };
     var a = [i * 2 for (i in obj) if (i !== "foo")];
@@ -385,6 +395,7 @@ exports.tests = [
   name: 'Array comprehensions (ES draft style)',
   significance: 'medium',
   spec: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions',
   exec: function () {/*
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
   */},
@@ -394,6 +405,7 @@ exports.tests = [
 },
 {
   name: 'Expression closures',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures',
   exec: function () {/*
     return (function(x)x)(1) === 1;
   */},
@@ -413,6 +425,7 @@ exports.tests = [
 {
   name: 'ECMAScript for XML (E4X)',
   spec: 'https://developer.mozilla.org/en-US/docs/Archive/Web/E4X',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Archive/Web/E4X',
   exec: function () {/*
     return typeof <foo/> === "xml";
   */},
@@ -432,6 +445,7 @@ exports.tests = [
 {
   name: '"for each..in" loops',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in',
   exec: function () {/*
     var str = '';
     for each (var item in {a: "foo", b: "bar", c: "baz"}) {
@@ -455,6 +469,7 @@ exports.tests = [
 {
   name: 'Sharp variables',
   spec: 'https://developer.mozilla.org/en/Sharp_variables_in_JavaScript',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript',
   exec: function () {/*
     var arr = #1=[1, #1#, 3];
     return arr[1] === arr;
@@ -479,6 +494,7 @@ exports.tests = [
 {
   name: 'Iterator',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator',
   exec: function () {
     /* global Iterator */
     try {
@@ -658,6 +674,7 @@ exports.tests = [
 },
 {
   name: 'RegExp "lastMatch"',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch',
   exec: function () {
     var re = /\w/;
     re.exec('x');
@@ -680,6 +697,7 @@ exports.tests = [
 },
 {
   name: 'RegExp.$1-$9',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n',
   exec: function () {
     for (var i = 1; i < 10; i++) {
       if (!(('$' + i) in RegExp)) return false;
@@ -743,6 +761,7 @@ exports.tests = [
 {
   name: 'String.prototype.trimLeft',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
   exec: function () { return typeof String.prototype.trimLeft === 'function' },
   res: {
     ie7: false,
@@ -765,6 +784,7 @@ exports.tests = [
 {
   name: 'String.prototype.trimRight',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
   exec: function () { return typeof String.prototype.trimRight === 'function' },
   res: {
     ie7: false,
@@ -786,6 +806,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.quote',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/quote',
   exec: function () { return typeof String.prototype.quote === 'function' },
   res: {
     ie7: false,
@@ -803,6 +824,7 @@ exports.tests = [
 {
   name: 'String.prototype.replace flags',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Firefox-specific_notes',
   exec: function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' },
   res: {
     firefox2: true,
@@ -815,6 +837,7 @@ exports.tests = [
 {
   name: 'Date.prototype.toLocaleFormat',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat',
   exec: function () { return typeof Date.prototype.toLocaleFormat === 'function' },
   res: {
     ie7: false,
@@ -853,6 +876,7 @@ exports.tests = [
 {
   name: 'Object.prototype.watch',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
   exec: function () { return typeof Object.prototype.watch == 'function' },
   res: {
     ie7: false,
@@ -869,6 +893,7 @@ exports.tests = [
 {
   name: 'Object.prototype.unwatch',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
   exec: function () { return typeof Object.prototype.unwatch == 'function' },
   res: {
     ie7: false,
@@ -885,6 +910,7 @@ exports.tests = [
 {
   name: 'Object.prototype.eval',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
   exec: function () { return typeof Object.prototype.eval == 'function' },
   res: {
     ie7: false,
@@ -901,6 +927,7 @@ exports.tests = [
 {
   name: 'Object.observe',
   spec: 'https://arv.github.io/ecmascript-object-observe/',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe',
   exec: function () {/*
     return typeof Object.observe == 'function';
   */},
@@ -915,6 +942,7 @@ exports.tests = [
 {
   name: 'error "stack"',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack',
   exec: function () {
     try {
       throw new Error();
@@ -942,6 +970,7 @@ exports.tests = [
 {
   name: 'error "lineNumber"',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber',
   exec: function () {
     return 'lineNumber' in new Error();
   },
@@ -960,6 +989,7 @@ exports.tests = [
 {
   name: 'error "columnNumber"',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber',
   exec: function () {
     return 'columnNumber' in new Error();
   },
@@ -979,6 +1009,7 @@ exports.tests = [
 {
   name: 'error "fileName"',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName',
   exec: function () {
     return 'fileName' in new Error();
   },
