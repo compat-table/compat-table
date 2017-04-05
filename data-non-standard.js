@@ -770,7 +770,8 @@ exports.tests = [
 {
   name: 'RegExp named groups',
   exec: function () {/*
-    return /(?P<name>a)(?P=name)/.test("aa");
+    return /(?P<name>a)(?P=name)/.test("aa") &&
+           !/(?P<name>a)(?P=name)/.test("")
   */},
   res: {
     ie7: false,
@@ -785,7 +786,7 @@ exports.tests = [
     besen: null,
     rhino17: false,
     phantom: false,
-    duktape20: false,  // tests true due to a bug fixed in Duktape 2.0.3
+    duktape20: false,
   },
   separator: 'after'
 },

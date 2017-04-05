@@ -1461,11 +1461,12 @@ exports.tests = [
   category: STAGE3,
   significance: 'small',
   exec: function(){/*
-    return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb');
+    return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
+           !/(?<=a)b/.test('b');
   */},
   res : {
     chrome50: "flagged",
-    duktape20: false,  // tests true due to a bug fixed in Duktape 2.0.3
+    duktape20: false,
   }
 },
 {
