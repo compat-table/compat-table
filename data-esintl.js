@@ -20,6 +20,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -34,6 +35,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
   ],
@@ -55,6 +57,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -70,6 +73,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -85,6 +89,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -148,6 +153,7 @@ exports.tests = [
         safaritp: true,
         webkit: true,
         node012: true,
+        duktape20: false,
       },
     },
   ],
@@ -169,6 +175,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
   ],
@@ -190,6 +197,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
   ],
@@ -211,6 +219,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -225,6 +234,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -240,6 +250,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -255,6 +266,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -318,6 +330,7 @@ exports.tests = [
         safaritp: true,
         webkit: true,
         node012: true,
+        duktape20: false,
       },
     },
   ],
@@ -339,6 +352,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -354,6 +368,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -369,6 +384,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -432,6 +448,7 @@ exports.tests = [
         safaritp: true,
         webkit: true,
         node012: true,
+        duktape20: false,
       },
     },
     {
@@ -456,6 +473,7 @@ exports.tests = [
         opera12: null,
         android40: null,
         ios7: false,
+        duktape20: false,
       }
     },
     {
@@ -480,6 +498,7 @@ exports.tests = [
         chrome24: true,
         safari10: true,
         node012: true,
+        duktape20: false,
       }
     }
   ],
@@ -504,6 +523,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -528,6 +548,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -552,6 +573,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -576,6 +598,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -600,6 +623,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -624,6 +648,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
@@ -648,6 +673,7 @@ exports.tests = [
         ios7: true,
         node010: true,
         android40: true,
+        duktape20: true,
       },
     },
   ],
