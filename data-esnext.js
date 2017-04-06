@@ -899,6 +899,7 @@ exports.tests = [
     typescript: true,
     jsx: true,
     chrome58: 'flagged',
+    safaritp: true,
     webkit: true,
     duktape20: false,
   }
@@ -918,6 +919,8 @@ exports.tests = [
     jsx: true,
     chrome58: 'flagged',
     typescript: true,
+    safaritp: true,
+    webkit: true,
     duktape20: false,
   }
 },
