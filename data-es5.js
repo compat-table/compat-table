@@ -28,6 +28,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -50,6 +51,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     },
   },
   {
@@ -73,6 +75,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   },
   {
@@ -96,6 +99,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   },
   {
@@ -121,6 +125,7 @@ exports.tests = [
       rhino17: false,
       ejs: true,
       android40: true,
+      duktape20: true,
     },
   }],
   separator: 'after'
@@ -147,6 +152,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -180,6 +186,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -201,6 +208,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -224,6 +232,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -248,6 +257,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -269,6 +279,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -290,6 +301,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -311,6 +323,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -332,6 +345,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -353,6 +367,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -374,6 +389,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -403,6 +419,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -426,6 +443,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     },
     separator: 'after'
   }],
@@ -455,6 +473,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -477,6 +496,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -499,6 +519,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -521,6 +542,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -543,6 +565,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -565,6 +588,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -587,6 +611,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -609,6 +634,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -631,6 +657,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -653,6 +680,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     },
   }, {
     name: 'Array.prototype.sort: compareFn must be function or undefined',
@@ -695,6 +723,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: false,
+      duktape20: true,
     },
   },
   {
@@ -724,6 +753,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: true,
+      duktape20: true,
     },
   }],
 },
@@ -750,6 +780,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -774,6 +805,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     },
     separator: 'after'
   }
@@ -802,6 +834,7 @@ exports.tests = [
       rhino17: true,
       ejs: false,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -824,6 +857,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   },
   {
@@ -857,6 +891,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android40: true,
+      duktape20: true,
     }
   }]
 },
@@ -883,6 +918,7 @@ exports.tests = [
     ejs: true,
     ios7: true,
     android40: true,
+    duktape20: true,
   },
 },
 {
@@ -912,6 +948,7 @@ exports.tests = [
     ejs: true,
     ios7: true,
     android40: true,
+    duktape20: true,
   },
   separator: 'after'
 },
@@ -943,6 +980,7 @@ exports.tests = [
       rhino17: true,
       ejs: false,
       android41: true,
+      duktape20: true,
     }
   },
   {
@@ -969,6 +1007,7 @@ exports.tests = [
       rhino17: true,
       ejs: false,
       android41: true,
+      duktape20: true,
     }
   },
   {
@@ -995,6 +1034,7 @@ exports.tests = [
       rhino17: true,
       ejs: false,
       android41: true,
+      duktape20: true,
     }
   }]
 },
@@ -1023,6 +1063,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   },
   {
@@ -1047,6 +1088,7 @@ exports.tests = [
       rhino17: false,
       ejs: true,
       android44: true,
+      duktape20: true,
     }
   },
   {
@@ -1072,6 +1114,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   },
   {
@@ -1098,6 +1141,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   },
   {
@@ -1126,6 +1170,7 @@ exports.tests = [
       rhino17: true,
       ejs: true,
       android41: true,
+      duktape20: true,
     }
   },
   {
@@ -1152,6 +1197,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     }
   },
   {
@@ -1183,6 +1229,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: false,
     }
   },
   {
@@ -1212,6 +1259,7 @@ exports.tests = [
       rhino17: null,
       ejs: null,
       android40: null,
+      duktape20: true,
     },
   }]
 },
@@ -1241,6 +1289,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1264,6 +1313,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1285,6 +1335,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1321,6 +1372,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1342,6 +1394,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1361,6 +1414,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1384,6 +1438,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1407,6 +1462,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1432,6 +1488,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1456,6 +1513,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1478,6 +1536,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1499,6 +1558,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1524,6 +1584,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1543,6 +1604,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1562,6 +1624,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1581,6 +1644,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1600,6 +1664,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1619,6 +1684,7 @@ exports.tests = [
       ejs: true,
       ios7: true,
       android41: true,
+      duktape20: true,
     },
   },
   {
@@ -1643,6 +1709,7 @@ exports.tests = [
       ios8: true,
       ios9: true,
       android41: true,
+      duktape20: true,
     }
   }]
 }

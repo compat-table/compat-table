@@ -16,6 +16,7 @@ exports.tests = [
       res: {
         firefox2: true,
         rhino17: true,
+        duktape20: false,
       }
     },
     {
@@ -37,6 +38,7 @@ exports.tests = [
         firefox2: true,
         besen: true,
         rhino17: true,
+        duktape20: false,
       },
     },
     {
@@ -47,6 +49,7 @@ exports.tests = [
       res: {
         firefox2: true,
         rhino17: null,
+        duktape20: false,
       },
     },
     {
@@ -147,6 +150,7 @@ exports.tests = [
         firefox2: true,
         besen: null,
         rhino17: null,
+        duktape20: false,
       },
     },
   ]
@@ -164,6 +168,7 @@ exports.tests = [
     firefox3_5: true,
     firefox4: false,
     rhino17: null,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -186,6 +191,7 @@ exports.tests = [
     rhino17: false,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -206,7 +212,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -231,6 +238,7 @@ exports.tests = [
     rhino17: true,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -250,7 +258,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -265,6 +274,7 @@ exports.tests = [
     safari10_1: true,
     safaritp: true,
     webkit: true,
+    duktape20: false,
   },
 },
 {
@@ -285,7 +295,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -305,7 +316,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -330,7 +342,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -347,7 +360,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -364,7 +378,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -388,7 +403,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -401,6 +417,7 @@ exports.tests = [
   */},
   res: {
     firefox30: true,
+    duktape20: false,
   }
 },
 {
@@ -419,7 +436,8 @@ exports.tests = [
     konq44: false,
     besen: true,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -439,7 +457,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -463,7 +482,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -487,7 +507,8 @@ exports.tests = [
     konq49: false,
     besen: null,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -522,7 +543,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -559,7 +581,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -605,7 +628,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
 },
 {
@@ -626,7 +650,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -645,6 +670,7 @@ exports.tests = [
   */},
   res: {
     firefox30: true,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -669,7 +695,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -693,6 +720,7 @@ exports.tests = [
     rhino17: true,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -716,6 +744,7 @@ exports.tests = [
     rhino17: true,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -734,13 +763,15 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
   name: 'RegExp named groups',
   exec: function () {/*
-    return /(?P<name>a)(?P=name)/.test("aa");
+    return /(?P<name>a)(?P=name)/.test("aa") &&
+           !/(?P<name>a)(?P=name)/.test("")
   */},
   res: {
     ie7: false,
@@ -754,7 +785,8 @@ exports.tests = [
     konq49: true,
     besen: null,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -779,6 +811,7 @@ exports.tests = [
     rhino17: false,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -802,6 +835,7 @@ exports.tests = [
     rhino17: false,
     phantom: true,
     android40: true,
+    duktape20: false,
   }
 },
 {
@@ -818,7 +852,8 @@ exports.tests = [
     konq44: false,
     besen: null,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -830,7 +865,8 @@ exports.tests = [
     firefox2: true,
     firefox49: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -848,7 +884,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
 },
 {
@@ -870,6 +907,7 @@ exports.tests = [
     rhino17: true,
     ejs: true,
     android40: true,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -887,7 +925,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -904,7 +943,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -921,7 +961,8 @@ exports.tests = [
     konq44: false,
     besen: true,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
 },
 {
@@ -936,6 +977,7 @@ exports.tests = [
     chrome49: false,
     node010: true,
     android50: true,
+    duktape20: false,
   },
   separator: 'after'
 },
@@ -965,6 +1007,7 @@ exports.tests = [
     rhino17: false,
     phantom: false,
     android40: true,
+    duktape20: true,
   }
 },
 {
@@ -983,7 +1026,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: true,
   }
 },
 {
@@ -1003,7 +1047,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   }
 },
 {
@@ -1022,7 +1067,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: true,
-    phantom: false
+    phantom: false,
+    duktape20: true,
   }
 },
 {
@@ -1040,7 +1086,8 @@ exports.tests = [
     konq44: false,
     besen: false,
     rhino17: false,
-    phantom: false
+    phantom: false,
+    duktape20: false,
   },
   separator: 'after'
 }
