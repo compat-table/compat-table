@@ -8385,6 +8385,7 @@ exports.tests = [
       */},
       res: {
         xs6: true,
+        edge15: true,
         firefox44: true,
         ejs: true,
         chrome49: true,
@@ -8422,7 +8423,7 @@ exports.tests = [
         return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
       */},
       res: {
-        edge14: false,
+        edge15: true,
         firefox50: true,
         chrome50: "flagged",
         chrome51: true,
@@ -8835,7 +8836,7 @@ exports.tests = [
           && get.length === 7;
       */},
       res: {
-        edge14: false,
+        edge15: true,
         chrome50: "flagged",
         chrome51: true,
         firefox48: true,
@@ -9100,6 +9101,7 @@ exports.tests = [
       */},
       res: {
         xs6: true,
+        edge15: true,
         firefox44: true,
         chrome49: true,
         safari10: true,
@@ -13987,7 +13989,7 @@ exports.tests = [
       res: {
         babel: "flagged",
         typescript: typescript.fallthrough,
-        edge14: false,
+        edge15: true,
         chrome50: "flagged",
         chrome51: true,
         firefox50: true,
@@ -14009,7 +14011,7 @@ exports.tests = [
       */},
       res: {
         typescript: typescript.fallthrough,
-        edge14: false,
+        edge15: true,
         ejs: true,
         chrome48: true,
         firefox48: true,
@@ -14444,6 +14446,7 @@ exports.tests = [
       res: {
         ejs: true,
         typescript: typescript.fallthrough,
+        edge15: true,
         firefox44: true,
         chrome47: true,
         xs6: true,
@@ -16031,6 +16034,7 @@ exports.tests = [
     ejs: true,
     babel: true,
     typescript: typescript.corejs,
+    edge15: true,
     firefox44: true,
     chrome47: true,
     xs6: true,
