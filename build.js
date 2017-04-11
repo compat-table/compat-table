@@ -617,6 +617,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     if ("subtests" in t) {
       t.subtests.forEach(function(subtest) {
         var subtestName = subtest.name;
+
+        if (subtest.spec) {
+            subtestName = '<a href="' + subtest.spec + '">' + subtest.name + '</a>';
+        }
+        
         if (subtest.mdn) {
           subtestName += generateMdnLink(subtest.mdn);
         }
