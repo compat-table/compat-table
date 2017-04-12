@@ -1587,9 +1587,17 @@
   "ios10": {
     "full": "iOS Safari",
     "family": "iOS Safari",
-    "short": "iOS 10",
+    "short": "iOS 10.0-10.3",
     "platformtype": "mobile",
     "equals": "safari10",
+    "obsolete": false
+  },
+  "ios10_3": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS &gt;=10.3 &lt;11",
+    "platformtype": "mobile",
+    "equals": "safari10_1",
     "obsolete": false
   },
   "duktape20": {
