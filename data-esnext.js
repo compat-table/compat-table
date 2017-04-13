@@ -1482,6 +1482,7 @@ exports.tests = [
     return regexGreekSymbol.test('π');
   */},
   res: {
+    chrome59: "flagged",
     duktape20: false,
   }
 },
@@ -1824,6 +1825,7 @@ exports.tests = [
     */},
     res: {
       firefox54: true,
+      chrome59: "flagged",
       duktape20: false,
     },
   }, {
@@ -1889,6 +1891,7 @@ exports.tests = [
     */},
     res: {
       firefox54: true,
+      chrome59: "flagged",
       duktape20: false,
     },
   }, {
@@ -1899,6 +1902,7 @@ exports.tests = [
     */},
     res: {
       firefox54: true,
+      chrome59: "flagged",
       duktape20: false,
     },
   }]
