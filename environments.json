@@ -310,7 +310,7 @@
   "firefox10": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 10<br> ESR",
+    "short": "FF 10 ESR",
     "release": "2012-01-31",
     "retire": "2013-02-12",
     "obsolete": "very"
@@ -366,7 +366,7 @@
   "firefox17": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 17<br> ESR",
+    "short": "FF 17 ESR",
     "release": "2012-11-20",
     "retire": "2013-12-03",
     "obsolete": "very"
@@ -422,7 +422,7 @@
   "firefox24": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 24<br> ESR",
+    "short": "FF 24 ESR",
     "release": "2013-09-17",
     "retire": "2014-10-14",
     "obsolete": "very"
@@ -478,7 +478,7 @@
   "firefox31": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 31<br> ESR",
+    "short": "FF 31 ESR",
     "release": "2014-07-22",
     "retire": "2015-08-11",
     "obsolete": "very"
@@ -534,7 +534,7 @@
   "firefox38": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 38<br> ESR",
+    "short": "FF 38 ESR",
     "release": "2015-05-12",
     "retire": "2016-06-07",
     "obsolete": true
@@ -585,7 +585,7 @@
     "short": "FF 44",
     "release": "2016-01-26",
     "retire": "2016-03-08",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox45": {
     "full": "Firefox",
@@ -646,22 +646,22 @@
   "firefox52": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 52",
+    "short": "FF 52 ESR",
     "release": "2017-03-07",
     "obsolete": false
   },
   "firefox53": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 53 Beta",
+    "short": "FF 53",
     "release": "2017-04-18",
     "retire": "2017-06-13",
-    "unstable": true
+    "obsolete": false
   },
   "firefox54": {
     "full": "Firefox",
     "family": "SpiderMonkey",
-    "short": "FF 54 Aurora",
+    "short": "FF 54 Beta",
     "release": "2017-06-13",
     "retire": "2017-08-08",
     "unstable": true
@@ -671,7 +671,7 @@
     "family": "SpiderMonkey",
     "short": "FF 55 Nightly",
     "release": "2017-08-08",
-    "retire": "2017-10-03",
+    "retire": "2017-26-09",
     "unstable": true
   },
   "opera10_10": {
