@@ -5318,6 +5318,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
   ].concat([ //@@ jph
@@ -13261,6 +13262,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -13290,6 +13292,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -13316,6 +13319,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -13345,6 +13349,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -13376,6 +13381,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -13869,6 +13875,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape20: false,
+        duktape21: true,
       },
     },
     {
@@ -17315,6 +17322,7 @@ exports.tests = [
     edge13: false,
     xs6: false,
     duktape20: false,
+    duktape21: true,
   }
 },
 ];

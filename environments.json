@@ -1500,6 +1500,20 @@
       "esintl"
     ]
   },
+  "duktape20": {
+    "full": "Duktape 2.0",
+    "family": "Duktape",
+    "short": "DUK 20",
+    "platformtype": "engine",
+    "obsolete": false
+  },
+  "duktape21": {
+    "full": "Duktape 2.1",
+    "family": "Duktape",
+    "short": "DUK 21",
+    "platformtype": "engine",
+    "obsolete": false
+  },
   "android40": {
     "full": "Android Browser",
     "short": "AN 4.0",
@@ -1598,13 +1612,6 @@
     "short": "iOS &gt;=10.3 &lt;11",
     "platformtype": "mobile",
     "equals": "safari10_1",
-    "obsolete": false
-  },
-  "duktape20": {
-    "full": "Duktape 2.0.x",
-    "family": "Duktape",
-    "short": "DUK 20",
-    "platformtype": "engine",
     "obsolete": false
   }
 }
