@@ -17,6 +17,8 @@ var testOutOfDate = 0;
 
 var dukCommand = './duk';
 
+var environments = JSON.parse(fs.readFileSync('environments.json').toString());
+
 // Key for .res (e.g. test.res.duktape20), automatic based on Duktape.version.
 var dukKey = (function () {
     var stdout = child_process.execFileSync(dukCommand, [ '-e', 'print(Duktape.version)' ], {
@@ -27,6 +29,24 @@ var dukKey = (function () {
     return 'duktape' + (Math.floor(dukVersion / 10000)) + (Math.floor(dukVersion / 100 % 100));
 })();
 console.log('Duktape result key is: test.res.' + dukKey);
+
+// List of keys for inheriting results from previous versions.
+var dukKeyList = (function () {
+    var res = [];
+    for (var k in environments) {
+        var env = environments[k];
+        if (env.family !== 'Duktape') {
+            continue;
+        }
+        res.push(k);
+        if (k === dukKey) {
+            // Include versions up to 'dukKey' but not newer.
+            break;
+        }
+    }
+    return res;
+})();
+console.log('Duktape key list for inheriting results is:', dukKeyList);
 
 // Run test / subtests, recursively.  Report results, indicate data files
 // which are out of date.
@@ -70,14 +90,23 @@ function runTest(parents, test, sublevel) {
         testCount++;
 
         if (test.res) {
-            if (test.res[dukKey] === success) {
+            // Take expected result from newest Duktape version not newer
+            // than current version.
+            var expect = void 0;
+            dukKeyList.forEach(function (k) {
+                if (test.res[k] !== void 0) {
+                    expect = test.res[k];
+                }
+            });
+
+            if (expect === success) {
                 // Matches.
-            } else if (test.res[dukKey] === void 0 && !success) {
+            } else if (expect === void 0 && !success) {
                 testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + test.res[dukKey] + ', actual: ' + success);
+                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
             } else {
                 testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + test.res[dukKey] + ', actual: ' + success);
+                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
             }
         } else {
             testOutOfDate++;
