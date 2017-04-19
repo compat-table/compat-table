@@ -24,6 +24,11 @@
     }
   },
   "firefox": {
+    "sharedmem": {
+      "val": "flagged",
+      "note_id": "firefox-sharedmem",
+      "note_html": "The feature have to be enabled via \"javascript.options.shared_memory\" setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly."
+    },
     "developer": {
       "val": false,
       "note_id": "firefox-developer",
