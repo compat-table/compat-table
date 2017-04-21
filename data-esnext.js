@@ -1179,6 +1179,7 @@ exports.tests = [
         babel: true,
         typescript: typescript.corejs,
         duktape20: false,
+        chrome60: true,
       }
     },
     {
