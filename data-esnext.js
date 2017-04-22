@@ -53,7 +53,7 @@ exports.tests = [
   spec: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
   exec: function () {/*
     return do {
-      let x = 23;
+      var x = 23;
       x + 19;
     } === 42;
   */},
