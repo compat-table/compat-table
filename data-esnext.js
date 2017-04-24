@@ -1880,6 +1880,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox55: true,
       chrome50: true,
       safari10: true,
       edge14: true,

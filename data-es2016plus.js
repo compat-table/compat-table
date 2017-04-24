@@ -814,7 +814,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -829,7 +829,7 @@ exports.tests = [
          */},
         res: {
           firefox52: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           safari10_1: true,
           safaritp: true,
           webkit: true,
@@ -845,7 +845,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safaritp: true,
           webkit: true,
@@ -860,7 +860,7 @@ exports.tests = [
          */},
         res: {
           firefox52: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           safari10_1: true,
           safaritp: true,
           webkit: true,
@@ -874,7 +874,7 @@ exports.tests = [
          */},
         res: {
           firefox52: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -891,7 +891,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -908,7 +908,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -925,7 +925,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -942,7 +942,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -959,7 +959,7 @@ exports.tests = [
         res: {
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -976,7 +976,7 @@ exports.tests = [
         res: {
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -993,7 +993,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -1010,7 +1010,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -1027,7 +1027,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -1044,7 +1044,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -1061,7 +1061,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
@@ -1078,7 +1078,7 @@ exports.tests = [
         res: {
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
-          firefox53: true,
+          firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
           safari10_1: true,
           safaritp: true,
