@@ -460,7 +460,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   }
 
   function allFootnotes() {
-    var ret = $('<p>');
+    var ret = $('<div>');
     Object.keys(footnoteIndex).forEach(function(e,id) {
       if (!(e in footnoteIndex)) {
         console.error("There's no footnote with id '" + e + "'");
@@ -700,7 +700,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     }
   });
 
-  $('#footnotes').append(allFootnotes());
+  $('#footnotes').append(allFootnotes().html());
 
   return $.root().html().replace(/(<\/t\w>)/g, "$1\n");
 }
