@@ -1060,6 +1060,7 @@ exports.tests = [
       node7: true,
       node76: true,
       duktape20: false,
+      duktape21: true,
     }
   }, {
     name: '"global" global property has correct property descriptor',
@@ -1098,6 +1099,7 @@ exports.tests = [
       node7: false,
       node76: false,
       duktape20: false,
+      duktape21: true,
     }
   }]
 },
@@ -1865,6 +1867,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox55: true,
       chrome50: true,
       safari10: true,
       edge14: true,
@@ -1878,6 +1881,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox55: true,
       chrome50: true,
       safari10: true,
       edge14: true,
