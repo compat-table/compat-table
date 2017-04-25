@@ -440,6 +440,7 @@ label[for="sort"] {
     position: absolute; top: -15px; right: 0px; font-size: 11px;
     transition-property: top;
     transition-duration: .5s;
+    line-height: 15px;
 }
 .num-features b {
     font-weight: bold;
