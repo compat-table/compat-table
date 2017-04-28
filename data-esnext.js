@@ -770,6 +770,7 @@ exports.tests = [
         return typeof SIMD.Int16x8.subSaturate === 'function' && typeof SIMD.Int8x16.subSaturate === 'function';
       */},
       res: {
+        edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape20: false,
