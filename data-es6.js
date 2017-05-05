@@ -9027,6 +9027,7 @@ exports.tests = [
         return get[0] === Symbol.match && get[1] === Symbol.toPrimitive && get.length === 2;
       */},
       res: {
+        edge15: "flagged",
         firefox49: true,
         chrome51: true,
         xs6: true,
@@ -9046,6 +9047,7 @@ exports.tests = [
         return get[0] === Symbol.replace && get[1] === Symbol.toPrimitive && get.length === 2;
       */},
       res: {
+        edge15: "flagged",
         firefox49: true,
         chrome50: true,
         xs6: true,
@@ -9066,6 +9068,7 @@ exports.tests = [
         return get[0] === Symbol.search && get[1] === Symbol.toPrimitive && get.length === 2;
       */},
       res: {
+        edge15: "flagged",
         firefox49: true,
         chrome51: true,
         xs6: true,
@@ -9085,6 +9088,7 @@ exports.tests = [
         return get[0] === Symbol.split && get[1] === Symbol.toPrimitive && get.length === 2;
       */},
       res: {
+        edge15: "flagged",
         firefox49: true,
         chrome50: true,
         xs6: true,
