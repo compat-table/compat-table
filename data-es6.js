@@ -8768,15 +8768,16 @@ exports.tests = [
         var get = [];
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
         RegExp.prototype[Symbol.search].call(p);
-        return get + '' === "lastIndex,exec";
+        return get + '' === "lastIndex,exec,lastIndex";
       */},
       res: {
-        edge14: "flagged",
-        firefox49: true,
-        chrome51: true,
-        chrome56: false,
-        xs6: true,
-        safari10: true,
+        edge14: false,
+        firefox49: false,
+        firefox55: true,
+        chrome51: false,
+        chrome56: true,
+        xs6: true,       // needs checking
+        safari10: true,  // needs checking
         duktape20: false,
       },
     },
