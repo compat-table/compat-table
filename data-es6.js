@@ -8776,8 +8776,6 @@ exports.tests = [
         firefox55: true,
         chrome51: false,
         chrome56: true,
-        xs6: true,       // needs checking
-        safari10: true,  // needs checking
         duktape20: false,
       },
     },
