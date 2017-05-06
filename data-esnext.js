@@ -903,6 +903,7 @@ exports.tests = [
     babel: true,
     typescript: true,
     jsx: true,
+    firefox55: true,
     chrome58: 'flagged',
     safaritp: true,
     webkit: true,
@@ -922,6 +923,7 @@ exports.tests = [
   res: {
     babel: true,
     jsx: true,
+    firefox55: true,
     chrome58: 'flagged',
     typescript: true,
     safaritp: true,
