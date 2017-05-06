@@ -303,7 +303,9 @@ exports.tests = [
          return 'hello'.padStart(10) === '     hello'
          && 'hello'.padStart(10, '1234') === '12341hello'
          && 'hello'.padStart() === 'hello'
-         && 'hello'.padStart(6, '123') === '1hello';
+         && 'hello'.padStart(6, '123') === '1hello'
+         && 'hello'.padStart(3) === 'hello'
+         && 'hello'.padStart(3, '123') === 'hello';
          */},
         res: {
           babel: true,
@@ -327,7 +329,9 @@ exports.tests = [
          return 'hello'.padEnd(10) === 'hello     '
          && 'hello'.padEnd(10, '1234') === 'hello12341'
          && 'hello'.padEnd() === 'hello'
-         && 'hello'.padEnd(6, '123') === 'hello1';
+         && 'hello'.padEnd(6, '123') === 'hello1'
+         && 'hello'.padEnd(3) === 'hello'
+         && 'hello'.padEnd(3, '123') === 'hello';
          */},
         res: {
           babel: true,
