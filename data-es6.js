@@ -8770,6 +8770,8 @@ exports.tests = [
         RegExp.prototype[Symbol.search].call(p);
         return get + '' === "lastIndex,exec,lastIndex";
       */},
+      note_id: "regexp-prototype-symbolsearch",
+      note_html: "The specification for this feature was <a href='https://github.com/tc39/ecma262/pull/627'>updated</a> after ES6 was published.  This test reflects the updated spec, which is implemented by the latest browsers.",
       res: {
         edge14: false,
         firefox49: false,
