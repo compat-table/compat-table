@@ -102,6 +102,7 @@ exports.tests = [
     },
     {
       name: 'Float32x4',
+      spec: 'https://tc39.github.io/ecmascript_simd/#float32x4',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4',
       exec: function(){/*
         return typeof SIMD.Float32x4 === 'function';
@@ -115,6 +116,7 @@ exports.tests = [
     },
     {
       name: 'Int32x4',
+      spec: 'https://tc39.github.io/ecmascript_simd/#int32x4',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4',
       exec: function(){/*
         return typeof SIMD.Int32x4 === 'function';
@@ -128,6 +130,7 @@ exports.tests = [
     },
     {
       name: 'Int16x8',
+      spec: 'https://tc39.github.io/ecmascript_simd/#int16x8',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8',
       exec: function(){/*
         return typeof SIMD.Int16x8 === 'function';
@@ -141,6 +144,7 @@ exports.tests = [
     },
     {
       name: 'Int8x16',
+      spec: 'https://tc39.github.io/ecmascript_simd/#int8x16',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16',
       exec: function(){/*
         return typeof SIMD.Int8x16 === 'function';
@@ -154,6 +158,7 @@ exports.tests = [
     },
     {
       name: 'Uint32x4',
+      spec: 'https://tc39.github.io/ecmascript_simd/#uint32x4',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4',
       exec: function(){/*
         return typeof SIMD.Uint32x4 === 'function';
@@ -167,6 +172,7 @@ exports.tests = [
     },
     {
       name: 'Uint16x8',
+      spec: 'https://tc39.github.io/ecmascript_simd/#uint16x8',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8',
       exec: function(){/*
         return typeof SIMD.Uint16x8 === 'function';
@@ -180,6 +186,7 @@ exports.tests = [
     },
     {
       name: 'Uint8x16',
+      spec: 'https://tc39.github.io/ecmascript_simd/#uint8x16',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16',
       exec: function(){/*
         return typeof SIMD.Uint8x16 === 'function';
@@ -193,6 +200,7 @@ exports.tests = [
     },
     {
       name: 'Bool32x4',
+      spec: 'https://tc39.github.io/ecmascript_simd/#bool32x4',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4',
       exec: function(){/*
         return typeof SIMD.Bool32x4 === 'function';
@@ -206,6 +214,7 @@ exports.tests = [
     },
     {
       name: 'Bool16x8',
+      spec: 'https://tc39.github.io/ecmascript_simd/#bool16x8',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8',
       exec: function(){/*
         return typeof SIMD.Bool16x8 === 'function';
@@ -219,6 +228,7 @@ exports.tests = [
     },
     {
       name: 'Bool8x16',
+      spec: 'https://tc39.github.io/ecmascript_simd/#bool8x16',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16',
       exec: function(){/*
         return typeof SIMD.Bool8x16 === 'function';
@@ -232,6 +242,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.abs',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-abs',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/abs',
       exec: function(){/*
         return typeof SIMD.Float32x4.abs === 'function';
@@ -245,6 +256,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.add',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-add',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/add',
       exec: function(){/*
         return typeof SIMD.Float32x4.add === 'function' && typeof SIMD.Int32x4.add === 'function' && typeof SIMD.Uint32x4.add === 'function';
@@ -258,6 +270,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.addSaturate',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-add-saturate',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/addSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.addSaturate === 'function' && typeof SIMD.Int8x16.addSaturate === 'function' && typeof SIMD.Uint16x8.addSaturate === 'function' && typeof SIMD.Uint8x16.addSaturate === 'function';
@@ -271,9 +284,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.and',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-and',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/and',
       exec: function(){/*
-        return typeof SIMD.Bool32x4.and === 'function' && typeof SIMD.Bool16x8.and === 'function' && typeof SIMD.Bool8x16.and === 'function';
+        return typeof SIMD.Bool32x4.and === 'function' && typeof SIMD.Int32x4.and === 'function' && typeof SIMD.Uint32x4.and === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -284,6 +298,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.anyTrue',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-any-true',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/anyTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.anyTrue === 'function' && typeof SIMD.Bool16x8.anyTrue === 'function' && typeof SIMD.Bool8x16.anyTrue === 'function';
@@ -297,6 +312,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.allTrue',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-all-true',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/allTrue',
       exec: function(){/*
         return typeof SIMD.Bool32x4.allTrue === 'function' && typeof SIMD.Bool16x8.allTrue === 'function' && typeof SIMD.Bool8x16.allTrue === 'function';
@@ -310,9 +326,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.check',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-check',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/check',
       exec: function(){/*
-        return typeof SIMD.Float32x4.check === 'function';
+        return typeof SIMD.Float32x4.check === 'function' && typeof SIMD.Int32x4.check === 'function' && typeof SIMD.Uint32x4.check === 'function' && typeof SIMD.Bool32x4.check === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -323,9 +340,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.equal',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-equal',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/equal',
       exec: function(){/*
-        return typeof SIMD.Float32x4.equal === 'function';
+        return typeof SIMD.Float32x4.equal === 'function' && typeof SIMD.Int32x4.equal === 'function' && typeof SIMD.Uint32x4.equal === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -336,9 +354,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.extractLane',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-extract-lane',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/extractLane',
       exec: function(){/*
-        return typeof SIMD.Float32x4.extractLane === 'function';
+        return typeof SIMD.Float32x4.extractLane === 'function' && typeof SIMD.Int32x4.extractLane === 'function' && typeof SIMD.Uint32x4.extractLane === 'function' && typeof SIMD.Bool32x4.extractLane === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -349,9 +368,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.greaterThan',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-greater-than',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThan',
       exec: function(){/*
-        return typeof SIMD.Float32x4.greaterThan === 'function';
+        return typeof SIMD.Float32x4.greaterThan === 'function' && typeof SIMD.Int32x4.greaterThan === 'function' && typeof SIMD.Uint32x4.greaterThan === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -362,9 +382,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.greaterThanOrEqual',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-greater-than-or-equal',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThanOrEqual',
       exec: function(){/*
-        return typeof SIMD.Float32x4.greaterThanOrEqual === 'function';
+        return typeof SIMD.Float32x4.greaterThanOrEqual === 'function' && typeof SIMD.Int32x4.greaterThanOrEqual === 'function' && typeof SIMD.Uint32x4.greaterThanOrEqual === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -375,9 +396,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.lessThan',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-less-than',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThan',
       exec: function(){/*
-        return typeof SIMD.Float32x4.lessThan === 'function';
+        return typeof SIMD.Float32x4.lessThan === 'function' && typeof SIMD.Int32x4.lessThan === 'function' && typeof SIMD.Uint32x4.lessThan === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -388,9 +410,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.lessThanOrEqual',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-less-than-or-equal',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThanOrEqual',
       exec: function(){/*
-        return typeof SIMD.Float32x4.lessThanOrEqual === 'function';
+        return typeof SIMD.Float32x4.lessThanOrEqual === 'function' && typeof SIMD.Int32x4.lessThanOrEqual === 'function' && typeof SIMD.Uint32x4.lessThanOrEqual === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -401,6 +424,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.mul',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-mul',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/mul',
       exec: function(){/*
         return typeof SIMD.Float32x4.mul === 'function' && typeof SIMD.Int32x4.mul === 'function' && typeof SIMD.Uint32x4.mul === 'function';
@@ -414,6 +438,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.div',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-div',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/div',
       exec: function(){/*
         return typeof SIMD.Float32x4.div === 'function';
@@ -427,9 +452,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.load',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-load-function',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
-        return typeof SIMD.Float32x4.load === 'function';
+        return typeof SIMD.Float32x4.load === 'function' && typeof SIMD.Int32x4.load === 'function' && typeof SIMD.Uint32x4.load === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -442,7 +468,7 @@ exports.tests = [
       name: 'SIMD.%type%.load1',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
-        return typeof SIMD.Float32x4.load1 === 'function';
+        return typeof SIMD.Float32x4.load1 === 'function' && typeof SIMD.Int32x4.load1 === 'function' && typeof SIMD.Uint32x4.load1 === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -455,7 +481,7 @@ exports.tests = [
       name: 'SIMD.%type%.load2',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
-        return typeof SIMD.Float32x4.load2 === 'function';
+        return typeof SIMD.Float32x4.load2 === 'function' && typeof SIMD.Int32x4.load2 === 'function' && typeof SIMD.Uint32x4.load2 === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -468,7 +494,7 @@ exports.tests = [
       name: 'SIMD.%type%.load3',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load',
       exec: function(){/*
-        return typeof SIMD.Float32x4.load3 === 'function';
+        return typeof SIMD.Float32x4.load3 === 'function' && typeof SIMD.Int32x4.load3 === 'function' && typeof SIMD.Uint32x4.load3 === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -479,6 +505,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.max',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-max',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/max',
       exec: function(){/*
         return typeof SIMD.Float32x4.max === 'function';
@@ -492,6 +519,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.maxNum',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-max-num',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/maxNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.maxNum === 'function';
@@ -505,6 +533,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.min',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-min',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/min',
       exec: function(){/*
         return typeof SIMD.Float32x4.min === 'function';
@@ -518,6 +547,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.minNum',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-min-num',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/minNum',
       exec: function(){/*
         return typeof SIMD.Float32x4.minNum === 'function';
@@ -531,9 +561,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.neg',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-neg',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/neg',
       exec: function(){/*
-        return typeof SIMD.Float32x4.neg === 'function';
+        return typeof SIMD.Float32x4.neg === 'function' && typeof SIMD.Int32x4.neg === 'function' && typeof SIMD.Uint32x4.neg === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -544,9 +575,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.not',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-not',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/not',
       exec: function(){/*
-        return typeof SIMD.Bool32x4.not === 'function' && typeof SIMD.Bool16x8.not === 'function' && typeof SIMD.Bool8x16.not === 'function';
+        return typeof SIMD.Bool32x4.not === 'function' && typeof SIMD.Int32x4.not === 'function' && typeof SIMD.Uint32x4.not === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -557,9 +589,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.notEqual',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-not-equal',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/notEqual',
       exec: function(){/*
-        return typeof SIMD.Float32x4.notEqual === 'function';
+        return typeof SIMD.Float32x4.notEqual === 'function' && typeof SIMD.Int32x4.notEqual === 'function' && typeof SIMD.Uint32x4.notEqual === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -570,9 +603,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.or',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-or',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/or',
       exec: function(){/*
-        return typeof SIMD.Bool32x4.or === 'function' && typeof SIMD.Bool16x8.or === 'function' && typeof SIMD.Bool8x16.or === 'function';
+        return typeof SIMD.Bool32x4.or === 'function' && typeof SIMD.Int32x4.or === 'function' && typeof SIMD.Uint32x4.or === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
@@ -583,6 +617,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.reciprocalApproximation',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-reciprocal-approximation',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalApproximation === 'function';
@@ -596,6 +631,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.reciprocalSqrtApproximation',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-reciprocal-sqrt-approximation',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalSqrtApproximation',
       exec: function(){/*
         return typeof SIMD.Float32x4.reciprocalSqrtApproximation === 'function';
@@ -609,9 +645,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.replaceLane',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-replace-lane',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/replaceLane',
       exec: function(){/*
-        return typeof SIMD.Float32x4.replaceLane === 'function';
+        return typeof SIMD.Float32x4.replaceLane === 'function' && typeof SIMD.Int32x4.replaceLane === 'function' && typeof SIMD.Uint32x4.replaceLane === 'function' && typeof SIMD.Bool32x4.replaceLane === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -622,9 +659,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.select',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-select',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/select',
       exec: function(){/*
-        return typeof SIMD.Float32x4.select === 'function';
+        return typeof SIMD.Float32x4.select === 'function' && typeof SIMD.Int32x4.select === 'function' && typeof SIMD.Uint32x4.select === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -635,6 +673,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.shiftLeftByScalar',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-shift-left-by-scalar',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftLeftByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftLeftByScalar === 'function' && typeof SIMD.Int16x8.shiftLeftByScalar === 'function' && typeof SIMD.Int8x16.shiftLeftByScalar === 'function';
@@ -648,6 +687,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.shiftRightByScalar',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-shift-right-by-scalar',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftRightByScalar',
       exec: function(){/*
         return typeof SIMD.Int32x4.shiftRightByScalar === 'function' && typeof SIMD.Int16x8.shiftRightByScalar === 'function' && typeof SIMD.Int8x16.shiftRightByScalar === 'function';
@@ -661,9 +701,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.shuffle',
+      spec: 'https://tc39.github.io/ecmascript_simd/#shuffle',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shuffle',
       exec: function(){/*
-        return typeof SIMD.Float32x4.shuffle === 'function';
+        return typeof SIMD.Float32x4.shuffle === 'function' && typeof SIMD.Int32x4.shuffle === 'function' && typeof SIMD.Uint32x4.shuffle === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -674,9 +715,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.splat',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-splat',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/splat',
       exec: function(){/*
-        return typeof SIMD.Float32x4.splat === 'function';
+        return typeof SIMD.Float32x4.splat === 'function' && typeof SIMD.Int32x4.splat === 'function' && typeof SIMD.Uint32x4.splat === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -687,6 +729,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.sqrt',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-sqrt',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sqrt',
       exec: function(){/*
         return typeof SIMD.Float32x4.sqrt === 'function';
@@ -700,9 +743,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.store',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-store-function',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store === 'function';
+        return typeof SIMD.Float32x4.store === 'function' && typeof SIMD.Int32x4.store === 'function' && typeof SIMD.Uint32x4.store === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -715,7 +759,7 @@ exports.tests = [
       name: 'SIMD.%type%.store1',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store1 === 'function';
+        return typeof SIMD.Float32x4.store1 === 'function' && typeof SIMD.Int32x4.store1 === 'function' && typeof SIMD.Uint32x4.store1 === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -728,7 +772,7 @@ exports.tests = [
       name: 'SIMD.%type%.store2',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store2 === 'function';
+        return typeof SIMD.Float32x4.store2 === 'function' && typeof SIMD.Int32x4.store2 === 'function' && typeof SIMD.Uint32x4.store2 === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -741,7 +785,7 @@ exports.tests = [
       name: 'SIMD.%type%.store3',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store',
       exec: function(){/*
-        return typeof SIMD.Float32x4.store3 === 'function';
+        return typeof SIMD.Float32x4.store3 === 'function' && typeof SIMD.Int32x4.store3 === 'function' && typeof SIMD.Uint32x4.store3 === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -752,6 +796,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.sub',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-sub',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sub',
       exec: function(){/*
         return typeof SIMD.Float32x4.sub === 'function' && typeof SIMD.Int32x4.sub === 'function' && typeof SIMD.Uint32x4.sub === 'function';
@@ -765,6 +810,7 @@ exports.tests = [
     },
     {
       name: 'SIMD.%integerType%.subSaturate',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-sub-saturate',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/subSaturate',
       exec: function(){/*
         return typeof SIMD.Int16x8.subSaturate === 'function' && typeof SIMD.Int8x16.subSaturate === 'function';
@@ -778,9 +824,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%type%.swizzle',
+      spec: 'https://tc39.github.io/ecmascript_simd/#swizzle',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/swizzle',
       exec: function(){/*
-        return typeof SIMD.Float32x4.swizzle === 'function';
+        return typeof SIMD.Float32x4.swizzle === 'function' && typeof SIMD.Int32x4.swizzle === 'function' && typeof SIMD.Uint32x4.swizzle === 'function';
       */},
       res: {
         edge13: "flagged",
@@ -791,9 +838,10 @@ exports.tests = [
     },
     {
       name: 'SIMD.%booleanType%.xor',
+      spec: 'https://tc39.github.io/ecmascript_simd/#simd-xor',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/xor',
       exec: function(){/*
-        return typeof SIMD.Bool32x4.xor === 'function' && typeof SIMD.Bool16x8.xor === 'function' && typeof SIMD.Bool8x16.xor === 'function';
+        return typeof SIMD.Bool32x4.xor === 'function' && typeof SIMD.Int32x4.xor === 'function' && typeof SIMD.Uint32x4.xor === 'function';
       */},
       res: {
         firefox48: firefox.nightly,
