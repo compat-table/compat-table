@@ -241,7 +241,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.abs',
+      name: 'SIMD.%floatType%.abs',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-abs',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/abs',
       exec: function(){/*
@@ -283,7 +283,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%booleanType%.and',
+      name: 'SIMD.%type%.and',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-and',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/and',
       exec: function(){/*
@@ -437,7 +437,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.div',
+      name: 'SIMD.%floatType%.div',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-div',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/div',
       exec: function(){/*
@@ -504,7 +504,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.max',
+      name: 'SIMD.%floatType%.max',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-max',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/max',
       exec: function(){/*
@@ -518,7 +518,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.maxNum',
+      name: 'SIMD.%floatType%.maxNum',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-max-num',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/maxNum',
       exec: function(){/*
@@ -532,7 +532,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.min',
+      name: 'SIMD.%floatType%.min',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-min',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/min',
       exec: function(){/*
@@ -546,7 +546,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.minNum',
+      name: 'SIMD.%floatType%.minNum',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-min-num',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/minNum',
       exec: function(){/*
@@ -574,7 +574,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%booleanType%.not',
+      name: 'SIMD.%type%.not',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-not',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/not',
       exec: function(){/*
@@ -602,7 +602,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%booleanType%.or',
+      name: 'SIMD.%type%.or',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-or',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/or',
       exec: function(){/*
@@ -616,7 +616,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.reciprocalApproximation',
+      name: 'SIMD.%floatType%.reciprocalApproximation',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-reciprocal-approximation',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalApproximation',
       exec: function(){/*
@@ -630,7 +630,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.reciprocalSqrtApproximation',
+      name: 'SIMD.%floatType%.reciprocalSqrtApproximation',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-reciprocal-sqrt-approximation',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalSqrtApproximation',
       exec: function(){/*
@@ -728,7 +728,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%type%.sqrt',
+      name: 'SIMD.%floatType%.sqrt',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-sqrt',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sqrt',
       exec: function(){/*
@@ -837,7 +837,7 @@ exports.tests = [
       }
     },
     {
-      name: 'SIMD.%booleanType%.xor',
+      name: 'SIMD.%type%.xor',
       spec: 'https://tc39.github.io/ecmascript_simd/#simd-xor',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/xor',
       exec: function(){/*
