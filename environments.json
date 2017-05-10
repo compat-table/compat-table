@@ -1601,50 +1601,61 @@
     "platformtype": "engine",
     "obsolete": false
   },
+  "android1_5": {
+    "full": "Android Browser 1.5 (Cupcake)",
+    "family": "Android Browser",
+    "short": "AN 1.5",
+    "platformtype": "mobile",
+    "release": "2009-04-30",
+    "obsolete": "very"
+  },
+  "android2_0": {
+    "full": "Android Browser 2.0 (Eclair)",
+    "family": "Android Browser",
+    "short": "AN 2.0",
+    "platformtype": "mobile",
+    "release": "2009-10-26",
+    "obsolete": "very"
+  },
+  "android2_2": {
+    "full": "Android Browser 2.2 (Froyo)",
+    "family": "Android Browser",
+    "short": "AN 2.2",
+    "platformtype": "mobile",
+    "release": "2010-05-20",
+    "obsolete": "very"
+  },
+  "android2_3": {
+    "full": "Android Browser 2.3 (Gingerbread)",
+    "family": "Android Browser",
+    "short": "AN 2.3",
+    "platformtype": "mobile",
+    "release": "2010-12-06",
+    "obsolete": "very"
+  },
+  "android3_0": {
+    "full": "Android Browser 3.0 (Honeycomb)",
+    "family": "Android Browser",
+    "short": "AN 3.0",
+    "platformtype": "mobile",
+    "release": "2011-02-22",
+    "obsolete": "very"
+  },
   "android4_0": {
-    "full": "Android Browser",
+    "full": "Android Browser 4.0 (Ice Cream Sandwich)",
+    "family": "Android Browser",
     "short": "AN 4.0",
     "platformtype": "mobile",
-    "obsolete": true
+    "release": "2011-10-18",
+    "obsolete": "very"
   },
   "android4_1": {
-    "full": "Android Browser",
+    "full": "Android Browser 4.1 (Jellybean)",
+    "family": "Android Browser",
     "short": "AN 4.1",
     "platformtype": "mobile",
+    "release": "2012-07-09",
     "obsolete": true
-  },
-  "android4_2": {
-    "full": "Android Browser",
-    "short": "AN 4.2",
-    "platformtype": "mobile",
-    "obsolete": true
-  },
-  "android4_3": {
-    "full": "Android Browser",
-    "short": "AN 4.3",
-    "platformtype": "mobile",
-    "obsolete": true
-  },
-  "android4_4": {
-    "full": "Android Browser",
-    "short": "AN 4.4",
-    "platformtype": "mobile",
-    "equals": "chrome30",
-    "ignore_flagged": true
-  },
-  "android5_0": {
-    "full": "Android Browser",
-    "short": "AN 5.0",
-    "platformtype": "mobile",
-    "equals": "chrome37",
-    "ignore_flagged": true
-  },
-  "android5_1": {
-    "full": "Android Browser",
-    "short": "AN 5.1",
-    "platformtype": "mobile",
-    "equals": "chrome39",
-    "ignore_flagged": true
   },
   "ios4": {
     "full": "iOS Safari",
