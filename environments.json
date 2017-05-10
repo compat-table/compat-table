@@ -1241,23 +1241,82 @@
     "note_id": "experimental-flag",
     "unstable": true
   },
+  "safari1": {
+    "full": "Safari 1.0",
+    "family": "JavaScriptCore",
+    "short": "SF 1",
+    "release": "2003-06-23",
+    "obsolete": "very"
+  },
+  "safari1_1": {
+    "full": "Safari 1.1",
+    "family": "JavaScriptCore",
+    "short": "SF 1.1",
+    "release": "2003-10-24",
+    "obsolete": "very"
+  },
+  "safari1_2": {
+    "full": "Safari 1.2",
+    "family": "JavaScriptCore",
+    "short": "SF 1.2",
+    "release": "2004-02-02",
+    "obsolete": "very"
+  },
+  "safari1_3": {
+    "full": "Safari 1.3",
+    "family": "JavaScriptCore",
+    "short": "SF 1.3",
+    "release": "2005-04-15",
+    "obsolete": "very"
+  },
+  "safari2": {
+    "full": "Safari 2",
+    "family": "JavaScriptCore",
+    "short": "SF 2",
+    "release": "2005-04-29",
+    "obsolete": "very"
+  },
   "safari3": {
+    "full": "Safari 3",
+    "family": "JavaScriptCore",
+    "short": "SF 3",
+    "release": "2007-06-11",
+    "obsolete": "very"
+  },
+  "safari3_1": {
+    "full": "Safari 3.1",
+    "family": "JavaScriptCore",
+    "short": "SF 3.1",
+    "release": "2008-03-18",
+    "obsolete": "very"
+  },
+  "safari3_2": {
     "full": "Safari 3.2",
     "family": "JavaScriptCore",
     "short": "SF 3.2",
+    "release": "2008-11-13",
     "obsolete": "very"
   },
   "safari4": {
-    "full": "Safari 4.0.5",
+    "full": "Safari 4",
     "family": "JavaScriptCore",
     "short": "SF 4",
+    "release": "2009-06-8",
+    "obsolete": "very"
+  },
+  "safari4_1": {
+    "full": "Safari 4.1",
+    "family": "JavaScriptCore",
+    "short": "SF 3.1",
+    "release": "2010-06-07",
     "obsolete": "very"
   },
   "safari5": {
-    "full": "Safari 5.0.5",
+    "full": "Safari 5",
     "family": "JavaScriptCore",
     "short": "SF 5",
-    "obsolete": true,
+    "release": "2010-06-7",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -1265,46 +1324,60 @@
       "non-standard"
     ]
   },
-  "safari51": {
-    "full": "Safari",
+  "safari5_1": {
+    "full": "Safari 5.1",
     "family": "JavaScriptCore",
-    "short": "SF<br />5.1",
-    "obsolete": true
+    "short": "SF 5.1",
+    "release": "2011-07-20",
+    "obsolete": "very"
   },
   "safari6": {
-    "full": "Safari",
+    "full": "Safari 6",
     "family": "JavaScriptCore",
     "short": "SF 6",
-    "obsolete": true
+    "release": "2012-07-25",
+    "obsolete": "very"
   },
   "safari7": {
-    "full": "Safari",
+    "full": "Safari 7",
     "family": "JavaScriptCore",
-    "short": "SF 6.1,<br>SF 7",
-    "obsolete": true
+    "short": "SF 7",
+    "release": "2013-10-22",
+    "obsolete": "very"
   },
-  "safari71_8": {
-    "full": "Safari",
+  "safari7_1": {
+    "full": "Safari 7.1",
     "family": "JavaScriptCore",
-    "short": "SF 7.1,<br>SF 8",
+    "short": "SF 7.1",
+    "release": "2014-09-18",
+    "obsolete": "very"
+  },
+  "safari8": {
+    "full": "Safari 8",
+    "family": "JavaScriptCore",
+    "short": "SF 8",
+    "release": "2014-10-16",
     "obsolete": true
   },
   "safari9": {
-    "full": "Safari",
+    "full": "Safari 9",
     "family": "JavaScriptCore",
     "short": "SF 9",
+    "release": "2015-09-30",
     "obsolete": true
   },
   "safari10": {
-    "full": "Safari",
+    "full": "Safari 10",
     "family": "JavaScriptCore",
     "short": "SF 10",
+    "release": "2016-09-20",
     "obsolete": false
   },
   "safari10_1": {
-    "full": "Safari",
+    "full": "Safari 10.1",
     "family": "JavaScriptCore",
     "short": "SF 10.1",
+    "release": "2017-03-27",
     "obsolete": false
   },
   "safaritp": {
@@ -1578,7 +1651,7 @@
     "family": "iOS Safari",
     "short": "iOS 6",
     "platformtype": "mobile",
-    "equals": "safari51",
+    "equals": "safari5_1",
     "obsolete": true
   },
   "ios7": {
@@ -1594,7 +1667,7 @@
     "family": "iOS Safari",
     "short": "iOS 8",
     "platformtype": "mobile",
-    "equals": "safari71_8",
+    "equals": "safari7_1",
     "obsolete": true
   },
   "ios9": {
