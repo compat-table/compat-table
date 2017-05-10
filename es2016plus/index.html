@@ -1854,8 +1854,10 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 &amp;&amp; &apos;hello&apos;.padStart(10, &apos;1234&apos;) === &apos;12341hello&apos;
 &amp;&amp; &apos;hello&apos;.padStart() === &apos;hello&apos;
-&amp;&amp; &apos;hello&apos;.padStart(6, &apos;123&apos;) === &apos;1hello&apos;;
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+&amp;&amp; &apos;hello&apos;.padStart(6, &apos;123&apos;) === &apos;1hello&apos;
+&amp;&amp; &apos;hello&apos;.padStart(3) === &apos;hello&apos;
+&amp;&amp; &apos;hello&apos;.padStart(3, &apos;123&apos;) === &apos;hello&apos;;
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -1932,8 +1934,10 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 &amp;&amp; &apos;hello&apos;.padEnd(10, &apos;1234&apos;) === &apos;hello12341&apos;
 &amp;&amp; &apos;hello&apos;.padEnd() === &apos;hello&apos;
-&amp;&amp; &apos;hello&apos;.padEnd(6, &apos;123&apos;) === &apos;hello1&apos;;
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+&amp;&amp; &apos;hello&apos;.padEnd(6, &apos;123&apos;) === &apos;hello1&apos;
+&amp;&amp; &apos;hello&apos;.padEnd(3) === &apos;hello&apos;
+&amp;&amp; &apos;hello&apos;.padEnd(3, &apos;123&apos;) === &apos;hello&apos;;
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
