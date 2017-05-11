@@ -157,15 +157,10 @@ exports.tests = [
         duktape20: false,
       },
     },
-  ],
-},
-{
-  name: 'Intl.Collator.prototype.compare',
-  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare',
-  subtests: [
     {
-      name: 'exists on Collator prototype',
+      name: 'Intl.Collator.prototype.compare exists',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare',
       exec: function(){/*
         return typeof Intl.Collator().compare === 'function';
       */},
@@ -179,15 +174,10 @@ exports.tests = [
         duktape20: false,
       },
     },
-  ],
-},
-{
-  name: 'Intl.Collator.prototype.resolvedOptions',
-  spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions',
-  subtests: [
     {
-      name: 'exists on Collator prototype',
+      name: 'Intl.Collator.prototype.resolvedOptions exists',
+      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions',
       exec: function(){/*
         return typeof Intl.Collator().resolvedOptions === 'function';
       */},
@@ -532,12 +522,12 @@ exports.tests = [
   ],
 },
 {
-  name: 'Number.prototype.toLocaleString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString',
+  name: 'toLocaleString formatters',
   subtests: [
     {
-      name: 'exists on Number prototype',
+      name: 'Number.prototype.toLocaleString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString',
       exec: function(){/*
         return typeof Number.prototype.toLocaleString === 'function';
       */},
@@ -554,15 +544,10 @@ exports.tests = [
         duktape20: true,
       },
     },
-  ],
-},
-{
-  name: 'Array.prototype.toLocaleString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString',
-  subtests: [
     {
-      name: 'exists on Array prototype',
+      name: 'Array.prototype.toLocaleString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString',
       exec: function(){/*
         return typeof Array.prototype.toLocaleString === 'function';
       */},
@@ -579,15 +564,10 @@ exports.tests = [
         duktape20: true,
       },
     },
-  ],
-},
-{
-  name: 'Object.prototype.toLocaleString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString',
-  subtests: [
     {
-      name: 'exists on Object prototype',
+      name: 'Object.prototype.toLocaleString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString',
       exec: function(){/*
         return typeof Object.prototype.toLocaleString === 'function';
       */},
@@ -604,15 +584,10 @@ exports.tests = [
         duktape20: true,
       },
     },
-  ],
-},
-{
-  name: 'Date.prototype.toLocaleString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString',
-  subtests: [
     {
-      name: 'exists on Date prototype',
+      name: 'Date.prototype.toLocaleString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString',
       exec: function(){/*
         return typeof Date.prototype.toLocaleString === 'function';
       */},
@@ -629,15 +604,10 @@ exports.tests = [
         duktape20: true,
       },
     },
-  ],
-},
-{
-  name: 'Date.prototype.toLocaleDateString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString',
-  subtests: [
     {
-      name: 'exists on Date prototype',
+      name: 'Date.prototype.toLocaleDateString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString',
       exec: function(){/*
         return typeof Date.prototype.toLocaleDateString === 'function';
       */},
@@ -654,15 +624,10 @@ exports.tests = [
         duktape20: true,
       },
     },
-  ],
-},
-{
-  name: 'Date.prototype.toLocaleTimeString',
-  spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString',
-  subtests: [
     {
-      name: 'exists on Date prototype',
+      name: 'Date.prototype.toLocaleTimeString exists',
+      spec: 'https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString',
       exec: function(){/*
         return typeof Date.prototype.toLocaleTimeString === 'function';
       */},
