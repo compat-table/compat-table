@@ -8768,15 +8768,16 @@ exports.tests = [
         var get = [];
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
         RegExp.prototype[Symbol.search].call(p);
-        return get + '' === "lastIndex,exec";
+        return get + '' === "lastIndex,exec,lastIndex";
       */},
+      note_id: "regexp-prototype-symbolsearch",
+      note_html: "The specification for this feature was <a href='https://github.com/tc39/ecma262/pull/627'>updated</a> after ES6 was published.  This test reflects the updated spec, which is implemented by the latest browsers.",
       res: {
-        edge14: "flagged",
-        firefox49: true,
-        chrome51: true,
-        chrome56: false,
-        xs6: true,
-        safari10: true,
+        edge14: false,
+        firefox49: false,
+        firefox55: true,
+        chrome51: false,
+        chrome56: true,
         duktape20: false,
       },
     },
