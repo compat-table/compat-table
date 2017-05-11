@@ -982,7 +982,7 @@ exports.tests = [
         webkit: true,
         es7shim: true,
         android40: true,
-        ios51: true,
+        ios5_1: true,
         duktape20: false,
       }
     },
@@ -1016,7 +1016,7 @@ exports.tests = [
         webkit: true,
         es7shim: true,
         android40: true,
-        ios51: true,
+        ios5_1: true,
         duktape20: false,
       }
     },

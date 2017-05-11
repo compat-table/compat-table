@@ -1639,12 +1639,29 @@
     "equals": "chrome39",
     "ignore_flagged": true
   },
-  "ios51": {
+  "ios4": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 4",
+    "platformtype": "mobile",
+    "release": "2010-21-06",
+    "obsolete": "very"
+  },
+  "ios5": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 5",
+    "platformtype": "mobile",
+    "release": "2011-10-12",
+    "obsolete": "very"
+  },
+  "ios5_1": {
     "full": "iOS Safari",
     "family": "iOS Safari",
     "short": "iOS 5.1",
     "platformtype": "mobile",
-    "obsolete": true
+    "release": "2012-03-07",
+    "obsolete": "very"
   },
   "ios6": {
     "full": "iOS Safari",
@@ -1652,7 +1669,8 @@
     "short": "iOS 6",
     "platformtype": "mobile",
     "equals": "safari5_1",
-    "obsolete": true
+    "release": "2012-09-19",
+    "obsolete": "very"
   },
   "ios7": {
     "full": "iOS Safari",
@@ -1660,7 +1678,8 @@
     "short": "iOS 7",
     "platformtype": "mobile",
     "equals": "safari7",
-    "obsolete": true
+    "release": "2013-09-18",
+    "obsolete": "very"
   },
   "ios8": {
     "full": "iOS Safari",
@@ -1668,6 +1687,7 @@
     "short": "iOS 8",
     "platformtype": "mobile",
     "equals": "safari7_1",
+    "release": "2014-09-17",
     "obsolete": true
   },
   "ios9": {
@@ -1676,6 +1696,7 @@
     "short": "iOS 9",
     "platformtype": "mobile",
     "equals": "safari9",
+    "release": "2015-09-16",
     "obsolete": false
   },
   "ios10": {
@@ -1684,6 +1705,7 @@
     "short": "iOS 10.0-10.3",
     "platformtype": "mobile",
     "equals": "safari10",
+    "release": "2016-09-16",
     "obsolete": false
   },
   "ios10_3": {
@@ -1692,6 +1714,7 @@
     "short": "iOS &gt;=10.3 &lt;11",
     "platformtype": "mobile",
     "equals": "safari10_1",
+    "release": "2017-03-27",
     "obsolete": false
   }
 }
