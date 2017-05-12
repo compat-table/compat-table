@@ -36,7 +36,7 @@ exports.tests = [
         chrome51: "flagged",
         safari10: true,
         xs6: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -63,7 +63,7 @@ exports.tests = [
         chrome51: "flagged",
         safari10: true,
         xs6: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     }
   ]
@@ -97,7 +97,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -123,7 +123,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -149,7 +149,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -173,7 +173,7 @@ exports.tests = [
         safari10: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -197,7 +197,7 @@ exports.tests = [
         safari10: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -221,7 +221,7 @@ exports.tests = [
         safari10: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -243,7 +243,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -264,7 +264,7 @@ exports.tests = [
         chrome45: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -284,7 +284,7 @@ exports.tests = [
         node6_5: true,
         edge13: true,
         xs6: false,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -302,7 +302,7 @@ exports.tests = [
         safari10: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -338,7 +338,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -372,7 +372,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -390,7 +390,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -425,7 +425,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     },
     {
@@ -451,7 +451,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -480,7 +480,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -508,7 +508,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -534,7 +534,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -559,7 +559,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -584,7 +584,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -607,7 +607,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -636,7 +636,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     },
     {
@@ -663,7 +663,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -693,7 +693,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -722,7 +722,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -749,7 +749,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -775,7 +775,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -801,7 +801,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -825,7 +825,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ]
@@ -863,7 +863,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -889,7 +889,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -918,7 +918,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -944,7 +944,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -967,7 +967,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -999,7 +999,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1025,7 +1025,7 @@ exports.tests = [
         firefox44: true,
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1052,7 +1052,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1082,7 +1082,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1109,7 +1109,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1133,7 +1133,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1166,7 +1166,7 @@ exports.tests = [
         node0_12: "flagged",
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -1199,7 +1199,7 @@ exports.tests = [
         edge12: "flagged",
         edge14: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1223,7 +1223,7 @@ exports.tests = [
         edge12: "flagged",
         edge14: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1247,7 +1247,7 @@ exports.tests = [
         edge12: "flagged",
         edge14: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1277,7 +1277,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1306,7 +1306,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1331,7 +1331,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1353,7 +1353,7 @@ exports.tests = [
         firefox53: true,
         xs6: true,
         ejs: { val: false, note_id: 'ejs-no-function-ctor' },
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ]
@@ -1389,7 +1389,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1412,7 +1412,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1442,7 +1442,7 @@ exports.tests = [
         firefox43: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1471,7 +1471,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1492,7 +1492,7 @@ exports.tests = [
         xs6: true,
         ejs: { val: false, note_id: 'ejs-no-function-ctor' },
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -1526,7 +1526,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1549,7 +1549,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1575,7 +1575,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1594,7 +1594,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1615,7 +1615,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1635,7 +1635,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1655,7 +1655,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1674,7 +1674,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1697,7 +1697,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1718,7 +1718,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1746,7 +1746,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1769,7 +1769,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1793,7 +1793,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1816,7 +1816,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1842,7 +1842,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ]
@@ -1877,7 +1877,7 @@ exports.tests = [
         typescript: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1906,7 +1906,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1931,7 +1931,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1956,7 +1956,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1985,7 +1985,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2014,7 +2014,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2042,7 +2042,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2071,7 +2071,7 @@ exports.tests = [
         node4: "strict",
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2104,7 +2104,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2133,7 +2133,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2162,7 +2162,7 @@ exports.tests = [
         node4: "strict",
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2193,7 +2193,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2222,7 +2222,7 @@ exports.tests = [
         node4: "strict",
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2253,7 +2253,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2281,7 +2281,7 @@ exports.tests = [
         node4: "strict",
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2309,7 +2309,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2333,7 +2333,7 @@ exports.tests = [
         node4: "strict",
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2357,7 +2357,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2384,7 +2384,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2409,7 +2409,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2448,7 +2448,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2478,7 +2478,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2505,7 +2505,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2534,7 +2534,7 @@ exports.tests = [
         node5: "strict",
         xs6: true,
         ejs: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -2575,7 +2575,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2606,7 +2606,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2637,7 +2637,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2668,7 +2668,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2701,7 +2701,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2726,7 +2726,7 @@ exports.tests = [
         node5: "strict",
         xs6: true,
         ejs: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2760,7 +2760,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -2795,7 +2795,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -2828,7 +2828,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -2853,7 +2853,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -2877,7 +2877,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -2901,7 +2901,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -2925,7 +2925,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -2951,7 +2951,7 @@ exports.tests = [
         node4: true,
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -2990,7 +2990,7 @@ exports.tests = [
         chrome49: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3014,7 +3014,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -3041,7 +3041,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -3073,7 +3073,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3094,7 +3094,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3114,7 +3114,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3134,7 +3134,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3153,7 +3153,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -3187,7 +3187,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3214,7 +3214,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3238,7 +3238,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3261,7 +3261,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3288,7 +3288,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3316,7 +3316,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3344,7 +3344,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3368,7 +3368,7 @@ exports.tests = [
         chrome51: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3394,7 +3394,7 @@ exports.tests = [
         chrome51: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -3435,7 +3435,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3467,7 +3467,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3499,7 +3499,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3523,7 +3523,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3553,7 +3553,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3582,7 +3582,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3614,7 +3614,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3644,7 +3644,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3677,7 +3677,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3706,7 +3706,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3735,7 +3735,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3766,7 +3766,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3797,7 +3797,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3828,7 +3828,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3858,7 +3858,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3891,7 +3891,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3924,7 +3924,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3957,7 +3957,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -3989,7 +3989,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4024,7 +4024,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4057,7 +4057,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4090,7 +4090,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4122,7 +4122,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4155,7 +4155,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4187,7 +4187,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4220,7 +4220,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4247,7 +4247,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -4285,7 +4285,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4314,7 +4314,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4343,7 +4343,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4374,7 +4374,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4402,7 +4402,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -4434,7 +4434,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4458,7 +4458,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4480,7 +4480,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4502,7 +4502,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -4535,7 +4535,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4556,7 +4556,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4590,7 +4590,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4613,7 +4613,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4641,7 +4641,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -4673,7 +4673,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4697,7 +4697,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4716,7 +4716,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4735,7 +4735,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -4753,7 +4753,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -4787,7 +4787,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4812,7 +4812,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4834,7 +4834,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4859,7 +4859,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4884,7 +4884,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4909,7 +4909,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4934,7 +4934,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4959,7 +4959,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -4985,7 +4985,7 @@ exports.tests = [
         android4_1: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5010,7 +5010,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5035,7 +5035,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5060,7 +5060,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5085,7 +5085,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5110,7 +5110,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5135,7 +5135,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5160,7 +5160,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5185,7 +5185,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5205,7 +5205,7 @@ exports.tests = [
         chrome50: "flagged",
         chrome51: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5248,7 +5248,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         ejs: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -5281,7 +5281,7 @@ exports.tests = [
         firefox52:true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5319,8 +5319,8 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
   ].concat([ //@@ jph
@@ -5337,7 +5337,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.of',
@@ -5353,7 +5353,7 @@ exports.tests = [
       xs6: true,
       ejs: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.subarray',
@@ -5370,7 +5370,7 @@ exports.tests = [
       node0_12: true,
       xs6: true,
       jxa: true,
-      duktape20: true,
+      duktape2_0: true,
     }},
     {
       name: '.prototype.join',
@@ -5386,7 +5386,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.indexOf',
@@ -5402,7 +5402,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.lastIndexOf',
@@ -5418,7 +5418,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.slice',
@@ -5433,7 +5433,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.every',
@@ -5449,7 +5449,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.filter',
@@ -5464,7 +5464,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.forEach',
@@ -5480,7 +5480,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.map',
@@ -5495,7 +5495,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.reduce',
@@ -5511,7 +5511,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.reduceRight',
@@ -5527,7 +5527,7 @@ exports.tests = [
         safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.reverse',
@@ -5543,7 +5543,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.some',
@@ -5559,7 +5559,7 @@ exports.tests = [
         safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.sort',
@@ -5574,7 +5574,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.copyWithin',
@@ -5590,7 +5590,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.find',
@@ -5606,7 +5606,7 @@ exports.tests = [
         safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.findIndex',
@@ -5622,7 +5622,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.fill',
@@ -5638,7 +5638,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.keys',
@@ -5654,7 +5654,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.values',
@@ -5670,7 +5670,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype.entries',
@@ -5685,7 +5685,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '.prototype[Symbol.iterator]',
@@ -5701,7 +5701,7 @@ exports.tests = [
       safari10: true,
       xs6: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     {
       name: '[Symbol.species]',
@@ -5717,7 +5717,7 @@ exports.tests = [
       chrome51: true,
       safari10: true,
       jxa: true,
-      duktape20: false,
+      duktape2_0: false,
     }},
     ].map(function(m) {
       var eqFn = ' === "function"';
@@ -5771,7 +5771,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5798,7 +5798,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5824,7 +5824,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5848,7 +5848,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5879,7 +5879,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5903,7 +5903,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5927,7 +5927,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5953,7 +5953,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -5982,7 +5982,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6006,7 +6006,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6030,7 +6030,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6054,7 +6054,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6078,7 +6078,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6102,7 +6102,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6126,7 +6126,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6149,7 +6149,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6179,7 +6179,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6209,7 +6209,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6229,7 +6229,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -6267,7 +6267,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6293,7 +6293,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6319,7 +6319,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6343,7 +6343,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6374,7 +6374,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6401,7 +6401,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6424,7 +6424,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6451,7 +6451,7 @@ exports.tests = [
         ejs: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6482,7 +6482,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6506,7 +6506,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6530,7 +6530,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6554,7 +6554,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6577,7 +6577,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6601,7 +6601,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6625,7 +6625,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6649,7 +6649,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6679,7 +6679,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6709,7 +6709,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6729,7 +6729,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -6765,7 +6765,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6790,7 +6790,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6815,7 +6815,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6838,7 +6838,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6868,7 +6868,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6892,7 +6892,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6916,7 +6916,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6940,7 +6940,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6963,7 +6963,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -6993,7 +6993,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7016,7 +7016,7 @@ exports.tests = [
         ejs: null,
         xs6: null,
         jxa: null,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7044,7 +7044,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -7081,7 +7081,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7104,7 +7104,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7129,7 +7129,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7152,7 +7152,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7182,7 +7182,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7206,7 +7206,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7229,7 +7229,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7251,7 +7251,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7278,7 +7278,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7300,7 +7300,7 @@ exports.tests = [
         ejs: null,
         xs6: null,
         jxa: null,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7328,7 +7328,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -7363,7 +7363,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7380,7 +7380,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7403,7 +7403,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7430,7 +7430,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7473,7 +7473,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7498,7 +7498,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7522,7 +7522,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7565,7 +7565,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7589,7 +7589,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7612,7 +7612,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7652,7 +7652,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7676,7 +7676,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7707,7 +7707,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -7742,7 +7742,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7807,7 +7807,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7836,7 +7836,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7880,7 +7880,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7904,7 +7904,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7933,7 +7933,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7962,7 +7962,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -7993,7 +7993,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8019,7 +8019,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8056,7 +8056,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8083,7 +8083,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8112,7 +8112,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8144,7 +8144,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8191,7 +8191,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8217,7 +8217,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8245,7 +8245,7 @@ exports.tests = [
         chrome50: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8269,7 +8269,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8307,7 +8307,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8331,7 +8331,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8347,7 +8347,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8365,7 +8365,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -8393,7 +8393,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8412,7 +8412,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8432,7 +8432,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8454,7 +8454,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         edge14: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8472,7 +8472,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8492,7 +8492,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8522,7 +8522,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8549,7 +8549,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8567,7 +8567,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8585,7 +8585,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8603,7 +8603,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8622,7 +8622,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8642,7 +8642,7 @@ exports.tests = [
         firefox34: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8663,7 +8663,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8683,7 +8683,7 @@ exports.tests = [
         chrome49: true,
         edge14: "flagged",
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8701,7 +8701,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8720,7 +8720,7 @@ exports.tests = [
         xs6: null,
         echojs: null,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8740,7 +8740,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8760,7 +8760,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8780,7 +8780,7 @@ exports.tests = [
         firefox55: true,
         chrome51: false,
         chrome56: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8801,7 +8801,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8820,7 +8820,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8847,7 +8847,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8878,7 +8878,7 @@ exports.tests = [
         edge12: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8897,7 +8897,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8915,7 +8915,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8934,7 +8934,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8955,7 +8955,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -8974,7 +8974,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -8993,7 +8993,7 @@ exports.tests = [
         firefox18: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9012,7 +9012,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9031,7 +9031,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9051,7 +9051,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9070,7 +9070,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9090,7 +9090,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9109,7 +9109,7 @@ exports.tests = [
         firefox44: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -9137,7 +9137,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true
+        duktape2_0: true
       },
     },
     {
@@ -9156,7 +9156,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9175,7 +9175,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9193,7 +9193,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9211,7 +9211,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9229,7 +9229,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9247,7 +9247,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9265,7 +9265,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9285,7 +9285,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9305,7 +9305,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9325,7 +9325,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -9352,7 +9352,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9370,7 +9370,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -9397,7 +9397,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9418,7 +9418,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9438,7 +9438,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9458,7 +9458,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9478,7 +9478,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9498,7 +9498,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -9527,7 +9527,7 @@ exports.tests = [
         chrome49: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9546,7 +9546,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9566,7 +9566,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9585,7 +9585,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -9613,7 +9613,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9632,7 +9632,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -9651,7 +9651,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -9682,7 +9682,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9704,7 +9704,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9724,7 +9724,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9745,7 +9745,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9768,7 +9768,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9790,7 +9790,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9810,7 +9810,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9832,7 +9832,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9853,7 +9853,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9875,7 +9875,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9899,7 +9899,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9927,7 +9927,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9947,7 +9947,7 @@ exports.tests = [
         firefox42: true,
         xs6: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9969,7 +9969,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -9989,7 +9989,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10010,7 +10010,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10029,7 +10029,7 @@ exports.tests = [
         xs6: null,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10050,7 +10050,7 @@ exports.tests = [
         xs6: null,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10068,7 +10068,7 @@ exports.tests = [
         xs6: null,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10103,7 +10103,7 @@ exports.tests = [
         firefox42: true,
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -10139,7 +10139,7 @@ exports.tests = [
     node4: true,
     xs6: true,
     safari10: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -10172,7 +10172,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10198,7 +10198,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10224,7 +10224,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10247,7 +10247,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10270,7 +10270,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10294,7 +10294,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10318,7 +10318,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10342,7 +10342,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10367,7 +10367,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10397,7 +10397,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10425,7 +10425,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10451,7 +10451,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10490,7 +10490,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10514,7 +10514,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10540,7 +10540,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10567,7 +10567,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10590,7 +10590,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10615,7 +10615,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10642,7 +10642,7 @@ exports.tests = [
         node6_5: true,
         edge14: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10669,7 +10669,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10695,7 +10695,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10724,7 +10724,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -10760,7 +10760,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10787,7 +10787,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -10814,7 +10814,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10838,7 +10838,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10862,7 +10862,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10887,7 +10887,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10912,7 +10912,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10936,7 +10936,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10960,7 +10960,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -10985,7 +10985,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11012,7 +11012,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11043,7 +11043,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11074,7 +11074,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11103,7 +11103,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11126,7 +11126,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11155,7 +11155,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11182,7 +11182,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11221,7 +11221,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11245,7 +11245,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11276,7 +11276,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11304,7 +11304,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11327,7 +11327,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11354,7 +11354,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11381,7 +11381,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -11417,7 +11417,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11444,7 +11444,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -11471,7 +11471,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11495,7 +11495,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11520,7 +11520,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11545,7 +11545,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11570,7 +11570,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11593,7 +11593,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11620,7 +11620,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11651,7 +11651,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11679,7 +11679,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11706,7 +11706,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11738,7 +11738,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11763,7 +11763,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11790,7 +11790,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11817,7 +11817,7 @@ exports.tests = [
         jxa: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11839,7 +11839,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },{
       name: 'in parameters, function \'length\' property',
@@ -11862,7 +11862,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11889,7 +11889,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11915,7 +11915,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11941,7 +11941,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11965,7 +11965,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -11986,7 +11986,7 @@ exports.tests = [
         chrome49: true,
         node6: true,
         node6_5: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -12038,7 +12038,7 @@ exports.tests = [
         safari7_1: true,
         node0_12: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12064,7 +12064,7 @@ exports.tests = [
         node4: true,
         safari10: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12091,7 +12091,7 @@ exports.tests = [
         safari7_1: true,
         node0_12: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12126,7 +12126,7 @@ exports.tests = [
         safari7_1: true,
         node0_12: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12159,7 +12159,7 @@ exports.tests = [
         safari9: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12195,7 +12195,7 @@ exports.tests = [
         safari7_1: true,
         node0_12: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12228,7 +12228,7 @@ exports.tests = [
         safari9: true,
         node4: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12248,7 +12248,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -12280,7 +12280,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12307,7 +12307,7 @@ exports.tests = [
         android4_1: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12337,7 +12337,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12359,7 +12359,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -12390,7 +12390,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12411,7 +12411,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12435,7 +12435,7 @@ exports.tests = [
         chrome44: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12456,7 +12456,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12477,7 +12477,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12498,7 +12498,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12519,7 +12519,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12540,7 +12540,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12561,7 +12561,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12583,7 +12583,7 @@ exports.tests = [
         chrome44: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -12614,7 +12614,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12636,7 +12636,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12657,7 +12657,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12678,7 +12678,7 @@ exports.tests = [
         jxa: true,
         android4_0: true,
         android4_1: false,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12702,7 +12702,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12721,7 +12721,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -12757,7 +12757,7 @@ exports.tests = [
         edge14: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12783,7 +12783,7 @@ exports.tests = [
         edge14: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12805,7 +12805,7 @@ exports.tests = [
         xs6: true,
         ejs: { val: false, note_id: 'ejs-no-function-ctor' },
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12824,7 +12824,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12844,7 +12844,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12867,7 +12867,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12887,7 +12887,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12907,7 +12907,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12928,7 +12928,7 @@ exports.tests = [
         ejs: true,
         jxa: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -12953,7 +12953,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12978,7 +12978,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -12997,7 +12997,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13020,7 +13020,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13043,7 +13043,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13064,7 +13064,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13085,7 +13085,7 @@ exports.tests = [
         node4: "strict",
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13104,7 +13104,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -13134,7 +13134,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13159,7 +13159,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -13192,7 +13192,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13212,7 +13212,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13238,7 +13238,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13264,8 +13264,8 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13294,8 +13294,8 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13321,8 +13321,8 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13351,8 +13351,8 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13383,8 +13383,8 @@ exports.tests = [
         edge12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13406,7 +13406,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13435,7 +13435,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -13474,7 +13474,7 @@ exports.tests = [
         android4_0: true,
         xs6: false,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13504,7 +13504,7 @@ exports.tests = [
         android4_0: true,
         xs6: false,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -13532,7 +13532,7 @@ exports.tests = [
         android4_0: true,
         xs6: false,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -13562,7 +13562,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     },
     {
@@ -13580,7 +13580,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     },
   ]
@@ -13612,7 +13612,7 @@ exports.tests = [
         node5: true,
         xs6: true,
         ejs: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -13637,7 +13637,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ]
@@ -13672,7 +13672,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13693,7 +13693,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13724,7 +13724,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13755,7 +13755,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13780,7 +13780,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13810,7 +13810,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13827,7 +13827,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13852,7 +13852,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13877,8 +13877,8 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
-        duktape21: true,
+        duktape2_0: false,
+        duktape2_1: true,
       },
     },
     {
@@ -13908,7 +13908,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -13946,7 +13946,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     },
     {
@@ -13967,7 +13967,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -14007,7 +14007,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14028,7 +14028,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14052,7 +14052,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -14075,7 +14075,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14095,7 +14095,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14117,7 +14117,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14139,7 +14139,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14161,7 +14161,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14183,7 +14183,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14205,7 +14205,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14229,7 +14229,7 @@ exports.tests = [
         ejs: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14252,7 +14252,7 @@ exports.tests = [
         xs6: null,
         ejs: null,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14275,7 +14275,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14298,7 +14298,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14321,7 +14321,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14344,7 +14344,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14366,7 +14366,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14389,7 +14389,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14412,7 +14412,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14435,7 +14435,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14462,7 +14462,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14485,7 +14485,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14524,7 +14524,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14564,7 +14564,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14586,7 +14586,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14613,7 +14613,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -14643,7 +14643,7 @@ exports.tests = [
         chrome49: true,
         edge14: "flagged",
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -14662,7 +14662,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14681,7 +14681,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14700,7 +14700,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14719,7 +14719,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14739,7 +14739,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ]
@@ -14771,7 +14771,7 @@ exports.tests = [
         node0_12: true,
         android4_0: true,
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -14792,7 +14792,7 @@ exports.tests = [
         node0_12: false,
         android4_0: false,
         xs6: null,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ]
@@ -14821,7 +14821,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -14841,7 +14841,7 @@ exports.tests = [
         node0_12: true,
         android4_0: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -14860,7 +14860,7 @@ exports.tests = [
         node0_12: true,
         android4_0: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14880,7 +14880,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14899,7 +14899,7 @@ exports.tests = [
         node0_12: true,
         android4_0: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14921,7 +14921,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -14943,7 +14943,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -14965,7 +14965,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -14996,7 +14996,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15019,7 +15019,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15042,7 +15042,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15064,7 +15064,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15086,7 +15086,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15109,7 +15109,7 @@ exports.tests = [
         edge13: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15132,7 +15132,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15154,7 +15154,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -15179,7 +15179,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15205,7 +15205,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15225,7 +15225,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -15255,7 +15255,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15280,7 +15280,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15305,7 +15305,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15330,7 +15330,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15354,7 +15354,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15401,7 +15401,7 @@ exports.tests = [
         node4: false,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15425,7 +15425,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15456,7 +15456,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15484,7 +15484,7 @@ exports.tests = [
         chrome51: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15511,7 +15511,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -15544,7 +15544,7 @@ exports.tests = [
         android4_1: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15568,7 +15568,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15592,7 +15592,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15617,7 +15617,7 @@ exports.tests = [
         android4_1: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15640,7 +15640,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15664,7 +15664,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -15688,7 +15688,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -15715,7 +15715,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'imul': {
         ejs: true,
@@ -15738,7 +15738,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'sign': {
         ejs: true,
@@ -15756,7 +15756,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'log10': {
         ejs: true,
@@ -15774,7 +15774,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
       'log2': {
         ejs: true,
@@ -15792,7 +15792,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
       'log1p': {
         ejs: true,
@@ -15810,7 +15810,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'expm1': {
         ejs: true,
@@ -15827,7 +15827,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'cosh': {
         ejs: true,
@@ -15845,7 +15845,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'sinh': {
         ejs: true,
@@ -15863,7 +15863,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'tanh': {
         ejs: true,
@@ -15881,7 +15881,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'acosh': {
         ejs: true,
@@ -15899,7 +15899,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'asinh': {
         ejs: true,
@@ -15916,7 +15916,7 @@ exports.tests = [
         node_012: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'atanh': {
         ejs: true,
@@ -15934,7 +15934,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'trunc': {
         ejs: true,
@@ -15952,7 +15952,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
       'fround': {
         ejs: true,
@@ -15969,7 +15969,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
       'cbrt': {
         ejs: true,
@@ -15987,7 +15987,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     };
     var eqFn = ' === "function"';
@@ -16023,7 +16023,7 @@ exports.tests = [
         node0_12: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       }
     });
   }()),
@@ -16049,7 +16049,7 @@ exports.tests = [
     chrome47: true,
     xs6: true,
     safari10: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -16078,7 +16078,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16100,7 +16100,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16122,7 +16122,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16140,7 +16140,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16159,7 +16159,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16178,7 +16178,7 @@ exports.tests = [
         ejs: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16197,7 +16197,7 @@ exports.tests = [
         ejs: true,
         jxa: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16217,7 +16217,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16237,7 +16237,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16258,7 +16258,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -16279,7 +16279,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ],
@@ -16308,7 +16308,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16331,7 +16331,7 @@ exports.tests = [
         ejs: true,
         safari10: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16352,7 +16352,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16373,7 +16373,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -16400,7 +16400,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16420,7 +16420,7 @@ exports.tests = [
         chrome48: "flagged",
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16441,7 +16441,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16460,7 +16460,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16479,7 +16479,7 @@ exports.tests = [
         firefox45: true,
         xs6: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16497,7 +16497,7 @@ exports.tests = [
         chrome48: "flagged",
         chrome49: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -16545,7 +16545,7 @@ exports.tests = [
         node5: "strict",
         xs6: true,
         ejs: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16566,7 +16566,7 @@ exports.tests = [
         node5: "strict",
         xs6: true,
         ejs: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16598,7 +16598,7 @@ exports.tests = [
         safari10: true,
         node5: "strict",
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16630,7 +16630,7 @@ exports.tests = [
         safari10: true,
         node5: "strict",
         xs6: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -16660,7 +16660,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16682,7 +16682,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16706,7 +16706,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16728,7 +16728,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16753,7 +16753,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -16779,7 +16779,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -16841,7 +16841,7 @@ exports.tests = [
         konq414: null,
         rhino1_7: null,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -16877,7 +16877,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -16917,7 +16917,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -16958,7 +16958,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -16989,7 +16989,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17028,7 +17028,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         chrome49: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17061,7 +17061,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         chrome49: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ],
@@ -17096,7 +17096,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -17114,7 +17114,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17137,7 +17137,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17162,7 +17162,7 @@ exports.tests = [
         safari9: true,
         xs6: true,
         jxa: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -17183,7 +17183,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17207,7 +17207,7 @@ exports.tests = [
         android4_0: true,
         xs6: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17225,7 +17225,7 @@ exports.tests = [
         xs6: true,
         chrome49: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17243,7 +17243,7 @@ exports.tests = [
         xs6: null,
         jxa: true,
         safari10: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
     {
@@ -17271,7 +17271,7 @@ exports.tests = [
         firefox53: true,
         chrome50: true,
         safari10: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -17295,7 +17295,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         jxa: true,
-        duktape20: true,
+        duktape2_0: true,
       },
     },
   ],
@@ -17324,8 +17324,8 @@ exports.tests = [
     android4_0: true,
     edge13: false,
     xs6: false,
-    duktape20: false,
-    duktape21: true,
+    duktape2_0: false,
+    duktape2_1: true,
   }
 },
 ];

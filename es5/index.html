@@ -162,8 +162,8 @@
 <th class="platform besen engine" data-browser="besen"><a href="#besen" class="browser-name"><abbr title="Bero&apos;s EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform ejs engine unstable" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
-<th class="platform duktape20 engine" data-browser="duktape20"><a href="#duktape20" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
-<th class="platform duktape21 engine" data-browser="duktape21"><a href="#duktape21" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
+<th class="platform duktape2_0 engine" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
+<th class="platform duktape2_1 engine" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform android4_0 mobile obsolete" data-browser="android4_0"><a href="#android4_0" class="browser-name"><abbr title="Android Browser">AN 4.0</abbr></a></th>
 <th class="platform android4_1 mobile obsolete" data-browser="android4_1"><a href="#android4_1" class="browser-name"><abbr title="Android Browser">AN 4.1</abbr></a></th>
 <th class="platform android4_2 mobile obsolete" data-browser="android4_2"><a href="#android4_2" class="browser-name"><abbr title="Android Browser">AN 4.2</abbr></a></th>
@@ -233,8 +233,8 @@
 <td class="tally" data-browser="besen" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally" data-browser="phantom" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
-<td class="tally" data-browser="duktape20" data-tally="1">5/5</td>
-<td class="tally" data-browser="duktape21" data-tally="1">5/5</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">5/5</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
@@ -303,8 +303,8 @@ return ({ get x(){ return 1 } }).x === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -375,8 +375,8 @@ return value === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -445,8 +445,8 @@ return { a: true, }.a === true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -515,8 +515,8 @@ return [1,].length === 1;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -585,8 +585,8 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -654,8 +654,8 @@ return ({ if: 1 }).if === 1;
 <td class="tally" data-browser="besen" data-tally="1">13/13</td>
 <td class="tally" data-browser="phantom" data-tally="1">13/13</td>
 <td class="tally unstable" data-browser="ejs" data-tally="1">13/13</td>
-<td class="tally" data-browser="duktape20" data-tally="1">13/13</td>
-<td class="tally" data-browser="duktape21" data-tally="1">13/13</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">13/13</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="1">13/13</td>
@@ -726,8 +726,8 @@ return typeof Object.create == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -798,8 +798,8 @@ return typeof Object.defineProperty == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -870,8 +870,8 @@ return typeof Object.defineProperties == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -942,8 +942,8 @@ return typeof Object.getPrototypeOf == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1014,8 +1014,8 @@ return typeof Object.keys == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1086,8 +1086,8 @@ return typeof Object.seal == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1158,8 +1158,8 @@ return typeof Object.freeze == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1230,8 +1230,8 @@ return typeof Object.preventExtensions == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1302,8 +1302,8 @@ return typeof Object.isSealed == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1374,8 +1374,8 @@ return typeof Object.isFrozen == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1446,8 +1446,8 @@ return typeof Object.isExtensible == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1518,8 +1518,8 @@ return typeof Object.getOwnPropertyDescriptor == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1590,8 +1590,8 @@ return typeof Object.getOwnPropertyNames == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1657,8 +1657,8 @@ return typeof Object.getOwnPropertyNames == 'function';
 <td class="tally" data-browser="besen" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
 <td class="tally" data-browser="phantom" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
-<td class="tally" data-browser="duktape20" data-tally="1">12/12</td>
-<td class="tally" data-browser="duktape21" data-tally="1">12/12</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">12/12</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">12/12</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
@@ -1729,8 +1729,8 @@ return typeof Array.isArray == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1801,8 +1801,8 @@ return typeof Array.prototype.indexOf == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1873,8 +1873,8 @@ return typeof Array.prototype.lastIndexOf == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -1945,8 +1945,8 @@ return typeof Array.prototype.every == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2017,8 +2017,8 @@ return typeof Array.prototype.some == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2089,8 +2089,8 @@ return typeof Array.prototype.forEach == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2161,8 +2161,8 @@ return typeof Array.prototype.map == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2233,8 +2233,8 @@ return typeof Array.prototype.filter == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2305,8 +2305,8 @@ return typeof Array.prototype.reduce == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2377,8 +2377,8 @@ return typeof Array.prototype.reduceRight == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2489,8 +2489,8 @@ return true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="no obsolete" data-browser="android4_1">No</td>
 <td class="no obsolete" data-browser="android4_2">No</td>
@@ -2571,8 +2571,8 @@ try {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2638,8 +2638,8 @@ try {
 <td class="tally" data-browser="besen" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="ejs" data-tally="1">2/2</td>
-<td class="tally" data-browser="duktape20" data-tally="1">2/2</td>
-<td class="tally" data-browser="duktape21" data-tally="1">2/2</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">2/2</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="1">2/2</td>
@@ -2710,8 +2710,8 @@ return "foobar"[3] === "b";
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2782,8 +2782,8 @@ return typeof String.prototype.trim == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2849,8 +2849,8 @@ return typeof String.prototype.trim == 'function';
 <td class="tally" data-browser="besen" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
-<td class="tally" data-browser="duktape20" data-tally="1">3/3</td>
-<td class="tally" data-browser="duktape21" data-tally="1">3/3</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">3/3</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="1">3/3</td>
@@ -2921,8 +2921,8 @@ return typeof Date.prototype.toISOString == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -2993,8 +2993,8 @@ return typeof Date.now == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3073,8 +3073,8 @@ try {
 <td class="yes" data-browser="besen">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3145,8 +3145,8 @@ return typeof Function.prototype.bind == 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3217,8 +3217,8 @@ return typeof JSON == 'object';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_0">Yes</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3286,8 +3286,8 @@ return typeof JSON == 'object';
 <td class="tally" data-browser="besen" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0">0/3</td>
-<td class="tally" data-browser="duktape20" data-tally="1">3/3</td>
-<td class="tally" data-browser="duktape21" data-tally="1">3/3</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">3/3</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="1">3/3</td>
@@ -3359,8 +3359,8 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3432,8 +3432,8 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3505,8 +3505,8 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3572,8 +3572,8 @@ return result;
 <td class="tally" data-browser="besen" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
 <td class="tally" data-browser="phantom" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
-<td class="tally" data-browser="duktape20" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
-<td class="tally" data-browser="duktape21" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
+<td class="tally" data-browser="duktape2_0" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
+<td class="tally" data-browser="duktape2_1" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="0.125" style="background-color:hsl(15,80%,50%)">1/8</td>
@@ -3644,8 +3644,8 @@ return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, lengt
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -3716,8 +3716,8 @@ return parseInt('010') === 10;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="no obsolete" data-browser="android4_1">No</td>
 <td class="no obsolete" data-browser="android4_2">No</td>
@@ -3786,8 +3786,8 @@ return !Function().propertyIsEnumerable(&apos;prototype&apos;);
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -3856,8 +3856,8 @@ return (function(){ return Object.prototype.toString.call(arguments) === &apos;[
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -3927,8 +3927,8 @@ return _\u200c\u200d;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -3999,8 +3999,8 @@ return true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -4077,8 +4077,8 @@ return result;
 <td class="unknown" data-browser="besen">?</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="no" data-browser="duktape20">No</td>
-<td class="no" data-browser="duktape21">No</td>
+<td class="no" data-browser="duktape2_0">No</td>
+<td class="no" data-browser="duktape2_1">No</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -4153,8 +4153,8 @@ catch(e) {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="unknown obsolete" data-browser="android4_0">?</td>
 <td class="unknown obsolete" data-browser="android4_1">?</td>
 <td class="unknown obsolete" data-browser="android4_2">?</td>
@@ -4220,8 +4220,8 @@ catch(e) {
 <td class="tally" data-browser="besen" data-tally="1">19/19</td>
 <td class="tally" data-browser="phantom" data-tally="1">19/19</td>
 <td class="tally unstable" data-browser="ejs" data-tally="1">19/19</td>
-<td class="tally" data-browser="duktape20" data-tally="1">19/19</td>
-<td class="tally" data-browser="duktape21" data-tally="1">19/19</td>
+<td class="tally" data-browser="duktape2_0" data-tally="1">19/19</td>
+<td class="tally" data-browser="duktape2_1" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="android4_0" data-tally="0">0/19</td>
 <td class="tally obsolete" data-browser="android4_1" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="android4_2" data-tally="1">19/19</td>
@@ -4295,8 +4295,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4366,8 +4366,8 @@ return this === undefined &amp;&amp; (function(){ return this === undefined; }).
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4439,8 +4439,8 @@ return (function(){ return typeof this === &apos;string&apos; }).call(&apos;&apo
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4526,8 +4526,8 @@ return test(String, &apos;&apos;)
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4599,8 +4599,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4670,8 +4670,8 @@ try { eval(&apos;__i_dont_exist = 1&apos;); } catch (err) { return err instanceo
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4745,8 +4745,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4820,8 +4820,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4897,8 +4897,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -4971,8 +4971,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5043,8 +5043,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5116,8 +5116,8 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5193,8 +5193,8 @@ return (function(x){
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5264,8 +5264,8 @@ try { eval(&apos;var __some_unique_variable;&apos;); __some_unique_variable; } c
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5335,8 +5335,8 @@ try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof 
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5406,8 +5406,8 @@ try { delete Object.prototype; } catch (err) { return err instanceof TypeError; 
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5477,8 +5477,8 @@ try { eval(&apos;with({}){}&apos;); } catch (err) { return err instanceof Syntax
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5548,8 +5548,8 @@ try { eval(&apos;function f(x, x) { }&apos;); } catch (err) { return err instanc
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
@@ -5619,8 +5619,8 @@ return typeof foo === &apos;function&apos;;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="yes" data-browser="duktape20">Yes</td>
-<td class="yes" data-browser="duktape21">Yes</td>
+<td class="yes" data-browser="duktape2_0">Yes</td>
+<td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="android4_0">No</td>
 <td class="yes obsolete" data-browser="android4_1">Yes</td>
 <td class="yes obsolete" data-browser="android4_2">Yes</td>
