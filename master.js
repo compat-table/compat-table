@@ -324,7 +324,7 @@ $(function() {
       return "hsla(35, 100%, 50%, .5)";
     }
     /* JavaScriptCore */
-    if (/^(webkit|safari|jxa|phantom|ios|android40)/.exec(name)) {
+    if (/^(webkit|safari|jxa|phantom|ios|android4_0)/.exec(name)) {
       return "hsla(220, 25%, 70%, .5)";
     }
     /* V8 */
