@@ -816,6 +816,7 @@ exports.tests = [
          return typeof SharedArrayBuffer === 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -832,6 +833,7 @@ exports.tests = [
          return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
          */},
         res: {
+          edge15: "flagged",
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           safari10_1: true,
@@ -847,6 +849,7 @@ exports.tests = [
          return 'byteLength' in SharedArrayBuffer.prototype;
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -863,6 +866,7 @@ exports.tests = [
          return typeof SharedArrayBuffer.prototype.slice === 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           safari10_1: true,
@@ -877,6 +881,7 @@ exports.tests = [
          return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
          */},
         res: {
+          edge15: "flagged",
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
@@ -893,6 +898,7 @@ exports.tests = [
          return typeof Atomics.add == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -910,6 +916,7 @@ exports.tests = [
          return typeof Atomics.and == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -927,6 +934,7 @@ exports.tests = [
          return typeof Atomics.compareExchange == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -944,6 +952,7 @@ exports.tests = [
          return typeof Atomics.exchange == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -961,6 +970,7 @@ exports.tests = [
          return typeof Atomics.wait == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -978,6 +988,7 @@ exports.tests = [
          return typeof Atomics.wake == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -995,6 +1006,7 @@ exports.tests = [
          return typeof Atomics.isLockFree == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1012,6 +1024,7 @@ exports.tests = [
          return typeof Atomics.load == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1029,6 +1042,7 @@ exports.tests = [
          return typeof Atomics.or == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1046,6 +1060,7 @@ exports.tests = [
          return typeof Atomics.store == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1063,6 +1078,7 @@ exports.tests = [
          return typeof Atomics.sub == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1080,6 +1096,7 @@ exports.tests = [
          return typeof Atomics.xor == 'function';
          */},
         res: {
+          edge15: "flagged",
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,

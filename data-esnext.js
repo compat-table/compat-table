@@ -578,6 +578,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
+        edge15: false,
         duktape2_0: false,
       }
     },
@@ -610,6 +611,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
+        edge15: false,
         duktape2_0: false,
       }
     },
