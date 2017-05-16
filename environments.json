@@ -1386,7 +1386,7 @@
     "short": "WK",
     "unstable": true
   },
-  "rhino17": {
+  "rhino1_7": {
     "full": "Rhino 1.7",
     "short": "Rhino 1.7",
     "platformtype": "engine",
@@ -1441,7 +1441,7 @@
       "es6"
     ]
   },
-  "node010": {
+  "node0_10": {
     "full": "Node.js",
     "family": "Node.js",
     "short": "Node 0.10",
@@ -1456,7 +1456,7 @@
       "esintl"
     ]
   },
-  "node012": {
+  "node0_12": {
     "full": "Node.js",
     "family": "Node.js",
     "short": "Node 0.12",
@@ -1529,7 +1529,7 @@
       "esintl"
     ]
   },
-  "node65": {
+  "node6_5": {
     "full": "Node.js",
     "family": "Node.js",
     "short": "Node &gt;=6.5 &lt;7",
@@ -1559,7 +1559,7 @@
       "esintl"
     ]
   },
-  "node76": {
+  "node7_6": {
     "full": "Node.js",
     "family": "Node.js",
     "short": "Node &gt;=7.6 &lt;8",
@@ -1574,59 +1574,59 @@
       "esintl"
     ]
   },
-  "duktape20": {
+  "duktape2_0": {
     "full": "Duktape 2.0",
     "family": "Duktape",
-    "short": "DUK 20",
+    "short": "DUK 2.0",
     "platformtype": "engine",
     "obsolete": false
   },
-  "duktape21": {
+  "duktape2_1": {
     "full": "Duktape 2.1",
     "family": "Duktape",
-    "short": "DUK 21",
+    "short": "DUK 2.1",
     "platformtype": "engine",
     "obsolete": false
   },
-  "android40": {
+  "android4_0": {
     "full": "Android Browser",
     "short": "AN 4.0",
     "platformtype": "mobile",
     "obsolete": true
   },
-  "android41": {
+  "android4_1": {
     "full": "Android Browser",
     "short": "AN 4.1",
     "platformtype": "mobile",
     "obsolete": true
   },
-  "android42": {
+  "android4_2": {
     "full": "Android Browser",
     "short": "AN 4.2",
     "platformtype": "mobile",
     "obsolete": true
   },
-  "android43": {
+  "android4_3": {
     "full": "Android Browser",
     "short": "AN 4.3",
     "platformtype": "mobile",
     "obsolete": true
   },
-  "android44": {
+  "android4_4": {
     "full": "Android Browser",
     "short": "AN 4.4",
     "platformtype": "mobile",
     "equals": "chrome30",
     "ignore_flagged": true
   },
-  "android50": {
+  "android5_0": {
     "full": "Android Browser",
     "short": "AN 5.0",
     "platformtype": "mobile",
     "equals": "chrome37",
     "ignore_flagged": true
   },
-  "android51": {
+  "android5_1": {
     "full": "Android Browser",
     "short": "AN 5.1",
     "platformtype": "mobile",
@@ -1696,7 +1696,7 @@
   "ios10": {
     "full": "iOS Safari",
     "family": "iOS Safari",
-    "short": "iOS 10.0-10.3",
+    "short": "iOS 10.0-10.2",
     "platformtype": "mobile",
     "equals": "safari10",
     "release": "2016-09-16",

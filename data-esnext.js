@@ -30,7 +30,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -41,7 +41,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
-        duktape20: false,
+        duktape2_0: false,
       },
     },
   ],
@@ -59,7 +59,7 @@ exports.tests = [
   */},
   res: {
     babel: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -77,7 +77,7 @@ exports.tests = [
     return result === 'tromple';
   */},
   res: {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -97,7 +97,7 @@ exports.tests = [
         edge12: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -110,7 +110,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -123,7 +123,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -136,7 +136,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -149,7 +149,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -162,7 +162,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -175,7 +175,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -188,7 +188,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -201,7 +201,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -214,7 +214,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -227,7 +227,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -240,7 +240,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -253,7 +253,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -266,7 +266,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -279,7 +279,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -292,7 +292,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -305,7 +305,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -318,7 +318,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -331,7 +331,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -344,7 +344,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -357,7 +357,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -370,7 +370,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -383,7 +383,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -396,7 +396,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -409,7 +409,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -422,7 +422,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -435,7 +435,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -448,7 +448,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -461,7 +461,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -474,7 +474,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -487,7 +487,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -500,7 +500,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -513,7 +513,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -526,7 +526,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -539,7 +539,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -552,7 +552,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -565,7 +565,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -578,7 +578,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -591,7 +591,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -604,7 +604,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -617,7 +617,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -630,7 +630,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -643,7 +643,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -656,7 +656,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -669,7 +669,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -682,7 +682,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -695,7 +695,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -708,7 +708,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -721,7 +721,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -734,7 +734,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -747,7 +747,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -760,7 +760,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -773,7 +773,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -786,7 +786,7 @@ exports.tests = [
         edge13: "flagged",
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -799,7 +799,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -815,7 +815,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -829,7 +829,7 @@ exports.tests = [
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: "flagged",
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -853,7 +853,7 @@ exports.tests = [
   res: {
     babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
     typescript: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -872,7 +872,7 @@ exports.tests = [
     babel: true,
     tr: true,
     typescript: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -887,7 +887,7 @@ exports.tests = [
       });
   */},
   res: {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -907,7 +907,7 @@ exports.tests = [
     chrome58: 'flagged',
     safaritp: true,
     webkit: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -928,7 +928,7 @@ exports.tests = [
     typescript: true,
     safaritp: true,
     webkit: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -943,7 +943,7 @@ exports.tests = [
     babel: true,
     typescript: typescript.corejs,
     es7shim: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -972,18 +972,18 @@ exports.tests = [
         konq44: false,
         konq49: true,
         besen: false,
-        rhino17: false,
+        rhino1_7: false,
         phantom: true,
-        node012: true,
+        node0_12: true,
         iojs: true,
         safari3: false,
         safari4: true,
         safaritp: true,
         webkit: true,
         es7shim: true,
-        android40: true,
+        android4_0: true,
         ios5_1: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1006,18 +1006,18 @@ exports.tests = [
         konq44: false,
         konq49: true,
         besen: false,
-        rhino17: false,
+        rhino1_7: false,
         phantom: true,
-        node012: true,
+        node0_12: true,
         iojs: true,
         safari3: false,
         safari4: true,
         safaritp: true,
         webkit: true,
         es7shim: true,
-        android40: true,
+        android4_0: true,
         ios5_1: true,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1028,7 +1028,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1039,7 +1039,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1073,15 +1073,15 @@ exports.tests = [
         note_id: 'wk-global-property',
         note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
       },
-      node010: true,
-      node012: true,
+      node0_10: true,
+      node0_12: true,
       node4: true,
       node6: true,
-      node65: true,
+      node6_5: true,
       node7: true,
-      node76: true,
-      duktape20: false,
-      duktape21: true,
+      node7_6: true,
+      duktape2_0: false,
+      duktape2_1: true,
     }
   }, {
     name: '"global" global property has correct property descriptor',
@@ -1112,15 +1112,15 @@ exports.tests = [
         note_id: 'wk-global-property',
         note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
       },
-      node010: false,
-      node012: false,
+      node0_10: false,
+      node0_12: false,
       node4: false,
       node6: false,
-      node65: false,
+      node6_5: false,
       node7: false,
-      node76: false,
-      duktape20: false,
-      duktape21: true,
+      node7_6: false,
+      duktape2_0: false,
+      duktape2_1: true,
     }
   }]
 },
@@ -1138,7 +1138,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1149,7 +1149,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1160,7 +1160,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1171,7 +1171,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ]
@@ -1190,7 +1190,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1201,7 +1201,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1212,7 +1212,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1233,7 +1233,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1245,7 +1245,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1257,7 +1257,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1268,7 +1268,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1279,7 +1279,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1305,7 +1305,7 @@ exports.tests = [
   res: {
     babel: true,
     typescript: typescript.corejs,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1321,7 +1321,7 @@ exports.tests = [
         return f();
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1330,7 +1330,7 @@ exports.tests = [
         return (_ => function.count)(1, 2, 3) === 3;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1344,7 +1344,7 @@ exports.tests = [
           && arr[2] === 3;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1370,7 +1370,7 @@ exports.tests = [
   */},
   res : {
     typescript: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1389,7 +1389,7 @@ exports.tests = [
     })(2);
   */},
   res : {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1405,7 +1405,7 @@ exports.tests = [
     return works && weakref.get() === undefined;
   */},
   res : {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1429,7 +1429,7 @@ exports.tests = [
       res: {
         babel: true,
         firefox55: firefox.nightly,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1457,7 +1457,7 @@ exports.tests = [
       res: {
         babel: true,
         firefox55: firefox.nightly,
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1478,7 +1478,7 @@ exports.tests = [
       && result.groups[3] === '11';
   */},
   res : {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1492,7 +1492,7 @@ exports.tests = [
   */},
   res : {
     chrome50: "flagged",
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1506,7 +1506,7 @@ exports.tests = [
   */},
   res: {
     chrome59: "flagged",
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1523,7 +1523,7 @@ exports.tests = [
           && !Reflect.isCallable(class {});
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1534,7 +1534,7 @@ exports.tests = [
           && Reflect.isConstructor(class {});
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1553,7 +1553,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1564,7 +1564,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1575,7 +1575,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1586,7 +1586,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1597,7 +1597,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1608,7 +1608,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1619,7 +1619,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1630,7 +1630,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1641,7 +1641,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1658,7 +1658,7 @@ exports.tests = [
         return typeof Zone == 'function';
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1667,7 +1667,7 @@ exports.tests = [
         return 'current' in Zone;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1676,7 +1676,7 @@ exports.tests = [
         return 'name' in Zone.prototype;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1685,7 +1685,7 @@ exports.tests = [
         return 'parent' in Zone.prototype;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1694,7 +1694,7 @@ exports.tests = [
         return typeof Zone.prototype.fork == 'function';
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1703,7 +1703,7 @@ exports.tests = [
         return typeof Zone.prototype.run == 'function';
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1712,7 +1712,7 @@ exports.tests = [
         return typeof Zone.prototype.wrap == 'function';
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     }
   ]
@@ -1727,7 +1727,7 @@ exports.tests = [
       && typeof Reflect.Realm.prototype.spawn === 'function';
   */},
   res: {
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1751,7 +1751,7 @@ exports.tests = [
         return new C(42).x() === 42;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
     {
@@ -1766,7 +1766,7 @@ exports.tests = [
         return new C().x() === 42;
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       }
     },
   ]
@@ -1785,7 +1785,7 @@ exports.tests = [
   res : {
     babel: true,
     typescript: typescript.corejs,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1806,7 +1806,7 @@ exports.tests = [
         }(1e6)) === "foo";
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       },
     },
     {
@@ -1828,7 +1828,7 @@ exports.tests = [
         return f(1e6) === "foo" && f(1e6+1) === "bar";
       */},
       res: {
-        duktape20: false,
+        duktape2_0: false,
       },
     }
   ]
@@ -1849,7 +1849,7 @@ exports.tests = [
     res: {
       firefox54: true,
       chrome59: "flagged",
-      duktape20: false,
+      duktape2_0: false,
     },
   }, {
     name: 'arrows',
@@ -1863,7 +1863,7 @@ exports.tests = [
       chrome50: true,
       safari10: true,
       edge13: true,
-      duktape20: false,
+      duktape2_0: false,
     },
   }, {
     name: '[native code]',
@@ -1878,7 +1878,7 @@ exports.tests = [
       chrome50: true,
       safari3_1: true,
       edge13: true,
-      duktape20: true,
+      duktape2_0: true,
     },
   }, {
     name: 'class expression with implicit constructor',
@@ -1892,7 +1892,7 @@ exports.tests = [
       chrome50: true,
       safari10: true,
       edge14: true,
-      duktape20: false,
+      duktape2_0: false,
     },
   }, {
     name: 'class expression with explicit constructor',
@@ -1906,7 +1906,7 @@ exports.tests = [
       chrome50: true,
       safari10: true,
       edge14: true,
-      duktape20: false,
+      duktape2_0: false,
     },
   }, {
     name: 'unicode escape sequences in identifiers',
@@ -1917,7 +1917,7 @@ exports.tests = [
     res: {
       firefox54: true,
       chrome59: "flagged",
-      duktape20: false,
+      duktape2_0: false,
     },
   }, {
     name: 'methods and computed property names',
@@ -1928,7 +1928,7 @@ exports.tests = [
     res: {
       firefox54: true,
       chrome59: "flagged",
-      duktape20: false,
+      duktape2_0: false,
     },
   }]
 },

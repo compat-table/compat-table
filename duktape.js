@@ -19,14 +19,14 @@ var dukCommand = './duk';
 
 var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
-// Key for .res (e.g. test.res.duktape20), automatic based on Duktape.version.
+// Key for .res (e.g. test.res.duktape2_0), automatic based on Duktape.version.
 var dukKey = (function () {
     var stdout = child_process.execFileSync(dukCommand, [ '-e', 'print(Duktape.version)' ], {
         encoding: 'utf-8'
     });
     var dukVersion = Number(stdout);
     console.log('Duktape version is: ' + dukVersion);
-    return 'duktape' + (Math.floor(dukVersion / 10000)) + (Math.floor(dukVersion / 100 % 100));
+    return 'duktape' + (Math.floor(dukVersion / 10000)) + '_' + (Math.floor(dukVersion / 100 % 100));
 })();
 console.log('Duktape result key is: test.res.' + dukKey);
 

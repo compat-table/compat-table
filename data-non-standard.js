@@ -15,8 +15,8 @@ exports.tests = [
       */},
       res: {
         firefox2: true,
-        rhino17: true,
-        duktape20: false,
+        rhino1_7: true,
+        duktape2_0: false,
       }
     },
     {
@@ -37,8 +37,8 @@ exports.tests = [
       res: {
         firefox2: true,
         besen: true,
-        rhino17: true,
-        duktape20: false,
+        rhino1_7: true,
+        duktape2_0: false,
       },
     },
     {
@@ -48,8 +48,8 @@ exports.tests = [
       */} ,
       res: {
         firefox2: true,
-        rhino17: null,
-        duktape20: false,
+        rhino1_7: null,
+        duktape2_0: false,
       },
     },
     {
@@ -149,8 +149,8 @@ exports.tests = [
       res: {
         firefox2: true,
         besen: null,
-        rhino17: null,
-        duktape20: false,
+        rhino1_7: null,
+        duktape2_0: false,
       },
     },
   ]
@@ -167,8 +167,8 @@ exports.tests = [
     firefox3: false,
     firefox3_5: true,
     firefox4: false,
-    rhino17: null,
-    duktape20: false,
+    rhino1_7: null,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -188,10 +188,10 @@ exports.tests = [
     opera10_50: true,
     konq44: true,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: true,
-    android40: true,
-    duktape20: false,
+    android4_0: true,
+    duktape2_0: false,
   }
 },
 {
@@ -211,9 +211,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -234,10 +234,10 @@ exports.tests = [
     opera10_10: true,
     konq44: true,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: true,
-    android40: true,
-    duktape20: false,
+    android4_0: true,
+    duktape2_0: false,
   }
 },
 {
@@ -256,9 +256,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -273,7 +273,7 @@ exports.tests = [
     safari10_1: true,
     safaritp: true,
     webkit: true,
-    duktape20: false,
+    duktape2_0: false,
   },
 },
 {
@@ -293,9 +293,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -314,9 +314,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -340,9 +340,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -358,9 +358,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -376,9 +376,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -401,9 +401,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -416,7 +416,7 @@ exports.tests = [
   */},
   res: {
     firefox30: true,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -434,9 +434,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: true,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -455,9 +455,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -480,9 +480,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -504,9 +504,9 @@ exports.tests = [
     konq44: null,
     konq49: false,
     besen: null,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -540,9 +540,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -578,9 +578,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -625,9 +625,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
 },
 {
@@ -647,9 +647,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -668,7 +668,7 @@ exports.tests = [
   */},
   res: {
     firefox30: true,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -692,9 +692,9 @@ exports.tests = [
     opera10_10: true,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -715,10 +715,10 @@ exports.tests = [
     opera10_50: true,
     konq44: true,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: true,
-    android40: true,
-    duktape20: false,
+    android4_0: true,
+    duktape2_0: false,
   }
 },
 {
@@ -739,10 +739,10 @@ exports.tests = [
     opera10_10: true,
     konq44: true,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: true,
-    android40: true,
-    duktape20: false,
+    android4_0: true,
+    duktape2_0: false,
   }
 },
 {
@@ -759,9 +759,9 @@ exports.tests = [
     chrome11: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -780,9 +780,9 @@ exports.tests = [
     konq44: null,
     konq49: true,
     besen: null,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -799,9 +799,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: null,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -812,9 +812,9 @@ exports.tests = [
   res: {
     firefox2: true,
     firefox49: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -831,9 +831,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
 },
 {
@@ -852,10 +852,10 @@ exports.tests = [
     opera10_10: true,
     konq43: true,
     besen: true,
-    rhino17: true,
+    rhino1_7: true,
     ejs: true,
-    android40: true,
-    duktape20: false,
+    android4_0: true,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -872,9 +872,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -890,9 +890,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -908,9 +908,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: true,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
 },
 {
@@ -923,9 +923,9 @@ exports.tests = [
   res: {
     chrome36: true,
     chrome49: false,
-    node010: true,
-    android50: true,
-    duktape20: false,
+    node0_10: true,
+    android5_0: true,
+    duktape2_0: false,
   },
   separator: 'after'
 },
@@ -952,10 +952,10 @@ exports.tests = [
     opera10_50: true,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    android40: true,
-    duktape20: true,
+    android4_0: true,
+    duktape2_0: true,
   }
 },
 {
@@ -973,9 +973,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: true,
+    duktape2_0: true,
   }
 },
 {
@@ -994,9 +994,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   }
 },
 {
@@ -1014,9 +1014,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: true,
+    rhino1_7: true,
     phantom: false,
-    duktape20: true,
+    duktape2_0: true,
   }
 },
 {
@@ -1033,9 +1033,9 @@ exports.tests = [
     opera10_10: false,
     konq44: false,
     besen: false,
-    rhino17: false,
+    rhino1_7: false,
     phantom: false,
-    duktape20: false,
+    duktape2_0: false,
   },
   separator: 'after'
 }
