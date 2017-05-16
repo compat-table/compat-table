@@ -15913,7 +15913,7 @@ exports.tests = [
         chrome34: "flagged",
         chrome38: true,
         safari7_1: true,
-        node_012: true,
+        node0_12: true,
         xs6: true,
         jxa: true,
         duktape2_0: false,
