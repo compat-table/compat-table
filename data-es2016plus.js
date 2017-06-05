@@ -860,6 +860,7 @@ exports.tests = [
           firefox55: true,
           chrome48: chrome.sharedmem,
           chrome61: true,
+          safari11: true,
           safaritp: true,
           webkit: true,
           duktape2_0: false,
@@ -2001,6 +2002,7 @@ exports.tests = [
     res: {
       firefox53: true,
       chrome59: 'flagged',
+      safari11: true,
       safaritp: true,
       webkit: true,
       duktape2_0: false,
