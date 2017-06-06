@@ -149,7 +149,7 @@
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform duktape2_0 engine" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
 <th class="platform duktape2_1 engine" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
-<th class="platform android4_1 mobile obsolete" data-browser="android4_1"><a href="#android4_1" class="browser-name"><abbr title="Android Browser 4.1 (Jellybean)">AN 4.1</abbr></a></th>
+<th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform ios8 mobile obsolete" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS 8</abbr></a></th>
 <th class="platform ios9 mobile" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS Safari">iOS 9</abbr></a></th>
 <th class="platform ios10 mobile" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
@@ -207,7 +207,7 @@
 <td class="tally" data-browser="phantom" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="android4_1" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios10" data-tally="0">0/4</td>
@@ -264,7 +264,7 @@ return typeof uneval == &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -329,7 +329,7 @@ return &apos;toSource&apos; in Object.prototype
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -386,7 +386,7 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -532,7 +532,7 @@ return true;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -590,7 +590,7 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -651,7 +651,7 @@ return 'caller' in function(){};
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -714,7 +714,7 @@ return (function () {}).arity === 0 &&
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -779,7 +779,7 @@ return f(1, 'boo');
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -838,7 +838,7 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -898,7 +898,7 @@ return new C instanceof C;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -959,7 +959,7 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1018,7 +1018,7 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1087,7 +1087,7 @@ return executed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1146,7 +1146,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1205,7 +1205,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1266,7 +1266,7 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1323,7 +1323,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1380,7 +1380,7 @@ return (function(x)x)(1) === 1;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1437,7 +1437,7 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1498,7 +1498,7 @@ return str === &quot;foobarbaz&quot;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1556,7 +1556,7 @@ return arr[1] === arr;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1647,7 +1647,7 @@ catch(e) {
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1744,7 +1744,7 @@ catch(e) {
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1840,7 +1840,7 @@ global.test((function () {
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1899,7 +1899,7 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -1963,7 +1963,7 @@ return passed;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2038,7 +2038,7 @@ try {
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2101,7 +2101,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -2166,7 +2166,7 @@ return true;
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -2223,7 +2223,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2281,7 +2281,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2338,7 +2338,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2393,7 +2393,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2450,7 +2450,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2515,7 +2515,7 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="yes" data-browser="phantom">Yes</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -2572,7 +2572,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2627,7 +2627,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2682,7 +2682,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2739,7 +2739,7 @@ return typeof Object.observe == &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2808,7 +2808,7 @@ try {
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
-<td class="yes obsolete" data-browser="android4_1">Yes</td>
+<td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
@@ -2867,7 +2867,7 @@ return 'lineNumber' in new Error();
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2926,7 +2926,7 @@ return 'columnNumber' in new Error();
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -2985,7 +2985,7 @@ return 'fileName' in new Error();
 <td class="no" data-browser="phantom">No</td>
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
@@ -3044,7 +3044,7 @@ return 'description' in new Error();
 <td class="no" data-browser="phantom">No</td>
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="android4_1">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
