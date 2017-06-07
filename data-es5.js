@@ -957,9 +957,16 @@ exports.tests = [
   {
     name: 'undefined',
     exec: function () {/*
-      undefined = 12345;
-      var result = typeof undefined == 'undefined';
-      undefined = void 0;
+      var result = false;
+      try {
+        undefined = 12345;
+        result = typeof undefined == 'undefined';
+        undefined = void 0;
+      } catch (error) {
+        if (error instanceof TypeError) {
+          result = true;
+        }
+      }
       return result;
     */},
     res: {
@@ -984,9 +991,16 @@ exports.tests = [
   {
     name: 'NaN',
     exec: function () {/*
-      NaN = false;
-      var result = typeof NaN == 'number';
-      NaN = Math.sqrt(-1);
+      var result = false;
+      try {
+        NaN = false;
+        result = typeof NaN == 'number';
+        NaN = Math.sqrt(-1);
+      } catch (error) {
+        if (error instanceof TypeError) {
+          result = true;
+        }
+      }
       return result;
     */},
     res: {
@@ -1011,9 +1025,16 @@ exports.tests = [
   {
     name: 'Infinity',
     exec: function () {/*
-      Infinity = false;
-      var result = typeof Infinity == 'number';
-      Infinity = 1/0;
+      var result = false;
+      try {
+        Infinity = false;
+        result = typeof Infinity == 'number';
+        Infinity = 1/0;
+      } catch (error) {
+        if (error instanceof TypeError) {
+          result = true;
+        }
+      }
       return result;
     */},
     res: {
