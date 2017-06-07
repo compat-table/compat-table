@@ -398,6 +398,101 @@ exports.tests = [
     ],
   },
   {
+    name: 'import()',
+    categpry: '2017 features',
+    significance: 'small',
+    spec: 'https://tc39.github.io/proposal-dynamic-import/',
+    subtests: [
+      {
+        name: 'import',
+        exec: function () {/*
+          try {
+            return typeof import === "function";
+            return true;
+          } catch {
+            return false;
+          }
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'return',
+        exec: function () {/*
+          return import("./foo.js") instanceof Promise;
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'throw',
+        exec: function () {/*
+          try {
+            import("")
+              .then(function () {
+                throw "foo";
+              });
+          } catch (e) {
+            if (e === "foo") {
+              asyncTestPassed();
+            }
+          }
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'accepts template strings',
+        exec: function () {/*
+          var s = "foo.js";
+          try {
+            import(`./${s}`);
+            return true;
+          } catch {
+            return false;
+          }
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'resolves empty strings',
+        exec: function () {/*
+          import("")
+            .then(function () {
+              asyncTestPassed();
+            });
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'throws without params',
+        exec: function () {/*
+          try {
+            import();
+            return false;
+          } catch {
+            return true;
+          }
+        */},
+        res: {
+        }
+      },
+      {
+        name: 'rejects without params',
+        exec: function () {/*
+          var p = import();
+          p.catch(function() {
+            asyncTestPassed();
+          });
+        */},
+        res: {
+        }
+      }
+    ]
+  },
+  {
     name: 'async functions',
     category: '2017 features',
     significance: 'large',
