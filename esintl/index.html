@@ -156,6 +156,7 @@
 <th class="platform safari9 desktop obsolete" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari 9">SF 9</abbr></a></th>
 <th class="platform safari10 desktop" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari 10">SF 10</abbr></a></th>
 <th class="platform safari10_1 desktop" data-browser="safari10_1"><a href="#safari10_1" class="browser-name"><abbr title="Safari 10.1">SF 10.1</abbr></a></th>
+<th class="platform safari11 desktop unstable" data-browser="safari11"><a href="#safari11" class="browser-name"><abbr title="Safari 11">SF 11</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 27">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r214532 (March 29, 2017)">WK</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
@@ -181,6 +182,7 @@
 <th class="platform ios9 mobile" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS Safari">iOS 9</abbr></a></th>
 <th class="platform ios10 mobile" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
 <th class="platform ios10_3 mobile" data-browser="ios10_3"><a href="#ios10_3" class="browser-name"><abbr title="iOS Safari">iOS &gt;=10.3 &lt;11</abbr></a></th>
+<th class="platform ios11 mobile unstable" data-browser="ios11"><a href="#ios11" class="browser-name"><abbr title="iOS Safari">iOS 11</abbr></a></th>
 </tr>
 
       </thead>
@@ -222,6 +224,7 @@
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari10" data-tally="1">2/2</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -247,6 +250,7 @@
 <td class="tally" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios10" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="Intl_object" id="test-Intl_object_exists_on_global"><td><span><a class="anchor" href="#test-Intl_object_exists_on_global">&#xA7;</a>exists on global</span><script data-source="
 return typeof Intl === &apos;object&apos;;
@@ -287,6 +291,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -312,6 +317,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Intl_object" id="test-Intl_object_has_prototype_of_Object"><td><span><a class="anchor" href="#test-Intl_object_has_prototype_of_Object">&#xA7;</a>has prototype of Object</span><script data-source="
 return Intl.constructor === Object;
@@ -352,6 +358,7 @@ return Intl.constructor === Object;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -377,6 +384,7 @@ return Intl.constructor === Object;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Intl.Collator"><span><a class="anchor" href="#test-Intl.Collator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10">Intl.Collator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/4</td>
@@ -414,6 +422,7 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari10" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">4/4</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/4</td>
@@ -439,6 +448,7 @@ return Intl.constructor === Object;
 <td class="tally" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios10" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">4/4</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#test-Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.Collator === &apos;function&apos;;
@@ -479,6 +489,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -504,6 +515,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new Collator instances</a></span><script data-source="
 return new Intl.Collator() instanceof Intl.Collator;
@@ -544,6 +556,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -569,6 +582,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
 return Intl.Collator() instanceof Intl.Collator;
@@ -609,6 +623,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -634,6 +649,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
@@ -702,6 +718,7 @@ try {
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -727,6 +744,7 @@ try {
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Intl.Collator.prototype.compare"><span><a class="anchor" href="#test-Intl.Collator.prototype.compare">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.2">Intl.Collator.prototype.compare</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/1</td>
@@ -764,6 +782,7 @@ try {
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/1</td>
@@ -789,6 +808,7 @@ try {
 <td class="tally" data-browser="ios9" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator.prototype.compare" id="test-Intl.Collator.prototype.compare_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.compare_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
 return typeof Intl.Collator().compare === &apos;function&apos;;
@@ -829,6 +849,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -854,6 +875,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Intl.Collator.prototype.resolvedOptions"><span><a class="anchor" href="#test-Intl.Collator.prototype.resolvedOptions">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.3.3">Intl.Collator.prototype.resolvedOptions</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/1</td>
@@ -891,6 +913,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/1</td>
@@ -916,6 +939,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions" id="test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
 return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
@@ -956,6 +980,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -981,6 +1006,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-NumberFormat"><span><a class="anchor" href="#test-NumberFormat">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-11">NumberFormat</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/5</td>
@@ -1018,6 +1044,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/5</td>
 <td class="tally" data-browser="safari10" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">5/5</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">5/5</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/5</td>
@@ -1043,6 +1070,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="0">0/5</td>
 <td class="tally" data-browser="ios10" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">5/5</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">5/5</td>
 </tr>
 <tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.NumberFormat === &apos;function&apos;;
@@ -1083,6 +1111,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1108,6 +1137,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.NumberFormat === &apos;function&apos;;
@@ -1148,6 +1178,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1173,6 +1204,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new NumberFormat instances</a></span><script data-source="
 return new Intl.NumberFormat() instanceof Intl.NumberFormat;
@@ -1213,6 +1245,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1238,6 +1271,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
 return Intl.NumberFormat() instanceof Intl.NumberFormat;
@@ -1278,6 +1312,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1303,6 +1338,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
@@ -1371,6 +1407,7 @@ try {
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1396,6 +1433,7 @@ try {
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-DateTimeFormat"><span><a class="anchor" href="#test-DateTimeFormat">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-12">DateTimeFormat</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/6</td>
@@ -1433,6 +1471,7 @@ try {
 <td class="tally obsolete" data-browser="safari9" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari10" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">6/6</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">6/6</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">6/6</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">6/6</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/6</td>
@@ -1458,6 +1497,7 @@ try {
 <td class="tally" data-browser="ios9" data-tally="0">0/6</td>
 <td class="tally" data-browser="ios10" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">6/6</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">6/6</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
 return typeof Intl.DateTimeFormat === &apos;function&apos;;
@@ -1498,6 +1538,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1523,6 +1564,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new DateTimeFormat instances</a></span><script data-source="
 return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
@@ -1563,6 +1605,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1588,6 +1631,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
 return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
@@ -1628,6 +1672,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1653,6 +1698,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
 try {
@@ -1721,6 +1767,7 @@ try {
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1746,6 +1793,7 @@ try {
 <td class="no" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment"><td><span><a class="anchor" href="#test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment">&#xA7;</a>resolvedOptions().timeZone defaults to the host environment</span><script data-source="
 var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -1787,6 +1835,7 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown" data-browser="phantom">?</td>
@@ -1812,6 +1861,7 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_IANA_timezone_names"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_IANA_timezone_names">&#xA7;</a>accepts IANA timezone names</span><script data-source="
 try {
@@ -1860,6 +1910,7 @@ try {
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1885,6 +1936,7 @@ try {
 <td class="no" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-String.prototype.localeCompare"><span><a class="anchor" href="#test-String.prototype.localeCompare">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.localecompare">String.prototype.localeCompare</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -1922,6 +1974,7 @@ try {
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -1947,6 +2000,7 @@ try {
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="String.prototype.localeCompare" id="test-String.prototype.localeCompare_exists_on_String_prototype"><td><span><a class="anchor" href="#test-String.prototype.localeCompare_exists_on_String_prototype">&#xA7;</a>exists on String prototype</span><script data-source="
 return typeof String.prototype.localeCompare === &apos;function&apos;;
@@ -1987,6 +2041,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2012,6 +2067,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Number.prototype.toLocaleString"><span><a class="anchor" href="#test-Number.prototype.toLocaleString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.prototype.tolocalestring">Number.prototype.toLocaleString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2049,6 +2105,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2074,6 +2131,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Number.prototype.toLocaleString" id="test-Number.prototype.toLocaleString_exists_on_Number_prototype"><td><span><a class="anchor" href="#test-Number.prototype.toLocaleString_exists_on_Number_prototype">&#xA7;</a>exists on Number prototype</span><script data-source="
 return typeof Number.prototype.toLocaleString === &apos;function&apos;;
@@ -2114,6 +2172,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2139,6 +2198,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Array.prototype.toLocaleString"><span><a class="anchor" href="#test-Array.prototype.toLocaleString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.tolocalestring">Array.prototype.toLocaleString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2176,6 +2236,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2201,6 +2262,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.toLocaleString" id="test-Array.prototype.toLocaleString_exists_on_Array_prototype"><td><span><a class="anchor" href="#test-Array.prototype.toLocaleString_exists_on_Array_prototype">&#xA7;</a>exists on Array prototype</span><script data-source="
 return typeof Array.prototype.toLocaleString === &apos;function&apos;;
@@ -2241,6 +2303,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2266,6 +2329,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Object.prototype.toLocaleString"><span><a class="anchor" href="#test-Object.prototype.toLocaleString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tolocalestring">Object.prototype.toLocaleString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2303,6 +2367,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2328,6 +2393,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype.toLocaleString" id="test-Object.prototype.toLocaleString_exists_on_Object_prototype"><td><span><a class="anchor" href="#test-Object.prototype.toLocaleString_exists_on_Object_prototype">&#xA7;</a>exists on Object prototype</span><script data-source="
 return typeof Object.prototype.toLocaleString === &apos;function&apos;;
@@ -2368,6 +2434,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2393,6 +2460,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Date.prototype.toLocaleString"><span><a class="anchor" href="#test-Date.prototype.toLocaleString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocalestring">Date.prototype.toLocaleString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2430,6 +2498,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2455,6 +2524,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Date.prototype.toLocaleString" id="test-Date.prototype.toLocaleString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleString === &apos;function&apos;;
@@ -2495,6 +2565,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2520,6 +2591,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Date.prototype.toLocaleDateString"><span><a class="anchor" href="#test-Date.prototype.toLocaleDateString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaledatestring">Date.prototype.toLocaleDateString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2557,6 +2629,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2582,6 +2655,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Date.prototype.toLocaleDateString" id="test-Date.prototype.toLocaleDateString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleDateString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
@@ -2622,6 +2696,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2647,6 +2722,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Date.prototype.toLocaleTimeString"><span><a class="anchor" href="#test-Date.prototype.toLocaleTimeString">&#xA7;</a><a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date.prototype.tolocaletimestring">Date.prototype.toLocaleTimeString</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
@@ -2684,6 +2760,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="safari9" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10" data-tally="1">1/1</td>
 <td class="tally" data-browser="safari10_1" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">1/1</td>
 <td class="tally" data-browser="phantom" data-tally="1">1/1</td>
@@ -2709,6 +2786,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally" data-browser="ios9" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">1/1</td>
+<td class="tally unstable" data-browser="ios11" data-tally="1">1/1</td>
 </tr>
 <tr class="subtest" data-parent="Date.prototype.toLocaleTimeString" id="test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
 return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
@@ -2749,6 +2827,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes" data-browser="safari10">Yes</td>
 <td class="yes" data-browser="safari10_1">Yes</td>
+<td class="yes unstable" data-browser="safari11">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -2774,6 +2853,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
+<td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
 </tbody>
     </table>

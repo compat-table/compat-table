@@ -1381,6 +1381,12 @@
     "release": "2017-03-27",
     "obsolete": false
   },
+  "safari11": {
+    "full": "Safari 11",
+    "family": "JavaScriptCore",
+    "short": "SF 11",
+    "unstable": true
+  },
   "safaritp": {
     "full": "Safari Technology Preview Release 27",
     "family": "JavaScriptCore",
@@ -1717,5 +1723,13 @@
     "equals": "safari10_1",
     "release": "2017-03-27",
     "obsolete": false
+  },
+  "ios11": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 11",
+    "platformtype": "mobile",
+    "equals": "safari11",
+    "unstable": true
   }
 }
