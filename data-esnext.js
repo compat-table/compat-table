@@ -50,7 +50,7 @@ exports.tests = [
   name: 'do expressions',
   category: STAGE1,
   significance: 'small',
-  spec: 'http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions',
+  spec: 'https://gist.github.com/dherman/1c97dfb25179fa34a41b5fff040f9879',
   exec: function () {/*
     return do {
       let x = 23;
@@ -63,7 +63,7 @@ exports.tests = [
   }
 },
 {
-  name: 'function.sent',
+  name: 'Generator function.sent Meta Property',
   category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
@@ -981,45 +981,32 @@ exports.tests = [
   ]
 },
 {
-  name: 'class decorators',
+  name: 'Class and Property Decorators',
   category: STAGE2,
   significance: 'medium',
-  spec: 'https://github.com/wycats/javascript-decorators',
-  exec: function(){/*
-    class A {
-      @nonconf
-      get B() {}
-    }
-    function nonconf(target, name, descriptor) {
-      descriptor.configurable = false;
-      return descriptor;
-    }
-    return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
-  */},
-  res: {
-    babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
-    typescript: true,
-    duktape2_0: false,
-  }
-},
-{
-  name: 'class properties',
-  category: STAGE2,
-  significance: 'medium',
-  spec: 'https://github.com/jeffmo/es-class-properties',
-  exec: function () {/*
-    class C {
-      x = 'x';
-      static y = 'y';
-    }
-    return new C().x + C.y === 'xy';
-  */},
-  res: {
-    babel: true,
-    tr: true,
-    typescript: true,
-    duktape2_0: false,
-  }
+  spec: 'http://tc39.github.io/proposal-decorators/',
+  subtests: [
+    {
+      name: 'class decorators',
+      spec: 'https://github.com/wycats/javascript-decorators',
+      exec: function(){/*
+        class A {
+          @nonconf
+          get B() {}
+        }
+        function nonconf(target, name, descriptor) {
+          descriptor.configurable = false;
+          return descriptor;
+        }
+        return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
+      */},
+      res: {
+        babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
+        typescript: true,
+        duktape2_0: false,
+      }
+    },
+  ],
 },
 {
   name: 'Realms',
@@ -1037,49 +1024,51 @@ exports.tests = [
   }
 },
 {
-  name: 'object rest properties',
-  significance: 'small',
-  spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  category: STAGE3,
-  exec: function () {/*
-    var {a, ...rest} = {a: 1, b: 2, c: 3};
-    return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
-  */},
-  res: {
-    babel: true,
-    typescript: true,
-    jsx: true,
-    firefox55: true,
-    chrome58: 'flagged',
-    chrome61: true,
-    safari11: true,
-    safaritp: true,
-    webkit: true,
-    duktape2_0: false,
-  }
-},
-{
-  name: 'object spread properties',
-  category: STAGE3,
+  name: 'object rest/spread properties',
   significance: 'medium',
-  spec: 'https://github.com/sebmarkbage/ecmascript-rest-spread',
-  exec: function () {/*
-    var spread = {b: 2, c: 3};
-    var O = {a: 1, ...spread};
-    return O !== spread && (O.a + O.b + O.c) === 6;
-  */},
-  res: {
-    babel: true,
-    jsx: true,
-    firefox55: true,
-    chrome58: 'flagged',
-    chrome61: true,
-    typescript: true,
-    safari11: true,
-    safaritp: true,
-    webkit: true,
-    duktape2_0: false,
-  }
+  category: STAGE3,
+  spec: 'https://github.com/tc39/proposal-object-rest-spread',
+  subtests: [
+    {
+      name: 'object rest properties',
+      exec: function () {/*
+        var {a, ...rest} = {a: 1, b: 2, c: 3};
+        return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
+      */},
+      res: {
+        babel: true,
+        typescript: true,
+        jsx: true,
+        firefox55: true,
+        chrome58: 'flagged',
+        chrome61: true,
+        safari11: true,
+        safaritp: true,
+        webkit: true,
+        duktape2_0: false,
+      }
+    },
+    {
+      name: 'object spread properties',
+      exec: function () {/*
+        var spread = {b: 2, c: 3};
+        var O = {a: 1, ...spread};
+        return O !== spread && (O.a + O.b + O.c) === 6;
+      */},
+      res: {
+        babel: true,
+        jsx: true,
+        firefox55: true,
+        chrome58: 'flagged',
+        chrome61: true,
+        typescript: true,
+        safari11: true,
+        safaritp: true,
+        webkit: true,
+        duktape2_0: false,
+      }
+    },
+  ],
 },
 {
   name: 'String.prototype.at',
@@ -1330,7 +1319,7 @@ exports.tests = [
   name: 'Observable',
   category: STAGE1,
   significance: 'medium',
-  spec: 'https://github.com/zenparsing/es-observable',
+  spec: 'https://github.com/tc39/proposal-observable',
   'subtests': [
     {
       name: 'basic support',
@@ -1559,7 +1548,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Async iteration',
+  name: 'Asynchronous Iterators',
   category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-async-iteration',
@@ -1614,7 +1603,7 @@ exports.tests = [
 },
 {
   name: 'RegExp named capture groups',
-  spec: 'https://github.com/goyakin/es-regexp-named-groups',
+  spec: 'https://github.com/tc39/proposal-regexp-named-groups',
   category: STAGE3,
   significance: 'small',
   exec: function(){/*
@@ -1632,7 +1621,7 @@ exports.tests = [
   }
 },
 {
-  name: 'RegExp lookbehind',
+  name: 'RegExp Lookbehind Assertions',
   spec: 'https://github.com/tc39/proposal-regexp-lookbehind',
   category: STAGE3,
   significance: 'small',
@@ -1868,7 +1857,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'frozen realms',
+  name: 'Frozen Realms API',
   category: STAGE1,
   significance: 'medium',
   spec: 'https://github.com/FUDCo/frozen-realms',
@@ -1881,13 +1870,29 @@ exports.tests = [
   }
 },
 {
-  name: 'private fields',
+  name: 'class fields',
   category: STAGE2,
   significance: 'medium',
-  spec: 'https://github.com/zenparsing/es-private-fields',
+  spec: 'https://github.com/tc39/proposal-class-fields',
   subtests: [
     {
-      name: 'basic support',
+      name: 'class properties',
+      exec: function () {/*
+        class C {
+          x = 'x';
+          static y = 'y';
+        }
+        return new C().x + C.y === 'xy';
+      */},
+      res: {
+        babel: true,
+        tr: true,
+        typescript: true,
+        duktape2_0: false,
+      }
+    },
+    {
+      name: 'private fields basic support',
       exec: function () {/*
         class C {
           #x;
@@ -1905,7 +1910,7 @@ exports.tests = [
       }
     },
     {
-      name: 'initializers',
+      name: 'private fields initializers',
       exec: function () {/*
         class C {
           #x = 42;
@@ -1984,10 +1989,10 @@ exports.tests = [
   ]
 },
 {
-  name: 'Function.prototype.toString',
+  name: 'Function.prototype.toString revision',
   category: STAGE3,
   significance: 'small',
-  spec: 'https://tc39.github.io/Function-prototype-toString-revision/',
+  spec: 'https://github.com/tc39/Function-prototype-toString-revision',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString',
   subtests: [{
     name: 'functions created with the Function constructor',
