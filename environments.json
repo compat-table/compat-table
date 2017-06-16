@@ -144,11 +144,11 @@
     "family": "Chakra",
     "short": "IE 7",
     "release": "2006-10-18",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
-      "esnext",
+      "esintl",
       "non-standard"
     ]
   },
@@ -157,11 +157,12 @@
     "family": "Chakra",
     "short": "IE 8",
     "release": "2009-03-19",
-    "obsolete": true,
+    "retire": "2016-01-12",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
-      "esnext",
+      "esintl",
       "non-standard"
     ]
   },
@@ -170,13 +171,15 @@
     "family": "Chakra",
     "short": "IE 9",
     "release": "2011-03-14",
-    "obsolete": true
+    "retire": "2016-01-12",
+    "obsolete": "very"
   },
   "ie10": {
     "full": "Internet Explorer",
     "family": "Chakra",
     "short": "IE 10",
     "release": "2012-10-26",
+    "retire": "2016-01-12",
     "obsolete": true
   },
   "ie11": {
@@ -191,30 +194,34 @@
     "family": "Chakra",
     "short": "Edge 12",
     "release": "2015-07-15",
-    "obsolete": true,
-    "note_id": "edge-experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    "obsolete": true
   },
   "edge13": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 13",
     "release": "2015-11-05",
-    "obsolete": true,
-    "note_id": "edge-experimental-flag"
+    "obsolete": true
   },
   "edge14": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 14",
     "release": "2016-08-02",
-    "note_id": "edge-experimental-flag"
+    "obsolete": false
   },
   "edge15": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 15",
-    "note_id": "edge-experimental-flag"
+    "release": "2017-04-11",
+    "obsolete": false
+  },
+  "edge16": {
+    "full": "Microsoft Edge",
+    "family": "Chakra",
+    "short": "Edge 16 Preview",
+    "unstable": true
   },
   "firefox1": {
     "full": "Firefox",
