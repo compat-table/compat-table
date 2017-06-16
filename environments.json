@@ -144,11 +144,12 @@
     "family": "Chakra",
     "short": "IE 7",
     "release": "2006-10-18",
-    "obsolete": true,
+    "retire": "2016-01-12",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
-      "esnext",
+      "esintl",
       "non-standard"
     ]
   },
@@ -157,11 +158,12 @@
     "family": "Chakra",
     "short": "IE 8",
     "release": "2009-03-19",
-    "obsolete": true,
+    "retire": "2016-01-12",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
-      "esnext",
+      "esintl",
       "non-standard"
     ]
   },
@@ -170,14 +172,16 @@
     "family": "Chakra",
     "short": "IE 9",
     "release": "2011-03-14",
-    "obsolete": true
+    "retire": "2016-01-12",
+    "obsolete": "very"
   },
   "ie10": {
     "full": "Internet Explorer",
     "family": "Chakra",
     "short": "IE 10",
     "release": "2012-10-26",
-    "obsolete": true
+    "retire": "2016-01-12",
+    "obsolete": "very"
   },
   "ie11": {
     "full": "Internet Explorer",
