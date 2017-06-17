@@ -3,6 +3,7 @@ var common = require('./data-common');
 var typescript = common.typescript;
 var firefox = common.firefox;
 var chrome = common.chrome;
+var edge = common.edge;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -102,7 +103,7 @@ exports.tests = [
         return typeof SIMD !== 'undefined';
       */},
       res: {
-        edge12: "flagged",
+        edge12: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -116,7 +117,7 @@ exports.tests = [
         return typeof SIMD.Float32x4 === 'function';
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -130,7 +131,7 @@ exports.tests = [
         return typeof SIMD.Int32x4 === 'function';
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -146,7 +147,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -158,7 +159,7 @@ exports.tests = [
         return typeof SIMD.Int8x16 === 'function';
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -174,7 +175,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -188,7 +189,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -202,7 +203,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -216,7 +217,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -230,7 +231,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -244,7 +245,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -258,7 +259,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -274,7 +275,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -292,7 +293,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -308,7 +309,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -324,7 +325,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -340,7 +341,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -354,7 +355,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -370,7 +371,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -386,7 +387,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -402,7 +403,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -418,7 +419,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -434,7 +435,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -450,7 +451,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -466,7 +467,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -482,7 +483,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -500,7 +501,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -515,7 +516,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -530,7 +531,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -545,7 +546,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -559,7 +560,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -577,7 +578,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         edge15: false,
         duktape2_0: false,
       }
@@ -592,7 +593,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -610,7 +611,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         edge15: false,
         duktape2_0: false,
       }
@@ -625,7 +626,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -643,7 +644,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -657,7 +658,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -675,7 +676,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -691,7 +692,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -707,7 +708,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -721,7 +722,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -737,7 +738,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -755,7 +756,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -771,7 +772,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -785,7 +786,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -801,7 +802,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -817,7 +818,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -833,7 +834,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -848,7 +849,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -863,7 +864,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -878,7 +879,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -894,7 +895,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -910,7 +911,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -926,7 +927,7 @@ exports.tests = [
         });
       */},
       res: {
-        edge13: "flagged",
+        edge13: edge.experimental,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -944,7 +945,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -960,7 +961,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     },
@@ -974,7 +975,7 @@ exports.tests = [
       res: {
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
-        edge14: "flagged",
+        edge14: edge.experimental,
         duktape2_0: false,
       }
     }
@@ -1100,7 +1101,6 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        ie7: false,
         edge12: true,
         firefox2: false,
         firefox3_5: true,
@@ -1134,7 +1134,6 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
-        ie7: false,
         edge12: true,
         firefox2: false,
         firefox3_5: true,

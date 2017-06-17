@@ -191,30 +191,34 @@
     "family": "Chakra",
     "short": "Edge 12",
     "release": "2015-07-15",
-    "obsolete": true,
-    "note_id": "edge-experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    "obsolete": true
   },
   "edge13": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 13",
     "release": "2015-11-05",
-    "obsolete": true,
-    "note_id": "edge-experimental-flag"
+    "obsolete": true
   },
   "edge14": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 14",
     "release": "2016-08-02",
-    "note_id": "edge-experimental-flag"
+    "obsolete": false
   },
   "edge15": {
     "full": "Microsoft Edge",
     "family": "Chakra",
     "short": "Edge 15",
-    "note_id": "edge-experimental-flag"
+    "release": "2017-04-11",
+    "obsolete": false
+  },
+  "edge16": {
+    "full": "Microsoft Edge",
+    "family": "Chakra",
+    "short": "Edge 16 Preview",
+    "unstable": true
   },
   "firefox1": {
     "full": "Firefox",

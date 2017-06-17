@@ -4,6 +4,7 @@ var babel = common.babel;
 var typescript = common.typescript;
 var firefox = common.firefox;
 var chrome = common.chrome;
+var edge = common.edge;
 
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
@@ -27,7 +28,7 @@ exports.tests = [
           babel: true,
           closure: true,
           typescript: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge14: true,
           firefox42: firefox.nightly,
           firefox52: true,
@@ -49,7 +50,7 @@ exports.tests = [
           babel: true,
           closure: true,
           typescript: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge14: true,
           firefox48: firefox.nightly,
           firefox52: true,
@@ -312,7 +313,7 @@ exports.tests = [
           typescript: typescript.corejs,
           es7shim: true,
           firefox48: true,
-          edge14: "flagged",
+          edge14: edge.experimental,
           edge15: true,
           chrome52: "flagged",
           chrome57: true,
@@ -338,7 +339,7 @@ exports.tests = [
           typescript: typescript.corejs,
           es7shim: true,
           firefox48: true,
-          edge14: "flagged",
+          edge14: edge.experimental,
           edge15: true,
           chrome52: "flagged",
           chrome57: true,
@@ -429,7 +430,7 @@ exports.tests = [
           typescript: typescript.asyncawait,
           chrome52: "flagged",
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -460,7 +461,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -482,7 +483,7 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: "flagged",
+          edge14: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -503,7 +504,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -531,7 +532,7 @@ exports.tests = [
           typescript: typescript.asyncawait,
           chrome52: "flagged",
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -560,7 +561,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -581,7 +582,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -607,7 +608,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -628,7 +629,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -659,7 +660,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -690,7 +691,7 @@ exports.tests = [
           typescript: null,
           chrome52: null,
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -719,7 +720,7 @@ exports.tests = [
           typescript: false, // still buggy output
           chrome52: "flagged",
           chrome55: true,
-          edge13: "flagged",
+          edge13: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -743,7 +744,7 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: "flagged",
+          edge14: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -793,7 +794,7 @@ exports.tests = [
           chrome52: null,
           chrome55: true,
           edge13: false,
-          edge14: "flagged",
+          edge14: edge.experimental,
           edge15: true,
           firefox52: true,
           safari10_1: true,
@@ -816,7 +817,8 @@ exports.tests = [
          return typeof SharedArrayBuffer === 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -835,7 +837,8 @@ exports.tests = [
          return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           firefox55: true,
@@ -853,7 +856,8 @@ exports.tests = [
          return 'byteLength' in SharedArrayBuffer.prototype;
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -873,7 +877,8 @@ exports.tests = [
          return typeof SharedArrayBuffer.prototype.slice === 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           firefox55: true,
@@ -890,7 +895,8 @@ exports.tests = [
          return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox52: firefox.developer,
           firefox53: firefox.sharedmem,
           chrome48: chrome.sharedmem,
@@ -909,7 +915,8 @@ exports.tests = [
          return typeof Atomics.add == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -929,7 +936,8 @@ exports.tests = [
          return typeof Atomics.and == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -949,7 +957,8 @@ exports.tests = [
          return typeof Atomics.compareExchange == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -969,7 +978,8 @@ exports.tests = [
          return typeof Atomics.exchange == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -989,7 +999,8 @@ exports.tests = [
          return typeof Atomics.wait == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1009,7 +1020,8 @@ exports.tests = [
          return typeof Atomics.wake == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox48: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1029,7 +1041,8 @@ exports.tests = [
          return typeof Atomics.isLockFree == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1049,7 +1062,8 @@ exports.tests = [
          return typeof Atomics.load == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1069,7 +1083,8 @@ exports.tests = [
          return typeof Atomics.or == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1089,7 +1104,8 @@ exports.tests = [
          return typeof Atomics.store == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1109,7 +1125,8 @@ exports.tests = [
          return typeof Atomics.sub == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1129,7 +1146,8 @@ exports.tests = [
          return typeof Atomics.xor == 'function';
          */},
         res: {
-          edge15: "flagged",
+          edge15: edge.experimental,
+          edge16: true,
           firefox46: firefox.nightly,
           firefox51: firefox.developer,
           firefox53: firefox.sharedmem,
@@ -1265,7 +1283,7 @@ exports.tests = [
     res: {
       babel: true,
       closure: true,
-      edge13: "flagged",
+      edge13: edge.experimental,
       edge14: true,
       firefox47: true,
       safari10_1: true,
@@ -1295,7 +1313,7 @@ exports.tests = [
     res: {
       babel: true,
       closure: true,
-      edge13: "flagged",
+      edge13: edge.experimental,
       edge14: true,
       firefox47: true,
       typescript: true,

@@ -23,6 +23,13 @@
       "note_html": "TypeScript <code>async</code> / <code>await</code> requires native generators support."
     }
   },
+  "edge": {
+    "experimental": {
+      "val": "flagged",
+      "note_id": "edge-experimental-flag",
+      "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+    }
+  },
   "firefox": {
     "sharedmem": {
       "val": "flagged",
