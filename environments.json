@@ -148,7 +148,6 @@
     "obsolete": "very",
     "test_suites": [
       "es5",
-      "es6",
       "esintl",
       "non-standard"
     ]
@@ -159,10 +158,9 @@
     "short": "IE 8",
     "release": "2009-03-19",
     "retire": "2016-01-12",
-    "obsolete": "very",
+    "obsolete": true,
     "test_suites": [
       "es5",
-      "es6",
       "esintl",
       "non-standard"
     ]
@@ -173,7 +171,12 @@
     "short": "IE 9",
     "release": "2011-03-14",
     "retire": "2016-01-12",
-    "obsolete": "very"
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "esintl",
+      "non-standard"
+    ]
   },
   "ie10": {
     "full": "Internet Explorer",
@@ -181,7 +184,13 @@
     "short": "IE 10",
     "release": "2012-10-26",
     "retire": "2016-01-12",
-    "obsolete": "very"
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
+    ]
   },
   "ie11": {
     "full": "Internet Explorer",
