@@ -1045,7 +1045,7 @@ exports.tests = [
         chrome60: true,
         safari11: false,
         safaritp: false,
-        webkit: true,
+        webkit: false,
         duktape2_0: false,
       }
     },
@@ -1065,7 +1065,7 @@ exports.tests = [
         typescript: true,
         safari11: false,
         safaritp: false,
-        webkit: true,
+        webkit: false,
         duktape2_0: false,
       }
     },
