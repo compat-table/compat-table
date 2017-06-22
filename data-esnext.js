@@ -1043,8 +1043,8 @@ exports.tests = [
         firefox55: true,
         chrome58: 'flagged',
         chrome60: true,
-        safari11: true,
-        safaritp: true,
+        safari11: false,
+        safaritp: false,
         webkit: true,
         duktape2_0: false,
       }
@@ -1063,8 +1063,8 @@ exports.tests = [
         chrome58: 'flagged',
         chrome60: true,
         typescript: true,
-        safari11: true,
-        safaritp: true,
+        safari11: false,
+        safaritp: false,
         webkit: true,
         duktape2_0: false,
       }
