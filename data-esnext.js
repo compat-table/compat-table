@@ -83,7 +83,7 @@ exports.tests = [
 },
 {
   name: 'SIMD (Single Instruction, Multiple Data)',
-  category: STAGE3,
+  category: STAGE1,
   significance: 'large',
   spec: 'https://tc39.github.io/ecmascript_simd/',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD',
