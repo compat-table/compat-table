@@ -17076,11 +17076,38 @@ exports.tests = [
   ],
 },
 {
-  name: 'miscellaneous',
+  name: 'Updated identifier syntax',
   category: 'misc',
   significance: 'small',
-  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-names-and-keywords',
   subtests: [
+    {
+      name: 'var ⸯ;',
+      exec: function() {/*
+        try {
+          eval('var ⸯ');
+        } catch(e) {
+          return true;
+        }
+      */},
+      res: {
+        edge14: true,
+        firefox52: true,
+        chrome58: true,
+      },
+    },
+    {
+      name: 'var 𐋀;',
+      exec: function() {/*
+        var 𐋀;
+        return true;
+      */},
+      res: {
+        edge14: true,
+        firefox52: true,
+        chrome58: true,
+      },
+    },
     {
       name: 'no escaped reserved words as identifiers',
       exec: function() {/*
@@ -17108,6 +17135,14 @@ exports.tests = [
         duktape2_0: false,
       },
     },
+  ],
+},
+{
+  name: 'miscellaneous',
+  category: 'misc',
+  significance: 'small',
+  spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions',
+  subtests: [
     {
       name: 'duplicate property names in strict mode',
       exec: function(){/*
