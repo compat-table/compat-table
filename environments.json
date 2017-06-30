@@ -1612,6 +1612,21 @@
       "esintl"
     ]
   },
+  "node8": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 8",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome58",
+    "obsolete": false,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
   "duktape2_0": {
     "full": "Duktape 2.0",
     "family": "Duktape",
