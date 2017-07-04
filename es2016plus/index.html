@@ -117,7 +117,7 @@
 <th class="platform edge14 desktop" data-browser="edge14"><a href="#edge14" class="browser-name"><abbr title="Microsoft Edge">Edge 14</abbr></a></th>
 <th class="platform edge15 desktop" data-browser="edge15"><a href="#edge15" class="browser-name"><abbr title="Microsoft Edge">Edge 15</abbr></a></th>
 <th class="platform edge16 desktop unstable" data-browser="edge16"><a href="#edge16" class="browser-name"><abbr title="Microsoft Edge">Edge 16 Preview</abbr></a></th>
-<th class="platform firefox45 desktop" data-browser="firefox45"><a href="#firefox45" class="browser-name"><abbr title="Firefox">FF 45 ESR</abbr></a></th>
+<th class="platform firefox45 desktop obsolete" data-browser="firefox45"><a href="#firefox45" class="browser-name"><abbr title="Firefox">FF 45 ESR</abbr></a></th>
 <th class="platform firefox47 desktop obsolete" data-browser="firefox47"><a href="#firefox47" class="browser-name"><abbr title="Firefox">FF 47</abbr></a></th>
 <th class="platform firefox48 desktop obsolete" data-browser="firefox48"><a href="#firefox48" class="browser-name"><abbr title="Firefox">FF 48</abbr></a></th>
 <th class="platform firefox49 desktop obsolete" data-browser="firefox49"><a href="#firefox49" class="browser-name"><abbr title="Firefox">FF 49</abbr></a></th>
@@ -184,7 +184,7 @@
 <td class="tally" data-browser="edge14" data-tally="1">3/3</td>
 <td class="tally" data-browser="edge15" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">3/3</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/3</td>
@@ -248,7 +248,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -312,7 +312,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -381,7 +381,7 @@ return true;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -442,7 +442,7 @@ return true;
 <td class="tally" data-browser="edge14" data-tally="1">3/3</td>
 <td class="tally" data-browser="edge15" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">3/3</td>
-<td class="tally" data-browser="firefox45" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="1">3/3</td>
@@ -510,7 +510,7 @@ return [1, 2, 3].includes(1)
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -596,7 +596,7 @@ return 24;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -665,7 +665,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -738,7 +738,7 @@ return true;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -815,7 +815,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -884,7 +884,7 @@ return true;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -949,7 +949,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1015,7 +1015,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1086,7 +1086,7 @@ return passed;
 <td class="no" data-browser="edge14">No</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1159,7 +1159,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1222,7 +1222,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="edge14" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally" data-browser="edge15" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">4/4</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
@@ -1289,7 +1289,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1360,7 +1360,7 @@ return Array.isArray(e)
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="firefox45">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1432,7 +1432,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="edge14">No</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -1499,7 +1499,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="no" data-browser="edge14">No</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -1560,7 +1560,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally" data-browser="edge14" data-tally="0" data-flagged-tally="1">0/2</td>
 <td class="tally" data-browser="edge15" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">2/2</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="1">2/2</td>
@@ -1629,7 +1629,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1698,7 +1698,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -1759,7 +1759,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally" data-browser="edge14" data-tally="1">2/2</td>
 <td class="tally" data-browser="edge15" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">2/2</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/2</td>
@@ -1823,7 +1823,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -1887,7 +1887,7 @@ return Math.min(1,2,3,) === 1;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -1948,7 +1948,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="edge14" data-tally="0" data-flagged-tally="0.9333333333333333">0/15</td>
 <td class="tally" data-browser="edge15" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">15/15</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/15</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/15</td>
@@ -2023,7 +2023,7 @@ p.then(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2098,7 +2098,7 @@ p.catch(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2163,7 +2163,7 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2228,7 +2228,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2299,7 +2299,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2372,7 +2372,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2437,7 +2437,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2507,7 +2507,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2572,7 +2572,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2647,7 +2647,7 @@ p.then(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2722,7 +2722,7 @@ p.then(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2795,7 +2795,7 @@ p.then(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2862,7 +2862,7 @@ return passed;
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2926,7 +2926,7 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="no" data-browser="edge14">No</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -2999,7 +2999,7 @@ p.then(function(result) {
 <td class="no flagged" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -3060,7 +3060,7 @@ p.then(function(result) {
 <td class="tally" data-browser="edge14" data-tally="0">0/17</td>
 <td class="tally" data-browser="edge15" data-tally="0" data-flagged-tally="1">0/17</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">17/17</td>
-<td class="tally" data-browser="firefox45" data-tally="0">0/17</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="0">0/17</td>
@@ -3124,7 +3124,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3188,7 +3188,7 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -3252,7 +3252,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3316,7 +3316,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -3380,7 +3380,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -3444,7 +3444,7 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3508,7 +3508,7 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3572,7 +3572,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3636,7 +3636,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3700,7 +3700,7 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3764,7 +3764,7 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3828,7 +3828,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3892,7 +3892,7 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -3956,7 +3956,7 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -4020,7 +4020,7 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -4084,7 +4084,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -4148,7 +4148,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no flagged" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[4]</sup></a></td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
@@ -4219,7 +4219,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -4286,7 +4286,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -4353,7 +4353,7 @@ return (function(){
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -4416,7 +4416,7 @@ return (function(){
 <td class="tally" data-browser="edge14" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
 <td class="tally" data-browser="edge15" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
 <td class="tally unstable" data-browser="edge16" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
-<td class="tally" data-browser="firefox45" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0.875" style="background-color:hsl(105,47%,50%)">14/16</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="1">16/16</td>
@@ -4485,7 +4485,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4555,7 +4555,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4625,7 +4625,7 @@ return true;
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4694,7 +4694,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4764,7 +4764,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4834,7 +4834,7 @@ return true;
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4905,7 +4905,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -4976,7 +4976,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5048,7 +5048,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5117,7 +5117,7 @@ return true;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5185,7 +5185,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5256,7 +5256,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5327,7 +5327,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5399,7 +5399,7 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5468,7 +5468,7 @@ return true;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5536,7 +5536,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5597,7 +5597,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally" data-browser="edge14" data-tally="1">4/4</td>
 <td class="tally" data-browser="edge15" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="edge16" data-tally="1">4/4</td>
-<td class="tally" data-browser="firefox45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox47" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox48" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
 <td class="tally obsolete" data-browser="firefox49" data-tally="1">4/4</td>
@@ -5665,7 +5665,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5733,7 +5733,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="firefox45">Yes</td>
+<td class="yes obsolete" data-browser="firefox45">Yes</td>
 <td class="yes obsolete" data-browser="firefox47">Yes</td>
 <td class="yes obsolete" data-browser="firefox48">Yes</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5806,7 +5806,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5879,7 +5879,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="yes obsolete" data-browser="firefox49">Yes</td>
@@ -5944,7 +5944,7 @@ return i === 0;
 <td class="yes" data-browser="edge14">Yes</td>
 <td class="yes" data-browser="edge15">Yes</td>
 <td class="yes unstable" data-browser="edge16">Yes</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
@@ -6017,7 +6017,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="no" data-browser="edge14">No</td>
 <td class="no" data-browser="edge15">No</td>
 <td class="no unstable" data-browser="edge16">No</td>
-<td class="no" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
 <td class="no obsolete" data-browser="firefox48">No</td>
 <td class="no obsolete" data-browser="firefox49">No</td>
