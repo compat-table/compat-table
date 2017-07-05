@@ -90,53 +90,56 @@
       "es2016plus"
     ]
   },
-  "konq43": {
+  "konq4_3": {
     "full": "Konqueror 4.3",
     "family": "KJS",
     "short": "Konq 4.3",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5"
     ]
   },
-  "konq44": {
+  "konq4_4": {
     "full": "Konqueror 4.4",
-    "short": "Konq 4.4",
     "family": "KJS",
-    "obsolete": true,
+    "short": "Konq 4.4",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq49": {
+  "konq4_9": {
     "full": "Konqueror 4.9",
     "family": "KJS",
     "short": "Konq 4.9",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq413": {
+  "konq4_13": {
     "full": "Konqueror 4.13",
     "family": "KJS",
     "short": "Konq 4.13",
     "obsolete": true,
     "test_suites": [
-      "es5"
+      "es5",
+      "non-standard"
     ]
   },
-  "konq414": {
+  "konq4_14": {
     "full": "Konqueror 4.14",
-    "short": "KQ<br>4.14",
     "family": "KJS",
+    "short": "Konq 4.14",
+    "obsolete": false,
     "note_id": "khtml",
     "note_html": "Results are only applicable for the KHTML rendering engine.",
     "test_suites": [
       "es5",
-      "es6"
+      "es6",
+      "non-standard"
     ]
   },
   "ie7": {
