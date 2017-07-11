@@ -557,7 +557,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       cell.addClass({
         'true': "yes",
         'false': "no",
-        'undefined': "no",
+        'undefined': 'unknown',
         'tally': 'tally',
         'flagged': 'no flagged',
         'needs-polyfill-or-native': 'no needs-polyfill-or-native',
@@ -596,8 +596,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           strict: 'Strict',
           flagged: 'Flag',
           'true': 'Yes',
-          'null': '?',
-        }[result] || 'No');
+          'false': 'No',
+        }[result] || '?');
       }
 
       if (footnote) {
