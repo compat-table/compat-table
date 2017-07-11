@@ -95,7 +95,7 @@ exports.tests = [
     subtests: [
       {
         name: 'Object.values',
-        spec: 'https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor',
+        spec: 'https://tc39.github.io/ecma262/#sec-object.values',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values',
         category: '2017 features',
         significance: 'medium',
@@ -122,6 +122,7 @@ exports.tests = [
       },
       {
         name: 'Object.entries',
+        spec: 'https://tc39.github.io/ecma262/#sec-object.entries',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries',
         exec: function () {/*
          var obj = Object.create({ a: "qux", d: "qux" });
@@ -150,6 +151,7 @@ exports.tests = [
       },
       {
         name: 'Object.getOwnPropertyDescriptors',
+        spec: 'https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors',
         exec: function () {/*
           var object = {a: 1};
@@ -299,6 +301,7 @@ exports.tests = [
     subtests: [
       {
         name: 'String.prototype.padStart',
+        spec: 'https://tc39.github.io/ecma262/#sec-string.prototype.padstart',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart',
         exec: function(){/*
          return 'hello'.padStart(10) === '     hello'
@@ -326,6 +329,7 @@ exports.tests = [
       },
       {
         name: 'String.prototype.padEnd',
+        spec: 'https://tc39.github.io/ecma262/#sec-string.prototype.padend',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd',
         exec: function(){/*
          return 'hello'.padEnd(10) === 'hello     '
@@ -406,7 +410,7 @@ exports.tests = [
     name: 'async functions',
     category: '2017 features',
     significance: 'large',
-    spec: 'https://tc39.github.io/ecmascript-asyncawait/',
+    spec: 'https://tc39.github.io/ecma262/#sec-async-function-definitions',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function',
     subtests: [
       {
@@ -812,10 +816,10 @@ exports.tests = [
     name: 'shared memory and atomics',
     category: '2017 features',
     significance: 'medium',
-    spec: 'https://github.com/tc39/ecmascript_sharedmem',
     'subtests': [
       {
         name: 'SharedArrayBuffer',
+        spec: 'https://tc39.github.io/ecma262/#sec-sharedarraybuffer-objects',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer',
         exec: function () {/*
          return typeof SharedArrayBuffer === 'function';
@@ -855,6 +859,7 @@ exports.tests = [
       },
       {
         name: 'SharedArrayBuffer.prototype.byteLength',
+        spec: 'https://tc39.github.io/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength',
         exec: function () {/*
          return 'byteLength' in SharedArrayBuffer.prototype;
@@ -876,6 +881,7 @@ exports.tests = [
       },
       {
         name: 'SharedArrayBuffer.prototype.slice',
+        spec: 'https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.slice',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice',
         exec: function () {/*
          return typeof SharedArrayBuffer.prototype.slice === 'function';
@@ -895,6 +901,7 @@ exports.tests = [
       },
       {
         name: 'SharedArrayBuffer.prototype[Symbol.toStringTag]',
+        spec: 'https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.toString',
         exec: function () {/*
          return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
          */},
@@ -914,6 +921,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.add',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.add',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add',
         exec: function () {/*
          return typeof Atomics.add == 'function';
@@ -935,6 +943,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.and',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.and',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and',
         exec: function () {/*
          return typeof Atomics.and == 'function';
@@ -956,6 +965,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.compareExchange',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.compareExchange',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange',
         exec: function () {/*
          return typeof Atomics.compareExchange == 'function';
@@ -977,6 +987,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.exchange',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.exchange',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange',
         exec: function () {/*
          return typeof Atomics.exchange == 'function';
@@ -998,6 +1009,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.wait',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.wait',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait',
         exec: function () {/*
          return typeof Atomics.wait == 'function';
@@ -1019,6 +1031,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.wake',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.wake',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake',
         exec: function () {/*
          return typeof Atomics.wake == 'function';
@@ -1040,6 +1053,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.isLockFree',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.isLockFree',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree',
         exec: function () {/*
          return typeof Atomics.isLockFree == 'function';
@@ -1061,6 +1075,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.load',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.load',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load',
         exec: function () {/*
          return typeof Atomics.load == 'function';
@@ -1082,6 +1097,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.or',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.or',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or',
         exec: function () {/*
          return typeof Atomics.or == 'function';
@@ -1103,6 +1119,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.store',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.store',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store',
         exec: function () {/*
          return typeof Atomics.store == 'function';
@@ -1124,6 +1141,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.sub',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.sub',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub',
         exec: function () {/*
          return typeof Atomics.sub == 'function';
@@ -1145,6 +1163,7 @@ exports.tests = [
       },
       {
         name: 'Atomics.xor',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.xor',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor',
         exec: function () {/*
          return typeof Atomics.xor == 'function';
