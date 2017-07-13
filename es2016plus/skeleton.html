@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
     <meta name="viewport" content="width=device-width">
-    <title>ECMAScript Next compatibility table</title>
+    <title>ECMAScript 2016+ compatibility table</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../master.js"></script>
+    <script>
+      var __script_executed = {};
+      if (typeof global === 'undefined') {
+        this.lacksGlobal = true;
+        var global = this;
+      }
+    </script>
     <script>
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
-      if (typeof global === 'undefined') {
-        this.lacksGlobal = true;
-        var global = this;
-      }
     </script>
 </head>
 <body class="es2016plus">
@@ -33,7 +36,7 @@
         <a href="../es5">5</a><!--
         --><a href="../es6">6</a><!--
         --><a href="../es2016plus" class="current">2016+</a><!--
-        --><a href="../esnext" >next</a><!--
+        --><a href="../esnext">next</a><!--
         --><a href="../esintl">intl</a><!--
         --><a href="../non-standard">non-standard</a>
       </span>
@@ -98,6 +101,13 @@
 
     <table id="table-wrapper">
       <thead>
+        <tr>
+          <th colspan="3" class="platformtype"></th>
+          <th colspan="5" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
+          <th colspan="17" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+          <th colspan="4" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
+        </tr>
         <tr>
           <th class="test-name">Feature name</th>
           <th class="current">Current browser</th>

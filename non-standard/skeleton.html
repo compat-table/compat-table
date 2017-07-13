@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
@@ -15,12 +15,14 @@
         this.lacksGlobal = true;
         var global = this;
       }
+    </script>
+    <script>
       (function() {
         var s = document.createElement('script'),
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
     </script>
@@ -55,6 +57,8 @@
           <script data-gratipay-username="kangax" data-gratipay-widget="button" src="https://grtp.co/v1.js"></script>
           &amp;
           <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
+          &amp;
+          <a href="https://github.com/zloirock" style="color:#eee">zloirock</a>
         </span>
 
         <iframe class="hidden-tablet" src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
@@ -96,10 +100,16 @@
       <table id="table-wrapper">
         <thead>
           <tr>
+            <th colspan="3" class="platformtype"></th>
+            <th colspan="5" class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
+            <th colspan="17" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+            <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+            <th colspan="4" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
+          </tr>
+          <tr>
             <th class="test-name">Feature name</th>
-
-            <th class="current">Current browser</th><th></th>
-
+            <th class="current">Current browser</th>
+            <th></th>
             <!-- TABLE HEADERS -->
           </tr>
         </thead>
@@ -107,9 +117,9 @@
           <!-- TABLE BODY -->
         </tbody>
       </table>
-    </div>
-    <div id="footnotes">
-      <!-- FOOTNOTES -->
+      <div id="footnotes">
+        <!-- FOOTNOTES -->
+      </div>
     </div>
     <pre class="info-tooltip" style="display:none"></pre>
     <script src="../jquery.floatThead.min.js"></script>
