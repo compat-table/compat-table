@@ -8782,6 +8782,8 @@ exports.tests = [
         chrome56: true,
         node8: true,
         duktape2_0: false,
+        safaritp: true,
+        webkit: true,
       },
     },
     {

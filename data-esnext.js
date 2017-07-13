@@ -1045,7 +1045,7 @@ exports.tests = [
         chrome60: true,
         safari11: false,
         safaritp: false,
-        webkit: false,
+        webkit: true,
         duktape2_0: false,
       }
     },
