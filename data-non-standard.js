@@ -271,8 +271,8 @@ exports.tests = [
      */},
   res: {
     safari10_1: true,
-    safaritp: true,
-    webkit: true,
+    safaritp: false,
+    webkit: false,
     duktape2_0: false,
   },
 },
