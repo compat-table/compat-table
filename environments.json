@@ -90,53 +90,80 @@
       "es2016plus"
     ]
   },
-  "konq43": {
+  "konq4_3": {
     "full": "Konqueror 4.3",
     "family": "KJS",
     "short": "Konq 4.3",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5"
     ]
   },
-  "konq44": {
+  "konq4_4": {
     "full": "Konqueror 4.4",
-    "short": "Konq 4.4",
     "family": "KJS",
-    "obsolete": true,
+    "short": "Konq 4.4",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq49": {
+  "konq4_9": {
     "full": "Konqueror 4.9",
     "family": "KJS",
     "short": "Konq 4.9",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_11": {
+    "full": "Konqueror 4.11",
+    "family": "KJS",
+    "short": "Konq 4.11",
+    "release": "2013-08-14",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_12": {
+    "full": "Konqueror 4.12",
+    "family": "KJS",
+    "short": "Konq 4.12",
+    "release": "2013-12-18",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_13": {
+    "full": "Konqueror 4.13",
+    "family": "KJS",
+    "short": "Konq 4.13",
+    "release": "2014-04-16",
     "obsolete": true,
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq413": {
-    "full": "Konqueror 4.13",
-    "family": "KJS",
-    "short": "Konq 4.13",
-    "obsolete": true,
-    "test_suites": [
-      "es5"
-    ]
-  },
-  "konq414": {
+  "konq4_14": {
     "full": "Konqueror 4.14",
-    "short": "KQ<br>4.14",
     "family": "KJS",
+    "short": "Konq 4.14",
+    "release": "2014-08-20",
+    "obsolete": false,
     "note_id": "khtml",
     "note_html": "Results are only applicable for the KHTML rendering engine.",
     "test_suites": [
       "es5",
-      "es6"
+      "es6",
+      "non-standard"
     ]
   },
   "ie7": {
