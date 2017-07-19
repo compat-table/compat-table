@@ -1564,8 +1564,46 @@ exports.tests = [
       && result.groups[3] === '11';
   */},
   res : {
+    ie11: false,
+    firefox2: false,
+    chrome61: "flagged",
     duktape2_0: false,
   }
+},
+{
+  name: 's (dotAll) flag for regular expressions',
+  spec: 'https://github.com/tc39/proposal-regexp-dotall-flag',
+  category: STAGE3,
+  significance: 'small',
+  exec: function(){/*
+    const regex = /foo.bar/s;
+    return regex.test('foo\nbar');
+  */},
+  res : {
+    es6tr: null,
+    tr: null,
+    babel: null,
+    closure: null,
+    jsx: null,
+    typescript: null,
+    es6shim: null,
+    konq414: null,
+    ie7: null,
+    ie10: false,
+    firefox1: null,
+    firefox2: false,
+    opera12: null,
+    chrome1: null,
+    chrome61: "flagged",
+    safari1: null,
+    rhino1_7: null,
+    xs6: null,
+    jxa: null,
+    node0_10: null,
+    duktape2_0: null,
+    android1_5: null,
+    ios4: null,
+  },
 },
 {
   name: 'RegExp Lookbehind Assertions',
@@ -1577,6 +1615,8 @@ exports.tests = [
            !/(?<=a)b/.test('b');
   */},
   res : {
+    ie11: false,
+    firefox2: false,
     chrome50: "flagged",
     duktape2_0: false,
   }
@@ -1591,6 +1631,8 @@ exports.tests = [
     return regexGreekSymbol.test('π');
   */},
   res: {
+    ie11: false,
+    firefox2: false,
     chrome59: "flagged",
     duktape2_0: false,
   }
