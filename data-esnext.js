@@ -31,6 +31,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -42,6 +43,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox2: false,
         duktape2_0: false,
       },
     },
@@ -60,6 +62,7 @@ exports.tests = [
   */},
   res: {
     babel: true,
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -78,6 +81,7 @@ exports.tests = [
     return result === 'tromple';
   */},
   res: {
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -104,6 +108,7 @@ exports.tests = [
       */},
       res: {
         edge12: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -118,6 +123,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -132,6 +138,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -145,6 +152,7 @@ exports.tests = [
         return typeof SIMD.Int16x8 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -160,6 +168,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -173,6 +182,7 @@ exports.tests = [
         return typeof SIMD.Uint32x4 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -187,6 +197,7 @@ exports.tests = [
         return typeof SIMD.Uint16x8 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -201,6 +212,7 @@ exports.tests = [
         return typeof SIMD.Uint8x16 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -215,6 +227,7 @@ exports.tests = [
         return typeof SIMD.Bool32x4 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -229,6 +242,7 @@ exports.tests = [
         return typeof SIMD.Bool16x8 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -243,6 +257,7 @@ exports.tests = [
         return typeof SIMD.Bool8x16 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -260,6 +275,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -276,6 +292,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -291,6 +308,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -307,6 +325,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -323,6 +342,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -339,6 +359,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -356,6 +377,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -372,6 +394,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -388,6 +411,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -404,6 +428,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -420,6 +445,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -436,6 +462,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -452,6 +479,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -468,6 +496,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -484,6 +513,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -499,6 +529,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -514,6 +545,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -529,6 +561,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -544,6 +577,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -561,6 +595,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -576,6 +611,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -594,6 +630,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -609,6 +646,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -627,6 +665,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -642,6 +681,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -659,6 +699,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -674,6 +715,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -690,6 +732,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -706,6 +749,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -723,6 +767,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -739,6 +784,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -754,6 +800,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -770,6 +817,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -787,6 +835,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -803,6 +852,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -819,6 +869,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -835,6 +886,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -850,6 +902,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -865,6 +918,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -880,6 +934,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -896,6 +951,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -912,6 +968,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -928,6 +985,7 @@ exports.tests = [
       */},
       res: {
         edge13: edge.experimental,
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         duktape2_0: false,
@@ -943,6 +1001,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -959,6 +1018,7 @@ exports.tests = [
         });
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -973,6 +1033,7 @@ exports.tests = [
         return typeof SIMD.Float32x4.fromInt32x4 === 'function' && typeof SIMD.Float32x4.fromUint32x4 === 'function' && typeof SIMD.Int32x4.fromFloat32x4 === 'function' && typeof SIMD.Uint32x4.fromFloat32x4 === 'function';
       */},
       res: {
+        firefox2: false,
         firefox48: firefox.nightly,
         chrome37: chrome.simd,
         edge14: edge.experimental,
@@ -1004,6 +1065,7 @@ exports.tests = [
       res: {
         babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
         typescript: true,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1040,6 +1102,7 @@ exports.tests = [
         babel: true,
         typescript: true,
         jsx: true,
+        firefox2: false,
         firefox55: true,
         chrome58: 'flagged',
         chrome60: true,
@@ -1059,6 +1122,7 @@ exports.tests = [
       res: {
         babel: true,
         jsx: true,
+        firefox2: false,
         firefox55: true,
         chrome58: 'flagged',
         chrome60: true,
@@ -1083,6 +1147,7 @@ exports.tests = [
     babel: true,
     typescript: typescript.corejs,
     es7shim: true,
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1166,6 +1231,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1177,6 +1243,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1195,6 +1262,7 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
+      firefox2: false,
       firefox53: {
         val: false,
         note_id: 'ffox-global-property',
@@ -1234,6 +1302,7 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
+      firefox2: false,
       firefox53: {
         val: false,
         note_id: 'ffox-global-property',
@@ -1276,6 +1345,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1287,6 +1357,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1298,6 +1369,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1319,6 +1391,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1331,6 +1404,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1343,6 +1417,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1354,6 +1429,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1365,6 +1441,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1391,6 +1468,7 @@ exports.tests = [
   res: {
     babel: true,
     typescript: typescript.corejs,
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1407,6 +1485,7 @@ exports.tests = [
         return f();
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1416,6 +1495,7 @@ exports.tests = [
         return (_ => function.count)(1, 2, 3) === 3;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1430,6 +1510,7 @@ exports.tests = [
           && arr[2] === 3;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1456,6 +1537,7 @@ exports.tests = [
   */},
   res : {
     typescript: true,
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1475,6 +1557,7 @@ exports.tests = [
     })(2);
   */},
   res : {
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1491,6 +1574,7 @@ exports.tests = [
     return works && weakref.get() === undefined;
   */},
   res : {
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1514,6 +1598,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox2: false,
         firefox55: firefox.nightly,
         duktape2_0: false,
       }
@@ -1542,6 +1627,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        firefox2: false,
         firefox55: firefox.nightly,
         duktape2_0: false,
       }
@@ -1651,6 +1737,7 @@ exports.tests = [
           && !Reflect.isCallable(class {});
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1662,6 +1749,7 @@ exports.tests = [
           && Reflect.isConstructor(class {});
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1681,6 +1769,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1692,6 +1781,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1703,6 +1793,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1714,6 +1805,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1725,6 +1817,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1736,6 +1829,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1747,6 +1841,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1758,6 +1853,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1769,6 +1865,7 @@ exports.tests = [
       res: {
         babel: true,
         typescript: typescript.corejs,
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1786,6 +1883,7 @@ exports.tests = [
         return typeof Zone == 'function';
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1795,6 +1893,7 @@ exports.tests = [
         return 'current' in Zone;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1804,6 +1903,7 @@ exports.tests = [
         return 'name' in Zone.prototype;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1813,6 +1913,7 @@ exports.tests = [
         return 'parent' in Zone.prototype;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1822,6 +1923,7 @@ exports.tests = [
         return typeof Zone.prototype.fork == 'function';
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1831,6 +1933,7 @@ exports.tests = [
         return typeof Zone.prototype.run == 'function';
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1840,6 +1943,7 @@ exports.tests = [
         return typeof Zone.prototype.wrap == 'function';
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     }
@@ -1855,6 +1959,7 @@ exports.tests = [
       && typeof Reflect.Realm.prototype.spawn === 'function';
   */},
   res: {
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1877,6 +1982,7 @@ exports.tests = [
         babel: true,
         tr: true,
         typescript: true,
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1895,6 +2001,7 @@ exports.tests = [
         return new C(42).x() === 42;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1910,6 +2017,7 @@ exports.tests = [
         return new C().x() === 42;
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       }
     },
@@ -1929,6 +2037,7 @@ exports.tests = [
   res : {
     babel: true,
     typescript: typescript.corejs,
+    firefox2: false,
     duktape2_0: false,
   }
 },
@@ -1950,6 +2059,7 @@ exports.tests = [
         }(1e6)) === "foo";
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       },
     },
@@ -1972,6 +2082,7 @@ exports.tests = [
         return f(1e6) === "foo" && f(1e6+1) === "bar";
       */},
       res: {
+        firefox2: false,
         duktape2_0: false,
       },
     }
@@ -1991,6 +2102,7 @@ exports.tests = [
       return fn + '' === str;
     */},
     res: {
+      firefox2: false,
       firefox54: true,
       chrome59: "flagged",
       duktape2_0: false,
@@ -2003,6 +2115,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox2: false,
       firefox51: true,
       chrome50: true,
       safari10: true,
@@ -2018,6 +2131,7 @@ exports.tests = [
     res: {
       ie11: true,
       node4: true,
+      firefox2: false,
       firefox45: true,
       chrome50: true,
       safari3_1: true,
@@ -2032,6 +2146,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox2: false,
       firefox55: true,
       chrome50: true,
       safari10: true,
@@ -2046,6 +2161,7 @@ exports.tests = [
     */},
     res: {
       node4: true,
+      firefox2: false,
       firefox55: true,
       chrome50: true,
       safari10: true,
@@ -2059,6 +2175,7 @@ exports.tests = [
       return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
     */},
     res: {
+      firefox2: false,
       firefox54: true,
       chrome59: "flagged",
       duktape2_0: false,
@@ -2070,6 +2187,7 @@ exports.tests = [
       return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;
     */},
     res: {
+      firefox2: false,
       firefox54: true,
       chrome59: "flagged",
       duktape2_0: false,
