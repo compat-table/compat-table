@@ -415,6 +415,7 @@ exports.tests = [
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
   */},
   res: {
+    firefox2: false,
     firefox30: true,
     duktape2_0: false,
   }
@@ -619,6 +620,7 @@ exports.tests = [
   }],
   res: {
     ie7: false,
+    firefox2: false,
     firefox3: true,
     safari3_1: false,
     chrome7: false,
@@ -640,6 +642,7 @@ exports.tests = [
   */},
   res: {
     ie7: false,
+    firefox2: false,
     firefox3: true,
     firefox46: false,
     safari3_1: false,
@@ -667,6 +670,7 @@ exports.tests = [
     return passed;
   */},
   res: {
+    firefox2: false,
     firefox30: true,
     duktape2_0: false,
   },
@@ -921,6 +925,7 @@ exports.tests = [
     return typeof Object.observe == 'function';
   */},
   res: {
+    firefox2: false,
     chrome36: true,
     chrome49: false,
     node0_10: true,
