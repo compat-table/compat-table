@@ -1044,7 +1044,7 @@ exports.tests = [
         chrome58: 'flagged',
         chrome60: true,
         safari11: false,
-        safaritp: false,
+        safaritp: true,
         webkit: true,
         duktape2_0: false,
       }
@@ -1064,7 +1064,7 @@ exports.tests = [
         chrome60: true,
         typescript: true,
         safari11: false,
-        safaritp: false,
+        safaritp: true,
         webkit: false,
         duktape2_0: false,
       }
