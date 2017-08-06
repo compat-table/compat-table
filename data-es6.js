@@ -2753,7 +2753,6 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
-        closure: true,
         jsx: true,
         typescript: true,
         closure: true,
