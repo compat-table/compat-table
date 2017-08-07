@@ -1922,6 +1922,7 @@ exports.tests = [
      return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
      */},
     res: {
+      edge16: true,
       firefox51: true,
       chrome51: true,
       safari10: true,
