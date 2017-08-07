@@ -1262,6 +1262,8 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
+      babel: true,
+      typescript: typescript.corejs,
       firefox2: false,
       firefox53: {
         val: false,
@@ -1302,6 +1304,8 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
+      babel: true,
+      typescript: typescript.corejs,
       firefox2: false,
       firefox53: {
         val: false,
