@@ -128,9 +128,9 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.4">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
+<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.5">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20170626">Closure</abbr></a></th>
-<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.4">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform typescript compiler" data-browser="typescript"><a href="#typescript" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer">IE 11</abbr></a></th>
 <th class="platform edge12 desktop obsolete" data-browser="edge12"><a href="#edge12" class="browser-name"><abbr title="Microsoft Edge">Edge 12</abbr></a></th>
 <th class="platform edge13 desktop obsolete" data-browser="edge13"><a href="#edge13" class="browser-name"><abbr title="Microsoft Edge">Edge 13</abbr></a></th>
@@ -379,9 +379,9 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-global"><span><a class="anchor" href="#test-global">&#xA7;</a><a href="https://github.com/tc39/proposal-global">global</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel" data-tally="1">2/2</td>
 <td class="tally" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally" data-browser="typescript" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="edge12" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="edge13" data-tally="0">0/2</td>
@@ -443,9 +443,9 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -459,10 +459,10 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="chrome52">No</td>
 <td class="no obsolete" data-browser="chrome53">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
@@ -479,8 +479,8 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
 <td class="no" data-browser="safari10">No</td>
 <td class="no" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No<a href="#wk-global-property-note"><sup>[5]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#wk-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="safaritp">No<a href="#wk-global-property-note"><sup>[6]</sup></a></td>
+<td class="no unstable" data-browser="webkit">No<a href="#wk-global-property-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
@@ -512,9 +512,9 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="typescript">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -528,10 +528,10 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#ffox-global-property-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#ffox-global-property-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="chrome52">No</td>
 <td class="no obsolete" data-browser="chrome53">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
@@ -548,8 +548,8 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no" data-browser="safari10">No</td>
 <td class="no" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No<a href="#wk-global-property-note"><sup>[5]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#wk-global-property-note"><sup>[5]</sup></a></td>
+<td class="no unstable" data-browser="safaritp">No<a href="#wk-global-property-note"><sup>[6]</sup></a></td>
+<td class="no unstable" data-browser="webkit">No<a href="#wk-global-property-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -658,8 +658,8 @@ iterator.next().then(function(step){
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
 <td class="no" data-browser="firefox54">No</td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="chrome52">No</td>
 <td class="no obsolete" data-browser="chrome53">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
@@ -737,8 +737,8 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
 <td class="no" data-browser="firefox54">No</td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="chrome52">No</td>
 <td class="no obsolete" data-browser="chrome53">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
@@ -1941,7 +1941,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No<a href="#regenerator-decorators-legacy-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="babel">No<a href="#regenerator-decorators-legacy-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes" data-browser="typescript">Yes</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2064,7 +2064,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="edge12">Yes</td>
 <td class="yes obsolete" data-browser="edge13">Yes</td>
@@ -2126,7 +2126,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="edge12">Yes</td>
 <td class="yes obsolete" data-browser="edge13">Yes</td>
@@ -2188,7 +2188,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -2250,7 +2250,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -2455,15 +2455,15 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2517,15 +2517,15 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2579,15 +2579,15 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2641,15 +2641,15 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2703,15 +2703,15 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2765,15 +2765,15 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2827,15 +2827,15 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2889,15 +2889,15 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -2951,15 +2951,15 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3013,15 +3013,15 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3075,15 +3075,15 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3139,15 +3139,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3203,15 +3203,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3267,15 +3267,15 @@ return simdSmallIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3331,15 +3331,15 @@ return simdBoolIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3395,15 +3395,15 @@ return simdBoolTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3459,15 +3459,15 @@ return simdBoolTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3523,15 +3523,15 @@ return simdAllTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3587,15 +3587,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3651,15 +3651,15 @@ return simdAllTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3715,15 +3715,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3779,15 +3779,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3843,15 +3843,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3907,15 +3907,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -3971,15 +3971,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4035,15 +4035,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4099,15 +4099,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4163,15 +4163,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4227,15 +4227,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4291,15 +4291,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4355,15 +4355,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4419,15 +4419,15 @@ return simdFloatTypes.every(function(type){
 <td class="no unstable" data-browser="edge16">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4483,15 +4483,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4547,15 +4547,15 @@ return simdFloatTypes.every(function(type){
 <td class="no unstable" data-browser="edge16">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4611,15 +4611,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4675,15 +4675,15 @@ return simdBoolTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4739,15 +4739,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4803,15 +4803,15 @@ return simdBoolIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4867,15 +4867,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4931,15 +4931,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -4995,15 +4995,15 @@ return simdAllTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5059,15 +5059,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5123,15 +5123,15 @@ return simdIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5187,15 +5187,15 @@ return simdIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5251,15 +5251,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5315,15 +5315,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5379,15 +5379,15 @@ return simdFloatTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5443,15 +5443,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5507,15 +5507,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5571,15 +5571,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5635,15 +5635,15 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5699,15 +5699,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5763,15 +5763,15 @@ return simdSmallIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5827,15 +5827,15 @@ return simdFloatIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5891,15 +5891,15 @@ return simdBoolIntTypes.every(function(type){
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -5955,15 +5955,15 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -6017,15 +6017,15 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="no flagged unstable" data-browser="edge16">Flag<a href="#edge-experimental-flag-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="firefox45">No</td>
 <td class="no obsolete" data-browser="firefox47">No</td>
-<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
-<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="firefox53">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="firefox54">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox55">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
+<td class="no unstable" data-browser="firefox56">No<a href="#firefox-nightly-note"><sup>[7]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-simd-note"><sup>[10]</sup></a></td>
@@ -6194,7 +6194,7 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6256,7 +6256,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6318,7 +6318,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6390,7 +6390,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6453,7 +6453,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6516,7 +6516,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6578,7 +6578,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6640,7 +6640,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -6712,7 +6712,7 @@ return a === &apos;1a2b&apos;
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge12">No</td>
 <td class="no obsolete" data-browser="edge13">No</td>
@@ -7091,7 +7091,7 @@ return &apos;a&#x20BB7;b&apos;.at(1) === &apos;&#x20BB7;&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8229,7 +8229,7 @@ passed = true;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8554,7 +8554,7 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8616,7 +8616,7 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8678,7 +8678,7 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8740,7 +8740,7 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8802,7 +8802,7 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8864,7 +8864,7 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8926,7 +8926,7 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8988,7 +8988,7 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9050,7 +9050,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="closure" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[4]</sup></a></td>
 <td class="no not-applicable" data-browser="ie11" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge12" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="edge13" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9109,7 +9109,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="ffox-global-property-note">  <sup>[4]</sup> The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.</p><p id="wk-global-property-note">  <sup>[5]</sup> The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.</p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="regenerator-decorators-legacy-note">  <sup>[7]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="edge-experimental-flag-note">  <sup>[9]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="chrome-simd-note">  <sup>[10]</sup> The feature have to be enabled via --js-flags=&quot;--harmony-simd&quot; flag</p></div>
+    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="typescript-core-js-note">  <sup>[4]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="ffox-global-property-note">  <sup>[5]</sup> The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.</p><p id="wk-global-property-note">  <sup>[6]</sup> The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.</p><p id="firefox-nightly-note">  <sup>[7]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="regenerator-decorators-legacy-note">  <sup>[8]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="edge-experimental-flag-note">  <sup>[9]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="chrome-simd-note">  <sup>[10]</sup> The feature have to be enabled via --js-flags=&quot;--harmony-simd&quot; flag</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>

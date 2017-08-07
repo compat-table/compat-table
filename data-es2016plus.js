@@ -196,6 +196,8 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
+          babel: true,
+          typescript: typescript.corejs,
           edge15: true,
           firefox2: false,
           firefox50: true,
