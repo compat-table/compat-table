@@ -16,6 +16,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -31,6 +32,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -53,6 +55,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -69,6 +72,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -85,6 +89,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -148,6 +153,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome29: true,
         safari10_1: true,
@@ -172,6 +178,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -194,6 +201,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -216,6 +224,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -231,6 +240,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -247,6 +257,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -263,6 +274,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -326,6 +338,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome29: true,
         safari10_1: true,
@@ -350,6 +363,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -366,6 +380,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -382,6 +397,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome24: true,
         safari10: true,
@@ -445,6 +461,7 @@ exports.tests = [
       res: {
         ie11: true,
         edge12: true,
+        firefox2: false,
         firefox29: true,
         chrome29: true,
         safari10_1: true,
@@ -464,7 +481,7 @@ exports.tests = [
         ie9: false,
         edge12: false,
         edge14: true,
-        firefox29: false,
+        firefox2: false,
         firefox52: true,
         chrome24: null,
         chrome29: true,
@@ -496,7 +513,7 @@ exports.tests = [
         ie9: false,
         edge12: false,
         edge14: true,
-        firefox29: false, // Firefox bug #1266290
+        firefox2: false, // Firefox bug #1266290
         firefox52: true,
         chrome24: true,
         safari10: true,
