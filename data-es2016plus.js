@@ -110,6 +110,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           es7shim: true,
           typescript: typescript.corejs,
           firefox2: false,
@@ -140,6 +141,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           es7shim: true,
           typescript: typescript.corejs,
           firefox2: false,
@@ -171,6 +173,7 @@ exports.tests = [
           */},
         res: {
           babel: true,
+          closure: true,
           es7shim: true,
           typescript: typescript.corejs,
           edge15: true,
@@ -226,6 +229,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           es7shim: true,
           typescript: typescript.corejs,
           safari9: true,
@@ -325,6 +329,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           typescript: typescript.corejs,
           es7shim: true,
           firefox2: false,
@@ -354,6 +359,7 @@ exports.tests = [
          */},
         res: {
           babel: true,
+          closure: true,
           typescript: typescript.corejs,
           es7shim: true,
           firefox2: false,

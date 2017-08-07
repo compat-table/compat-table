@@ -1344,6 +1344,7 @@ exports.tests = [
       */},
       res: {
         babel: false,
+        closure: true,
         typescript: true,
         safari10: true,
         edge12: "flagged",
@@ -2720,6 +2721,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         jsx: true,
         typescript: true,
         es6tr: true,
@@ -11130,6 +11132,7 @@ exports.tests = [
       */},
       res: {
         babel: "flagged",
+        closure: true,
         typescript: true,
         safari9: true,
         edge13: "flagged",
@@ -11370,6 +11373,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         ejs: true,
         typescript: true,
         es6tr: true,
@@ -11395,6 +11399,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         ejs: true,
         typescript: true,
         es6tr: true,
@@ -11540,6 +11545,7 @@ exports.tests = [
       res: {
         tr: true,
         babel: true,
+        closure: true,
         typescript: true,
         es6tr: true,
         firefox2: false,
@@ -11599,6 +11605,7 @@ exports.tests = [
         firefox3_5: false,
         firefox15: true,
         babel: true,
+        closure: true,
         typescript: true,
         es6tr: true,
         safari10: true,
@@ -16612,6 +16619,7 @@ exports.tests = [
       res: {
         ejs: true,
         babel: true,
+        closure: true,
         typescript: typescript.corejs,
         tr: true,
         es6shim: true,
