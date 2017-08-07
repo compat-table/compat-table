@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico">
@@ -37,7 +37,7 @@
             t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
         t.parentNode.insertBefore(s, t);
       })();
     </script>
@@ -101,13 +101,22 @@
       </label>
     </div><!--
 
-    --><table id="table-wrapper">
+    --><div class="legend">
+      <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
+      <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
+      <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
+      <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
+      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
+      <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
+    </div>
+
+    <table id="table-wrapper">
       <thead>
         <tr>
-          <th colspan="3"  class="platformtype"></th>
-          <th colspan="8" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
-          <th colspan="2"  class="platformtype" id="engine-header" style="background: #f8e8a0">Server-ish</th>
-          <th colspan="3"  class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
+          <th colspan="3" class="platformtype"></th>
+          <th colspan="17" class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
+          <th colspan="5" class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+          <th colspan="4" class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
         </tr>
         <tr>
           <th class="test-name">Feature name</th>

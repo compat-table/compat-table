@@ -20,7 +20,7 @@
     ]
   },
   "babel": {
-    "full": "Babel 6.5 + core-js 2.4",
+    "full": "Babel 6.5 + core-js 2.5",
     "short": "Babel +<br><nobr>core-js</nobr>",
     "platformtype": "compiler",
     "note_id": "babel-optional",
@@ -53,7 +53,7 @@
     ]
   },
   "typescript": {
-    "full": "TypeScript 1.8 + core-js 2.4",
+    "full": "TypeScript 1.8 + core-js 2.5",
     "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
     "platformtype": "compiler",
     "obsolete": false,
@@ -90,53 +90,80 @@
       "es2016plus"
     ]
   },
-  "konq43": {
+  "konq4_3": {
     "full": "Konqueror 4.3",
     "family": "KJS",
     "short": "Konq 4.3",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5"
     ]
   },
-  "konq44": {
+  "konq4_4": {
     "full": "Konqueror 4.4",
-    "short": "Konq 4.4",
     "family": "KJS",
-    "obsolete": true,
+    "short": "Konq 4.4",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq49": {
+  "konq4_9": {
     "full": "Konqueror 4.9",
     "family": "KJS",
     "short": "Konq 4.9",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_11": {
+    "full": "Konqueror 4.11",
+    "family": "KJS",
+    "short": "Konq 4.11",
+    "release": "2013-08-14",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_12": {
+    "full": "Konqueror 4.12",
+    "family": "KJS",
+    "short": "Konq 4.12",
+    "release": "2013-12-18",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "konq4_13": {
+    "full": "Konqueror 4.13",
+    "family": "KJS",
+    "short": "Konq 4.13",
+    "release": "2014-04-16",
     "obsolete": true,
     "test_suites": [
       "es5",
       "non-standard"
     ]
   },
-  "konq413": {
-    "full": "Konqueror 4.13",
-    "family": "KJS",
-    "short": "Konq 4.13",
-    "obsolete": true,
-    "test_suites": [
-      "es5"
-    ]
-  },
-  "konq414": {
+  "konq4_14": {
     "full": "Konqueror 4.14",
-    "short": "KQ<br>4.14",
     "family": "KJS",
+    "short": "Konq 4.14",
+    "release": "2014-08-20",
+    "obsolete": false,
     "note_id": "khtml",
     "note_html": "Results are only applicable for the KHTML rendering engine.",
     "test_suites": [
       "es5",
-      "es6"
+      "es6",
+      "non-standard"
     ]
   },
   "ie7": {
@@ -609,8 +636,8 @@
     "family": "SpiderMonkey",
     "short": "FF 45 ESR",
     "release": "2016-03-08",
-    "retire": "2017-08-08",
-    "obsolete": false
+    "retire": "2017-06-13",
+    "obsolete": true
   },
   "firefox46": {
     "full": "Firefox",
@@ -1195,7 +1222,7 @@
     "short": "CH 51,<br>OP&nbsp;38",
     "release": "2016-05-25",
     "retire": "2016-07-27",
-    "obsolete": true,
+    "obsolete": "very",
     "note_id": "experimental-flag"
   },
   "chrome52": {
@@ -1221,6 +1248,7 @@
     "family": "V8",
     "short": "CH&nbsp;54,<br>OP&nbsp;41",
     "release": "2016-10-12",
+    "retire": "2016-12-06",
     "note_id": "experimental-flag",
     "obsolete": true
   },
@@ -1228,6 +1256,8 @@
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;55,<br>OP&nbsp;42",
+    "release": "2016-12-01",
+    "retire": "2017-02-01",
     "note_id": "experimental-flag",
     "obsolete": true
   },
@@ -1235,6 +1265,8 @@
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;56,<br>OP&nbsp;43",
+    "release": "2017-01-25",
+    "retire": "2017-03-16",
     "note_id": "experimental-flag",
     "obsolete": true
   },
@@ -1242,6 +1274,8 @@
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;57,<br>OP&nbsp;44",
+    "release": "2017-03-09",
+    "retire": "2017-04-25",
     "note_id": "experimental-flag",
     "obsolete": true
   },
@@ -1249,6 +1283,8 @@
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;58,<br>OP&nbsp;45",
+    "release": "2017-04-19",
+    "retire": "2017-06-06",
     "note_id": "experimental-flag",
     "obsolete": true
   },
@@ -1256,20 +1292,29 @@
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;59,<br>OP&nbsp;46",
+    "release": "2017-06-05",
     "note_id": "experimental-flag",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome60": {
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;60,<br>OP&nbsp;47",
+    "release": "2017-07-25",
     "note_id": "experimental-flag",
-    "unstable": true
+    "obsolete": false
   },
   "chrome61": {
     "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;61,<br>OP&nbsp;48",
+    "note_id": "experimental-flag",
+    "unstable": true
+  },
+  "chrome62": {
+    "full": "Chrome, Opera",
+    "family": "V8",
+    "short": "CH&nbsp;62,<br>OP&nbsp;49",
     "note_id": "experimental-flag",
     "unstable": true
   },
@@ -1413,13 +1458,13 @@
     "unstable": true
   },
   "safaritp": {
-    "full": "Safari Technology Preview Release 32",
+    "full": "Safari Technology Preview Release 36",
     "family": "JavaScriptCore",
     "short": "SF TP",
     "unstable": true
   },
   "webkit": {
-    "full": "Webkit r217877 (June 7, 2017)",
+    "full": "Webkit r219218 (July 6, 2017)",
     "family": "JavaScriptCore",
     "short": "WK",
     "unstable": true
@@ -1604,6 +1649,21 @@
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome55",
+    "obsolete": false,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
+  "node8": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 8",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome58",
     "obsolete": false,
     "test_suites": [
       "es6",
