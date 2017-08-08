@@ -1685,6 +1685,7 @@ exports.tests = [
     opera12: null,
     chrome1: null,
     chrome61: "flagged",
+    chrome62: true,
     safari1: null,
     rhino1_7: null,
     xs6: null,
@@ -1708,6 +1709,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     chrome50: "flagged",
+    chrome62: true,
     duktape2_0: false,
   }
 },
