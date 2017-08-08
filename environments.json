@@ -1849,19 +1849,141 @@
       "esintl"
     ]
   },
+  "duktape1_0": {
+    "full": "Duktape 1.0",
+    "family": "Duktape",
+    "short": "DUK 1.0",
+    "platformtype": "engine",
+    "release": "2014-10-26",
+    "retire": "2015-01-09",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_1": {
+    "full": "Duktape 1.1",
+    "family": "Duktape",
+    "short": "DUK 1.1",
+    "platformtype": "engine",
+    "release": "2015-01-09",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_2": {
+    "full": "Duktape 1.2",
+    "family": "Duktape",
+    "short": "DUK 1.2",
+    "platformtype": "engine",
+    "release": "2015-04-05",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_3": {
+    "full": "Duktape 1.3",
+    "family": "Duktape",
+    "short": "DUK 1.3",
+    "platformtype": "engine",
+    "release": "2015-09-12",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_4": {
+    "full": "Duktape 1.4",
+    "family": "Duktape",
+    "short": "DUK 1.4",
+    "platformtype": "engine",
+    "release": "2016-01-10",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_5": {
+    "full": "Duktape 1.5",
+    "family": "Duktape",
+    "short": "DUK 1.5",
+    "platformtype": "engine",
+    "release": "2016-05-03",
+    "retire": "2016-12-12",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_6": {
+    "full": "Duktape 1.6",
+    "family": "Duktape",
+    "short": "DUK 1.6",
+    "platformtype": "engine",
+    "release": "2016-12-12",
+    "retire": "2017-03-20",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_7": {
+    "full": "Duktape 1.7",
+    "family": "Duktape",
+    "short": "DUK 1.7",
+    "platformtype": "engine",
+    "release": "2017-03-20",
+    "retire": "2017-08-02",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "duktape1_8": {
+    "full": "Duktape 1.8",
+    "family": "Duktape",
+    "short": "DUK 1.8",
+    "platformtype": "engine",
+    "release": "2017-08-02",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
   "duktape2_0": {
     "full": "Duktape 2.0",
     "family": "Duktape",
     "short": "DUK 2.0",
     "platformtype": "engine",
-    "obsolete": false
+    "release": "2017-01-17",
+    "retire": "2017-04-15",
+    "obsolete": true
   },
   "duktape2_1": {
     "full": "Duktape 2.1",
     "family": "Duktape",
     "short": "DUK 2.1",
     "platformtype": "engine",
+    "release": "2017-04-15",
     "obsolete": false
+  },
+  "duktape2_2": {
+    "full": "Duktape 2.2",
+    "family": "Duktape",
+    "short": "DUK 2.2",
+    "platformtype": "engine",
+    "unstable": true
   },
   "android1_5": {
     "full": "Android Browser 1.5 (Cupcake)",
