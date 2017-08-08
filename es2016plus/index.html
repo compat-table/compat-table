@@ -176,7 +176,7 @@
 <th class="platform duktape2_0 engine" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
 <th class="platform duktape2_1 engine" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform ios8 mobile obsolete" data-browser="ios8"><a href="#ios8" class="browser-name"><abbr title="iOS Safari">iOS 8</abbr></a></th>
-<th class="platform ios9 mobile" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS Safari">iOS 9</abbr></a></th>
+<th class="platform ios9 mobile obsolete" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS Safari">iOS 9</abbr></a></th>
 <th class="platform ios10 mobile" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
 <th class="platform ios10_3 mobile" data-browser="ios10_3"><a href="#ios10_3" class="browser-name"><abbr title="iOS Safari">iOS &gt;=10.3 &lt;11</abbr></a></th>
 <th class="platform ios11 mobile unstable" data-browser="ios11"><a href="#ios11" class="browser-name"><abbr title="iOS Safari">iOS 11</abbr></a></th>
@@ -243,7 +243,7 @@
 <td class="tally" data-browser="duktape2_0" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/3</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios10" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">3/3</td>
@@ -307,7 +307,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -371,7 +371,7 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -440,7 +440,7 @@ return true;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -501,7 +501,7 @@ return true;
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/3</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/3</td>
-<td class="tally" data-browser="ios9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="ios10" data-tally="1">3/3</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">3/3</td>
@@ -569,7 +569,7 @@ return [1, 2, 3].includes(1)
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -655,7 +655,7 @@ return 24;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -724,7 +724,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -797,7 +797,7 @@ return true;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -874,7 +874,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -943,7 +943,7 @@ return true;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1008,7 +1008,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1074,7 +1074,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1145,7 +1145,7 @@ return passed;
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1218,7 +1218,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1281,7 +1281,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/4</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios10" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">4/4</td>
@@ -1348,7 +1348,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1419,7 +1419,7 @@ return Array.isArray(e)
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1491,7 +1491,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1558,7 +1558,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1619,7 +1619,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios10" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">2/2</td>
@@ -1688,7 +1688,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1757,7 +1757,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1818,7 +1818,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios10" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">2/2</td>
@@ -1882,7 +1882,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -1946,7 +1946,7 @@ return Math.min(1,2,3,) === 1;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2007,7 +2007,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/15</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/15</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/15</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/15</td>
 <td class="tally" data-browser="ios10" data-tally="0">0/15</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">15/15</td>
@@ -2082,7 +2082,7 @@ p.then(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2157,7 +2157,7 @@ p.catch(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2222,7 +2222,7 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2287,7 +2287,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2358,7 +2358,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2431,7 +2431,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2496,7 +2496,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2566,7 +2566,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2631,7 +2631,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2706,7 +2706,7 @@ p.then(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2781,7 +2781,7 @@ p.then(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2854,7 +2854,7 @@ p.then(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2921,7 +2921,7 @@ return passed;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -2985,7 +2985,7 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3058,7 +3058,7 @@ p.then(function(result) {
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3119,7 +3119,7 @@ p.then(function(result) {
 <td class="tally" data-browser="duktape2_0" data-tally="0">0/17</td>
 <td class="tally" data-browser="duktape2_1" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/17</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/17</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/17</td>
 <td class="tally" data-browser="ios10" data-tally="0">0/17</td>
 <td class="tally" data-browser="ios10_3" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">17/17</td>
@@ -3183,7 +3183,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3247,7 +3247,7 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3311,7 +3311,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="no" data-browser="ios10_3">No</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3375,7 +3375,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3439,7 +3439,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3503,7 +3503,7 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3567,7 +3567,7 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3631,7 +3631,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3695,7 +3695,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3759,7 +3759,7 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3823,7 +3823,7 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3887,7 +3887,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -3951,7 +3951,7 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4015,7 +4015,7 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4079,7 +4079,7 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4143,7 +4143,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4207,7 +4207,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4278,7 +4278,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="yes" data-browser="duktape2_0">Yes</td>
 <td class="yes" data-browser="duktape2_1">Yes</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4345,7 +4345,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4412,7 +4412,7 @@ return (function(){
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4475,7 +4475,7 @@ return (function(){
 <td class="tally not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
-<td class="tally" data-browser="ios9" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="1">16/16</td>
 <td class="tally" data-browser="ios10" data-tally="1">16/16</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">16/16</td>
@@ -4544,7 +4544,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4614,7 +4614,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4684,7 +4684,7 @@ return true;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4753,7 +4753,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4823,7 +4823,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4893,7 +4893,7 @@ return true;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -4964,7 +4964,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5035,7 +5035,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5107,7 +5107,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5176,7 +5176,7 @@ return true;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5244,7 +5244,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5315,7 +5315,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5386,7 +5386,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5458,7 +5458,7 @@ return foo() === &quot;bar&quot;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5527,7 +5527,7 @@ return true;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5595,7 +5595,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="yes" data-browser="ios9">Yes</td>
+<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5656,7 +5656,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios8" data-tally="0">0/4</td>
-<td class="tally" data-browser="ios9" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios10" data-tally="1">4/4</td>
 <td class="tally" data-browser="ios10_3" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="ios11" data-tally="1">4/4</td>
@@ -5724,7 +5724,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5792,7 +5792,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5865,7 +5865,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -5938,7 +5938,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes" data-browser="ios10">Yes</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -6003,7 +6003,7 @@ return i === 0;
 <td class="yes not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="ios8">Yes</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
@@ -6076,7 +6076,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="no" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="ios8">No</td>
-<td class="no" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no" data-browser="ios10">No</td>
 <td class="no" data-browser="ios10_3">No</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
