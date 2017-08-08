@@ -16228,6 +16228,44 @@ exports.tests = [
       },
     },
     {
+      name: 'Number.parseFloat',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat',
+      exec: function () {/*
+        var actualGlobal = Function('return this')();
+        return typeof Number.parseFloat === 'function'
+          && Number.parseFloat === actualGlobal.parseFloat;
+      */},
+      res: {
+        babel: true,
+        chrome34: true,
+        edge12: true,
+        es6shim: true,
+        firefox25: true,
+        node0_12: true,
+        safari9: true,
+        typescript: typescript.corejs,
+      },
+    },
+    {
+      name: 'Number.parseInt',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt',
+      exec: function () {/*
+        var actualGlobal = Function('return this')();
+        return typeof Number.parseInt === 'function'
+          && Number.parseInt === actualGlobal.parseInt;
+      */},
+      res: {
+        babel: true,
+        chrome34: true,
+        edge12: true,
+        es6shim: true,
+        firefox25: true,
+        node0_12: true,
+        safari9: true,
+        typescript: typescript.corejs,
+      },
+    },
+    {
       name: 'Number.EPSILON',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON',
       exec: function () {/*
