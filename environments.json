@@ -735,43 +735,211 @@
     "retire": "2018-01-16",
     "unstable": true
   },
+  "opera7": {
+    "full": "Opera 7",
+    "family": "Linear B",
+    "short": "OP 7",
+    "release": "2003-01-28",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera7_5": {
+    "full": "Opera 7.5",
+    "family": "Linear B",
+    "short": "OP 7.5",
+    "release": "2004",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera8": {
+    "full": "Opera 8",
+    "family": "Linear B",
+    "short": "OP 8",
+    "release": "2005-04-19",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera8_5": {
+    "full": "Opera 8.5",
+    "family": "Linear B",
+    "short": "OP 8.5",
+    "release": "2005-09-20",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera9": {
+    "full": "Opera 9",
+    "family": "Linear B",
+    "short": "OP 9",
+    "release": "2006-06-20",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera9_1": {
+    "full": "Opera 9.1",
+    "family": "Linear B",
+    "short": "OP 9.1",
+    "release": "2006",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera9_2": {
+    "full": "Opera 9.2",
+    "family": "Linear B",
+    "short": "OP 9.2",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera9_5": {
+    "full": "Opera 9.5",
+    "family": "Futhark",
+    "short": "OP 9.5",
+    "release": "2008-06-12",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera10": {
+    "full": "Opera 10",
+    "family": "Futhark",
+    "short": "OP 10",
+    "release": "2009-09-01",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
   "opera10_10": {
     "full": "Opera 10.10",
-    "family": "Carakan",
+    "family": "Futhark",
     "short": "OP 10.1",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
-      "es5"
+      "es5",
+      "non-standard"
+    ]
+  },
+  "opera10_20": {
+    "full": "Opera 10.20",
+    "family": "Futhark",
+    "short": "OP 10.2",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
     ]
   },
   "opera10_50": {
-    "full": "Opera 10.50, Opera 10.62 (build 8437), Opera 10.70 (build 9044), Opera 11 (build 1156), Opera 11.10 (build 2048), Opera 11.11 (build 2109), Opera 11.50 (build 1074)",
+    "full": "Opera 10.50",
     "family": "Carakan",
-    "short": "OP 10.50-11.50",
-    "obsolete": true,
+    "short": "OP 10.5",
+    "obsolete": "very",
     "test_suites": [
-      "es5"
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "opera10_60": {
+    "full": "Opera 10.60",
+    "family": "Carakan",
+    "short": "OP 10.6",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "opera11": {
+    "full": "Opera 11",
+    "family": "Carakan",
+    "short": "OP 11",
+    "release": "2010-12-16",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "opera11_10": {
+    "full": "Opera 11.10",
+    "family": "Carakan",
+    "short": "OP 11.1",
+    "release": "2011-04-11",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "opera11_50": {
+    "full": "Opera 11.50",
+    "family": "Carakan",
+    "short": "OP 11.5",
+    "release": "2011-06-28",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "esintl",
+      "non-standard"
     ]
   },
   "opera12": {
     "full": "Opera 12",
     "family": "Carakan",
     "short": "OP 12",
-    "obsolete": true,
+    "release": "2012-06-14",
+    "obsolete": "very",
     "test_suites": [
       "es5",
-      "es6"
+      "es6",
+      "esintl",
+      "non-standard"
     ]
   },
   "opera12_10": {
-    "full": "Opera 12.15",
+    "full": "Opera 12.10",
     "family": "Carakan",
     "short": "OP 12.10",
+    "release": "2012-11-05",
     "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
-      "esintl"
+      "esintl",
+      "non-standard"
     ]
   },
   "chrome1": {
