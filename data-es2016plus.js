@@ -1501,6 +1501,7 @@ exports.tests = [
         android4_0: true,
         ios5_1: true,
         duktape2_0: false,
+        duktape2_2: true,
       }
     },
       {
