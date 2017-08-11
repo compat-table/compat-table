@@ -1826,7 +1826,7 @@
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome55",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es6",
       "es2016plus",
@@ -1837,10 +1837,25 @@
   "node8": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 8",
+    "short": "Node 8.0-8.2",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome58",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
+  "node8_3": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=8.3 &lt;9",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome60",
     "obsolete": false,
     "test_suites": [
       "es6",
