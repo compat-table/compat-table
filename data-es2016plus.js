@@ -392,6 +392,7 @@ exports.tests = [
         */},
         res: {
           babel: true,
+          closure: true,
           typescript: true,
           edge14: true,
           chrome57: "flagged",
@@ -413,6 +414,7 @@ exports.tests = [
         */},
         res: {
           babel: true,
+          closure: true,
           typescript: true,
           edge14: true,
           chrome57: "flagged",
@@ -1301,7 +1303,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
-      closure: true,
+      closure: false,
       edge14: true,
       firefox2: false,
       firefox27: true,

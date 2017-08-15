@@ -2531,7 +2531,7 @@ exports.tests = [
         closure: {
           val: false,
           note_id: 'compiled-extends',
-          note_html: 'This compiler transforms <code>extends</code> into code that copies properties from the superclass, instead of using the prototype chain.'
+          note_html: 'This compiler transforms <code>extends</code> into code that uses native <code>Object.prototype.__proto__</code> or copies properties from the superclass, instead of using the prototype chain.'
         },
         jsx: { val: false, note_id: 'compiled-extends' },
         edge12: "flagged",
