@@ -16047,13 +16047,13 @@ exports.tests = [
         firefox36: {
           val: false,
           note_id: 'array-prototype-iterator',
-          note_html: 'Available as <code>Array.prototype[Symbol.iterator]</code>'
+          note_html: 'Available from Firefox 36 up to 47 as <code>Array.prototype[Symbol.iterator]</code>'
         },
         firefox48: true,
         firefox49: {
           val: false,
           note_id: 'array-prototype-values',
-          note_html: 'The feature is enabled by default only in Firefox Nightly due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1299593">compatibility issue</a>.',
+          note_html: 'The feature is enabled only in Firefox Nightly due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1299593">compatibility issue</a>.',
         },
         chrome30: "flagged",
         chrome38: { val: false, note_id: 'array-prototype-iterator' },
