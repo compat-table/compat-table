@@ -2398,6 +2398,108 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Promise.prototype.finally',
+  category: STAGE3,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-promise-finally',
+  subtests: [
+    {
+      name: 'basic support',
+      exec: function(){/*
+        var p1 = Promise.resolve("foo");
+        var p2 = Promise.reject("bar");
+        var score = 0;
+        function thenFn(result)  {
+          score += (result === "foo");
+          check();
+        }
+        function catchFn(result) {
+          score += (result === "bar");
+          check();
+        }
+        function finallyFn() {
+          score += (arguments.length === 0);
+          check();
+        }
+        p1.then(thenFn);
+        p1.finally(finallyFn);
+        p1.finally(function() {
+          // should return a new Promise
+          score += p1.finally() !== p1;
+          check();
+        });
+        p2.catch(catchFn);
+        p2.finally(finallyFn);
+        function check() {
+          if (score === 5) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'don\'t change resolution value',
+      exec: function(){/*
+        var score = 0;
+        function thenFn(result)  {
+          score += (result === "foo");
+          check();
+        }
+        function catchFn(result) {
+          score += (result === "bar");
+          check();
+        }
+        function finallyFn() {
+          score++;
+          check();
+          return Promise.resolve("foobar");
+        }
+        Promise.resolve("foo").finally(finallyFn).then(thenFn);
+        Promise.reject("bar").finally(finallyFn).catch(catchFn);
+        function check() {
+          if (score === 4) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'change rejection value',
+      exec: function(){/*
+        var score = 0;
+        Promise
+          .reject("foobar")
+          .finally(function() {
+            return Promise.reject("foo");
+          })
+          .catch(function(result) {
+            score += (result === "foo");
+            check();
+            return Promise.reject("foobar");
+          })
+          .finally(function() {
+            throw new Error('bar');
+          })
+          .catch(function(result) {
+            score += (result.message === "bar");
+            check();
+          });
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    }
+  ]
 }
 ];
 
