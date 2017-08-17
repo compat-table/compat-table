@@ -109,7 +109,7 @@ exports.tests = [
          return Array.isArray(v) && String(v) === "foo,bar,baz";
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           es7shim: true,
           typescript: typescript.corejs,
@@ -140,7 +140,7 @@ exports.tests = [
          && String(e[2]) === "c,baz";
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           es7shim: true,
           typescript: typescript.corejs,
@@ -172,7 +172,7 @@ exports.tests = [
           && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
           */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           es7shim: true,
           typescript: typescript.corejs,
@@ -196,7 +196,7 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           edge15: true,
           firefox2: false,
@@ -228,7 +228,7 @@ exports.tests = [
          && Array(1).includes();
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           es7shim: true,
           typescript: typescript.corejs,
@@ -270,7 +270,7 @@ exports.tests = [
          }, 'foo', 6) === true && passed === 3;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           es7shim: true,
           typescript: typescript.corejs,
           safari9: true,
@@ -295,7 +295,7 @@ exports.tests = [
          });
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           chrome47: true,
           edge14: true,
@@ -328,7 +328,7 @@ exports.tests = [
          && 'hello'.padStart(3, '123') === 'hello';
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           typescript: typescript.corejs,
           es7shim: true,
@@ -358,7 +358,7 @@ exports.tests = [
          && 'hello'.padEnd(3, '123') === 'hello';
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           closure: true,
           typescript: typescript.corejs,
           es7shim: true,
@@ -1488,7 +1488,7 @@ exports.tests = [
        && prop.enumerable;
        */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         ie11: true,
         firefox2: false,
@@ -1518,7 +1518,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1546,7 +1546,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           firefox2: false,
           firefox48: true,
@@ -1571,7 +1571,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1600,7 +1600,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1628,7 +1628,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           firefox2: false,
           firefox48: true,
@@ -1655,7 +1655,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: true,
@@ -1685,7 +1685,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1716,7 +1716,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1743,7 +1743,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1767,7 +1767,7 @@ exports.tests = [
          return b.__lookupGetter__("foo") === undefined
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           firefox2: false,
           firefox4: true,
@@ -1795,7 +1795,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: true,
@@ -1825,7 +1825,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1856,7 +1856,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1883,7 +1883,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1907,7 +1907,7 @@ exports.tests = [
          return b.__lookupSetter__("foo") === undefined
          */},
         res: {
-          babel: true,
+          babel: babel.corejs,
           typescript: typescript.corejs,
           firefox2: false,
           firefox4: true,

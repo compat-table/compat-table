@@ -527,9 +527,9 @@ return [1, 2, 3].includes(1)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n&& ![1, 2, 3].includes(4)\n&& ![1, 2, 3].includes(1, 1)\n&& [NaN].includes(NaN)\n&& Array(1).includes();\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n&& ![1, 2, 3].includes(4)\n&& ![1, 2, 3].includes(1, 1)\n&& [NaN].includes(NaN)\n&& Array(1).includes();\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -615,9 +615,9 @@ return 24;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nvar passed = 0;\nreturn [].includes.call({\nget \"0\"() {\npassed = NaN;\nreturn 'foo';\n},\nget \"11\"() {\npassed += 1;\nreturn 0;\n},\nget \"19\"() {\npassed += 1;\nreturn 'foo';\n},\nget \"21\"() {\npassed = NaN;\nreturn 'foo';\n},\nget length() {\npassed += 1;\nreturn 24;\n}\n}, 'foo', 6) === true && passed === 3;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nvar passed = 0;\nreturn [].includes.call({\nget \"0\"() {\npassed = NaN;\nreturn 'foo';\n},\nget \"11\"() {\npassed += 1;\nreturn 0;\n},\nget \"19\"() {\npassed += 1;\nreturn 'foo';\n},\nget \"21\"() {\npassed = NaN;\nreturn 'foo';\n},\nget length() {\npassed += 1;\nreturn 24;\n}\n}, 'foo', 6) === true && passed === 3;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -686,9 +686,9 @@ return new TypedArray([1, 2, 3]).includes(1)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,\nInt32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\nreturn new TypedArray([1, 2, 3]).includes(1)\n&& !new TypedArray([1, 2, 3]).includes(4)\n&& !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,\nInt32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\nreturn new TypedArray([1, 2, 3]).includes(1)\n&& !new TypedArray([1, 2, 3]).includes(4)\n&& !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -749,7 +749,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 </tr>
 <tr class="category"><td colspan="64">2016 misc</td>
 </tr>
-<tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#new-gen-fn-note"><sup>[7]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#new-gen-fn-note"><sup>[8]</sup></a></span><script data-source="
 function * generator() {
 yield 3;
 }
@@ -822,7 +822,7 @@ return true;
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects">generator throw() caught by inner generator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#IteratorResult_object_returned_instead_of_throwing" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#gen-throw-note"><sup>[8]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects">generator throw() caught by inner generator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#IteratorResult_object_returned_instead_of_throwing" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#gen-throw-note"><sup>[9]</sup></a></span><script data-source="
 function * generator() {
 yield * (function * () {
 try {
@@ -901,7 +901,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation">strict fn w/ non-strict non-simple params is error</a><a href="#strict-fn-non-strict-params-note"><sup>[9]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation">strict fn w/ non-strict non-simple params is error</a><a href="#strict-fn-non-strict-params-note"><sup>[10]</sup></a></span><script data-source="
 function foo(...a){}
 try {
 Function(&quot;function bar(...a){&apos;use strict&apos;;}&quot;)();
@@ -972,7 +972,7 @@ return true;
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, declarations</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Nested_object_and_array_destructuring" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#nested-rest-destruct-decl-note"><sup>[10]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, declarations</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Nested_object_and_array_destructuring" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#nested-rest-destruct-decl-note"><sup>[11]</sup></a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
 return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
@@ -1039,7 +1039,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, parameters</a><a href="#nested-rest-destruct-params-note"><sup>[11]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, parameters</a><a href="#nested-rest-destruct-params-note"><sup>[12]</sup></a></span><script data-source="
 return function([x, ...[y, ...z]]) {
 return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos;;
 }([1,2,3,4]);
@@ -1107,7 +1107,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes unstable" data-browser="ios11">Yes</td>
 </tr>
-<tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects">Proxy, &quot;enumerate&quot; handler removed</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-enumerate-removed-note"><sup>[12]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects">Proxy, &quot;enumerate&quot; handler removed</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-enumerate-removed-note"><sup>[13]</sup></a></span><script data-source="
 var passed = true;
 var proxy = new Proxy({}, {
 enumerate: function() {
@@ -1328,9 +1328,9 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1401,9 +1401,9 @@ return Array.isArray(e)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1475,9 +1475,9 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n&& D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n&& D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n&& D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n&& D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1544,9 +1544,9 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nvar P = new Proxy({a:1}, {\n  getOwnPropertyDescriptor: function(t, k) {}\n});\nreturn !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nvar P = new Proxy({a:1}, {\n  getOwnPropertyDescriptor: function(t, k) {}\n});\nreturn !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1678,9 +1678,9 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1749,9 +1749,9 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="es7shim">Yes</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2084,9 +2084,9 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nasync function a(){\n  return \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){\n  return \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[13]</sup></a></td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2368,9 +2368,9 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,\"foo\"); });\n  var a2 = await new Promise(function(resolve) { setTimeout(resolve,800,\"bar\"); });\n  if (a1 + a2 === \"foobar\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,\"foo\"); });\n  var a2 = await new Promise(function(resolve) { setTimeout(resolve,800,\"bar\"); });\n  if (a1 + a2 === \"foobar\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[13]</sup></a></td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-async-await-note"><sup>[15]</sup></a></td>
 <td class="no" data-browser="es7shim">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2878,7 +2878,7 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nvar a = async () => await Promise.resolve(\"foo\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nvar a = async () => await Promise.resolve(\"foo\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[13]</sup></a></td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="es7shim">No</td>
@@ -3232,21 +3232,21 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3263,11 +3263,11 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3299,9 +3299,9 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
@@ -3364,21 +3364,21 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3395,11 +3395,11 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3431,9 +3431,9 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
@@ -3497,20 +3497,20 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="firefox49">No</td>
 <td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3527,11 +3527,11 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3562,21 +3562,21 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3593,11 +3593,11 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3628,21 +3628,21 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3659,11 +3659,11 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3694,21 +3694,21 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3725,11 +3725,11 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3760,21 +3760,21 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3791,11 +3791,11 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3826,21 +3826,21 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3857,11 +3857,11 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3892,21 +3892,21 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3923,11 +3923,11 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -3958,21 +3958,21 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -3989,11 +3989,11 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4024,21 +4024,21 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -4055,11 +4055,11 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4090,21 +4090,21 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -4121,11 +4121,11 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4156,21 +4156,21 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -4187,11 +4187,11 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4222,21 +4222,21 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -4253,11 +4253,11 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4288,21 +4288,21 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox48">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox49">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="firefox50">No<a href="#firefox-nightly-note"><sup>[5]</sup></a></td>
-<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[16]</sup></a></td>
+<td class="no obsolete" data-browser="firefox51">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no" data-browser="firefox52">No<a href="#firefox-developer-note"><sup>[16]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox53">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[17]</sup></a></td>
 <td class="yes" data-browser="firefox55">Yes</td>
 <td class="yes unstable" data-browser="firefox56">Yes</td>
 <td class="yes unstable" data-browser="firefox57">Yes</td>
-<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome52">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome53">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="chrome60">Yes</td>
 <td class="yes unstable" data-browser="chrome61">Yes</td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
@@ -4319,11 +4319,11 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no obsolete" data-browser="iojs">No</td>
 <td class="no" data-browser="node4">No</td>
 <td class="no obsolete" data-browser="node5">No</td>
-<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[17]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes" data-browser="node8_3">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no" data-browser="duktape2_1">No</td>
@@ -4620,9 +4620,9 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");try{return Function("asyncTestPassed","\nvar obj = {};\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("64");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -4692,9 +4692,9 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nvar obj = {};\nvar sym = Symbol();\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nvar sym = Symbol();\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4764,9 +4764,9 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nvar key = '__accessors_test__';\n__defineGetter__.call(1, key, function(){});\ntry {\n__defineGetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nvar key = '__accessors_test__';\n__defineGetter__.call(1, key, function(){});\ntry {\n__defineGetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4835,9 +4835,9 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\nvar obj = {};\nfunction bar() {}\nObject.prototype.__defineSetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nfunction bar() {}\nObject.prototype.__defineSetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -4907,9 +4907,9 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nvar obj = {};\nvar sym = Symbol();\nfunction bar(baz) {}\nObject.prototype.__defineSetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nvar sym = Symbol();\nfunction bar(baz) {}\nObject.prototype.__defineSetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -4979,9 +4979,9 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");try{return Function("asyncTestPassed","\nvar key = '__accessors_test__';\n__defineSetter__.call(1, key, function(){});\ntry {\n__defineSetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("69");return Function("asyncTestPassed","'use strict';"+"\nvar key = '__accessors_test__';\n__defineSetter__.call(1, key, function(){});\ntry {\n__defineSetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5052,9 +5052,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5125,9 +5125,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");try{return Function("asyncTestPassed","\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("71");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5199,9 +5199,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("72");try{return Function("asyncTestPassed","\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { get: function() { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupGetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("72");return Function("asyncTestPassed","'use strict';"+"\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { get: function() { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupGetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5270,9 +5270,9 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("73");try{return Function("asyncTestPassed","\n__lookupGetter__.call(1, 'key');\ntry {\n__lookupGetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("73");return Function("asyncTestPassed","'use strict';"+"\n__lookupGetter__.call(1, 'key');\ntry {\n__lookupGetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5340,9 +5340,9 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("74");try{return Function("asyncTestPassed","\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineGetter__(\"foo\", function () {})\nreturn b.__lookupGetter__(\"foo\") === undefined\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("74");return Function("asyncTestPassed","'use strict';"+"\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineGetter__(\"foo\", function () {})\nreturn b.__lookupGetter__(\"foo\") === undefined\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5413,9 +5413,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("75");try{return Function("asyncTestPassed","\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("75");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5486,9 +5486,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5560,9 +5560,9 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");try{return Function("asyncTestPassed","\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { set: function(baz) { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupSetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("77");return Function("asyncTestPassed","'use strict';"+"\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { set: function(baz) { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupSetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -5631,9 +5631,9 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("78");try{return Function("asyncTestPassed","\n__lookupSetter__.call(1, 'key');\ntry {\n__lookupSetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("78");return Function("asyncTestPassed","'use strict';"+"\n__lookupSetter__.call(1, 'key');\ntry {\n__lookupSetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
@@ -5701,9 +5701,9 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineSetter__(\"foo\", function () {})\nreturn b.__lookupSetter__(\"foo\") === undefined\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineSetter__(\"foo\", function () {})\nreturn b.__lookupSetter__(\"foo\") === undefined\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
+<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes not-applicable" data-browser="typescript" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="es7shim" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -6261,7 +6261,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="edge-experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[5]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>, or when a native ES6 host is used.</p><p id="new-gen-fn-note">  <sup>[7]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[8]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="strict-fn-non-strict-params-note">  <sup>[9]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[12]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[13]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="typescript-async-await-note">  <sup>[14]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="firefox-developer-note">  <sup>[15]</sup> The feature is enabled by default only in Firefox Developer and Firefox Nightly.</p><p id="firefox-sharedmem-note">  <sup>[16]</sup> The feature have to be enabled via &quot;javascript.options.shared_memory&quot; setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly.</p><p id="chrome-sharedmem-note">  <sup>[17]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under about:flags</p></div>
+    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="edge-experimental-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[5]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="babel-core-js-note">  <sup>[6]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[7]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[8]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[9]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="strict-fn-non-strict-params-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[13]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[14]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="typescript-async-await-note">  <sup>[15]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="firefox-developer-note">  <sup>[16]</sup> The feature is enabled by default only in Firefox Developer and Firefox Nightly.</p><p id="firefox-sharedmem-note">  <sup>[17]</sup> The feature have to be enabled via &quot;javascript.options.shared_memory&quot; setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly.</p><p id="chrome-sharedmem-note">  <sup>[18]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under about:flags</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>

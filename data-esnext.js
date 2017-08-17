@@ -1,5 +1,6 @@
 var common = require('./data-common');
 
+var babel = common.babel;
 var typescript = common.typescript;
 var firefox = common.firefox;
 var chrome = common.chrome;
@@ -1144,7 +1145,7 @@ exports.tests = [
     return 'a𠮷b'.at(1) === '𠮷';
   */},
   res: {
-    babel: true,
+    babel: babel.corejs,
     typescript: typescript.corejs,
     es7shim: true,
     firefox2: false,
@@ -1164,7 +1165,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -1197,7 +1198,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -1229,7 +1230,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1241,7 +1242,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1262,7 +1263,7 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
       firefox2: false,
       firefox53: {
@@ -1304,7 +1305,7 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
       firefox2: false,
       firefox53: {
@@ -1347,7 +1348,7 @@ exports.tests = [
         return typeof Observable !== 'undefined';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1359,7 +1360,7 @@ exports.tests = [
         return typeof Symbol.observable === 'symbol';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1371,7 +1372,7 @@ exports.tests = [
         return 'subscribe' in Observable.prototype;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1393,7 +1394,7 @@ exports.tests = [
         return nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1406,7 +1407,7 @@ exports.tests = [
         return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1419,7 +1420,7 @@ exports.tests = [
         return Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1431,7 +1432,7 @@ exports.tests = [
         return Observable.of(1, 2, 3) instanceof Observable;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1443,7 +1444,7 @@ exports.tests = [
         return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1470,7 +1471,7 @@ exports.tests = [
       && c === 'ab';
   */},
   res: {
-    babel: true,
+    babel: babel.corejs,
     typescript: typescript.corejs,
     firefox2: false,
     duktape2_0: false,
@@ -1773,7 +1774,7 @@ exports.tests = [
         return typeof Reflect.defineMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1785,7 +1786,7 @@ exports.tests = [
         return typeof Reflect.hasMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1797,7 +1798,7 @@ exports.tests = [
         return typeof Reflect.hasOwnMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1809,7 +1810,7 @@ exports.tests = [
         return typeof Reflect.getMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1821,7 +1822,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1833,7 +1834,7 @@ exports.tests = [
         return typeof Reflect.getMetadataKeys == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1845,7 +1846,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadataKeys == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1857,7 +1858,7 @@ exports.tests = [
         return typeof Reflect.deleteMetadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -1869,7 +1870,7 @@ exports.tests = [
         return typeof Reflect.metadata == 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         firefox2: false,
         duktape2_0: false,
@@ -2041,7 +2042,7 @@ exports.tests = [
     passed = true;
   */},
   res : {
-    babel: true,
+    babel: babel.corejs,
     typescript: typescript.corejs,
     firefox2: false,
     duktape2_0: false,
@@ -2213,7 +2214,7 @@ exports.tests = [
       && Math.signbit(42) === true;
   */},
   res : {
-    babel: true,
+    babel: babel.corejs,
     typescript: typescript.corejs,
   }
 },
@@ -2230,7 +2231,7 @@ exports.tests = [
         && Math.clamp(6, 2, 4) === 4;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2239,7 +2240,7 @@ exports.tests = [
       return Math.DEG_PER_RAD === Math.PI / 180;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2249,7 +2250,7 @@ exports.tests = [
         && Math.degrees(Math.PI) === 180;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2258,7 +2259,7 @@ exports.tests = [
       return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2267,7 +2268,7 @@ exports.tests = [
       return Math.RAD_PER_DEG === 180 / Math.PI;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2277,7 +2278,7 @@ exports.tests = [
         && Math.radians(180) === Math.PI;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }, {
@@ -2286,7 +2287,7 @@ exports.tests = [
       return Math.scale(0, 3, 5, 8, 10) === 5;
     */},
     res: {
-      babel: true,
+      babel: babel.corejs,
       typescript: typescript.corejs,
     },
   }]
@@ -2303,7 +2304,7 @@ exports.tests = [
         return typeof Promise.try === 'function';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2313,7 +2314,7 @@ exports.tests = [
         return Promise.try(function () {}) instanceof Promise;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2325,7 +2326,7 @@ exports.tests = [
         return score === 1;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2342,7 +2343,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2359,7 +2360,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2376,7 +2377,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2393,7 +2394,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     }
@@ -2437,7 +2438,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         safaritp: true,
         webkit: false,
@@ -2467,7 +2468,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         safaritp: true,
         webkit: false,
@@ -2499,7 +2500,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
         safaritp: true,
         webkit: false,
@@ -2519,7 +2520,7 @@ exports.tests = [
         return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2531,7 +2532,7 @@ exports.tests = [
         }).join('') === '1234';
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     }
@@ -2552,7 +2553,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 3;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2567,7 +2568,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 5;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2580,7 +2581,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2593,7 +2594,7 @@ exports.tests = [
         return C.has(3) + C.has(4);
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2606,7 +2607,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 3;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2621,7 +2622,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 5;
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2634,7 +2635,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
@@ -2647,7 +2648,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: true,
+        babel: babel.corejs,
         typescript: typescript.corejs,
       }
     },
