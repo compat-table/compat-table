@@ -2291,6 +2291,114 @@ exports.tests = [
     },
   }]
 },
+{
+  name: 'Promise.try',
+  category: STAGE1,
+  significance: 'small',
+  spec: 'https://github.com/ljharb/proposal-promise-try',
+  'subtests': [
+    {
+      name: 'basic support',
+      exec: function () {/*
+        return typeof Promise.try === 'function';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'returns instance of Promise',
+      exec: function () {/*
+        return Promise.try(function () {}) instanceof Promise;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'call function synchronously',
+      exec: function () {/*
+        var score = 0;
+        Promise.try(function () { score++ });
+        return score === 1;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'function returns value',
+      exec: function () {/*
+        var score = 0;
+        Promise.try(function() {
+          score++;
+          return 'foo';
+        }).then(function(val) {
+          score += (val === 'foo');
+          if (score === 2) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'function throws exception',
+      exec: function () {/*
+        var score = 0;
+        Promise.try(function() {
+          score++;
+          throw 'bar';
+        }).catch(function(err) {
+          score += (err === 'bar');
+          if (score === 2) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'function returns fulfilled Promise',
+      exec: function () {/*
+        var score = 0;
+        Promise.try(function() {
+          score++;
+          return Promise.resolve('foo');
+        }).then(function(val) {
+          score += (val === 'foo');
+          if (score === 2) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'function returns rejected Promise',
+      exec: function () {/*
+        var score = 0;
+        Promise.try(function() {
+          score++;
+          return Promise.reject('bar');
+        }).catch(function(err) {
+          score += (err === 'bar');
+          if (score === 2) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    }
+  ]
+}
 ];
 
 //Shift annex B features to the bottom
