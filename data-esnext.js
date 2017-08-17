@@ -2295,7 +2295,7 @@ exports.tests = [
   name: 'Promise.try',
   category: STAGE1,
   significance: 'small',
-  spec: 'https://github.com/ljharb/proposal-promise-try',
+  spec: 'https://github.com/tc39/proposal-promise-try',
   'subtests': [
     {
       name: 'basic support',
