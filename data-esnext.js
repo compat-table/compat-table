@@ -2536,6 +2536,122 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: '`.of` and `.from` on collection constructors',
+  category: STAGE1,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-setmap-offrom',
+  subtests: [
+    {
+      name: 'Map.of',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = Map.of([A, 1], [B, 2]);
+        return C.get(A) + C.get(B) === 3;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Map.from',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = Map.from([[A, 1], [B, 2]], function (it) {
+          return [it[0], it[1] + 1];
+        });
+        return C.get(A) + C.get(B) === 5;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Set.of',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = Set.of(A, B);
+        return C.has(A) + C.has(B);
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Set.from',
+      exec: function(){/*
+        var C = Set.from([1, 2], function (it) {
+          return it + 2;
+        });
+        return C.has(3) + C.has(4);
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'WeakMap.of',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = WeakMap.of([A, 1], [B, 2]);
+        return C.get(A) + C.get(B) === 3;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'WeakMap.from',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = WeakMap.from([[A, 1], [B, 2]], function (it) {
+          return [it[0], it[1] + 1];
+        });
+        return C.get(A) + C.get(B) === 5;
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'WeakSet.of',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = WeakSet.of(A, B);
+        return C.has(A) + C.has(B);
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'WeakSet.from',
+      exec: function(){/*
+        var A = {};
+        var B = {};
+        var C = WeakSet.from([A, B]);
+        return C.has(A) + C.has(B);
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+  ]
 }
 ];
 
