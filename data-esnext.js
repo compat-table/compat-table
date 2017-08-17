@@ -2506,6 +2506,36 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Array.prototype.{flatten, flatMap}',
+  category: STAGE1,
+  significance: 'medium',
+  spec: 'https://tc39.github.io/proposal-flatMap/',
+  subtests: [
+    {
+      name: 'Array.prototype.flatten',
+      exec: function(){/*
+        return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    },
+    {
+      name: 'Array.prototype.flatMap',
+      exec: function(){/*
+        return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
+          return [it.a, it.b];
+        }).join('') === '1234';
+      */},
+      res: {
+        babel: true,
+        typescript: typescript.corejs,
+      }
+    }
+  ]
 }
 ];
 
