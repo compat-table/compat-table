@@ -2201,6 +2201,22 @@ exports.tests = [
     },
   }]
 },
+{
+  name: 'Math.signbit',
+  spec: 'http://jfbastien.github.io/papers/Math.signbit.html',
+  category: STAGE1,
+  significance: 'small',
+  exec: function(){/*
+    return Math.signbit(-0) === false
+      && Math.signbit(0) === true
+      && Math.signbit(-42) === false
+      && Math.signbit(42) === true;
+  */},
+  res : {
+    babel: true,
+    typescript: typescript.corejs,
+  }
+},
 ];
 
 //Shift annex B features to the bottom
