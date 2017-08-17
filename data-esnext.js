@@ -2217,6 +2217,80 @@ exports.tests = [
     typescript: typescript.corejs,
   }
 },
+{
+  name: 'Math extensions proposal',
+  category: STAGE1,
+  significance: 'small',
+  spec: 'https://github.com/rwaldron/proposal-math-extensions',
+  subtests: [{
+    name: 'Math.clamp',
+    exec: function(){/*
+      return Math.clamp(2, 4, 6) === 4
+        && Math.clamp(4, 2, 6) === 4
+        && Math.clamp(6, 2, 4) === 4;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.DEG_PER_RAD',
+    exec: function(){/*
+      return Math.DEG_PER_RAD === Math.PI / 180;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.degrees',
+    exec: function(){/*
+      return Math.degrees(Math.PI / 2) === 90
+        && Math.degrees(Math.PI) === 180;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.fscale',
+    exec: function(){/*
+      return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.RAD_PER_DEG',
+    exec: function(){/*
+      return Math.RAD_PER_DEG === 180 / Math.PI;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.radians',
+    exec: function(){/*
+      return Math.radians(90) === Math.PI / 2
+        && Math.radians(180) === Math.PI;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }, {
+    name: 'Math.scale',
+    exec: function(){/*
+      return Math.scale(0, 3, 5, 8, 10) === 5;
+    */},
+    res: {
+      babel: true,
+      typescript: typescript.corejs,
+    },
+  }]
+},
 ];
 
 //Shift annex B features to the bottom
