@@ -2653,6 +2653,64 @@ exports.tests = [
       }
     },
   ]
+},
+{
+  name: 'optional catch binding',
+  category: STAGE3,
+  significance: 'tiny',
+  spec: 'https://tc39.github.io/proposal-optional-catch-binding/',
+  subtests: [
+    {
+      name: 'basic',
+      exec: function(){/*
+        try {
+          throw new Error();
+        }
+        catch {
+          return true;
+        }
+      */},
+      res: {
+        safaritp: true
+      },
+    },
+    {
+      name: 'await',
+      exec: function(){/*
+        (async function (){
+          try {
+            await Promise.reject();
+          }
+          catch {
+            asyncTestPassed();
+          }
+        })();
+      */},
+      res: {
+        safaritp: true
+      },
+    },
+    {
+      name: 'yield',
+      exec: function(){/*
+        function *foo() {
+          try {
+            yield;
+          }
+          catch {
+            return true;
+          }
+        }
+
+        var it = foo();
+        it.next();
+        return it.throw().value;
+      */},
+      res: {
+        safaritp: true
+      }
+    }
+  ]
 }
 ];
 
