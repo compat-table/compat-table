@@ -2669,9 +2669,11 @@ exports.tests = [
         catch {
           return true;
         }
+        return false;
       */},
       res: {
-        safaritp: true
+        safaritp: true,
+        webkit: true
       },
     },
     {
@@ -2687,7 +2689,8 @@ exports.tests = [
         })();
       */},
       res: {
-        safaritp: true
+        safaritp: true,
+        webkit: true
       },
     },
     {
@@ -2696,6 +2699,7 @@ exports.tests = [
         function *foo() {
           try {
             yield;
+            throw new Error();
           }
           catch {
             return true;
@@ -2704,10 +2708,11 @@ exports.tests = [
 
         var it = foo();
         it.next();
-        return it.throw().value;
+        return it.next().value;
       */},
       res: {
-        safaritp: true
+        safaritp: true,
+        webkit: true
       }
     }
   ]

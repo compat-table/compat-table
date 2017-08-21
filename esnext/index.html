@@ -2236,7 +2236,8 @@ try {
 catch {
   return true;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\ntry {\n  throw new Error();\n}\ncatch {\n  return true;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  throw new Error();\n}\ncatch {\n  return true;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return false;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\ntry {\n  throw new Error();\n}\ncatch {\n  return true;\n}\nreturn false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  throw new Error();\n}\ncatch {\n  return true;\n}\nreturn false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2373,6 +2374,7 @@ catch {
 function *foo() {
   try {
     yield;
+    throw new Error();
   }
   catch {
     return true;
@@ -2381,8 +2383,8 @@ function *foo() {
 
 var it = foo();
 it.next();
-return it.throw().value;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nfunction *foo() {\n  try {\n    yield;\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.throw().value;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nfunction *foo() {\n  try {\n    yield;\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.throw().value;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return it.next().value;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nfunction *foo() {\n  try {\n    yield;\n    throw new Error();\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.next().value;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nfunction *foo() {\n  try {\n    yield;\n    throw new Error();\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.next().value;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
