@@ -12,7 +12,7 @@
     "full": "Traceur",
     "short": "Traceur",
     "platformtype": "compiler",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es6",
       "es2016plus",
@@ -1661,7 +1661,7 @@
     "full": "Bero's EcmaScript Engine (version 1.0.0.489)",
     "short": "BESEN",
     "link": "http://besen.sourceforge.net/",
-    "obsolete": false,
+    "obsolete": true,
     "platformtype": "engine",
     "test_suites": [
       "es5",
@@ -1672,6 +1672,7 @@
     "full": "PhantomJS 2.0",
     "short": "PJS",
     "platformtype": "engine",
+    "obsolete": true,
     "equals": "safari6",
     "needs_annex_b": true
   },
