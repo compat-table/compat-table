@@ -12481,6 +12481,28 @@ exports.tests = [
         duktape2_0: false,
       },
     },
+    {
+      name: 'defaults, arrow function',
+      exec: function(){/*
+        return ((a, {b = 0, c = 3}) => {
+          return a === 1 && b === 2 && c === 3;
+        })(1, {b: 2});
+      */},
+      res: {
+        babel: true,
+        typescript: true,
+        traceur: true,
+        edge15: false,
+        chrome50: true,
+        firefox50: false,
+        firefox52: true,
+        node6: true,
+        node6_5: true,
+        node8: true,
+        safari9: false,
+        safari10: true,
+      },
+    },
   ],
 },
 {
