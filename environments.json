@@ -52,10 +52,103 @@
       "es6"
     ]
   },
-  "typescript": {
+  "typescript1": {
     "full": "TypeScript 1.8 + core-js 2.5",
     "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
     "platformtype": "compiler",
+    "release": "2016-02-22",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2": {
+    "full": "TypeScript 2.0 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2016-09-22",
+    "obsolete": "very",
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_1": {
+    "full": "TypeScript 2.1 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2016-12-07",
+    "obsolete": "very",
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_2": {
+    "full": "TypeScript 2.2 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2017-02-22",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_3": {
+    "full": "TypeScript 2.3 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2017-04-27",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_4": {
+    "full": "TypeScript 2.4 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2017-06-27",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_5": {
+    "full": "TypeScript 2.5 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2017-08-31",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_6": {
+    "full": "TypeScript 2.6 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2017-10-31",
     "obsolete": false,
     "test_suites": [
       "es6",
