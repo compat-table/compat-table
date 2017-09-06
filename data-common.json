@@ -58,6 +58,16 @@
       "note_id": "chrome-sharedmem",
       "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under about:flags"
     },
+    "harmony": {
+      "val": "flagged",
+      "note_id": "chrome-harmony",
+      "note_html": "The feature have to be enabled via --js-flags=\"--harmony\" flag"
+    },
+    "tco": {
+      "val": "flagged",
+      "note_id": "chrome-tco",
+      "note_html": "The feature have to be enabled via --js-flags=\"--harmony-tailcalls\" flag"
+    },
     "simd": {
       "val": "flagged",
       "note_id": "chrome-simd",
