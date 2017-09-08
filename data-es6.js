@@ -16022,7 +16022,11 @@ exports.tests = [
         es6shim: true,
         edge12: true,
         chrome51: true,
-        chrome52: false,
+        chrome52: {
+          val: false,
+          note_id: 'cr-array-prototype-values',
+          note_html: 'The feature was disabled due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615873">compatibility issue</a>.',
+        },
         safari9: true,
         firefox2: false,
         firefox17: {
