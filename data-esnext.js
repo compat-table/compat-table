@@ -2440,6 +2440,8 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         safaritp: true,
         webkit: false,
       }
@@ -2470,6 +2472,8 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         safaritp: true,
         webkit: false,
       }
@@ -2503,6 +2507,8 @@ exports.tests = [
         babel: babel.corejs,
         typescript: typescript.corejs,
         safaritp: true,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         webkit: false,
       }
     }

@@ -68,6 +68,11 @@
       "note_id": "chrome-tco",
       "note_html": "The feature have to be enabled via --js-flags=\"--harmony-tailcalls\" flag"
     },
+    "promise": {
+      "val": "flagged",
+      "note_id": "chrome-promise",
+      "note_html": "The feature have to be enabled via --js-flags=\"--harmony-promise-finally\" flag"
+    },
     "simd": {
       "val": "flagged",
       "note_id": "chrome-simd",
