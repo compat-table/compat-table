@@ -1685,7 +1685,7 @@ exports.tests = [
     firefox2: false,
     opera12: null,
     chrome1: null,
-    chrome61: "flagged",
+    chrome61: chrome.harmony,
     chrome62: true,
     safari1: null,
     rhino1_7: null,
@@ -1709,7 +1709,7 @@ exports.tests = [
   res : {
     ie11: false,
     firefox2: false,
-    chrome50: "flagged",
+    chrome50: chrome.harmony,
     chrome62: true,
     duktape2_0: false,
   }
@@ -1726,7 +1726,7 @@ exports.tests = [
   res: {
     ie11: false,
     firefox2: false,
-    chrome59: "flagged",
+    chrome59: chrome.harmony,
     duktape2_0: false,
   }
 },
@@ -2111,7 +2111,7 @@ exports.tests = [
     res: {
       firefox2: false,
       firefox54: true,
-      chrome59: "flagged",
+      chrome59: chrome.harmony,
       duktape2_0: false,
     },
   }, {
@@ -2185,7 +2185,7 @@ exports.tests = [
     res: {
       firefox2: false,
       firefox54: true,
-      chrome59: "flagged",
+      chrome59: chrome.harmony,
       duktape2_0: false,
     },
   }, {
@@ -2197,7 +2197,7 @@ exports.tests = [
     res: {
       firefox2: false,
       firefox54: true,
-      chrome59: "flagged",
+      chrome59: chrome.harmony,
       duktape2_0: false,
     },
   }]
@@ -2440,6 +2440,8 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         safaritp: true,
         webkit: false,
       }
@@ -2470,6 +2472,8 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         safaritp: true,
         webkit: false,
       }
@@ -2503,6 +2507,8 @@ exports.tests = [
         babel: babel.corejs,
         typescript: typescript.corejs,
         safaritp: true,
+        chrome61: chrome.promise,
+        chrome63: chrome.harmony,
         webkit: false,
       }
     }

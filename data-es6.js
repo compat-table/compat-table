@@ -2,6 +2,7 @@ var util = require('./data-common');
 
 var babel = util.babel;
 var typescript = util.typescript;
+var chrome = util.chrome;
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -34,7 +35,9 @@ exports.tests = [
         babel: false,
         typescript: typescript.fallthrough,
         firefox2: false,
-        chrome51: "flagged",
+        chrome51: chrome.harmony,
+        chrome58: chrome.tco,
+        chrome61: false,
         safari10: true,
         xs6: true,
         duktape2_0: true,
@@ -62,7 +65,9 @@ exports.tests = [
         tr: { val: "flagged", note_id: 'tr-tco' },
         typescript: typescript.fallthrough,
         firefox2: false,
-        chrome51: "flagged",
+        chrome51: chrome.harmony,
+        chrome58: chrome.tco,
+        chrome61: false,
         safari10: true,
         xs6: true,
         duktape2_0: true,
