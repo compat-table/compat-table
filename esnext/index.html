@@ -164,7 +164,7 @@
 <th class="platform safari10 desktop" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari 10">SF 10</abbr></a></th>
 <th class="platform safari10_1 desktop" data-browser="safari10_1"><a href="#safari10_1" class="browser-name"><abbr title="Safari 10.1">SF 10.1</abbr></a></th>
 <th class="platform safari11 desktop unstable" data-browser="safari11"><a href="#safari11" class="browser-name"><abbr title="Safari 11">SF 11</abbr></a></th>
-<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 36">SF TP</abbr></a></th>
+<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 39">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r222079 (September 15, 2017)">WK</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
 <th class="platform node0_10 engine obsolete" data-browser="node0_10"><a href="#node0_10" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
@@ -635,7 +635,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally" data-browser="safari10" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari10_1" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="safari11" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
@@ -708,7 +708,7 @@ iterator.next().then(function(step){
 <td class="no" data-browser="safari10">No</td>
 <td class="no" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
@@ -791,7 +791,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="safari10">No</td>
 <td class="no" data-browser="safari10_1">No</td>
 <td class="no unstable" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
@@ -926,14 +926,14 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="no flagged" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
 <td class="yes unstable" data-browser="chrome62">Yes</td>
 <td class="yes unstable" data-browser="chrome63">Yes</td>
-<td class="unknown obsolete" data-browser="safari8">?</td>
-<td class="unknown obsolete" data-browser="safari9">?</td>
-<td class="unknown" data-browser="safari10">?</td>
-<td class="unknown" data-browser="safari10_1">?</td>
-<td class="unknown unstable" data-browser="safari11">?</td>
-<td class="unknown unstable" data-browser="safaritp">?</td>
+<td class="no obsolete" data-browser="safari8">No</td>
+<td class="no obsolete" data-browser="safari9">No</td>
+<td class="no" data-browser="safari10">No</td>
+<td class="no" data-browser="safari10_1">No</td>
+<td class="no unstable" data-browser="safari11">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
-<td class="unknown" data-browser="phantom">?</td>
+<td class="no" data-browser="phantom">No</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
 <td class="unknown obsolete" data-browser="iojs">?</td>
@@ -950,11 +950,11 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="unknown unstable" data-browser="duktape2_2">?</td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
-<td class="unknown obsolete" data-browser="ios8">?</td>
-<td class="unknown obsolete" data-browser="ios9">?</td>
-<td class="unknown" data-browser="ios10">?</td>
-<td class="unknown" data-browser="ios10_3">?</td>
-<td class="unknown unstable" data-browser="ios11">?</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
+<td class="no" data-browser="ios10">No</td>
+<td class="no" data-browser="ios10_3">No</td>
+<td class="no unstable" data-browser="ios11">No</td>
 </tr>
 <tr significance="0.25"><td id="test-RegExp_Lookbehind_Assertions"><span><a class="anchor" href="#test-RegExp_Lookbehind_Assertions">&#xA7;</a><a href="https://github.com/tc39/proposal-regexp-lookbehind">RegExp Lookbehind Assertions</a></span><script data-source="
 return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&apos;) &amp;&amp;

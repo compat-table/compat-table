@@ -1605,8 +1605,10 @@ exports.tests = [
         babel: true,
         firefox2: false,
         firefox55: firefox.nightly,
-        duktape2_0: false,
+        safari1: false,
+        safaritp: true,
         webkit: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1635,8 +1637,10 @@ exports.tests = [
         babel: true,
         firefox2: false,
         firefox55: firefox.nightly,
-        duktape2_0: false,
+        safari1: false,
+        safaritp: true,
         webkit: true,
+        duktape2_0: false,
       }
     }
   ]
@@ -1689,7 +1693,8 @@ exports.tests = [
     chrome1: null,
     chrome61: chrome.harmony,
     chrome62: true,
-    safari1: null,
+    safari1: false,
+    safaritp: true,
     webkit: true,
     rhino1_7: null,
     xs6: null,
@@ -2445,6 +2450,7 @@ exports.tests = [
         typescript: typescript.corejs,
         chrome61: chrome.promise,
         chrome63: chrome.harmony,
+        safari1: false,
         safaritp: true,
         webkit: true,
       }
@@ -2477,6 +2483,7 @@ exports.tests = [
         typescript: typescript.corejs,
         chrome61: chrome.promise,
         chrome63: chrome.harmony,
+        safari1: false,
         safaritp: true,
         webkit: true,
       }
@@ -2509,6 +2516,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        safari1: false,
         safaritp: true,
         chrome61: chrome.promise,
         chrome63: chrome.harmony,
@@ -2681,6 +2689,7 @@ exports.tests = [
         return false;
       */},
       res: {
+        safari1: false,
         safaritp: true,
         webkit: true
       },
@@ -2698,6 +2707,7 @@ exports.tests = [
         })();
       */},
       res: {
+        safari1: false,
         safaritp: true,
         webkit: true
       },
@@ -2720,6 +2730,7 @@ exports.tests = [
         return it.next().value;
       */},
       res: {
+        safari1: false,
         safaritp: true,
         webkit: true
       }
