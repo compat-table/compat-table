@@ -743,6 +743,8 @@ exports.tests = [
       safari10_1: true,
       safaritp: false,
       webkit: false,
+      chrome1: false,
+      chrome63: true,
       opera10_10: null,
       opera10_50: true,
       konq4_3: null,
