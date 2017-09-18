@@ -1651,15 +1651,15 @@ exports.tests = [
     return result.groups.year === '2016'
       && result.groups.month === '03'
       && result.groups.day === '11'
-      && result.groups[0] === '2016-03-11'
-      && result.groups[1] === '2016'
-      && result.groups[2] === '03'
-      && result.groups[3] === '11';
+      && result[0] === '2016-03-11'
+      && result[1] === '2016'
+      && result[2] === '03'
+      && result[3] === '11';
   */},
   res : {
     ie11: false,
     firefox2: false,
-    chrome61: "flagged",
+    chrome61: chrome.harmony,
     duktape2_0: false,
   }
 },
