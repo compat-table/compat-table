@@ -821,11 +821,11 @@ var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.ex
 return result.groups.year === &apos;2016&apos;
   &amp;&amp; result.groups.month === &apos;03&apos;
   &amp;&amp; result.groups.day === &apos;11&apos;
-  &amp;&amp; result.groups[0] === &apos;2016-03-11&apos;
-  &amp;&amp; result.groups[1] === &apos;2016&apos;
-  &amp;&amp; result.groups[2] === &apos;03&apos;
-  &amp;&amp; result.groups[3] === &apos;11&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result.groups[0] === '2016-03-11'\n  && result.groups[1] === '2016'\n  && result.groups[2] === '03'\n  && result.groups[3] === '11';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result.groups[0] === '2016-03-11'\n  && result.groups[1] === '2016'\n  && result.groups[2] === '03'\n  && result.groups[3] === '11';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  &amp;&amp; result[0] === &apos;2016-03-11&apos;
+  &amp;&amp; result[1] === &apos;2016&apos;
+  &amp;&amp; result[2] === &apos;03&apos;
+  &amp;&amp; result[3] === &apos;11&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -856,9 +856,9 @@ return result.groups.year === &apos;2016&apos;
 <td class="no obsolete" data-browser="chrome58">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
 <td class="no obsolete" data-browser="chrome60">No</td>
-<td class="no flagged" data-browser="chrome61">Flag</td>
-<td class="no flagged unstable" data-browser="chrome62">Flag</td>
-<td class="no flagged unstable" data-browser="chrome63">Flag</td>
+<td class="no flagged" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="safari8">No</td>
 <td class="no obsolete" data-browser="safari9">No</td>
 <td class="no" data-browser="safari10">No</td>
