@@ -742,6 +742,8 @@ exports.tests = [
       firefox5: true,
       safari1: false,
       safari10_1: true,
+      safaritp: true,
+      webkit: true,
       chrome1: false,
       chrome63: true,
       opera10_10: null,
