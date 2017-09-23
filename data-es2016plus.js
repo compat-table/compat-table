@@ -1435,6 +1435,7 @@ exports.tests = [
           safari9: true,
           android4_0: true,
           duktape2_0: false,
+          duktape2_2: true,
         }
       },
       {
@@ -1458,6 +1459,7 @@ exports.tests = [
           safari5_1: true,
           safari9: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1484,6 +1486,7 @@ exports.tests = [
           android4_0: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1509,6 +1512,7 @@ exports.tests = [
           safari9: true,
           android4_0: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1532,6 +1536,7 @@ exports.tests = [
           safari5_1: true,
           safari9: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1560,6 +1565,7 @@ exports.tests = [
           android4_0: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1587,6 +1593,7 @@ exports.tests = [
           android4_0: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1614,6 +1621,7 @@ exports.tests = [
           safari9: true,
           android4_0: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1637,6 +1645,7 @@ exports.tests = [
           safari5_1: true,
           safari9: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1659,6 +1668,7 @@ exports.tests = [
           safari9: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1687,6 +1697,7 @@ exports.tests = [
           android4_0: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1714,6 +1725,7 @@ exports.tests = [
           android4_0: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1741,6 +1753,7 @@ exports.tests = [
           safari9: true,
           android4_0: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1764,6 +1777,7 @@ exports.tests = [
           safari5_1: true,
           safari9: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       },
       {
@@ -1786,6 +1800,7 @@ exports.tests = [
           safari9: true,
           ios5_1: true,
           duktape2_0: false,
+          duktape2_2: true,
         },
       }
     ]

@@ -411,7 +411,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         duktape2_0: false,
-        duktape2_2: true,
+        duktape2_2: false,
       },
     },
   ],
@@ -8552,6 +8552,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
     },
     {
@@ -8581,6 +8582,7 @@ exports.tests = [
         xs6: true,
         safari10: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
     },
     {
@@ -8606,6 +8608,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
     },
     {
@@ -8645,6 +8648,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
     },
     {
@@ -8818,6 +8822,7 @@ exports.tests = [
         chrome49: true,
         safari10: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
     },
     {
@@ -12504,6 +12509,7 @@ exports.tests = [
         node8: true,
         safari9: false,
         safari10: true,
+        duktape2_2: false,
       },
     },
   ],
@@ -14193,6 +14199,7 @@ exports.tests = [
         xs6: true,
         ejs: true,
         duktape2_0: false,
+        duktape2_2: true,
       }
     },
     {
@@ -16303,6 +16310,7 @@ exports.tests = [
         node0_12: true,
         safari9: true,
         typescript: typescript.corejs,
+        duktape2_2: false,
       },
     },
     {
@@ -16322,6 +16330,7 @@ exports.tests = [
         node0_12: true,
         safari9: true,
         typescript: typescript.corejs,
+        duktape2_2: false,
       },
     },
     {
@@ -16424,6 +16433,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
       'imul': {
         ejs: true,
@@ -16448,6 +16458,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
       'sign': {
         ejs: true,
@@ -16467,6 +16478,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape2_0: false,
+        duktape2_2: true,
       },
       'log10': {
         ejs: true,
@@ -17827,6 +17839,7 @@ exports.tests = [
         ejs: true,
         chrome49: true,
         duktape2_0: false,
+        duktape2_2: true,
       }
     },
   ],
@@ -17872,6 +17885,7 @@ exports.tests = [
         jxa: null,
         node0_10: null,
         duktape2_0: null,
+        duktape2_2: false,
         android1_5: null,
         ios4: null,
       },
@@ -17908,6 +17922,7 @@ exports.tests = [
         jxa: null,
         node0_10: null,
         duktape2_0: null,
+        duktape2_2: false,
         android1_5: null,
         ios4: null,
       },
