@@ -54,7 +54,7 @@ exports.tests = [
   name: 'do expressions',
   category: STAGE1,
   significance: 'small',
-  spec: 'https://gist.github.com/dherman/1c97dfb25179fa34a41b5fff040f9879',
+  spec: 'https://github.com/tc39/proposal-do-expressions',
   exec: function () {/*
     return do {
       let x = 23;
@@ -1511,7 +1511,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.matchAll',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/tc39/String.prototype.matchAll',
   exec: function(){/*
@@ -2584,7 +2584,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.{flatten, flatMap}',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
   subtests: [
