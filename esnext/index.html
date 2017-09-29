@@ -3052,14 +3052,287 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no" data-browser="ios10_3">No</td>
 <td class="no" data-browser="ios11">No</td>
 </tr>
+<tr significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a></span><script data-source="
+var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/);
+if(iterator[Symbol.iterator]() !== iterator)return false;
+var a = &apos;&apos;, b = &apos;&apos;, c = &apos;&apos;, step;
+while(!(step = iterator.next()).done){
+  a += step.value[0];
+  b += step.value[1];
+  c += step.value[2];
+}
+return a === &apos;1a2b&apos;
+  &amp;&amp; b === &apos;12&apos;
+  &amp;&amp; c === &apos;ab&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no obsolete" data-browser="edge13">No</td>
+<td class="no" data-browser="edge14">No</td>
+<td class="no" data-browser="edge15">No</td>
+<td class="no unstable" data-browser="edge16">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no obsolete" data-browser="firefox51">No</td>
+<td class="no" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox53">No</td>
+<td class="no obsolete" data-browser="firefox54">No</td>
+<td class="no" data-browser="firefox55">No</td>
+<td class="no unstable" data-browser="firefox56">No</td>
+<td class="no unstable" data-browser="firefox57">No</td>
+<td class="no obsolete" data-browser="chrome53">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no obsolete" data-browser="chrome56">No</td>
+<td class="no obsolete" data-browser="chrome57">No</td>
+<td class="no obsolete" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="chrome59">No</td>
+<td class="no obsolete" data-browser="chrome60">No</td>
+<td class="no" data-browser="chrome61">No</td>
+<td class="no unstable" data-browser="chrome62">No</td>
+<td class="no unstable" data-browser="chrome63">No</td>
+<td class="no obsolete" data-browser="safari8">No</td>
+<td class="no obsolete" data-browser="safari9">No</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no" data-browser="safari10_1">No</td>
+<td class="no" data-browser="safari11">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no" data-browser="duktape2_1">No</td>
+<td class="no unstable" data-browser="duktape2_2">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no" data-browser="ios10_3">No</td>
+<td class="no" data-browser="ios11">No</td>
+</tr>
+<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flatten,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flatten, flatMap}</a></span></td>
+<td class="tally" data-browser="tr" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="closure" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
+<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge12" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge13" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge14" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge15" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="edge16" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox48" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox49" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox50" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox51" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox52" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox53" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox54" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox55" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox56" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox57" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome53" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome54" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome55" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome56" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome57" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome58" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome59" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome60" data-tally="0">0/2</td>
+<td class="tally" data-browser="chrome61" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome62" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome63" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari8" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari10" data-tally="0">0/2</td>
+<td class="tally" data-browser="safari10_1" data-tally="0">0/2</td>
+<td class="tally" data-browser="safari11" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
+<td class="tally" data-browser="phantom" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
+<td class="tally" data-browser="node4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node6" data-tally="0">0/2</td>
+<td class="tally" data-browser="node6_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node7" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node7_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node8" data-tally="0">0/2</td>
+<td class="tally" data-browser="node8_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="duktape2_1" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="duktape2_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios8" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios10_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios11" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="Array.prototype.{flatten,_flatMap}" id="test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatten"><td><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatten">&#xA7;</a>Array.prototype.flatten</span><script data-source="
+return [1, [2, 3], [4, [5, 6]]].flatten().join(&apos;&apos;) === &apos;12345,6&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no obsolete" data-browser="edge13">No</td>
+<td class="no" data-browser="edge14">No</td>
+<td class="no" data-browser="edge15">No</td>
+<td class="no unstable" data-browser="edge16">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no obsolete" data-browser="firefox51">No</td>
+<td class="no" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox53">No</td>
+<td class="no obsolete" data-browser="firefox54">No</td>
+<td class="no" data-browser="firefox55">No</td>
+<td class="no unstable" data-browser="firefox56">No</td>
+<td class="no unstable" data-browser="firefox57">No</td>
+<td class="no obsolete" data-browser="chrome53">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no obsolete" data-browser="chrome56">No</td>
+<td class="no obsolete" data-browser="chrome57">No</td>
+<td class="no obsolete" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="chrome59">No</td>
+<td class="no obsolete" data-browser="chrome60">No</td>
+<td class="no" data-browser="chrome61">No</td>
+<td class="no unstable" data-browser="chrome62">No</td>
+<td class="no unstable" data-browser="chrome63">No</td>
+<td class="no obsolete" data-browser="safari8">No</td>
+<td class="no obsolete" data-browser="safari9">No</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no" data-browser="safari10_1">No</td>
+<td class="no" data-browser="safari11">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no" data-browser="duktape2_1">No</td>
+<td class="no unstable" data-browser="duktape2_2">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no" data-browser="ios10_3">No</td>
+<td class="no" data-browser="ios11">No</td>
+</tr>
+<tr class="subtest" data-parent="Array.prototype.{flatten,_flatMap}" id="test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatMap"><td><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatMap">&#xA7;</a>Array.prototype.flatMap</span><script data-source="
+return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
+  return [it.a, it.b];
+}).join(&apos;&apos;) === &apos;1234&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {\n  return [it.a, it.b];\n}).join('') === '1234';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {\n  return [it.a, it.b];\n}).join('') === '1234';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="closure">No</td>
+<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no obsolete" data-browser="edge13">No</td>
+<td class="no" data-browser="edge14">No</td>
+<td class="no" data-browser="edge15">No</td>
+<td class="no unstable" data-browser="edge16">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox48">No</td>
+<td class="no obsolete" data-browser="firefox49">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no obsolete" data-browser="firefox51">No</td>
+<td class="no" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox53">No</td>
+<td class="no obsolete" data-browser="firefox54">No</td>
+<td class="no" data-browser="firefox55">No</td>
+<td class="no unstable" data-browser="firefox56">No</td>
+<td class="no unstable" data-browser="firefox57">No</td>
+<td class="no obsolete" data-browser="chrome53">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no obsolete" data-browser="chrome56">No</td>
+<td class="no obsolete" data-browser="chrome57">No</td>
+<td class="no obsolete" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="chrome59">No</td>
+<td class="no obsolete" data-browser="chrome60">No</td>
+<td class="no" data-browser="chrome61">No</td>
+<td class="no unstable" data-browser="chrome62">No</td>
+<td class="no unstable" data-browser="chrome63">No</td>
+<td class="no obsolete" data-browser="safari8">No</td>
+<td class="no obsolete" data-browser="safari9">No</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no" data-browser="safari10_1">No</td>
+<td class="no" data-browser="safari11">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="iojs">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no obsolete" data-browser="node5">No</td>
+<td class="no obsolete" data-browser="node6">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no" data-browser="duktape2_1">No</td>
+<td class="no unstable" data-browser="duktape2_2">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no" data-browser="ios10_3">No</td>
+<td class="no" data-browser="ios11">No</td>
+</tr>
 <tr class="category"><td colspan="64">Proposal (stage 1)</td>
 </tr>
-<tr significance="0.25"><td id="test-do_expressions"><span><a class="anchor" href="#test-do_expressions">&#xA7;</a><a href="https://gist.github.com/dherman/1c97dfb25179fa34a41b5fff040f9879">do expressions</a></span><script data-source="
+<tr significance="0.25"><td id="test-do_expressions"><span><a class="anchor" href="#test-do_expressions">&#xA7;</a><a href="https://github.com/tc39/proposal-do-expressions">do expressions</a></span><script data-source="
 return do {
   let x = 23;
   x + 19;
 } === 42;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nreturn do {\n  let x = 23;\n  x + 19;\n} === 42;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes</td>
@@ -3196,7 +3469,7 @@ simdBoolIntTypes=simdBoolTypes.concat(simdIntTypes);
 simdFloatIntTypes=simdFloatTypes.concat(simdIntTypes);
 simdAllTypes=simdFloatTypes.concat(simdIntTypes,simdBoolTypes);
 return typeof SIMD !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nsimdFloatTypes=['Float32x4'];\nsimdBoolTypes=['Bool32x4','Bool16x8','Bool8x16'];\nsimdIntTypes=['Int32x4','Int16x8','Int8x16','Uint32x4','Uint16x8','Uint8x16'];\nsimd32bitFloatIntTypes=['Float32x4','Int32x4','Uint32x4'];\nsimdSmallIntTypes=['Int16x8','Int8x16','Uint16x8','Uint8x16'];\nsimdBoolIntTypes=simdBoolTypes.concat(simdIntTypes);\nsimdFloatIntTypes=simdFloatTypes.concat(simdIntTypes);\nsimdAllTypes=simdFloatTypes.concat(simdIntTypes,simdBoolTypes);\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nsimdFloatTypes=['Float32x4'];\nsimdBoolTypes=['Bool32x4','Bool16x8','Bool8x16'];\nsimdIntTypes=['Int32x4','Int16x8','Int8x16','Uint32x4','Uint16x8','Uint8x16'];\nsimd32bitFloatIntTypes=['Float32x4','Int32x4','Uint32x4'];\nsimdSmallIntTypes=['Int16x8','Int8x16','Uint16x8','Uint8x16'];\nsimdBoolIntTypes=simdBoolTypes.concat(simdIntTypes);\nsimdFloatIntTypes=simdFloatTypes.concat(simdIntTypes);\nsimdAllTypes=simdFloatTypes.concat(simdIntTypes,simdBoolTypes);\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nsimdFloatTypes=['Float32x4'];\nsimdBoolTypes=['Bool32x4','Bool16x8','Bool8x16'];\nsimdIntTypes=['Int32x4','Int16x8','Int8x16','Uint32x4','Uint16x8','Uint8x16'];\nsimd32bitFloatIntTypes=['Float32x4','Int32x4','Uint32x4'];\nsimdSmallIntTypes=['Int16x8','Int8x16','Uint16x8','Uint8x16'];\nsimdBoolIntTypes=simdBoolTypes.concat(simdIntTypes);\nsimdFloatIntTypes=simdFloatTypes.concat(simdIntTypes);\nsimdAllTypes=simdFloatTypes.concat(simdIntTypes,simdBoolTypes);\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nsimdFloatTypes=['Float32x4'];\nsimdBoolTypes=['Bool32x4','Bool16x8','Bool8x16'];\nsimdIntTypes=['Int32x4','Int16x8','Int8x16','Uint32x4','Uint16x8','Uint8x16'];\nsimd32bitFloatIntTypes=['Float32x4','Int32x4','Uint32x4'];\nsimdSmallIntTypes=['Int16x8','Int8x16','Uint16x8','Uint8x16'];\nsimdBoolIntTypes=simdBoolTypes.concat(simdIntTypes);\nsimdFloatIntTypes=simdFloatTypes.concat(simdIntTypes);\nsimdAllTypes=simdFloatTypes.concat(simdIntTypes,simdBoolTypes);\nreturn typeof SIMD !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3262,7 +3535,7 @@ return typeof SIMD !== &apos;undefined&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#float32x4_Float32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#float32x4_Float32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#float32x4">Float32x4</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Float32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3328,7 +3601,7 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int32x4_Int32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int32x4_Int32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#int32x4">Int32x4</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Int32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3394,7 +3667,7 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int16x8_Int16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int16x8_Int16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#int16x8">Int16x8</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Int16x8 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3460,7 +3733,7 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int8x16_Int8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#int8x16_Int8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#int8x16">Int8x16</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Int8x16 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("51");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Int8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3526,7 +3799,7 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint32x4_Uint32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint32x4_Uint32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#uint32x4">Uint32x4</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Uint32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3592,7 +3865,7 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint16x8_Uint16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint16x8_Uint16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#uint16x8">Uint16x8</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Uint16x8 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3658,7 +3931,7 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint8x16_Uint8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#uint8x16_Uint8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#uint8x16">Uint8x16</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Uint8x16 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Uint8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Uint8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3724,7 +3997,7 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool32x4_Bool32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool32x4_Bool32x4_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#bool32x4">Bool32x4</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Bool32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("51");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("55");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3790,7 +4063,7 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool16x8_Bool16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool16x8_Bool16x8_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#bool16x8">Bool16x8</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Bool16x8 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool16x8 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3856,7 +4129,7 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool8x16_Bool8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#bool8x16_Bool8x16_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#bool8x16">Bool8x16</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Bool8x16 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Bool8x16 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3924,7 +4197,7 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].abs === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].abs === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].abs === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].abs === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].abs === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3992,7 +4265,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].add === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].add === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("55");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].add === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].add === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].add === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4060,7 +4333,7 @@ return simdFloatIntTypes.every(function(type){
 return simdSmallIntTypes.every(function(type){
   return typeof SIMD[type].addSaturate === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].addSaturate === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].addSaturate === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].addSaturate === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].addSaturate === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4128,7 +4401,7 @@ return simdSmallIntTypes.every(function(type){
 return simdBoolIntTypes.every(function(type){
   return typeof SIMD[type].and === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].and === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].and === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].and === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].and === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4196,7 +4469,7 @@ return simdBoolIntTypes.every(function(type){
 return simdBoolTypes.every(function(type){
   return typeof SIMD[type].anyTrue === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].anyTrue === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].anyTrue === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].anyTrue === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].anyTrue === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4264,7 +4537,7 @@ return simdBoolTypes.every(function(type){
 return simdBoolTypes.every(function(type){
   return typeof SIMD[type].allTrue === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].allTrue === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].allTrue === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("63");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].allTrue === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("63");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].allTrue === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4332,7 +4605,7 @@ return simdBoolTypes.every(function(type){
 return simdAllTypes.every(function(type){
   return typeof SIMD[type].check === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].check === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].check === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].check === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("64");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].check === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4400,7 +4673,7 @@ return simdAllTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].equal === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].equal === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].equal === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].equal === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].equal === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4468,7 +4741,7 @@ return simdFloatIntTypes.every(function(type){
 return simdAllTypes.every(function(type){
   return typeof SIMD[type].extractLane === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].extractLane === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].extractLane === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].extractLane === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].extractLane === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4536,7 +4809,7 @@ return simdAllTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].greaterThan === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("63");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThan === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("63");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThan === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThan === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThan === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4604,7 +4877,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].greaterThanOrEqual === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("64");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].greaterThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4672,7 +4945,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].lessThan === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThan === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThan === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThan === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("69");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThan === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4740,7 +5013,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].lessThanOrEqual === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].lessThanOrEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4808,7 +5081,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].mul === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].mul === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].mul === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].mul === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("71");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].mul === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4876,7 +5149,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].div === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].div === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].div === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("72");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].div === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("72");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].div === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -4944,7 +5217,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].load === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("69");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("73");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("73");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5012,7 +5285,7 @@ return simdFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].load1 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load1 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load1 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("74");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load1 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("74");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load1 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5080,7 +5353,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].load2 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load2 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("71");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load2 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("75");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load2 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("75");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load2 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5148,7 +5421,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].load3 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("72");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load3 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("72");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load3 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load3 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].load3 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5216,7 +5489,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].max === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("73");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].max === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("73");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].max === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].max === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("77");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].max === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5284,7 +5557,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].maxNum === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("74");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].maxNum === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("74");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].maxNum === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("78");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].maxNum === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("78");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].maxNum === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5352,7 +5625,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].min === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("75");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].min === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("75");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].min === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].min === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].min === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5420,7 +5693,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].minNum === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].minNum === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].minNum === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].minNum === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].minNum === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5488,7 +5761,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].neg === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].neg === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("77");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].neg === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].neg === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].neg === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5556,7 +5829,7 @@ return simdFloatIntTypes.every(function(type){
 return simdBoolTypes.every(function(type){
   return typeof SIMD[type].not === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("78");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].not === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("78");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].not === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].not === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolTypes.every(function(type){\n  return typeof SIMD[type].not === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5624,7 +5897,7 @@ return simdBoolTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].notEqual === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].notEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].notEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].notEqual === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].notEqual === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5692,7 +5965,7 @@ return simdFloatIntTypes.every(function(type){
 return simdBoolIntTypes.every(function(type){
   return typeof SIMD[type].or === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("80");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].or === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("80");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].or === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].or === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].or === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5760,7 +6033,7 @@ return simdBoolIntTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].reciprocalApproximation === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalApproximation === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalApproximation === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalApproximation === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalApproximation === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5828,7 +6101,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].reciprocalSqrtApproximation === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalSqrtApproximation === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalSqrtApproximation === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalSqrtApproximation === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].reciprocalSqrtApproximation === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5896,7 +6169,7 @@ return simdFloatTypes.every(function(type){
 return simdAllTypes.every(function(type){
   return typeof SIMD[type].replaceLane === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].replaceLane === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].replaceLane === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].replaceLane === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn simdAllTypes.every(function(type){\n  return typeof SIMD[type].replaceLane === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -5964,7 +6237,7 @@ return simdAllTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].select === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].select === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].select === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].select === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].select === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6032,7 +6305,7 @@ return simdFloatIntTypes.every(function(type){
 return simdIntTypes.every(function(type){
   return typeof SIMD[type].shiftLeftByScalar === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftLeftByScalar === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftLeftByScalar === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftLeftByScalar === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftLeftByScalar === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6100,7 +6373,7 @@ return simdIntTypes.every(function(type){
 return simdIntTypes.every(function(type){
   return typeof SIMD[type].shiftRightByScalar === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftRightByScalar === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftRightByScalar === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftRightByScalar === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nreturn simdIntTypes.every(function(type){\n  return typeof SIMD[type].shiftRightByScalar === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6168,7 +6441,7 @@ return simdIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].shuffle === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].shuffle === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].shuffle === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].shuffle === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].shuffle === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6236,7 +6509,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].splat === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].splat === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].splat === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].splat === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].splat === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6304,7 +6577,7 @@ return simdFloatIntTypes.every(function(type){
 return simdFloatTypes.every(function(type){
   return typeof SIMD[type].sqrt === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].sqrt === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].sqrt === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].sqrt === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatTypes.every(function(type){\n  return typeof SIMD[type].sqrt === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6372,7 +6645,7 @@ return simdFloatTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].store === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6440,7 +6713,7 @@ return simdFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].store1 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store1 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store1 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store1 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store1 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6508,7 +6781,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].store2 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store2 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store2 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store2 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store2 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6576,7 +6849,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simd32bitFloatIntTypes.every(function(type){
   return typeof SIMD[type].store3 === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store3 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store3 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store3 === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nreturn simd32bitFloatIntTypes.every(function(type){\n  return typeof SIMD[type].store3 === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6644,7 +6917,7 @@ return simd32bitFloatIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].sub === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].sub === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].sub === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("98");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].sub === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("98");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].sub === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6712,7 +6985,7 @@ return simdFloatIntTypes.every(function(type){
 return simdSmallIntTypes.every(function(type){
   return typeof SIMD[type].subSaturate === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].subSaturate === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].subSaturate === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].subSaturate === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nreturn simdSmallIntTypes.every(function(type){\n  return typeof SIMD[type].subSaturate === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6780,7 +7053,7 @@ return simdSmallIntTypes.every(function(type){
 return simdFloatIntTypes.every(function(type){
   return typeof SIMD[type].swizzle === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].swizzle === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].swizzle === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].swizzle === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nreturn simdFloatIntTypes.every(function(type){\n  return typeof SIMD[type].swizzle === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6848,7 +7121,7 @@ return simdFloatIntTypes.every(function(type){
 return simdBoolIntTypes.every(function(type){
   return typeof SIMD[type].xor === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].xor === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].xor === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("101");try{return Function("asyncTestPassed","\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].xor === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("101");return Function("asyncTestPassed","'use strict';"+"\nreturn simdBoolIntTypes.every(function(type){\n  return typeof SIMD[type].xor === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6916,7 +7189,7 @@ return simdBoolIntTypes.every(function(type){
 return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint32x4&apos;,&apos;Uint16x8&apos;,&apos;Uint8x16&apos;].every(function(type){
   return typeof SIMD.Int16x8[&apos;from&apos; + type + &apos;Bits&apos;] === &apos;function&apos;;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("98");try{return Function("asyncTestPassed","\nreturn ['Float32x4','Int32x4','Int8x16','Uint32x4','Uint16x8','Uint8x16'].every(function(type){\n  return typeof SIMD.Int16x8['from' + type + 'Bits'] === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("98");return Function("asyncTestPassed","'use strict';"+"\nreturn ['Float32x4','Int32x4','Int8x16','Uint32x4','Uint16x8','Uint8x16'].every(function(type){\n  return typeof SIMD.Int16x8['from' + type + 'Bits'] === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nreturn ['Float32x4','Int32x4','Int8x16','Uint32x4','Uint16x8','Uint8x16'].every(function(type){\n  return typeof SIMD.Int16x8['from' + type + 'Bits'] === 'function';\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nreturn ['Float32x4','Int32x4','Int8x16','Uint32x4','Uint16x8','Uint8x16'].every(function(type){\n  return typeof SIMD.Int16x8['from' + type + 'Bits'] === 'function';\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -6982,7 +7255,7 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 </tr>
 <tr class="subtest" data-parent="SIMD_(Single_Instruction,_Multiple_Data)" id="test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#simd-to-timd-logical_SIMD.%type%.fromTIMD_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/fromFloat32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-SIMD_(Single_Instruction,_Multiple_Data)_a_href=_https://tc39.github.io/ecmascript_simd/#simd-to-timd-logical_SIMD.%type%.fromTIMD_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/fromFloat32x4_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecmascript_simd/#simd-to-timd-logical">SIMD.%type%.fromTIMD</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/fromFloat32x4" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typeof SIMD.Float32x4.fromUint32x4 === &apos;function&apos; &amp;&amp; typeof SIMD.Int32x4.fromFloat32x4 === &apos;function&apos; &amp;&amp; typeof SIMD.Uint32x4.fromFloat32x4 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.fromInt32x4 === 'function' && typeof SIMD.Float32x4.fromUint32x4 === 'function' && typeof SIMD.Int32x4.fromFloat32x4 === 'function' && typeof SIMD.Uint32x4.fromFloat32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.fromInt32x4 === 'function' && typeof SIMD.Float32x4.fromUint32x4 === 'function' && typeof SIMD.Int32x4.fromFloat32x4 === 'function' && typeof SIMD.Uint32x4.fromFloat32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nreturn typeof SIMD.Float32x4.fromInt32x4 === 'function' && typeof SIMD.Float32x4.fromUint32x4 === 'function' && typeof SIMD.Int32x4.fromFloat32x4 === 'function' && typeof SIMD.Uint32x4.fromFloat32x4 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SIMD.Float32x4.fromInt32x4 === 'function' && typeof SIMD.Float32x4.fromUint32x4 === 'function' && typeof SIMD.Int32x4.fromFloat32x4 === 'function' && typeof SIMD.Uint32x4.fromFloat32x4 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7051,7 +7324,7 @@ return typeof Realm === &quot;function&quot;
   &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
     return key in Realm.prototype;
   });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7180,7 +7453,7 @@ return typeof Realm === &quot;function&quot;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_basic_support"><td><span><a class="anchor" href="#test-Observable_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof Observable !== &apos;undefined&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");try{return Function("asyncTestPassed","\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("106");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Observable !== 'undefined';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7246,7 +7519,7 @@ return typeof Observable !== &apos;undefined&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Symbol.observable_well_known_symbol"><td><span><a class="anchor" href="#test-Observable_Symbol.observable_well_known_symbol">&#xA7;</a>Symbol.observable well known symbol</span><script data-source="
 return typeof Symbol.observable === &apos;symbol&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Symbol.observable === 'symbol';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7312,7 +7585,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.subscribe"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.subscribe">&#xA7;</a>Observable.prototype.subscribe</span><script data-source="
 return &apos;subscribe&apos; in Observable.prototype;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn 'subscribe' in Observable.prototype;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7388,7 +7661,7 @@ try { new Observable(false) } catch(e) { primitiveCheckPassed = true }
 try { Observable(function() { }) } catch(e) { newCheckPassed = true }
 
 return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newCheckPassed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");try{return Function("asyncTestPassed","\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("105");return Function("asyncTestPassed","'use strict';"+"\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nif(!(new Observable(function(){}) instanceof Observable))return false;\n\nvar nonCallableCheckPassed,\n    primitiveCheckPassed,\n    newCheckPassed;\n\ntry { new Observable({ }) } catch(e) { nonCallableCheckPassed = true }\ntry { new Observable(false) } catch(e) { primitiveCheckPassed = true }\ntry { Observable(function() { }) } catch(e) { newCheckPassed = true }\n\nreturn nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7455,7 +7728,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype.forEach"><td><span><a class="anchor" href="#test-Observable_Observable.prototype.forEach">&#xA7;</a>Observable.prototype.forEach</span><script data-source="
 var o = new Observable(function() { });
 return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function(e){return true}) instanceof Promise;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("106");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("106");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7522,7 +7795,7 @@ return &apos;forEach&apos; in Observable.prototype &amp;&amp; o.forEach(function
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.prototype[Symbol.observable]"><td><span><a class="anchor" href="#test-Observable_Observable.prototype[Symbol.observable]">&#xA7;</a>Observable.prototype[Symbol.observable]</span><script data-source="
 var o = new Observable(function() { });
 return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]() === o;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nvar o = new Observable(function() { });\nreturn Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7588,7 +7861,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.of"><td><span><a class="anchor" href="#test-Observable_Observable.of">&#xA7;</a>Observable.of</span><script data-source="
 return Observable.of(1, 2, 3) instanceof Observable;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("112");try{return Function("asyncTestPassed","\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("112");return Function("asyncTestPassed","'use strict';"+"\nreturn Observable.of(1, 2, 3) instanceof Observable;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7654,83 +7927,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 </tr>
 <tr class="subtest" data-parent="Observable" id="test-Observable_Observable.from"><td><span><a class="anchor" href="#test-Observable_Observable.from">&#xA7;</a>Observable.from</span><script data-source="
 return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable.from(new Set([1, 2, 3])) instanceof Observable);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no obsolete" data-browser="edge12">No</td>
-<td class="no obsolete" data-browser="edge13">No</td>
-<td class="no" data-browser="edge14">No</td>
-<td class="no" data-browser="edge15">No</td>
-<td class="no unstable" data-browser="edge16">No</td>
-<td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox48">No</td>
-<td class="no obsolete" data-browser="firefox49">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
-<td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No</td>
-<td class="no obsolete" data-browser="firefox54">No</td>
-<td class="no" data-browser="firefox55">No</td>
-<td class="no unstable" data-browser="firefox56">No</td>
-<td class="no unstable" data-browser="firefox57">No</td>
-<td class="no obsolete" data-browser="chrome53">No</td>
-<td class="no obsolete" data-browser="chrome54">No</td>
-<td class="no obsolete" data-browser="chrome55">No</td>
-<td class="no obsolete" data-browser="chrome56">No</td>
-<td class="no obsolete" data-browser="chrome57">No</td>
-<td class="no obsolete" data-browser="chrome58">No</td>
-<td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no obsolete" data-browser="chrome60">No</td>
-<td class="no" data-browser="chrome61">No</td>
-<td class="no unstable" data-browser="chrome62">No</td>
-<td class="no unstable" data-browser="chrome63">No</td>
-<td class="no obsolete" data-browser="safari8">No</td>
-<td class="no obsolete" data-browser="safari9">No</td>
-<td class="no obsolete" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="node5">No</td>
-<td class="no obsolete" data-browser="node6">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no" data-browser="duktape2_1">No</td>
-<td class="no unstable" data-browser="duktape2_2">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios8">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
-<td class="no obsolete" data-browser="ios10">No</td>
-<td class="no" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
-</tr>
-<tr significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a></span><script data-source="
-var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/);
-if(iterator[Symbol.iterator]() !== iterator)return false;
-var a = &apos;&apos;, b = &apos;&apos;, c = &apos;&apos;, step;
-while(!(step = iterator.next()).done){
-  a += step.value[0];
-  b += step.value[1];
-  c += step.value[2];
-}
-return a === &apos;1a2b&apos;
-  &amp;&amp; b === &apos;12&apos;
-  &amp;&amp; c === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nreturn (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -7800,7 +7997,7 @@ var weakref = System.makeWeakRef(O);
 var works = weakref.get() === O;
 weakref.clear();
 return works &amp;&amp; weakref.get() === undefined;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7867,7 +8064,7 @@ return works &amp;&amp; weakref.get() === undefined;
 <tr significance="0.5"><td id="test-Frozen_Realms_API"><span><a class="anchor" href="#test-Frozen_Realms_API">&#xA7;</a><a href="https://github.com/FUDCo/frozen-realms">Frozen Realms API</a></span><script data-source="
 return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
   &amp;&amp; typeof Reflect.Realm.prototype.spawn === &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("112");try{return Function("asyncTestPassed","\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("112");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("115");try{return Function("asyncTestPassed","\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("115");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -7936,7 +8133,7 @@ return Math.signbit(-0) === false
   &amp;&amp; Math.signbit(0) === true
   &amp;&amp; Math.signbit(-42) === false
   &amp;&amp; Math.signbit(42) === true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8067,7 +8264,7 @@ return Math.signbit(-0) === false
 return Math.clamp(2, 4, 6) === 4
   &amp;&amp; Math.clamp(4, 2, 6) === 4
   &amp;&amp; Math.clamp(6, 2, 4) === 4;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("115");try{return Function("asyncTestPassed","\nreturn Math.clamp(2, 4, 6) === 4\n  && Math.clamp(4, 2, 6) === 4\n  && Math.clamp(6, 2, 4) === 4;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("115");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.clamp(2, 4, 6) === 4\n  && Math.clamp(4, 2, 6) === 4\n  && Math.clamp(6, 2, 4) === 4;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("118");try{return Function("asyncTestPassed","\nreturn Math.clamp(2, 4, 6) === 4\n  && Math.clamp(4, 2, 6) === 4\n  && Math.clamp(6, 2, 4) === 4;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("118");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.clamp(2, 4, 6) === 4\n  && Math.clamp(4, 2, 6) === 4\n  && Math.clamp(6, 2, 4) === 4;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8133,7 +8330,7 @@ return Math.clamp(2, 4, 6) === 4
 </tr>
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.DEG_PER_RAD"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.DEG_PER_RAD">&#xA7;</a>Math.DEG_PER_RAD</span><script data-source="
 return Math.DEG_PER_RAD === Math.PI / 180;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn Math.DEG_PER_RAD === Math.PI / 180;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.DEG_PER_RAD === Math.PI / 180;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nreturn Math.DEG_PER_RAD === Math.PI / 180;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.DEG_PER_RAD === Math.PI / 180;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8200,7 +8397,7 @@ return Math.DEG_PER_RAD === Math.PI / 180;
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.degrees"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.degrees">&#xA7;</a>Math.degrees</span><script data-source="
 return Math.degrees(Math.PI / 2) === 90
   &amp;&amp; Math.degrees(Math.PI) === 180;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("117");try{return Function("asyncTestPassed","\nreturn Math.degrees(Math.PI / 2) === 90\n  && Math.degrees(Math.PI) === 180;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("117");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.degrees(Math.PI / 2) === 90\n  && Math.degrees(Math.PI) === 180;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nreturn Math.degrees(Math.PI / 2) === 90\n  && Math.degrees(Math.PI) === 180;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.degrees(Math.PI / 2) === 90\n  && Math.degrees(Math.PI) === 180;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8266,7 +8463,7 @@ return Math.degrees(Math.PI / 2) === 90
 </tr>
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.fscale"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.fscale">&#xA7;</a>Math.fscale</span><script data-source="
 return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("118");try{return Function("asyncTestPassed","\nreturn Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("118");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nreturn Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8332,7 +8529,7 @@ return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) 
 </tr>
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.RAD_PER_DEG"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.RAD_PER_DEG">&#xA7;</a>Math.RAD_PER_DEG</span><script data-source="
 return Math.RAD_PER_DEG === 180 / Math.PI;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nreturn Math.RAD_PER_DEG === 180 / Math.PI;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.RAD_PER_DEG === 180 / Math.PI;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("122");try{return Function("asyncTestPassed","\nreturn Math.RAD_PER_DEG === 180 / Math.PI;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("122");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.RAD_PER_DEG === 180 / Math.PI;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8399,7 +8596,7 @@ return Math.RAD_PER_DEG === 180 / Math.PI;
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.radians"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.radians">&#xA7;</a>Math.radians</span><script data-source="
 return Math.radians(90) === Math.PI / 2
   &amp;&amp; Math.radians(180) === Math.PI;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nreturn Math.radians(90) === Math.PI / 2\n  && Math.radians(180) === Math.PI;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.radians(90) === Math.PI / 2\n  && Math.radians(180) === Math.PI;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nreturn Math.radians(90) === Math.PI / 2\n  && Math.radians(180) === Math.PI;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.radians(90) === Math.PI / 2\n  && Math.radians(180) === Math.PI;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8465,7 +8662,7 @@ return Math.radians(90) === Math.PI / 2
 </tr>
 <tr class="subtest" data-parent="Math_extensions_proposal" id="test-Math_extensions_proposal_Math.scale"><td><span><a class="anchor" href="#test-Math_extensions_proposal_Math.scale">&#xA7;</a>Math.scale</span><script data-source="
 return Math.scale(0, 3, 5, 8, 10) === 5;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nreturn Math.scale(0, 3, 5, 8, 10) === 5;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.scale(0, 3, 5, 8, 10) === 5;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nreturn Math.scale(0, 3, 5, 8, 10) === 5;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.scale(0, 3, 5, 8, 10) === 5;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8594,7 +8791,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 </tr>
 <tr class="subtest" data-parent="Promise.try" id="test-Promise.try_basic_support"><td><span><a class="anchor" href="#test-Promise.try_basic_support">&#xA7;</a>basic support</span><script data-source="
 return typeof Promise.try === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("126");try{return Function("asyncTestPassed","\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("126");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Promise.try === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8660,7 +8857,7 @@ return typeof Promise.try === &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Promise.try" id="test-Promise.try_returns_instance_of_Promise"><td><span><a class="anchor" href="#test-Promise.try_returns_instance_of_Promise">&#xA7;</a>returns instance of Promise</span><script data-source="
 return Promise.try(function () {}) instanceof Promise;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nreturn Promise.try(function () {}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nreturn Promise.try(function () {}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");try{return Function("asyncTestPassed","\nreturn Promise.try(function () {}) instanceof Promise;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("127");return Function("asyncTestPassed","'use strict';"+"\nreturn Promise.try(function () {}) instanceof Promise;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8728,7 +8925,7 @@ return Promise.try(function () {}) instanceof Promise;
 var score = 0;
 Promise.try(function () { score++ });
 return score === 1;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("125");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function () { score++ });\nreturn score === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("125");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function () { score++ });\nreturn score === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function () { score++ });\nreturn score === 1;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function () { score++ });\nreturn score === 1;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8801,7 +8998,7 @@ Promise.try(function() {
   score += (val === &apos;foo&apos;);
   if (score === 2) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("126");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return 'foo';\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("126");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return 'foo';\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return 'foo';\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return 'foo';\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8874,7 +9071,7 @@ Promise.try(function() {
   score += (err === &apos;bar&apos;);
   if (score === 2) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  throw 'bar';\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("127");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  throw 'bar';\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("130");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  throw 'bar';\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("130");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  throw 'bar';\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -8947,7 +9144,7 @@ Promise.try(function() {
   score += (val === &apos;foo&apos;);
   if (score === 2) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.resolve('foo');\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.resolve('foo');\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.resolve('foo');\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.resolve('foo');\n}).then(function(val) {\n  score += (val === 'foo');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -9020,204 +9217,7 @@ Promise.try(function() {
   score += (err === &apos;bar&apos;);
   if (score === 2) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.reject('bar');\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.reject('bar');\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no obsolete" data-browser="edge12">No</td>
-<td class="no obsolete" data-browser="edge13">No</td>
-<td class="no" data-browser="edge14">No</td>
-<td class="no" data-browser="edge15">No</td>
-<td class="no unstable" data-browser="edge16">No</td>
-<td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox48">No</td>
-<td class="no obsolete" data-browser="firefox49">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
-<td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No</td>
-<td class="no obsolete" data-browser="firefox54">No</td>
-<td class="no" data-browser="firefox55">No</td>
-<td class="no unstable" data-browser="firefox56">No</td>
-<td class="no unstable" data-browser="firefox57">No</td>
-<td class="no obsolete" data-browser="chrome53">No</td>
-<td class="no obsolete" data-browser="chrome54">No</td>
-<td class="no obsolete" data-browser="chrome55">No</td>
-<td class="no obsolete" data-browser="chrome56">No</td>
-<td class="no obsolete" data-browser="chrome57">No</td>
-<td class="no obsolete" data-browser="chrome58">No</td>
-<td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no obsolete" data-browser="chrome60">No</td>
-<td class="no" data-browser="chrome61">No</td>
-<td class="no unstable" data-browser="chrome62">No</td>
-<td class="no unstable" data-browser="chrome63">No</td>
-<td class="no obsolete" data-browser="safari8">No</td>
-<td class="no obsolete" data-browser="safari9">No</td>
-<td class="no obsolete" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="node5">No</td>
-<td class="no obsolete" data-browser="node6">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no" data-browser="duktape2_1">No</td>
-<td class="no unstable" data-browser="duktape2_2">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios8">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
-<td class="no obsolete" data-browser="ios10">No</td>
-<td class="no" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
-</tr>
-<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flatten,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flatten, flatMap}</a></span></td>
-<td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
-<td class="tally" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally" data-browser="typescript" data-tally="1">2/2</td>
-<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge12" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge13" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge14" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge15" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="edge16" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox45" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox48" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox49" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox50" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox51" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox52" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox53" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox54" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox55" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox56" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox57" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome53" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome54" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome55" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome56" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome57" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome58" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome59" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome60" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome61" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="chrome62" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="chrome63" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari8" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari10" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari10_1" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari11" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
-<td class="tally" data-browser="phantom" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="iojs" data-tally="0">0/2</td>
-<td class="tally" data-browser="node4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node6" data-tally="0">0/2</td>
-<td class="tally" data-browser="node6_5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node7" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node7_6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node8" data-tally="0">0/2</td>
-<td class="tally" data-browser="node8_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
-<td class="tally" data-browser="duktape2_1" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="duktape2_2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios8" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios10_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios11" data-tally="0">0/2</td>
-</tr>
-<tr class="subtest" data-parent="Array.prototype.{flatten,_flatMap}" id="test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatten"><td><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatten">&#xA7;</a>Array.prototype.flatten</span><script data-source="
-return [1, [2, 3], [4, [5, 6]]].flatten().join(&apos;&apos;) === &apos;12345,6&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nreturn [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no" data-browser="closure">No</td>
-<td class="yes" data-browser="typescript">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no obsolete" data-browser="edge12">No</td>
-<td class="no obsolete" data-browser="edge13">No</td>
-<td class="no" data-browser="edge14">No</td>
-<td class="no" data-browser="edge15">No</td>
-<td class="no unstable" data-browser="edge16">No</td>
-<td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox48">No</td>
-<td class="no obsolete" data-browser="firefox49">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
-<td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No</td>
-<td class="no obsolete" data-browser="firefox54">No</td>
-<td class="no" data-browser="firefox55">No</td>
-<td class="no unstable" data-browser="firefox56">No</td>
-<td class="no unstable" data-browser="firefox57">No</td>
-<td class="no obsolete" data-browser="chrome53">No</td>
-<td class="no obsolete" data-browser="chrome54">No</td>
-<td class="no obsolete" data-browser="chrome55">No</td>
-<td class="no obsolete" data-browser="chrome56">No</td>
-<td class="no obsolete" data-browser="chrome57">No</td>
-<td class="no obsolete" data-browser="chrome58">No</td>
-<td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no obsolete" data-browser="chrome60">No</td>
-<td class="no" data-browser="chrome61">No</td>
-<td class="no unstable" data-browser="chrome62">No</td>
-<td class="no unstable" data-browser="chrome63">No</td>
-<td class="no obsolete" data-browser="safari8">No</td>
-<td class="no obsolete" data-browser="safari9">No</td>
-<td class="no obsolete" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="iojs">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no obsolete" data-browser="node5">No</td>
-<td class="no obsolete" data-browser="node6">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no" data-browser="duktape2_1">No</td>
-<td class="no unstable" data-browser="duktape2_2">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios8">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
-<td class="no obsolete" data-browser="ios10">No</td>
-<td class="no" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
-</tr>
-<tr class="subtest" data-parent="Array.prototype.{flatten,_flatMap}" id="test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatMap"><td><span><a class="anchor" href="#test-Array.prototype.{flatten,_flatMap}_Array.prototype.flatMap">&#xA7;</a>Array.prototype.flatMap</span><script data-source="
-return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
-  return [it.a, it.b];
-}).join(&apos;&apos;) === &apos;1234&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");try{return Function("asyncTestPassed","\nreturn [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {\n  return [it.a, it.b];\n}).join('') === '1234';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("132");return Function("asyncTestPassed","'use strict';"+"\nreturn [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {\n  return [it.a, it.b];\n}).join('') === '1234';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.reject('bar');\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("132");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise.try(function() {\n  score++;\n  return Promise.reject('bar');\n}).catch(function(err) {\n  score += (err === 'bar');\n  if (score === 2) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
