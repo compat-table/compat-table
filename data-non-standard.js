@@ -180,7 +180,6 @@ exports.tests = [
   },
   res: {
     ie7: true,
-    iojs: true,
     firefox2: true,
     safari3_1: true,
     chrome7: true,
@@ -229,7 +228,6 @@ exports.tests = [
   },
   res: {
     ie7: true,
-    iojs: true,
     firefox2: true,
     safari3_1: true,
     chrome7: true,
@@ -733,7 +731,6 @@ exports.tests = [
   },
   res: {
     ie7: true,
-    iojs: true,
     firefox2: true,
     safari3_1: true,
     chrome7: true,
@@ -759,7 +756,6 @@ exports.tests = [
   },
   res: {
     ie7: true,
-    iojs: true,
     firefox2: true,
     safari3_1: true,
     chrome7: true,
@@ -982,7 +978,6 @@ exports.tests = [
   res: {
     ie7: false,
     ie11: true,
-    iojs: true,
     firefox2: true,
     safari3_1: false,
     safari7_1: true,
