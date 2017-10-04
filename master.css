@@ -249,7 +249,7 @@ td:first-child, td:not([class]) {
 .not-applicable.no, .not-applicable[data-tally="0"] {
     background: hsl(  0,  14%,  67%); background: #b69f9f;
 }
-.not-applicable {
+.not-applicable.yes {
     background: hsl(120,  14%,  67%); background: #9fb79f;
 }
 
