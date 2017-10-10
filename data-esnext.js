@@ -1661,7 +1661,6 @@ exports.tests = [
         chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
-        safari1: false,
         safaritp: true,
         webkit: true,
         duktape2_0: false,
@@ -1694,7 +1693,6 @@ exports.tests = [
         chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
-        safari1: false,
         safaritp: true,
         webkit: true,
         duktape2_0: false,
@@ -1751,7 +1749,6 @@ exports.tests = [
     chrome1: null,
     chrome61: chrome.harmony,
     chrome62: true,
-    safari1: false,
     safaritp: true,
     webkit: true,
     rhino1_7: null,
@@ -2508,7 +2505,6 @@ exports.tests = [
         typescript: typescript.corejs,
         chrome61: chrome.promise,
         chrome63: true,
-        safari1: false,
         safaritp: true,
         webkit: true,
       }
@@ -2541,7 +2537,6 @@ exports.tests = [
         typescript: typescript.corejs,
         chrome61: chrome.promise,
         chrome63: true,
-        safari1: false,
         safaritp: true,
         webkit: true,
       }
@@ -2574,7 +2569,6 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
-        safari1: false,
         safaritp: true,
         chrome61: chrome.promise,
         chrome63: true,
@@ -2747,7 +2741,6 @@ exports.tests = [
         return false;
       */},
       res: {
-        safari1: false,
         safaritp: true,
         webkit: true
       },
@@ -2765,7 +2758,6 @@ exports.tests = [
         })();
       */},
       res: {
-        safari1: false,
         safaritp: true,
         webkit: true
       },
@@ -2788,7 +2780,6 @@ exports.tests = [
         return it.next().value;
       */},
       res: {
-        safari1: false,
         safaritp: true,
         webkit: true
       }
