@@ -1658,6 +1658,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
         safari1: false,
@@ -1690,6 +1691,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
         safari1: false,
@@ -2505,7 +2507,7 @@ exports.tests = [
         babel: babel.corejs,
         typescript: typescript.corejs,
         chrome61: chrome.promise,
-        chrome63: chrome.harmony,
+        chrome63: true,
         safari1: false,
         safaritp: true,
         webkit: true,
@@ -2538,7 +2540,7 @@ exports.tests = [
         babel: babel.corejs,
         typescript: typescript.corejs,
         chrome61: chrome.promise,
-        chrome63: chrome.harmony,
+        chrome63: true,
         safari1: false,
         safaritp: true,
         webkit: true,
@@ -2575,7 +2577,7 @@ exports.tests = [
         safari1: false,
         safaritp: true,
         chrome61: chrome.promise,
-        chrome63: chrome.harmony,
+        chrome63: true,
         webkit: true,
       }
     }
