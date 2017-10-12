@@ -1960,11 +1960,28 @@
   "node8_3": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=8.3 &lt;9",
+    "short": "Node &gt;=8.3 &lt;8.7",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome60",
     "release": "2017-08-08",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
+  "node8_7": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=8.7 &lt;9",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome61",
+    "release": "2017-10-11",
     "unstable": false,
     "test_suites": [
       "es5",
