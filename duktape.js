@@ -26,6 +26,9 @@ var dukKey = (function () {
     });
     var dukVersion = Number(stdout);
     console.log('Duktape version is: ' + dukVersion);
+    if ((dukVersion % 100) == 99) {
+        dukVersion++;  // Treat e.g. 2.2.99 (built from master) as 2.3.0 for testing
+    }
     return 'duktape' + (Math.floor(dukVersion / 10000)) + '_' + (Math.floor(dukVersion / 100 % 100));
 })();
 console.log('Duktape result key is: test.res.' + dukKey);
