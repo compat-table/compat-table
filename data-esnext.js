@@ -2831,17 +2831,66 @@ exports.tests = [
   spec: 'https://github.com/tc39/proposal-throw-expressions',
   category: STAGE2,
   significance: 'medium',
-  exec: function(){/*
-    var a, b;
-    try {
-      a = 19 || throw 77;
-      b = 88 && throw 23;
-    } catch (e) {
-      return a + e === 42;
-    }
-  */},
-  res : {
-  }
+  subtests: [
+    {
+      name: 'logical',  
+      exec: function(){/*
+        var a, b;
+        try {
+          a = 19 || throw 77;
+          b = 88 && throw 23;
+        } catch (e) {
+          return a + e === 42;
+        }
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'parameter initializers',  
+      exec: function(){/*
+        function fn (arg = throw 42) {
+          return arg;
+        }
+
+        if (fn(21) !== 21) return false;
+
+        try {
+          fn();
+        } catch (e) {
+          return e === 42;
+        }
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'arrow function bodies',  
+      exec: function(){/*
+        var fn = () => throw 42;
+        try {
+          fn();
+        } catch (e) {
+          return e === 42;
+        }
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'conditionals',  
+      exec: function(){/*
+        true ? 42 : throw 21;
+        try {
+          false ? 42 : throw 21;
+        } catch (e) {
+          return e === 21;
+        }
+      */},
+      res : {
+      }
+    },
+  ]
 }
 ];
 
