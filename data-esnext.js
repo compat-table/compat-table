@@ -2787,6 +2787,32 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'the pipeline operator',
+  spec: 'https://github.com/tc39/proposal-pipeline-operator',
+  category: STAGE1,
+  significance: 'medium',
+  exec: function(){/*
+    function doubleSay (str) {
+      return str + ', ' + str;
+    }
+    function capitalize (str) {
+      return str[0].toUpperCase() + str.slice(1);
+    }
+    function add (str, end) {
+      return str + end;
+    }
+
+    var result = 'hello'
+      |> doubleSay
+      |> capitalize
+      |> _ => add(_, '!');
+
+    return result === 'Hello, hello!';
+  */},
+  res : {
+  }
 }
 ];
 
