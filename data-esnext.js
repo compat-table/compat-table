@@ -2800,14 +2800,11 @@ exports.tests = [
     function capitalize (str) {
       return str[0].toUpperCase() + str.slice(1);
     }
-    function add (str, end) {
-      return str + end;
-    }
 
     var result = 'hello'
       |> doubleSay
       |> capitalize
-      |> _ => add(_, '!');
+      |> _ => _ + '!';
 
     return result === 'Hello, hello!';
   */},

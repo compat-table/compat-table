@@ -9478,17 +9478,14 @@ function doubleSay (str) {
 function capitalize (str) {
   return str[0].toUpperCase() + str.slice(1);
 }
-function add (str, end) {
-  return str + end;
-}
 
 var result = &apos;hello&apos;
   |&gt; doubleSay
   |&gt; capitalize
-  |&gt; _ =&gt; add(_, &apos;!&apos;);
+  |&gt; _ =&gt; _ + &apos;!&apos;;
 
 return result === &apos;Hello, hello!&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");try{return Function("asyncTestPassed","\nfunction doubleSay (str) {\n  return str + ', ' + str;\n}\nfunction capitalize (str) {\n  return str[0].toUpperCase() + str.slice(1);\n}\nfunction add (str, end) {\n  return str + end;\n}\n\nvar result = 'hello'\n  |> doubleSay\n  |> capitalize\n  |> _ => add(_, '!');\n\nreturn result === 'Hello, hello!';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("142");return Function("asyncTestPassed","'use strict';"+"\nfunction doubleSay (str) {\n  return str + ', ' + str;\n}\nfunction capitalize (str) {\n  return str[0].toUpperCase() + str.slice(1);\n}\nfunction add (str, end) {\n  return str + end;\n}\n\nvar result = 'hello'\n  |> doubleSay\n  |> capitalize\n  |> _ => add(_, '!');\n\nreturn result === 'Hello, hello!';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");try{return Function("asyncTestPassed","\nfunction doubleSay (str) {\n  return str + ', ' + str;\n}\nfunction capitalize (str) {\n  return str[0].toUpperCase() + str.slice(1);\n}\n\nvar result = 'hello'\n  |> doubleSay\n  |> capitalize\n  |> _ => _ + '!';\n\nreturn result === 'Hello, hello!';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("142");return Function("asyncTestPassed","'use strict';"+"\nfunction doubleSay (str) {\n  return str + ', ' + str;\n}\nfunction capitalize (str) {\n  return str[0].toUpperCase() + str.slice(1);\n}\n\nvar result = 'hello'\n  |> doubleSay\n  |> capitalize\n  |> _ => _ + '!';\n\nreturn result === 'Hello, hello!';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
