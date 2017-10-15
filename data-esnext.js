@@ -2810,6 +2810,21 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'extensible numeric literals',
+  spec: 'https://github.com/littledan/proposal-extensible-numeric-literals',
+  category: STAGE1,
+  significance: 'medium',
+  exec: function(){/*
+    function i (str, num) {
+      return typeof str + str + typeof num + num;
+    }
+
+    return 123i === 'string123number123';
+  */},
+  res : {
+  }
 }
 ];
 
