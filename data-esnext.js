@@ -2825,6 +2825,23 @@ exports.tests = [
   */},
   res : {
   }
+},
+{
+  name: 'throw expressions',
+  spec: 'https://github.com/tc39/proposal-throw-expressions',
+  category: STAGE2,
+  significance: 'medium',
+  exec: function(){/*
+    var a, b;
+    try {
+      a = 19 || throw 77;
+      b = 88 && throw 23;
+    } catch (e) {
+      return a + e === 42;
+    }
+  */},
+  res : {
+  }
 }
 ];
 
