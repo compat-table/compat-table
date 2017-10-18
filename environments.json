@@ -480,7 +480,6 @@
     "test_suites": [
       "es5",
       "es6",
-      "es2016plus",
       "esintl",
       "non-standard"
     ]
@@ -490,7 +489,14 @@
     "family": "Chakra",
     "short": "IE 11",
     "release": "2013-10-17",
-    "obsolete": false
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esintl",
+      "non-standard"
+    ]
   },
   "edge12": {
     "full": "Microsoft Edge 12",
