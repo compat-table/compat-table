@@ -2006,6 +2006,7 @@ exports.tests = [
      return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
      */},
     res: {
+      edge16: true,
       firefox2: false,
       firefox53: true,
       chrome59: chrome.harmony,
