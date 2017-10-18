@@ -1426,7 +1426,7 @@
     "release": "2016-08-31",
     "retire": "2016-10-19",
     "note_id": "experimental-flag",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome54": {
     "full": "Chrome, Opera",
@@ -1497,19 +1497,27 @@
     "short": "CH&nbsp;61,<br>OP&nbsp;48",
     "release": "2017-09-05",
     "note_id": "experimental-flag",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome62": {
-    "full": "Chrome Dev",
+    "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;62,<br>OP&nbsp;49",
+    "release": "2017-10-17",
+    "note_id": "experimental-flag",
+    "obsolete": false
+  },
+  "chrome63": {
+    "full": "Chrome Dev",
+    "family": "V8",
+    "short": "CH&nbsp;63,<br>OP&nbsp;50",
     "note_id": "experimental-flag",
     "unstable": true
   },
-  "chrome63": {
+  "chrome64": {
     "full": "Chrome Canary",
     "family": "V8",
-    "short": "CH&nbsp;63,<br>OP&nbsp;50",
+    "short": "CH&nbsp;64,<br>OP&nbsp;51",
     "note_id": "experimental-flag",
     "unstable": true
   },

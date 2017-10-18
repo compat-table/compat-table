@@ -1658,6 +1658,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        chrome62: chrome.harmony,
         chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
@@ -1691,6 +1692,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
+        chrome62: chrome.harmony,
         chrome63: true,
         firefox2: false,
         firefox55: firefox.nightly,
