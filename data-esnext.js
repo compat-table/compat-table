@@ -1793,6 +1793,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     chrome59: chrome.harmony,
+    safaritp: true,
     duktape2_0: false,
   }
 },
