@@ -1982,6 +1982,7 @@ exports.tests = [
      })();
      */},
     res: {
+      edge16: true,
       firefox2: false,
       firefox53: true,
       chrome56: true,
