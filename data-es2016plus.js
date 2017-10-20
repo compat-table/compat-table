@@ -2010,6 +2010,7 @@ exports.tests = [
       firefox2: false,
       firefox53: true,
       chrome59: chrome.harmony,
+      chrome62: true,
       safari11: true,
       duktape2_0: false,
     }
