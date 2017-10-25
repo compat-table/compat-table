@@ -899,6 +899,7 @@ exports.tests = [
   res: {
     ie7: false,
     firefox2: true,
+    firefox58: false,
     safari3_1: false,
     chrome7: false,
     opera10_10: false,
@@ -918,6 +919,7 @@ exports.tests = [
   res: {
     ie7: false,
     firefox2: true,
+    firefox58: false,
     safari3_1: false,
     chrome7: false,
     opera7_5: false,
