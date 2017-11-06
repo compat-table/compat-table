@@ -1452,6 +1452,7 @@ exports.tests = [
         res: {
           babel: babel.corejs,
           typescript: typescript.corejs,
+          edge16: true,
           firefox2: false,
           firefox48: true,
           chrome60: chrome.harmony,
@@ -1529,6 +1530,7 @@ exports.tests = [
         res: {
           babel: babel.corejs,
           typescript: typescript.corejs,
+          edge16: true,
           firefox2: false,
           firefox48: true,
           chrome60: chrome.harmony,
