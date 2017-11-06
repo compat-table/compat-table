@@ -940,6 +940,7 @@
     "test_suites": [
       "es5",
       "es6",
+      "es2016plus",
       "esintl",
       "non-standard"
     ]
@@ -949,13 +950,7 @@
     "family": "Carakan",
     "short": "OP 12.10",
     "release": "2012-11-05",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "chrome1": {
     "full": "Chrome 1",
