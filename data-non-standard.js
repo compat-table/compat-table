@@ -442,6 +442,7 @@ exports.tests = [
   res: {
     firefox2: false,
     firefox30: true,
+    firefox58: false,
     opera7_5: false,
     opera10_50: false,
     duktape2_0: false,
