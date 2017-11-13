@@ -2521,6 +2521,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2534,6 +2535,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2549,6 +2551,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2569,6 +2572,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2589,6 +2593,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2609,6 +2614,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2629,6 +2635,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2676,7 +2683,10 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
+        firefox57: false,
+        firefox58: true,
         opera10_50: false,
         chrome61: chrome.promise,
         chrome63: true,
@@ -2711,7 +2721,10 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
+        firefox57: false,
+        firefox58: true,
         opera10_50: false,
         chrome61: chrome.promise,
         chrome63: true,
@@ -2748,7 +2761,10 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
         firefox52: false,
+        firefox57: false,
+        firefox58: true,
         opera10_50: false,
         safaritp: true,
         chrome61: chrome.promise,
