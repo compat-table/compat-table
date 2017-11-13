@@ -259,6 +259,7 @@ exports.tests = [
     ie7: false,
     firefox2: false,
     firefox5: true,
+    firefox57: true,
     firefox58: false,
     safari3_1: false,
     chrome7: false,
@@ -442,7 +443,8 @@ exports.tests = [
   res: {
     firefox2: false,
     firefox30: true,
-    firefox59: false,
+    firefox57: true,
+    firefox58: false,
     opera7_5: false,
     opera10_50: false,
     duktape2_0: false,
@@ -717,7 +719,8 @@ exports.tests = [
   res: {
     firefox2: false,
     firefox30: true,
-    firefox59: false,
+    firefox57: true,
+    firefox58: false,
     opera7_5: false,
     opera10_50: false,
     duktape2_0: false,
