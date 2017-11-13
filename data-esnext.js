@@ -2967,7 +2967,9 @@ exports.tests = [
         return false;
       */},
       res: {
-        firefox52: false,
+        firefox2: false,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
@@ -2987,7 +2989,9 @@ exports.tests = [
         })();
       */},
       res: {
-        firefox52: false,
+        firefox2: false,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
@@ -3012,7 +3016,9 @@ exports.tests = [
         return it.next().value;
       */},
       res: {
-        firefox52: false,
+        firefox2: false,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
