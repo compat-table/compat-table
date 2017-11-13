@@ -2968,8 +2968,8 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        firefox57: false,
-        firefox58: true,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
@@ -2990,8 +2990,8 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        firefox57: false,
-        firefox58: true,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
@@ -3017,8 +3017,8 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        firefox57: false,
-        firefox58: true,
+        firefox58: false,
+        firefox59: true,
         opera10_50: false,
         safaritp: true,
         webkit: true,
