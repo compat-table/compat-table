@@ -1982,7 +1982,7 @@ exports.tests = [
     ]
   },
   {
-    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
+    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets (ES Draft style)',
     category: '2017 misc',
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/594',
@@ -1999,6 +1999,8 @@ exports.tests = [
       edge16: true,
       firefox2: false,
       firefox51: true,
+      firefox56: true,
+      firefox57: false,
       opera10_50: false,
       chrome51: true,
       safari10: true,
