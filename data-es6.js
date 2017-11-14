@@ -5627,7 +5627,7 @@ exports.tests = [
           'Uint32Array',
           'Float32Array',
           'Float64Array'
-        ];Updated identifier syntax
+        ];
         return constructors.every(function (constructor) {
           try {
             if (constructor in global) {
