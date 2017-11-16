@@ -3141,7 +3141,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'optional chaining operator',
+  name: 'optional chaining operator (?.)',
   spec: 'https://github.com/tc39/proposal-optional-chaining',
   category: STAGE1,
   significance: 'medium',
@@ -3206,6 +3206,21 @@ exports.tests = [
       }
     },
   ]
+},
+{
+  name: 'nullish coalescing operator (??)',
+  spec: 'https://github.com/tc39-transfer/proposal-nullish-coalescing',
+  category: STAGE1,
+  significance: 'small',
+  exec: function(){/*
+    return null ?? 42 === 42 &&
+      undefined ?? 42 === 42 &&
+      false ?? 42 === false &&
+      '' ?? 42 === '' &&
+      0 ?? 42 === 0;
+  */},
+  res : {
+  }
 },
 ];
 
