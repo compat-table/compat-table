@@ -3312,6 +3312,70 @@ exports.tests = [
       res : {
       }
     },
+    {
+      name: 'runtime evaluation',
+      exec: function(){/*
+        var f = function() {
+          throw new Error();
+        };
+        var p = f(?, 'b');
+        f = function(a, b) {
+          return a + b;
+        };
+        return p('a') === 'ab';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'runtime evaluation of property access',
+      exec: function(){/*
+        var o = {};
+        var p = o.f(?, 'b');
+        o = { x: 'c', f: function(a, b) {
+          return a + b + this.x;
+        } };
+        return p('a') === 'abc';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'lexical `this`',
+      exec: function(){/*
+        function f(a, b) {
+          return a + b + (this === o);
+        }
+        var o = { f: f(?, 'b') };
+        return o.f('a') === 'abfalse';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'constructor partial application',
+      exec: function(){/*
+        function F(a, b) {
+          this.x = a + b;
+        }
+        var p = new F(?, 'b');
+        return p('a').x === 'ab';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'constructor partial application with rest',
+      exec: function(){/*
+        function F(a, b, c) {
+          this.x = a + b + c;
+        }
+        var p = new F('a', ...);
+        return p('b', 'c').x === 'abc';
+      */},
+      res : {
+      }
+    },
   ]
 },
 ];
