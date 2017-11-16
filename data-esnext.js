@@ -3073,7 +3073,7 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
-      name: 'logical',  
+      name: 'logical',
       exec: function(){/*
         var a, b;
         try {
@@ -3089,7 +3089,7 @@ exports.tests = [
       }
     },
     {
-      name: 'parameter initializers',  
+      name: 'parameter initializers',
       exec: function(){/*
         function fn (arg = throw 42) {
           return arg;
@@ -3109,7 +3109,7 @@ exports.tests = [
       }
     },
     {
-      name: 'arrow function bodies',  
+      name: 'arrow function bodies',
       exec: function(){/*
         var fn = () => throw 42;
         try {
@@ -3124,7 +3124,7 @@ exports.tests = [
       }
     },
     {
-      name: 'conditionals',  
+      name: 'conditionals',
       exec: function(){/*
         true ? 42 : throw 21;
         try {
@@ -3147,7 +3147,7 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
-      name: 'optional property access',  
+      name: 'optional property access',
       exec: function(){/*
         var foo = { baz: 42 };
         var bar = null;
@@ -3157,7 +3157,7 @@ exports.tests = [
       }
     },
     {
-      name: 'optional bracket access',  
+      name: 'optional bracket access',
       exec: function(){/*
         var foo = { baz: 42 };
         var bar = null;
@@ -3167,7 +3167,7 @@ exports.tests = [
       }
     },
     {
-      name: 'optional method call',  
+      name: 'optional method call',
       exec: function(){/*
         var foo = { baz: function () { return 42; } };
         var bar = null;
@@ -3185,7 +3185,7 @@ exports.tests = [
   significance: 'small',
   subtests: [
     {
-      name: 'object initializers',  
+      name: 'object initializers',
       exec: function(){/*
         var foo = { bar: 42, baz: 33 };
         var fuz = { foo.bar, foo['baz'] };
@@ -3222,7 +3222,100 @@ exports.tests = [
   res : {
   }
 },
+{
+  name: 'partial application syntax',
+  spec: 'https://github.com/rbuckton/proposal-partial-application',
+  category: STAGE0,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'partial application from left',
+      exec: function(){/*
+        function f(a, b) {
+          return a + b;
+        };
+        var p = f('a', ?);
+        return p('b') === 'ab';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'partial application from right',
+      exec: function(){/*
+        function f(a, b) {
+          return a + b;
+        };
+        var p = f(?, 'b');
+        return p('a') === 'ab';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'partial application for any arg',
+      exec: function(){/*
+        function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f(?, 'b', ?);
+        return p('a', 'c') === 'abc';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'partial application from left with rest',
+      exec: function(){/*
+        function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f('a', ...);
+        return p('b', 'c') === 'abc';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'partial application from right with rest',
+      exec: function(){/*
+        function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f(..., 'c');
+        return p('a', 'b') === 'abc';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'partial application for any arg with rest',
+      exec: function(){/*
+        function f(a, b, c, d, e) {
+          return a + b + c + d + e;
+        };
+        var p = f(..., 'c', ...);
+        return p('a', 'b') === 'abcab';
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'mixed partial application',
+      exec: function(){/*
+        function f(a, b, c, d) {
+          return a + b + c;
+        };
+        var p = f(?, 'b', ...);
+        return p('a', 'c', 'd') === 'abcd';
+      */},
+      res : {
+      }
+    },
+  ]
+},
 ];
+
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
