@@ -3144,7 +3144,7 @@ exports.tests = [
   name: 'optional chaining operator',
   spec: 'https://github.com/tc39/proposal-optional-chaining',
   category: STAGE1,
-  significance: 'large',
+  significance: 'medium',
   subtests: [
     {
       name: 'optional property access',  
@@ -3172,6 +3172,35 @@ exports.tests = [
         var foo = { baz: function () { return 42; } };
         var bar = null;
         return foo?.baz() === 42 && bar?.baz() === undefined;
+      */},
+      res : {
+      }
+    },
+  ]
+},
+{
+  name: 'object shorthand improvements',
+  spec: 'https://github.com/rbuckton/proposal-shorthand-improvements',
+  category: STAGE0,
+  significance: 'small',
+  subtests: [
+    {
+      name: 'object initializers',  
+      exec: function(){/*
+        var foo = { bar: 42, baz: 33 };
+        var fuz = { foo.bar, foo['baz'] };
+        return fuz.bar === 42 && fuz.baz === 33;
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'destructuring assignments',  
+      exec: function(){/*
+        var foo = { bar: 42, baz: 33 };
+        var fuz = {};
+        ({ fuz.bar, fuz['baz'] } = foo);
+        return fuz.bar === 42 && fuz.baz === 33;
       */},
       res : {
       }
