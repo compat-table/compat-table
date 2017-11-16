@@ -3139,7 +3139,45 @@ exports.tests = [
       }
     },
   ]
-}
+},
+{
+  name: 'optional chaining operator',
+  spec: 'https://github.com/tc39/proposal-optional-chaining',
+  category: STAGE1,
+  significance: 'large',
+  subtests: [
+    {
+      name: 'optional property access',  
+      exec: function(){/*
+        var foo = { baz: 42 };
+        var bar = null;
+        return foo?.baz === 42 && bar?.baz === undefined;
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'optional bracket access',  
+      exec: function(){/*
+        var foo = { baz: 42 };
+        var bar = null;
+        return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'optional method call',  
+      exec: function(){/*
+        var foo = { baz: function () { return 42; } };
+        var bar = null;
+        return foo?.baz() === 42 && bar?.baz() === undefined;
+      */},
+      res : {
+      }
+    },
+  ]
+},
 ];
 
 //Shift annex B features to the bottom
