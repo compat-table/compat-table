@@ -1982,11 +1982,17 @@ exports.tests = [
     ]
   },
   {
-    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets (ES Draft style)',
+    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets (ES 2017 semantics)',
     category: '2017 misc',
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/594',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
+    links: [
+      {
+        note_id: 'proxy-duplictate-ownkeys-updated',
+        note_html: 'The behaviour of the Proxy “ownKeys” handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.',
+      }
+    ],
     exec: function() {/*
      var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
      ownKeys: function() {
