@@ -3225,7 +3225,7 @@ exports.tests = [
 {
   name: 'partial application syntax',
   spec: 'https://github.com/rbuckton/proposal-partial-application',
-  category: STAGE0,
+  category: STAGE1,
   significance: 'medium',
   subtests: [
     {
