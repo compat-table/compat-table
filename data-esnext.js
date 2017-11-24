@@ -1812,6 +1812,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     chrome60: chrome.harmony,
+    chrome64: true,
     safaritp: true,
     duktape2_0: false,
   }
@@ -1886,6 +1887,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     chrome59: chrome.harmony,
+    chrome64: true,
     safaritp: true,
     duktape2_0: false,
   }
