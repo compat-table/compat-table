@@ -3029,6 +3029,7 @@ exports.tests = [
 {
   name: 'the pipeline operator',
   spec: 'https://github.com/tc39/proposal-pipeline-operator',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator',
   category: STAGE1,
   significance: 'medium',
   exec: function(){/*
@@ -3047,7 +3048,13 @@ exports.tests = [
     return result === 'Hello, hello!';
   */},
   res : {
-    firefox52: false,
+    firefox2: false,
+    firefox57: false,
+    firefox58: {
+      val: 'flagged',
+      note_id: 'ffox-pipeline',
+      note_html: 'Requires the <code>--enable-pipeline-operator</code> compile option.'
+    },
     opera10_50: false,
   }
 },
