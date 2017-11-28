@@ -2776,7 +2776,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.{flatten, flatMap}',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
   subtests: [
