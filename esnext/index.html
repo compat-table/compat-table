@@ -2711,6 +2711,73 @@ return it.next().value;
 <td class="no" data-browser="ios10_3">No</td>
 <td class="no" data-browser="ios11">No</td>
 </tr>
+<tr significance="0.25"><td id="test-numeric_separators"><span><a class="anchor" href="#test-numeric_separators">&#xA7;</a><a href="https://github.com/tc39/proposal-numeric-separator">numeric separators</a></span><script data-source="
+return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="closure">No</td>
+<td class="no" data-browser="typescript">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge12">No</td>
+<td class="no obsolete" data-browser="edge13">No</td>
+<td class="no obsolete" data-browser="edge14">No</td>
+<td class="no" data-browser="edge15">No</td>
+<td class="no" data-browser="edge16">No</td>
+<td class="no unstable" data-browser="edge17">No</td>
+<td class="no obsolete" data-browser="firefox45">No</td>
+<td class="no obsolete" data-browser="firefox50">No</td>
+<td class="no obsolete" data-browser="firefox51">No</td>
+<td class="no" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox53">No</td>
+<td class="no obsolete" data-browser="firefox54">No</td>
+<td class="no obsolete" data-browser="firefox55">No</td>
+<td class="no" data-browser="firefox56">No</td>
+<td class="no" data-browser="firefox57">No</td>
+<td class="no unstable" data-browser="firefox58">No</td>
+<td class="no unstable" data-browser="firefox59">No</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome54">No</td>
+<td class="no obsolete" data-browser="chrome55">No</td>
+<td class="no obsolete" data-browser="chrome56">No</td>
+<td class="no obsolete" data-browser="chrome57">No</td>
+<td class="no obsolete" data-browser="chrome58">No</td>
+<td class="no obsolete" data-browser="chrome59">No</td>
+<td class="no obsolete" data-browser="chrome60">No</td>
+<td class="no" data-browser="chrome61">No</td>
+<td class="no" data-browser="chrome62">No</td>
+<td class="no unstable" data-browser="chrome63">No</td>
+<td class="no unstable" data-browser="chrome64">No</td>
+<td class="no obsolete" data-browser="safari8">No</td>
+<td class="no obsolete" data-browser="safari9">No</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no" data-browser="safari10_1">No</td>
+<td class="no" data-browser="safari11">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no" data-browser="node8_7">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios8">No</td>
+<td class="no obsolete" data-browser="ios9">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no" data-browser="ios10_3">No</td>
+<td class="no" data-browser="ios11">No</td>
+</tr>
 <tr class="category"><td colspan="64">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md">Generator function.sent Meta Property</a></span><script data-source="
@@ -2721,7 +2788,7 @@ function* generator() {
 var iter = generator();
 iter.next(&apos;tromple&apos;);
 return result === &apos;tromple&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -2858,7 +2925,7 @@ function nonconf(target, name, descriptor) {
   return descriptor;
 }
 return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable === false;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No<a href="#regenerator-decorators-legacy-note"><sup>[12]</sup></a></td>
@@ -2987,7 +3054,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimLeft_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimLeft_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>String.prototype.trimLeft <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
@@ -3053,7 +3120,7 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimRight_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimRight_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>String.prototype.trimRight <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
@@ -3119,7 +3186,7 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimStart"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimStart">&#xA7;</a>String.prototype.trimStart</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
@@ -3185,7 +3252,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 </tr>
 <tr class="subtest" data-parent="string_trimming" id="test-string_trimming_String.prototype.trimEnd"><td><span><a class="anchor" href="#test-string_trimming_String.prototype.trimEnd">&#xA7;</a>String.prototype.trimEnd</span><script data-source="
 return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
@@ -3261,7 +3328,7 @@ while(!(step = iterator.next()).done){
 return a === &apos;1a2b&apos;
   &amp;&amp; b === &apos;12&apos;
   &amp;&amp; c === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
@@ -3396,7 +3463,7 @@ try {
 } catch (e) {
   return a + e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3472,7 +3539,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3543,7 +3610,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
@@ -3614,74 +3681,7 @@ try {
 } catch (e) {
   return e === 21;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
-<td class="no" data-browser="closure">No</td>
-<td class="no" data-browser="typescript">No</td>
-<td class="no" data-browser="ie11">No</td>
-<td class="no obsolete" data-browser="edge12">No</td>
-<td class="no obsolete" data-browser="edge13">No</td>
-<td class="no obsolete" data-browser="edge14">No</td>
-<td class="no" data-browser="edge15">No</td>
-<td class="no" data-browser="edge16">No</td>
-<td class="no unstable" data-browser="edge17">No</td>
-<td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
-<td class="no obsolete" data-browser="firefox51">No</td>
-<td class="no" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox53">No</td>
-<td class="no obsolete" data-browser="firefox54">No</td>
-<td class="no obsolete" data-browser="firefox55">No</td>
-<td class="no" data-browser="firefox56">No</td>
-<td class="no" data-browser="firefox57">No</td>
-<td class="no unstable" data-browser="firefox58">No</td>
-<td class="no unstable" data-browser="firefox59">No</td>
-<td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no obsolete" data-browser="chrome54">No</td>
-<td class="no obsolete" data-browser="chrome55">No</td>
-<td class="no obsolete" data-browser="chrome56">No</td>
-<td class="no obsolete" data-browser="chrome57">No</td>
-<td class="no obsolete" data-browser="chrome58">No</td>
-<td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no obsolete" data-browser="chrome60">No</td>
-<td class="no" data-browser="chrome61">No</td>
-<td class="no" data-browser="chrome62">No</td>
-<td class="no unstable" data-browser="chrome63">No</td>
-<td class="no unstable" data-browser="chrome64">No</td>
-<td class="no obsolete" data-browser="safari8">No</td>
-<td class="no obsolete" data-browser="safari9">No</td>
-<td class="no obsolete" data-browser="safari10">No</td>
-<td class="no" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no" data-browser="phantom">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no obsolete" data-browser="node8_3">No</td>
-<td class="no" data-browser="node8_7">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no" data-browser="duktape2_2">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios8">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
-<td class="no obsolete" data-browser="ios10">No</td>
-<td class="no" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
-</tr>
-<tr significance="0.25"><td id="test-numeric_separators"><span><a class="anchor" href="#test-numeric_separators">&#xA7;</a><a href="https://github.com/tc39/proposal-numeric-separator">numeric separators</a></span><script data-source="
-return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel">No</td>
