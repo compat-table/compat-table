@@ -2776,7 +2776,7 @@ exports.tests = [
 },
 {
   name: 'Array.prototype.{flatten, flatMap}',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
   subtests: [
@@ -2788,6 +2788,8 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
+        firefox2: false,
+        opera10_50: false,
         duktape2_2: false,
       }
     },
@@ -2801,7 +2803,7 @@ exports.tests = [
       res: {
         babel: babel.corejs,
         typescript: typescript.corejs,
-        firefox52: false,
+        firefox2: false,
         opera10_50: false,
         duktape2_2: false,
       }
