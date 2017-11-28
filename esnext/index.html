@@ -828,7 +828,7 @@ return result.groups.year === &apos;2016&apos;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -895,7 +895,7 @@ return regex.test(&apos;foo\nbar&apos;);
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nconst regex = /foo.bar/s;\nreturn regex.test('foo\\nbar');\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /foo.bar/s;\nreturn regex.test('foo\\nbar');\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="unknown" data-browser="closure">?</td>
 <td class="unknown" data-browser="typescript">?</td>
 <td class="no" data-browser="ie11">No</td>
@@ -1029,7 +1029,7 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nconst regexGreekSymbol = /\\p{Script=Greek}/u;\nreturn regexGreekSymbol.test('π');\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nconst regexGreekSymbol = /\\p{Script=Greek}/u;\nreturn regexGreekSymbol.test('π');\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2717,7 +2717,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="ie11">No</td>
@@ -2791,7 +2791,7 @@ return result === &apos;tromple&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="yes" data-browser="babel">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no" data-browser="typescript">No</td>
 <td class="no" data-browser="ie11">No</td>

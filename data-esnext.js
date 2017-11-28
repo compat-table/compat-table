@@ -85,6 +85,7 @@ exports.tests = [
     return result === 'tromple';
   */},
   res: {
+    babel: true,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -1808,6 +1809,7 @@ exports.tests = [
       && result[3] === '11';
   */},
   res : {
+    babel: true,
     ie11: false,
     firefox2: false,
     opera10_50: false,
@@ -1829,7 +1831,7 @@ exports.tests = [
   res : {
     es6tr: null,
     tr: null,
-    babel: null,
+    babel: true,
     closure: null,
     jsx: null,
     typescript: null,
@@ -1883,6 +1885,7 @@ exports.tests = [
     return regexGreekSymbol.test('π');
   */},
   res: {
+    babel: true,
     ie11: false,
     firefox2: false,
     opera10_50: false,
@@ -3392,6 +3395,7 @@ exports.tests = [
       0b1010_0001_1000_0101 === 0b1010000110000101;
   */},
   res : {
+    babel: true,
     firefox2: false,
     opera10_50: false,
   }
