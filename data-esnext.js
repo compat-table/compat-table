@@ -2156,7 +2156,7 @@ exports.tests = [
 },
 {
   name: 'class fields',
-  category: STAGE3,
+  category: STAGE2,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-class-fields',
   subtests: [
