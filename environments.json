@@ -1506,7 +1506,7 @@
     "short": "CH&nbsp;61,<br>OP&nbsp;48",
     "release": "2017-09-05",
     "note_id": "experimental-flag",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome62": {
     "full": "Chrome, Opera",
@@ -1517,16 +1517,23 @@
     "obsolete": false
   },
   "chrome63": {
-    "full": "Chrome Dev",
+    "full": "Chrome, Opera",
     "family": "V8",
     "short": "CH&nbsp;63,<br>OP&nbsp;50",
     "note_id": "experimental-flag",
-    "unstable": true
+    "obsolete": false
   },
   "chrome64": {
-    "full": "Chrome Canary",
+    "full": "Chrome Dev",
     "family": "V8",
     "short": "CH&nbsp;64,<br>OP&nbsp;51",
+    "note_id": "experimental-flag",
+    "unstable": true
+  },
+  "chrome65": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;65,<br>OP&nbsp;52",
     "note_id": "experimental-flag",
     "unstable": true
   },
