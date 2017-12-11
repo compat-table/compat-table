@@ -1184,7 +1184,7 @@ exports.tests = [
       */},
       res: {
         babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
-        typescript: true,
+        typescript1: true,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1223,7 +1223,7 @@ exports.tests = [
       */},
       res: {
         babel: true,
-        typescript: true,
+        typescript2_1: true,
         jsx: true,
         firefox2: false,
         firefox55: true,
@@ -1251,7 +1251,7 @@ exports.tests = [
         opera10_50: false,
         chrome58: 'flagged',
         chrome60: true,
-        typescript: true,
+        typescript2_1: true,
         safari11: false,
         safaritp: true,
         webkit: true,
@@ -1270,7 +1270,7 @@ exports.tests = [
   */},
   res: {
     babel: babel.corejs,
-    typescript: typescript.corejs,
+    typescript1: typescript.corejs,
     es7shim: true,
     firefox2: false,
     opera10_50: false,
@@ -1291,7 +1291,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
         firefox3_5: true,
@@ -1323,7 +1323,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
         firefox3_5: true,
@@ -1354,7 +1354,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1367,7 +1367,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1389,7 +1389,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox2: false,
       firefox53: {
         val: false,
@@ -1432,7 +1432,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox2: false,
       firefox53: {
         val: false,
@@ -1476,7 +1476,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1489,7 +1489,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1502,7 +1502,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1525,7 +1525,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1539,7 +1539,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1553,7 +1553,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1566,7 +1566,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1579,7 +1579,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1607,7 +1607,7 @@ exports.tests = [
   */},
   res: {
     babel: babel.corejs,
-    typescript: typescript.corejs,
+    typescript1: typescript.corejs,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -1680,7 +1680,7 @@ exports.tests = [
       && index === 0;
   */},
   res : {
-    typescript: true,
+    typescript1: true,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -1747,6 +1747,7 @@ exports.tests = [
         babel: true,
         chrome62: chrome.harmony,
         chrome63: true,
+        typescript2_3: true,
         firefox2: false,
         firefox55: firefox.nightly,
         firefox57: true,
@@ -1782,6 +1783,7 @@ exports.tests = [
         babel: true,
         chrome62: chrome.harmony,
         chrome63: true,
+        typescript2_3: true,
         firefox2: false,
         firefox55: firefox.nightly,
         firefox57: true,
@@ -1834,7 +1836,7 @@ exports.tests = [
     babel: true,
     closure: null,
     jsx: null,
-    typescript: null,
+    typescript1: null,
     es6shim: null,
     konq414: null,
     ie7: null,
@@ -1942,7 +1944,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1955,7 +1957,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1968,7 +1970,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1981,7 +1983,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -1994,7 +1996,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2007,7 +2009,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2020,7 +2022,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2033,7 +2035,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2046,7 +2048,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2172,7 +2174,7 @@ exports.tests = [
       res: {
         babel: true,
         tr: true,
-        typescript: true,
+        typescript1: true,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -2230,7 +2232,7 @@ exports.tests = [
   */},
   res : {
     babel: babel.corejs,
-    typescript: typescript.corejs,
+    typescript1: typescript.corejs,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -2411,7 +2413,7 @@ exports.tests = [
   */},
   res : {
     babel: babel.corejs,
-    typescript: typescript.corejs,
+    typescript1: typescript.corejs,
     firefox52: false,
     opera10_50: false,
     duktape2_2: false,
@@ -2431,7 +2433,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2443,7 +2445,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2456,7 +2458,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2468,7 +2470,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2480,7 +2482,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2493,7 +2495,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2505,7 +2507,7 @@ exports.tests = [
     */},
     res: {
       babel: babel.corejs,
-      typescript: typescript.corejs,
+      typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
@@ -2525,7 +2527,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2539,7 +2541,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2555,7 +2557,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2576,7 +2578,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2597,7 +2599,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2618,7 +2620,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2639,7 +2641,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
         opera10_50: false,
@@ -2687,7 +2689,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox57: false,
         firefox58: true,
@@ -2724,7 +2726,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox57: false,
         firefox58: true,
@@ -2763,7 +2765,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         firefox57: false,
         firefox58: true,
@@ -2790,7 +2792,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2805,7 +2807,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2829,7 +2831,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2847,7 +2849,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2863,7 +2865,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2879,7 +2881,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2895,7 +2897,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2913,7 +2915,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2929,7 +2931,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
@@ -2945,7 +2947,7 @@ exports.tests = [
       */},
       res: {
         babel: babel.corejs,
-        typescript: typescript.corejs,
+        typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
