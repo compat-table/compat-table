@@ -1691,6 +1691,7 @@ exports.tests = [
       safari3_1: true,
       safari5_1: false,
       safari10: true,
+      safari11: false,
       chrome13: true,
       opera10_50: true,
       opera12: true,
