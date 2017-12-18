@@ -2112,6 +2112,44 @@ exports.tests = [
       duktape2_0: false,
     }
   },
+  {
+    name: 's (dotAll) flag for regular expressions',
+    spec: 'https://tc39.github.io/ecma262/#sec-get-regexp.prototype.dotAll',
+    category: '2018 features',
+    significance: 'small',
+    exec: function(){/*
+    const regex = /foo.bar/s;
+    return regex.test('foo\nbar');
+  */},
+    res : {
+      es6tr: null,
+      tr: null,
+      babel: true,
+      closure: null,
+      jsx: null,
+      typescript1: null,
+      es6shim: null,
+      konq414: null,
+      ie7: null,
+      ie10: false,
+      firefox1: null,
+      firefox2: false,
+      opera10_50: false,
+      chrome1: null,
+      chrome60: chrome.harmony,
+      chrome62: true,
+      safaritp: true,
+      webkit: true,
+      rhino1_7: null,
+      xs6: null,
+      jxa: null,
+      node0_10: null,
+      duktape2_0: null,
+      duktape2_2: false,
+      android1_5: null,
+      ios4: null,
+    },
+  }
 ];
 
 //Shift annex B features to the bottom
