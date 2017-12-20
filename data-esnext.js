@@ -3455,6 +3455,84 @@ exports.tests = [
   ]
 },
 {
+  name: 'BigInt',
+  category: STAGE3,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-bigint',
+  subtests: [
+    {
+      name: 'basic functionality',
+      exec: function () {/*
+        return (1n + 2n) === 3n;
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'constructor',
+      exec: function () {/*
+        return BigInt("3") === 3n;
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'BigInt.asUintN',
+      exec: function () {/*
+        return typeof BigInt.asUintN === 'function';
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'BigInt.asIntN',
+      exec: function () {/*
+        return typeof BigInt.asIntN === 'function';
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'BigInt64Array',
+      exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new BigInt64Array(buffer);
+        view[0] = 0x8000000000000000n;
+        return view[0] === -0x8000000000000000n;
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'BigUint64Array',
+      exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new BigUint64Array(buffer);
+        view[0] = 0x10000000000000000n;
+        return view[0] === 0n;
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'DataView.prototype.getBigInt64',
+      exec: function () {/*
+        return typeof DataView.prototype.getBigInt64 === 'function';
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'DataView.prototype.getBigUint64',
+      exec: function () {/*
+        return typeof DataView.prototype.getBigUint64 === 'function';
+      */},
+      res: {
+      },
+    },
+  ],
+},
+{
   name: 'String.prototype.replaceAll',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-replace-all',
