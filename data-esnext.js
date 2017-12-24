@@ -1532,20 +1532,6 @@ exports.tests = [
       }
     },
     {
-      name: 'Observable.prototype.forEach',
-      exec: function () {/*
-        var o = new Observable(function() { });
-        return 'forEach' in Observable.prototype && o.forEach(function(e){return true}) instanceof Promise;
-      */},
-      res: {
-        babel: babel.corejs,
-        typescript1: typescript.corejs,
-        firefox2: false,
-        opera10_50: false,
-        duktape2_0: false,
-      }
-    },
-    {
       name: 'Observable.prototype[Symbol.observable]',
       exec: function () {/*
         var o = new Observable(function() { });
