@@ -3397,9 +3397,25 @@ exports.tests = [
       }
     },
     {
+      name: 'Object.freeze syntax with array literal',
+      exec: function(){/*
+        return Object.isFrozen([# 42 #]);
+      */},
+      res : {
+      }
+    },
+    {
       name: 'Object.seal syntax',
       exec: function(){/*
         return Object.isSealed({| foo: 42 |});
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'Object.seal syntax with array literal',
+      exec: function(){/*
+        return Object.isSealed([| 42 |]);
       */},
       res : {
       }
