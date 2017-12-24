@@ -3453,6 +3453,39 @@ exports.tests = [
       res : {
       }
     },
+    {
+      name: 'Sealing, function arguments',
+      exec: function(){/*
+        function foo(| bar, baz |) {
+          return bar + baz;
+        }
+        if (foo(1, 2) !== 3) return;
+        try {
+          foo(1, 2, 3);
+        } catch (e) {
+          return true;
+        }
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'Freezing, function arguments',
+      exec: function(){/*
+        function foo(# bar, baz #) {
+          if (baz === 42) bar = 27;
+          return bar + baz;
+        }
+        if (foo(1, 2) !== 3) return;
+        try {
+          foo(1, 42);
+        } catch (e) {
+          return true;
+        }
+      */},
+      res : {
+      }
+    },
   ]
 },
 ];
