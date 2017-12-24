@@ -3420,6 +3420,39 @@ exports.tests = [
       res : {
       }
     },
+    {
+      name: 'Sealing, function destructuring',
+      exec: function(){/*
+        function foo({| bar, baz |}) {
+          return bar + baz;
+        }
+        if (foo({ bar: 1, baz: 2 }) !== 3) return;
+        try {
+          foo({ bar: 1, fuz: 2 });
+        } catch (e) {
+          return true;
+        }
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'Freezing, function destructuring',
+      exec: function(){/*
+        function foo({# bar, baz #}) {
+          if (baz === 42) bar = 27;
+          return bar + baz;
+        }
+        if (foo({ bar: 1, baz: 2 }) !== 3) return;
+        try {
+          foo({ bar: 1, baz: 42 });
+        } catch (e) {
+          return true;
+        }
+      */},
+      res : {
+      }
+    },
   ]
 },
 ];
