@@ -3382,6 +3382,30 @@ exports.tests = [
   res : {
   }
 },
+{
+  name: 'Object.freeze and Object.seal syntax',
+  spec: 'https://github.com/keithamus/object-freeze-seal-syntax',
+  category: STAGE1,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'Object.freeze syntax',
+      exec: function(){/*
+        return Object.isFrozen({# foo: 42 #});
+      */},
+      res : {
+      }
+    },
+    {
+      name: 'Object.seal syntax',
+      exec: function(){/*
+        return Object.isSealed({| foo: 42 |});
+      */},
+      res : {
+      }
+    },
+  ]
+},
 ];
 
 
