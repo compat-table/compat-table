@@ -1415,6 +1415,9 @@ exports.tests = [
       node6_5: true,
       node7: true,
       node7_6: true,
+      node8: true,
+      node8_3: true,
+      node8_7: true,
       duktape2_0: false,
       duktape2_1: true,
     }
@@ -1458,6 +1461,9 @@ exports.tests = [
       node6_5: false,
       node7: false,
       node7_6: false,
+      node8: false,
+      node8_3: false,
+      node8_7: false,
       duktape2_0: false,
       duktape2_1: true,
     }
