@@ -2117,7 +2117,7 @@ exports.tests = [
   spec: 'https://github.com/tc39/proposal-class-fields',
   subtests: [
     {
-      name: 'public instance class properties',
+      name: 'public instance class fields',
       exec: function () {/*
         class C {
           x = 'x';
@@ -2134,7 +2134,7 @@ exports.tests = [
       }
     },
     {
-      name: 'private fields basic support',
+      name: 'private instance class fields basic support',
       exec: function () {/*
         class C {
           #x;
@@ -2154,7 +2154,7 @@ exports.tests = [
       }
     },
     {
-      name: 'private fields initializers',
+      name: 'private instance class fields initializers',
       exec: function () {/*
         class C {
           #x = 42;
@@ -2173,24 +2173,46 @@ exports.tests = [
   ]
 },
 {
-  name: 'static class properties',
+  name: 'static class fields',
   category: STAGE2,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-static-class-features/',
-  exec: function(){/*
-    class C {
-      static x = 'x';
+  subtests: [
+    {
+      name: 'public static class fields',
+      exec: function () {/*
+        class C {
+          static x = 'x';
+        }
+        return C.x === 'x';
+      */},
+      res: {
+        babel: true,
+        tr: true,
+        typescript1: true,
+        firefox2: false,
+        opera10_50: false,
+        duktape2_0: false,
+      }
+    },
+    {
+      name: 'private static class fields',
+      exec: function () {/*
+        class C {
+          static #x = 42;
+          x(){
+            return C.#x;
+          }
+        }
+        return new C().x() === 42;
+      */},
+      res: {
+        firefox2: false,
+        opera10_50: false,
+        duktape2_0: false,
+      }
     }
-    return C.x === 'x';
-  */},
-  res: {
-    babel: true,
-    tr: true,
-    typescript1: true,
-    firefox2: false,
-    opera10_50: false,
-    duktape2_0: false,
-  }
+  ]
 },
 {
   name: 'asap',
