@@ -2111,19 +2111,18 @@ exports.tests = [
   }
 },
 {
-  name: 'class fields',
+  name: 'instance class fields',
   category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-class-fields',
   subtests: [
     {
-      name: 'class properties',
+      name: 'public instance class properties',
       exec: function () {/*
         class C {
           x = 'x';
-          static y = 'y';
         }
-        return new C().x + C.y === 'xy';
+        return new C().x === 'x';
       */},
       res: {
         babel: true,
@@ -2170,8 +2169,28 @@ exports.tests = [
         opera10_50: false,
         duktape2_0: false,
       }
-    },
+    }
   ]
+},
+{
+  name: 'static class properties',
+  category: STAGE2,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-static-class-features/',
+  exec: function(){/*
+    class C {
+      static x = 'x';
+    }
+    return C.x === 'x';
+  */},
+  res: {
+    babel: true,
+    tr: true,
+    typescript1: true,
+    firefox2: false,
+    opera10_50: false,
+    duktape2_0: false,
+  }
 },
 {
   name: 'asap',
