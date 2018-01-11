@@ -3520,9 +3520,9 @@ p.then(function(result) {
 <td class="tally obsolete" data-browser="firefox54" data-tally="0" data-flagged-tally="1">0/17</td>
 <td class="tally obsolete" data-browser="firefox55" data-tally="1">17/17</td>
 <td class="tally" data-browser="firefox56" data-tally="1">17/17</td>
-<td class="tally" data-browser="firefox57" data-tally="1">17/17</td>
-<td class="tally unstable" data-browser="firefox58" data-tally="1">17/17</td>
-<td class="tally unstable" data-browser="firefox59" data-tally="1">17/17</td>
+<td class="tally" data-browser="firefox57" data-tally="0">0/17</td>
+<td class="tally unstable" data-browser="firefox58" data-tally="0">0/17</td>
+<td class="tally unstable" data-browser="firefox59" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="chrome54" data-tally="0" data-flagged-tally="0.8823529411764706">0/17</td>
 <td class="tally obsolete" data-browser="chrome55" data-tally="0" data-flagged-tally="0.8823529411764706">0/17</td>
@@ -3594,16 +3594,16 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -3621,10 +3621,10 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -3668,9 +3668,9 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
 <td class="no obsolete" data-browser="chrome55">No</td>
@@ -3742,16 +3742,16 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -3769,10 +3769,10 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -3816,9 +3816,9 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
 <td class="no obsolete" data-browser="chrome55">No</td>
@@ -3890,16 +3890,16 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -3917,10 +3917,10 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -3964,16 +3964,16 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -3991,10 +3991,10 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4038,16 +4038,16 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4065,10 +4065,10 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4112,16 +4112,16 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4139,10 +4139,10 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4186,16 +4186,16 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4213,10 +4213,10 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4260,16 +4260,16 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4287,10 +4287,10 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4334,16 +4334,16 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4361,10 +4361,10 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4408,16 +4408,16 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4435,10 +4435,10 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4482,16 +4482,16 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4509,10 +4509,10 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4556,16 +4556,16 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4583,10 +4583,10 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4630,16 +4630,16 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4657,10 +4657,10 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4704,16 +4704,16 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4731,10 +4731,10 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4778,16 +4778,16 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no flagged obsolete" data-browser="firefox54">Flag<a href="#firefox-sharedmem-note"><sup>[18]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox55">Yes</td>
 <td class="yes" data-browser="firefox56">Yes</td>
-<td class="yes" data-browser="firefox57">Yes</td>
-<td class="yes unstable" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
+<td class="no" data-browser="firefox57">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox58">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="no unstable" data-browser="firefox59">No<a href="#fx-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome54">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome55">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome56">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome57">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome58">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome60">Yes</td>
 <td class="yes obsolete" data-browser="chrome61">Yes</td>
 <td class="yes" data-browser="chrome62">Yes</td>
@@ -4805,10 +4805,10 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no" data-browser="node4">No</td>
-<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[19]</sup></a></td>
+<td class="no flagged" data-browser="node6_5">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node7_6">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8">Flag<a href="#chrome-sharedmem-note"><sup>[20]</sup></a></td>
 <td class="yes obsolete" data-browser="node8_3">Yes</td>
 <td class="yes" data-browser="node8_7">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
@@ -4824,7 +4824,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 </tr>
 <tr class="category"><td colspan="72">2017 misc</td>
 </tr>
-<tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-duplictate-ownkeys-updated-note"><sup>[20]</sup></a></span><script data-source="
+<tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-duplictate-ownkeys-updated-note"><sup>[21]</sup></a></span><script data-source="
 var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
 ownKeys: function() {
 return [&apos;a&apos;,&apos;a&apos;,&apos;b&apos;,&apos;b&apos;];
@@ -5335,8 +5335,8 @@ return true;
 <td class="no obsolete" data-browser="chrome57">No</td>
 <td class="no obsolete" data-browser="chrome58">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -5356,8 +5356,8 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node7_6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node8" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="duktape2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5574,8 +5574,8 @@ return true;
 <td class="no obsolete" data-browser="chrome57">No</td>
 <td class="no obsolete" data-browser="chrome58">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -5595,8 +5595,8 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node7_6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node8" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="duktape2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -5897,8 +5897,8 @@ return true;
 <td class="no obsolete" data-browser="chrome57">No</td>
 <td class="no obsolete" data-browser="chrome58">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -5918,8 +5918,8 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node7_6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node8" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="duktape2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -6298,8 +6298,8 @@ return true;
 <td class="no obsolete" data-browser="chrome57">No</td>
 <td class="no obsolete" data-browser="chrome58">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -6319,8 +6319,8 @@ return true;
 <td class="no obsolete not-applicable" data-browser="node7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node7_6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="node8" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete not-applicable" data-browser="node8_3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged not-applicable" data-browser="node8_7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="duktape2_0" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="duktape2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
@@ -6926,9 +6926,9 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="no obsolete" data-browser="chrome56">No</td>
 <td class="no obsolete" data-browser="chrome57">No</td>
 <td class="no obsolete" data-browser="chrome58">No</td>
-<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome59">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -6948,8 +6948,8 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="no obsolete" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="node7_6">No</td>
 <td class="no obsolete" data-browser="node8">No</td>
-<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -7002,8 +7002,8 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="unknown obsolete" data-browser="chrome57">?</td>
 <td class="unknown obsolete" data-browser="chrome58">?</td>
 <td class="unknown obsolete" data-browser="chrome59">?</td>
-<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome60">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome61">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="yes" data-browser="chrome62">Yes</td>
 <td class="yes" data-browser="chrome63">Yes</td>
 <td class="yes unstable" data-browser="chrome64">Yes</td>
@@ -7023,8 +7023,8 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="unknown obsolete" data-browser="node7">?</td>
 <td class="unknown obsolete" data-browser="node7_6">?</td>
 <td class="unknown obsolete" data-browser="node8">?</td>
-<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
-<td class="no flagged" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[21]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
+<td class="no flagged" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[22]</sup></a></td>
 <td class="unknown obsolete" data-browser="duktape2_0">?</td>
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -7040,7 +7040,7 @@ return regex.test(&apos;foo\nbar&apos;);
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-old-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="babel-core-js-note">  <sup>[7]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[9]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[10]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="strict-fn-non-strict-params-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[13]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[14]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[15]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="typescript-async-await-note">  <sup>[16]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="firefox-developer-note">  <sup>[17]</sup> The feature is enabled by default only in Firefox Developer and Firefox Nightly.</p><p id="firefox-sharedmem-note">  <sup>[18]</sup> The feature have to be enabled via &quot;javascript.options.shared_memory&quot; setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly.</p><p id="chrome-sharedmem-note">  <sup>[19]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under about:flags</p><p id="proxy-duplictate-ownkeys-updated-note">  <sup>[20]</sup> The behaviour of the Proxy &#x201C;ownKeys&#x201D; handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.</p><p id="chrome-harmony-note">  <sup>[21]</sup> The feature have to be enabled via --js-flags=&quot;--harmony&quot; flag</p></div>
+    <p id="experimental-flag-note">  <sup>[1]</sup> Flagged features have to be enabled via &quot;Experimental Javascript features&quot; flag unless otherwise stated</p><p id="babel-optional-note">  <sup>[2]</sup> Flagged features require an optional transformer setting.</p><p id="harmony-flag-old-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[4]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under about:flags</p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is enabled by default only in Firefox Nightly.</p><p id="babel-core-js-note">  <sup>[7]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[9]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[10]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="strict-fn-non-strict-params-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[13]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[14]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[15]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="typescript-async-await-note">  <sup>[16]</sup> TypeScript <code>async</code> / <code>await</code> requires native generators support.</p><p id="firefox-developer-note">  <sup>[17]</sup> The feature is enabled by default only in Firefox Developer and Firefox Nightly.</p><p id="firefox-sharedmem-note">  <sup>[18]</sup> The feature have to be enabled via &quot;javascript.options.shared_memory&quot; setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly.</p><p id="fx-shared-memory-spectre-note">  <sup>[19]</sup> The feature was temporarily disabled to mitigate the <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">Meltdown and Spectre CPU bugs</a>.</p><p id="chrome-sharedmem-note">  <sup>[20]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under about:flags</p><p id="proxy-duplictate-ownkeys-updated-note">  <sup>[21]</sup> The behaviour of the Proxy &#x201C;ownKeys&#x201D; handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.</p><p id="chrome-harmony-note">  <sup>[22]</sup> The feature have to be enabled via --js-flags=&quot;--harmony&quot; flag</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
