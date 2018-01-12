@@ -16644,7 +16644,7 @@ exports.tests = [
         },
         opera10_50: false,
         chrome30: "flagged",
-        chrome38: { val: false, note_id: 'array-prototype-iterator' },
+        chrome38: { val: false, note_id: 'fx-array-prototype-iterator-3' },
         node0_12: true,
         node4: false,
         xs6: true,
@@ -16695,11 +16695,11 @@ exports.tests = [
         firefox2: false,
         firefox17: {
           val: false,
-          note_id: 'fx-array-prototype-values',
+          note_id: 'fx-array-prototype-iterator',
         },
         firefox27: {
           val: false,
-          note_id: 'fx-array-prototype-values-2',
+          note_id: 'fx-array-prototype-iterator-2',
         },
         firefox36: true,
         opera10_50: false,
