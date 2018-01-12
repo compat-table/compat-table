@@ -865,6 +865,11 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: {
+            val: false,
+            note_id: 'chr-shared-memory-spectre',
+            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs</a>.',
+          },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -884,6 +889,7 @@ exports.tests = [
           firefox57: { val: false, note_id: 'fx-shared-memory-spectre' },
           opera10_50: false,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -907,6 +913,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari11: true,
           duktape2_0: false,
         }
@@ -928,6 +935,7 @@ exports.tests = [
           firefox57: { val: false, note_id: 'fx-shared-memory-spectre' },
           opera10_50: false,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -949,6 +957,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -972,6 +981,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -995,6 +1005,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1018,6 +1029,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1041,6 +1053,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1064,6 +1077,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1087,6 +1101,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1110,6 +1125,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1133,6 +1149,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1156,6 +1173,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1179,6 +1197,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1202,6 +1221,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
@@ -1225,6 +1245,7 @@ exports.tests = [
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
+          chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
           duktape2_0: false,
         }
