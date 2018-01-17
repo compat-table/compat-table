@@ -871,6 +871,12 @@ exports.tests = [
             note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs</a>.',
           },
           safari10_1: true,
+          safari11: {
+            val: false,
+            note_id: 'sf-shared-memory-spectre',
+            note_html: 'The feature was temporarily disabled to mitigate <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">the Meltdown and Spectre CPU bugs</a>.',
+          },
+          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -891,6 +897,8 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -914,7 +922,8 @@ exports.tests = [
           chrome48: chrome.sharedmem,
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
-          safari11: true,
+          safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -937,6 +946,8 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -959,6 +970,8 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
