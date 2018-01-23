@@ -129,7 +129,6 @@
 <th class="platform edge16 desktop" data-browser="edge16"><a href="#edge16" class="browser-name"><abbr title="Microsoft Edge">Edge 16</abbr></a></th>
 <th class="platform edge17 desktop unstable" data-browser="edge17"><a href="#edge17" class="browser-name"><abbr title="Microsoft Edge">Edge 17 Preview</abbr></a></th>
 <th class="platform firefox45 desktop obsolete" data-browser="firefox45"><a href="#firefox45" class="browser-name"><abbr title="Firefox 45 ESR">FF 45 ESR</abbr></a></th>
-<th class="platform firefox50 desktop obsolete" data-browser="firefox50"><a href="#firefox50" class="browser-name"><abbr title="Firefox 50">FF 50</abbr></a></th>
 <th class="platform firefox51 desktop obsolete" data-browser="firefox51"><a href="#firefox51" class="browser-name"><abbr title="Firefox 51">FF 51</abbr></a></th>
 <th class="platform firefox52 desktop" data-browser="firefox52"><a href="#firefox52" class="browser-name"><abbr title="Firefox 52 ESR">FF 52 ESR</abbr></a></th>
 <th class="platform firefox53 desktop obsolete" data-browser="firefox53"><a href="#firefox53" class="browser-name"><abbr title="Firefox 53">FF 53</abbr></a></th>
@@ -193,7 +192,6 @@
 <td class="tally" data-browser="edge16" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="edge17" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox45" data-tally="1">4/4</td>
-<td class="tally obsolete" data-browser="firefox50" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="firefox51" data-tally="1">4/4</td>
 <td class="tally" data-browser="firefox52" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="firefox53" data-tally="1">4/4</td>
@@ -256,7 +254,6 @@ return typeof uneval == &apos;function&apos;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -327,7 +324,6 @@ return &apos;toSource&apos; in Object.prototype
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -390,7 +386,6 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -542,7 +537,6 @@ return true;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -606,7 +600,6 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -673,7 +666,6 @@ return 'caller' in function(){};
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -742,7 +734,6 @@ return (function () {}).arity === 0 &&
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -813,7 +804,6 @@ return f(1, 'boo');
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -878,7 +868,6 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -944,7 +933,6 @@ return new C instanceof C;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1011,7 +999,6 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1076,7 +1063,6 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1151,7 +1137,6 @@ return executed;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1216,7 +1201,6 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1281,7 +1265,6 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1348,7 +1331,6 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1411,7 +1393,6 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1474,7 +1455,6 @@ return (function(x)x)(1) === 1;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1483,8 +1463,8 @@ return (function(x)x)(1) === 1;
 <td class="yes obsolete" data-browser="firefox56">Yes</td>
 <td class="yes" data-browser="firefox57">Yes</td>
 <td class="yes" data-browser="firefox58">Yes</td>
-<td class="yes unstable" data-browser="firefox59">Yes</td>
-<td class="yes unstable" data-browser="firefox60">Yes</td>
+<td class="no unstable" data-browser="firefox59">No</td>
+<td class="no unstable" data-browser="firefox60">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome54">No</td>
 <td class="no obsolete" data-browser="chrome55">No</td>
@@ -1537,7 +1517,6 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1604,7 +1583,6 @@ return str === &quot;foobarbaz&quot;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1668,7 +1646,6 @@ return arr[1] === arr;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -1765,7 +1742,6 @@ catch(e) {
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1868,7 +1844,6 @@ catch(e) {
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -1970,7 +1945,6 @@ global.test((function () {
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2035,7 +2009,6 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2105,7 +2078,6 @@ return passed;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2186,7 +2158,6 @@ try {
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2255,7 +2226,6 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2326,7 +2296,6 @@ return true;
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2389,7 +2358,6 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2453,7 +2421,6 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2516,7 +2483,6 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2577,7 +2543,6 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2640,7 +2605,6 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2711,7 +2675,6 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2774,7 +2737,6 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2835,7 +2797,6 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -2896,7 +2857,6 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -2959,7 +2919,6 @@ return typeof Object.observe == &apos;function&apos;;
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
@@ -3034,7 +2993,6 @@ try {
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -3099,7 +3057,6 @@ return 'lineNumber' in new Error();
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -3164,7 +3121,6 @@ return 'columnNumber' in new Error();
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -3229,7 +3185,6 @@ return 'fileName' in new Error();
 <td class="no" data-browser="edge16">No</td>
 <td class="no unstable" data-browser="edge17">No</td>
 <td class="yes obsolete" data-browser="firefox45">Yes</td>
-<td class="yes obsolete" data-browser="firefox50">Yes</td>
 <td class="yes obsolete" data-browser="firefox51">Yes</td>
 <td class="yes" data-browser="firefox52">Yes</td>
 <td class="yes obsolete" data-browser="firefox53">Yes</td>
@@ -3294,7 +3249,6 @@ return 'description' in new Error();
 <td class="yes" data-browser="edge16">Yes</td>
 <td class="yes unstable" data-browser="edge17">Yes</td>
 <td class="no obsolete" data-browser="firefox45">No</td>
-<td class="no obsolete" data-browser="firefox50">No</td>
 <td class="no obsolete" data-browser="firefox51">No</td>
 <td class="no" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox53">No</td>
