@@ -2789,6 +2789,8 @@ exports.tests = [
         babel: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
+        firefox58: false,
+        firefox59: firefox.nightly,
         opera10_50: false,
         duktape2_2: false,
       }
@@ -2804,6 +2806,8 @@ exports.tests = [
         babel: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
+        firefox58: false,
+        firefox59: firefox.nightly,
         opera10_50: false,
         duktape2_2: false,
       }
