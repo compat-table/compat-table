@@ -460,6 +460,7 @@ exports.tests = [
     ie7: false,
     firefox2: false,
     firefox3: true,
+    firefox59: false,
     safari3_1: false,
     chrome7: false,
     opera7_5: false,
