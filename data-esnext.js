@@ -1581,11 +1581,11 @@ exports.tests = [
 },
 {
   name: 'String.prototype.matchAll',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/String.prototype.matchAll',
   exec: function(){/*
-    var iterator = '11a2bb'.matchAll(/(\d)(\D)/);
+    var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
     if(iterator[Symbol.iterator]() !== iterator)return false;
     var a = '', b = '', c = '', step;
     while(!(step = iterator.next()).done){
