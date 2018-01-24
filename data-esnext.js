@@ -1279,7 +1279,7 @@ exports.tests = [
 },
 {
   name: 'string trimming',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: [
