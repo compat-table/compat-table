@@ -1210,57 +1210,6 @@ exports.tests = [
   }
 },
 {
-  name: 'object rest/spread properties',
-  significance: 'medium',
-  category: STAGE3,
-  spec: 'https://github.com/tc39/proposal-object-rest-spread',
-  subtests: [
-    {
-      name: 'object rest properties',
-      exec: function () {/*
-        var {a, ...rest} = {a: 1, b: 2, c: 3};
-        return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
-      */},
-      res: {
-        babel: true,
-        typescript2_1: true,
-        jsx: true,
-        firefox2: false,
-        firefox55: true,
-        opera10_50: false,
-        chrome58: 'flagged',
-        chrome60: true,
-        safari11: false,
-        safaritp: true,
-        webkit: true,
-        duktape2_0: false,
-      }
-    },
-    {
-      name: 'object spread properties',
-      exec: function () {/*
-        var spread = {b: 2, c: 3};
-        var O = {a: 1, ...spread};
-        return O !== spread && (O.a + O.b + O.c) === 6;
-      */},
-      res: {
-        babel: true,
-        jsx: true,
-        firefox2: false,
-        firefox55: true,
-        opera10_50: false,
-        chrome58: 'flagged',
-        chrome60: true,
-        typescript2_1: true,
-        safari11: false,
-        safaritp: true,
-        webkit: true,
-        duktape2_0: false,
-      }
-    },
-  ],
-},
-{
   name: 'String.prototype.at',
   significance: 'small',
   spec: 'https://github.com/mathiasbynens/String.prototype.at',
@@ -1279,7 +1228,7 @@ exports.tests = [
 },
 {
   name: 'string trimming',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
   subtests: [
@@ -1581,7 +1530,7 @@ exports.tests = [
 },
 {
   name: 'String.prototype.matchAll',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/String.prototype.matchAll',
   exec: function(){/*
@@ -1786,32 +1735,6 @@ exports.tests = [
       }
     }
   ]
-},
-{
-  name: 'RegExp named capture groups',
-  spec: 'https://github.com/tc39/proposal-regexp-named-groups',
-  category: STAGE3,
-  significance: 'small',
-  exec: function(){/*
-    var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
-    return result.groups.year === '2016'
-      && result.groups.month === '03'
-      && result.groups.day === '11'
-      && result[0] === '2016-03-11'
-      && result[1] === '2016'
-      && result[2] === '03'
-      && result[3] === '11';
-  */},
-  res : {
-    babel: true,
-    ie11: false,
-    firefox2: false,
-    opera10_50: false,
-    chrome60: chrome.harmony,
-    chrome64: true,
-    safaritp: true,
-    duktape2_0: false,
-  }
 },
 {
   name: 'RegExp Lookbehind Assertions',
@@ -3417,7 +3340,7 @@ exports.tests = [
 {
   name: 'Symbol.prototype.description',
   spec: 'https://github.com/tc39/proposal-Symbol-description',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'small',
   exec: function(){/*
     return Symbol('foo').description === 'foo';
