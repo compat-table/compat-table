@@ -3417,7 +3417,7 @@ exports.tests = [
 {
   name: 'Symbol.prototype.description',
   spec: 'https://github.com/tc39/proposal-Symbol-description',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'small',
   exec: function(){/*
     return Symbol('foo').description === 'foo';
