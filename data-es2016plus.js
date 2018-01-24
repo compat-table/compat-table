@@ -2144,7 +2144,7 @@ exports.tests = [
   },
   {
     name: 'object rest/spread properties',
-    significance: 'large',
+    significance: 'medium',
     category: '2018 features',
     spec: 'https://github.com/tc39/proposal-object-rest-spread',
     subtests: [
