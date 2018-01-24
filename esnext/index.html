@@ -789,7 +789,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a></span><script data-source="
-var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/);
+var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/g);
 if(iterator[Symbol.iterator]() !== iterator)return false;
 var a = &apos;&apos;, b = &apos;&apos;, c = &apos;&apos;, step;
 while(!(step = iterator.next()).done){
@@ -800,7 +800,7 @@ while(!(step = iterator.next()).done){
 return a === &apos;1a2b&apos;
   &amp;&amp; b === &apos;12&apos;
   &amp;&amp; c === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/g);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/g);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
