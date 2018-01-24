@@ -2194,6 +2194,135 @@ exports.tests = [
     ],
   },
   {
+    name: 'Promise.prototype.finally',
+    category: '2018 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-promise-finally',
+    subtests: [
+      {
+        name: 'basic support',
+        exec: function(){/*
+        var p1 = Promise.resolve("foo");
+        var p2 = Promise.reject("bar");
+        var score = 0;
+        function thenFn(result)  {
+          score += (result === "foo");
+          check();
+        }
+        function catchFn(result) {
+          score += (result === "bar");
+          check();
+        }
+        function finallyFn() {
+          score += (arguments.length === 0);
+          check();
+        }
+        p1.then(thenFn);
+        p1.finally(finallyFn);
+        p1.finally(function() {
+          // should return a new Promise
+          score += p1.finally() !== p1;
+          check();
+        });
+        p2.catch(catchFn);
+        p2.finally(finallyFn);
+        function check() {
+          if (score === 5) asyncTestPassed();
+        }
+      */},
+        res: {
+          babel: babel.corejs,
+          typescript1: typescript.corejs,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          chrome61: chrome.promise,
+          chrome63: true,
+          safaritp: true,
+          webkit: true,
+          duktape2_2: false,
+        }
+      },
+      {
+        name: 'don\'t change resolution value',
+        exec: function(){/*
+        var score = 0;
+        function thenFn(result)  {
+          score += (result === "foo");
+          check();
+        }
+        function catchFn(result) {
+          score += (result === "bar");
+          check();
+        }
+        function finallyFn() {
+          score++;
+          check();
+          return Promise.resolve("foobar");
+        }
+        Promise.resolve("foo").finally(finallyFn).then(thenFn);
+        Promise.reject("bar").finally(finallyFn).catch(catchFn);
+        function check() {
+          if (score === 4) asyncTestPassed();
+        }
+      */},
+        res: {
+          babel: babel.corejs,
+          typescript1: typescript.corejs,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          chrome61: chrome.promise,
+          chrome63: true,
+          safaritp: true,
+          webkit: true,
+          duktape2_2: false,
+        }
+      },
+      {
+        name: 'change rejection value',
+        exec: function(){/*
+        var score = 0;
+        Promise
+          .reject("foobar")
+          .finally(function() {
+            return Promise.reject("foo");
+          })
+          .catch(function(result) {
+            score += (result === "foo");
+            check();
+            return Promise.reject("foobar");
+          })
+          .finally(function() {
+            throw new Error('bar');
+          })
+          .catch(function(result) {
+            score += (result.message === "bar");
+            check();
+          });
+        function check() {
+          if (score === 2) asyncTestPassed();
+        }
+      */},
+        res: {
+          babel: babel.corejs,
+          typescript1: typescript.corejs,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          safaritp: true,
+          chrome61: chrome.promise,
+          chrome63: true,
+          webkit: true,
+          duktape2_2: false,
+        }
+      }
+    ]
+  },
+  {
     name: 'template literal revision',
     spec: 'https://github.com/tc39/proposal-template-literal-revision',
     category: '2018 features',
@@ -2277,6 +2406,44 @@ exports.tests = [
       firefox2: false,
       opera10_50: false,
       chrome60: chrome.harmony,
+      chrome64: true,
+      safaritp: true,
+      duktape2_0: false,
+    }
+  },
+  {
+    name: 'RegExp Lookbehind Assertions',
+    spec: 'https://github.com/tc39/proposal-regexp-lookbehind',
+    category: '2018 features',
+    significance: 'small',
+    exec: function(){/*
+    return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
+           !/(?<=a)b/.test('b');
+  */},
+    res : {
+      ie11: false,
+      firefox2: false,
+      opera10_50: false,
+      chrome50: chrome.harmony,
+      chrome62: true,
+      duktape2_0: false,
+    }
+  },
+  {
+    name: 'RegExp Unicode Property Escapes',
+    category: '2018 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-regexp-unicode-property-escapes',
+    exec: function () {/*
+    const regexGreekSymbol = /\p{Script=Greek}/u;
+    return regexGreekSymbol.test('π');
+  */},
+    res: {
+      babel: true,
+      ie11: false,
+      firefox2: false,
+      opera10_50: false,
+      chrome59: chrome.harmony,
       chrome64: true,
       safaritp: true,
       duktape2_0: false,
