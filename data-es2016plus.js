@@ -2449,6 +2449,76 @@ exports.tests = [
       duktape2_0: false,
     }
   },
+  {
+    name: 'Asynchronous Iterators',
+    category: '2018 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-async-iteration',
+    subtests: [
+      {
+        name: 'async generators',
+        exec: function(){/*
+          async function*generator(){
+            yield 42;
+          }
+
+          var iterator = generator();
+          iterator.next().then(function(step){
+            if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();
+          });
+        */},
+        res: {
+          babel: true,
+          chrome62: chrome.harmony,
+          chrome63: true,
+          typescript2_3: true,
+          firefox2: false,
+          firefox55: firefox.nightly,
+          firefox57: true,
+          opera10_50: false,
+          safaritp: true,
+          webkit: true,
+          duktape2_0: false,
+        }
+      },
+      {
+        name: 'for-await-of loops',
+        exec: function(){/*
+          var asyncIterable = {};
+          asyncIterable[Symbol.asyncIterator] = function(){
+            var i = 0;
+            return {
+              next: function(){
+                switch(++i){
+                  case 1: return Promise.resolve({done: false, value: 'a'});
+                  case 2: return Promise.resolve({done: false, value: 'b'});
+                } return Promise.resolve({done: true});
+              }
+            };
+          };
+
+          (async function(){
+            var result = '';
+            for await(var value of asyncIterable)result += value;
+            if(result === 'ab')asyncTestPassed();
+          })();
+        */},
+        res: {
+          babel: true,
+          chrome62: chrome.harmony,
+          chrome63: true,
+          typescript2_3: true,
+          firefox2: false,
+          firefox55: firefox.nightly,
+          firefox57: true,
+          opera10_50: false,
+          safaritp: true,
+          webkit: true,
+          duktape2_0: false,
+        }
+      }
+    ]
+  },
 ];
 
 //Shift annex B features to the bottom
