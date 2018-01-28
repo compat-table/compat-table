@@ -283,6 +283,7 @@ exports.tests = [
      */},
   res: {
     safari10_1: true,
+    safari11_1: false,
     safaritp: false,
     webkit: false,
     opera7_5: false,
