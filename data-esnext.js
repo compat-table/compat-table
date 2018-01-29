@@ -1305,6 +1305,7 @@ exports.tests = [
         babel: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
+        chrome66: chrome.trim,
         opera10_50: false,
         duktape2_0: false,
       }
@@ -1318,6 +1319,7 @@ exports.tests = [
         babel: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
+        chrome66: chrome.trim,
         opera10_50: false,
         duktape2_0: false,
       }
