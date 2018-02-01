@@ -3115,6 +3115,8 @@ exports.tests = [
   */},
   res : {
     babel: true,
+    typescript1: false,
+    typescript2_7: true,
     firefox2: false,
     opera10_50: false,
   }
