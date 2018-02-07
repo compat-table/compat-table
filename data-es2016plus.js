@@ -996,6 +996,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1020,6 +1021,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1044,6 +1046,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1068,6 +1071,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1092,6 +1096,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1116,6 +1121,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1140,6 +1146,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1164,6 +1171,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1188,6 +1196,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1212,6 +1221,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1236,6 +1246,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       },
@@ -1260,6 +1271,7 @@ exports.tests = [
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           safari10_1: true,
+          safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
         }
       }
