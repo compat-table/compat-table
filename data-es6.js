@@ -16619,6 +16619,7 @@ exports.tests = [
           note_id: 'cr-array-prototype-values',
           note_html: 'The feature was disabled due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615873">compatibility issue</a>.',
         },
+        chrome66: true,
         safari9: true,
         firefox2: false,
         firefox17: {
@@ -16642,6 +16643,7 @@ exports.tests = [
           note_id: 'fx-array-prototype-values',
           note_html: 'The feature is enabled only in Firefox Nightly due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1299593">compatibility issue</a>.',
         },
+        firefox60: true,
         opera10_50: false,
         chrome30: "flagged",
         chrome38: { val: false, note_id: 'fx-array-prototype-iterator-3' },
