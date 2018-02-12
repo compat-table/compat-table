@@ -1307,6 +1307,7 @@ exports.tests = [
         firefox2: false,
         chrome66: chrome.trim,
         opera10_50: false,
+        safaritp: true,
         duktape2_0: false,
       }
     },
@@ -1321,6 +1322,7 @@ exports.tests = [
         firefox2: false,
         chrome66: chrome.trim,
         opera10_50: false,
+        safaritp: true,
         duktape2_0: false,
       }
     }
