@@ -364,6 +364,8 @@ exports.tests = [
     rhino1_7: true,
     phantom: false,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -472,6 +474,8 @@ exports.tests = [
     rhino1_7: false,
     phantom: false,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -522,6 +526,8 @@ exports.tests = [
     rhino1_7: false,
     phantom: false,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -779,6 +785,8 @@ exports.tests = [
     phantom: true,
     android4_0: true,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -804,6 +812,8 @@ exports.tests = [
     phantom: true,
     android4_0: true,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -1039,6 +1049,8 @@ exports.tests = [
     phantom: false,
     android4_0: true,
     duktape2_0: true,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -1061,6 +1073,8 @@ exports.tests = [
     rhino1_7: true,
     phantom: false,
     duktape2_0: true,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -1084,6 +1098,8 @@ exports.tests = [
     rhino1_7: false,
     phantom: false,
     duktape2_0: false,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {
@@ -1106,6 +1122,8 @@ exports.tests = [
     rhino1_7: true,
     phantom: false,
     duktape2_0: true,
+    nashorn1_8: true,
+    nashorn9: true,
   }
 },
 {

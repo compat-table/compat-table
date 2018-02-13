@@ -2129,6 +2129,8 @@ exports.tests = [
       android4_0: true,
       ios5_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
