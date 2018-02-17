@@ -476,7 +476,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -498,7 +498,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -521,7 +521,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -580,7 +580,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -602,7 +602,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -629,7 +629,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -651,7 +651,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -683,7 +683,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -715,7 +715,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: true,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -769,7 +769,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -791,7 +791,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -821,7 +821,7 @@ exports.tests = [
         res: {
           tr: null,
           babel: null,
-          closure: null,
+          closure: false,
           typescript1: null,
           chrome52: null,
           chrome55: true,
@@ -2377,7 +2377,7 @@ exports.tests = [
       es6tr: null,
       tr: null,
       babel: true,
-      closure: null,
+      closure: false,
       jsx: null,
       typescript1: null,
       es6shim: null,
