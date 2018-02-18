@@ -122,7 +122,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.5">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
-<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20170806">Closure</abbr></a></th>
+<th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20180204">Closure</abbr></a></th>
 <th class="platform typescript1 compiler obsolete" data-browser="typescript1"><a href="#typescript1" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform typescript2_2 compiler obsolete" data-browser="typescript2_2"><a href="#typescript2_2" class="browser-name"><abbr title="TypeScript 2.2 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform typescript2_3 compiler obsolete" data-browser="typescript2_3"><a href="#typescript2_3" class="browser-name"><abbr title="TypeScript 2.3 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
@@ -2223,7 +2223,7 @@ return Math.min(1,2,3,) === 1;
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-async-function-definitions">async functions</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
 <td class="tally" data-browser="babel" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally" data-browser="closure" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally" data-browser="closure" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0.13333333333333333" style="background-color:hsl(16,80%,50%)">2/15</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="0.13333333333333333" style="background-color:hsl(16,80%,50%)">2/15</td>
 <td class="tally obsolete" data-browser="typescript2_3" data-tally="0.13333333333333333" style="background-color:hsl(16,80%,50%)">2/15</td>
@@ -2393,7 +2393,7 @@ p.catch(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2468,7 +2468,7 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2543,7 +2543,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2707,7 +2707,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2782,7 +2782,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2862,7 +2862,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -2937,7 +2937,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -3022,7 +3022,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -3107,7 +3107,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -3267,7 +3267,7 @@ return passed;
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -3341,7 +3341,7 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -3424,7 +3424,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
@@ -7546,7 +7546,7 @@ return regex.test(&apos;foo\nbar&apos;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="yes" data-browser="babel">Yes</td>
-<td class="unknown" data-browser="closure">?</td>
+<td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
 <td class="unknown obsolete" data-browser="typescript2_3">?</td>
