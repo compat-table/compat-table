@@ -28,6 +28,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -50,6 +52,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -71,6 +75,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -92,6 +98,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -117,6 +125,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   }],
   separator: 'after'
@@ -144,6 +154,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -178,6 +190,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -200,6 +214,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -224,6 +240,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -249,6 +267,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -271,6 +291,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -293,6 +315,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -315,6 +339,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -337,6 +363,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -359,6 +387,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -381,6 +411,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -411,6 +443,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -435,6 +469,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
     separator: 'after'
   }],
@@ -464,6 +500,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -486,6 +524,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -508,6 +548,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -530,6 +572,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -552,6 +596,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -574,6 +620,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -596,6 +644,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -618,6 +668,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -640,6 +692,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -662,6 +716,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   }, {
     name: 'Array.prototype.sort: compareFn must be function or undefined',
@@ -709,6 +765,8 @@ exports.tests = [
       ejs: null,
       android4_0: false,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -738,6 +796,8 @@ exports.tests = [
       ejs: null,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   }],
 },
@@ -764,6 +824,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -788,6 +850,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
     separator: 'after'
   }
@@ -816,6 +880,8 @@ exports.tests = [
       ejs: false,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -837,6 +903,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -870,6 +938,8 @@ exports.tests = [
       ejs: true,
       android4_0: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   }]
 },
@@ -897,6 +967,8 @@ exports.tests = [
     ios7: true,
     android4_0: true,
     duktape2_0: true,
+    nashorn1_8: true,
+    nashorn9: true,
   },
 },
 {
@@ -926,6 +998,8 @@ exports.tests = [
     ios7: true,
     android4_0: true,
     duktape2_0: true,
+    nashorn1_8: true,
+    nashorn9: true,
   },
   separator: 'after'
 },
@@ -958,6 +1032,8 @@ exports.tests = [
       ejs: false,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -985,6 +1061,8 @@ exports.tests = [
       ejs: false,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -1012,6 +1090,8 @@ exports.tests = [
       ejs: false,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   }]
 },
@@ -1040,6 +1120,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1064,6 +1146,8 @@ exports.tests = [
       ejs: true,
       android4_4: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -1088,6 +1172,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1113,6 +1199,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1141,6 +1229,8 @@ exports.tests = [
       ejs: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -1165,6 +1255,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -1197,6 +1289,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: false,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   },
   {
@@ -1224,6 +1318,8 @@ exports.tests = [
       ejs: null,
       android4_0: null,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   }]
 },
@@ -1255,6 +1351,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1280,6 +1378,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1303,6 +1403,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1365,6 +1467,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1387,6 +1491,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1413,6 +1519,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1467,6 +1575,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1492,6 +1602,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1515,6 +1627,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1539,6 +1653,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1567,6 +1683,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1589,6 +1707,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1611,6 +1731,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1633,6 +1755,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1655,6 +1779,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1677,6 +1803,8 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   },
   {
@@ -1704,6 +1832,8 @@ exports.tests = [
       ios9: true,
       android4_1: true,
       duktape2_0: true,
+      nashorn1_8: true,
+      nashorn9: true,
     }
   }]
 }

@@ -2272,6 +2272,30 @@
     "release": "2017-09-23",
     "obsolete": false
   },
+  "nashorn1_8": {
+    "full": "Oracle Nashorn 1.8",
+    "family": "Nashorn",
+    "short": "JJS 1.8",
+    "platformtype": "engine",
+    "release": "2014-03-18",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "nashorn9": {
+    "full": "Oracle Nashorn 9",
+    "family": "Nashorn",
+    "short": "JJS 9",
+    "platformtype": "engine",
+    "release": "2017-09-21",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
   "android1_5": {
     "full": "Android Browser 1.5 (Cupcake)",
     "family": "Android Browser",

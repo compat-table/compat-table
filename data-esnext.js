@@ -1262,6 +1262,8 @@ exports.tests = [
         android4_0: true,
         ios5_1: true,
         duktape2_0: false,
+        nashorn1_8: true,
+        nashorn9: true,
       }
     },
     {
@@ -1294,6 +1296,8 @@ exports.tests = [
         android4_0: true,
         ios5_1: true,
         duktape2_0: false,
+        nashorn1_8: true,
+        nashorn9: true,
       }
     },
     {
@@ -2141,6 +2145,8 @@ exports.tests = [
       safari10: true,
       edge13: true,
       duktape2_0: false,
+      nashorn1_8: true,
+      nashorn9: true,
     },
   }, {
     name: '[native code]',
@@ -2158,6 +2164,7 @@ exports.tests = [
       safari3_1: true,
       edge13: true,
       duktape2_0: true,
+      nashorn9: true,
     },
   }, {
     name: 'class expression with implicit constructor',
@@ -2218,6 +2225,7 @@ exports.tests = [
       chrome59: chrome.harmony,
       chrome66: true,
       duktape2_0: false,
+      nashorn9: true,
     },
   }]
 },
