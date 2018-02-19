@@ -3262,8 +3262,7 @@ p.then(function(result) {
 var asyncFunctionProto = Object.getPrototypeOf(async function (){});
 return asyncFunctionProto !== function(){}.prototype
   &amp;&amp; Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;
-return passed;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\nreturn passed;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\nreturn passed;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel">?</td>
