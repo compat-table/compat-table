@@ -764,7 +764,6 @@ exports.tests = [
           var asyncFunctionProto = Object.getPrototypeOf(async function (){});
           return asyncFunctionProto !== function(){}.prototype
             && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;
-          return passed;
         */},
         res: {
           tr: null,
