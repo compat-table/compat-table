@@ -2213,6 +2213,7 @@ exports.tests = [
     category: '2018 features',
     significance: 'medium',
     spec: 'https://github.com/tc39/proposal-promise-finally',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally',
     subtests: [
       {
         name: 'basic support',
