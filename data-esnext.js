@@ -2487,6 +2487,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Array.prototype.flatten',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten',
       exec: function(){/*
         return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
       */},
@@ -2502,6 +2503,7 @@ exports.tests = [
     },
     {
       name: 'Array.prototype.flatMap',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap',
       exec: function(){/*
         return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
           return [it.a, it.b];
