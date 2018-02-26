@@ -149,6 +149,19 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2017-10-31",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript2_7": {
+    "full": "TypeScript 2.7 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2018-01-31",
     "obsolete": false,
     "test_suites": [
       "es6",
