@@ -19,13 +19,28 @@
       "esnext"
     ]
   },
-  "babel": {
+  "babel6": {
     "full": "Babel 6.5 + core-js 2.5",
-    "short": "Babel +<br><nobr>core-js</nobr>",
+    "short": "Babel 6 +<br><nobr>core-js</nobr>",
+    "family": "Babel",
     "platformtype": "compiler",
     "note_id": "babel-optional",
     "note_html": "Flagged features require an optional transformer setting.",
     "obsolete": false,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "babel7": {
+    "full": "Babel 7 beta + core-js 2.5",
+    "short": "Babel 7 +<br><nobr>core-js</nobr>",
+    "family": "Babel",
+    "platformtype": "compiler",
+    "note_id": "babel-optional",
+    "note_html": "Flagged features require an optional transformer setting.",
+    "unstable": true,
     "test_suites": [
       "es6",
       "es2016plus",

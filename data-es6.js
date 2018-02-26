@@ -33,7 +33,7 @@ exports.tests = [
           note_id: 'tr-tco',
           note_html: 'Requires the <code>properTailCalls</code> compile option.'
         },
-        babel: false,
+        babel6: false,
         typescript1: typescript.fallthrough,
         firefox2: false,
         opera10_50: false,
@@ -92,7 +92,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -121,7 +121,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -150,7 +150,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -180,7 +180,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -207,7 +207,7 @@ exports.tests = [
       res: {
         tr: true,
         closure: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -232,7 +232,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -258,7 +258,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -282,7 +282,7 @@ exports.tests = [
         })();
       */},
       res: {
-        babel: true,
+        babel6: true,
         closure: true,
         tr: true,
         typescript1: true,
@@ -361,7 +361,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: false,
+        babel6: false,
         closure: false,
         es6tr: true,
         jsx: true,
@@ -397,7 +397,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         es6tr: true,
         jsx: true,
@@ -453,7 +453,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -484,7 +484,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         tr: true,
@@ -517,7 +517,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         tr: true,
@@ -551,7 +551,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -582,7 +582,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         es6tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         ie11: true,
@@ -612,7 +612,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         safari10: true,
@@ -640,7 +640,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         safari10: true,
@@ -667,7 +667,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         ie11: true,
         firefox2: false,
         firefox36: true,
@@ -693,7 +693,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -726,7 +726,7 @@ exports.tests = [
         return bar === 123;
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         tr: true,
@@ -760,7 +760,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         tr: true,
@@ -795,7 +795,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -826,7 +826,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -858,7 +858,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         chrome40: "flagged",
@@ -887,7 +887,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         safari10: true,
@@ -915,7 +915,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         ie11: true,
         firefox2: false,
         firefox36: true,
@@ -949,7 +949,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -983,7 +983,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1016,7 +1016,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1048,7 +1048,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         es6tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         ie11: true,
@@ -1077,7 +1077,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         ie11: true,
         firefox2: false,
         firefox35: { val: "flagged", note_id: 'fx-let' },
@@ -1112,7 +1112,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         safari10: true,
@@ -1138,7 +1138,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1169,7 +1169,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1203,7 +1203,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1235,7 +1235,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -1266,7 +1266,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         ie11: true,
         firefox2: false,
         firefox35: { val: "flagged", note_id: 'fx-let' },
@@ -1302,7 +1302,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         chrome37: "flagged",
@@ -1335,7 +1335,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1362,7 +1362,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1389,7 +1389,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1423,7 +1423,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1457,7 +1457,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel: false,
+        babel6: false,
         closure: true,
         typescript1: true,
         safari10: true,
@@ -1484,7 +1484,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel: false,
+        babel6: false,
         closure: true,
         safari10: true,
         edge12: edge.experimental,
@@ -1543,7 +1543,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -1570,7 +1570,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         typescript1: true,
@@ -1602,7 +1602,7 @@ exports.tests = [
         }("foo", "bar", "baz"));
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         tr: true,
         ejs: true,
@@ -1632,7 +1632,7 @@ exports.tests = [
         }());
       */},
       res: {
-        babel: false,
+        babel6: false,
         tr: true,
         ejs: true,
         closure: true,
@@ -1690,7 +1690,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -1717,7 +1717,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -1744,7 +1744,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -1792,7 +1792,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -1814,7 +1814,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -1837,7 +1837,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -1858,7 +1858,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -1880,7 +1880,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         firefox2: false,
@@ -1905,7 +1905,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -1928,7 +1928,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         es6tr: {
           val: true,
@@ -1958,7 +1958,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
         ejs: true,
@@ -1983,7 +1983,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
@@ -2009,7 +2009,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
@@ -2071,7 +2071,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         jsx: true,
@@ -2103,7 +2103,7 @@ exports.tests = [
         return C === c1;
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         jsx: true,
         closure: true,
@@ -2129,7 +2129,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2156,7 +2156,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2187,7 +2187,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2218,7 +2218,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2249,7 +2249,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         ejs: true,
         typescript1: true,
@@ -2281,7 +2281,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2315,7 +2315,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2346,7 +2346,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2378,7 +2378,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2410,7 +2410,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         jsx: true,
@@ -2443,7 +2443,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         es6tr: true,
@@ -2474,7 +2474,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         jsx: true,
@@ -2507,7 +2507,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -2536,7 +2536,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         typescript1: true,
         es6tr: true,
@@ -2590,7 +2590,7 @@ exports.tests = [
         return !C.prototype.propertyIsEnumerable("foo") && !C.propertyIsEnumerable("bar");
       */},
       res: {
-        babel: true,
+        babel6: true,
         ejs: true,
         jsx: true,
         chrome42: "strict",
@@ -2616,7 +2616,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -2647,7 +2647,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: true,
+        babel6: true,
         safari9: true,
         chrome43: "strict",
         chrome49: true,
@@ -2676,7 +2676,7 @@ exports.tests = [
           note_id: 'compiler-proto',
           note_html: 'Requires native support for <code>Object.prototype.__proto__</code>',
         },
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         tr: { val: false, note_id: 'compiler-proto' },
         typescript1: {
           val: false,
@@ -2713,7 +2713,7 @@ exports.tests = [
       */},
       res: {
         es6tr: { val: false, note_id: 'compiler-proto' },
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         tr: { val: false, note_id: 'compiler-proto' },
         typescript1: {
           val: false,
@@ -2745,7 +2745,7 @@ exports.tests = [
           && Object.getPrototypeOf(C.prototype) === null;
       */},
       res: {
-        babel: false,
+        babel6: false,
         typescript1: true,
         tr: true,
         es6tr: true,
@@ -2819,7 +2819,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: false,
+        babel6: false,
         jsx: true,
         typescript1: true,
         closure: true,
@@ -2851,7 +2851,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: false,
+        babel6: false,
         jsx: true,
         typescript1: true,
         closure: true,
@@ -2885,7 +2885,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         jsx: true,
         typescript1: true,
@@ -2918,7 +2918,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         jsx: true,
         typescript1: true,
         closure: true,
@@ -2953,7 +2953,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         jsx: true,
         typescript1: true,
         closure: true,
@@ -3017,7 +3017,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         jsx: true,
         typescript1: true,
         es6tr: true,
@@ -3090,7 +3090,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -3116,7 +3116,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -3143,7 +3143,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -3170,7 +3170,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         es6tr: true,
         jsx: true,
@@ -3199,7 +3199,7 @@ exports.tests = [
         edge12: true,
         tr: true,
         closure: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         typescript1: true,
         jsx: true,
@@ -3228,7 +3228,7 @@ exports.tests = [
         return obj.y === 1 && valueSet === 'foo';
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         edge12: true,
         tr: true,
@@ -3481,7 +3481,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -3511,7 +3511,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -3540,7 +3540,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         ejs: true,
         closure: true,
@@ -3567,7 +3567,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         ejs: true,
         edge12: true,
@@ -3595,7 +3595,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         closure: true,
         typescript1: false,
@@ -3624,7 +3624,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: false,
         es6tr: { val: true, note_id: 'compiler-iterable' },
@@ -3654,7 +3654,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: false,
@@ -3684,7 +3684,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         edge15: true,
         firefox2: false,
@@ -3712,7 +3712,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         edge15: true,
         firefox2: false,
@@ -3752,7 +3752,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -3786,7 +3786,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -3820,7 +3820,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -3878,7 +3878,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -3911,7 +3911,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -3946,7 +3946,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         firefox2: false,
         firefox45: true,
         opera10_50: false,
@@ -4010,7 +4010,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4044,7 +4044,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         firefox2: false,
         firefox38: true,
         opera10_50: false,
@@ -4072,7 +4072,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4105,7 +4105,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4138,7 +4138,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4170,7 +4170,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         tr: true,
         firefox2: false,
@@ -4203,7 +4203,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         ejs: true,
         tr: true,
         firefox2: false,
@@ -4238,7 +4238,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -4273,7 +4273,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -4309,7 +4309,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox36: true,
@@ -4344,7 +4344,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: false,
+        babel6: false,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -4382,7 +4382,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -4418,7 +4418,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         edge13: true,
         firefox2: false,
         firefox53: true,
@@ -4450,7 +4450,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         chrome41: "flagged",
         chrome42: true,
@@ -4485,7 +4485,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         chrome41: "flagged",
         chrome42: true,
@@ -4521,7 +4521,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         firefox2: false,
         firefox34: true,
@@ -4555,7 +4555,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         chrome41: "strict",
         chrome49: true,
@@ -4590,7 +4590,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         closure: true,
         edge12: edge.experimental,
         edge13: true,
@@ -4620,7 +4620,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.regenerator,
+        babel6: babel.regenerator,
         chrome41: "strict",
         chrome49: true,
         node4: "strict",
@@ -4815,7 +4815,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -4842,7 +4842,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         ejs: true,
         closure: true,
@@ -4868,7 +4868,7 @@ exports.tests = [
         return Number('0o1') === 1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         edge12: true,
@@ -4892,7 +4892,7 @@ exports.tests = [
         return Number('0b1') === 1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         edge12: true,
@@ -4928,7 +4928,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -4986,7 +4986,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -5015,7 +5015,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         edge12: true,
@@ -5044,7 +5044,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         jsx: true,
         ejs: true,
         closure: true,
@@ -5129,7 +5129,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: typescript.fallthrough,
         edge12: true,
         edge13: true,
@@ -5150,7 +5150,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: typescript.fallthrough,
         edge12: true,
         edge13: true,
@@ -5171,7 +5171,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: typescript.fallthrough,
         edge13: true,
         firefox2: false,
@@ -5202,7 +5202,7 @@ exports.tests = [
         return view[0] === -0x80;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5232,7 +5232,7 @@ exports.tests = [
         return view[0] === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5262,7 +5262,7 @@ exports.tests = [
         return view[0] === 0xFF;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox4: true,
@@ -5289,7 +5289,7 @@ exports.tests = [
         return view[0] === -0x8000;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5319,7 +5319,7 @@ exports.tests = [
         return view[0] === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5349,7 +5349,7 @@ exports.tests = [
         return view[0] === -0x80000000;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5379,7 +5379,7 @@ exports.tests = [
         return view[0] === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5409,7 +5409,7 @@ exports.tests = [
         return view[0] === 0.10000000149011612;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5439,7 +5439,7 @@ exports.tests = [
         return view[0] === 0.1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5471,7 +5471,7 @@ exports.tests = [
         return view.getInt8(0) === -0x80;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5501,7 +5501,7 @@ exports.tests = [
         return view.getUint8(0) === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5531,7 +5531,7 @@ exports.tests = [
         return view.getInt16(0) === -0x8000;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5561,7 +5561,7 @@ exports.tests = [
         return view.getUint16(0) === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5591,7 +5591,7 @@ exports.tests = [
         return view.getInt32(0) === -0x80000000;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5621,7 +5621,7 @@ exports.tests = [
         return view.getUint32(0) === 0;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5651,7 +5651,7 @@ exports.tests = [
         return view.getFloat32(0) === 0.10000000149011612;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5681,7 +5681,7 @@ exports.tests = [
         return view.getFloat64(0) === 0.1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         ie10: true,
@@ -5708,7 +5708,7 @@ exports.tests = [
         return typeof ArrayBuffer[Symbol.species] === 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: true,
         firefox2: false,
@@ -5752,7 +5752,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox44: true,
@@ -5790,7 +5790,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         chrome45: true,
         edge14: true,
@@ -5850,7 +5850,7 @@ exports.tests = [
       name: '.from',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5867,7 +5867,7 @@ exports.tests = [
       name: '.of',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5885,7 +5885,7 @@ exports.tests = [
       name: '.prototype.subarray',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       ejs: true,
       edge12: true,
@@ -5906,7 +5906,7 @@ exports.tests = [
       name: '.prototype.join',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5924,7 +5924,7 @@ exports.tests = [
       name: '.prototype.indexOf',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5942,7 +5942,7 @@ exports.tests = [
       name: '.prototype.lastIndexOf',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5960,7 +5960,7 @@ exports.tests = [
       name: '.prototype.slice',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5977,7 +5977,7 @@ exports.tests = [
       name: '.prototype.every',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -5995,7 +5995,7 @@ exports.tests = [
       name: '.prototype.filter',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6012,7 +6012,7 @@ exports.tests = [
       name: '.prototype.forEach',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6030,7 +6030,7 @@ exports.tests = [
       name: '.prototype.map',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6047,7 +6047,7 @@ exports.tests = [
       name: '.prototype.reduce',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6065,7 +6065,7 @@ exports.tests = [
       name: '.prototype.reduceRight',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6083,7 +6083,7 @@ exports.tests = [
       name: '.prototype.reverse',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6101,7 +6101,7 @@ exports.tests = [
       name: '.prototype.some',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/some',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6119,7 +6119,7 @@ exports.tests = [
       name: '.prototype.sort',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6136,7 +6136,7 @@ exports.tests = [
       name: '.prototype.copyWithin',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6154,7 +6154,7 @@ exports.tests = [
       name: '.prototype.find',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6172,7 +6172,7 @@ exports.tests = [
       name: '.prototype.findIndex',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6190,7 +6190,7 @@ exports.tests = [
       name: '.prototype.fill',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       firefox2: false,
@@ -6208,7 +6208,7 @@ exports.tests = [
       name: '.prototype.keys',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       chrome38: true,
@@ -6226,7 +6226,7 @@ exports.tests = [
       name: '.prototype.values',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       chrome38: true,
@@ -6244,7 +6244,7 @@ exports.tests = [
       name: '.prototype.entries',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       chrome38: true,
@@ -6261,7 +6261,7 @@ exports.tests = [
       name: '.prototype[Symbol.iterator]',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge12: true,
       chrome38: true,
@@ -6280,7 +6280,7 @@ exports.tests = [
       name: '[Symbol.species]',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species',
       res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       edge13: true,
       firefox2: false,
@@ -6333,7 +6333,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6364,7 +6364,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6394,7 +6394,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -6419,7 +6419,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6455,7 +6455,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         es6shim: true,
@@ -6484,7 +6484,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -6505,7 +6505,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6536,7 +6536,7 @@ exports.tests = [
         return k === Infinity && map.get(+0) == "foo";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -6566,7 +6566,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6593,7 +6593,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6620,7 +6620,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6647,7 +6647,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6674,7 +6674,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6701,7 +6701,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6728,7 +6728,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6755,7 +6755,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6787,7 +6787,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6823,7 +6823,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         safari9: true,
@@ -6847,7 +6847,7 @@ exports.tests = [
         return 'get' in prop && Map[Symbol.species] === Map;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         firefox2: false,
@@ -6883,7 +6883,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6913,7 +6913,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -6943,7 +6943,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -6968,7 +6968,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7003,7 +7003,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         closure: true,
@@ -7036,7 +7036,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -7057,7 +7057,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7087,7 +7087,7 @@ exports.tests = [
         return k === Infinity && set.has(+0);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6shim: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -7120,7 +7120,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7147,7 +7147,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7174,7 +7174,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7201,7 +7201,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7228,7 +7228,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7254,7 +7254,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7281,7 +7281,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7308,7 +7308,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         chrome51: true,
@@ -7341,7 +7341,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -7377,7 +7377,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         safari9: true,
@@ -7401,7 +7401,7 @@ exports.tests = [
         return 'get' in prop && Set[Symbol.species] === Set;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         chrome50: "flagged",
@@ -7436,7 +7436,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7465,7 +7465,7 @@ exports.tests = [
                weakmap.has(key2) && weakmap.get(key2) === 456;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7494,7 +7494,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         ie11: true,
@@ -7518,7 +7518,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7552,7 +7552,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7578,7 +7578,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -7608,7 +7608,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -7631,7 +7631,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -7656,7 +7656,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7688,7 +7688,7 @@ exports.tests = [
         return m.has(key);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7716,7 +7716,7 @@ exports.tests = [
           && m.delete(1) === false;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ie11: true,
@@ -7746,7 +7746,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         ie11: true,
@@ -7785,7 +7785,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -7812,7 +7812,7 @@ exports.tests = [
         return weakset.has(obj1) && weakset.has(obj2);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -7841,7 +7841,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         firefox2: false,
@@ -7865,7 +7865,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -7899,7 +7899,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -7928,7 +7928,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -7950,7 +7950,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -7974,7 +7974,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -8005,7 +8005,7 @@ exports.tests = [
         return s.has(key);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -8030,7 +8030,7 @@ exports.tests = [
           && s.delete(1) === false;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -8060,7 +8060,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         edge12: true,
@@ -10623,7 +10623,7 @@ exports.tests = [
         return Reflect.get({ qux: 987 }, "qux") === 987;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10648,7 +10648,7 @@ exports.tests = [
         return obj.quux === 654;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10671,7 +10671,7 @@ exports.tests = [
         return Reflect.has({ qux: 987 }, "qux");
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10696,7 +10696,7 @@ exports.tests = [
         return !("bar" in obj);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -10721,7 +10721,7 @@ exports.tests = [
           desc.configurable && desc.writable && desc.enumerable;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10746,7 +10746,7 @@ exports.tests = [
           Reflect.defineProperty(Object.freeze({}), "foo", { value: 123 }) === false;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -10767,7 +10767,7 @@ exports.tests = [
         return Reflect.getPrototypeOf([]) === Array.prototype;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10791,7 +10791,7 @@ exports.tests = [
         return obj instanceof Array;
       */},
       res: {
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         closure: { val: false, note_id: 'compiler-proto' },
         typescript1: { val: false, note_id: 'compiler-proto' },
         ejs: true,
@@ -10814,7 +10814,7 @@ exports.tests = [
           !Reflect.isExtensible(Object.preventExtensions({}));
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10838,7 +10838,7 @@ exports.tests = [
         return !Object.isExtensible(obj);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10864,7 +10864,7 @@ exports.tests = [
         return Reflect.ownKeys(obj).sort() + '' === "A,B";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -10895,7 +10895,7 @@ exports.tests = [
         return keys.indexOf(s2) >-1 && keys.indexOf(s3) >-1 && keys.length === 2;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -10918,7 +10918,7 @@ exports.tests = [
         return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -10942,7 +10942,7 @@ exports.tests = [
         }, ["foo", "bar", "baz"]).qux === "foobarbaz";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: typescript.corejs,
@@ -10988,7 +10988,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         es6shim: true,
         typescript1: typescript.corejs,
@@ -11092,7 +11092,7 @@ exports.tests = [
       */},
       res: {
         ejs: null,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         xs6: null,
         edge13: true,
@@ -11126,7 +11126,7 @@ exports.tests = [
     return true;
   */},
   res: {
-    babel: true,
+    babel6: true,
     tr: true,
     closure: true,
     ie11: true,
@@ -11159,7 +11159,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11186,7 +11186,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11213,7 +11213,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -11240,7 +11240,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: false,
         firefox2: false,
@@ -11269,7 +11269,7 @@ exports.tests = [
         firefox2: false,
         firefox34: true,
         opera10_50: false,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         edge13: edge.experimental,
@@ -11296,7 +11296,7 @@ exports.tests = [
         firefox36: true,
         opera10_50: false,
         safari9: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge13: edge.experimental,
         edge14: true,
@@ -11316,7 +11316,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: false,
@@ -11346,7 +11346,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         edge15: true,
         firefox2: false,
@@ -11367,7 +11367,7 @@ exports.tests = [
         return a === 1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         es6tr: true,
@@ -11394,7 +11394,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -11428,7 +11428,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11456,7 +11456,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11497,7 +11497,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11525,7 +11525,7 @@ exports.tests = [
         return grault === "garply";
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         tr: true,
@@ -11551,7 +11551,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -11581,7 +11581,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -11609,7 +11609,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         firefox2: false,
         firefox3: true,
@@ -11634,7 +11634,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -11669,7 +11669,7 @@ exports.tests = [
         firefox2: false,
         firefox3: true,
         opera10_50: false,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         tr: true,
         jsx: true,
         closure: true,
@@ -11691,7 +11691,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -11720,7 +11720,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -11753,7 +11753,7 @@ exports.tests = [
         return a === 1 && b === 2;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         closure: true,
         typescript1: true,
         safari9: true,
@@ -11788,7 +11788,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11816,7 +11816,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -11844,7 +11844,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -11872,7 +11872,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: false,
         firefox2: false,
@@ -11902,7 +11902,7 @@ exports.tests = [
         firefox2: false,
         firefox34: true,
         opera10_50: false,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         edge13: edge.experimental,
@@ -11930,7 +11930,7 @@ exports.tests = [
         firefox36: true,
         opera10_50: false,
         safari9: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge13: edge.experimental,
         edge14: true,
@@ -11951,7 +11951,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: false,
@@ -11981,7 +11981,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         chrome51: true,
         node6_5: true,
@@ -12003,7 +12003,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: true,
@@ -12030,7 +12030,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: true,
@@ -12057,7 +12057,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         es6tr: true,
@@ -12085,7 +12085,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12120,7 +12120,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12151,7 +12151,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12181,7 +12181,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         es6tr: true,
@@ -12213,7 +12213,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         safari7_1: true,
@@ -12244,7 +12244,7 @@ exports.tests = [
         firefox3_5: false,
         firefox15: true,
         opera10_50: false,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         es6tr: true,
@@ -12282,7 +12282,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12309,7 +12309,7 @@ exports.tests = [
         return grault === "garply";
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         tr: true,
@@ -12338,7 +12338,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12371,7 +12371,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -12399,7 +12399,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: true,
         edge13: edge.experimental,
@@ -12424,7 +12424,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12454,7 +12454,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -12490,7 +12490,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12518,7 +12518,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12546,7 +12546,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         ejs: true,
@@ -12574,7 +12574,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: false,
         firefox2: false,
@@ -12604,7 +12604,7 @@ exports.tests = [
         firefox2: false,
         firefox34: true,
         opera10_50: false,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         edge13: edge.experimental,
@@ -12633,7 +12633,7 @@ exports.tests = [
         firefox36: true,
         opera10_50: false,
         safari9: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge13: edge.experimental,
         edge14: true,
@@ -12654,7 +12654,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         typescript1: false,
@@ -12683,7 +12683,7 @@ exports.tests = [
         return closed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: false,
         edge15: true,
         firefox2: false,
@@ -12706,7 +12706,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         ejs: true,
         es6tr: true,
@@ -12734,7 +12734,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12768,7 +12768,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12797,7 +12797,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12832,7 +12832,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         ejs: true,
         es6tr: true,
         jsx: true,
@@ -12860,7 +12860,7 @@ exports.tests = [
         }({ corge: "garply" });
       */},
       res: {
-        babel: true,
+        babel6: true,
         typescript1: true,
         closure: true,
         tr: true,
@@ -12888,7 +12888,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         es6tr: true,
         jsx: true,
         closure: true,
@@ -12917,7 +12917,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -12966,7 +12966,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -12995,7 +12995,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         jsx: true,
@@ -13023,7 +13023,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         es6tr: true,
         closure: true,
@@ -13052,7 +13052,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: true,
         es6tr: true,
         closure: true,
@@ -13080,7 +13080,7 @@ exports.tests = [
         }({}));
       */},
       res: {
-        babel: false,
+        babel6: false,
         closure: true,
         edge13: edge.experimental,
         edge14: true,
@@ -13126,7 +13126,7 @@ exports.tests = [
         })(1, {b: 2});
       */},
       res: {
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         traceur: true,
@@ -13182,7 +13182,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -13210,7 +13210,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -13238,7 +13238,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13277,7 +13277,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -13312,7 +13312,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         es6shim: true,
         typescript1: typescript.corejs,
@@ -13349,7 +13349,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -13385,7 +13385,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         es6shim: true,
         typescript1: typescript.corejs,
@@ -13408,7 +13408,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: true,
         firefox2: false,
@@ -13439,7 +13439,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         es6shim: true,
@@ -13467,7 +13467,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         es6shim: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         edge12: true,
@@ -13499,7 +13499,7 @@ exports.tests = [
           && result[2] === sym3;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         tr: true,
         ejs: true,
@@ -13525,7 +13525,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         closure: { val: false, note_id: 'compiler-proto' },
         typescript1: { val: false, note_id: 'compiler-proto' },
         es6shim: { val: false, note_id: 'compiler-proto' },
@@ -13558,7 +13558,7 @@ exports.tests = [
         return Object.getPrototypeOf('a').constructor === String;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13583,7 +13583,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13608,7 +13608,7 @@ exports.tests = [
           ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         edge12: true,
@@ -13632,7 +13632,7 @@ exports.tests = [
         return Object.seal('a') === 'a';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13655,7 +13655,7 @@ exports.tests = [
         return Object.freeze('a') === 'a';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13678,7 +13678,7 @@ exports.tests = [
         return Object.preventExtensions('a') === 'a';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13701,7 +13701,7 @@ exports.tests = [
         return Object.isSealed('a') === true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13724,7 +13724,7 @@ exports.tests = [
         return Object.isFrozen('a') === true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13747,7 +13747,7 @@ exports.tests = [
         return Object.isExtensible('a') === false;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -13771,7 +13771,7 @@ exports.tests = [
         return s.length === 1 && s[0] === '0';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -13964,7 +13964,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         firefox2: true,
@@ -13993,7 +13993,7 @@ exports.tests = [
           (function(){}).name === '';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         firefox2: true,
@@ -14074,7 +14074,7 @@ exports.tests = [
         chrome50: "flagged",
         chrome51: true,
         node6_5: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         xs6: true,
         jxa: true,
         safari10: true,
@@ -14091,7 +14091,7 @@ exports.tests = [
                o.qux.name === "";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -14135,7 +14135,7 @@ exports.tests = [
         return o.foo.name === "foo";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -14158,7 +14158,7 @@ exports.tests = [
         return ({f() { return f; }}).f() === "foo";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox34: true,
@@ -14210,7 +14210,7 @@ exports.tests = [
           typeof bar.name === "function";
       */},
       res: {
-        babel: {
+        babel6: {
           val: false,
           note_id: "name-configurable",
           note_html: 'Requires function <code>"name"</code> properties to be natively configurable',
@@ -14235,7 +14235,7 @@ exports.tests = [
           typeof class bar { static name() {} }.name === "function";
       */},
       res: {
-        babel: { val: false, note_id: "name-configurable" },
+        babel6: { val: false, note_id: "name-configurable" },
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -14260,7 +14260,7 @@ exports.tests = [
                typeof qux.name === "function";
       */},
       res: {
-        babel: { val: false, note_id: "name-configurable" },
+        babel6: { val: false, note_id: "name-configurable" },
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -14284,7 +14284,7 @@ exports.tests = [
                o.qux.name === "";
       */},
       res: {
-        babel: false,
+        babel6: false,
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -14306,7 +14306,7 @@ exports.tests = [
         return (new C).foo.name === "foo";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         edge12: edge.experimental,
         edge13: true,
         edge14: true,
@@ -14329,7 +14329,7 @@ exports.tests = [
         return C.foo.name === "foo";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         edge12: edge.experimental,
         edge13: true,
@@ -14382,7 +14382,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -14406,7 +14406,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14441,7 +14441,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14491,7 +14491,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14519,7 +14519,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14550,7 +14550,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14580,7 +14580,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14611,7 +14611,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14641,7 +14641,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -14674,7 +14674,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         edge12: true,
@@ -14707,7 +14707,7 @@ exports.tests = [
           iterator[Symbol.iterator]() === iterator;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         safari9: true,
@@ -14745,7 +14745,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         ie10: true,
@@ -14777,7 +14777,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -14807,7 +14807,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -14840,7 +14840,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: true,
         es6tr: true,
         ejs: true,
@@ -14960,7 +14960,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -14984,7 +14984,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.fallthrough,
         ejs: true,
         edge12: true,
@@ -15019,7 +15019,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -15053,7 +15053,7 @@ exports.tests = [
         tr: true,
         typescript1: typescript.corejs,
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -15081,7 +15081,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -15161,7 +15161,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -15215,7 +15215,7 @@ exports.tests = [
         return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: true,
         es6shim: true,
@@ -15258,7 +15258,7 @@ exports.tests = [
         return testSymbolObject(objSym) && testSymbolObject(symNoToJSON);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: true,
         es6shim: true,
@@ -15288,7 +15288,7 @@ exports.tests = [
            Symbol.keyFor(symbol) === 'foo';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -15331,7 +15331,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: "flagged",
+        babel6: "flagged",
         typescript1: typescript.fallthrough,
         edge15: true,
         chrome50: "flagged",
@@ -15377,7 +15377,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         edge12: true,
@@ -15429,7 +15429,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox41: true,
@@ -15599,7 +15599,7 @@ exports.tests = [
         return promise.then(function(){}) instanceof FakePromise2;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: false,
         edge14: true,
@@ -15625,7 +15625,7 @@ exports.tests = [
         return ''.replace(O) === 42;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         chrome50: true,
@@ -15650,7 +15650,7 @@ exports.tests = [
         return ''.search(O) === 42;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         chrome50: true,
@@ -15675,7 +15675,7 @@ exports.tests = [
         return ''.split(O) === 42;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         chrome50: true,
@@ -15700,7 +15700,7 @@ exports.tests = [
         return ''.match(O) === 42;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         chrome50: true,
@@ -15724,7 +15724,7 @@ exports.tests = [
         return RegExp(re) !== re && RegExp(foo) === foo;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         edge14: edge.experimental,
@@ -15750,7 +15750,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         firefox2: false,
@@ -15775,7 +15775,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         firefox2: false,
@@ -15800,7 +15800,7 @@ exports.tests = [
         }
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         firefox2: false,
@@ -15851,7 +15851,7 @@ exports.tests = [
         return (a + "") === "[object foo]";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         edge15: true,
@@ -15890,7 +15890,7 @@ exports.tests = [
         return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         edge15: true,
@@ -15939,7 +15939,7 @@ exports.tests = [
           return passed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -15960,7 +15960,7 @@ exports.tests = [
           && JSON[s] === "JSON";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         edge15: true,
@@ -16021,7 +16021,7 @@ exports.tests = [
         return /./igm.flags === "gim" && /./.flags === "";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         es6shim: true,
@@ -16045,7 +16045,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         chrome50: true,
         edge14: edge.experimental,
@@ -16066,7 +16066,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         chrome50: true,
         edge14: edge.experimental,
@@ -16087,7 +16087,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         chrome50: true,
         edge14: edge.experimental,
@@ -16108,7 +16108,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         chrome50: true,
         edge14: edge.experimental,
@@ -16130,7 +16130,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge13: true,
         firefox2: false,
@@ -16416,7 +16416,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         es6shim: true,
@@ -16442,7 +16442,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        babel: true,
+        babel6: true,
         typescript1: typescript.fallthrough,
         closure: true,
         es6shim: true,
@@ -16466,7 +16466,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         closure: true,
@@ -16490,7 +16490,7 @@ exports.tests = [
         return Array.from(Object.create(iterable)) + '' === "1,2,3";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16516,7 +16516,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -16541,7 +16541,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: true,
+        babel6: true,
         typescript1: typescript.fallthrough,
         es6shim: true,
         firefox2: false,
@@ -16566,7 +16566,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         es6shim: true,
@@ -16590,7 +16590,7 @@ exports.tests = [
         }, { baz: "d" }) + '' === "food0,bard1,bald2";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         tr: true,
         edge12: true,
@@ -16619,7 +16619,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge15: true,
         firefox2: false,
@@ -16641,7 +16641,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16668,7 +16668,7 @@ exports.tests = [
         return 'get' in prop && Array[Symbol.species] === Array;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         edge13: true,
@@ -16698,7 +16698,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         es6shim: true,
@@ -16722,7 +16722,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16749,7 +16749,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16776,7 +16776,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16803,7 +16803,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16830,7 +16830,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16886,7 +16886,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -16913,7 +16913,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         ejs: true,
@@ -16955,7 +16955,7 @@ exports.tests = [
           iterator[Symbol.iterator]() === iterator;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         ejs: true,
         typescript1: typescript.corejs,
         safari9: true,
@@ -16985,7 +16985,7 @@ exports.tests = [
         return true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -17015,7 +17015,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17042,7 +17042,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17068,7 +17068,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17094,7 +17094,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17122,7 +17122,7 @@ exports.tests = [
           && Number.parseFloat === actualGlobal.parseFloat;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         chrome34: true,
         edge12: true,
         es6shim: true,
@@ -17143,7 +17143,7 @@ exports.tests = [
           && Number.parseInt === actualGlobal.parseInt;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         chrome34: true,
         edge12: true,
         es6shim: true,
@@ -17163,7 +17163,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17188,7 +17188,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17214,7 +17214,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         ejs: true,
@@ -17244,7 +17244,7 @@ exports.tests = [
       'clz32': {
         ejs: true,
         tr: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         es6shim: true,
@@ -17263,7 +17263,7 @@ exports.tests = [
       },
       'imul': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17289,7 +17289,7 @@ exports.tests = [
       },
       'sign': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17310,7 +17310,7 @@ exports.tests = [
       },
       'log10': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17330,7 +17330,7 @@ exports.tests = [
       },
       'log2': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17350,7 +17350,7 @@ exports.tests = [
       },
       'log1p': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17370,7 +17370,7 @@ exports.tests = [
       },
       'expm1': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17389,7 +17389,7 @@ exports.tests = [
       },
       'cosh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17409,7 +17409,7 @@ exports.tests = [
       },
       'sinh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17429,7 +17429,7 @@ exports.tests = [
       },
       'tanh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17449,7 +17449,7 @@ exports.tests = [
       },
       'acosh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17469,7 +17469,7 @@ exports.tests = [
       },
       'asinh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17488,7 +17488,7 @@ exports.tests = [
       },
       'atanh': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17508,7 +17508,7 @@ exports.tests = [
       },
       'trunc': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         closure: true,
         tr: true,
@@ -17528,7 +17528,7 @@ exports.tests = [
       },
       'fround': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         tr: true,
         es6shim: true,
@@ -17547,7 +17547,7 @@ exports.tests = [
       },
       'cbrt': {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         tr: true,
@@ -17586,7 +17586,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: babel.corejs,
+        babel6: babel.corejs,
         closure: true,
         typescript1: typescript.corejs,
         tr: true,
@@ -17621,7 +17621,7 @@ exports.tests = [
   */},
   res: {
     ejs: true,
-    babel: babel.corejs,
+    babel6: babel.corejs,
     typescript1: typescript.corejs,
     edge15: true,
     firefox2: false,
@@ -17696,7 +17696,7 @@ exports.tests = [
         return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
       */},
       res: {
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -17847,7 +17847,7 @@ exports.tests = [
       */},
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -17870,7 +17870,7 @@ exports.tests = [
       */},
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -17924,7 +17924,7 @@ exports.tests = [
         return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
       */},
       res: {
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -18024,7 +18024,7 @@ exports.tests = [
         return c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;
       */},
       res: {
-        babel: { val: false, note_id: 'compiler-proto' },
+        babel6: { val: false, note_id: 'compiler-proto' },
         typescript1: false,
         edge12: edge.experimental,
         edge13: true,
@@ -18675,7 +18675,7 @@ exports.tests = [
         return Reflect.ownKeys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
       */},
       res: {
-        babel: { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
+        babel6: { val: false, note_id: "forin-order", note_html: "This uses native for-in enumeration order, rather than the correct order." },
         closure: { val: false, note_id: "forin-order" },
         typescript1: { val: false, note_id: "forin-order" },
         es6shim: { val: false, note_id: "forin-order" },
@@ -18711,7 +18711,7 @@ exports.tests = [
         return result[l-3] === sym1 && result[l-2] === sym2 && result[l-1] === sym3;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         edge12: true,
@@ -18746,7 +18746,7 @@ exports.tests = [
       res: {
         es6tr: null,
         tr: null,
-        babel: null,
+        babel6: null,
         closure: null,
         jsx: null,
         typescript1: null,
@@ -18783,7 +18783,7 @@ exports.tests = [
       res: {
         es6tr: null,
         tr: null,
-        babel: null,
+        babel6: null,
         closure: null,
         jsx: null,
         typescript1: null,
@@ -18824,7 +18824,7 @@ exports.tests = [
       res: {
         es6tr: true,
         tr: true,
-        babel: true,
+        babel6: true,
         closure: true,
         jsx: true,
         typescript1: true,
@@ -18887,7 +18887,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         ie10: true,
@@ -18919,7 +18919,7 @@ exports.tests = [
       */},
       res: {
         ejs: true,
-        babel: true,
+        babel6: true,
         closure: true,
         typescript1: true,
         edge15: true,
@@ -18963,7 +18963,7 @@ exports.tests = [
         return new Date(NaN) + "" === "Invalid Date";
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         es6shim: true,
         ejs: true,
@@ -18990,7 +18990,7 @@ exports.tests = [
         return new RegExp(/./im, "g").global === true;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -19010,7 +19010,7 @@ exports.tests = [
         return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge14: edge.experimental,
         firefox2: false,

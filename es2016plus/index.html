@@ -121,7 +121,8 @@
 
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
-<th class="platform babel compiler" data-browser="babel"><a href="#babel" class="browser-name"><abbr title="Babel 6.5 + core-js 2.5">Babel +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
+<th class="platform babel6 compiler" data-browser="babel6"><a href="#babel6" class="browser-name"><abbr title="Babel 6.5 + core-js 2.5">Babel 6 +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
+<th class="platform babel7 compiler unstable" data-browser="babel7"><a href="#babel7" class="browser-name"><abbr title="Babel 7 beta + core-js 2.5">Babel 7 +<br><nobr>core-js</nobr></abbr></a><a href="#babel-optional-note"><sup>[2]</sup></a></th>
 <th class="platform closure compiler" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20180204">Closure</abbr></a></th>
 <th class="platform typescript1 compiler obsolete" data-browser="typescript1"><a href="#typescript1" class="browser-name"><abbr title="TypeScript 1.8 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform typescript2_2 compiler obsolete" data-browser="typescript2_2"><a href="#typescript2_2" class="browser-name"><abbr title="TypeScript 2.2 + core-js 2.5">Type-<br>Script +<br><nobr>core-js</nobr></abbr></a></th>
@@ -195,11 +196,12 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="73">2016 features</td>
+      <tr class="category"><td colspan="74">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
-<td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel6" data-tally="1">3/3</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally" data-browser="closure" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -274,7 +276,8 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nreturn 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -349,7 +352,8 @@ var a = 2; a **= 3; return a === 8;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nvar a = 2; a **= 3; return a === 8;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nvar a = 2; a **= 3; return a === 8;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -429,7 +433,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8) { return false; }\ntry {\nFunction(\"-5 ** 2\")();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8) { return false; }\ntry {\nFunction(\"-5 ** 2\")();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -501,7 +506,8 @@ return true;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Array.prototype.includes</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
-<td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel6" data-tally="1">3/3</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally" data-browser="closure" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">3/3</td>
@@ -580,7 +586,8 @@ return [1, 2, 3].includes(1)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].includes(1)\n&& ![1, 2, 3].includes(4)\n&& ![1, 2, 3].includes(1, 1)\n&& [NaN].includes(NaN)\n&& Array(1).includes();\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].includes(1)\n&& ![1, 2, 3].includes(4)\n&& ![1, 2, 3].includes(1, 1)\n&& [NaN].includes(NaN)\n&& Array(1).includes();\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -677,7 +684,8 @@ return 24;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nvar passed = 0;\nreturn [].includes.call({\nget \"0\"() {\npassed = NaN;\nreturn 'foo';\n},\nget \"11\"() {\npassed += 1;\nreturn 0;\n},\nget \"19\"() {\npassed += 1;\nreturn 'foo';\n},\nget \"21\"() {\npassed = NaN;\nreturn 'foo';\n},\nget length() {\npassed += 1;\nreturn 24;\n}\n}, 'foo', 6) === true && passed === 3;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nvar passed = 0;\nreturn [].includes.call({\nget \"0\"() {\npassed = NaN;\nreturn 'foo';\n},\nget \"11\"() {\npassed += 1;\nreturn 0;\n},\nget \"19\"() {\npassed += 1;\nreturn 'foo';\n},\nget \"21\"() {\npassed = NaN;\nreturn 'foo';\n},\nget length() {\npassed += 1;\nreturn 24;\n}\n}, 'foo', 6) === true && passed === 3;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -757,7 +765,8 @@ return new TypedArray([1, 2, 3]).includes(1)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,\nInt32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\nreturn new TypedArray([1, 2, 3]).includes(1)\n&& !new TypedArray([1, 2, 3]).includes(4)\n&& !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,\nInt32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){\nreturn new TypedArray([1, 2, 3]).includes(1)\n&& !new TypedArray([1, 2, 3]).includes(4)\n&& !new TypedArray([1, 2, 3]).includes(1, 1);\n});\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -827,7 +836,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes" data-browser="ios11">Yes</td>
 </tr>
-<tr class="category"><td colspan="73">2016 misc</td>
+<tr class="category"><td colspan="74">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#new-gen-fn-note"><sup>[9]</sup></a></span><script data-source="
 function * generator() {
@@ -841,7 +850,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nfunction * generator() {\nyield 3;\n}\ntry {\nnew generator();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator() {\nyield 3;\n}\ntry {\nnew generator();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -929,7 +939,8 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nfunction * generator() {\nyield * (function * () {\ntry {\nyield 'foo';\n}\ncatch(e) {\nreturn;\n}\n}());\nyield 'bar';\n}\nvar iter = generator();\niter.next();\nreturn iter['throw']().value === 'bar';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nfunction * generator() {\nyield * (function * () {\ntry {\nyield 'foo';\n}\ncatch(e) {\nreturn;\n}\n}());\nyield 'bar';\n}\nvar iter = generator();\niter.next();\nreturn iter['throw']().value === 'bar';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -1009,7 +1020,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nfunction foo(...a){}\ntry {\nFunction(\"function bar(...a){'use strict';}\")();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a){}\ntry {\nFunction(\"function bar(...a){'use strict';}\")();\n} catch(e) {\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -1085,7 +1097,8 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nvar [x, ...[y, ...z]] = [1,2,3,4];\nreturn x === 1 && y === 2 && z + '' === '3,4';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -1162,7 +1175,8 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nreturn function([x, ...[y, ...z]]) {\nreturn x === 1 && y === 2 && z + '' === '3,4';\n}([1,2,3,4]);\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nreturn function([x, ...[y, ...z]]) {\nreturn x === 1 && y === 2 && z + '' === '3,4';\n}([1,2,3,4]);\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -1244,7 +1258,8 @@ return passed;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nvar passed = true;\nvar proxy = new Proxy({}, {\nenumerate: function() {\npassed = false;\n}\n});\nfor(var key in proxy); // Should not throw, nor execute the 'enumerate' method.\nreturn passed;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nvar passed = true;\nvar proxy = new Proxy({}, {\nenumerate: function() {\npassed = false;\n}\n});\nfor(var key in proxy); // Should not throw, nor execute the 'enumerate' method.\nreturn passed;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -1328,7 +1343,8 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\n// Array.prototype.includes -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});\nArray.prototype.includes.call(p, {});\nif (get + '' !== \"length,0,1,2\") return;\n\nget = [];\np = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});\nArray.prototype.includes.call(p, NaN, 1);\nreturn (get + '' === \"length,1,2\");\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\n// Array.prototype.includes -> Get -> [[Get]]\nvar get = [];\nvar p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});\nArray.prototype.includes.call(p, {});\nif (get + '' !== \"length,0,1,2\") return;\n\nget = [];\np = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});\nArray.prototype.includes.call(p, NaN, 1);\nreturn (get + '' === \"length,1,2\");\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -1398,11 +1414,12 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes" data-browser="ios11">Yes</td>
 </tr>
-<tr class="category"><td colspan="73">2017 features</td>
+<tr class="category"><td colspan="74">2017 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
-<td class="tally" data-browser="babel" data-tally="1">4/4</td>
+<td class="tally" data-browser="babel6" data-tally="1">4/4</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">4/4</td>
 <td class="tally" data-browser="closure" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">4/4</td>
@@ -1480,7 +1497,8 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar v = Object.values(obj);\nreturn Array.isArray(v) && String(v) === \"foo,bar,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -1562,7 +1580,8 @@ return Array.isArray(e)
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar obj = Object.create({ a: \"qux\", d: \"qux\" });\nobj.a = \"foo\"; obj.b = \"bar\"; obj.c = \"baz\";\nvar e = Object.entries(obj);\nreturn Array.isArray(e)\n&& e.length === 3\n&& String(e[0]) === \"a,foo\"\n&& String(e[1]) === \"b,bar\"\n&& String(e[2]) === \"c,baz\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -1645,7 +1664,8 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n&& D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n&& D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nvar object = {a: 1};\nvar B = typeof Symbol === 'function' ? Symbol('b') : 'b';\nobject[B] = 2;\nvar O = Object.defineProperty(object, 'c', {value: 3});\nvar D = Object.getOwnPropertyDescriptors(O);\n\nreturn D.a.value === 1 && D.a.enumerable === true && D.a.configurable === true && D.a.writable === true\n&& D[B].value === 2 && D[B].enumerable === true && D[B].configurable === true && D[B].writable === true\n&& D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -1723,7 +1743,8 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nvar P = new Proxy({a:1}, {\n  getOwnPropertyDescriptor: function(t, k) {}\n});\nreturn !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nvar P = new Proxy({a:1}, {\n  getOwnPropertyDescriptor: function(t, k) {}\n});\nreturn !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -1795,7 +1816,8 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel6" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally" data-browser="closure" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">2/2</td>
@@ -1875,7 +1897,8 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padStart(10) === '     hello'\n&& 'hello'.padStart(10, '1234') === '12341hello'\n&& 'hello'.padStart() === 'hello'\n&& 'hello'.padStart(6, '123') === '1hello'\n&& 'hello'.padStart(3) === 'hello'\n&& 'hello'.padStart(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -1955,7 +1978,8 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn 'hello'.padEnd(10) === 'hello     '\n&& 'hello'.padEnd(10, '1234') === 'hello12341'\n&& 'hello'.padEnd() === 'hello'\n&& 'hello'.padEnd(6, '123') === 'hello1'\n&& 'hello'.padEnd(3) === 'hello'\n&& 'hello'.padEnd(3, '123') === 'hello';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -2027,7 +2051,8 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/proposal-trailing-function-commas">trailing commas in function syntax</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel6" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally" data-browser="closure" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">2/2</td>
@@ -2102,7 +2127,8 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nreturn typeof function f( a, b, ){} === 'function';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof function f( a, b, ){} === 'function';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -2177,7 +2203,8 @@ return Math.min(1,2,3,) === 1;
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nreturn Math.min(1,2,3,) === 1;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.min(1,2,3,) === 1;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -2249,7 +2276,8 @@ return Math.min(1,2,3,) === 1;
 </tr>
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-async-function-definitions">async functions</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally" data-browser="babel" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally" data-browser="babel6" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally unstable" data-browser="babel7" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
 <td class="tally" data-browser="closure" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0.13333333333333333" style="background-color:hsl(16,80%,50%)">2/15</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="0.13333333333333333" style="background-color:hsl(16,80%,50%)">2/15</td>
@@ -2335,7 +2363,8 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nasync function a(){\n  return \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){\n  return \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-async-await-note"><sup>[16]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-async-await-note"><sup>[16]</sup></a></td>
@@ -2421,7 +2450,8 @@ p.catch(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nasync function a(){\n  throw \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.catch(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){\n  throw \"foo\";\n}\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.catch(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2497,7 +2527,8 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nasync function a(){}\ntry { Function(\"async\\n function a(){}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){}\ntry { Function(\"async\\n function a(){}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2573,7 +2604,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nasync function a(){};\nreturn !a.hasOwnProperty(\"prototype\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){};\nreturn !a.hasOwnProperty(\"prototype\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2655,7 +2687,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,\"foo\"); });\n  var a2 = await new Promise(function(resolve) { setTimeout(resolve,800,\"bar\"); });\n  if (a1 + a2 === \"foobar\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,\"foo\"); });\n  var a2 = await new Promise(function(resolve) { setTimeout(resolve,800,\"bar\"); });\n  if (a1 + a2 === \"foobar\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-async-await-note"><sup>[16]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-async-await-note"><sup>[16]</sup></a></td>
@@ -2739,7 +2772,8 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  try {\n    var a1 = await new Promise(function(_, reject) { setTimeout(reject,800,\"foo\"); });\n  } catch(e) {\n    if (e === \"foo\") {\n      asyncTestPassed();\n    }\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  try {\n    var a1 = await new Promise(function(_, reject) { setTimeout(reject,800,\"foo\"); });\n  } catch(e) {\n    if (e === \"foo\") {\n      asyncTestPassed();\n    }\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2815,7 +2849,8 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await; }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(){ await; }())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2896,7 +2931,8 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\n(async function (){\n  await Promise.resolve();\n  var e = await \"foo\";\n  if (e === \"foo\") {\n    asyncTestPassed();\n  }\n}());\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -2972,7 +3008,8 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(b = await Promise.resolve()){}())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){ await Promise.resolve(); }\ntry { Function(\"(async function a(b = await Promise.resolve()){}())\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3058,7 +3095,8 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nvar o = {\n  async a(){ return await Promise.resolve(\"foo\"); }\n};\nvar p = o.a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nvar o = {\n  async a(){ return await Promise.resolve(\"foo\"); }\n};\nvar p = o.a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3144,7 +3182,8 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nclass C {\n  async a(){ return await Promise.resolve(\"foo\"); }\n};\nvar p = new C().a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  async a(){ return await Promise.resolve(\"foo\"); }\n};\nvar p = new C().a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3228,7 +3267,8 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nvar a = async () => await Promise.resolve(\"foo\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nvar a = async () => await Promise.resolve(\"foo\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[15]</sup></a></td>
 <td class="yes" data-browser="closure">Yes</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3305,7 +3345,8 @@ return asyncFunctionProto !== function(){}.prototype
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar asyncFunctionProto = Object.getPrototypeOf(async function (){});\nreturn asyncFunctionProto !== function(){}.prototype\n  && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3380,7 +3421,8 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nreturn Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == \"AsyncFunction\";\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nreturn Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == \"AsyncFunction\";\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3464,7 +3506,8 @@ p.then(function(result) {
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nvar a = async function (){}.constructor(\"return 'foo';\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nvar a = async function (){}.constructor(\"return 'foo';\");\nvar p = a();\nif (!(p instanceof Promise)) {\n  return false;\n}\np.then(function(result) {\n  if (result === \"foo\") {\n    asyncTestPassed();\n  }\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="unknown" data-browser="babel">?</td>
+<td class="unknown" data-browser="babel6">?</td>
+<td class="unknown unstable" data-browser="babel7">?</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -3536,7 +3579,8 @@ p.then(function(result) {
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-shared_memory_and_atomics"><span><a class="anchor" href="#test-shared_memory_and_atomics">&#xA7;</a>shared memory and atomics</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/17</td>
-<td class="tally" data-browser="babel" data-tally="0">0/17</td>
+<td class="tally" data-browser="babel6" data-tally="0">0/17</td>
+<td class="tally unstable" data-browser="babel7" data-tally="0">0/17</td>
 <td class="tally" data-browser="closure" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="0">0/17</td>
@@ -3611,7 +3655,8 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer === 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer === 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3686,7 +3731,8 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3761,7 +3807,8 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nreturn 'byteLength' in SharedArrayBuffer.prototype;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3836,7 +3883,8 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof SharedArrayBuffer.prototype.slice === 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3911,7 +3959,8 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nreturn SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -3986,7 +4035,8 @@ return typeof Atomics.add == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("48");try{return Function("asyncTestPassed","\nreturn typeof Atomics.add == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("48");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.add == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4061,7 +4111,8 @@ return typeof Atomics.and == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("49");try{return Function("asyncTestPassed","\nreturn typeof Atomics.and == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("49");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.and == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4136,7 +4187,8 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nreturn typeof Atomics.compareExchange == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.compareExchange == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4211,7 +4263,8 @@ return typeof Atomics.exchange == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("51");try{return Function("asyncTestPassed","\nreturn typeof Atomics.exchange == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("51");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.exchange == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4286,7 +4339,8 @@ return typeof Atomics.wait == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nreturn typeof Atomics.wait == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.wait == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4361,7 +4415,8 @@ return typeof Atomics.wake == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nreturn typeof Atomics.wake == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.wake == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4436,7 +4491,8 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("54");try{return Function("asyncTestPassed","\nreturn typeof Atomics.isLockFree == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("54");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.isLockFree == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4511,7 +4567,8 @@ return typeof Atomics.load == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("55");try{return Function("asyncTestPassed","\nreturn typeof Atomics.load == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("55");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.load == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4586,7 +4643,8 @@ return typeof Atomics.or == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn typeof Atomics.or == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.or == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4661,7 +4719,8 @@ return typeof Atomics.store == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn typeof Atomics.store == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.store == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4736,7 +4795,8 @@ return typeof Atomics.sub == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("58");try{return Function("asyncTestPassed","\nreturn typeof Atomics.sub == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("58");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.sub == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4811,7 +4871,8 @@ return typeof Atomics.xor == &apos;function&apos;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("59");try{return Function("asyncTestPassed","\nreturn typeof Atomics.xor == 'function';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("59");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Atomics.xor == 'function';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4881,7 +4942,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes" data-browser="ios11">Yes</td>
 </tr>
-<tr class="category"><td colspan="73">2017 misc</td>
+<tr class="category"><td colspan="74">2017 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-duplictate-ownkeys-updated-note"><sup>[23]</sup></a></span><script data-source="
 var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
@@ -4893,7 +4954,8 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("60");try{return Function("asyncTestPassed","\nvar P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, \"b\", {value:1})), {\nownKeys: function() {\nreturn ['a','a','b','b'];\n}\n});\nreturn Object.getOwnPropertyNames(P) + '' === \"a,a,b,b\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("60");return Function("asyncTestPassed","'use strict';"+"\nvar P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, \"b\", {value:1})), {\nownKeys: function() {\nreturn ['a','a','b','b'];\n}\n});\nreturn Object.getOwnPropertyNames(P) + '' === \"a,a,b,b\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -4971,7 +5033,8 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("61");try{return Function("asyncTestPassed","\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"\\u212a\".match(/\\w/iu) && !\"\\u212a\".match(/\\W/iu)\n&& \"\\u212a\".match(/.\\b/iu) && \"ſ\".match(/.\\b/iu)\n&& !\"\\u212a\".match(/.\\B/iu) && !\"ſ\".match(/.\\B/iu);\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("61");return Function("asyncTestPassed","'use strict';"+"\nreturn \"ſ\".match(/\\w/iu) && !\"ſ\".match(/\\W/iu)\n&& \"\\u212a\".match(/\\w/iu) && !\"\\u212a\".match(/\\W/iu)\n&& \"\\u212a\".match(/.\\b/iu) && \"ſ\".match(/.\\b/iu)\n&& !\"\\u212a\".match(/.\\B/iu) && !\"ſ\".match(/.\\B/iu);\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -5049,7 +5112,8 @@ return (function(){
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("62");try{return Function("asyncTestPassed","\nreturn (function(){\n  'use strict';\n  return !Object.getOwnPropertyDescriptor(arguments,'caller');\n})();\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("62");return Function("asyncTestPassed","'use strict';"+"\nreturn (function(){\n  'use strict';\n  return !Object.getOwnPropertyDescriptor(arguments,'caller');\n})();\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -5119,11 +5183,12 @@ return (function(){
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes" data-browser="ios11">Yes</td>
 </tr>
-<tr class="category"><td colspan="73">2017 annex b</td>
+<tr class="category"><td colspan="74">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
-<td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
+<td class="tally not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
+<td class="tally unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
@@ -5203,7 +5268,8 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("64");try{return Function("asyncTestPassed","\nvar obj = {};\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("64");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5284,7 +5350,8 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("65");try{return Function("asyncTestPassed","\nvar obj = {};\nvar sym = Symbol();\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("65");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nvar sym = Symbol();\nfunction bar() { return \"bar\"; }\nObject.prototype.__defineGetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.get === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5365,7 +5432,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("66");try{return Function("asyncTestPassed","\nvar key = '__accessors_test__';\n__defineGetter__.call(1, key, function(){});\ntry {\n__defineGetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("66");return Function("asyncTestPassed","'use strict';"+"\nvar key = '__accessors_test__';\n__defineGetter__.call(1, key, function(){});\ntry {\n__defineGetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5445,7 +5513,8 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("67");try{return Function("asyncTestPassed","\nvar obj = {};\nfunction bar() {}\nObject.prototype.__defineSetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("67");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nfunction bar() {}\nObject.prototype.__defineSetter__.call(obj, \"foo\", bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, \"foo\");\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5526,7 +5595,8 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("68");try{return Function("asyncTestPassed","\nvar obj = {};\nvar sym = Symbol();\nfunction bar(baz) {}\nObject.prototype.__defineSetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("68");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {};\nvar sym = Symbol();\nfunction bar(baz) {}\nObject.prototype.__defineSetter__.call(obj, sym, bar);\nvar prop = Object.getOwnPropertyDescriptor(obj, sym);\nreturn prop.set === bar && !prop.writable && prop.configurable\n&& prop.enumerable;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5607,7 +5677,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("69");try{return Function("asyncTestPassed","\nvar key = '__accessors_test__';\n__defineSetter__.call(1, key, function(){});\ntry {\n__defineSetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("69");return Function("asyncTestPassed","'use strict';"+"\nvar key = '__accessors_test__';\n__defineSetter__.call(1, key, function(){});\ntry {\n__defineSetter__.call(null, key, function(){});\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5689,7 +5760,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("70");try{return Function("asyncTestPassed","\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("70");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5771,7 +5843,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("71");try{return Function("asyncTestPassed","\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("71");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nget foo() { return \"bar\"},\nqux: 1\n};\nvar foo = Object.prototype.__lookupGetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupGetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5854,7 +5927,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("72");try{return Function("asyncTestPassed","\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { get: function() { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupGetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("72");return Function("asyncTestPassed","'use strict';"+"\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { get: function() { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupGetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupGetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -5934,7 +6008,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("73");try{return Function("asyncTestPassed","\n__lookupGetter__.call(1, 'key');\ntry {\n__lookupGetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("73");return Function("asyncTestPassed","'use strict';"+"\n__lookupGetter__.call(1, 'key');\ntry {\n__lookupGetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6013,7 +6088,8 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("74");try{return Function("asyncTestPassed","\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineGetter__(\"foo\", function () {})\nreturn b.__lookupGetter__(\"foo\") === undefined\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("74");return Function("asyncTestPassed","'use strict';"+"\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineGetter__(\"foo\", function () {})\nreturn b.__lookupGetter__(\"foo\") === undefined\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6095,7 +6171,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("75");try{return Function("asyncTestPassed","\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("75");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(obj, \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6177,7 +6254,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("76");try{return Function("asyncTestPassed","\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("76");return Function("asyncTestPassed","'use strict';"+"\nvar obj = {\nset foo(baz) { return \"bar\"; },\nqux: 1\n};\nvar foo = Object.prototype.__lookupSetter__.call(Object.create(obj), \"foo\");\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, \"qux\") === undefined\n&& Object.prototype.__lookupSetter__.call(obj, \"baz\") === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6260,7 +6338,8 @@ return foo() === &quot;bar&quot;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("77");try{return Function("asyncTestPassed","\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { set: function(baz) { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupSetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("77");return Function("asyncTestPassed","'use strict';"+"\nvar sym = Symbol();\nvar sym2 = Symbol();\nvar obj = {};\nObject.defineProperty(obj, sym, { set: function(baz) { return \"bar\"; }});\nObject.defineProperty(obj, sym2, { value: 1 });\nvar foo = Object.prototype.__lookupSetter__.call(obj, sym);\nreturn foo() === \"bar\"\n&& Object.prototype.__lookupSetter__.call(obj, sym2) === undefined\n&& Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6340,7 +6419,8 @@ return true;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("78");try{return Function("asyncTestPassed","\n__lookupSetter__.call(1, 'key');\ntry {\n__lookupSetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("78");return Function("asyncTestPassed","'use strict';"+"\n__lookupSetter__.call(1, 'key');\ntry {\n__lookupSetter__.call(null, 'key');\n} catch(e){\nreturn true;\n}\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6419,7 +6499,8 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("79");try{return Function("asyncTestPassed","\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineSetter__(\"foo\", function () {})\nreturn b.__lookupSetter__(\"foo\") === undefined\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("79");return Function("asyncTestPassed","'use strict';"+"\nvar a = { };\nvar b = Object.create(a);\nb.foo = 1;\na.__defineSetter__(\"foo\", function () {})\nreturn b.__lookupSetter__(\"foo\") === undefined\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -6491,7 +6572,8 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
-<td class="tally not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -6570,7 +6652,8 @@ return def + &apos;&apos; === &quot;foo&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("81");try{return Function("asyncTestPassed","\n// Object.prototype.__defineGetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineGetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("81");return Function("asyncTestPassed","'use strict';"+"\n// Object.prototype.__defineGetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineGetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6649,7 +6732,8 @@ return def + &apos;&apos; === &quot;foo&quot;;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("82");try{return Function("asyncTestPassed","\n// Object.prototype.__defineSetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineSetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("82");return Function("asyncTestPassed","'use strict';"+"\n// Object.prototype.__defineSetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineSetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6733,7 +6817,8 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("83");try{return Function("asyncTestPassed","\n// Object.prototype.__lookupGetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupGetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupGetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("83");return Function("asyncTestPassed","'use strict';"+"\n// Object.prototype.__lookupGetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupGetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupGetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6817,7 +6902,8 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("84");try{return Function("asyncTestPassed","\n// Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupSetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("84");return Function("asyncTestPassed","'use strict';"+"\n// Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupSetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6893,7 +6979,8 @@ return i === 0;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("85");try{return Function("asyncTestPassed","\nfor (var i = 0 in {}) {}\nreturn i === 0;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("85");return Function("asyncTestPassed","'use strict';"+"\nfor (var i = 0 in {}) {}\nreturn i === 0;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
-<td class="no not-applicable" data-browser="babel" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript1" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="typescript2_2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6963,11 +7050,12 @@ return i === 0;
 <td class="yes" data-browser="ios10_3">Yes</td>
 <td class="yes" data-browser="ios11">Yes</td>
 </tr>
-<tr class="category"><td colspan="73">2018 features</td>
+<tr class="category"><td colspan="74">2018 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-object_rest/spread_properties"><span><a class="anchor" href="#test-object_rest/spread_properties">&#xA7;</a><a href="https://github.com/tc39/proposal-object-rest-spread">object rest/spread properties</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel6" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">2/2</td>
@@ -7043,7 +7131,8 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nvar {a, ...rest} = {a: 1, b: 2, c: 3};\nreturn a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -7120,7 +7209,8 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nvar spread = {b: 2, c: 3};\nvar O = {a: 1, ...spread};\nreturn O !== spread && (O.a + O.b + O.c) === 6;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nvar spread = {b: 2, c: 3};\nvar O = {a: 1, ...spread};\nreturn O !== spread && (O.a + O.b + O.c) === 6;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes</td>
@@ -7192,7 +7282,8 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Promise.prototype.finally"><span><a class="anchor" href="#test-Promise.prototype.finally">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-finally">Promise.prototype.finally</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
-<td class="tally" data-browser="babel" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel6" data-tally="1">3/3</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally" data-browser="closure" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="1">3/3</td>
@@ -7293,7 +7384,8 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("90");try{return Function("asyncTestPassed","\nvar p1 = Promise.resolve(\"foo\");\nvar p2 = Promise.reject(\"bar\");\nvar score = 0;\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score += (arguments.length === 0);\n  check();\n}\np1.then(thenFn);\np1.finally(finallyFn);\np1.finally(function() {\n  // should return a new Promise\n  score += p1.finally() !== p1;\n  check();\n});\np2.catch(catchFn);\np2.finally(finallyFn);\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("90");return Function("asyncTestPassed","'use strict';"+"\nvar p1 = Promise.resolve(\"foo\");\nvar p2 = Promise.reject(\"bar\");\nvar score = 0;\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score += (arguments.length === 0);\n  check();\n}\np1.then(thenFn);\np1.finally(finallyFn);\np1.finally(function() {\n  // should return a new Promise\n  score += p1.finally() !== p1;\n  check();\n});\np2.catch(catchFn);\np2.finally(finallyFn);\nfunction check() {\n  if (score === 5) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -7386,7 +7478,8 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("91");try{return Function("asyncTestPassed","\nvar score = 0;\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score++;\n  check();\n  return Promise.resolve(\"foobar\");\n}\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("91");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nfunction thenFn(result)  {\n  score += (result === \"foo\");\n  check();\n}\nfunction catchFn(result) {\n  score += (result === \"bar\");\n  check();\n}\nfunction finallyFn() {\n  score++;\n  check();\n  return Promise.resolve(\"foobar\");\n}\nPromise.resolve(\"foo\").finally(finallyFn).then(thenFn);\nPromise.reject(\"bar\").finally(finallyFn).catch(catchFn);\nfunction check() {\n  if (score === 4) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -7481,7 +7574,8 @@ function check() {
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("92");try{return Function("asyncTestPassed","\nvar score = 0;\nPromise\n  .reject(\"foobar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    score += (result === \"foo\");\n    check();\n    return Promise.reject(\"foobar\");\n  })\n  .finally(function() {\n    throw new Error('bar');\n  })\n  .catch(function(result) {\n    score += (result.message === \"bar\");\n    check();\n  });\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("92");return Function("asyncTestPassed","'use strict';"+"\nvar score = 0;\nPromise\n  .reject(\"foobar\")\n  .finally(function() {\n    return Promise.reject(\"foo\");\n  })\n  .catch(function(result) {\n    score += (result === \"foo\");\n    check();\n    return Promise.reject(\"foobar\");\n  })\n  .finally(function() {\n    throw new Error('bar');\n  })\n  .catch(function(result) {\n    score += (result.message === \"bar\");\n    check();\n  });\nfunction check() {\n  if (score === 2) asyncTestPassed();\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
+<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[7]</sup></a></td>
 <td class="no" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_2">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
@@ -7563,7 +7657,8 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nfunction tag(strings, a) {\nreturn strings[0] === void 0 &&\nstrings.raw[0] === \"\\\\01\\\\1\\\\xg\\\\xAg\\\\u0\\\\u0g\\\\u00g\\\\u000g\\\\u{g\\\\u{0\\\\u{110000}\" &&\nstrings[1] === \"\\0\" &&\nstrings.raw[1] === \"\\\\0\" &&\na === 0;\n}\nreturn tag`\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}${0}\\0`;\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nfunction tag(strings, a) {\nreturn strings[0] === void 0 &&\nstrings.raw[0] === \"\\\\01\\\\1\\\\xg\\\\xAg\\\\u0\\\\u0g\\\\u00g\\\\u000g\\\\u{g\\\\u{0\\\\u{110000}\" &&\nstrings[1] === \"\\0\" &&\nstrings.raw[1] === \"\\\\0\" &&\na === 0;\n}\nreturn tag`\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}${0}\\0`;\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -7639,7 +7734,8 @@ return regex.test(&apos;foo\nbar&apos;);
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("94");try{return Function("asyncTestPassed","\nconst regex = /foo.bar/s;\nreturn regex.test('foo\\nbar');\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("94");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /foo.bar/s;\nreturn regex.test('foo\\nbar');\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="unknown obsolete" data-browser="typescript1">?</td>
 <td class="unknown obsolete" data-browser="typescript2_2">?</td>
@@ -7721,7 +7817,8 @@ return result.groups.year === &apos;2016&apos;
 ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nvar result = /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/.exec('2016-03-11');\nreturn result.groups.year === '2016'\n  && result.groups.month === '03'\n  && result.groups.day === '11'\n  && result[0] === '2016-03-11'\n  && result[1] === '2016'\n  && result[2] === '03'\n  && result[3] === '11';\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -7797,7 +7894,8 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("96");try{return Function("asyncTestPassed","\nreturn /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&\n       !/(?<=a)b/.test('b');\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("96");return Function("asyncTestPassed","'use strict';"+"\nreturn /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&\n       !/(?<=a)b/.test('b');\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -7873,7 +7971,8 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nconst regexGreekSymbol = /\\p{Script=Greek}/u;\nreturn regexGreekSymbol.test('π');\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nconst regexGreekSymbol = /\\p{Script=Greek}/u;\nreturn regexGreekSymbol.test('π');\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -7945,7 +8044,8 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Asynchronous_Iterators"><span><a class="anchor" href="#test-Asynchronous_Iterators">&#xA7;</a><a href="https://github.com/tc39/proposal-async-iteration">Asynchronous Iterators</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel6" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="typescript1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="typescript2_2" data-tally="0">0/2</td>
@@ -8027,7 +8127,8 @@ iterator.next().then(function(step){
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("99");try{return Function("asyncTestPassed","\nasync function*generator(){\n  yield 42;\n}\n\nvar iterator = generator();\niterator.next().then(function(step){\n  if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();\n});\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("99");return Function("asyncTestPassed","'use strict';"+"\nasync function*generator(){\n  yield 42;\n}\n\nvar iterator = generator();\niterator.next().then(function(step){\n  if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();\n});\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
@@ -8119,7 +8220,8 @@ asyncIterable[Symbol.asyncIterator] = function(){
         ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("100");try{return Function("asyncTestPassed","\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(++i){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for await(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("100");return Function("asyncTestPassed","'use strict';"+"\nvar asyncIterable = {};\nasyncIterable[Symbol.asyncIterator] = function(){\n  var i = 0;\n  return {\n    next: function(){\n      switch(++i){\n        case 1: return Promise.resolve({done: false, value: 'a'});\n        case 2: return Promise.resolve({done: false, value: 'b'});\n      } return Promise.resolve({done: true});\n    }\n  };\n};\n\n(async function(){\n  var result = '';\n  for await(var value of asyncIterable)result += value;\n  if(result === 'ab')asyncTestPassed();\n})();\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel">Yes</td>
+<td class="yes" data-browser="babel6">Yes</td>
+<td class="yes unstable" data-browser="babel7">Yes</td>
 <td class="no" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="typescript1">No</td>
 <td class="no obsolete" data-browser="typescript2_2">No</td>
