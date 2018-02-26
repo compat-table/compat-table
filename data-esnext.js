@@ -2679,6 +2679,7 @@ exports.tests = [
         return false;
       */},
       res: {
+        typescript2_5: true,
         firefox2: false,
         firefox57: false,
         firefox58: true,
@@ -2703,6 +2704,7 @@ exports.tests = [
         })();
       */},
       res: {
+        typescript2_5: true,
         firefox2: false,
         firefox57: false,
         firefox58: true,
@@ -2732,6 +2734,7 @@ exports.tests = [
         return it.next().value;
       */},
       res: {
+        typescript2_5: true,
         firefox2: false,
         firefox57: false,
         firefox58: true,
