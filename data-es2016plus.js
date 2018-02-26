@@ -25,7 +25,7 @@ exports.tests = [
          */},
         res: {
           tr: true,
-          babel: true,
+          babel6: true,
           closure: true,
           typescript1: true,
           edge13: edge.experimental,
@@ -47,7 +47,7 @@ exports.tests = [
          */},
         res: {
           tr: true,
-          babel: true,
+          babel6: true,
           closure: true,
           typescript1: true,
           edge13: edge.experimental,
@@ -73,7 +73,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: true,
+          babel6: true,
           closure: true,
           edge14: true,
           firefox2: false,
@@ -106,7 +106,7 @@ exports.tests = [
          return Array.isArray(v) && String(v) === "foo,bar,baz";
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           es7shim: true,
           typescript1: typescript.corejs,
@@ -136,7 +136,7 @@ exports.tests = [
          && String(e[2]) === "c,baz";
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           es7shim: true,
           typescript1: typescript.corejs,
@@ -167,7 +167,7 @@ exports.tests = [
           && D.c.value === 3 && D.c.enumerable === false && D.c.configurable === false && D.c.writable === false;
           */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           es7shim: true,
           typescript1: typescript.corejs,
@@ -190,7 +190,7 @@ exports.tests = [
           return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
         */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge15: true,
           firefox2: false,
@@ -221,7 +221,7 @@ exports.tests = [
          && Array(1).includes();
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           es7shim: true,
           typescript1: typescript.corejs,
@@ -262,7 +262,7 @@ exports.tests = [
          }, 'foo', 6) === true && passed === 3;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           es7shim: true,
           typescript1: typescript.corejs,
           safari9: true,
@@ -286,7 +286,7 @@ exports.tests = [
          });
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           chrome47: true,
           edge14: true,
@@ -318,7 +318,7 @@ exports.tests = [
          && 'hello'.padStart(3, '123') === 'hello';
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           typescript1: typescript.corejs,
           es7shim: true,
@@ -347,7 +347,7 @@ exports.tests = [
          && 'hello'.padEnd(3, '123') === 'hello';
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           closure: true,
           typescript1: typescript.corejs,
           es7shim: true,
@@ -379,7 +379,7 @@ exports.tests = [
           return typeof function f( a, b, ){} === 'function';
         */},
         res: {
-          babel: true,
+          babel6: true,
           closure: true,
           typescript2: true,
           edge14: true,
@@ -400,7 +400,7 @@ exports.tests = [
           return Math.min(1,2,3,) === 1;
         */},
         res: {
-          babel: true,
+          babel6: true,
           closure: true,
           typescript2: true,
           edge14: true,
@@ -443,7 +443,7 @@ exports.tests = [
         */},
         res: {
           tr: true,
-          babel: babel.regenerator,
+          babel6: babel.regenerator,
           closure: true,
           typescript1: typescript.asyncawait,
           chrome52: "flagged",
@@ -475,7 +475,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -497,7 +497,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -520,7 +520,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -549,7 +549,7 @@ exports.tests = [
         */},
         res: {
           tr: true,
-          babel: babel.regenerator,
+          babel6: babel.regenerator,
           closure: true,
           typescript1: typescript.asyncawait,
           chrome52: "flagged",
@@ -579,7 +579,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -601,7 +601,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -628,7 +628,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -650,7 +650,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -682,7 +682,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -714,7 +714,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: true,
           typescript1: null,
           chrome52: null,
@@ -744,7 +744,7 @@ exports.tests = [
         */},
         res: {
           tr: true,
-          babel: babel.regenerator,
+          babel6: babel.regenerator,
           closure: true,
           typescript1: false, // still buggy output
           chrome52: "flagged",
@@ -767,7 +767,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -789,7 +789,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -819,7 +819,7 @@ exports.tests = [
         */},
         res: {
           tr: null,
-          babel: null,
+          babel6: null,
           closure: false,
           typescript1: null,
           chrome52: null,
@@ -1395,7 +1395,7 @@ exports.tests = [
      return x === 1 && y === 2 && z + '' === '3,4';
      */},
     res: {
-      babel: true,
+      babel6: true,
       closure: true,
       edge13: edge.experimental,
       edge14: true,
@@ -1425,7 +1425,7 @@ exports.tests = [
      }([1,2,3,4]);
      */},
     res: {
-      babel: true,
+      babel6: true,
       closure: true,
       edge13: edge.experimental,
       edge14: true,
@@ -1516,7 +1516,7 @@ exports.tests = [
        && prop.enumerable;
        */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         ie11: true,
         firefox2: false,
@@ -1545,7 +1545,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1572,7 +1572,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge16: true,
           firefox2: false,
@@ -1599,7 +1599,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1628,7 +1628,7 @@ exports.tests = [
          && prop.enumerable;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1655,7 +1655,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge16: true,
           firefox2: false,
@@ -1684,7 +1684,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: true,
@@ -1713,7 +1713,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1744,7 +1744,7 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1770,7 +1770,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1795,7 +1795,7 @@ exports.tests = [
          return b.__lookupGetter__("foo") === undefined
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           firefox2: false,
           firefox4: true,
@@ -1824,7 +1824,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: true,
@@ -1853,7 +1853,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1884,7 +1884,7 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           edge12: true,
           firefox2: false,
@@ -1910,7 +1910,7 @@ exports.tests = [
          }
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           ie11: true,
           firefox2: false,
@@ -1935,7 +1935,7 @@ exports.tests = [
          return b.__lookupSetter__("foo") === undefined
          */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           firefox2: false,
           firefox4: true,
@@ -2168,7 +2168,7 @@ exports.tests = [
           return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
           */},
         res: {
-          babel: true,
+          babel6: true,
           typescript2_1: true,
           jsx: true,
           firefox2: false,
@@ -2191,7 +2191,7 @@ exports.tests = [
           return O !== spread && (O.a + O.b + O.c) === 6;
           */},
         res: {
-          babel: true,
+          babel6: true,
           jsx: true,
           firefox2: false,
           firefox55: true,
@@ -2247,7 +2247,7 @@ exports.tests = [
         }
       */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           firefox2: false,
           firefox57: false,
@@ -2285,7 +2285,7 @@ exports.tests = [
         }
       */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           firefox2: false,
           firefox57: false,
@@ -2325,7 +2325,7 @@ exports.tests = [
         }
       */},
         res: {
-          babel: babel.corejs,
+          babel6: babel.corejs,
           typescript1: typescript.corejs,
           firefox2: false,
           firefox57: false,
@@ -2378,7 +2378,7 @@ exports.tests = [
     res : {
       es6tr: null,
       tr: null,
-      babel: true,
+      babel6: true,
       closure: false,
       jsx: null,
       typescript1: null,
@@ -2421,7 +2421,7 @@ exports.tests = [
         && result[3] === '11';
       */},
     res : {
-      babel: true,
+      babel6: true,
       ie11: false,
       firefox2: false,
       opera10_50: false,
@@ -2460,7 +2460,7 @@ exports.tests = [
     return regexGreekSymbol.test('π');
   */},
     res: {
-      babel: true,
+      babel6: true,
       ie11: false,
       firefox2: false,
       opera10_50: false,
@@ -2490,7 +2490,7 @@ exports.tests = [
           });
         */},
         res: {
-          babel: true,
+          babel6: true,
           chrome62: chrome.harmony,
           chrome63: true,
           typescript2_3: true,
@@ -2526,7 +2526,7 @@ exports.tests = [
           })();
         */},
         res: {
-          babel: true,
+          babel6: true,
           chrome62: chrome.harmony,
           chrome63: true,
           typescript2_3: true,

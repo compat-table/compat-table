@@ -31,7 +31,7 @@ exports.tests = [
         return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
       */},
       res: {
-        babel: true,
+        babel6: true,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -44,7 +44,7 @@ exports.tests = [
         return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
       */},
       res: {
-        babel: true,
+        babel6: true,
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
@@ -64,7 +64,7 @@ exports.tests = [
     } === 42;
   */},
   res: {
-    babel: true,
+    babel6: true,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -85,7 +85,7 @@ exports.tests = [
     return result === 'tromple';
   */},
   res: {
-    babel: true,
+    babel6: true,
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
@@ -1183,7 +1183,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
       */},
       res: {
-        babel: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
+        babel6: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
         typescript1: true,
         firefox2: false,
         opera10_50: false,
@@ -1218,7 +1218,7 @@ exports.tests = [
     return 'a𠮷b'.at(1) === '𠮷';
   */},
   res: {
-    babel: babel.corejs,
+    babel6: babel.corejs,
     typescript1: typescript.corejs,
     es7shim: true,
     firefox2: false,
@@ -1239,7 +1239,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -1273,7 +1273,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -1306,7 +1306,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox59: false,
@@ -1323,7 +1323,7 @@ exports.tests = [
         return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox59: false,
@@ -1349,7 +1349,7 @@ exports.tests = [
       return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox2: false,
       firefox53: {
@@ -1395,7 +1395,7 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox2: false,
       firefox53: {
@@ -1442,7 +1442,7 @@ exports.tests = [
         return typeof Observable !== 'undefined';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1455,7 +1455,7 @@ exports.tests = [
         return typeof Symbol.observable === 'symbol';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1468,7 +1468,7 @@ exports.tests = [
         return 'subscribe' in Observable.prototype;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1491,7 +1491,7 @@ exports.tests = [
         return nonCallableCheckPassed && primitiveCheckPassed && newCheckPassed;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1505,7 +1505,7 @@ exports.tests = [
         return Symbol.observable in Observable.prototype && o[Symbol.observable]() === o;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1518,7 +1518,7 @@ exports.tests = [
         return Observable.of(1, 2, 3) instanceof Observable;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1531,7 +1531,7 @@ exports.tests = [
         return (Observable.from([1,2,3,4]) instanceof Observable) && (Observable.from(new Set([1, 2, 3])) instanceof Observable);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1559,7 +1559,7 @@ exports.tests = [
       && c === 'ab';
   */},
   res: {
-    babel: babel.corejs,
+    babel6: babel.corejs,
     typescript1: typescript.corejs,
     firefox2: false,
     opera10_50: false,
@@ -1724,7 +1724,7 @@ exports.tests = [
         return typeof Reflect.defineMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1737,7 +1737,7 @@ exports.tests = [
         return typeof Reflect.hasMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1750,7 +1750,7 @@ exports.tests = [
         return typeof Reflect.hasOwnMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1763,7 +1763,7 @@ exports.tests = [
         return typeof Reflect.getMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1776,7 +1776,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1789,7 +1789,7 @@ exports.tests = [
         return typeof Reflect.getMetadataKeys == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1802,7 +1802,7 @@ exports.tests = [
         return typeof Reflect.getOwnMetadataKeys == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1815,7 +1815,7 @@ exports.tests = [
         return typeof Reflect.deleteMetadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1828,7 +1828,7 @@ exports.tests = [
         return typeof Reflect.metadata == 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         opera10_50: false,
@@ -1952,7 +1952,7 @@ exports.tests = [
         return new C().x === 'x';
       */},
       res: {
-        babel: true,
+        babel6: true,
         tr: true,
         typescript1: true,
         firefox2: false,
@@ -2014,7 +2014,7 @@ exports.tests = [
         return C.x === 'x';
       */},
       res: {
-        babel: true,
+        babel6: true,
         tr: true,
         typescript1: true,
         firefox2: false,
@@ -2053,7 +2053,7 @@ exports.tests = [
     passed = true;
   */},
   res : {
-    babel: babel.corejs,
+    babel6: babel.corejs,
     typescript1: typescript.corejs,
     firefox2: false,
     opera10_50: false,
@@ -2241,7 +2241,7 @@ exports.tests = [
       && Math.signbit(42) === true;
   */},
   res : {
-    babel: babel.corejs,
+    babel6: babel.corejs,
     typescript1: typescript.corejs,
     firefox52: false,
     opera10_50: false,
@@ -2261,7 +2261,7 @@ exports.tests = [
         && Math.clamp(6, 2, 4) === 4;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2273,7 +2273,7 @@ exports.tests = [
       return Math.DEG_PER_RAD === Math.PI / 180;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2286,7 +2286,7 @@ exports.tests = [
         && Math.degrees(Math.PI) === 180;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2298,7 +2298,7 @@ exports.tests = [
       return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2310,7 +2310,7 @@ exports.tests = [
       return Math.RAD_PER_DEG === 180 / Math.PI;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2323,7 +2323,7 @@ exports.tests = [
         && Math.radians(180) === Math.PI;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2335,7 +2335,7 @@ exports.tests = [
       return Math.scale(0, 3, 5, 8, 10) === 5;
     */},
     res: {
-      babel: babel.corejs,
+      babel6: babel.corejs,
       typescript1: typescript.corejs,
       firefox52: false,
       opera10_50: false,
@@ -2355,7 +2355,7 @@ exports.tests = [
         return typeof Promise.try === 'function';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2369,7 +2369,7 @@ exports.tests = [
         return Promise.try(function () {}) instanceof Promise;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2385,7 +2385,7 @@ exports.tests = [
         return score === 1;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2406,7 +2406,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2427,7 +2427,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2448,7 +2448,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2469,7 +2469,7 @@ exports.tests = [
         });
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox52: false,
@@ -2492,7 +2492,7 @@ exports.tests = [
         return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox58: false,
@@ -2510,7 +2510,7 @@ exports.tests = [
         }).join('') === '1234';
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox2: false,
         firefox58: false,
@@ -2536,7 +2536,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 3;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2554,7 +2554,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 5;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2570,7 +2570,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2586,7 +2586,7 @@ exports.tests = [
         return C.has(3) + C.has(4);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2602,7 +2602,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 3;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2620,7 +2620,7 @@ exports.tests = [
         return C.get(A) + C.get(B) === 5;
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2636,7 +2636,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2652,7 +2652,7 @@ exports.tests = [
         return C.has(A) + C.has(B);
       */},
       res: {
-        babel: babel.corejs,
+        babel6: babel.corejs,
         typescript1: typescript.corejs,
         firefox52: false,
         opera10_50: false,
@@ -2679,6 +2679,7 @@ exports.tests = [
         return false;
       */},
       res: {
+        babel7: true,
         typescript2_5: true,
         firefox2: false,
         firefox57: false,
@@ -2704,6 +2705,7 @@ exports.tests = [
         })();
       */},
       res: {
+        babel7: true,
         typescript2_5: true,
         firefox2: false,
         firefox57: false,
@@ -2734,6 +2736,7 @@ exports.tests = [
         return it.next().value;
       */},
       res: {
+        babel7: true,
         typescript2_5: true,
         firefox2: false,
         firefox57: false,
@@ -2770,6 +2773,7 @@ exports.tests = [
     return result === 'Hello, hello!';
   */},
   res : {
+    babel7: true,
     firefox2: false,
     firefox57: false,
     firefox58: {
@@ -2815,6 +2819,7 @@ exports.tests = [
         }
       */},
       res : {
+        babel7: true,
         firefox52: false,
         opera10_50: false,
       }
@@ -2835,6 +2840,7 @@ exports.tests = [
         }
       */},
       res : {
+        babel7: true,
         firefox52: false,
         opera10_50: false,
       }
@@ -2850,6 +2856,7 @@ exports.tests = [
         }
       */},
       res : {
+        babel7: true,
         firefox52: false,
         opera10_50: false,
       }
@@ -2865,6 +2872,7 @@ exports.tests = [
         }
       */},
       res : {
+        babel7: true,
         firefox52: false,
         opera10_50: false,
       }
@@ -2885,6 +2893,7 @@ exports.tests = [
         return foo?.baz === 42 && bar?.baz === undefined;
       */},
       res : {
+        babel7: true,
       }
     },
     {
@@ -2895,6 +2904,7 @@ exports.tests = [
         return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
       */},
       res : {
+        babel7: true,
       }
     },
     {
@@ -2905,6 +2915,7 @@ exports.tests = [
         return foo?.baz() === 42 && bar?.baz() === undefined;
       */},
       res : {
+        babel7: true,
       }
     },
   ]
@@ -2951,6 +2962,7 @@ exports.tests = [
       0 ?? 42 === 0;
   */},
   res : {
+    babel7: true,
   }
 },
 {
@@ -3119,7 +3131,7 @@ exports.tests = [
       0b1010_0001_1000_0101 === 0b1010000110000101;
   */},
   res : {
-    babel: true,
+    babel7: true,
     typescript1: false,
     typescript2_7: true,
     firefox2: false,
