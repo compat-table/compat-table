@@ -1183,7 +1183,7 @@ exports.tests = [
         return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
       */},
       res: {
-        babel6: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/regenerator-plugin-transform-decorators-legacy'>this plugin</a>."},
+        babel6: {val: false, note_id: "regenerator-decorators-legacy", note_html: "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."},
         typescript1: true,
         firefox2: false,
         opera10_50: false,
