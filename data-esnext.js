@@ -1956,6 +1956,7 @@ exports.tests = [
         tr: true,
         typescript1: true,
         firefox2: false,
+        chrome67: 'flagged',
         opera10_50: false,
         duktape2_0: false,
       }
@@ -1976,6 +1977,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        chrome67: 'flagged',
         opera10_50: false,
         duktape2_0: false,
       }
@@ -1993,6 +1995,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        chrome67: 'flagged',
         opera10_50: false,
         duktape2_0: false,
       }
