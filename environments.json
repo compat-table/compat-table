@@ -1661,16 +1661,23 @@
     "obsolete": false
   },
   "chrome65": {
-    "full": "Chrome Dev",
+    "full": "Chrome Beta",
     "family": "V8",
     "short": "CH&nbsp;65,<br>OP&nbsp;52",
     "note_id": "experimental-flag",
     "unstable": true
   },
   "chrome66": {
-    "full": "Chrome Canary",
+    "full": "Chrome Dev",
     "family": "V8",
     "short": "CH&nbsp;66,<br>OP&nbsp;53",
+    "note_id": "experimental-flag",
+    "unstable": true
+  },
+  "chrome67": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;67,<br>OP&nbsp;53",
     "note_id": "experimental-flag",
     "unstable": true
   },
