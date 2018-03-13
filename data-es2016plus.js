@@ -28,6 +28,7 @@ exports.tests = [
           babel6: true,
           closure: true,
           typescript1: true,
+          ie11: false,
           edge13: edge.experimental,
           edge14: true,
           firefox2: false,
@@ -50,6 +51,7 @@ exports.tests = [
           babel6: true,
           closure: true,
           typescript1: true,
+          ie11: false,
           edge13: edge.experimental,
           edge14: true,
           firefox2: false,
@@ -75,6 +77,7 @@ exports.tests = [
         res: {
           babel6: true,
           closure: true,
+          ie11: false,
           edge14: true,
           firefox2: false,
           firefox52: true,
@@ -116,6 +119,7 @@ exports.tests = [
           opera10_50: false,
           chrome51: "flagged",
           chrome54: true,
+          ie11: false,
           edge14: true,
           safari10_1: true,
           duktape2_0: false,
@@ -146,6 +150,7 @@ exports.tests = [
           opera10_50: false,
           chrome51: "flagged",
           chrome54: true,
+          ie11: false,
           edge14: true,
           safari10_1: true,
           duktape2_0: false,
@@ -171,6 +176,7 @@ exports.tests = [
           closure: true,
           es7shim: true,
           typescript1: typescript.corejs,
+          ie11: false,
           edge15: true,
           chrome51: "flagged",
           chrome54: true,
@@ -192,6 +198,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge15: true,
           firefox2: false,
           firefox50: true,
@@ -227,6 +234,7 @@ exports.tests = [
           typescript1: typescript.corejs,
           safari9: true,
           chrome47: true,
+          ie11: false,
           edge14: true,
           firefox2: false,
           firefox43: true,
@@ -267,6 +275,7 @@ exports.tests = [
           typescript1: typescript.corejs,
           safari9: true,
           chrome47: true,
+          ie11: false,
           edge14: true,
           firefox2: false,
           firefox43: true,
@@ -289,6 +298,7 @@ exports.tests = [
           babel6: babel.corejs,
           typescript1: typescript.corejs,
           chrome47: true,
+          ie11: false,
           edge14: true,
           firefox2: false,
           firefox43: true,
@@ -325,6 +335,7 @@ exports.tests = [
           firefox2: false,
           firefox48: true,
           opera10_50: false,
+          ie11: false,
           edge14: edge.experimental,
           edge15: true,
           chrome52: "flagged",
@@ -354,6 +365,7 @@ exports.tests = [
           firefox2: false,
           firefox48: true,
           opera10_50: false,
+          ie11: false,
           edge14: edge.experimental,
           edge15: true,
           chrome52: "flagged",
@@ -382,6 +394,7 @@ exports.tests = [
           babel6: true,
           closure: true,
           typescript2: true,
+          ie11: false,
           edge14: true,
           chrome57: "flagged",
           chrome58: true,
@@ -403,6 +416,7 @@ exports.tests = [
           babel6: true,
           closure: true,
           typescript2: true,
+          ie11: false,
           edge14: true,
           chrome57: "flagged",
           chrome58: true,
@@ -448,6 +462,7 @@ exports.tests = [
           typescript1: typescript.asyncawait,
           chrome52: "flagged",
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -480,6 +495,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -502,6 +518,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: false,
           edge14: edge.experimental,
           edge15: true,
@@ -525,6 +542,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -554,6 +572,7 @@ exports.tests = [
           typescript1: typescript.asyncawait,
           chrome52: "flagged",
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -584,6 +603,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -606,6 +626,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -633,6 +654,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -655,6 +677,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -687,6 +710,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -719,6 +743,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -749,6 +774,7 @@ exports.tests = [
           typescript1: false, // still buggy output
           chrome52: "flagged",
           chrome55: true,
+          ie11: false,
           edge13: edge.experimental,
           edge15: true,
           firefox2: false,
@@ -772,6 +798,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: false,
           edge14: edge.experimental,
           edge15: true,
@@ -794,6 +821,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: false,
           edge15: true,
           firefox2: false,
@@ -824,6 +852,7 @@ exports.tests = [
           typescript1: null,
           chrome52: null,
           chrome55: true,
+          ie11: false,
           edge13: false,
           edge14: edge.experimental,
           edge15: true,
@@ -849,6 +878,7 @@ exports.tests = [
          return typeof SharedArrayBuffer === 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -885,6 +915,7 @@ exports.tests = [
          return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -909,6 +940,7 @@ exports.tests = [
          return 'byteLength' in SharedArrayBuffer.prototype;
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -934,6 +966,7 @@ exports.tests = [
          return typeof SharedArrayBuffer.prototype.slice === 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -957,6 +990,7 @@ exports.tests = [
          return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -982,6 +1016,7 @@ exports.tests = [
          return typeof Atomics.add == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1007,6 +1042,7 @@ exports.tests = [
          return typeof Atomics.and == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1032,6 +1068,7 @@ exports.tests = [
          return typeof Atomics.compareExchange == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1057,6 +1094,7 @@ exports.tests = [
          return typeof Atomics.exchange == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1082,6 +1120,7 @@ exports.tests = [
          return typeof Atomics.wait == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1107,6 +1146,7 @@ exports.tests = [
          return typeof Atomics.wake == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1132,6 +1172,7 @@ exports.tests = [
          return typeof Atomics.isLockFree == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1157,6 +1198,7 @@ exports.tests = [
          return typeof Atomics.load == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1182,6 +1224,7 @@ exports.tests = [
          return typeof Atomics.or == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1207,6 +1250,7 @@ exports.tests = [
          return typeof Atomics.store == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1232,6 +1276,7 @@ exports.tests = [
          return typeof Atomics.sub == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1257,6 +1302,7 @@ exports.tests = [
          return typeof Atomics.xor == 'function';
          */},
         res: {
+          ie11: false,
           edge15: edge.experimental,
           edge16: true,
           firefox2: false,
@@ -1299,6 +1345,7 @@ exports.tests = [
      }
      */},
     res: {
+      ie11: false,
       edge13: true,
       firefox2: false,
       firefox43: true,
@@ -1338,6 +1385,7 @@ exports.tests = [
      */},
     res: {
       closure: false,
+      ie11: false,
       edge14: true,
       firefox2: false,
       firefox27: true,
@@ -1369,6 +1417,7 @@ exports.tests = [
      }
      */},
     res: {
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox52: true,
@@ -1397,6 +1446,7 @@ exports.tests = [
     res: {
       babel6: true,
       closure: true,
+      ie11: false,
       edge13: edge.experimental,
       edge14: true,
       firefox2: false,
@@ -1427,6 +1477,7 @@ exports.tests = [
     res: {
       babel6: true,
       closure: true,
+      ie11: false,
       edge13: edge.experimental,
       edge14: true,
       firefox2: false,
@@ -1461,6 +1512,7 @@ exports.tests = [
      return passed;
      */},
     res: {
+      ie11: false,
       edge15: true,
       firefox2: false,
       firefox18: true,
@@ -1494,6 +1546,7 @@ exports.tests = [
       firefox43: true,
       opera10_50: false,
       chrome49: true,
+      ie11: false,
       edge14: true,
       safari10: true,
       duktape2_0: false,
@@ -1547,6 +1600,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge12: true,
           firefox2: false,
           firefox36: true,
@@ -1574,6 +1628,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge16: true,
           firefox2: false,
           firefox48: true,
@@ -1630,6 +1685,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge12: true,
           firefox2: false,
           firefox36: true,
@@ -1657,6 +1713,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge16: true,
           firefox2: false,
           firefox48: true,
@@ -1746,6 +1803,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge12: true,
           firefox2: false,
           firefox36: true,
@@ -1797,6 +1855,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           firefox2: false,
           firefox4: true,
           opera10_50: false,
@@ -1886,6 +1945,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           edge12: true,
           firefox2: false,
           firefox36: true,
@@ -1937,6 +1997,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           firefox2: false,
           firefox4: true,
           opera10_50: false,
@@ -1970,6 +2031,7 @@ exports.tests = [
         firefox2: false,
         firefox18: true,
         opera10_50: false,
+        ie11: false,
         edge13: true,
         chrome52: true,
         safari10: true,
@@ -1989,6 +2051,7 @@ exports.tests = [
           firefox2: false,
           firefox18: true,
           opera10_50: false,
+          ie11: false,
           edge13: true,
           chrome52: true,
           safari10: true,
@@ -2010,6 +2073,7 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
+          ie11: false,
           edge14: true,
           chrome57: true,
           firefox2: false,
@@ -2035,6 +2099,7 @@ exports.tests = [
          return gopd + '' === "foo" && gpo;
          */},
         res: {
+          ie11: false,
           edge14: true,
           chrome57: true,
           firefox2: false,
@@ -2068,6 +2133,7 @@ exports.tests = [
      return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
      */},
     res: {
+      ie11: false,
       edge16: true,
       firefox2: false,
       firefox51: true,
@@ -2092,6 +2158,7 @@ exports.tests = [
      && !"\u212a".match(/.\B/iu) && !"ſ".match(/.\B/iu);
      */},
     res: {
+      ie11: false,
       firefox2: false,
       firefox54: true,
       opera10_50: false,
@@ -2145,6 +2212,7 @@ exports.tests = [
      })();
      */},
     res: {
+      ie11: false,
       edge16: true,
       firefox2: false,
       firefox53: true,
@@ -2171,6 +2239,7 @@ exports.tests = [
           babel6: true,
           typescript2_1: true,
           jsx: true,
+          ie11: false,
           firefox2: false,
           firefox55: true,
           opera10_50: false,
@@ -2193,6 +2262,7 @@ exports.tests = [
         res: {
           babel6: true,
           jsx: true,
+          ie11: false,
           firefox2: false,
           firefox55: true,
           opera10_50: false,
@@ -2249,6 +2319,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           firefox2: false,
           firefox57: false,
           firefox58: true,
@@ -2287,6 +2358,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           firefox2: false,
           firefox57: false,
           firefox58: true,
@@ -2327,6 +2399,7 @@ exports.tests = [
         res: {
           babel6: babel.corejs,
           typescript1: typescript.corejs,
+          ie11: false,
           firefox2: false,
           firefox57: false,
           firefox58: true,
@@ -2357,6 +2430,7 @@ exports.tests = [
      return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
      */},
     res: {
+      ie11: false,
       firefox2: false,
       firefox53: true,
       opera10_50: false,
@@ -2494,6 +2568,7 @@ exports.tests = [
           chrome62: chrome.harmony,
           chrome63: true,
           typescript2_3: true,
+          ie11: false,
           firefox2: false,
           firefox55: firefox.nightly,
           firefox57: true,
@@ -2530,6 +2605,7 @@ exports.tests = [
           chrome62: chrome.harmony,
           chrome63: true,
           typescript2_3: true,
+          ie11: false,
           firefox2: false,
           firefox55: firefox.nightly,
           firefox57: true,
