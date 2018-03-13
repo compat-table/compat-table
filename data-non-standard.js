@@ -14,6 +14,7 @@ exports.tests = [
         return typeof uneval == 'function';
       */},
       res: {
+        ie11: false,
         firefox2: true,
         opera10_50: false,
         rhino1_7: true,
@@ -36,6 +37,7 @@ exports.tests = [
             && Error    .prototype.hasOwnProperty('toSource');
       */},
       res: {
+        ie11: false,
         firefox2: true,
         opera10_50: false,
         besen: true,
@@ -49,6 +51,7 @@ exports.tests = [
         return uneval({ toSource: function() { return "pwnd!" } }) === "pwnd!";
       */} ,
       res: {
+        ie11: false,
         firefox2: true,
         opera10_50: false,
         rhino1_7: null,
@@ -113,9 +116,7 @@ exports.tests = [
                         return false;
                 }
                 return true;
-
             }
-
         }
 
 
@@ -150,6 +151,7 @@ exports.tests = [
         return true;
       */} ,
       res: {
+        ie11: false,
         firefox2: true,
         opera10_50: false,
         besen: null,
@@ -167,6 +169,7 @@ exports.tests = [
     return eval("x", { x: 2 }) === 2;
   */},
   res: {
+    ie11: false,
     firefox2: true,
     firefox3: false,
     firefox3_5: true,
@@ -282,6 +285,7 @@ exports.tests = [
      return new C instanceof C;
      */},
   res: {
+    ie11: false,
     safari10_1: true,
     safari11_1: false,
     safaritp: false,
@@ -444,6 +448,7 @@ exports.tests = [
     return [for (a of [1, 2, 3]) a * a] + '' === '1,4,9';
   */},
   res: {
+    ie11: false,
     firefox2: false,
     firefox30: true,
     firefox57: true,
@@ -725,6 +730,7 @@ exports.tests = [
     return passed;
   */},
   res: {
+    ie11: false,
     firefox2: false,
     firefox30: true,
     firefox57: true,
@@ -885,6 +891,7 @@ exports.tests = [
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Firefox-specific_notes',
   exec: function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' },
   res: {
+    ie11: false,
     firefox2: true,
     firefox49: false,
     opera7_5: false,
@@ -925,6 +932,7 @@ exports.tests = [
     return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
   },
   res: {
+    ie11: false,
     firefox2: true,
     firefox3_6: false,
     firefox49: true,
@@ -1011,6 +1019,7 @@ exports.tests = [
     return typeof Object.observe == 'function';
   */},
   res: {
+    ie11: false,
     firefox2: false,
     chrome36: true,
     chrome49: false,
