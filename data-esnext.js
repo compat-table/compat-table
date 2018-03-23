@@ -1750,7 +1750,7 @@ exports.tests = [
 {
   name: 'weak references',
   spec: 'https://github.com/tc39/proposal-weakrefs',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'large',
   exec: function(){/*
     var O = {};
@@ -1763,6 +1763,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     opera10_50: false,
+    chrome65: false,
     duktape2_0: false,
   }
 },
