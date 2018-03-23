@@ -2616,6 +2616,12 @@ exports.tests = [
   category: STAGE3,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
+  links: [
+    {
+      note_id: 'flatten-compat-issue',
+      note_html: 'Name of Array.prototype.flatten will likely change due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a>',
+    }
+  ],
   subtests: [
     {
       name: 'Array.prototype.flatten',
