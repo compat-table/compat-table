@@ -111,6 +111,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -140,6 +141,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -169,6 +171,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -272,6 +275,7 @@ exports.tests = [
         safari10: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -296,6 +300,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -319,6 +324,7 @@ exports.tests = [
         xs6: false,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -474,6 +480,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -504,6 +511,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -537,6 +545,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -569,6 +578,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -599,6 +609,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -627,6 +638,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -655,6 +667,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -682,6 +695,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -715,6 +729,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -746,6 +761,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -780,6 +796,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -813,6 +830,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -844,6 +862,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -873,6 +892,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -902,6 +922,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -930,6 +951,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ]
@@ -972,6 +994,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1002,6 +1025,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1035,6 +1059,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1065,6 +1090,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1092,6 +1118,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1127,6 +1154,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1157,6 +1185,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1188,6 +1217,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1222,6 +1252,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1253,6 +1284,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1281,6 +1313,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1317,6 +1350,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -1353,6 +1387,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1380,6 +1415,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1407,6 +1443,7 @@ exports.tests = [
         xs6: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -1523,6 +1560,7 @@ exports.tests = [
         ejs: { val: false, note_id: 'ejs-no-function-ctor' },
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ]
@@ -3134,6 +3172,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3161,6 +3200,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3308,6 +3348,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3371,6 +3412,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3395,6 +3437,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3418,6 +3461,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3498,6 +3542,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3528,6 +3573,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3555,6 +3601,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -3581,6 +3628,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -4833,6 +4881,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -4860,6 +4909,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5003,6 +5053,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5029,6 +5080,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5060,6 +5112,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -5221,6 +5274,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5251,6 +5305,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5278,6 +5333,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5308,6 +5364,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5338,6 +5395,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5368,6 +5426,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5398,6 +5457,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5428,6 +5488,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5459,6 +5520,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5489,6 +5551,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5519,6 +5582,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5549,6 +5613,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5579,6 +5644,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5609,6 +5675,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5639,6 +5706,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5669,6 +5737,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5699,6 +5768,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5767,6 +5837,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -5901,6 +5972,7 @@ exports.tests = [
       duktape2_0: true,
       nashorn1_8: true,
       nashorn9: true,
+      nashorn10: true,
     }},
     {
       name: '.prototype.join',
@@ -6275,6 +6347,7 @@ exports.tests = [
       jxa: true,
       duktape2_0: false,
       nashorn9: true,
+      nashorn10: true,
     }},
     {
       name: '[Symbol.species]',
@@ -6350,6 +6423,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6380,6 +6454,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6409,6 +6484,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6436,6 +6512,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6522,6 +6599,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6551,6 +6629,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6583,6 +6662,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6610,6 +6690,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6637,6 +6718,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6664,6 +6746,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6691,6 +6774,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6718,6 +6802,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6745,6 +6830,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6771,6 +6857,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6804,6 +6891,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6837,6 +6925,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6900,6 +6989,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6929,6 +7019,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6958,6 +7049,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -6985,6 +7077,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7073,6 +7166,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7103,6 +7197,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7137,6 +7232,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7164,6 +7260,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7191,6 +7288,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7218,6 +7316,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7244,6 +7343,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7271,6 +7371,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7298,6 +7399,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7325,6 +7427,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7358,6 +7461,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7391,6 +7495,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7452,6 +7557,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7480,6 +7586,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7508,6 +7615,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7534,6 +7642,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7593,6 +7702,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7646,6 +7756,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7672,6 +7783,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7705,6 +7817,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7730,6 +7843,7 @@ exports.tests = [
         jxa: null,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7761,6 +7875,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -7801,6 +7916,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7827,6 +7943,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7855,6 +7972,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7881,6 +7999,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7965,6 +8084,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -7990,6 +8110,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -8020,6 +8141,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -8044,6 +8166,7 @@ exports.tests = [
         jxa: null,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -8075,6 +8198,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -11142,6 +11266,7 @@ exports.tests = [
     duktape2_0: false,
     nashorn1_8: true,
     nashorn9: true,
+    nashorn10: true,
   }
 },
 {
@@ -13515,6 +13640,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13541,6 +13667,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -13820,6 +13947,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13845,6 +13973,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13870,6 +13999,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13894,6 +14024,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13922,6 +14053,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -13945,6 +14077,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -13984,6 +14117,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -14013,6 +14147,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -14149,6 +14284,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -14689,6 +14825,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -14721,6 +14858,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -14975,6 +15113,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -14999,6 +15138,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15033,6 +15173,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15067,6 +15208,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15095,6 +15237,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15128,6 +15271,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15175,6 +15319,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15204,6 +15349,7 @@ exports.tests = [
         duktape2_0: false,
         duktape2_1: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15237,6 +15383,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -15278,6 +15425,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -15302,6 +15450,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -15394,6 +15543,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16176,6 +16326,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
     {
@@ -16201,6 +16352,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       }
     },
   ]
@@ -16233,6 +16385,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16256,6 +16409,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16278,6 +16432,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16302,6 +16457,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16325,6 +16481,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16350,6 +16507,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16398,6 +16556,7 @@ exports.tests = [
         duktape2_0: false,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -16820,6 +16979,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16876,6 +17036,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16903,6 +17064,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16937,6 +17099,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -16968,6 +17131,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18490,6 +18654,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18648,6 +18813,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18850,6 +19016,7 @@ exports.tests = [
         android1_5: null,
         ios4: null,
         nashorn9: true,
+        nashorn10: true,
       },
     },
   ],
@@ -18879,6 +19046,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18905,6 +19073,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18933,6 +19102,7 @@ exports.tests = [
         jxa: true,
         duktape2_0: false,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {
@@ -18983,6 +19153,7 @@ exports.tests = [
         duktape2_0: true,
         nashorn1_8: true,
         nashorn9: true,
+        nashorn10: true,
       },
     },
     {

@@ -2333,6 +2333,18 @@
     "short": "JJS 9",
     "platformtype": "engine",
     "release": "2017-09-21",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "nashorn10": {
+    "full": "Oracle Nashorn 10",
+    "family": "Nashorn",
+    "short": "JJS 10",
+    "platformtype": "engine",
+    "release": "2018-03-20",
     "obsolete": false,
     "test_suites": [
       "es5",
