@@ -3495,6 +3495,30 @@ exports.tests = [
   res: {
   }
 },
+{
+  name: 'getting last item from array',
+  spec: 'https://github.com/keithamus/proposal-array-last',
+  category: STAGE1,
+  significance: 'small',
+  subtests: [
+    {
+      name: 'Array.prototype.lastItem',
+      exec: function () {/*
+        return [1, 2, 3].lastItem === 3;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Array.prototype.lastIndex',
+      exec: function () {/*
+        return [1, 2, 3].lastIndex === 2;
+      */},
+      res: {
+      }
+    },
+  ]
+},
 ];
 
 
