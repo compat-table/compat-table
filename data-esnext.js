@@ -3621,6 +3621,14 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.find',
+      exec: function () {/*
+        return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
