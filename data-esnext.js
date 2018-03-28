@@ -3579,6 +3579,19 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
+      name: 'Map.groupBy',
+      exec: function () {/*
+        var map = Map.groupBy([1, 2, 3, 4], it => it % 2)
+        return map.size === 2
+          && map.get(0)[0] === 2
+          && map.get(0)[1] === 4
+          && map.get(1)[0] === 1
+          && map.get(1)[1] === 3;
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Map.prototype.filter',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
