@@ -13377,11 +13377,11 @@ return [1, 2, 3].lastIndex === 2;
 <td class="tally" data-browser="ios11" data-tally="0">0/4</td>
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.intersect"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.intersect">&#xA7;</a>Set.prototype.intersect</span><script data-source="
-var set = new Set([1, 2, 3]).intersect([2, 3, 4]);
+var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
 return set.size === 2
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("173");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersect([2, 3, 4]);\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("173");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersect([2, 3, 4]);\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("173");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("173");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -13454,12 +13454,12 @@ return set.size === 2
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.union"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.union">&#xA7;</a>Set.prototype.union</span><script data-source="
-var set = new Set([1, 2]).union([2, 3]);
+var set = new Set([1, 2]).union(new Set([2, 3]));
 return set.size === 3
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("174");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union([2, 3]);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("174");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union([2, 3]);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("174");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("174");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -13532,11 +13532,11 @@ return set.size === 3
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.except"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.except">&#xA7;</a>Set.prototype.except</span><script data-source="
-var set = new Set([1, 2, 3]).except([3, 4]);
+var set = new Set([1, 2, 3]).except(new Set([3, 4]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).except([3, 4]);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).except([3, 4]);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("175");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).except(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("175");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).except(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -13609,11 +13609,11 @@ return set.size === 2
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.xor"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.xor">&#xA7;</a>Set.prototype.xor</span><script data-source="
-var set = new Set([1, 2]).xor([2, 3]);
+var set = new Set([1, 2]).xor(new Set([2, 3]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("176");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).xor([2, 3]);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("176");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).xor([2, 3]);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("176");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).xor(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("176");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).xor(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -13757,13 +13757,13 @@ return set.size === 2
 <td class="tally" data-browser="ios11" data-tally="0">0/15</td>
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.groupBy"><td><span><a class="anchor" href="#test-Collections_methods_Map.groupBy">&#xA7;</a>Map.groupBy</span><script data-source="
-var map = Map.groupBy([1, 2, 3, 4], it =&gt; it % 2)
+var map = Map.groupBy(new Set([1, 2, 3, 4]), it =&gt; it % 2)
 return map.size === 2
   &amp;&amp; map.get(0)[0] === 2
   &amp;&amp; map.get(0)[1] === 4
   &amp;&amp; map.get(1)[0] === 1
   &amp;&amp; map.get(1)[1] === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("178");try{return Function("asyncTestPassed","\nvar map = Map.groupBy([1, 2, 3, 4], it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("178");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.groupBy([1, 2, 3, 4], it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("178");try{return Function("asyncTestPassed","\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("178");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -13836,11 +13836,11 @@ return map.size === 2
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.keyBy"><td><span><a class="anchor" href="#test-Collections_methods_Map.keyBy">&#xA7;</a>Map.keyBy</span><script data-source="
-var map = Map.keyBy([{ id: 101 }, { id: 102 }], it =&gt; it.id)
+var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it =&gt; it.id)
 return map.size === 2
   &amp;&amp; map.get(101).id === 101
   &amp;&amp; map.get(102).id === 102;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("179");try{return Function("asyncTestPassed","\nvar map = Map.keyBy([{ id: 101 }, { id: 102 }], it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("179");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.keyBy([{ id: 101 }, { id: 102 }], it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("179");try{return Function("asyncTestPassed","\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("179");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -14146,12 +14146,12 @@ return map.size === 3
 <td class="no" data-browser="ios11">No</td>
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.merge"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.merge">&#xA7;</a>Map.prototype.merge</span><script data-source="
-var map = new Map([[1, 4], [2, 5]]).merge([[2, 7], [3, 6]]);
+var map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));
 return map.size === 3
   &amp;&amp; map.get(1) === 4
   &amp;&amp; map.get(2) === 7
   &amp;&amp; map.get(3) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5]]).merge([[2, 7], [3, 6]]);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("183");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5]]).merge([[2, 7], [3, 6]]);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("183");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>

@@ -3528,7 +3528,7 @@ exports.tests = [
     {
       name: 'Set.prototype.intersect',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).intersect([2, 3, 4]);
+        var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
         return set.size === 2
           && set.has(2)
           && set.has(3);
@@ -3539,7 +3539,7 @@ exports.tests = [
     {
       name: 'Set.prototype.union',
       exec: function () {/*
-        var set = new Set([1, 2]).union([2, 3]);
+        var set = new Set([1, 2]).union(new Set([2, 3]));
         return set.size === 3
           && set.has(1)
           && set.has(2)
@@ -3551,7 +3551,7 @@ exports.tests = [
     {
       name: 'Set.prototype.except',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).except([3, 4]);
+        var set = new Set([1, 2, 3]).except(new Set([3, 4]));
         return set.size === 2
           && set.has(1)
           && set.has(2);
@@ -3562,7 +3562,7 @@ exports.tests = [
     {
       name: 'Set.prototype.xor',
       exec: function () {/*
-        var set = new Set([1, 2]).xor([2, 3]);
+        var set = new Set([1, 2]).xor(new Set([2, 3]));
         return set.size === 2
           && set.has(1)
           && set.has(3);
@@ -3581,7 +3581,7 @@ exports.tests = [
     {
       name: 'Map.groupBy',
       exec: function () {/*
-        var map = Map.groupBy([1, 2, 3, 4], it => it % 2)
+        var map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)
         return map.size === 2
           && map.get(0)[0] === 2
           && map.get(0)[1] === 4
@@ -3594,7 +3594,7 @@ exports.tests = [
     {
       name: 'Map.keyBy',
       exec: function () {/*
-        var map = Map.keyBy([{ id: 101 }, { id: 102 }], it => it.id)
+        var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)
         return map.size === 2
           && map.get(101).id === 101
           && map.get(102).id === 102;
@@ -3640,7 +3640,7 @@ exports.tests = [
     {
       name: 'Map.prototype.merge',
       exec: function () {/*
-        var map = new Map([[1, 4], [2, 5]]).merge([[2, 7], [3, 6]]);
+        var map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));
         return map.size === 3
           && map.get(1) === 4
           && map.get(2) === 7
