@@ -3629,6 +3629,14 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.join',
+      exec: function () {/*
+        return new Set([1, 2, 3]).join('|') === '1|2|3';
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
