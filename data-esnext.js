@@ -3579,6 +3579,18 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
+      name: 'Set.prototype.addAll',
+      exec: function () {/*
+        var set = new Set([1, 2]).addAll(2, 3);
+        return set.size === 3
+          && set.has(1)
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Set.prototype.filter',
       exec: function () {/*
         var set = new Set([1, 2, 3]).filter(it => it % 2);
