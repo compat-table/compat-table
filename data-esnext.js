@@ -3657,6 +3657,14 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.some',
+      exec: function () {/*
+        return new Set([1, 2, 3]).some(it => it % 2);
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
