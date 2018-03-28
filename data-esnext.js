@@ -3572,6 +3572,25 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Collections methods',
+  spec: 'https://github.com/tc39/proposal-collection-methods',
+  category: STAGE1,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'Set.prototype.filter',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).filter(it => it % 2);
+        return set.size === 2
+          && set.has(1)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+  ]
+},
 ];
 
 
