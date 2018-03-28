@@ -3559,6 +3559,17 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.xor',
+      exec: function () {/*
+        var set = new Set([1, 2]).xor([2, 3]);
+        return set.size === 2
+          && set.has(1)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
