@@ -3603,6 +3603,14 @@ exports.tests = [
       }
     },
     {
+      name: 'Set.prototype.every',
+      exec: function () {/*
+        return new Set([1, 2, 3]).every(it => typeof it === 'number');
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Set.prototype.filter',
       exec: function () {/*
         var set = new Set([1, 2, 3]).filter(it => it % 2);
