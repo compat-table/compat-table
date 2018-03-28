@@ -3592,6 +3592,17 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.keyBy',
+      exec: function () {/*
+        var map = Map.keyBy([{ id: 101 }, { id: 102 }], it => it.id)
+        return map.size === 2
+          && map.get(101).id === 101
+          && map.get(102).id === 102;
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Map.prototype.filter',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
