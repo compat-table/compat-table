@@ -3536,6 +3536,18 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.union',
+      exec: function () {/*
+        var set = new Set([1, 2]).union([2, 3]);
+        return set.size === 3
+          && set.has(1)
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
