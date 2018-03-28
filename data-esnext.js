@@ -3483,6 +3483,261 @@ exports.tests = [
       ie11: false,
   }
 },
+{
+  name: 'Object.fromEntries',
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-object-from-entries',
+  category: STAGE1,
+  exec: function () {/*
+    var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+    return object.foo === 42 && object.bar === 23;
+  */},
+  res: {
+  }
+},
+{
+  name: 'getting last item from array',
+  spec: 'https://github.com/keithamus/proposal-array-last',
+  category: STAGE1,
+  significance: 'small',
+  subtests: [
+    {
+      name: 'Array.prototype.lastItem',
+      exec: function () {/*
+        return [1, 2, 3].lastItem === 3;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Array.prototype.lastIndex',
+      exec: function () {/*
+        return [1, 2, 3].lastIndex === 2;
+      */},
+      res: {
+      }
+    },
+  ]
+},
+{
+  name: 'Set methods',
+  spec: 'https://github.com/tc39/proposal-set-methods',
+  category: STAGE1,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'Set.prototype.intersect',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
+        return set.size === 2
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.union',
+      exec: function () {/*
+        var set = new Set([1, 2]).union(new Set([2, 3]));
+        return set.size === 3
+          && set.has(1)
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.except',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).except(new Set([3, 4]));
+        return set.size === 2
+          && set.has(1)
+          && set.has(2);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.xor',
+      exec: function () {/*
+        var set = new Set([1, 2]).xor(new Set([2, 3]));
+        return set.size === 2
+          && set.has(1)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+  ]
+},
+{
+  name: 'Collections methods',
+  spec: 'https://github.com/tc39/proposal-collection-methods',
+  category: STAGE1,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'Map.groupBy',
+      exec: function () {/*
+        var map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)
+        return map.size === 2
+          && map.get(0)[0] === 2
+          && map.get(0)[1] === 4
+          && map.get(1)[0] === 1
+          && map.get(1)[1] === 3;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Map.keyBy',
+      exec: function () {/*
+        var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)
+        return map.size === 2
+          && map.get(101).id === 101
+          && map.get(102).id === 102;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Map.prototype.filter',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
+        return map.size === 2
+          && map.get(1) === 4
+          && map.get(3) === 6;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Map.prototype.mapKeys',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);
+        return map.size === 3
+          && map.get(1) === 4
+          && map.get(4) === 5
+          && map.get(9) === 6;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Map.prototype.mapValues',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);
+        return map.size === 3
+          && map.get(1) === 16
+          && map.get(2) === 25
+          && map.get(3) === 36;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Map.prototype.merge',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));
+        return map.size === 3
+          && map.get(1) === 4
+          && map.get(2) === 7
+          && map.get(3) === 6;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.addAll',
+      exec: function () {/*
+        var set = new Set([1, 2]).addAll(2, 3);
+        return set.size === 3
+          && set.has(1)
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.deleteAll',
+      exec: function () {/*
+        var set = new Set([1, 2, 3, 4]);
+        return set.deleteAll(2, 3) === true
+          && set.size === 2
+          && set.has(1)
+          && set.has(4);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.every',
+      exec: function () {/*
+        return new Set([1, 2, 3]).every(it => typeof it === 'number');
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.filter',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).filter(it => it % 2);
+        return set.size === 2
+          && set.has(1)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.find',
+      exec: function () {/*
+        return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.join',
+      exec: function () {/*
+        return new Set([1, 2, 3]).join('|') === '1|2|3';
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.map',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).map(it => it * it);
+        return set.size === 3
+          && set.has(1)
+          && set.has(4)
+          && set.has(9);
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.reduce',
+      exec: function () {/*
+        return new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'Set.prototype.some',
+      exec: function () {/*
+        return new Set([1, 2, 3]).some(it => it % 2);
+      */},
+      res: {
+      }
+    },
+  ]
+},
 ];
 
 
