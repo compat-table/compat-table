@@ -3483,6 +3483,18 @@ exports.tests = [
       ie11: false,
   }
 },
+{
+  name: 'Object.fromEntries',
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-object-from-entries',
+  category: STAGE1,
+  exec: function () {/*
+    var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+    return object.foo === 42 && object.bar === 23;
+  */},
+  res: {
+  }
+},
 ];
 
 
