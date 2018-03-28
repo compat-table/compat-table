@@ -3590,6 +3590,18 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.mapKeys',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);
+        return map.size === 3
+          && map.get(1) === 4
+          && map.get(4) === 5
+          && map.get(9) === 6;
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Set.prototype.addAll',
       exec: function () {/*
         var set = new Set([1, 2]).addAll(2, 3);
