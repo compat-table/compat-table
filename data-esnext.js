@@ -3519,6 +3519,25 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Set methods',
+  spec: 'https://github.com/tc39/proposal-set-methods',
+  category: STAGE1,
+  significance: 'medium',
+  subtests: [
+    {
+      name: 'Set.prototype.intersect',
+      exec: function () {/*
+        var set = new Set([1, 2, 3]).intersect([2, 3, 4]);
+        return set.size === 2
+          && set.has(2)
+          && set.has(3);
+      */},
+      res: {
+      }
+    },
+  ]
+},
 ];
 
 
