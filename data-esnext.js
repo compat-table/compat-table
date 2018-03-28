@@ -3649,6 +3649,14 @@ exports.tests = [
       res: {
       }
     },
+    {
+      name: 'Set.prototype.reduce',
+      exec: function () {/*
+        return new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;
+      */},
+      res: {
+      }
+    },
   ]
 },
 ];
