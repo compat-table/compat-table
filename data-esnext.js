@@ -3591,6 +3591,18 @@ exports.tests = [
       }
     },
     {
+      name: 'Set.prototype.deleteAll',
+      exec: function () {/*
+        var set = new Set([1, 2, 3, 4]);
+        return set.deleteAll(2, 3) === true
+          && set.size === 2
+          && set.has(1)
+          && set.has(4);
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Set.prototype.filter',
       exec: function () {/*
         var set = new Set([1, 2, 3]).filter(it => it % 2);
