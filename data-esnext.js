@@ -3579,6 +3579,17 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
+      name: 'Map.prototype.filter',
+      exec: function () {/*
+        var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
+        return map.size === 2
+          && map.get(1) === 4
+          && map.get(3) === 6;
+      */},
+      res: {
+      }
+    },
+    {
       name: 'Set.prototype.addAll',
       exec: function () {/*
         var set = new Set([1, 2]).addAll(2, 3);
