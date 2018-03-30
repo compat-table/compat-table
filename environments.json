@@ -1812,7 +1812,7 @@
     "family": "JavaScriptCore",
     "short": "SF 8",
     "release": "2014-10-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari9": {
     "full": "Safari 9",
@@ -1833,7 +1833,7 @@
     "family": "JavaScriptCore",
     "short": "SF 10.1",
     "release": "2017-03-27",
-    "obsolete": false
+    "obsolete": true
   },
   "safari11": {
     "full": "Safari 11",
@@ -1846,7 +1846,7 @@
     "full": "Safari 11.1",
     "family": "JavaScriptCore",
     "short": "SF 11.1",
-    "unstable": true
+    "obsolete": false
   },
   "safaritp": {
     "full": "Safari Technology Preview Release 52",
@@ -2535,7 +2535,7 @@
     "platformtype": "mobile",
     "equals": "safari7_1",
     "release": "2014-09-17",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios9": {
     "full": "iOS Safari",
@@ -2562,7 +2562,7 @@
     "platformtype": "mobile",
     "equals": "safari10_1",
     "release": "2017-03-27",
-    "obsolete": false
+    "obsolete": true
   },
   "ios11": {
     "full": "iOS Safari",
@@ -2570,6 +2570,14 @@
     "short": "iOS 11",
     "platformtype": "mobile",
     "equals": "safari11",
+    "obsolete": false
+  },
+  "ios11_3": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 11",
+    "platformtype": "mobile",
+    "equals": "safari11_1",
     "obsolete": false
   }
 }
