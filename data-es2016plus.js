@@ -1384,7 +1384,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
-      closure: false,
+      closure: true,
       ie11: false,
       edge14: true,
       firefox2: false,

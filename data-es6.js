@@ -3869,7 +3869,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
-        closure: true,
+        closure: false,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -4093,6 +4093,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        closure: true,
         firefox2: false,
         firefox38: true,
         opera10_50: false,
