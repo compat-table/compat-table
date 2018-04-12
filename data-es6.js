@@ -2075,7 +2075,6 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        closure: true,
         typescript1: true,
         es6tr: true,
         edge12: true,
@@ -3869,7 +3868,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
-        closure: true,
+        closure20180319: false,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -4093,6 +4092,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        closure20180319: true,
         firefox2: false,
         firefox38: true,
         opera10_50: false,
@@ -4920,7 +4920,6 @@ exports.tests = [
       res: {
         babel6: babel.corejs,
         typescript1: typescript.corejs,
-        closure: true,
         edge12: true,
         es6shim: true,
         firefox2: false,
@@ -4944,7 +4943,6 @@ exports.tests = [
       res: {
         babel6: babel.corejs,
         typescript1: typescript.corejs,
-        closure: true,
         edge12: true,
         es6shim: true,
         firefox2: false,
@@ -11626,7 +11624,6 @@ exports.tests = [
         ejs: true,
         es6tr: true,
         jsx: true,
-        closure: true,
         typescript1: true,
         firefox2: false,
         firefox3: true,
@@ -17287,6 +17284,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.corejs,
+        closure: true,
         chrome34: true,
         edge12: true,
         es6shim: true,
@@ -17308,6 +17306,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.corejs,
+        closure: true,
         chrome34: true,
         edge12: true,
         es6shim: true,
@@ -17751,7 +17750,6 @@ exports.tests = [
       res: {
         ejs: true,
         babel6: babel.corejs,
-        closure: true,
         typescript1: typescript.corejs,
         tr: true,
         es6shim: true,
@@ -18547,7 +18545,6 @@ exports.tests = [
         return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
-        closure: true,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -18575,7 +18572,6 @@ exports.tests = [
         return set instanceof S && set.has(123);
       */},
       res: {
-        closure: true,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -18914,7 +18910,7 @@ exports.tests = [
         es6tr: null,
         tr: null,
         babel6: null,
-        closure: null,
+        closure: false,
         jsx: null,
         typescript1: null,
         es6shim: null,
@@ -18951,7 +18947,7 @@ exports.tests = [
         es6tr: null,
         tr: null,
         babel6: null,
-        closure: null,
+        closure: false,
         jsx: null,
         typescript1: null,
         es6shim: null,

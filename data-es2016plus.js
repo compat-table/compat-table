@@ -271,6 +271,7 @@ exports.tests = [
          */},
         res: {
           babel6: babel.corejs,
+          closure20180402: true,
           es7shim: true,
           typescript1: typescript.corejs,
           safari9: true,
@@ -1384,7 +1385,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
-      closure: false,
+      closure20180319: true,
       ie11: false,
       edge14: true,
       firefox2: false,
@@ -2238,6 +2239,7 @@ exports.tests = [
           */},
         res: {
           babel6: true,
+          closure: true,
           typescript2_1: true,
           jsx: true,
           ie11: false,
@@ -2262,6 +2264,7 @@ exports.tests = [
           */},
         res: {
           babel6: true,
+          closure: true,
           jsx: true,
           ie11: false,
           firefox2: false,
@@ -2319,6 +2322,7 @@ exports.tests = [
       */},
         res: {
           babel6: babel.corejs,
+          closure20180402: true,
           typescript1: typescript.corejs,
           ie11: false,
           firefox2: false,
@@ -2358,6 +2362,7 @@ exports.tests = [
       */},
         res: {
           babel6: babel.corejs,
+          closure20180402: true,
           typescript1: typescript.corejs,
           ie11: false,
           firefox2: false,
@@ -2399,6 +2404,7 @@ exports.tests = [
       */},
         res: {
           babel6: babel.corejs,
+          closure20180402: true,
           typescript1: typescript.corejs,
           ie11: false,
           firefox2: false,
