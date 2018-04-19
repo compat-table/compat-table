@@ -2087,7 +2087,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: false,
-        chrome67: chrome.harmony,
+        chrome66: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
       }
@@ -2106,7 +2106,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: false,
-        chrome67: chrome.harmony,
+        chrome66: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
       }
