@@ -3466,6 +3466,7 @@ exports.tests = [
         return (1n + 2n) === 3n;
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3474,6 +3475,7 @@ exports.tests = [
         return BigInt("3") === 3n;
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3482,6 +3484,7 @@ exports.tests = [
         return typeof BigInt.asUintN === 'function';
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3490,6 +3493,7 @@ exports.tests = [
         return typeof BigInt.asIntN === 'function';
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3501,6 +3505,7 @@ exports.tests = [
         return view[0] === -0x8000000000000000n;
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3512,6 +3517,7 @@ exports.tests = [
         return view[0] === 0n;
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3520,6 +3526,7 @@ exports.tests = [
         return typeof DataView.prototype.getBigInt64 === 'function';
       */},
       res: {
+        chrome67: true,
       },
     },
     {
@@ -3528,6 +3535,7 @@ exports.tests = [
         return typeof DataView.prototype.getBigUint64 === 'function';
       */},
       res: {
+        chrome67: true,
       },
     },
   ],
