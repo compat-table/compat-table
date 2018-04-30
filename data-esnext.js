@@ -119,6 +119,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge12: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -137,6 +138,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -155,6 +157,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -172,6 +175,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -191,6 +195,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -208,6 +213,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -226,6 +232,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -244,6 +251,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -262,6 +270,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -280,6 +289,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -298,6 +308,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -319,6 +330,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -339,6 +351,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -358,6 +371,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -378,6 +392,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -398,6 +413,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -418,6 +434,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -439,6 +456,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -459,6 +477,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -479,6 +498,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -499,6 +519,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -519,6 +540,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -539,6 +561,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -559,6 +582,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -579,6 +603,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -599,6 +624,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -618,6 +644,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -637,6 +664,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -656,6 +684,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -675,6 +704,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -696,6 +726,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -715,6 +746,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -737,6 +769,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -756,6 +789,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -778,6 +812,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -797,6 +832,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -818,6 +854,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -837,6 +874,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -857,6 +895,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -877,6 +916,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -898,6 +938,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -918,6 +959,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -937,6 +979,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -957,6 +1000,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -978,6 +1022,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -998,6 +1043,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1018,6 +1064,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1038,6 +1085,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1057,6 +1105,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1076,6 +1125,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1095,6 +1145,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1115,6 +1166,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1135,6 +1187,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1155,6 +1208,7 @@ exports.tests = [
       res: {
         ie11: false,
         edge13: edge.experimental,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1174,6 +1228,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1194,6 +1249,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
@@ -1212,6 +1268,7 @@ exports.tests = [
       */},
       res: {
         ie11: false,
+        edge16: false,
         firefox2: false,
         firefox48: firefox.nightly,
         opera10_50: false,
