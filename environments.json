@@ -2171,7 +2171,7 @@
   "node8": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 8.0-8.2",
+    "short": "Node &gt;=8.0 &lt;8.3",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome58",
@@ -2206,11 +2206,28 @@
   "node8_7": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=8.7 &lt;9",
+    "short": "Node &gt;=8.7 &lt;8.10",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome61",
     "release": "2017-10-11",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
+  "node8_10": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=8.10 &lt;9",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome62",
+    "release": "2018-03-07",
     "unstable": false,
     "test_suites": [
       "es5",
