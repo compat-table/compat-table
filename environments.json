@@ -411,7 +411,7 @@
     "family": "Chakra",
     "short": "Edge 15",
     "release": "2017-04-11",
-    "obsolete": false
+    "obsolete": true
   },
   "edge16": {
     "full": "Microsoft Edge",
@@ -423,7 +423,14 @@
   "edge17": {
     "full": "Microsoft Edge",
     "family": "Chakra",
-    "short": "Edge 17 Preview",
+    "short": "Edge 17",
+    "release": "2018-04-30",
+    "obsolete": false
+  },
+  "edge18": {
+    "full": "Microsoft Edge",
+    "family": "Chakra",
+    "short": "Edge 18 Preview",
     "unstable": true
   },
   "firefox1": {
