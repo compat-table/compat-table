@@ -24,8 +24,6 @@
     "short": "Babel 6 +<br><nobr>core-js</nobr>",
     "family": "Babel",
     "platformtype": "compiler",
-    "note_id": "babel-optional",
-    "note_html": "Flagged features require an optional transformer setting.",
     "obsolete": false,
     "test_suites": [
       "es6",
@@ -38,8 +36,6 @@
     "short": "Babel 7 +<br><nobr>core-js</nobr>",
     "family": "Babel",
     "platformtype": "compiler",
-    "note_id": "babel-optional",
-    "note_html": "Flagged features require an optional transformer setting.",
     "unstable": true,
     "test_suites": [
       "es6",
@@ -1147,7 +1143,6 @@
     "short": "CH 1",
     "release": "2008-12-11",
     "retire": "2009-05-24",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome2": {
@@ -1156,7 +1151,6 @@
     "short": "CH 2",
     "release": "2009-05-24",
     "retire": "2009-10-12",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome3": {
@@ -1165,7 +1159,6 @@
     "short": "CH 3",
     "release": "2009-10-12",
     "retire": "2010-01-25",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome4": {
@@ -1174,7 +1167,6 @@
     "short": "CH 4",
     "release": "2010-01-25",
     "retire": "2010-05-21",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome5": {
@@ -1183,7 +1175,6 @@
     "short": "CH 5",
     "release": "2010-05-21",
     "retire": "2010-09-02",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome6": {
@@ -1192,7 +1183,6 @@
     "short": "CH 6",
     "release": "2010-09-02",
     "retire": "2010-10-21",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome7": {
@@ -1201,7 +1191,6 @@
     "short": "CH 7",
     "release": "2010-10-21",
     "retire": "2010-12-02",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome8": {
@@ -1210,7 +1199,6 @@
     "short": "CH 8",
     "release": "2010-12-02",
     "retire": "2011-02-03",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome9": {
@@ -1219,7 +1207,6 @@
     "short": "CH 9",
     "release": "2011-02-03",
     "retire": "2011-03-08",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome10": {
@@ -1228,7 +1215,6 @@
     "short": "CH 10",
     "release": "2011-03-08",
     "retire": "2011-04-27",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome11": {
@@ -1237,7 +1223,6 @@
     "short": "CH 11",
     "release": "2011-04-27",
     "retire": "2011-06-07",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome12": {
@@ -1246,7 +1231,6 @@
     "short": "CH 12",
     "release": "2011-06-07",
     "retire": "2011-08-02",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome13": {
@@ -1255,7 +1239,6 @@
     "short": "CH 13",
     "release": "2011-08-02",
     "retire": "2011-09-16",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome14": {
@@ -1264,7 +1247,6 @@
     "short": "CH 14",
     "release": "2011-09-16",
     "retire": "2011-10-25",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome15": {
@@ -1273,7 +1255,6 @@
     "short": "CH 15",
     "release": "2011-10-25",
     "retire": "2011-12-13",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome16": {
@@ -1282,7 +1263,6 @@
     "short": "CH 16",
     "release": "2011-12-13",
     "retire": "2012-02-08",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome17": {
@@ -1291,7 +1271,6 @@
     "short": "CH 17",
     "release": "2012-02-08",
     "retire": "2012-09-26",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome18": {
@@ -1300,7 +1279,6 @@
     "short": "CH 18",
     "release": "2012-03-28",
     "retire": "2012-06-28",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome19": {
@@ -1309,9 +1287,7 @@
     "short": "CH 19",
     "release": "2012-05-15",
     "retire": "2012-06-26",
-    "obsolete": "very",
-    "note_id": "experimental-flag",
-    "note_html": "Flagged features have to be enabled via \"Experimental Javascript features\" flag unless otherwise stated"
+    "obsolete": "very"
   },
   "chrome20": {
     "full": "Chrome",
@@ -1319,8 +1295,7 @@
     "short": "CH 20",
     "release": "2012-06-26",
     "retire": "2012-08-22",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome21": {
     "full": "Chrome",
@@ -1328,8 +1303,7 @@
     "short": "CH 21",
     "release": "2012-07-31",
     "retire": "2012-09-25",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome22": {
     "full": "Chrome",
@@ -1337,8 +1311,7 @@
     "short": "CH 22",
     "release": "2012-09-25",
     "retire": "2012-11-28",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome23": {
     "full": "Chrome 23, Opera 15",
@@ -1346,8 +1319,7 @@
     "short": "CH 23,<br>OP 15",
     "release": "2012-11-06",
     "retire": "2013-01-10",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome24": {
     "full": "Chrome 24",
@@ -1355,8 +1327,7 @@
     "short": "CH 24",
     "release": "2013-01-10",
     "retire": "2013-03-04",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome25": {
     "full": "Chrome 25",
@@ -1364,8 +1335,7 @@
     "short": "CH 25",
     "release": "2013-02-21",
     "retire": "2013-04-09",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome26": {
     "full": "Chrome 26",
@@ -1373,8 +1343,7 @@
     "short": "CH 26",
     "release": "2013-03-26",
     "retire": "2013-06-03",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome27": {
     "full": "Chrome 27",
@@ -1382,8 +1351,7 @@
     "short": "CH 27",
     "release": "2013-05-21",
     "retire": "2013-07-17",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome28": {
     "full": "Chrome 28",
@@ -1391,8 +1359,7 @@
     "short": "CH 28",
     "release": "2013-06-17 ",
     "retire": "2013-09-12",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome29": {
     "full": "Chrome 29, Opera 16",
@@ -1400,8 +1367,7 @@
     "short": "CH&nbsp;29,<br>OP&nbsp;16",
     "release": "2013-08-20",
     "retire": "2013-10-02",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome30": {
     "full": "Chrome, Opera 17",
@@ -1409,8 +1375,7 @@
     "short": "CH&nbsp;30,<br>OP&nbsp;17",
     "release": "2013-09-18",
     "retire": "2013-11-20",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome31": {
     "full": "Chrome, Opera 18",
@@ -1418,8 +1383,7 @@
     "short": "CH&nbsp;31,<br>OP&nbsp;18",
     "release": "2013-11-12",
     "retire": "2014-01-27",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome32": {
     "full": "Chrome, Opera 19",
@@ -1427,8 +1391,7 @@
     "short": "CH&nbsp;32,<br>OP&nbsp;19",
     "release": "2014-01-14",
     "retire": "2014-02-26",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome33": {
     "full": "Chrome, Opera",
@@ -1436,8 +1399,7 @@
     "short": "CH&nbsp;33,<br>OP&nbsp;20",
     "release": "2014-02-18",
     "retire": "2014-04-29",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome34": {
     "full": "Chrome, Opera",
@@ -1445,8 +1407,7 @@
     "short": "CH&nbsp;34,<br>OP&nbsp;21",
     "release": "2014-04-02",
     "retire": "2014-05-28",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome35": {
     "full": "Chrome, Opera",
@@ -1454,8 +1415,7 @@
     "short": "CH&nbsp;35,<br>OP&nbsp;22",
     "release": "2014-05-20",
     "retire": "2014-07-16",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome36": {
     "full": "Chrome, Opera",
@@ -1463,8 +1423,7 @@
     "short": "CH&nbsp;36,<br>OP&nbsp;23",
     "release": "2014-07-15",
     "retire": "2014-09-22",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome37": {
     "full": "Chrome, Opera",
@@ -1472,8 +1431,7 @@
     "short": "CH&nbsp;37,<br>OP&nbsp;24",
     "release": "2014-08-26",
     "retire": "2014-10-08",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome38": {
     "full": "Chrome, Opera",
@@ -1481,8 +1439,7 @@
     "short": "CH&nbsp;38,<br>OP&nbsp;25",
     "release": "2014-10-07",
     "retire": "2014-11-24",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome39": {
     "full": "Chrome, Opera",
@@ -1490,8 +1447,7 @@
     "short": "CH 39,<br>OP&nbsp;26",
     "release": "2014-11-12",
     "retire": "2015-01-21",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome40": {
     "full": "Chrome, Opera",
@@ -1499,8 +1455,7 @@
     "short": "CH 40,<br>OP&nbsp;27",
     "release": "2015-01-20",
     "retire": "2015-03-16",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome41": {
     "full": "Chrome, Opera",
@@ -1508,8 +1463,7 @@
     "short": "CH 41,<br>OP&nbsp;28",
     "release": "2015-03-03",
     "retire": "2015-04-16",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome42": {
     "full": "Chrome, Opera",
@@ -1517,8 +1471,7 @@
     "short": "CH 42,<br>OP&nbsp;29",
     "release": "2015-04-14",
     "retire": "2015-06-01",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome43": {
     "full": "Chrome, Opera",
@@ -1526,8 +1479,7 @@
     "short": "CH 43,<br>OP&nbsp;30",
     "release": "2015-05-19",
     "retire": "2015-07-29",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome44": {
     "full": "Chrome, Opera",
@@ -1535,8 +1487,7 @@
     "short": "CH 44,<br>OP&nbsp;31",
     "release": "2015-07-21",
     "retire": "2015-09-02",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome45": {
     "full": "Chrome, Opera",
@@ -1544,8 +1495,7 @@
     "short": "CH 45,<br>OP&nbsp;32",
     "release": "2015-09-01",
     "retire": "2015-10-22",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome46": {
     "full": "Chrome, Opera",
@@ -1553,8 +1503,7 @@
     "short": "CH 46,<br>OP&nbsp;33",
     "release": "2015-10-13",
     "retire": "2015-12-02",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome47": {
     "full": "Chrome, Opera",
@@ -1562,8 +1511,7 @@
     "short": "CH 47,<br>OP&nbsp;34",
     "release": "2015-12-01",
     "retire": "2016-01-27",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome48": {
     "full": "Chrome, Opera",
@@ -1571,8 +1519,7 @@
     "short": "CH 48,<br>OP&nbsp;35",
     "release": "2016-01-20",
     "retire": "2016-03-09",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome49": {
     "full": "Chrome, Opera",
@@ -1580,8 +1527,7 @@
     "short": "CH 49,<br>OP&nbsp;36",
     "release": "2016-03-02",
     "retire": "2016-04-26",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome50": {
     "full": "Chrome, Opera",
@@ -1589,8 +1535,7 @@
     "short": "CH 50,<br>OP&nbsp;37",
     "release": "2016-04-13",
     "retire": "2016-06-01",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome51": {
     "full": "Chrome, Opera",
@@ -1598,8 +1543,7 @@
     "short": "CH 51,<br>OP&nbsp;38",
     "release": "2016-05-25",
     "retire": "2016-07-27",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome52": {
     "full": "Chrome, Opera",
@@ -1607,8 +1551,7 @@
     "short": "CH&nbsp;52,<br>OP&nbsp;39",
     "release": "2016-07-20",
     "retire": "2016-09-07",
-    "obsolete": "very",
-    "note_id": "experimental-flag"
+    "obsolete": "very"
   },
   "chrome53": {
     "full": "Chrome, Opera",
@@ -1616,7 +1559,6 @@
     "short": "CH&nbsp;53,<br>OP&nbsp;40",
     "release": "2016-08-31",
     "retire": "2016-10-19",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome54": {
@@ -1625,7 +1567,6 @@
     "short": "CH&nbsp;54,<br>OP&nbsp;41",
     "release": "2016-10-12",
     "retire": "2016-12-06",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome55": {
@@ -1634,7 +1575,6 @@
     "short": "CH&nbsp;55,<br>OP&nbsp;42",
     "release": "2016-12-01",
     "retire": "2017-02-01",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome56": {
@@ -1643,7 +1583,6 @@
     "short": "CH&nbsp;56,<br>OP&nbsp;43",
     "release": "2017-01-25",
     "retire": "2017-03-16",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome57": {
@@ -1652,7 +1591,6 @@
     "short": "CH&nbsp;57,<br>OP&nbsp;44",
     "release": "2017-03-09",
     "retire": "2017-04-25",
-    "note_id": "experimental-flag",
     "obsolete": "very"
   },
   "chrome58": {
@@ -1661,7 +1599,6 @@
     "short": "CH&nbsp;58,<br>OP&nbsp;45",
     "release": "2017-04-19",
     "retire": "2017-06-06",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome59": {
@@ -1670,7 +1607,6 @@
     "short": "CH&nbsp;59,<br>OP&nbsp;46",
     "release": "2017-06-05",
     "retire": "2017-07-31",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome60": {
@@ -1679,7 +1615,6 @@
     "short": "CH&nbsp;60,<br>OP&nbsp;47",
     "release": "2017-07-25",
     "retire": "2017-09-05",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome61": {
@@ -1687,7 +1622,6 @@
     "family": "V8",
     "short": "CH&nbsp;61,<br>OP&nbsp;48",
     "release": "2017-09-05",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome62": {
@@ -1695,7 +1629,6 @@
     "family": "V8",
     "short": "CH&nbsp;62,<br>OP&nbsp;49",
     "release": "2017-10-17",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome63": {
@@ -1703,43 +1636,39 @@
     "family": "V8",
     "short": "CH&nbsp;63,<br>OP&nbsp;50",
     "release": "2017-12-05",
-    "note_id": "experimental-flag",
     "obsolete": true
   },
   "chrome64": {
     "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;64,<br>OP&nbsp;51",
-    "note_id": "experimental-flag",
+    "release": "2018-01-23",
     "obsolete": true
   },
   "chrome65": {
     "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;65,<br>OP&nbsp;52",
-    "note_id": "experimental-flag",
+    "release": "2018-03-06",
     "obsolete": false
   },
   "chrome66": {
     "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;66,<br>OP&nbsp;53",
-    "release": "2017-04-17",
-    "note_id": "experimental-flag",
+    "release": "2018-04-17",
     "obsolete": false
   },
   "chrome67": {
     "full": "Chrome Dev",
     "family": "V8",
     "short": "CH&nbsp;67,<br>OP&nbsp;54",
-    "note_id": "experimental-flag",
     "unstable": true
   },
   "chrome68": {
     "full": "Chrome Canary",
     "family": "V8",
     "short": "CH&nbsp;68,<br>OP&nbsp;55",
-    "note_id": "experimental-flag",
     "unstable": true
   },
   "safari1": {
