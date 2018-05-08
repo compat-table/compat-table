@@ -5,6 +5,11 @@
       "note_id": "babel-core-js",
       "note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
     },
+    "optional": {
+      "val": "flagged",
+      "note_id": "babel-optional-flag",
+      "note_html": "This feature features requires an optional transformer setting."
+    },
     "regenerator": {
       "val": true,
       "note_id": "babel-regenerator",
@@ -32,61 +37,66 @@
     "experimental": {
       "val": "flagged",
       "note_id": "edge-experimental-flag",
-      "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under about:flags"
+      "note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
     }
   },
   "firefox": {
     "sharedmem": {
       "val": "flagged",
       "note_id": "firefox-sharedmem",
-      "note_html": "The feature have to be enabled via \"javascript.options.shared_memory\" setting under about:config.  It is enabled by default in Firefox Developer and Firefox Nightly."
+      "note_html": "The feature have to be enabled via \"javascript.options.shared_memory\" setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
     },
     "nomob": {
       "val": true,
       "note_id": "firefox-nomob",
-      "note_html": "The feature is available on desktop versions only, it is not available on mobile versions."
+      "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
     },
     "developer": {
       "val": false,
       "note_id": "firefox-developer",
-      "note_html": "The feature is enabled by default only in Firefox Developer and Firefox Nightly."
+      "note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
     },
     "nightly": {
       "val": false,
       "note_id": "firefox-nightly",
-      "note_html": "The feature is enabled by default only in Firefox Nightly."
+      "note_html": "The feature is available only in Firefox Nightly builds."
     }
   },
   "chrome": {
     "sharedmem": {
       "val": "flagged",
       "note_id": "chrome-sharedmem",
-      "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under about:flags"
+      "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+    },
+    "experimental": {
+      "val": "flagged",
+      "note_id": "chrome-experimental",
+      "note_html": "The feature have to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
     },
     "harmony": {
       "val": "flagged",
       "note_id": "chrome-harmony",
-      "note_html": "The feature have to be enabled via --js-flags=\"--harmony\" flag"
+      "note_html": "The feature have to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
     },
     "tco": {
       "val": false,
       "note_id": "chrome-tco",
-      "note_html": "The feature is considered unstable, but can be enabled via --js-flags=\"--harmony-tailcalls\" flag"
+      "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-tailcalls\"</code> flag"
     },
     "promise": {
       "val": false,
       "note_id": "chrome-promise",
-      "note_html": "The feature is considered unstable, but can be enabled via --js-flags=\"--harmony-promise-finally\" flag"
+      "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-promise-finally\"</code> flag"
     },
     "simd": {
       "val": false,
       "note_id": "chrome-simd",
-      "note_html": "The feature is considered unstable, but can be enabled via --js-flags=\"--harmony-simd\" flag"
+      "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
     }
   },
   "sparseNote": {
     "val": true,
     "note_id": "sparse_arrays",
-    "note_html": "Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, `0 in [,]` and `0 in [undefined]` both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays."
+    "note_html": "Internet Explorer 6 - 8 do not differentiate between a dense array with undefined values, and a sparse array. Specifically, <code>`0 in [,]`</code> and <code>`0 in [undefined]`</code> both yield false - whereas in a compliant browser, the former would give `false`, the latter `true`. As such, ES5 array iteration methods can only be shimmed reliably when dealing with dense arrays."
   }
 }
