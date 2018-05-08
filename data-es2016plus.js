@@ -885,7 +885,7 @@ exports.tests = [
           edge17: {
             val: false,
             note_id: 'edg-shared-memory-spectre',
-            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs</a>.',
+            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs',
           },
           firefox2: false,
           firefox46: firefox.nightly,
@@ -903,7 +903,7 @@ exports.tests = [
           chrome63: {
             val: false,
             note_id: 'chr-shared-memory-spectre',
-            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs</a>.',
+            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs',
           },
           safari10_1: true,
           safari11: {
