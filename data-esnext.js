@@ -1427,6 +1427,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.trimStart',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
       */},
@@ -1446,6 +1447,7 @@ exports.tests = [
     },
     {
       name: 'String.prototype.trimEnd',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd',
       exec: function(){/*
         return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
       */},
