@@ -4138,12 +4138,12 @@ return object.foo === 42 &amp;&amp; object.bar === 23;
 <td class="tally" data-browser="ios11" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios11_3" data-tally="0">0/4</td>
 </tr>
-<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.intersect"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.intersect">&#xA7;</a>Set.prototype.intersect</span><script data-source="
-var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
+<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.intersection"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.intersection">&#xA7;</a>Set.prototype.intersection</span><script data-source="
+var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
 return set.size === 2
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("50");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("50");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -4299,12 +4299,12 @@ return set.size === 3
 <td class="no" data-browser="ios11">No</td>
 <td class="no" data-browser="ios11_3">No</td>
 </tr>
-<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.except"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.except">&#xA7;</a>Set.prototype.except</span><script data-source="
-var set = new Set([1, 2, 3]).except(new Set([3, 4]));
+<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.difference"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.difference">&#xA7;</a>Set.prototype.difference</span><script data-source="
+var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).except(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).except(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("52");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("52");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -4379,12 +4379,12 @@ return set.size === 2
 <td class="no" data-browser="ios11">No</td>
 <td class="no" data-browser="ios11_3">No</td>
 </tr>
-<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.xor"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.xor">&#xA7;</a>Set.prototype.xor</span><script data-source="
-var set = new Set([1, 2]).xor(new Set([2, 3]));
+<tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.symmetricDifference"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.symmetricDifference">&#xA7;</a>Set.prototype.symmetricDifference</span><script data-source="
+var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).xor(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).xor(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("53");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("53");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>

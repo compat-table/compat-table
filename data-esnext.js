@@ -3583,14 +3583,15 @@ exports.tests = [
   significance: 'medium',
   subtests: [
     {
-      name: 'Set.prototype.intersect',
+      name: 'Set.prototype.intersection',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
+        var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
         return set.size === 2
           && set.has(2)
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
@@ -3603,28 +3604,31 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
-      name: 'Set.prototype.except',
+      name: 'Set.prototype.difference',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).except(new Set([3, 4]));
+        var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
         return set.size === 2
           && set.has(1)
           && set.has(2);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
-      name: 'Set.prototype.xor',
+      name: 'Set.prototype.symmetricDifference',
       exec: function () {/*
-        var set = new Set([1, 2]).xor(new Set([2, 3]));
+        var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
         return set.size === 2
           && set.has(1)
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
   ]
