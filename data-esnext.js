@@ -2174,7 +2174,7 @@ exports.tests = [
 },
 {
   name: 'static class fields',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-static-class-features/',
   subtests: [
