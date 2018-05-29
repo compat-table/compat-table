@@ -2648,7 +2648,7 @@ exports.tests = [
   {
     name: 'optional catch binding',
     category: '2019 misc',
-    significance: 'tiny',
+    significance: 'small',
     spec: 'https://tc39.github.io/proposal-optional-catch-binding/',
     subtests: [
       {
