@@ -2645,11 +2645,107 @@ exports.tests = [
       }
     ]
   },
+  {
+    name: 'optional catch binding',
+    category: '2019 misc',
+    significance: 'tiny',
+    spec: 'https://tc39.github.io/proposal-optional-catch-binding/',
+    subtests: [
+      {
+        name: 'basic',
+        exec: function(){/*
+          try {
+            throw new Error();
+          }
+          catch {
+            return true;
+          }
+          return false;
+        */},
+        res: {
+          babel7: true,
+          typescript2_5: true,
+          ie11: false,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          chrome65: chrome.harmony,
+          chrome66: true,
+          safari11_1: true,
+          safaritp: true,
+          webkit: true,
+          duktape2_2: false,
+        },
+      },
+      {
+        name: 'await',
+        exec: function(){/*
+          (async function (){
+            try {
+              await Promise.reject();
+            }
+            catch {
+              asyncTestPassed();
+            }
+          })();
+        */},
+        res: {
+          babel7: true,
+          typescript2_5: true,
+          ie11: false,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          chrome65: chrome.harmony,
+          chrome66: true,
+          safari11_1: true,
+          safaritp: true,
+          webkit: true,
+          duktape2_2: false,
+        },
+      },
+      {
+        name: 'yield',
+        exec: function(){/*
+          function *foo() {
+            try {
+              yield;
+              throw new Error();
+            }
+            catch {
+              return true;
+            }
+          }
+
+          var it = foo();
+          it.next();
+          return it.next().value;
+        */},
+        res: {
+          babel7: true,
+          typescript2_5: true,
+          ie11: false,
+          firefox2: false,
+          firefox57: false,
+          firefox58: true,
+          opera10_50: false,
+          chrome65: chrome.harmony,
+          chrome66: true,
+          safari11_1: true,
+          safaritp: true,
+          webkit: true,
+          duktape2_2: false,
+        }
+      }
+    ]
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
