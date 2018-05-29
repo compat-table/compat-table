@@ -2679,7 +2679,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Array.prototype.{flatten, flatMap}',
+  name: 'Array.prototype.{flat, flatMap}',
   category: STAGE3,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
@@ -2691,20 +2691,28 @@ exports.tests = [
   ],
   subtests: [
     {
-      name: 'Array.prototype.flatten',
+      name: 'Array.prototype.flat',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten',
       exec: function(){/*
-        return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
+        return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
       */},
       res: {
-        babel6: babel.corejs,
-        typescript1: typescript.corejs,
+        babel6: false,
+        typescript1: false,
         ie11: false,
         firefox2: false,
         firefox58: false,
-        firefox59: firefox.nightly,
+        firefox59: {
+          val: 'false',
+          note_id: 'ffox-flatten',
+          note_html: 'Firefox Nightly builds support the draft version <code>Array.prototype.flatten()</code>.'
+        },
         opera10_50: false,
-        safaritp: true,
+        safaritp: {
+          val: 'false',
+          note_id: 'safari-flatten',
+          note_html: 'Safari TP supports the draft version <code>Array.prototype.flatten()</code>.'
+        },
         duktape2_2: false,
       }
     },
