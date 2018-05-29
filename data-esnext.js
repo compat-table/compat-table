@@ -3579,7 +3579,7 @@ exports.tests = [
 {
   name: 'Set methods',
   spec: 'https://github.com/tc39/proposal-set-methods',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'medium',
   subtests: [
     {
