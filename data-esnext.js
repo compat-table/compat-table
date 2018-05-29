@@ -1313,7 +1313,7 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'large',
   spec: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*
@@ -2174,7 +2174,7 @@ exports.tests = [
 },
 {
   name: 'static class fields',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-static-class-features/',
   subtests: [
@@ -2679,7 +2679,7 @@ exports.tests = [
   ]
 },
 {
-  name: 'Array.prototype.{flatten, flatMap}',
+  name: 'Array.prototype.{flat, flatMap}',
   category: STAGE3,
   significance: 'medium',
   spec: 'https://tc39.github.io/proposal-flatMap/',
@@ -2691,20 +2691,28 @@ exports.tests = [
   ],
   subtests: [
     {
-      name: 'Array.prototype.flatten',
-      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten',
+      name: 'Array.prototype.flat',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat',
       exec: function(){/*
-        return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';
+        return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
       */},
       res: {
-        babel6: babel.corejs,
-        typescript1: typescript.corejs,
+        babel6: false,
+        typescript1: false,
         ie11: false,
         firefox2: false,
         firefox58: false,
-        firefox59: firefox.nightly,
+        firefox59: {
+          val: 'false',
+          note_id: 'ffox-flatten',
+          note_html: 'Firefox Nightly builds support the draft version <code>Array.prototype.flatten()</code>.'
+        },
         opera10_50: false,
-        safaritp: true,
+        safaritp: {
+          val: 'false',
+          note_id: 'safari-flatten',
+          note_html: 'Safari TP supports the draft version <code>Array.prototype.flatten()</code>.'
+        },
         duktape2_2: false,
       }
     },
@@ -2876,102 +2884,6 @@ exports.tests = [
         duktape2_2: false,
       }
     },
-  ]
-},
-{
-  name: 'optional catch binding',
-  category: STAGE3,
-  significance: 'tiny',
-  spec: 'https://tc39.github.io/proposal-optional-catch-binding/',
-  subtests: [
-    {
-      name: 'basic',
-      exec: function(){/*
-        try {
-          throw new Error();
-        }
-        catch {
-          return true;
-        }
-        return false;
-      */},
-      res: {
-        babel7: true,
-        typescript2_5: true,
-        ie11: false,
-        firefox2: false,
-        firefox57: false,
-        firefox58: true,
-        opera10_50: false,
-        chrome65: chrome.harmony,
-        chrome66: true,
-        safari11_1: true,
-        safaritp: true,
-        webkit: true,
-        duktape2_2: false,
-      },
-    },
-    {
-      name: 'await',
-      exec: function(){/*
-        (async function (){
-          try {
-            await Promise.reject();
-          }
-          catch {
-            asyncTestPassed();
-          }
-        })();
-      */},
-      res: {
-        babel7: true,
-        typescript2_5: true,
-        ie11: false,
-        firefox2: false,
-        firefox57: false,
-        firefox58: true,
-        opera10_50: false,
-        chrome65: chrome.harmony,
-        chrome66: true,
-        safari11_1: true,
-        safaritp: true,
-        webkit: true,
-        duktape2_2: false,
-      },
-    },
-    {
-      name: 'yield',
-      exec: function(){/*
-        function *foo() {
-          try {
-            yield;
-            throw new Error();
-          }
-          catch {
-            return true;
-          }
-        }
-
-        var it = foo();
-        it.next();
-        return it.next().value;
-      */},
-      res: {
-        babel7: true,
-        typescript2_5: true,
-        ie11: false,
-        firefox2: false,
-        firefox57: false,
-        firefox58: true,
-        opera10_50: false,
-        chrome65: chrome.harmony,
-        chrome66: true,
-        safari11_1: true,
-        safaritp: true,
-        webkit: true,
-        duktape2_2: false,
-      }
-    }
   ]
 },
 {
@@ -3371,7 +3283,7 @@ exports.tests = [
 {
   name: 'numeric separators',
   spec: 'https://github.com/tc39/proposal-numeric-separator',
-  category: STAGE3,
+  category: STAGE2,
   significance: 'small',
   exec: function(){/*
     return 1_000_000.000_001 === 1000000.000001 &&
@@ -3390,7 +3302,7 @@ exports.tests = [
 {
   name: 'Symbol.prototype.description',
   spec: 'https://github.com/tc39/proposal-Symbol-description',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     return Symbol('foo').description === 'foo';
@@ -3632,7 +3544,7 @@ exports.tests = [
   name: 'Object.fromEntries',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-object-from-entries',
-  category: STAGE1,
+  category: STAGE2,
   exec: function () {/*
     var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
     return object.foo === 42 && object.bar === 23;
@@ -3667,18 +3579,19 @@ exports.tests = [
 {
   name: 'Set methods',
   spec: 'https://github.com/tc39/proposal-set-methods',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'medium',
   subtests: [
     {
-      name: 'Set.prototype.intersect',
+      name: 'Set.prototype.intersection',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
+        var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
         return set.size === 2
           && set.has(2)
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
@@ -3691,28 +3604,31 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
-      name: 'Set.prototype.except',
+      name: 'Set.prototype.difference',
       exec: function () {/*
-        var set = new Set([1, 2, 3]).except(new Set([3, 4]));
+        var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
         return set.size === 2
           && set.has(1)
           && set.has(2);
       */},
       res: {
+        firefox2: false,
       }
     },
     {
-      name: 'Set.prototype.xor',
+      name: 'Set.prototype.symmetricDifference',
       exec: function () {/*
-        var set = new Set([1, 2]).xor(new Set([2, 3]));
+        var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
         return set.size === 2
           && set.has(1)
           && set.has(3);
       */},
       res: {
+        firefox2: false,
       }
     },
   ]
