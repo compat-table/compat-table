@@ -1313,7 +1313,7 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'large',
   spec: 'https://github.com/caridy/proposal-realms',
   exec: function () {/*
