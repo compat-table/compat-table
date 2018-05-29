@@ -2445,7 +2445,7 @@ exports.tests = [
   {
     name: 'template literal revision',
     spec: 'https://github.com/tc39/proposal-template-literal-revision',
-    category: '2018 features',
+    category: '2018 misc',
     significance: 'small',
     exec: function() {/*
      function tag(strings, a) {
