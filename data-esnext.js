@@ -2692,7 +2692,7 @@ exports.tests = [
   subtests: [
     {
       name: 'Array.prototype.flat',
-      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat',
       exec: function(){/*
         return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
       */},
