@@ -2687,7 +2687,7 @@ exports.tests = [
   links: [
     {
       note_id: 'flatten-compat-issue',
-      note_html: 'Name of Array.prototype.flatten will likely change due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a>',
+      note_html: 'Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a>',
     }
   ],
   subtests: [
@@ -2706,14 +2706,15 @@ exports.tests = [
         firefox59: {
           val: 'false',
           note_id: 'ffox-flatten',
-          note_html: 'Firefox Nightly builds support the draft version <code>Array.prototype.flatten()</code>.'
+          note_html: 'Older Firefox Nightly builds support only the obsolete draft name <code>Array.prototype.flatten()</code>.'
         },
+        firefox62: firefox.nightly,
         chrome69: true,
         opera10_50: false,
         safaritp: {
           val: 'false',
           note_id: 'safari-flatten',
-          note_html: 'Safari TP supports the draft version <code>Array.prototype.flatten()</code>.'
+          note_html: 'Safari TP supports only the obsolete draft name <code>Array.prototype.flatten()</code>.'
         },
         duktape2_2: false,
       }
