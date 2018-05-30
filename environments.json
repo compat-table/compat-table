@@ -1619,7 +1619,7 @@
     "short": "CH&nbsp;58,<br>OP&nbsp;45",
     "release": "2017-04-19",
     "retire": "2017-06-06",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome59": {
     "full": "Chrome, Opera",
@@ -1670,7 +1670,7 @@
     "family": "V8",
     "short": "CH&nbsp;65,<br>OP&nbsp;52",
     "release": "2018-03-06",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome66": {
     "full": "Chrome",
@@ -1680,15 +1680,21 @@
     "obsolete": false
   },
   "chrome67": {
-    "full": "Chrome Dev",
+    "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;67,<br>OP&nbsp;54",
-    "unstable": true
+    "obsolete": false
   },
   "chrome68": {
-    "full": "Chrome Canary",
+    "full": "Chrome Dev",
     "family": "V8",
     "short": "CH&nbsp;68,<br>OP&nbsp;55",
+    "unstable": true
+  },
+  "chrome69": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;69,<br>OP&nbsp;56",
     "unstable": true
   },
   "safari1": {
