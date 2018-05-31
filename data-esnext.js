@@ -1703,6 +1703,7 @@ exports.tests = [
     typescript1: typescript.corejs,
     ie11: false,
     firefox2: false,
+    chrome69: chrome.harmony,
     opera10_50: false,
     duktape2_0: false,
   }
@@ -2707,6 +2708,7 @@ exports.tests = [
           note_id: 'ffox-flatten',
           note_html: 'Firefox Nightly builds support the draft version <code>Array.prototype.flatten()</code>.'
         },
+        chrome69: true,
         opera10_50: false,
         safaritp: {
           val: 'false',
@@ -2731,6 +2733,7 @@ exports.tests = [
         firefox2: false,
         firefox58: false,
         firefox59: firefox.nightly,
+        chrome69: true,
         opera10_50: false,
         safaritp: true,
         duktape2_2: false,
