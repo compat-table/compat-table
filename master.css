@@ -172,6 +172,10 @@ table.one-selected td.selected {
   border-right: solid 5px #eee;
 }
 
+td:nth-of-type(2).current {
+    outline: #aaf solid 3px;
+}
+
 /* yes/no grid text colors */
 .yes a,
 .tally a,
@@ -204,6 +208,7 @@ td.hover {
     filter:opacity(0.75) brightness(1.1);
     -webkit-filter:opacity(0.75) brightness(1.1);
 }
+
 tr:hover td.obsolete,
 td.hover.obsolete,
 tr:hover td.unstable,
