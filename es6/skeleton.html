@@ -145,7 +145,11 @@
 				var thisScript = document.currentScript || document.scripts[document.scripts.length-1];
 				var pre = thisScript.parentNode;
 
-				pre.textContent = pre.innerText = "" + __createIterableObject;
+                if ("textContent" in pre) {
+                  pre.textContent = "" + __createIterableObject;
+                } else {
+                  pre.innerText = "" + __createIterableObject;
+                }
 			</script>
 		</pre>
       </div>

@@ -32,7 +32,12 @@ window.test = function(expression) {
   // Insert the two new TD elements after the one that contains the SCRIPT
   td = tr.insertBefore(document.createElement("td"), td.nextSibling);
   td.className = result.toLowerCase() + " current";
-  td.textContent = td.innerText = result;
+
+  if ("textContent" in td) {
+    td.textContent = result;
+  } else {
+    td.innerText = result;
+  }
 
   tr.insertBefore(document.createElement("td"), td.nextSibling);
 };
