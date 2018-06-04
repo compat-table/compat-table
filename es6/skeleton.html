@@ -140,7 +140,18 @@
     <div id="footnotes">
       <div id="create-iterable-object">
         <code>__createIterableObject()</code>, used in the numerous "generic iterables" tests, is defined as:
-        <script>document.write("<pre>" + __createIterableObject + "</pre>");</script>
+		<pre>
+			<script>
+				var thisScript = document.currentScript || document.scripts[document.scripts.length-1];
+				var pre = thisScript.parentNode;
+
+                if ("textContent" in pre) {
+                  pre.textContent = "" + __createIterableObject;
+                } else {
+                  pre.innerText = "" + __createIterableObject;
+                }
+			</script>
+		</pre>
       </div>
       <!-- FOOTNOTES -->
     </div>

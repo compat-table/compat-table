@@ -5,6 +5,11 @@ var _gaq = [
 ];
 // jshint ignore:end
 
+
+if (!document.scripts) { // Create "live list" for all scripts if it doesn't exist
+  document.scripts = document.getElementsByTagName("script");
+}
+
 (function() {
   var ga = document.createElement('script');
   ga.type = 'text/javascript';
@@ -17,10 +22,25 @@ var _gaq = [
 
 window.test = function(expression) {
   var result = (typeof expression === "string" ? expression : !!expression ? 'Yes' : 'No');
-  document.write('<td class="' + result.toLowerCase() + ' current">' + result + '</td><td></td>');
-};
 
-document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
+  // Last SCRIPT in the document is the one currently executing
+  var thisScript = document.currentScript || document.scripts[document.scripts.length-1];
+
+  var td = thisScript.parentNode;
+  var tr = td.parentNode;
+
+  // Insert the two new TD elements after the one that contains the SCRIPT
+  td = tr.insertBefore(document.createElement("td"), td.nextSibling);
+  td.className = result.toLowerCase() + " current";
+
+  if ("textContent" in td) {
+    td.textContent = result;
+  } else {
+    td.innerText = result;
+  }
+
+  tr.insertBefore(document.createElement("td"), td.nextSibling);
+};
 
 // For async tests, this returned function is used to set results
 // instead of returning true/false.
