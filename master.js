@@ -466,7 +466,7 @@ $(function() {
     if (!ordering[sortAttr]) {
       // Sort the platforms
 
-      var cells = [].slice.call($('th.platform')).sort(function(a, b) {
+      var cells = $('th.platform').toArray().sort(function(a, b) {
         return sortSpec.order * (parseFloat(b.getAttribute(sortAttr)) - parseFloat(a.getAttribute(sortAttr)));
       });
       ordering[sortAttr] = $.map(cells, platformOf);
@@ -482,7 +482,7 @@ $(function() {
     // Now sort the columns using the comparison function
     table.detach().find('tr').each(function(i, row) {
 
-      var cells = [].slice.call(row.cells, 3).sort(comparator);
+      var cells = $(row.cells).slice(3).toArray().sort(comparator);
 
       for (var j = 0, jlen = cells.length; j < jlen; j++) {
         row.appendChild(cells[j]);
