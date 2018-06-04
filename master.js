@@ -47,11 +47,15 @@ window.test = function(expression) {
 function makeAsyncPassedFn(className, textContent) {
   return function(rowNum) {
     return function() {
-      var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
-      elem.className = className;
-      elem.textContent = textContent;
+      var elem = $("#table-wrapper tbody tr:not(.category)")
+        .eq(+rowNum)
+        .children(".current")
+        .first()
+        .prop("className", className)
+        .text(textContent);
+
       if (window.__updateHeaderTotal) {
-        $(elem).parent().prevAll('.supertest').first().each(window.__updateSupertest);
+        elem.parent().prevAll('.supertest').first().each(window.__updateSupertest);
         $('th.current').each(window.__updateHeaderTotal);
       }
     };
@@ -485,7 +489,7 @@ $(function() {
     if (!ordering[sortAttr]) {
       // Sort the platforms
 
-      var cells = [].slice.call($('th.platform')).sort(function(a, b) {
+      var cells = $('th.platform').toArray().sort(function(a, b) {
         return sortSpec.order * (parseFloat(b.getAttribute(sortAttr)) - parseFloat(a.getAttribute(sortAttr)));
       });
       ordering[sortAttr] = $.map(cells, platformOf);
@@ -501,7 +505,7 @@ $(function() {
     // Now sort the columns using the comparison function
     table.detach().find('tr').each(function(i, row) {
 
-      var cells = [].slice.call(row.cells, 3).sort(comparator);
+      var cells = $(row.cells).slice(3).toArray().sort(comparator);
 
       for (var j = 0, jlen = cells.length; j < jlen; j++) {
         row.appendChild(cells[j]);
