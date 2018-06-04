@@ -29,8 +29,6 @@ window.test = function(expression) {
   var td = thisScript.parentNode;
   var tr = td.parentNode;
 
-  //document.write('<td class="' + result.toLowerCase() + ' current">' + result + '</td><td></td>');
-
   // Insert the two new TD elements after the one that contains the SCRIPT
   td = tr.insertBefore(document.createElement("td"), td.nextSibling);
   td.className = result.toLowerCase() + " current";
@@ -38,9 +36,6 @@ window.test = function(expression) {
 
   tr.insertBefore(document.createElement("td"), td.nextSibling);
 };
-
-// Moved to 'master.css'
-//document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 
 // For async tests, this returned function is used to set results
 // instead of returning true/false.
