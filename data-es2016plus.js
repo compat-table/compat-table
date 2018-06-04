@@ -2601,7 +2601,7 @@ exports.tests = [
           firefox55: firefox.nightly,
           firefox57: true,
           opera10_50: false,
-          safaritp: true,
+          safari12: true,
           webkit: true,
           duktape2_0: false,
         }
@@ -2638,7 +2638,7 @@ exports.tests = [
           firefox55: firefox.nightly,
           firefox57: true,
           opera10_50: false,
-          safaritp: true,
+          safari12: true,
           webkit: true,
           duktape2_0: false,
         }
