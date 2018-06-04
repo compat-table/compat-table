@@ -27,11 +27,15 @@ document.write('<style>td:nth-of-type(2) { outline: #aaf solid 3px; }</style>');
 function makeAsyncPassedFn(className, textContent) {
   return function(rowNum) {
     return function() {
-      var elem = $("#table-wrapper tbody tr:not(.category)").eq(+rowNum).children(".current")[0];
-      elem.className = className;
-      elem.textContent = textContent;
+      var elem = $("#table-wrapper tbody tr:not(.category)")
+        .eq(+rowNum)
+        .children(".current")
+        .first()
+        .prop("className", className)
+        .text(textContent);
+
       if (window.__updateHeaderTotal) {
-        $(elem).parent().prevAll('.supertest').first().each(window.__updateSupertest);
+        elem.parent().prevAll('.supertest').first().each(window.__updateSupertest);
         $('th.current').each(window.__updateHeaderTotal);
       }
     };
