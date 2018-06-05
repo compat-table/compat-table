@@ -1139,7 +1139,11 @@ exports.tests = [
   subtests: [{
     name: 'Function.prototype.apply permits array-likes',
     exec: function () {
-      return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});
+      try {
+        return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});
+      } catch (e) {
+        return false;
+      }
     },
     res: {
       ie7: null,
