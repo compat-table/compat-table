@@ -4031,10 +4031,18 @@ return result;
 <td class="tally" data-browser="ios11_3" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 </tr>
 <tr class="subtest" data-parent="Miscellaneous" id="test-Miscellaneous_Function.prototype.apply_permits_array-likes"><td><span><a class="anchor" href="#test-Miscellaneous_Function.prototype.apply_permits_array-likes">&#xA7;</a>Function.prototype.apply permits array-likes</span><script data-source="function () {
-return (function(a,b) { return a === 1 &amp;&amp; b === 2; }).apply({}, {0:1, 1:2, length:2});
+try {
+  return (function(a,b) { return a === 1 &amp;&amp; b === 2; }).apply({}, {0:1, 1:2, length:2});
+} catch (e) {
+  return false;
+}
     }">test(
 function () {
-return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});
+try {
+  return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});
+} catch (e) {
+  return false;
+}
     }())</script></td>
 <td class="no" data-browser="es5shim">No</td>
 <td class="unknown obsolete" data-browser="konq4_13">?</td>
