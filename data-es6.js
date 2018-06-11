@@ -6326,7 +6326,11 @@ exports.tests = [
         typescript1corejs2: typescript.corejs,
         firefox2: false,
         firefox4: true,
-        ie11: true,
+        ie11: {
+          val: true,
+          note_id: "ie-clampedarray",
+          note_html: "<code>Uint8ClampedArray</code> has been introduced in the build <a href='https://support.microsoft.com/en-us/help/2929437/description-of-the-security-update-for-internet-explorer-11-on-windows'>KB2929437</a>, so it is missing in early IE11 builds"
+        },
         edge12: true,
         chrome5: true,
         safari6: true,
