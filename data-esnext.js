@@ -2704,17 +2704,17 @@ exports.tests = [
         firefox2: false,
         firefox58: false,
         firefox59: {
-          val: 'false',
+          val: false,
           note_id: 'ffox-flatten',
-          note_html: 'Older Firefox Nightly builds support only the obsolete draft name <code>Array.prototype.flatten()</code>.'
+          note_html: 'Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.'
         },
-        firefox62: firefox.nightly,
+        firefox62: true,
         chrome69: true,
         opera10_50: false,
-        safaritp: {
-          val: 'false',
+        safari12: {
+          val: false,
           note_id: 'safari-flatten',
-          note_html: 'Safari TP supports only the obsolete draft name <code>Array.prototype.flatten()</code>.'
+          note_html: 'Older Safari and Webkit builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.'
         },
         duktape2_2: false,
       }
@@ -2734,6 +2734,7 @@ exports.tests = [
         firefox2: false,
         firefox58: false,
         firefox59: firefox.nightly,
+        firefox62: true,
         chrome69: true,
         opera10_50: false,
         safari12: true,
