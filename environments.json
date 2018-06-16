@@ -84,6 +84,18 @@
     "short": "Closure 2018.05",
     "family": "Closure",
     "platformtype": "compiler",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "closure20180610": {
+    "full": "Closure Compiler v20180610",
+    "short": "Closure 2018.06",
+    "family": "Closure",
+    "platformtype": "compiler",
     "obsolete": false,
     "test_suites": [
       "es6",
