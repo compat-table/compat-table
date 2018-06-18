@@ -9649,9 +9649,9 @@ exports.tests = [
         var get = [];
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
         Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
-        return get.indexOf('global') !== -1 &&
-               get.indexOf('ignoreCase') !== -1 &&
-               get.indexOf('multiline') !== -1;
+        return get.indexOf('global') === 0 &&
+               get.indexOf('ignoreCase') === 1 &&
+               get.indexOf('multiline') === 2;
       */},
       res: {
         firefox2: false,
