@@ -2716,6 +2716,7 @@ exports.tests = [
           note_id: 'safari-flatten',
           note_html: 'Older Safari and Webkit builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.'
         },
+        safaritp: true,
         duktape2_2: false,
       }
     },
@@ -3314,6 +3315,10 @@ exports.tests = [
   */},
   res : {
     ie11: false,
+    firefox45: false,
+    chrome67: false,
+    safari11:false,
+    safaritp:true,
   }
 },
 {
