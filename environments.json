@@ -830,7 +830,7 @@
     "short": "FF 45 ESR",
     "release": "2016-03-08",
     "retire": "2017-06-13",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox46": {
     "full": "Firefox 46",
@@ -885,7 +885,7 @@
     "family": "SpiderMonkey",
     "short": "FF 52 ESR",
     "release": "2017-03-07",
-    "retire": "2018-08-21",
+    "retire": "2018-09-05",
     "obsolete": false
   },
   "firefox53": {
@@ -894,7 +894,7 @@
     "short": "FF 53",
     "release": "2017-04-19",
     "retire": "2017-06-13",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox54": {
     "full": "Firefox 54",
@@ -942,29 +942,38 @@
     "short": "FF 59",
     "release": "2018-03-13",
     "retire": "2018-05-09",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox60": {
     "full": "Firefox 60 ESR",
     "family": "SpiderMonkey",
     "short": "FF 60 ESR",
     "release": "2018-05-09",
+    "retire": "2019-09-03",
     "obsolete": false
   },
   "firefox61": {
-    "full": "Firefox 61 Beta",
+    "full": "Firefox 61",
     "family": "SpiderMonkey",
-    "short": "FF 61 Beta",
+    "short": "FF 61",
     "release": "2018-06-26",
-    "retire": "2018-08-21",
-    "unstable": true
+    "retire": "2018-09-05",
+    "obsolete": false
   },
   "firefox62": {
-    "full": "Firefox 62 Nightly",
+    "full": "Firefox 62 Beta",
     "family": "SpiderMonkey",
-    "short": "FF 62 Nightly",
-    "release": "2018-08-21",
-    "retire": "2018-10-16",
+    "short": "FF 62 Beta",
+    "release": "2018-09-05",
+    "retire": "2018-10-23",
+    "unstable": true
+  },
+  "firefox63": {
+    "full": "Firefox 63 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 63 Nightly",
+    "release": "2018-10-23",
+    "retire": "2018-12-11",
     "unstable": true
   },
   "opera7": {
