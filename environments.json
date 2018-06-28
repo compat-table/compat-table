@@ -2405,6 +2405,21 @@
       "es6"
     ]
   },
+  "graalvm": {
+    "full": "GraalVM JavaScript",
+    "family": "GraalVM",
+    "short": "GraalVM",
+    "platformtype": "engine",
+    "release": "2018-07-01",
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl"
+    ]
+  },
   "android1_5": {
     "full": "Android Browser 1.5 (Cupcake)",
     "family": "Android Browser",
