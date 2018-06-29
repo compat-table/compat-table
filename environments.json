@@ -2406,10 +2406,12 @@
     ]
   },
   "graalvm": {
-    "full": "GraalVM JavaScript",
-    "family": "GraalVM",
-    "short": "GraalVM",
+    "full": "GraalVM JavaScript 1.0.0 RC3",
+    "family": "GraalVM 1.0",
+    "short": "GraalVM 1.0",
     "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2018-07-01",
     "unstable": false,
     "test_suites": [

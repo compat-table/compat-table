@@ -30,6 +30,7 @@ exports.tests = [
       duktape2_0: true,
       nashorn1_8: true,
       nashorn9: true,
+      graalvm: true,
     }
   },
   {
@@ -54,6 +55,7 @@ exports.tests = [
       duktape2_0: true,
       nashorn1_8: true,
       nashorn9: true,
+      graalvm: true,
     },
   },
   {
@@ -78,6 +80,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -102,6 +105,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -130,6 +134,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }],
   separator: 'after'
@@ -160,6 +165,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -197,6 +203,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -222,6 +229,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -249,6 +257,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -277,6 +286,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -302,6 +312,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -327,6 +338,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -352,6 +364,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -377,6 +390,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -402,6 +416,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -427,6 +442,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -460,6 +476,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -487,6 +504,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
     separator: 'after'
   }],
@@ -519,6 +537,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -544,6 +563,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -569,6 +589,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -594,6 +615,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -619,6 +641,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -644,6 +667,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -669,6 +693,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -694,6 +719,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -719,6 +745,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -744,6 +771,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }, {
     name: 'Array.prototype.sort: compareFn must be function or undefined',
@@ -794,6 +822,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -826,6 +855,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }],
 },
@@ -855,6 +885,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -882,6 +913,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
     separator: 'after'
   }
@@ -913,6 +945,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -937,6 +970,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -973,6 +1007,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   }]
 },
@@ -1003,6 +1038,7 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
+      graalvm: true,
   },
 },
 {
@@ -1035,6 +1071,7 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
+      graalvm: true,
   },
   separator: 'after'
 },
@@ -1070,6 +1107,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1100,6 +1138,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1130,6 +1169,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   }]
 },
@@ -1165,6 +1205,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1192,6 +1233,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1219,6 +1261,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1247,6 +1290,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1278,6 +1322,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1305,6 +1350,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1340,6 +1386,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   },
   {
@@ -1370,6 +1417,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }]
 },
@@ -1404,6 +1452,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1432,6 +1481,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1458,6 +1508,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1496,6 +1547,7 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      graalvm: true,
     },
   },
   {
@@ -1523,6 +1575,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1548,6 +1601,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1577,6 +1631,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1603,6 +1658,7 @@ exports.tests = [
       ios7: true,
       android4_1: true,
       duktape2_0: true,
+      graalvm: true,
     },
   },
   {
@@ -1634,6 +1690,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1662,6 +1719,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1688,6 +1746,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1715,6 +1774,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1746,6 +1806,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1771,6 +1832,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1796,6 +1858,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1821,6 +1884,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1846,6 +1910,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1871,6 +1936,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   },
   {
@@ -1901,6 +1967,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     }
   }]
 }

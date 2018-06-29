@@ -28,6 +28,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -46,6 +47,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
   ],
@@ -71,6 +73,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -90,6 +93,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -109,6 +113,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -176,6 +181,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
   ],
@@ -201,6 +207,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
   ],
@@ -226,6 +233,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
   ],
@@ -251,6 +259,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -269,6 +278,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -288,6 +298,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -307,6 +318,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -374,6 +386,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
   ],
@@ -399,6 +412,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -418,6 +432,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -437,6 +452,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -504,6 +520,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -530,6 +547,7 @@ exports.tests = [
         android4_0: null,
         ios7: false,
         duktape2_0: false,
+        graalvm: true,
       }
     },
     {
@@ -556,6 +574,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ],
@@ -585,6 +604,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -614,6 +634,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -643,6 +664,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -672,6 +694,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -701,6 +724,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -730,6 +754,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],
@@ -759,6 +784,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       },
     },
   ],

@@ -35,6 +35,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -49,6 +50,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       },
     },
   ],
@@ -70,6 +72,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -92,6 +95,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -121,6 +125,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
   ],
@@ -141,6 +146,7 @@ exports.tests = [
     firefox52: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -159,6 +165,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -201,6 +208,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       }
     },
     {
@@ -237,6 +245,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
+        graalvm: true,
       }
     },
     {
@@ -257,6 +266,7 @@ exports.tests = [
         opera10_50: false,
         safari12: true,
         duktape2_0: false,
+        graalvm: true,
       }
     },
     {
@@ -277,6 +287,7 @@ exports.tests = [
         opera10_50: false,
         safari12: true,
         duktape2_0: false,
+        graalvm: true,
       }
     }
   ]
@@ -327,6 +338,7 @@ exports.tests = [
       node8_7: true,
       duktape2_0: false,
       duktape2_1: true,
+      graalvm: true,
     }
   }, {
     name: '"global" global property has correct property descriptor',
@@ -374,6 +386,7 @@ exports.tests = [
       node8_7: false,
       duktape2_0: false,
       duktape2_1: true,
+      graalvm: true,
     }
   }]
 },
@@ -395,6 +408,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -409,6 +423,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -423,6 +438,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -447,6 +463,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -462,6 +479,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -476,6 +494,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -490,6 +509,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -520,6 +540,7 @@ exports.tests = [
     chrome69: chrome.harmony,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -539,6 +560,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -551,6 +573,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -568,6 +591,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -597,6 +621,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -619,6 +644,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -639,6 +665,7 @@ exports.tests = [
     opera10_50: false,
     chrome65: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -659,6 +686,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -673,6 +701,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -695,6 +724,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -709,6 +739,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -723,6 +754,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -737,6 +769,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -751,6 +784,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -765,6 +799,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -779,6 +814,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -793,6 +829,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -807,6 +844,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -827,6 +865,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -839,6 +878,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -851,6 +891,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -863,6 +904,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -875,6 +917,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -887,6 +930,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -899,6 +943,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -917,6 +962,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -942,6 +988,7 @@ exports.tests = [
         chrome65: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -964,6 +1011,7 @@ exports.tests = [
         chrome66: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -983,6 +1031,7 @@ exports.tests = [
         chrome66: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -1008,6 +1057,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     },
     {
@@ -1025,6 +1075,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       }
     }
   ]
@@ -1047,6 +1098,7 @@ exports.tests = [
     firefox2: false,
     opera10_50: false,
     duktape2_0: false,
+    graalvm: false,
   }
 },
 {
@@ -1071,6 +1123,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       },
     },
     {
@@ -1096,6 +1149,7 @@ exports.tests = [
         firefox2: false,
         opera10_50: false,
         duktape2_0: false,
+        graalvm: false,
       },
     }
   ]
@@ -1121,6 +1175,7 @@ exports.tests = [
       chrome59: chrome.harmony,
       chrome66: true,
       duktape2_0: false,
+      graalvm: true,
     },
   }, {
     name: 'arrows',
@@ -1141,6 +1196,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }, {
     name: '[native code]',
@@ -1160,6 +1216,7 @@ exports.tests = [
       duktape2_0: true,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }, {
     name: 'class expression with implicit constructor',
@@ -1177,6 +1234,7 @@ exports.tests = [
       ie11: false,
       edge14: true,
       duktape2_0: false,
+      graalvm: true,
     },
   }, {
     name: 'class expression with explicit constructor',
@@ -1194,6 +1252,7 @@ exports.tests = [
       ie11: false,
       edge14: true,
       duktape2_0: false,
+      graalvm: true,
     },
   }, {
     name: 'unicode escape sequences in identifiers',
@@ -1209,6 +1268,7 @@ exports.tests = [
       chrome59: chrome.harmony,
       chrome66: true,
       duktape2_0: false,
+      graalvm: true,
     },
   }, {
     name: 'methods and computed property names',
@@ -1226,6 +1286,7 @@ exports.tests = [
       duktape2_0: false,
       nashorn9: true,
       nashorn10: true,
+      graalvm: true,
     },
   }]
 },
@@ -1247,6 +1308,7 @@ exports.tests = [
     firefox52: false,
     opera10_50: false,
     duktape2_2: false,
+    graalvm: false,
   }
 },
 {
@@ -1268,6 +1330,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.DEG_PER_RAD',
@@ -1281,6 +1344,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.degrees',
@@ -1294,6 +1358,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.fscale',
@@ -1307,6 +1372,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.RAD_PER_DEG',
@@ -1320,6 +1386,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.radians',
@@ -1334,6 +1401,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }, {
     name: 'Math.scale',
@@ -1347,6 +1415,7 @@ exports.tests = [
       firefox52: false,
       opera10_50: false,
       duktape2_2: false,
+      graalvm: false,
     },
   }]
 },
@@ -1369,6 +1438,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1384,6 +1454,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1401,6 +1472,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1423,6 +1495,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1445,6 +1518,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1467,6 +1541,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1489,6 +1564,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     }
   ]
@@ -1528,6 +1604,7 @@ exports.tests = [
         safari12: true,
         safaritp: true,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1550,6 +1627,7 @@ exports.tests = [
         opera10_50: false,
         safari12: true,
         duktape2_2: false,
+        graalvm: false,
       }
     }
   ]
@@ -1575,6 +1653,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1594,6 +1673,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1611,6 +1691,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1628,6 +1709,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1645,6 +1727,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1664,6 +1747,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1681,6 +1765,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
     {
@@ -1698,6 +1783,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         duktape2_2: false,
+        graalvm: false,
       }
     },
   ]
@@ -1734,6 +1820,7 @@ exports.tests = [
       note_html: 'Requires the <code>--enable-pipeline-operator</code> compile option.'
     },
     opera10_50: false,
+    graalvm: false,
   }
 },
 {
@@ -1752,6 +1839,7 @@ exports.tests = [
     ie11: false,
     firefox52: false,
     opera10_50: false,
+    graalvm: false,
   }
 },
 {
@@ -1776,6 +1864,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         opera10_50: false,
+        graalvm: false,
       }
     },
     {
@@ -1798,6 +1887,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         opera10_50: false,
+        graalvm: false,
       }
     },
     {
@@ -1815,6 +1905,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         opera10_50: false,
+        graalvm: false,
       }
     },
     {
@@ -1832,6 +1923,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         opera10_50: false,
+        graalvm: false,
       }
     },
   ]
@@ -1852,6 +1944,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1864,6 +1957,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1876,6 +1970,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        graalvm: false,
       }
     },
   ]
@@ -1895,6 +1990,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1907,6 +2003,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
   ]
@@ -1926,6 +2023,7 @@ exports.tests = [
   res : {
     babel7: true,
     ie11: false,
+    graalvm: false,
   }
 },
 {
@@ -1945,6 +2043,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1958,6 +2057,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1971,6 +2071,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1984,6 +2085,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -1997,6 +2099,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2010,6 +2113,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2023,6 +2127,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2039,6 +2144,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2053,6 +2159,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2066,6 +2173,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2079,6 +2187,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
     {
@@ -2092,6 +2201,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        graalvm: false,
       }
     },
   ]
@@ -2113,6 +2223,7 @@ exports.tests = [
     firefox2: false,
     chrome67: chrome.harmony,
     opera10_50: false,
+    graalvm: false,
   }
 },
 {
@@ -2129,6 +2240,7 @@ exports.tests = [
     chrome67: false,
     safari11:false,
     safaritp:true,
+    graalvm: false,
   }
 },
 {
@@ -2144,6 +2256,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2153,6 +2266,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2162,6 +2276,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2171,6 +2286,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2188,6 +2304,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2206,6 +2323,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2223,6 +2341,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
     {
@@ -2241,6 +2360,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          graalvm: false,
       }
     },
   ]
@@ -2258,6 +2378,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: true,
       },
     },
     {
@@ -2267,6 +2388,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: true,
       },
     },
     {
@@ -2276,6 +2398,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: true,
       },
     },
     {
@@ -2285,6 +2408,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: true,
       },
     },
     {
@@ -2297,6 +2421,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: false,
       },
     },
     {
@@ -2309,6 +2434,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: false,
       },
     },
     {
@@ -2318,6 +2444,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: false,
       },
     },
     {
@@ -2327,6 +2454,7 @@ exports.tests = [
       */},
       res: {
         chrome67: true,
+        graalvm: false,
       },
     },
   ],
@@ -2341,6 +2469,7 @@ exports.tests = [
   */},
   res: {
       ie11: false,
+      graalvm: false,
   }
 },
 {
@@ -2357,7 +2486,8 @@ exports.tests = [
       && results[2] === 98;
   */},
   res: {
-      ie11: false,
+    ie11: false,
+    graalvm: false,
   }
 },
 {
@@ -2370,6 +2500,7 @@ exports.tests = [
     return object.foo === 42 && object.bar === 23;
   */},
   res: {
+      graalvm: false,
   }
 },
 {
@@ -2384,6 +2515,7 @@ exports.tests = [
         return [1, 2, 3].lastItem === 3;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2392,6 +2524,7 @@ exports.tests = [
         return [1, 2, 3].lastIndex === 2;
       */},
       res: {
+        graalvm: false,
       }
     },
   ]
@@ -2412,6 +2545,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        graalvm: false,
       }
     },
     {
@@ -2425,6 +2559,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        graalvm: false,
       }
     },
     {
@@ -2437,6 +2572,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        graalvm: false,
       }
     },
     {
@@ -2449,6 +2585,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
+        graalvm: false,
       }
     },
   ]
@@ -2470,6 +2607,7 @@ exports.tests = [
           && map.get(1)[1] === 3;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2481,6 +2619,7 @@ exports.tests = [
           && map.get(102).id === 102;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2492,6 +2631,7 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2504,6 +2644,7 @@ exports.tests = [
           && map.get(9) === 6;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2516,6 +2657,7 @@ exports.tests = [
           && map.get(3) === 36;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2528,6 +2670,7 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2540,6 +2683,7 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2552,6 +2696,7 @@ exports.tests = [
           && set.has(4);
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2560,6 +2705,7 @@ exports.tests = [
         return new Set([1, 2, 3]).every(it => typeof it === 'number');
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2571,6 +2717,7 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2579,6 +2726,7 @@ exports.tests = [
         return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2587,6 +2735,7 @@ exports.tests = [
         return new Set([1, 2, 3]).join('|') === '1|2|3';
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2599,6 +2748,7 @@ exports.tests = [
           && set.has(9);
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2607,6 +2757,7 @@ exports.tests = [
         return new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;
       */},
       res: {
+        graalvm: false,
       }
     },
     {
@@ -2615,6 +2766,7 @@ exports.tests = [
         return new Set([1, 2, 3]).some(it => it % 2);
       */},
       res: {
+        graalvm: false,
       }
     },
   ]
