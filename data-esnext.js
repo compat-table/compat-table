@@ -2711,11 +2711,7 @@ exports.tests = [
         firefox62: true,
         chrome69: true,
         opera10_50: false,
-        safari12: {
-          val: false,
-          note_id: 'safari-flatten',
-          note_html: 'Older Safari and Webkit builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.'
-        },
+        safari12: true,
         safaritp: true,
         duktape2_2: false,
       }
