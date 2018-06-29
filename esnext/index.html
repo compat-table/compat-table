@@ -2167,7 +2167,7 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari11" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari11_1" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safari12" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
+<td class="tally unstable" data-browser="safari12" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -2245,7 +2245,7 @@ return [1, [2, 3], [4, [5, 6]]].flat().join(&apos;&apos;) === &apos;12345,6&apos
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no" data-browser="safari11">No</td>
 <td class="no" data-browser="safari11_1">No</td>
-<td class="no unstable" data-browser="safari12">No<a href="#safari-flatten-note"><sup>[11]</sup></a></td>
+<td class="yes unstable" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3307,8 +3307,8 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6">No<a href="#babel-decorators-legacy-note"><sup>[12]</sup></a></td>
-<td class="no unstable" data-browser="babel7">No<a href="#babel-decorators-legacy-note"><sup>[12]</sup></a></td>
+<td class="no" data-browser="babel6">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
+<td class="no unstable" data-browser="babel7">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4700,8 +4700,8 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -4739,10 +4739,10 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -4778,8 +4778,8 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -4817,10 +4817,10 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -4856,8 +4856,8 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -4895,10 +4895,10 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -4934,8 +4934,8 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -4973,10 +4973,10 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5012,8 +5012,8 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5051,10 +5051,10 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5090,8 +5090,8 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5129,10 +5129,10 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5168,8 +5168,8 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5207,10 +5207,10 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5246,8 +5246,8 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5285,10 +5285,10 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5324,8 +5324,8 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5363,10 +5363,10 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5402,8 +5402,8 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5441,10 +5441,10 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5480,8 +5480,8 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5519,10 +5519,10 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5560,8 +5560,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5599,10 +5599,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5640,8 +5640,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5679,10 +5679,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5720,8 +5720,8 @@ return simdSmallIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5759,10 +5759,10 @@ return simdSmallIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5800,8 +5800,8 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5839,10 +5839,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5880,8 +5880,8 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5919,10 +5919,10 @@ return simdBoolTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -5960,8 +5960,8 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -5999,10 +5999,10 @@ return simdBoolTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6040,8 +6040,8 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6079,10 +6079,10 @@ return simdAllTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6120,8 +6120,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6159,10 +6159,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6200,8 +6200,8 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6239,10 +6239,10 @@ return simdAllTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6280,8 +6280,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6319,10 +6319,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6360,8 +6360,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6399,10 +6399,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6440,8 +6440,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6479,10 +6479,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6520,8 +6520,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6559,10 +6559,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6600,8 +6600,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6639,10 +6639,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6680,8 +6680,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6719,10 +6719,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6760,8 +6760,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6799,10 +6799,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6840,8 +6840,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6879,10 +6879,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -6920,8 +6920,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -6959,10 +6959,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7000,8 +7000,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7039,10 +7039,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7080,8 +7080,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7119,10 +7119,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7160,7 +7160,7 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
@@ -7199,10 +7199,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7240,8 +7240,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7279,10 +7279,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7320,7 +7320,7 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
@@ -7359,10 +7359,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7400,8 +7400,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7439,10 +7439,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7480,8 +7480,8 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7519,10 +7519,10 @@ return simdBoolTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7560,8 +7560,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7599,10 +7599,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7640,8 +7640,8 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7679,10 +7679,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7720,8 +7720,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7759,10 +7759,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7800,8 +7800,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7839,10 +7839,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7880,8 +7880,8 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7919,10 +7919,10 @@ return simdAllTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -7960,8 +7960,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -7999,10 +7999,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8040,8 +8040,8 @@ return simdIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8079,10 +8079,10 @@ return simdIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8120,8 +8120,8 @@ return simdIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8159,10 +8159,10 @@ return simdIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8200,8 +8200,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8239,10 +8239,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8280,8 +8280,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8319,10 +8319,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8360,8 +8360,8 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8399,10 +8399,10 @@ return simdFloatTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8440,8 +8440,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8479,10 +8479,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8520,8 +8520,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8559,10 +8559,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8600,8 +8600,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8639,10 +8639,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8680,8 +8680,8 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8719,10 +8719,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8760,8 +8760,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8799,10 +8799,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8840,8 +8840,8 @@ return simdSmallIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8879,10 +8879,10 @@ return simdSmallIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -8920,8 +8920,8 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -8959,10 +8959,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -9000,8 +9000,8 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -9039,10 +9039,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -9080,8 +9080,8 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -9119,10 +9119,10 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -9158,8 +9158,8 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="no obsolete" data-browser="typescript2_7">No</td>
 <td class="no" data-browser="typescript2_8">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
-<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge14">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="edge15">Flag<a href="#edge-experimental-flag-note"><sup>[12]</sup></a></td>
 <td class="no" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
 <td class="no unstable" data-browser="edge18">No</td>
@@ -9197,10 +9197,10 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="no" data-browser="phantom">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
-<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[14]</sup></a></td>
+<td class="no" data-browser="node4">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no" data-browser="node6_5">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
+<td class="no obsolete" data-browser="node7_6">No<a href="#chrome-simd-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="node8">No</td>
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
@@ -12053,12 +12053,12 @@ return result === &apos;Hello, hello!&apos;;
 <td class="no obsolete" data-browser="firefox55">No</td>
 <td class="no obsolete" data-browser="firefox56">No</td>
 <td class="no obsolete" data-browser="firefox57">No</td>
-<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
-<td class="no flagged" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[15]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
+<td class="no flagged" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[14]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome59">No</td>
 <td class="no obsolete" data-browser="chrome60">No</td>
@@ -19060,7 +19060,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="babel-core-js-note">  <sup>[3]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[4]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="firefox-nightly-note">  <sup>[5]</sup> The feature is available only in Firefox Nightly builds.</p><p id="ffox-global-property-note">  <sup>[6]</sup> The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.</p><p id="wk-global-property-note">  <sup>[7]</sup> The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.</p><p id="chrome-harmony-note">  <sup>[8]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="flatten-compat-issue-note">  <sup>[9]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[10]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p><p id="safari-flatten-note">  <sup>[11]</sup> Older Safari and Webkit builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p><p id="babel-decorators-legacy-note">  <sup>[12]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="edge-experimental-flag-note">  <sup>[13]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-simd-note">  <sup>[14]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p><p id="ffox-pipeline-note">  <sup>[15]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="babel-core-js-note">  <sup>[3]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[4]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="firefox-nightly-note">  <sup>[5]</sup> The feature is available only in Firefox Nightly builds.</p><p id="ffox-global-property-note">  <sup>[6]</sup> The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.</p><p id="wk-global-property-note">  <sup>[7]</sup> The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.</p><p id="chrome-harmony-note">  <sup>[8]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="flatten-compat-issue-note">  <sup>[9]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[10]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p><p id="babel-decorators-legacy-note">  <sup>[11]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="edge-experimental-flag-note">  <sup>[12]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-simd-note">  <sup>[13]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p><p id="ffox-pipeline-note">  <sup>[14]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
