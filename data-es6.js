@@ -10114,6 +10114,7 @@ exports.tests = [
         node8: true,
         duktape2_0: false,
         graalvm: true,
+        safari12: true,
         safaritp: true,
         webkit: true,
       },
