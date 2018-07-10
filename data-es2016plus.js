@@ -39,6 +39,7 @@ exports.tests = [
           chrome52: true,
           safari10_1: true,
           duktape2_0: true,
+          graalvm: true,
         }
       },
       {
@@ -62,6 +63,7 @@ exports.tests = [
           chrome52: true,
           safari10_1: true,
           duktape2_0: true,
+          graalvm: true,
         }
       },
       {
@@ -86,6 +88,7 @@ exports.tests = [
           chrome52: true,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
     ],
@@ -123,6 +126,7 @@ exports.tests = [
           edge14: true,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -154,6 +158,7 @@ exports.tests = [
           edge14: true,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -185,6 +190,7 @@ exports.tests = [
           opera10_50: false,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
       {
@@ -206,6 +212,7 @@ exports.tests = [
           chrome54: true,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
     ],
@@ -240,6 +247,7 @@ exports.tests = [
           firefox43: true,
           opera10_50: false,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -282,6 +290,7 @@ exports.tests = [
           firefox43: true,
           opera10_50: false,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -306,6 +315,7 @@ exports.tests = [
           opera10_50: false,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
     ],
@@ -344,6 +354,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -374,6 +385,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       }
     ]
@@ -405,6 +417,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -427,6 +440,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
     ],
@@ -471,6 +485,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -504,6 +519,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -528,6 +544,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -551,6 +568,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
       {
@@ -581,6 +599,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: false,
         }
       },
       {
@@ -612,6 +631,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: false,
         }
       },
       {
@@ -635,6 +655,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -663,6 +684,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -686,6 +708,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -719,6 +742,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -752,6 +776,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -783,6 +808,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -808,6 +834,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
       {
@@ -830,6 +857,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
       {
@@ -862,6 +890,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
+          graalvm: true,
         },
       },
     ]
@@ -913,6 +942,7 @@ exports.tests = [
           },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -937,6 +967,7 @@ exports.tests = [
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -964,6 +995,7 @@ exports.tests = [
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -990,6 +1022,7 @@ exports.tests = [
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1016,6 +1049,7 @@ exports.tests = [
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1043,6 +1077,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1070,6 +1105,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1097,6 +1133,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1124,6 +1161,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1151,6 +1189,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1178,6 +1217,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1205,6 +1245,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1232,6 +1273,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1259,6 +1301,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1286,6 +1329,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1313,6 +1357,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -1340,6 +1385,7 @@ exports.tests = [
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
+          graalvm: true,
         }
       }
     ]
@@ -1375,6 +1421,7 @@ exports.tests = [
       chrome50: true,
       safari10: true,
       duktape2_0: false,
+          graalvm: true,
     }
   },
   {
@@ -1417,6 +1464,7 @@ exports.tests = [
       node4: true,
       safari10: true,
       duktape2_0: false,
+          graalvm: true,
     }
   },
   {
@@ -1447,6 +1495,7 @@ exports.tests = [
       chrome47: true,
       safari10: true,
       duktape2_0: false,
+          graalvm: true,
     }
   },
   {
@@ -1478,6 +1527,7 @@ exports.tests = [
       safari10_1: true,
       typescript1: true,
       duktape2_0: false,
+          graalvm: true,
     }
   },
   {
@@ -1509,6 +1559,7 @@ exports.tests = [
       chrome49: true,
       safari10_1: true,
       duktape2_0: false,
+          graalvm: true,
     }
   },
   {
@@ -1544,6 +1595,7 @@ exports.tests = [
       chrome50: true,
       safari10: true,
       duktape2_0: true,
+      graalvm: true,
     },
   },
   {
@@ -1572,6 +1624,7 @@ exports.tests = [
       edge14: true,
       safari10: true,
       duktape2_0: false,
+      graalvm: true,
     },
   },
   {
@@ -1606,6 +1659,7 @@ exports.tests = [
         ios5_1: true,
         duktape2_0: false,
         duktape2_2: true,
+        graalvm: true,
       }
     },
       {
@@ -1634,6 +1688,7 @@ exports.tests = [
           android4_0: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         }
       },
       {
@@ -1662,6 +1717,7 @@ exports.tests = [
           safari9: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1691,6 +1747,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1719,6 +1776,7 @@ exports.tests = [
           android4_0: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1747,6 +1805,7 @@ exports.tests = [
           safari9: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1777,6 +1836,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1807,6 +1867,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1837,6 +1898,7 @@ exports.tests = [
           android4_0: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1863,6 +1925,7 @@ exports.tests = [
           safari9: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1889,6 +1952,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1919,6 +1983,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1949,6 +2014,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -1979,6 +2045,7 @@ exports.tests = [
           android4_0: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -2005,6 +2072,7 @@ exports.tests = [
           safari9: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       },
       {
@@ -2031,6 +2099,7 @@ exports.tests = [
           ios5_1: true,
           duktape2_0: false,
           duktape2_2: true,
+          graalvm: true,
         },
       }
     ]
@@ -2058,6 +2127,7 @@ exports.tests = [
         chrome52: true,
         safari10: true,
         duktape2_0: false,
+        graalvm: true,
       }
     },
       {
@@ -2078,6 +2148,7 @@ exports.tests = [
           chrome52: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -2104,6 +2175,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -2130,6 +2202,7 @@ exports.tests = [
           node8: true,
           safari10: true,
           duktape2_0: false,
+          graalvm: true,
         }
       }
     ]
@@ -2166,6 +2239,7 @@ exports.tests = [
       safari10: true,
       safari10_1: true,
       duktape2_0: true,
+      graalvm: true,
     },
   },
   {
@@ -2188,6 +2262,7 @@ exports.tests = [
       safari10: true,
       safari10_1: true,
       duktape2_0: false,
+      graalvm: true,
     },
   },
   {
@@ -2220,6 +2295,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
+	  graalvm: true,
     },
   },
   {
@@ -2244,6 +2320,7 @@ exports.tests = [
       node8: true,
       safari10_1: true,
       duktape2_0: false,
+	  graalvm: true,
     },
   },
   {
@@ -2274,6 +2351,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -2299,6 +2377,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
     ],
@@ -2356,6 +2435,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: true,
         }
       },
       {
@@ -2396,6 +2476,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: true,
         }
       },
       {
@@ -2438,6 +2519,7 @@ exports.tests = [
           chrome63: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: true,
         }
       }
     ]
@@ -2466,6 +2548,7 @@ exports.tests = [
       chrome62: true,
       safari11: true,
       duktape2_0: false,
+      graalvm: true,
     }
   },
   {
@@ -2505,6 +2588,7 @@ exports.tests = [
       duktape2_2: false,
       android1_5: null,
       ios4: null,
+      graalvm: true,
     },
   },
   {
@@ -2532,6 +2616,7 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       duktape2_0: false,
+	  graalvm: true,
     }
   },
   {
@@ -2550,6 +2635,7 @@ exports.tests = [
       chrome50: chrome.harmony,
       chrome62: true,
       duktape2_0: false,
+	  graalvm: true,
     }
   },
   {
@@ -2571,6 +2657,7 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       duktape2_0: false,
+	  graalvm: true,
     }
   },
   {
@@ -2604,6 +2691,7 @@ exports.tests = [
           safari12: true,
           webkit: true,
           duktape2_0: false,
+          graalvm: true,
         }
       },
       {
@@ -2641,6 +2729,7 @@ exports.tests = [
           safari12: true,
           webkit: true,
           duktape2_0: false,
+          graalvm: true,
         }
       }
     ]
@@ -2676,6 +2765,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: false,
         },
       },
       {
@@ -2704,6 +2794,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: false,
         },
       },
       {
@@ -2737,6 +2828,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
+          graalvm: false,
         }
       }
     ]
