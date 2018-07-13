@@ -1945,6 +1945,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -1958,6 +1959,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -1971,6 +1973,7 @@ exports.tests = [
       res : {
         babel7: true,
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -1991,6 +1994,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2004,6 +2008,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2024,6 +2029,7 @@ exports.tests = [
   res : {
     babel7: true,
     ie11: false,
+    firefox52: false,
     graalvm: false,
   }
 },
@@ -2044,6 +2050,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2058,6 +2065,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2072,6 +2080,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2086,6 +2095,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2100,6 +2110,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2114,6 +2125,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2128,6 +2140,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2145,6 +2158,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2160,6 +2174,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2174,6 +2189,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2188,6 +2204,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2202,6 +2219,7 @@ exports.tests = [
       */},
       res : {
         ie11: false,
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2259,6 +2277,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2269,6 +2288,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2279,6 +2299,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2289,6 +2310,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2307,6 +2329,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2326,6 +2349,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2344,6 +2368,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2363,6 +2388,7 @@ exports.tests = [
       */},
       res : {
           ie11: false,
+          firefox52: false,
           graalvm: false,
       }
     },
@@ -2380,6 +2406,7 @@ exports.tests = [
         return (1n + 2n) === 3n;
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: true,
       },
@@ -2390,6 +2417,7 @@ exports.tests = [
         return BigInt("3") === 3n;
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: true,
       },
@@ -2400,6 +2428,7 @@ exports.tests = [
         return typeof BigInt.asUintN === 'function';
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: true,
       },
@@ -2410,6 +2439,7 @@ exports.tests = [
         return typeof BigInt.asIntN === 'function';
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: true,
       },
@@ -2423,6 +2453,7 @@ exports.tests = [
         return view[0] === -0x8000000000000000n;
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: false,
       },
@@ -2436,6 +2467,7 @@ exports.tests = [
         return view[0] === 0n;
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: false,
       },
@@ -2446,6 +2478,7 @@ exports.tests = [
         return typeof DataView.prototype.getBigInt64 === 'function';
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: false,
       },
@@ -2456,6 +2489,7 @@ exports.tests = [
         return typeof DataView.prototype.getBigUint64 === 'function';
       */},
       res: {
+        firefox52: false,
         chrome67: true,
         graalvm: false,
       },
@@ -2472,6 +2506,7 @@ exports.tests = [
   */},
   res: {
       ie11: false,
+      firefox52: false,
       graalvm: false,
   }
 },
@@ -2490,6 +2525,7 @@ exports.tests = [
   */},
   res: {
     ie11: false,
+    firefox52: false,
     graalvm: false,
   }
 },
@@ -2521,6 +2557,7 @@ exports.tests = [
         return [1, 2, 3].lastItem === 3;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2530,6 +2567,7 @@ exports.tests = [
         return [1, 2, 3].lastIndex === 2;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2613,6 +2651,7 @@ exports.tests = [
           && map.get(1)[1] === 3;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2625,6 +2664,7 @@ exports.tests = [
           && map.get(102).id === 102;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2637,6 +2677,7 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2650,6 +2691,7 @@ exports.tests = [
           && map.get(9) === 6;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2663,6 +2705,7 @@ exports.tests = [
           && map.get(3) === 36;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2676,6 +2719,7 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2689,6 +2733,7 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2702,6 +2747,7 @@ exports.tests = [
           && set.has(4);
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2711,6 +2757,7 @@ exports.tests = [
         return new Set([1, 2, 3]).every(it => typeof it === 'number');
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2723,6 +2770,7 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2732,6 +2780,7 @@ exports.tests = [
         return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2741,6 +2790,7 @@ exports.tests = [
         return new Set([1, 2, 3]).join('|') === '1|2|3';
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2754,6 +2804,7 @@ exports.tests = [
           && set.has(9);
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2763,6 +2814,7 @@ exports.tests = [
         return new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
@@ -2772,6 +2824,7 @@ exports.tests = [
         return new Set([1, 2, 3]).some(it => it % 2);
       */},
       res: {
+        firefox52: false,
         graalvm: false,
       }
     },
