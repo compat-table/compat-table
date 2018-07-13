@@ -1585,7 +1585,7 @@ exports.tests = [
       name: 'Array.prototype.flat',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat',
       exec: function(){/*
-        return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
+        return [1, [2, 3], [4, [5, 6]]].flat().join('') === '123456';
       */},
       res: {
         babel6: false,
