@@ -1648,7 +1648,7 @@
     "short": "CH&nbsp;59,<br>OP&nbsp;46",
     "release": "2017-06-05",
     "retire": "2017-07-31",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome60": {
     "full": "Chrome, Opera",
@@ -1663,6 +1663,7 @@
     "family": "V8",
     "short": "CH&nbsp;61,<br>OP&nbsp;48",
     "release": "2017-09-05",
+    "retire": "2017-10-19",
     "obsolete": true
   },
   "chrome62": {
@@ -1670,6 +1671,7 @@
     "family": "V8",
     "short": "CH&nbsp;62,<br>OP&nbsp;49",
     "release": "2017-10-17",
+    "retire": "2017-12-06",
     "obsolete": true
   },
   "chrome63": {
@@ -1677,6 +1679,7 @@
     "family": "V8",
     "short": "CH&nbsp;63,<br>OP&nbsp;50",
     "release": "2017-12-05",
+    "retire": "2018-01-24",
     "obsolete": true
   },
   "chrome64": {
@@ -1684,6 +1687,7 @@
     "family": "V8",
     "short": "CH&nbsp;64,<br>OP&nbsp;51",
     "release": "2018-01-23",
+    "retire": "2018-03-06",
     "obsolete": true
   },
   "chrome65": {
@@ -1691,6 +1695,7 @@
     "family": "V8",
     "short": "CH&nbsp;65,<br>OP&nbsp;52",
     "release": "2018-03-06",
+    "retire": "2018-04-17",
     "obsolete": true
   },
   "chrome66": {
@@ -1698,24 +1703,33 @@
     "family": "V8",
     "short": "CH&nbsp;66,<br>OP&nbsp;53",
     "release": "2018-04-17",
-    "obsolete": false
+    "retire": "2018-05-31",
+    "obsolete": true
   },
   "chrome67": {
     "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;67,<br>OP&nbsp;54",
+    "release": "2018-05-29",
     "obsolete": false
   },
   "chrome68": {
-    "full": "Chrome Dev",
+    "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;68,<br>OP&nbsp;55",
-    "unstable": true
+    "release": "2018-07-24",
+    "obsolete": false
   },
   "chrome69": {
-    "full": "Chrome Canary",
+    "full": "Chrome Dev",
     "family": "V8",
     "short": "CH&nbsp;69,<br>OP&nbsp;56",
+    "unstable": true
+  },
+  "chrome70": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;70,<br>OP&nbsp;57",
     "unstable": true
   },
   "safari1": {
