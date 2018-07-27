@@ -2496,7 +2496,7 @@ exports.tests = [
   name: 'Object.fromEntries',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-object-from-entries',
-  category: STAGE2,
+  category: STAGE3,
   exec: function () {/*
     var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
     return object.foo === 42 && object.bar === 23;
