@@ -1770,7 +1770,7 @@ exports.tests = [
   ],
 },
 {
-  name: 'spread (...) operator',
+  name: 'spread syntax for iterable objects',
   category: 'syntax',
   significance: 'large',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists-runtime-semantics-argumentlistevaluation',
