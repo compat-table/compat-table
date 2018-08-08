@@ -249,14 +249,18 @@ process.nextTick(function () {
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript.html',
       polyfills: [],
-      compiler: ts.transpile
+      compiler: function (code) {
+        return ts.transpile(code, { downlevelIteration: true });
+      }
     },
     {
       name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript-core-js.html',
       polyfills: ["node_modules/core-js/client/core.js"],
-      compiler: ts.transpile
+      compiler: function (code) {
+        return ts.transpile(code, { downlevelIteration: true });
+      }
     },
     {
       name: 'Closure Compiler',
