@@ -1867,6 +1867,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox16: true,
         opera10_50: false,
@@ -1890,6 +1891,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -1913,6 +1915,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         edge12: true,
         firefox2: false,
@@ -1937,6 +1940,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -1959,6 +1963,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -1982,6 +1987,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         ejs: true,
         firefox2: false,
@@ -2008,6 +2014,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -2032,6 +2039,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         es6tr: {
           val: true,
@@ -2063,6 +2071,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
         ejs: true,
@@ -2089,6 +2098,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
@@ -2116,6 +2126,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         ejs: true,
         es6tr: { val: true, note_id: 'compiler-iterable' },
@@ -2144,7 +2155,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        typescript1: true,
+        typescript1: typescript.notDownlevelIteration,
         es6tr: true,
         edge12: true,
         firefox2: false,
@@ -3734,7 +3745,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         ejs: true,
         edge12: true,
         firefox2: false,
@@ -3766,7 +3777,7 @@ exports.tests = [
         babel6: babel.corejs,
         ejs: true,
         closure: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         edge12: edge.experimental,
         edge13: true,
         firefox2: false,
@@ -3795,7 +3806,7 @@ exports.tests = [
         tr: true,
         babel6: babel.corejs,
         closure: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         es6tr: { val: true, note_id: 'compiler-iterable' },
         ejs: true,
         edge12: true,
@@ -3827,7 +3838,7 @@ exports.tests = [
         babel6: babel.corejs,
         closure: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         es6tr: { val: true, note_id: 'compiler-iterable' },
         edge12: true,
         firefox2: false,
@@ -3856,7 +3867,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         edge15: true,
         firefox2: false,
         firefox53: true,
@@ -3885,7 +3896,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         edge15: true,
         firefox2: false,
         firefox53: true,
@@ -3926,6 +3937,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -3961,6 +3973,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -3996,6 +4009,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         closure20180319: false,
         closure20180506: true,
@@ -4058,6 +4072,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -4194,6 +4209,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4229,6 +4245,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure20180319: true,
         firefox2: false,
         firefox38: true,
@@ -4259,6 +4276,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4293,6 +4311,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4327,6 +4346,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox27: true,
@@ -4360,6 +4380,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         tr: true,
         firefox2: false,
@@ -4394,6 +4415,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         ejs: true,
         tr: true,
         firefox2: false,
@@ -4430,6 +4452,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -4466,6 +4489,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         ejs: true,
         closure: true,
         firefox2: false,
@@ -4503,6 +4527,7 @@ exports.tests = [
         tr: true,
         ejs: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox36: true,
@@ -4539,6 +4564,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: false,
+        typescript1: false,
         firefox2: false,
         firefox27: true,
         opera10_50: false,
@@ -4578,6 +4604,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure20180319: true,
         edge12: edge.experimental,
         edge13: true,
@@ -4616,6 +4643,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         edge13: true,
         firefox2: false,
         firefox53: true,
@@ -4649,6 +4677,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         chrome41: chrome.experimental,
         chrome42: true,
@@ -4685,6 +4714,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         chrome41: chrome.experimental,
         chrome42: true,
@@ -4722,6 +4752,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         firefox2: false,
         firefox34: true,
@@ -4757,6 +4788,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         chrome41: "strict",
         chrome49: true,
@@ -4793,6 +4825,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         closure: true,
         edge12: edge.experimental,
         edge13: true,
@@ -4824,6 +4857,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.regenerator,
+        typescript1: typescript.downlevelIteration,
         chrome41: "strict",
         chrome49: true,
         node4: "strict",
@@ -11782,7 +11816,7 @@ exports.tests = [
         tr: true,
         babel6: babel.corejs,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -11806,7 +11840,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -11833,7 +11867,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -11862,7 +11896,7 @@ exports.tests = [
         babel6: babel.corejs,
         closure: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -11891,7 +11925,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         edge15: true,
         firefox2: false,
         firefox53: true,
@@ -12225,6 +12259,7 @@ exports.tests = [
         firefox3: true,
         opera10_50: false,
         babel6: babel.corejs,
+        typescript1: typescript.downlevelIteration,
         tr: true,
         jsx: true,
         closure: true,
@@ -12436,7 +12471,7 @@ exports.tests = [
         tr: true,
         babel6: babel.corejs,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -12461,7 +12496,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -12489,7 +12524,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -12519,7 +12554,7 @@ exports.tests = [
         babel6: babel.corejs,
         closure: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -12548,7 +12583,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         chrome51: true,
         node6_5: true,
         edge15: true,
@@ -13163,7 +13198,7 @@ exports.tests = [
         tr: true,
         babel6: babel.corejs,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -13188,7 +13223,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox34: true,
         opera10_50: false,
@@ -13217,7 +13252,7 @@ exports.tests = [
       res: {
         tr: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -13247,7 +13282,7 @@ exports.tests = [
         babel6: babel.corejs,
         closure: true,
         ejs: true,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         firefox2: false,
         firefox36: true,
         opera10_50: false,
@@ -13275,7 +13310,7 @@ exports.tests = [
       */},
       res: {
         babel6: babel.corejs,
-        typescript1: false,
+        typescript1: typescript.downlevelIteration,
         edge15: true,
         firefox2: false,
         firefox53: true,

@@ -27,10 +27,15 @@
       "note_id": "typescript-es6",
       "note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
     },
-    "asyncawait": {
+    "downlevelIteration": {
       "val": true,
-      "note_id": "typescript-async-await",
-      "note_html": "TypeScript <code>async</code> / <code>await</code> requires native generators support."
+      "note_id": "typescript-downlevel-iteration",
+      "note_html": "Requires the <code>downlevelIteration</code> compile option."
+    },
+    "notDownlevelIteration": {
+      "val": false,
+      "note_id": "typescript-not-downlevel-iteration",
+      "note_html": "Does not work with the <code>downlevelIteration</code> compile option."
     }
   },
   "edge": {
