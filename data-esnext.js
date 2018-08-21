@@ -2503,6 +2503,9 @@ exports.tests = [
     return object.foo === 42 && object.bar === 23;
   */},
   res: {
+      firefox52: false,
+      firefox62: false,
+      firefox63: true,
       graalvm: false,
   }
 },
