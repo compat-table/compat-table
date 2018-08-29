@@ -2256,6 +2256,7 @@ exports.tests = [
   res : {
     ie11: false,
     firefox45: false,
+    firefox63: true,
     chrome67: false,
     chrome70: true,
     safari11: false,
