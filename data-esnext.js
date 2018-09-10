@@ -2248,6 +2248,7 @@ exports.tests = [
 {
   name: 'Symbol.prototype.description',
   spec: 'https://github.com/tc39/proposal-Symbol-description',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description',
   category: STAGE3,
   significance: 'small',
   exec: function(){/*
