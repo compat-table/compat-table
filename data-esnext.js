@@ -2534,6 +2534,7 @@ exports.tests = [
   name: 'Object.fromEntries',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-object-from-entries',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries',
   category: STAGE3,
   exec: function () {/*
     var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
