@@ -2546,6 +2546,7 @@ exports.tests = [
       firefox52: false,
       firefox62: false,
       firefox63: true,
+      safaritp: true,
       graalvm: false,
   }
 },
