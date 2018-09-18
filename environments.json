@@ -2687,7 +2687,7 @@
     "platformtype": "mobile",
     "equals": "safari9",
     "release": "2015-09-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios10": {
     "full": "iOS Safari",
@@ -2713,7 +2713,7 @@
     "short": "iOS 11",
     "platformtype": "mobile",
     "equals": "safari11",
-    "obsolete": false
+    "obsolete": true
   },
   "ios11_3": {
     "full": "iOS Safari",
@@ -2722,6 +2722,15 @@
     "platformtype": "mobile",
     "equals": "safari11_1",
     "release": "2018-03-30",
+    "obsolete": false
+  },
+  "ios12": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 12",
+    "platformtype": "mobile",
+    "equals": "safari12",
+    "release": "2018-09-17",
     "obsolete": false
   }
 }

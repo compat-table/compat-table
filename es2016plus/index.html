@@ -193,11 +193,11 @@
 <th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC3">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
-<th class="platform ios9 mobile obsolete" data-browser="ios9"><a href="#ios9" class="browser-name"><abbr title="iOS Safari">iOS 9</abbr></a></th>
 <th class="platform ios10 mobile obsolete" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
 <th class="platform ios10_3 mobile obsolete" data-browser="ios10_3"><a href="#ios10_3" class="browser-name"><abbr title="iOS Safari">iOS &gt;=10.3 &lt;11</abbr></a></th>
-<th class="platform ios11 mobile" data-browser="ios11"><a href="#ios11" class="browser-name"><abbr title="iOS Safari">iOS 11</abbr></a></th>
+<th class="platform ios11 mobile obsolete" data-browser="ios11"><a href="#ios11" class="browser-name"><abbr title="iOS Safari">iOS 11</abbr></a></th>
 <th class="platform ios11_3 mobile" data-browser="ios11_3"><a href="#ios11_3" class="browser-name"><abbr title="iOS Safari">iOS 11.3</abbr></a></th>
+<th class="platform ios12 mobile" data-browser="ios12"><a href="#ios12" class="browser-name"><abbr title="iOS Safari">iOS 12</abbr></a></th>
 </tr>
 
       </thead>
@@ -279,11 +279,11 @@
 <td class="tally" data-browser="graalvm" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">3/3</td>
-<td class="tally" data-browser="ios11" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">3/3</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">3/3</td>
+<td class="tally" data-browser="ios12" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_basic_support"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_basic_support">&#xA7;</a>basic support</span><script data-source="
 return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
@@ -362,11 +362,11 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_assignment"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_assignment">&#xA7;</a>assignment</span><script data-source="
 var a = 2; a **= 3; return a === 8;
@@ -445,11 +445,11 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens">&#xA7;</a>early syntax error for unary negation without parens</span><script data-source="
 if (2 ** 3 !== 8) { return false; }
@@ -533,11 +533,11 @@ return true;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Array.prototype.includes</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
@@ -613,11 +613,11 @@ return true;
 <td class="tally" data-browser="graalvm" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">3/3</td>
-<td class="tally" data-browser="ios11" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">3/3</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">3/3</td>
+<td class="tally" data-browser="ios12" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Array.prototype.includes <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [1, 2, 3].includes(1)
@@ -700,11 +700,11 @@ return [1, 2, 3].includes(1)
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_Array.prototype.includes_is_generic"><td><span><a class="anchor" href="#test-Array.prototype.includes_Array.prototype.includes_is_generic">&#xA7;</a>Array.prototype.includes is generic</span><script data-source="
 var passed = 0;
@@ -805,11 +805,11 @@ return 24;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Array.prototype.includes" id="test-Array.prototype.includes_%TypedArray%.prototype.includes_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Array.prototype.includes_%TypedArray%.prototype.includes_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>%TypedArray%.prototype.includes <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
@@ -893,11 +893,11 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2016 misc</td>
 </tr>
@@ -985,11 +985,11 @@ return true;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_throw()_caught_by_inner_generator"><span><a class="anchor" href="#test-generator_throw()_caught_by_inner_generator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects">generator throw() caught by inner generator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#IteratorResult_object_returned_instead_of_throwing" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#gen-throw-note"><sup>[8]</sup></a></span><script data-source="
 function * generator() {
@@ -1081,11 +1081,11 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation">strict fn w/ non-strict non-simple params is error</a><a href="#strict-fn-non-strict-params-note"><sup>[10]</sup></a></span><script data-source="
 function foo(...a){}
@@ -1169,11 +1169,11 @@ return true;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_declarations"><span><a class="anchor" href="#test-nested_rest_destructuring,_declarations">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, declarations</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Nested_object_and_array_destructuring" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#nested-rest-destruct-decl-note"><sup>[11]</sup></a></span><script data-source="
 var [x, ...[y, ...z]] = [1,2,3,4];
@@ -1253,11 +1253,11 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-nested_rest_destructuring,_parameters"><span><a class="anchor" href="#test-nested_rest_destructuring,_parameters">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment">nested rest destructuring, parameters</a><a href="#nested-rest-destruct-params-note"><sup>[12]</sup></a></span><script data-source="
 return function([x, ...[y, ...z]]) {
@@ -1338,11 +1338,11 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy,_enumerate_handler_removed"><span><a class="anchor" href="#test-Proxy,_enumerate_handler_removed">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects">Proxy, &quot;enumerate&quot; handler removed</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-enumerate-removed-note"><sup>[13]</sup></a></span><script data-source="
 var passed = true;
@@ -1428,11 +1428,11 @@ return passed;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_internal_calls,_Array.prototype.includes"><span><a class="anchor" href="#test-Proxy_internal_calls,_Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Proxy internal calls, Array.prototype.includes</a></span><script data-source="
 // Array.prototype.includes -&gt; Get -&gt; [[Get]]
@@ -1520,11 +1520,11 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2017 features</td>
 </tr>
@@ -1602,11 +1602,11 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="graalvm" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">4/4</td>
-<td class="tally" data-browser="ios11" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">4/4</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">4/4</td>
+<td class="tally" data-browser="ios12" data-tally="1">4/4</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.values_Object.values_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.values_Object.values_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.values">Object.values</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1688,11 +1688,11 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.entries_Object.entries_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.entries_Object.entries_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.entries">Object.entries</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
@@ -1778,11 +1778,11 @@ return Array.isArray(e)
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors_Object.getOwnPropertyDescriptors_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object_static_methods_a_href=_https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors_Object.getOwnPropertyDescriptors_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors">Object.getOwnPropertyDescriptors</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var object = {a: 1};
@@ -1869,11 +1869,11 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object_static_methods" id="test-Object_static_methods_Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors"><td><span><a class="anchor" href="#test-Object_static_methods_Object.getOwnPropertyDescriptors_doesn&apos;t_provide_undefined_descriptors">&#xA7;</a>Object.getOwnPropertyDescriptors doesn&apos;t provide undefined descriptors</span><script data-source="
 var P = new Proxy({a:1}, {
@@ -1955,11 +1955,11 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -2035,11 +2035,11 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">2/2</td>
-<td class="tally" data-browser="ios11" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios12" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_a_href=_https://tc39.github.io/ecma262/#sec-string.prototype.padstart_String.prototype.padStart_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-String_padding_a_href=_https://tc39.github.io/ecma262/#sec-string.prototype.padstart_String.prototype.padStart_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-string.prototype.padstart">String.prototype.padStart</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
@@ -2123,11 +2123,11 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="String_padding" id="test-String_padding_a_href=_https://tc39.github.io/ecma262/#sec-string.prototype.padend_String.prototype.padEnd_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-String_padding_a_href=_https://tc39.github.io/ecma262/#sec-string.prototype.padend_String.prototype.padEnd_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-string.prototype.padend">String.prototype.padEnd</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
@@ -2211,11 +2211,11 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/proposal-trailing-function-commas">trailing commas in function syntax</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -2291,11 +2291,11 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">2/2</td>
-<td class="tally" data-browser="ios11" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios12" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_parameter_lists_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_parameter_lists_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>in parameter lists <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof function f( a, b, ){} === &apos;function&apos;;
@@ -2374,11 +2374,11 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="trailing_commas_in_function_syntax" id="test-trailing_commas_in_function_syntax_in_argument_lists_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-trailing_commas_in_function_syntax_in_argument_lists_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>in argument lists <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Math.min(1,2,3,) === 1;
@@ -2457,11 +2457,11 @@ return Math.min(1,2,3,) === 1;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-async-function-definitions">async functions</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
@@ -2537,11 +2537,11 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="graalvm" data-tally="0.8666666666666667" style="background-color:hsl(104,47%,50%)">13/15</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/15</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">15/15</td>
-<td class="tally" data-browser="ios11" data-tally="1">15/15</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">15/15</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">15/15</td>
+<td class="tally" data-browser="ios12" data-tally="1">15/15</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_return"><td><span><a class="anchor" href="#test-async_functions_return">&#xA7;</a>return</span><script data-source="
 async function a(){
@@ -2631,11 +2631,11 @@ p.then(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_throw"><td><span><a class="anchor" href="#test-async_functions_throw">&#xA7;</a>throw</span><script data-source="
 async function a(){
@@ -2725,11 +2725,11 @@ p.catch(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_no_line_break_between_async_and_function"><td><span><a class="anchor" href="#test-async_functions_no_line_break_between_async_and_function">&#xA7;</a>no line break between async and function</span><script data-source="
 async function a(){}
@@ -2809,11 +2809,11 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_no_prototype_property"><td><span><a class="anchor" href="#test-async_functions_no_prototype_property">&#xA7;</a>no &quot;prototype&quot; property</span><script data-source="
 async function a(){};
@@ -2893,11 +2893,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_await_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-async_functions_await_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>await <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 (async function (){
@@ -2983,11 +2983,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_await,_rejection"><td><span><a class="anchor" href="#test-async_functions_await,_rejection">&#xA7;</a>await, rejection</span><script data-source="
 (async function (){
@@ -3075,11 +3075,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_must_await_a_value"><td><span><a class="anchor" href="#test-async_functions_must_await_a_value">&#xA7;</a>must await a value</span><script data-source="
 async function a(){ await Promise.resolve(); }
@@ -3159,11 +3159,11 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_can_await_non-Promise_values"><td><span><a class="anchor" href="#test-async_functions_can_await_non-Promise_values">&#xA7;</a>can await non-Promise values</span><script data-source="
 (async function (){
@@ -3248,11 +3248,11 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_cannot_await_in_parameters"><td><span><a class="anchor" href="#test-async_functions_cannot_await_in_parameters">&#xA7;</a>cannot await in parameters</span><script data-source="
 async function a(){ await Promise.resolve(); }
@@ -3332,11 +3332,11 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_async_methods,_object_literals"><td><span><a class="anchor" href="#test-async_functions_async_methods,_object_literals">&#xA7;</a>async methods, object literals</span><script data-source="
 var o = {
@@ -3426,11 +3426,11 @@ p.then(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_async_methods,_classes"><td><span><a class="anchor" href="#test-async_functions_async_methods,_classes">&#xA7;</a>async methods, classes</span><script data-source="
 class C {
@@ -3520,11 +3520,11 @@ p.then(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_async_arrow_functions"><td><span><a class="anchor" href="#test-async_functions_async_arrow_functions">&#xA7;</a>async arrow functions</span><script data-source="
 var a = async () =&gt; await Promise.resolve(&quot;foo&quot;);
@@ -3612,11 +3612,11 @@ p.then(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_correct_prototype_chain"><td><span><a class="anchor" href="#test-async_functions_correct_prototype_chain">&#xA7;</a>correct prototype chain</span><script data-source="
 var asyncFunctionProto = Object.getPrototypeOf(async function (){});
@@ -3697,11 +3697,11 @@ return asyncFunctionProto !== function(){}.prototype
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_async_function_prototype,_Symbol.toStringTag"><td><span><a class="anchor" href="#test-async_functions_async_function_prototype,_Symbol.toStringTag">&#xA7;</a>async function prototype, Symbol.toStringTag</span><script data-source="
 return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;AsyncFunction&quot;;
@@ -3780,11 +3780,11 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_async_function_constructor"><td><span><a class="anchor" href="#test-async_functions_async_function_constructor">&#xA7;</a>async function constructor</span><script data-source="
 var a = async function (){}.constructor(&quot;return &apos;foo&apos;;&quot;);
@@ -3872,11 +3872,11 @@ p.then(function(result) {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-shared_memory_and_atomics"><span><a class="anchor" href="#test-shared_memory_and_atomics">&#xA7;</a>shared memory and atomics</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/17</td>
@@ -3952,11 +3952,11 @@ p.then(function(result) {
 <td class="tally" data-browser="graalvm" data-tally="1">17/17</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/17</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
-<td class="tally" data-browser="ios11" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
 <td class="tally" data-browser="ios11_3" data-tally="0">0/17</td>
+<td class="tally" data-browser="ios12" data-tally="0">0/17</td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer-objects_SharedArrayBuffer_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer-objects_SharedArrayBuffer_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-sharedarraybuffer-objects">SharedArrayBuffer</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SharedArrayBuffer === &apos;function&apos;;
@@ -4035,11 +4035,11 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="no" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_SharedArrayBuffer[Symbol.species]">&#xA7;</a>SharedArrayBuffer[Symbol.species]</span><script data-source="
 return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
@@ -4118,11 +4118,11 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="no" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength_SharedArrayBuffer.prototype.byteLength_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength_SharedArrayBuffer.prototype.byteLength_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength">SharedArrayBuffer.prototype.byteLength</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
@@ -4201,11 +4201,11 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.slice_SharedArrayBuffer.prototype.slice_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.slice_SharedArrayBuffer.prototype.slice_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.prototype.slice</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
@@ -4284,11 +4284,11 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="no" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.toString_SharedArrayBuffer.prototype[Symbol.toStringTag]_/a"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.toString_SharedArrayBuffer.prototype[Symbol.toStringTag]_/a">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.toString">SharedArrayBuffer.prototype[Symbol.toStringTag]</a></span><script data-source="
 return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuffer&apos;;
@@ -4367,11 +4367,11 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="no" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="ios11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.add_Atomics.add_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.add_Atomics.add_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.add">Atomics.add</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.add == &apos;function&apos;;
@@ -4450,11 +4450,11 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.and_Atomics.and_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.and_Atomics.and_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.and">Atomics.and</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.and == &apos;function&apos;;
@@ -4533,11 +4533,11 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.compareExchange_Atomics.compareExchange_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.compareExchange_Atomics.compareExchange_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.compareExchange">Atomics.compareExchange</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.compareExchange == &apos;function&apos;;
@@ -4616,11 +4616,11 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.exchange_Atomics.exchange_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.exchange_Atomics.exchange_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.exchange">Atomics.exchange</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.exchange == &apos;function&apos;;
@@ -4699,11 +4699,11 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.wait_Atomics.wait_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.wait_Atomics.wait_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.wait">Atomics.wait</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.wait == &apos;function&apos;;
@@ -4782,11 +4782,11 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.wake_Atomics.wake_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.wake_Atomics.wake_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.wake">Atomics.wake</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.wake == &apos;function&apos;;
@@ -4865,11 +4865,11 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.isLockFree_Atomics.isLockFree_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.isLockFree_Atomics.isLockFree_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.isLockFree">Atomics.isLockFree</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.isLockFree == &apos;function&apos;;
@@ -4948,11 +4948,11 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.load_Atomics.load_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.load_Atomics.load_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.load">Atomics.load</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.load == &apos;function&apos;;
@@ -5031,11 +5031,11 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.or_Atomics.or_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.or_Atomics.or_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.or">Atomics.or</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.or == &apos;function&apos;;
@@ -5114,11 +5114,11 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.store_Atomics.store_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.store_Atomics.store_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.store">Atomics.store</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.store == &apos;function&apos;;
@@ -5197,11 +5197,11 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.sub_Atomics.sub_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.sub_Atomics.sub_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.sub">Atomics.sub</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.sub == &apos;function&apos;;
@@ -5280,11 +5280,11 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="subtest" data-parent="shared_memory_and_atomics" id="test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.xor_Atomics.xor_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-shared_memory_and_atomics_a_href=_https://tc39.github.io/ecma262/#sec-atomics.xor_Atomics.xor_/a_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-atomics.xor">Atomics.xor</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Atomics.xor == &apos;function&apos;;
@@ -5363,11 +5363,11 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
 <tr class="category"><td colspan="81">2017 misc</td>
 </tr>
@@ -5453,11 +5453,11 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-RegExp_u_flag,_case_folding"><span><a class="anchor" href="#test-RegExp_u_flag,_case_folding">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/525">RegExp &quot;u&quot; flag, case folding</a></span><script data-source="
 return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/\W/iu)
@@ -5539,11 +5539,11 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125"><td id="test-arguments.caller_removed"><span><a class="anchor" href="#test-arguments.caller_removed">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/689">arguments.caller removed</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return (function(){
@@ -5625,11 +5625,11 @@ return (function(){
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2017 annex b</td>
 </tr>
@@ -5707,11 +5707,11 @@ return (function(){
 <td class="tally not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0.375" style="background-color:hsl(45,69%,50%)" data-flagged-tally="0.625">6/16</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0.375" style="background-color:hsl(45,69%,50%)" data-flagged-tally="0.625">6/16</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">16/16</td>
-<td class="tally" data-browser="ios11" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">16/16</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">16/16</td>
+<td class="tally" data-browser="ios12" data-tally="1">16/16</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>__defineGetter__ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = {};
@@ -5795,11 +5795,11 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_symbols">&#xA7;</a>__defineGetter__, symbols</span><script data-source="
 var obj = {};
@@ -5884,11 +5884,11 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no flagged obsolete" data-browser="android4_4">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
 <td class="no flagged obsolete" data-browser="android4_4_3">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineGetter__,_ToObject(this)">&#xA7;</a>__defineGetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -5973,11 +5973,11 @@ return true;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>__defineSetter__ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = {};
@@ -6061,11 +6061,11 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_symbols">&#xA7;</a>__defineSetter__, symbols</span><script data-source="
 var obj = {};
@@ -6150,11 +6150,11 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no flagged obsolete" data-browser="android4_4">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
 <td class="no flagged obsolete" data-browser="android4_4_3">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___defineSetter__,_ToObject(this)">&#xA7;</a>__defineSetter__, ToObject(this)</span><script data-source="
 var key = &apos;__accessors_test__&apos;;
@@ -6239,11 +6239,11 @@ return true;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>__lookupGetter__ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = {
@@ -6329,11 +6329,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_prototype_chain">&#xA7;</a>__lookupGetter__, prototype chain</span><script data-source="
 var obj = {
@@ -6419,11 +6419,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_symbols">&#xA7;</a>__lookupGetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -6510,11 +6510,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no flagged obsolete" data-browser="android4_4">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
 <td class="no flagged obsolete" data-browser="android4_4_3">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_ToObject(this)">&#xA7;</a>__lookupGetter__, ToObject(this)</span><script data-source="
 __lookupGetter__.call(1, &apos;key&apos;);
@@ -6598,11 +6598,11 @@ return true;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupGetter__,_data_properties_can_shadow_accessors"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupGetter__,_data_properties_can_shadow_accessors">&#xA7;</a>__lookupGetter__, data properties can shadow accessors</span><script data-source="
 var a = { };
@@ -6685,11 +6685,11 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter___a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter___title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>__lookupSetter__ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var obj = {
@@ -6775,11 +6775,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_prototype_chain">&#xA7;</a>__lookupSetter__, prototype chain</span><script data-source="
 var obj = {
@@ -6865,11 +6865,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_symbols">&#xA7;</a>__lookupSetter__, symbols</span><script data-source="
 var sym = Symbol();
@@ -6956,11 +6956,11 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no flagged obsolete" data-browser="android4_4">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
 <td class="no flagged obsolete" data-browser="android4_4_3">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_ToObject(this)">&#xA7;</a>__lookupSetter__, ToObject(this)</span><script data-source="
 __lookupSetter__.call(1, &apos;key&apos;);
@@ -7044,11 +7044,11 @@ return true;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Object.prototype_getter/setter_methods" id="test-Object.prototype_getter/setter_methods___lookupSetter__,_data_properties_can_shadow_accessors"><td><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods___lookupSetter__,_data_properties_can_shadow_accessors">&#xA7;</a>__lookupSetter__, data properties can shadow accessors</span><script data-source="
 var a = { };
@@ -7131,11 +7131,11 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="yes obsolete" data-browser="ios9">Yes</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -7211,11 +7211,11 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">4/4</td>
-<td class="tally" data-browser="ios11" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="1">4/4</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">4/4</td>
+<td class="tally" data-browser="ios12" data-tally="1">4/4</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineGetter__">&#xA7;</a>__defineGetter__</span><script data-source="
 // Object.prototype.__defineGetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -7298,11 +7298,11 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___defineSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___defineSetter__">&#xA7;</a>__defineSetter__</span><script data-source="
 // Object.prototype.__defineSetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
@@ -7385,11 +7385,11 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupGetter__">&#xA7;</a>__lookupGetter__</span><script data-source="
 // Object.prototype.__lookupGetter__ -&gt; [[GetOwnProperty]]
@@ -7477,11 +7477,11 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Proxy_internal_calls,_getter/setter_methods" id="test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__"><td><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods___lookupSetter__">&#xA7;</a>__lookupSetter__</span><script data-source="
 // Object.prototype.__lookupSetter__ -&gt; [[GetOwnProperty]]
@@ -7569,11 +7569,11 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.125" class="optional-feature"><td id="test-assignments_allowed_in_for-in_head_in_non-strict_mode"><span><a class="anchor" href="#test-assignments_allowed_in_for-in_head_in_non-strict_mode">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads">assignments allowed in for-in head in non-strict mode</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in#Compatibility_Initializer_expressions_in_strict_mode" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 for (var i = 0 in {}) {}
@@ -7653,11 +7653,11 @@ return i === 0;
 <td class="yes not-applicable" data-browser="graalvm" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2018 features</td>
 </tr>
@@ -7735,11 +7735,11 @@ return i === 0;
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios12" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="object_rest/spread_properties" id="test-object_rest/spread_properties_object_rest_properties"><td><span><a class="anchor" href="#test-object_rest/spread_properties_object_rest_properties">&#xA7;</a>object rest properties</span><script data-source="
 var {a, ...rest} = {a: 1, b: 2, c: 3};
@@ -7819,11 +7819,11 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="object_rest/spread_properties" id="test-object_rest/spread_properties_object_spread_properties"><td><span><a class="anchor" href="#test-object_rest/spread_properties_object_spread_properties">&#xA7;</a>object spread properties</span><script data-source="
 var spread = {b: 2, c: 3};
@@ -7904,11 +7904,11 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Promise.prototype.finally"><span><a class="anchor" href="#test-Promise.prototype.finally">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-finally">Promise.prototype.finally</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
@@ -7984,11 +7984,11 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="tally" data-browser="graalvm" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/3</td>
-<td class="tally" data-browser="ios11" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">3/3</td>
+<td class="tally" data-browser="ios12" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="Promise.prototype.finally" id="test-Promise.prototype.finally_basic_support"><td><span><a class="anchor" href="#test-Promise.prototype.finally_basic_support">&#xA7;</a>basic support</span><script data-source="
 var p1 = Promise.resolve(&quot;foo&quot;);
@@ -8093,11 +8093,11 @@ function check() {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Promise.prototype.finally" id="test-Promise.prototype.finally_don&apos;t_change_resolution_value"><td><span><a class="anchor" href="#test-Promise.prototype.finally_don&apos;t_change_resolution_value">&#xA7;</a>don&apos;t change resolution value</span><script data-source="
 var score = 0;
@@ -8194,11 +8194,11 @@ function check() {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Promise.prototype.finally" id="test-Promise.prototype.finally_change_rejection_value"><td><span><a class="anchor" href="#test-Promise.prototype.finally_change_rejection_value">&#xA7;</a>change rejection value</span><script data-source="
 var score = 0;
@@ -8297,11 +8297,11 @@ function check() {
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.25"><td id="test-s_(dotAll)_flag_for_regular_expressions"><span><a class="anchor" href="#test-s_(dotAll)_flag_for_regular_expressions">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-get-regexp.prototype.dotAll">s (dotAll) flag for regular expressions</a></span><script data-source="
 const regex = /foo.bar/s;
@@ -8381,11 +8381,11 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.25"><td id="test-RegExp_named_capture_groups"><span><a class="anchor" href="#test-RegExp_named_capture_groups">&#xA7;</a><a href="https://github.com/tc39/proposal-regexp-named-groups">RegExp named capture groups</a></span><script data-source="
 var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec(&apos;2016-03-11&apos;);
@@ -8471,11 +8471,11 @@ return result.groups.year === &apos;2016&apos;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr significance="0.25"><td id="test-RegExp_Lookbehind_Assertions"><span><a class="anchor" href="#test-RegExp_Lookbehind_Assertions">&#xA7;</a><a href="https://github.com/tc39/proposal-regexp-lookbehind">RegExp Lookbehind Assertions</a></span><script data-source="
 return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&apos;) &amp;&amp;
@@ -8555,11 +8555,11 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="no" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
 </tr>
 <tr significance="0.25"><td id="test-RegExp_Unicode_Property_Escapes"><span><a class="anchor" href="#test-RegExp_Unicode_Property_Escapes">&#xA7;</a><a href="https://github.com/tc39/proposal-regexp-unicode-property-escapes">RegExp Unicode Property Escapes</a></span><script data-source="
 const regexGreekSymbol = /\p{Script=Greek}/u;
@@ -8639,11 +8639,11 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Asynchronous_Iterators"><span><a class="anchor" href="#test-Asynchronous_Iterators">&#xA7;</a><a href="https://github.com/tc39/proposal-async-iteration">Asynchronous Iterators</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -8719,11 +8719,11 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios11_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios12" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="Asynchronous_Iterators" id="test-Asynchronous_Iterators_async_generators"><td><span><a class="anchor" href="#test-Asynchronous_Iterators_async_generators">&#xA7;</a>async generators</span><script data-source="
 async function*generator(){
@@ -8809,11 +8809,11 @@ iterator.next().then(function(step){
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="no" data-browser="ios11_3">No</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="Asynchronous_Iterators" id="test-Asynchronous_Iterators_for-await-of_loops"><td><span><a class="anchor" href="#test-Asynchronous_Iterators_for-await-of_loops">&#xA7;</a>for-await-of loops</span><script data-source="
 var asyncIterable = {};
@@ -8909,11 +8909,11 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="no" data-browser="ios11_3">No</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2018 misc</td>
 </tr>
@@ -9001,11 +9001,11 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="yes" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="category"><td colspan="81">2019 misc</td>
 </tr>
@@ -9083,11 +9083,11 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="tally" data-browser="graalvm" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="ios9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/3</td>
-<td class="tally" data-browser="ios11" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios11_3" data-tally="1">3/3</td>
+<td class="tally" data-browser="ios12" data-tally="1">3/3</td>
 </tr>
 <tr class="subtest" data-parent="optional_catch_binding" id="test-optional_catch_binding_basic"><td><span><a class="anchor" href="#test-optional_catch_binding_basic">&#xA7;</a>basic</span><script data-source="
 try {
@@ -9172,11 +9172,11 @@ return false;
 <td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="optional_catch_binding" id="test-optional_catch_binding_await"><td><span><a class="anchor" href="#test-optional_catch_binding_await">&#xA7;</a>await</span><script data-source="
 (async function (){
@@ -9262,11 +9262,11 @@ return false;
 <td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 <tr class="subtest" data-parent="optional_catch_binding" id="test-optional_catch_binding_yield"><td><span><a class="anchor" href="#test-optional_catch_binding_yield">&#xA7;</a>yield</span><script data-source="
 function *foo() {
@@ -9357,11 +9357,11 @@ return it.next().value;
 <td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios9">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
 <td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
 </tr>
 </tbody>
     </table>
