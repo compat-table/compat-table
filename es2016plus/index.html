@@ -168,12 +168,11 @@
 <th class="platform chrome69 desktop" data-browser="chrome69"><a href="#chrome69" class="browser-name"><abbr title="Chrome">CH&#xA0;69,<br>OP&#xA0;56</abbr></a></th>
 <th class="platform chrome70 desktop unstable" data-browser="chrome70"><a href="#chrome70" class="browser-name"><abbr title="Chrome Dev">CH&#xA0;70,<br>OP&#xA0;57</abbr></a></th>
 <th class="platform chrome71 desktop unstable" data-browser="chrome71"><a href="#chrome71" class="browser-name"><abbr title="Chrome Canary">CH&#xA0;71,<br>OP&#xA0;58</abbr></a></th>
-<th class="platform safari9 desktop obsolete" data-browser="safari9"><a href="#safari9" class="browser-name"><abbr title="Safari 9">SF 9</abbr></a></th>
 <th class="platform safari10 desktop obsolete" data-browser="safari10"><a href="#safari10" class="browser-name"><abbr title="Safari 10">SF 10</abbr></a></th>
 <th class="platform safari10_1 desktop obsolete" data-browser="safari10_1"><a href="#safari10_1" class="browser-name"><abbr title="Safari 10.1">SF 10.1</abbr></a></th>
-<th class="platform safari11 desktop" data-browser="safari11"><a href="#safari11" class="browser-name"><abbr title="Safari 11">SF 11</abbr></a></th>
+<th class="platform safari11 desktop obsolete" data-browser="safari11"><a href="#safari11" class="browser-name"><abbr title="Safari 11">SF 11</abbr></a></th>
 <th class="platform safari11_1 desktop" data-browser="safari11_1"><a href="#safari11_1" class="browser-name"><abbr title="Safari 11.1">SF 11.1</abbr></a></th>
-<th class="platform safari12 desktop unstable" data-browser="safari12"><a href="#safari12" class="browser-name"><abbr title="Safari 12 Beta">SF 12</abbr></a></th>
+<th class="platform safari12 desktop" data-browser="safari12"><a href="#safari12" class="browser-name"><abbr title="Safari 12">SF 12</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 65">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r222556 (October 4, 2017)">WK</abbr></a></th>
 <th class="platform phantom engine" data-browser="phantom"><a href="#phantom" class="browser-name"><abbr title="PhantomJS 2.0">PJS</abbr></a></th>
@@ -203,7 +202,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="81">2016 features</td>
+      <tr class="category"><td colspan="80">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -254,12 +253,11 @@
 <td class="tally" data-browser="chrome69" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">3/3</td>
-<td class="tally" data-browser="safari11" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">3/3</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">3/3</td>
+<td class="tally" data-browser="safari12" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
@@ -337,12 +335,11 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -420,12 +417,11 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -508,12 +504,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -588,12 +583,11 @@ return true;
 <td class="tally" data-browser="chrome69" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">3/3</td>
-<td class="tally" data-browser="safari11" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">3/3</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">3/3</td>
+<td class="tally" data-browser="safari12" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
@@ -675,12 +669,11 @@ return [1, 2, 3].includes(1)
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -780,12 +773,11 @@ return 24;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -868,12 +860,11 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -899,7 +890,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="ios11_3">Yes</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2016 misc</td>
+<tr class="category"><td colspan="80">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#new-gen-fn-note"><sup>[7]</sup></a></span><script data-source="
 function * generator() {
@@ -960,12 +951,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1056,12 +1046,11 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1144,12 +1133,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1228,12 +1216,11 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1313,12 +1300,11 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1403,12 +1389,11 @@ return passed;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1495,12 +1480,11 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1526,7 +1510,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="ios11_3">Yes</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2017 features</td>
+<tr class="category"><td colspan="80">2017 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
@@ -1577,12 +1561,11 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="chrome69" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">4/4</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">4/4</td>
-<td class="tally" data-browser="safari11" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">4/4</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">4/4</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">4/4</td>
+<td class="tally" data-browser="safari12" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">4/4</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/4</td>
@@ -1663,12 +1646,11 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1753,12 +1735,11 @@ return Array.isArray(e)
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1844,12 +1825,11 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -1930,12 +1910,11 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2010,12 +1989,11 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally" data-browser="chrome69" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">2/2</td>
-<td class="tally" data-browser="safari11" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">2/2</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari12" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -2098,12 +2076,11 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2186,12 +2163,11 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2266,12 +2242,11 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally" data-browser="chrome69" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">2/2</td>
-<td class="tally" data-browser="safari11" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">2/2</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari12" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -2349,12 +2324,11 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2432,12 +2406,11 @@ return Math.min(1,2,3,) === 1;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2512,12 +2485,11 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="chrome69" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">15/15</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/15</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">15/15</td>
-<td class="tally" data-browser="safari11" data-tally="1">15/15</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">15/15</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">15/15</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">15/15</td>
+<td class="tally" data-browser="safari12" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">15/15</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">15/15</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/15</td>
@@ -2606,12 +2578,11 @@ p.then(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2700,12 +2671,11 @@ p.catch(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2784,12 +2754,11 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2868,12 +2837,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -2958,12 +2926,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3050,12 +3017,11 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3134,12 +3100,11 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3223,12 +3188,11 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3307,12 +3271,11 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3401,12 +3364,11 @@ p.then(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3495,12 +3457,11 @@ p.then(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3587,12 +3548,11 @@ p.then(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3672,12 +3632,11 @@ return asyncFunctionProto !== function(){}.prototype
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3755,12 +3714,11 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3847,12 +3805,11 @@ p.then(function(result) {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -3927,12 +3884,11 @@ p.then(function(result) {
 <td class="tally" data-browser="chrome69" data-tally="1">17/17</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">17/17</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">17/17</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0.9411764705882353" style="background-color:hsl(112,44%,50%)">16/17</td>
-<td class="tally" data-browser="safari11" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0.7058823529411765" style="background-color:hsl(84,54%,50%)">12/17</td>
 <td class="tally" data-browser="safari11_1" data-tally="0">0/17</td>
-<td class="tally unstable" data-browser="safari12" data-tally="0">0/17</td>
+<td class="tally" data-browser="safari12" data-tally="0">0/17</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/17</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/17</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/17</td>
@@ -4010,12 +3966,11 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="no" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4093,12 +4048,11 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="no" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4176,12 +4130,11 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4259,12 +4212,11 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="no" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4342,12 +4294,11 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="no" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no obsolete" data-browser="safari11">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4425,12 +4376,11 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4508,12 +4458,11 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4591,12 +4540,11 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4674,12 +4622,11 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4757,12 +4704,11 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4840,12 +4786,11 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -4923,12 +4868,11 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5006,12 +4950,11 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5089,12 +5032,11 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5172,12 +5114,11 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5255,12 +5196,11 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5338,12 +5278,11 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="no" data-browser="safari11_1">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
-<td class="no unstable" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
+<td class="no" data-browser="safari12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="phantom">No</td>
@@ -5369,7 +5308,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="ios11_3">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="no" data-browser="ios12">No<a href="#sf-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 </tr>
-<tr class="category"><td colspan="81">2017 misc</td>
+<tr class="category"><td colspan="80">2017 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-duplictate-ownkeys-updated-note"><sup>[22]</sup></a></span><script data-source="
 var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
@@ -5428,12 +5367,11 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -5514,12 +5452,11 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -5600,12 +5537,11 @@ return (function(){
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -5631,7 +5567,7 @@ return (function(){
 <td class="yes" data-browser="ios11_3">Yes</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2017 annex b</td>
+<tr class="category"><td colspan="80">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -5682,12 +5618,11 @@ return (function(){
 <td class="tally" data-browser="chrome69" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">16/16</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="1">16/16</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">16/16</td>
-<td class="tally" data-browser="safari11" data-tally="1">16/16</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">16/16</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">16/16</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">16/16</td>
+<td class="tally" data-browser="safari12" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">16/16</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">16/16</td>
 <td class="tally" data-browser="phantom" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
@@ -5770,12 +5705,11 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -5859,12 +5793,11 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -5948,12 +5881,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6036,12 +5968,11 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6125,12 +6056,11 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -6214,12 +6144,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6304,12 +6233,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6394,12 +6322,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6485,12 +6412,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -6573,12 +6499,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6660,12 +6585,11 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6750,12 +6674,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6840,12 +6763,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -6931,12 +6853,11 @@ return foo() === &quot;bar&quot;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7019,12 +6940,11 @@ return true;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -7106,12 +7026,11 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="safari9">Yes</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -7186,12 +7105,11 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally" data-browser="chrome69" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">4/4</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="1">4/4</td>
-<td class="tally" data-browser="safari11" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="1">4/4</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">4/4</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">4/4</td>
+<td class="tally" data-browser="safari12" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">4/4</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/4</td>
@@ -7273,12 +7191,11 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7360,12 +7277,11 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7452,12 +7368,11 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7544,12 +7459,11 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="yes obsolete" data-browser="safari10">Yes</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7628,12 +7542,11 @@ return i === 0;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes" data-browser="phantom">Yes</td>
@@ -7659,7 +7572,7 @@ return i === 0;
 <td class="yes" data-browser="ios11_3">Yes</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2018 features</td>
+<tr class="category"><td colspan="80">2018 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-object_rest/spread_properties"><span><a class="anchor" href="#test-object_rest/spread_properties">&#xA7;</a><a href="https://github.com/tc39/proposal-object-rest-spread">object rest/spread properties</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
@@ -7710,12 +7623,11 @@ return i === 0;
 <td class="tally" data-browser="chrome69" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari12" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -7794,12 +7706,11 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7879,12 +7790,11 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -7959,12 +7869,11 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="tally" data-browser="chrome69" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/3</td>
-<td class="tally" data-browser="safari11" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">3/3</td>
+<td class="tally" data-browser="safari12" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
@@ -8068,12 +7977,11 @@ function check() {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8169,12 +8077,11 @@ function check() {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8272,12 +8179,11 @@ function check() {
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8356,12 +8262,11 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8446,12 +8351,11 @@ return result.groups.year === &apos;2016&apos;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8530,12 +8434,11 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="no" data-browser="safari11_1">No</td>
-<td class="no unstable" data-browser="safari12">No</td>
+<td class="no" data-browser="safari12">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8614,12 +8517,11 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8694,12 +8596,11 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="tally" data-browser="chrome69" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari11_1" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari12" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/2</td>
@@ -8784,12 +8685,11 @@ iterator.next().then(function(step){
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="no" data-browser="safari11_1">No</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8884,12 +8784,11 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="no" data-browser="safari11_1">No</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -8915,7 +8814,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="no" data-browser="ios11_3">No</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2018 misc</td>
+<tr class="category"><td colspan="80">2018 misc</td>
 </tr>
 <tr significance="0.25"><td id="test-template_literal_revision"><span><a class="anchor" href="#test-template_literal_revision">&#xA7;</a><a href="https://github.com/tc39/proposal-template-literal-revision">template literal revision</a></span><script data-source="
 function tag(strings, a) {
@@ -8976,12 +8875,11 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="yes" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -9007,7 +8905,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="yes" data-browser="ios11_3">Yes</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
-<tr class="category"><td colspan="81">2019 misc</td>
+<tr class="category"><td colspan="80">2019 misc</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-optional_catch_binding"><span><a class="anchor" href="#test-optional_catch_binding">&#xA7;</a><a href="https://tc39.github.io/proposal-optional-catch-binding/">optional catch binding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
@@ -9058,12 +8956,11 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="tally" data-browser="chrome69" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome70" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="chrome71" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="safari9" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/3</td>
-<td class="tally" data-browser="safari11" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari11_1" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="safari12" data-tally="1">3/3</td>
+<td class="tally" data-browser="safari12" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">3/3</td>
 <td class="tally" data-browser="phantom" data-tally="0">0/3</td>
@@ -9147,12 +9044,11 @@ return false;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -9237,12 +9133,11 @@ return false;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
@@ -9332,12 +9227,11 @@ return it.next().value;
 <td class="yes" data-browser="chrome69">Yes</td>
 <td class="yes unstable" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
-<td class="no obsolete" data-browser="safari9">No</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
 <td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes unstable" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no" data-browser="phantom">No</td>
