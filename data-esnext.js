@@ -1056,6 +1056,7 @@ exports.tests = [
         tr: true,
         typescript1: true,
         firefox2: false,
+        chrome71: chrome.harmony,
         opera10_50: false,
         duktape2_0: false,
         graalvm: false,
