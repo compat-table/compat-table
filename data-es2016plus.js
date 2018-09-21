@@ -2740,6 +2740,7 @@ exports.tests = [
         */},
         res: {
           babel6: true,
+          closure20180910: true,
           chrome62: chrome.harmony,
           chrome63: true,
           typescript2_3: true,
