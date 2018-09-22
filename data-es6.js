@@ -2858,6 +2858,10 @@ exports.tests = [
           val: false,
           note_id: 'typescript-extends',
         },
+        closure20180910: {
+          val: false,
+          note_id: 'compiled-extends',
+        },
         ejs: true,
         jsx: { val: false, note_id: 'compiled-extends' },
         edge12: edge.experimental,
