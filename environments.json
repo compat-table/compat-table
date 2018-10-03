@@ -499,7 +499,7 @@
     "family": "Chakra",
     "short": "Edge 14",
     "release": "2016-08-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge15": {
     "full": "Microsoft Edge 15",
@@ -513,7 +513,7 @@
     "family": "Chakra",
     "short": "Edge 16",
     "release": "2017-10-17",
-    "obsolete": false
+    "obsolete": true
   },
   "edge17": {
     "full": "Microsoft Edge 17",
@@ -523,9 +523,16 @@
     "obsolete": false
   },
   "edge18": {
-    "full": "Microsoft Edge 18 Preview",
+    "full": "Microsoft Edge 18",
     "family": "Chakra",
-    "short": "Edge 18 Preview",
+    "release": "2018-10-02",
+    "short": "Edge 18",
+    "obsolete": false
+  },
+  "edge19": {
+    "full": "Microsoft Edge 19 Preview",
+    "family": "Chakra",
+    "short": "Edge 19 Preview",
     "unstable": true
   },
   "firefox1": {
