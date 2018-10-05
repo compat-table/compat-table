@@ -293,87 +293,28 @@ exports.tests = [
   ]
 },
 {
-  name: 'global',
+  name: 'globalThis',
   category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-global',
   subtests: [{
-    name: '"global" global property is global object',
+    name: '"globalThis" global property is global object',
     exec: function(){/*
       var actualGlobal = Function('return this')();
       actualGlobal.__system_global_test__ = 42;
-      return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
+      return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
     */},
     res: {
-      babel6: babel.corejs,
-      typescript1: typescript.corejs,
+      babel6: false,
+      typescript1: false,
       ie11: false,
       firefox2: false,
-      firefox53: {
-        val: false,
-        note_id: 'ffox-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
-      },
+      firefox53: false,
+      chrome70: true,
       opera10_50: false,
       safari10_1: false,
-      safaritp: {
-        val: false,
-        note_id: 'wk-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
-      },
-      webkit: {
-        val: false,
-        note_id: 'wk-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
-      },
-      node0_10: true,
-      node0_12: true,
-      node4: true,
-      node6: true,
-      node6_5: true,
-      node7: true,
-      node7_6: true,
-      node8: true,
-      node8_3: true,
-      node8_7: true,
-      duktape2_0: false,
-      duktape2_1: true,
-      graalvm: true,
-    }
-  }, {
-    name: '"global" global property has correct property descriptor',
-    exec: function(){/*
-      var actualGlobal = Function('return this')();
-      if (typeof global !== 'object') { return false; }
-      if (!('global' in actualGlobal)) { return false; }
-      if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }
-      if (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3
-
-      var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');
-      return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
-    */},
-    res: {
-      babel6: babel.corejs,
-      typescript1: typescript.corejs,
-      ie11: false,
-      firefox2: false,
-      firefox53: {
-        val: false,
-        note_id: 'ffox-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325907">some</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326032">compatibility</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1328218">issues</a>.',
-      },
-      opera10_50: false,
-      safaritp: {
-        val: false,
-        note_id: 'wk-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
-      },
-      safari10_1: false,
-      webkit: {
-        val: false,
-        note_id: 'wk-global-property',
-        note_html: 'The feature was disabled due to <a href="https://bugs.webkit.org/show_bug.cgi?id=165171">compatibility issues</a>.',
-      },
+      safaritp: false,
+      webkit: false,
       node0_10: false,
       node0_12: false,
       node4: false,
@@ -385,8 +326,44 @@ exports.tests = [
       node8_3: false,
       node8_7: false,
       duktape2_0: false,
-      duktape2_1: true,
-      graalvm: true,
+      duktape2_1: false,
+      graalvm: false,
+    }
+  }, {
+    name: '"globalThis" global property has correct property descriptor',
+    exec: function(){/*
+      var actualGlobal = Function('return this')();
+      if (typeof globalThis !== 'object') { return false; }
+      if (!('globalThis' in actualGlobal)) { return false; }
+      if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }
+
+      var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');
+      return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
+    */},
+    res: {
+      babel6: false,
+      typescript1: false,
+      ie11: false,
+      firefox2: false,
+      firefox53: false,
+      chrome70: true,
+      opera10_50: false,
+      safaritp: false,
+      safari10_1: false,
+      webkit: false,
+      node0_10: false,
+      node0_12: false,
+      node4: false,
+      node6: false,
+      node6_5: false,
+      node7: false,
+      node7_6: false,
+      node8: false,
+      node8_3: false,
+      node8_7: false,
+      duktape2_0: false,
+      duktape2_1: false,
+      graalvm: false,
     }
   }]
 },

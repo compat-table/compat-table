@@ -2456,5 +2456,72 @@ exports.tests = [
     graalvm: true,
   },
   separator: 'after'
-}
+},
+  {
+    name: 'global',
+    subtests: [{
+      name: '"global" global property is global object',
+      exec: function(){/*
+      var actualGlobal = Function('return this')();
+      actualGlobal.__system_global_test__ = 42;
+      return typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;
+    */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox53: false,
+        opera10_50: false,
+        safari10_1: false,
+        safaritp: false,
+        webkit: false,
+        node0_10: true,
+        node0_12: true,
+        node4: true,
+        node6: true,
+        node6_5: true,
+        node7: true,
+        node7_6: true,
+        node8: true,
+        node8_3: true,
+        node8_7: true,
+        duktape2_0: false,
+        duktape2_1: true,
+        graalvm: true,
+      }
+    }, {
+      name: '"global" global property has correct property descriptor',
+      exec: function(){/*
+      var actualGlobal = Function('return this')();
+      if (typeof global !== 'object') { return false; }
+      if (!('global' in actualGlobal)) { return false; }
+      if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }
+      if (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3
+
+      var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');
+      return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
+    */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox53: false,
+        opera10_50: false,
+        safaritp: false,
+        safari10_1: false,
+        webkit: false,
+        node0_10: false,
+        node0_12: false,
+        node4: false,
+        node6: false,
+        node6_5: false,
+        node7: false,
+        node7_6: false,
+        node8: false,
+        node8_3: false,
+        node8_7: false,
+        duktape2_0: false,
+        duktape2_1: true,
+        graalvm: true,
+      }
+    }]
+  }
 ];
