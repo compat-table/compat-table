@@ -15,6 +15,10 @@
         this.lacksGlobal = true;
         var global = this;
       }
+      if (typeof globalThis === 'undefined') {
+        this.lacksGlobalThis = true;
+        var globalThis = this;
+      }
       function __createIterableObject(a, b, c) {
         if (typeof Symbol === "function" && Symbol.iterator) {
           var arr = [a, b, c, ,];

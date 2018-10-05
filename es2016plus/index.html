@@ -15,6 +15,10 @@
         this.lacksGlobal = true;
         var global = this;
       }
+      if (typeof globalThis === 'undefined') {
+        this.lacksGlobalThis = true;
+        var globalThis = this;
+      }
     </script>
     <script>
       (function() {
