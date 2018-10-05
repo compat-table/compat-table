@@ -617,8 +617,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-globalThis"><span><a class="anchor" href="#test-globalThis">&#xA7;</a><a href="https://github.com/tc39/proposal-global">globalThis</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel6" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel6" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="babel7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/2</td>
@@ -627,13 +627,13 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally obsolete" data-browser="closure20180716" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20180805" data-tally="0">0/2</td>
 <td class="tally" data-browser="closure20180910" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="typescript1" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript2_6" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript2_7" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript2_8" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript2_9" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript3" data-tally="1">2/2</td>
-<td class="tally" data-browser="typescript3.1" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_7" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_8" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript3.1" data-tally="0">0/2</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="edge15" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="edge16" data-tally="0">0/2</td>
@@ -700,8 +700,8 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -710,13 +710,13 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
 <td class="no obsolete" data-browser="closure20180716">No</td>
 <td class="no obsolete" data-browser="closure20180805">No</td>
 <td class="no" data-browser="closure20180910">No</td>
-<td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_6">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_7">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_8">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_9">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes" data-browser="typescript3.1">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no obsolete" data-browser="edge16">No</td>
@@ -787,8 +787,8 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -797,13 +797,13 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="closure20180716">No</td>
 <td class="no obsolete" data-browser="closure20180805">No</td>
 <td class="no" data-browser="closure20180910">No</td>
-<td class="yes obsolete" data-browser="typescript1">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_6">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_7">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_8">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_9">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes" data-browser="typescript3.1">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no obsolete" data-browser="edge16">No</td>

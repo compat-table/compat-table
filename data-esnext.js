@@ -305,8 +305,8 @@ exports.tests = [
       return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
     */},
     res: {
-      babel6: babel.corejs,
-      typescript1: typescript.corejs,
+      babel6: false,
+      typescript1: false,
       ie11: false,
       firefox2: false,
       firefox53: false,
@@ -341,8 +341,8 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
-      babel6: babel.corejs,
-      typescript1: typescript.corejs,
+      babel6: false,
+      typescript1: false,
       ie11: false,
       firefox2: false,
       firefox53: false,
