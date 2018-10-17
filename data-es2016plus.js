@@ -2561,6 +2561,7 @@ exports.tests = [
      return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
      */},
     res: {
+      closure20181008: true,
       ie11: false,
       firefox2: false,
       firefox53: true,
