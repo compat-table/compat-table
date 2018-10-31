@@ -2794,6 +2794,41 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Well-formed JSON.stringify',
+  spec: 'https://github.com/tc39/proposal-well-formed-stringify',
+  category: STAGE3,
+  significance: 'small',
+  subtests: [
+    {
+      name: 'Non-BMP characters still serialize to surrogate pairs',
+      exec: function () {/*
+        return JSON.stringify('𝌆') === "\"𝌆\""
+          && JSON.stringify('\uD834\uDF06') === "\"𝌆\"";
+      */},
+      res: {
+		ie11: true,
+        firefox10: true,
+        chrome70: true,
+      }
+    },
+    {
+      name: 'Unpaired surrogate code units will serialize to escape sequences',
+      exec: function () {/*
+        return JSON.stringify('\uDF06\uD834') === "\"\\udf06\\ud834\""
+          && JSON.stringify('\uDEAD') === "\"\\udead\"";
+      */},
+      res: {
+		ie11: false,
+		edge16: false,
+        firefox52: false,
+        firefox63: false,
+        firefox64: true,
+		chrome70: false,
+      }
+    },
+  ]
+},
 ];
 
 
