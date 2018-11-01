@@ -1062,27 +1062,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'asap',
-  spec: 'https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask',
-  category: STAGE0,
-  significance: 'medium',
-  exec: function(){/*
-    var passed = false;
-    setTimeout(function(){ passed = false; }, 1);
-    asap(function(){ if(passed)asyncTestPassed(); });
-    passed = true;
-  */},
-  res : {
-    babel6: babel.corejs,
-    typescript1: typescript.corejs,
-    ie11: false,
-    firefox2: false,
-    opera10_50: false,
-    duktape2_0: false,
-    graalvm: false,
-  }
-},
-{
   name: 'syntactic tail calls',
   category: STAGE0,
   significance: 'medium',
