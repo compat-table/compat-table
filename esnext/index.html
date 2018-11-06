@@ -4900,8 +4900,11 @@ return set.size === 2
 <td class="tally" data-browser="ios12" data-tally="0">0/2</td>
 </tr>
 <tr class="subtest" data-parent="ArrayBuffer.prototype.transfer" id="test-ArrayBuffer.prototype.transfer_ArrayBuffer.prototype.transfer()"><td><span><a class="anchor" href="#test-ArrayBuffer.prototype.transfer_ArrayBuffer.prototype.transfer()">&#xA7;</a>ArrayBuffer.prototype.transfer()</span><script data-source="
-return typeof ArrayBuffer.prototype.transfer === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nreturn typeof ArrayBuffer.prototype.transfer === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ArrayBuffer.prototype.transfer === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+const buffer1 = new Uint8Array([1, 2]).buffer;
+const buffer2 = buffer1.transfer();
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 2;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("56");try{return Function("asyncTestPassed","\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("56");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
@@ -4982,8 +4985,11 @@ return typeof ArrayBuffer.prototype.transfer === &apos;function&apos;;
 <td class="no" data-browser="ios12">No</td>
 </tr>
 <tr class="subtest" data-parent="ArrayBuffer.prototype.transfer" id="test-ArrayBuffer.prototype.transfer_ArrayBuffer.prototype.realloc()"><td><span><a class="anchor" href="#test-ArrayBuffer.prototype.transfer_ArrayBuffer.prototype.realloc()">&#xA7;</a>ArrayBuffer.prototype.realloc()</span><script data-source="
-return typeof ArrayBuffer.prototype.realloc === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nreturn typeof ArrayBuffer.prototype.realloc === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ArrayBuffer.prototype.realloc === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+const buffer1 = new ArrayBuffer(1024);
+const buffer2 = buffer1.realloc(256);
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 256;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("57");try{return Function("asyncTestPassed","\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("57");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
