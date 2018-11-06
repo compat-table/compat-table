@@ -2832,7 +2832,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox52: false,
-		chrome70: false,
+        chrome70: false,
+        safari12: false,
       },
     },
     {
@@ -2843,7 +2844,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox52: false,
-		chrome70: false,
+        chrome70: false,
+        safari12: false,
       },
     },
   ]
