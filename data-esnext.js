@@ -2818,6 +2818,36 @@ exports.tests = [
     chrome72: true,
   }
 },
+{
+  name: 'ArrayBuffer.prototype.transfer',
+  category: STAGE2,
+  significance: 'small',
+  spec: 'https://github.com/domenic/proposal-arraybuffer-transfer/',
+  subtests: [
+    {
+      name: 'ArrayBuffer.prototype.transfer()',
+      exec: function () {/*
+        return typeof ArrayBuffer.prototype.transfer === 'function';
+      */},
+      res: {
+        ie11: false,
+        firefox52: false,
+		chrome70: false,
+      },
+    },
+    {
+      name: 'ArrayBuffer.prototype.realloc()',
+      exec: function () {/*
+        return typeof ArrayBuffer.prototype.realloc === 'function';
+      */},
+      res: {
+        ie11: false,
+        firefox52: false,
+		chrome70: false,
+      },
+    },
+  ]
+},
 ];
 
 
