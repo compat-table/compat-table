@@ -2807,7 +2807,7 @@ exports.tests = [
           && JSON.stringify('\uD834\uDF06') === "\"𝌆\"";
       */},
       res: {
-		ie11: true,
+        ie11: true,
         firefox10: true,
         chrome70: true,
       }
@@ -2819,12 +2819,12 @@ exports.tests = [
           && JSON.stringify('\uDEAD') === "\"\\udead\"";
       */},
       res: {
-		ie11: false,
-		edge16: false,
+        ie11: false,
+        edge16: false,
         firefox52: false,
         firefox63: false,
         firefox64: true,
-		chrome70: false,
+        chrome70: false,
       }
     },
   ]
