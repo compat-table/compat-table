@@ -2385,6 +2385,24 @@
       "non-standard"
     ]
   },
+  "node10_13": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=10.13 &lt;11",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome68",
+    "release": "2018-10-30",
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
   "duktape1_0": {
     "full": "Duktape 1.0",
     "family": "Duktape",
