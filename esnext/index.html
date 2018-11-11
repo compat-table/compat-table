@@ -215,7 +215,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="81">Candidate (stage 3)</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-string_trimming"><span><a class="anchor" href="#test-string_trimming">&#xA7;</a><a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim">string trimming</a></span></td>
+<tr class="supertest" significance="0.25"><td id="test-string_trimming"><span><a class="anchor" href="#test-string_trimming">&#xA7;</a><a href="https://github.com/tc39/proposal-string-left-right-trim">string trimming</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
 <td class="tally" data-browser="babel6" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="babel7" data-tally="1">4/4</td>
@@ -3672,7 +3672,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr significance="1"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/caridy/proposal-realms">Realms</a></span><script data-source="
+<tr significance="1"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/tc39/proposal-realms">Realms</a></span><script data-source="
 return typeof Realm === &quot;function&quot;
   &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
     return key in Realm.prototype;
@@ -5552,7 +5552,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr significance="0.5"><td id="test-Frozen_Realms_API"><span><a class="anchor" href="#test-Frozen_Realms_API">&#xA7;</a><a href="https://github.com/FUDCo/frozen-realms">Frozen Realms API</a></span><script data-source="
+<tr significance="0.5"><td id="test-Frozen_Realms_API"><span><a class="anchor" href="#test-Frozen_Realms_API">&#xA7;</a><a href="https://github.com/tc39/proposal-frozen-realms">Frozen Realms API</a></span><script data-source="
 return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
   &amp;&amp; typeof Reflect.Realm.prototype.spawn === &apos;function&apos;;
   ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("63");try{return Function("asyncTestPassed","\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("63");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.Realm.immutableRoot === 'function'\n  && typeof Reflect.Realm.prototype.spawn === 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
@@ -7945,7 +7945,7 @@ return result === &apos;Hello, hello!&apos;;
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr significance="0.5"><td id="test-extensible_numeric_literals"><span><a class="anchor" href="#test-extensible_numeric_literals">&#xA7;</a><a href="https://github.com/littledan/proposal-extensible-numeric-literals">extensible numeric literals</a></span><script data-source="
+<tr significance="0.5"><td id="test-extensible_numeric_literals"><span><a class="anchor" href="#test-extensible_numeric_literals">&#xA7;</a><a href="https://github.com/tc39/proposal-extended-numeric-literals">extensible numeric literals</a></span><script data-source="
 function i (str, num) {
   return typeof str + str + typeof num + num;
 }
@@ -8454,7 +8454,7 @@ return null ?? 42 === 42 &amp;&amp;
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="test-partial_application_syntax"><span><a class="anchor" href="#test-partial_application_syntax">&#xA7;</a><a href="https://github.com/rbuckton/proposal-partial-application">partial application syntax</a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-partial_application_syntax"><span><a class="anchor" href="#test-partial_application_syntax">&#xA7;</a><a href="https://github.com/tc39/proposal-partial-application">partial application syntax</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/12</td>
 <td class="tally" data-browser="babel6" data-tally="0">0/12</td>
 <td class="tally unstable" data-browser="babel7" data-tally="0">0/12</td>
@@ -10443,7 +10443,7 @@ return &apos;q=query+string+parameters&apos;.replaceAll(&apos;+&apos;, &apos; &a
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr significance="0.25"><td id="test-String.prototype.codePoints"><span><a class="anchor" href="#test-String.prototype.codePoints">&#xA7;</a><a href="https://github.com/RReverser/string-prototype-codepoints">String.prototype.codePoints</a></span><script data-source="
+<tr significance="0.25"><td id="test-String.prototype.codePoints"><span><a class="anchor" href="#test-String.prototype.codePoints">&#xA7;</a><a href="https://github.com/tc39/proposal-string-prototype-codepoints">String.prototype.codePoints</a></span><script data-source="
 var results = [];
 for (let code of &apos;a&#x20BB7;b&apos;.codePoints()) results.push(code);
 return results.length === 3
