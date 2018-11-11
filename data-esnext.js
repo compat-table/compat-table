@@ -134,7 +134,7 @@ exports.tests = [
   name: 'Realms',
   category: STAGE2,
   significance: 'large',
-  spec: 'https://github.com/caridy/proposal-realms',
+  spec: 'https://github.com/tc39/proposal-realms',
   exec: function () {/*
     return typeof Realm === "function"
       && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
@@ -172,7 +172,7 @@ exports.tests = [
   name: 'string trimming',
   category: STAGE3,
   significance: 'small',
-  spec: 'https://github.com/sebmarkbage/ecmascript-string-left-right-trim',
+  spec: 'https://github.com/tc39/proposal-string-left-right-trim',
   subtests: [
     {
       name: 'String.prototype.trimLeft',
@@ -930,7 +930,7 @@ exports.tests = [
   name: 'Frozen Realms API',
   category: STAGE1,
   significance: 'medium',
-  spec: 'https://github.com/FUDCo/frozen-realms',
+  spec: 'https://github.com/tc39/proposal-frozen-realms',
   exec: function () {/*
     return typeof Reflect.Realm.immutableRoot === 'function'
       && typeof Reflect.Realm.prototype.spawn === 'function';
@@ -1785,7 +1785,7 @@ exports.tests = [
 },
 {
   name: 'extensible numeric literals',
-  spec: 'https://github.com/littledan/proposal-extensible-numeric-literals',
+  spec: 'https://github.com/tc39/proposal-extended-numeric-literals',
   category: STAGE1,
   significance: 'medium',
   exec: function(){/*
@@ -1994,7 +1994,7 @@ exports.tests = [
 },
 {
   name: 'partial application syntax',
-  spec: 'https://github.com/rbuckton/proposal-partial-application',
+  spec: 'https://github.com/tc39/proposal-partial-application',
   category: STAGE1,
   significance: 'medium',
   subtests: [
@@ -2475,7 +2475,7 @@ exports.tests = [
 {
   name: 'String.prototype.codePoints',
   significance: 'small',
-  spec: 'https://github.com/RReverser/string-prototype-codepoints',
+  spec: 'https://github.com/tc39/proposal-string-prototype-codepoints',
   category: STAGE1,
   exec: function () {/*
     var results = [];
