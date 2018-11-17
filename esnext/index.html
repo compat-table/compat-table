@@ -666,8 +666,8 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally obsolete" data-browser="chrome67" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome68" data-tally="0">0/2</td>
 <td class="tally" data-browser="chrome69" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome70" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="chrome71" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome70" data-tally="0" data-flagged-tally="1">0/2</td>
+<td class="tally unstable" data-browser="chrome71" data-tally="0" data-flagged-tally="1">0/2</td>
 <td class="tally unstable" data-browser="chrome72" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/2</td>
@@ -750,8 +750,8 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
 <td class="no obsolete" data-browser="chrome67">No</td>
 <td class="no obsolete" data-browser="chrome68">No</td>
 <td class="no" data-browser="chrome69">No</td>
-<td class="yes" data-browser="chrome70">Yes</td>
-<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-experimental-note"><sup>[7]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-experimental-note"><sup>[7]</sup></a></td>
 <td class="yes unstable" data-browser="chrome72">Yes</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
@@ -838,8 +838,8 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="chrome67">No</td>
 <td class="no obsolete" data-browser="chrome68">No</td>
 <td class="no" data-browser="chrome69">No</td>
-<td class="yes" data-browser="chrome70">Yes</td>
-<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-experimental-note"><sup>[7]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-experimental-note"><sup>[7]</sup></a></td>
 <td class="yes unstable" data-browser="chrome72">Yes</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
@@ -928,11 +928,11 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
 <td class="no obsolete" data-browser="chrome67">No</td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
@@ -951,7 +951,7 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
-<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -1089,13 +1089,13 @@ return new C().x === &apos;x&apos;;
 <td class="no obsolete" data-browser="chrome62">No</td>
 <td class="no obsolete" data-browser="chrome63">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
-<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes unstable" data-browser="chrome72">Yes</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
@@ -1115,7 +1115,7 @@ return new C().x === &apos;x&apos;;
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
-<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -1181,13 +1181,13 @@ return new C(42).x() === 42;
 <td class="no obsolete" data-browser="chrome63">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
-<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
@@ -1206,7 +1206,7 @@ return new C(42).x() === 42;
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
-<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -1269,13 +1269,13 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="chrome63">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
-<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
@@ -1294,7 +1294,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
-<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -1438,7 +1438,7 @@ return C.x === &apos;x&apos;;
 <td class="no obsolete" data-browser="chrome68">No</td>
 <td class="no" data-browser="chrome69">No</td>
 <td class="no" data-browser="chrome70">No</td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes unstable" data-browser="chrome72">Yes</td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
@@ -1680,10 +1680,10 @@ return fn + &apos;&apos; === str;
 <td class="yes unstable" data-browser="firefox64">Yes</td>
 <td class="yes unstable" data-browser="firefox65">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome66">Yes</td>
 <td class="yes obsolete" data-browser="chrome67">Yes</td>
 <td class="yes obsolete" data-browser="chrome68">Yes</td>
@@ -1706,9 +1706,9 @@ return fn + &apos;&apos; === str;
 <td class="no obsolete" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="node7_6">No</td>
 <td class="no obsolete" data-browser="node8">No</td>
-<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="node10_13">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
@@ -2095,10 +2095,10 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 <td class="yes unstable" data-browser="firefox64">Yes</td>
 <td class="yes unstable" data-browser="firefox65">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome66">Yes</td>
 <td class="yes obsolete" data-browser="chrome67">Yes</td>
 <td class="yes obsolete" data-browser="chrome68">Yes</td>
@@ -2121,9 +2121,9 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 <td class="no obsolete" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="node7_6">No</td>
 <td class="no obsolete" data-browser="node8">No</td>
-<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="node10_13">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
@@ -2178,10 +2178,10 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="yes unstable" data-browser="firefox64">Yes</td>
 <td class="yes unstable" data-browser="firefox65">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="chrome66">Yes</td>
 <td class="yes obsolete" data-browser="chrome67">Yes</td>
 <td class="yes obsolete" data-browser="chrome68">Yes</td>
@@ -2204,9 +2204,9 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="no obsolete" data-browser="node7">No</td>
 <td class="no obsolete" data-browser="node7_6">No</td>
 <td class="no obsolete" data-browser="node8">No</td>
-<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="node10_13">Yes</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
@@ -2220,7 +2220,7 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="no" data-browser="ios11_3">No</td>
 <td class="no" data-browser="ios12">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flat,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flat,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flat, flatMap}</a><a href="#flatten-compat-issue-note"><sup>[8]</sup></a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flat,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flat,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flat, flatMap}</a><a href="#flatten-compat-issue-note"><sup>[9]</sup></a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally unstable" data-browser="babel7" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
@@ -2331,9 +2331,9 @@ return [1, [2, 3], [4, [5, 6]]].flat().join(&apos;&apos;) === &apos;12345,6&apos
 <td class="no obsolete" data-browser="firefox56">No</td>
 <td class="no obsolete" data-browser="firefox57">No</td>
 <td class="no obsolete" data-browser="firefox58">No</td>
-<td class="no obsolete" data-browser="firefox59">No<a href="#ffox-flatten-note"><sup>[9]</sup></a></td>
-<td class="no" data-browser="firefox60">No<a href="#ffox-flatten-note"><sup>[9]</sup></a></td>
-<td class="no obsolete" data-browser="firefox61">No<a href="#ffox-flatten-note"><sup>[9]</sup></a></td>
+<td class="no obsolete" data-browser="firefox59">No<a href="#ffox-flatten-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="firefox60">No<a href="#ffox-flatten-note"><sup>[10]</sup></a></td>
+<td class="no obsolete" data-browser="firefox61">No<a href="#ffox-flatten-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox62">Yes</td>
 <td class="yes" data-browser="firefox63">Yes</td>
 <td class="yes unstable" data-browser="firefox64">Yes</td>
@@ -2512,7 +2512,7 @@ return Symbol(&apos;foo&apos;).description === &apos;foo&apos;;
 <td class="no obsolete" data-browser="chrome66">No</td>
 <td class="no obsolete" data-browser="chrome67">No</td>
 <td class="no obsolete" data-browser="chrome68">No</td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="yes" data-browser="chrome70">Yes</td>
 <td class="yes unstable" data-browser="chrome71">Yes</td>
 <td class="yes unstable" data-browser="chrome72">Yes</td>
@@ -3553,8 +3553,8 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6">No<a href="#babel-decorators-legacy-note"><sup>[10]</sup></a></td>
-<td class="no unstable" data-browser="babel7">No<a href="#babel-decorators-legacy-note"><sup>[10]</sup></a></td>
+<td class="no" data-browser="babel6">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
+<td class="no unstable" data-browser="babel7">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4280,12 +4280,12 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
-<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari10">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
@@ -4304,7 +4304,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="node8_3">No</td>
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
-<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="no flagged" data-browser="node10_13">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
@@ -7802,14 +7802,14 @@ return result === &apos;Hello, hello!&apos;;
 <td class="no obsolete" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox56">No</td>
 <td class="no obsolete" data-browser="firefox57">No</td>
-<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox64">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox65">Flag<a href="#ffox-pipeline-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox64">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox65">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome62">No</td>
 <td class="no obsolete" data-browser="chrome63">No</td>
@@ -15075,7 +15075,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-harmony-note">  <sup>[7]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="flatten-compat-issue-note">  <sup>[8]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[9]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p><p id="babel-decorators-legacy-note">  <sup>[10]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[11]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-harmony-note">  <sup>[8]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="flatten-compat-issue-note">  <sup>[9]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[10]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p><p id="babel-decorators-legacy-note">  <sup>[11]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[12]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
