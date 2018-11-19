@@ -532,6 +532,38 @@ exports.tests = [
       }
     },
     {
+      name: 'scope shadow resolution',
+      exec: function(){/*
+        try {
+            { const bar = 456; }
+            const bar = 123;
+            return bar === 123;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        babel: true,
+        typescript: true,
+        es6tr: true,
+        tr: true,
+        ejs: true,
+        closure: true,
+        ie11: true,
+        firefox2: false,
+        firefox36: true,
+        chrome48: "flagged",
+        chrome49: true,
+        node6: true,
+        node6_5: true,
+        safari10: null,
+        safari10_1: true,
+        xs6: true,
+        jxa: true,
+        duktape2_0: false,
+      }
+    },
+    {
       name: 'cannot be in statements',
       exec: function() {/*
         const bar = 1;
@@ -787,6 +819,39 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+      }
+    },
+    {
+      name: 'scope shadow resolution (strict mode)',
+      exec: function(){/*
+        'use strict';
+        try {
+            { const bar = 456; }
+            const bar = 123;
+            return bar === 123;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        babel: true,
+        typescript: true,
+        es6tr: true,
+        tr: true,
+        ejs: true,
+        closure: true,
+        chrome19 : "flagged",
+        chrome41: true,
+        ie11: true,
+        firefox2: false,
+        firefox36: true,
+        safari10: null,
+        safari10_1: true,
+        node0_12: "flagged",
+        node4: true,
+        xs6: true,
+        jxa: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1062,6 +1127,38 @@ exports.tests = [
       },
     },
     {
+      name: 'scope shadow resolution',
+      exec: function(){/*
+        try {
+            { let bar = 456; }
+            let bar = 123;
+            return bar === 123;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        tr: true,
+        babel: true,
+        typescript: true,
+        es6tr: true,
+        ejs: true,
+        closure: true,
+        ie11: true,
+        firefox2: false,
+        firefox4: { val: "flagged", note_id: 'fx-let', },
+        firefox44: true,
+        safari10: null,
+        safari10_1: true,
+        chrome48: "flagged",
+        chrome49: true,
+        node6: true,
+        node6_5: true,
+        xs6: true,
+        duktape2_0: false,
+      },
+    },
+    {
       name: 'cannot be in statements',
       exec: function(){/*
         let bar = 1;
@@ -1257,6 +1354,39 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+      },
+    },
+    {
+      name: 'scope shadow resolution (strict mode)',
+      exec: function(){/*
+        'use strict';
+        try {
+            { let bar = 456; }
+            let bar = 123;
+            return bar === 123;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        tr: true,
+        babel: true,
+        typescript: true,
+        es6tr: true,
+        ejs: true,
+        closure: true,
+        ie11: true,
+        firefox2: false,
+        firefox4: { val: "flagged", note_id: 'fx-let', },
+        firefox44: true,
+        chrome19 : "flagged",
+        chrome41: true,
+        safari10: null,
+        safari10_1: true,
+        node0_12: "flagged",
+        node4: true,
+        xs6: true,
+        duktape2_0: false,
       },
     },
     {
