@@ -5536,6 +5536,29 @@ exports.tests = [
       },
     },
     {
+      name: '"u" flag, non-BMP Unicode characters',
+      exec: function() {/*
+        return "𠮷x".match(/^.x$/u)[0].length === 3;
+      */},
+      res: {
+        tr: true,
+        babel6: true,
+        typescript1: typescript.fallthrough,
+        edge12: true,
+        edge13: true,
+        firefox2: false,
+        firefox46: true,
+        opera10_50: false,
+        chrome50: true,
+        node6: true,
+        node6_5: true,
+        safari10: false,
+        safaritp: true,
+        duktape2_0: false,
+        graalvm: true,
+      },
+    },
+    {
       name: '"u" flag, Unicode code point escapes',
       exec: function() {/*
         return "𝌆".match(/\u{1d306}/u)[0].length === 2;
