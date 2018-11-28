@@ -2879,6 +2879,143 @@ exports.tests = [
       graalvm: false,
     }
   },
+  {
+    name: 'Function.prototype.toString revision',
+    category: '2019 misc',
+    significance: 'small',
+    spec: 'https://github.com/tc39/Function-prototype-toString-revision',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString',
+    subtests: [{
+      name: 'functions created with the Function constructor',
+      exec: function(){/*
+        var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+        var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
+        return fn + '' === str;
+    */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox54: true,
+        opera10_50: false,
+        chrome59: chrome.harmony,
+        chrome66: true,
+        duktape2_0: false,
+        graalvm: true,
+      },
+    }, {
+      name: 'arrows',
+      exec: function(){/*
+        var str = 'a => b';
+        return eval('(' + str + ')') + '' === str;
+    */},
+      res: {
+        node4: true,
+        firefox2: false,
+        firefox51: true,
+        opera10_50: false,
+        chrome50: true,
+        safari10: true,
+        ie11: false,
+        edge13: true,
+        duktape2_0: false,
+        nashorn1_8: true,
+        nashorn9: true,
+        nashorn10: true,
+        graalvm: true,
+      },
+    }, {
+      name: '[native code]',
+      exec: function(){/*
+        const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
+        return NATIVE_EVAL_RE.test(eval + '');
+    */},
+      res: {
+        node4: true,
+        firefox2: false,
+        firefox45: true,
+        opera10_50: true,
+        chrome50: true,
+        safari3_1: true,
+        ie11: true,
+        edge13: true,
+        duktape2_0: true,
+        nashorn9: true,
+        nashorn10: true,
+        graalvm: true,
+      },
+    }, {
+      name: 'class expression with implicit constructor',
+      exec: function(){/*
+        var str = 'class A {}';
+        return eval('(' + str + ')') + '' === str;
+    */},
+      res: {
+        node4: true,
+        firefox2: false,
+        firefox55: true,
+        opera10_50: false,
+        chrome50: true,
+        safari10: true,
+        ie11: false,
+        edge14: true,
+        duktape2_0: false,
+        graalvm: true,
+      },
+    }, {
+      name: 'class expression with explicit constructor',
+      exec: function(){/*
+        var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
+        return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
+    */},
+      res: {
+        node4: true,
+        firefox2: false,
+        firefox55: true,
+        opera10_50: false,
+        chrome50: true,
+        safari10: true,
+        ie11: false,
+        edge14: true,
+        duktape2_0: false,
+        graalvm: true,
+      },
+    }, {
+      name: 'unicode escape sequences in identifiers',
+      exec: function(){/*
+        var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
+        return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
+    */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox54: true,
+        opera10_50: false,
+        chrome59: chrome.harmony,
+        chrome66: true,
+        duktape2_0: false,
+        graalvm: true,
+      },
+    }, {
+      name: 'methods and computed property names',
+      exec: function(){/*
+        var str = '[ /\x2A a \x2A/ "f" /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
+        return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;
+    */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox54: true,
+        opera10_50: false,
+        chrome59: chrome.harmony,
+        chrome66: true,
+        duktape2_0: false,
+        nashorn9: true,
+        nashorn10: true,
+        graalvm: true,
+      },
+    }]
+  },
+
 ];
 
 //Shift annex B features to the bottom

@@ -9557,6 +9557,683 @@ return Symbol(&apos;foo&apos;).description === &apos;foo&apos;;
 <td class="no" data-browser="ios11_3">No</td>
 <td class="yes" data-browser="ios12">Yes</td>
 </tr>
+<tr class="supertest" significance="0.25"><td id="test-Function.prototype.toString_revision"><span><a class="anchor" href="#test-Function.prototype.toString_revision">&#xA7;</a><a href="https://github.com/tc39/Function-prototype-toString-revision">Function.prototype.toString revision</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
+<td class="tally" data-browser="tr" data-tally="0">0/7</td>
+<td class="tally" data-browser="babel6" data-tally="0">0/7</td>
+<td class="tally unstable" data-browser="babel7" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180506" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180610" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180716" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180805" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="closure20180910" data-tally="0">0/7</td>
+<td class="tally" data-browser="closure20181008" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript1" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript2_6" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript2_7" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript2_8" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript2_9" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="typescript3" data-tally="0">0/7</td>
+<td class="tally" data-browser="typescript3.1" data-tally="0">0/7</td>
+<td class="tally" data-browser="es7shim" data-tally="0">0/7</td>
+<td class="tally" data-browser="ie11" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="edge16" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="edge17" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="edge18" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally unstable" data-browser="edge19" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="firefox52" data-tally="0.2857142857142857" style="background-color:hsl(34,73%,50%)">2/7</td>
+<td class="tally obsolete" data-browser="firefox56" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="firefox57" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="firefox58" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="firefox59" data-tally="1">7/7</td>
+<td class="tally" data-browser="firefox60" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="firefox61" data-tally="1">7/7</td>
+<td class="tally" data-browser="firefox62" data-tally="1">7/7</td>
+<td class="tally" data-browser="firefox63" data-tally="1">7/7</td>
+<td class="tally unstable" data-browser="firefox64" data-tally="1">7/7</td>
+<td class="tally unstable" data-browser="firefox65" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="chrome62" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally obsolete" data-browser="chrome63" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally obsolete" data-browser="chrome64" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally obsolete" data-browser="chrome65" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally obsolete" data-browser="chrome66" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="chrome67" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="chrome68" data-tally="1">7/7</td>
+<td class="tally" data-browser="chrome69" data-tally="1">7/7</td>
+<td class="tally" data-browser="chrome70" data-tally="1">7/7</td>
+<td class="tally unstable" data-browser="chrome71" data-tally="1">7/7</td>
+<td class="tally unstable" data-browser="chrome72" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="safari10" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="safari10_1" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="safari11_1" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="safari12" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="phantom" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="node0_12" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="node4" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="node6_5" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="node7" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="node7_6" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="node8" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="node8_3" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally obsolete" data-browser="node8_7" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally" data-browser="node8_10" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)" data-flagged-tally="1">4/7</td>
+<td class="tally" data-browser="node10_13" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="duktape2_0" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
+<td class="tally obsolete" data-browser="duktape2_1" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
+<td class="tally" data-browser="duktape2_2" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
+<td class="tally" data-browser="graalvm" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="ios10" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="ios10_3" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="ios11_3" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+<td class="tally" data-browser="ios12" data-tally="0.5714285714285714" style="background-color:hsl(68,60%,50%)">4/7</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_functions_created_with_the_Function_constructor"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_functions_created_with_the_Function_constructor">&#xA7;</a>functions created with the Function constructor</span><script data-source="
+var fn = Function(&apos;a&apos;, &apos; /\x2A a \x2A/ b, c /\x2A b \x2A/ //&apos;, &apos;/\x2A c \x2A/ ; /\x2A d \x2A/ //&apos;);
+var str = &apos;function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}&apos;;
+return fn + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("107");try{return Function("asyncTestPassed","\nvar fn = Function('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("107");return Function("asyncTestPassed","'use strict';"+"\nvar fn = Function('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_arrows"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_arrows">&#xA7;</a>arrows</span><script data-source="
+var str = &apos;a =&gt; b&apos;;
+return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nvar str = 'a => b';\nreturn eval('(' + str + ')') + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nvar str = 'a => b';\nreturn eval('(' + str + ')') + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge16">Yes</td>
+<td class="yes" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes unstable" data-browser="edge19">Yes</td>
+<td class="yes obsolete" data-browser="firefox52">Yes</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome62">Yes</td>
+<td class="yes obsolete" data-browser="chrome63">Yes</td>
+<td class="yes obsolete" data-browser="chrome64">Yes</td>
+<td class="yes obsolete" data-browser="chrome65">Yes</td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="safari10">Yes</td>
+<td class="yes obsolete" data-browser="safari10_1">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
+<td class="yes" data-browser="safari11_1">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="yes obsolete" data-browser="node4">Yes</td>
+<td class="yes" data-browser="node6_5">Yes</td>
+<td class="yes obsolete" data-browser="node7">Yes</td>
+<td class="yes obsolete" data-browser="node7_6">Yes</td>
+<td class="yes obsolete" data-browser="node8">Yes</td>
+<td class="yes obsolete" data-browser="node8_3">Yes</td>
+<td class="yes obsolete" data-browser="node8_7">Yes</td>
+<td class="yes" data-browser="node8_10">Yes</td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="yes obsolete" data-browser="ios10">Yes</td>
+<td class="yes obsolete" data-browser="ios10_3">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
+<td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_[native_code]"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_[native_code]">&#xA7;</a>[native code]</span><script data-source="
+const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
+return NATIVE_EVAL_RE.test(eval + &apos;&apos;);
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("109");try{return Function("asyncTestPassed","\nconst NATIVE_EVAL_RE = /\\bfunction\\b[\\s\\S]*\\beval\\b[\\s\\S]*\\([\\s\\S]*\\)[\\s\\S]*\\{[\\s\\S]*\\[[\\s\\S]*\\bnative\\b[\\s\\S]+\\bcode\\b[\\s\\S]*\\][\\s\\S]*\\}/;\nreturn NATIVE_EVAL_RE.test(eval + '');\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("109");return Function("asyncTestPassed","'use strict';"+"\nconst NATIVE_EVAL_RE = /\\bfunction\\b[\\s\\S]*\\beval\\b[\\s\\S]*\\([\\s\\S]*\\)[\\s\\S]*\\{[\\s\\S]*\\[[\\s\\S]*\\bnative\\b[\\s\\S]+\\bcode\\b[\\s\\S]*\\][\\s\\S]*\\}/;\nreturn NATIVE_EVAL_RE.test(eval + '');\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="yes" data-browser="ie11">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge16">Yes</td>
+<td class="yes" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes unstable" data-browser="edge19">Yes</td>
+<td class="yes obsolete" data-browser="firefox52">Yes</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome62">Yes</td>
+<td class="yes obsolete" data-browser="chrome63">Yes</td>
+<td class="yes obsolete" data-browser="chrome64">Yes</td>
+<td class="yes obsolete" data-browser="chrome65">Yes</td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="safari10">Yes</td>
+<td class="yes obsolete" data-browser="safari10_1">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
+<td class="yes" data-browser="safari11_1">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="yes" data-browser="phantom">Yes</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="yes obsolete" data-browser="node4">Yes</td>
+<td class="yes" data-browser="node6_5">Yes</td>
+<td class="yes obsolete" data-browser="node7">Yes</td>
+<td class="yes obsolete" data-browser="node7_6">Yes</td>
+<td class="yes obsolete" data-browser="node8">Yes</td>
+<td class="yes obsolete" data-browser="node8_3">Yes</td>
+<td class="yes obsolete" data-browser="node8_7">Yes</td>
+<td class="yes" data-browser="node8_10">Yes</td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_0">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_1">Yes</td>
+<td class="yes" data-browser="duktape2_2">Yes</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="yes obsolete" data-browser="ios10">Yes</td>
+<td class="yes obsolete" data-browser="ios10_3">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
+<td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_class_expression_with_implicit_constructor"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_class_expression_with_implicit_constructor">&#xA7;</a>class expression with implicit constructor</span><script data-source="
+var str = &apos;class A {}&apos;;
+return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("110");try{return Function("asyncTestPassed","\nvar str = 'class A {}';\nreturn eval('(' + str + ')') + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("110");return Function("asyncTestPassed","'use strict';"+"\nvar str = 'class A {}';\nreturn eval('(' + str + ')') + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge16">Yes</td>
+<td class="yes" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes unstable" data-browser="edge19">Yes</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome62">Yes</td>
+<td class="yes obsolete" data-browser="chrome63">Yes</td>
+<td class="yes obsolete" data-browser="chrome64">Yes</td>
+<td class="yes obsolete" data-browser="chrome65">Yes</td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="safari10">Yes</td>
+<td class="yes obsolete" data-browser="safari10_1">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
+<td class="yes" data-browser="safari11_1">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="yes obsolete" data-browser="node4">Yes</td>
+<td class="yes" data-browser="node6_5">Yes</td>
+<td class="yes obsolete" data-browser="node7">Yes</td>
+<td class="yes obsolete" data-browser="node7_6">Yes</td>
+<td class="yes obsolete" data-browser="node8">Yes</td>
+<td class="yes obsolete" data-browser="node8_3">Yes</td>
+<td class="yes obsolete" data-browser="node8_7">Yes</td>
+<td class="yes" data-browser="node8_10">Yes</td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="yes obsolete" data-browser="ios10">Yes</td>
+<td class="yes obsolete" data-browser="ios10_3">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
+<td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_class_expression_with_explicit_constructor"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_class_expression_with_explicit_constructor">&#xA7;</a>class expression with explicit constructor</span><script data-source="
+var str = &apos;class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }&apos;;
+return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apos;) + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("111");try{return Function("asyncTestPassed","\nvar str = 'class /\\x2A a \\x2A/ A /\\x2A b \\x2A/ extends /\\x2A c \\x2A/ function B(){} /\\x2A d \\x2A/ { /\\x2A e \\x2A/ constructor /\\x2A f \\x2A/ ( /\\x2A g \\x2A/ ) /\\x2A h \\x2A/ { /\\x2A i \\x2A/ ; /\\x2A j \\x2A/ } /\\x2A k \\x2A/ m /\\x2A l \\x2A/ ( /\\x2A m \\x2A/ ) /\\x2A n \\x2A/ { /\\x2A o \\x2A/ } /\\x2A p \\x2A/ }';\nreturn eval('(/\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/)') + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("111");return Function("asyncTestPassed","'use strict';"+"\nvar str = 'class /\\x2A a \\x2A/ A /\\x2A b \\x2A/ extends /\\x2A c \\x2A/ function B(){} /\\x2A d \\x2A/ { /\\x2A e \\x2A/ constructor /\\x2A f \\x2A/ ( /\\x2A g \\x2A/ ) /\\x2A h \\x2A/ { /\\x2A i \\x2A/ ; /\\x2A j \\x2A/ } /\\x2A k \\x2A/ m /\\x2A l \\x2A/ ( /\\x2A m \\x2A/ ) /\\x2A n \\x2A/ { /\\x2A o \\x2A/ } /\\x2A p \\x2A/ }';\nreturn eval('(/\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/)') + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge16">Yes</td>
+<td class="yes" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes unstable" data-browser="edge19">Yes</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome62">Yes</td>
+<td class="yes obsolete" data-browser="chrome63">Yes</td>
+<td class="yes obsolete" data-browser="chrome64">Yes</td>
+<td class="yes obsolete" data-browser="chrome65">Yes</td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="safari10">Yes</td>
+<td class="yes obsolete" data-browser="safari10_1">Yes</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
+<td class="yes" data-browser="safari11_1">Yes</td>
+<td class="yes" data-browser="safari12">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="yes obsolete" data-browser="node4">Yes</td>
+<td class="yes" data-browser="node6_5">Yes</td>
+<td class="yes obsolete" data-browser="node7">Yes</td>
+<td class="yes obsolete" data-browser="node7_6">Yes</td>
+<td class="yes obsolete" data-browser="node8">Yes</td>
+<td class="yes obsolete" data-browser="node8_3">Yes</td>
+<td class="yes obsolete" data-browser="node8_7">Yes</td>
+<td class="yes" data-browser="node8_10">Yes</td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="yes obsolete" data-browser="ios10">Yes</td>
+<td class="yes obsolete" data-browser="ios10_3">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
+<td class="yes" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_unicode_escape_sequences_in_identifiers"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_unicode_escape_sequences_in_identifiers">&#xA7;</a>unicode escape sequences in identifiers</span><script data-source="
+var str = &apos;function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }&apos;;
+return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apos;) + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("112");try{return Function("asyncTestPassed","\nvar str = 'function \\\\u0061(\\\\u{62}, \\\\u0063) { \\\\u0062 = \\\\u{00063}; return b; }';\nreturn eval('(/\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/)') + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("112");return Function("asyncTestPassed","'use strict';"+"\nvar str = 'function \\\\u0061(\\\\u{62}, \\\\u0063) { \\\\u0062 = \\\\u{00063}; return b; }';\nreturn eval('(/\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/)') + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+</tr>
+<tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_methods_and_computed_property_names"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_methods_and_computed_property_names">&#xA7;</a>methods and computed property names</span><script data-source="
+var str = &apos;[ /\x2A a \x2A/ &quot;f&quot; /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }&apos;;
+return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.f)&apos;) + &apos;&apos; === str;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nvar str = '[ /\\x2A a \\x2A/ \"f\" /\\x2A b \\x2A/ ] /\\x2A c \\x2A/ ( /\\x2A d \\x2A/ ) /\\x2A e \\x2A/ { /\\x2A f \\x2A/ }';\nreturn eval('({ /\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/ }.f)') + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nvar str = '[ /\\x2A a \\x2A/ \"f\" /\\x2A b \\x2A/ ] /\\x2A c \\x2A/ ( /\\x2A d \\x2A/ ) /\\x2A e \\x2A/ { /\\x2A f \\x2A/ }';\nreturn eval('({ /\\x2A before \\x2A/' + str + '/\\x2A after \\x2A/ }.f)') + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6">No</td>
+<td class="no unstable" data-browser="babel7">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="typescript1">No</td>
+<td class="no obsolete" data-browser="typescript2_6">No</td>
+<td class="no obsolete" data-browser="typescript2_7">No</td>
+<td class="no obsolete" data-browser="typescript2_8">No</td>
+<td class="no obsolete" data-browser="typescript2_9">No</td>
+<td class="no obsolete" data-browser="typescript3">No</td>
+<td class="no" data-browser="typescript3.1">No</td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="yes obsolete" data-browser="firefox56">Yes</td>
+<td class="yes obsolete" data-browser="firefox57">Yes</td>
+<td class="yes obsolete" data-browser="firefox58">Yes</td>
+<td class="yes obsolete" data-browser="firefox59">Yes</td>
+<td class="yes" data-browser="firefox60">Yes</td>
+<td class="yes obsolete" data-browser="firefox61">Yes</td>
+<td class="yes" data-browser="firefox62">Yes</td>
+<td class="yes" data-browser="firefox63">Yes</td>
+<td class="yes unstable" data-browser="firefox64">Yes</td>
+<td class="yes unstable" data-browser="firefox65">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no flagged obsolete" data-browser="chrome62">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome63">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome64">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome66">Yes</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes" data-browser="chrome69">Yes</td>
+<td class="yes" data-browser="chrome70">Yes</td>
+<td class="yes unstable" data-browser="chrome71">Yes</td>
+<td class="yes unstable" data-browser="chrome72">Yes</td>
+<td class="no obsolete" data-browser="safari10">No</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no" data-browser="phantom">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no flagged obsolete" data-browser="node8_3">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged obsolete" data-browser="node8_7">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="no flagged" data-browser="node8_10">Flag<a href="#chrome-harmony-note"><sup>[23]</sup></a></td>
+<td class="yes" data-browser="node10_13">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no" data-browser="duktape2_2">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+</tr>
 </tbody>
     </table>
     <div id="footnotes">
