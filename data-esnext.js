@@ -2209,28 +2209,6 @@ exports.tests = [
   }
 },
 {
-  name: 'Symbol.prototype.description',
-  spec: 'https://github.com/tc39/proposal-Symbol-description',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description',
-  category: STAGE3,
-  significance: 'small',
-  exec: function(){/*
-    return Symbol('foo').description === 'foo';
-  */},
-  res : {
-    ie11: false,
-    firefox45: false,
-    firefox63: true,
-    chrome67: false,
-    chrome69: chrome.harmony,
-    chrome70: true,
-    safari11: false,
-    safari12: true,
-    safaritp: true,
-    graalvm: false,
-  }
-},
-{
   name: 'Object.freeze and Object.seal syntax',
   spec: 'https://github.com/keithamus/object-freeze-seal-syntax',
   category: STAGE1,
