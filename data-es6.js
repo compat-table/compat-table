@@ -18538,6 +18538,11 @@ exports.tests = [
         ejs: true,
         babel6: babel.corejs,
         typescript1: typescript.corejs,
+        closure20181125: {
+          val: false,
+          note_id: 'closure-mathfround',
+          note_html: 'Requires native support for <code>Float32Array</code>'
+        },
         tr: true,
         es6shim: true,
         edge12: true,
