@@ -281,7 +281,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2017-10-31",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -340,12 +340,25 @@
       "esnext"
     ]
   },
-  "typescript3.1": {
+  "typescript3_1": {
     "full": "TypeScript 3.1 + core-js 2.5",
     "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-09-28",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_2": {
+    "full": "TypeScript 3.2 + core-js 2.5",
+    "short": "Type-<br />Script +<br /><nobr>core-js</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2018-11-29",
     "obsolete": false,
     "test_suites": [
       "es6",
