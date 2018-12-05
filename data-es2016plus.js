@@ -2356,6 +2356,7 @@ exports.tests = [
         res: {
           babel6: true,
           closure: true,
+          closure20181028: false,
           typescript2_1: true,
           jsx: true,
           ie11: false,
