@@ -13931,6 +13931,7 @@ exports.tests = [
         typescript1: true,
         traceur: true,
         edge15: false,
+        edge18: true,
         chrome47: chrome.experimental,
         chrome49: true,
         firefox50: false,
