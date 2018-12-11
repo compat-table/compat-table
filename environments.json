@@ -2102,9 +2102,24 @@
       "non-standard"
     ]
   },
-  "phantom": {
+  "phantom2": {
     "full": "PhantomJS 2.0",
     "short": "PJS",
+    "link": "https://github.com/ariya/phantomjs",
+    "release": "2015-01-24",
+    "retire": "2016-01-24",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "equals": "safari6",
+    "needs_annex_b": true
+  },
+  "phantom2_1": {
+    "full": "PhantomJS 2.1",
+    "short": "PJS",
+    "link": "https://github.com/ariya/phantomjs",
+    "release": "2016-01-24",
+    "retire": "2018-06-02",
+    "obsolete": true,
     "platformtype": "engine",
     "equals": "safari6",
     "needs_annex_b": true
