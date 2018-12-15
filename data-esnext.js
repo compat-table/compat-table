@@ -2353,6 +2353,7 @@ exports.tests = [
       firefox63: true,
       safaritp: true,
       graalvm: false,
+      chrome73: chrome.harmony,
   }
 },
 {
