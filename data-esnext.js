@@ -350,7 +350,7 @@ exports.tests = [
       firefox53: false,
       firefox65: true,
       chrome70: chrome.experimental,
-      chrome72: true,
+      chrome71: true,
       opera10_50: false,
       safaritp: false,
       safari10_1: false,
