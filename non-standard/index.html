@@ -4928,7 +4928,8 @@ return &apos;caller&apos; in function(){};
   }">test(
 function () {
 return 'caller' in function(){};
-  }())</script></td>
+  }())
+</script></td>
 <td class="yes obsolete" data-browser="konq4_13">Yes</td>
 <td class="yes" data-browser="konq4_14">Yes</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
@@ -5005,7 +5006,8 @@ function () {
 return (function () {}).arity === 0 &&
   (function (x) { return x; }).arity === 1 &&
   (function (x, y) { return y; }).arity === 2;
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5084,7 +5086,8 @@ function f(a, b) {
   return f.arguments && a === 1 && f.arguments[0] === 1 && b === 'boo' && f.arguments[1] === 'boo';
 }
 return f(1, 'boo');
-  }())</script></td>
+  }())
+</script></td>
 <td class="yes obsolete" data-browser="konq4_13">Yes</td>
 <td class="yes" data-browser="konq4_14">Yes</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
@@ -5157,7 +5160,8 @@ return typeof Function.prototype.isGenerator == &apos;function&apos;;
   }">test(
 function () {
 return typeof Function.prototype.isGenerator == 'function';
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5306,7 +5310,8 @@ return typeof ({}).__count__ === &apos;number&apos; &amp;&amp;
 function () {
 return typeof ({}).__count__ === 'number' &&
   ({ x: 1, y: 2 }).__count__ === 2;
-}())</script></td>
+}())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5379,7 +5384,8 @@ return typeof ({}).__parent__ !== &apos;undefined&apos;;
   }">test(
 function () {
 return typeof ({}).__parent__ !== 'undefined';
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5462,7 +5468,8 @@ try {
   o.__i_dont_exist();
 } catch (e) { }
 return executed;
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5535,7 +5542,8 @@ return typeof Array.slice === &apos;function&apos; &amp;&amp; Array.slice(&apos;
   }">test(
 function () {
 return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -5608,7 +5616,8 @@ return typeof String.slice === &apos;function&apos; &amp;&amp; String.slice(123,
   }">test(
 function () {
 return typeof String.slice === 'function' && String.slice(123, 1) === "23";
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -6148,7 +6157,8 @@ try {
 catch(e) {
   return false;
 }
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -6259,7 +6269,8 @@ try {
 catch(e) {
   return false;
 }
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -6347,7 +6358,8 @@ catch(e) {
   return false;
 }
         }()));
-        global.__script_executed["generators"] = true;</script><script data-source="if (!global.__script_executed[&quot;generators&quot;]) {
+        global.__script_executed["generators"] = true;
+</script><script data-source="if (!global.__script_executed[&quot;generators&quot;]) {
 global.test((function () {
   try {
     var g = eval(&apos;(function() { var a = yield &quot;foo&quot;; yield a + &quot;baz&quot;;})&apos;)();
@@ -6369,7 +6381,8 @@ global.test((function () {
     return false;
   }
 }()));
-        }</script></td>
+        }
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -6609,7 +6622,8 @@ try {
 } catch (e) {
   return false;
 }
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -6686,7 +6700,8 @@ function () {
 var re = /\w/;
 re.exec('x');
 return RegExp.lastMatch === 'x';
-  }())</script></td>
+  }())
+</script></td>
 <td class="yes obsolete" data-browser="konq4_13">Yes</td>
 <td class="yes" data-browser="konq4_14">Yes</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
@@ -6765,7 +6780,8 @@ for (var i = 1; i < 10; i++) {
   if (!(('$' + i) in RegExp)) return false;
 }
 return true;
-  }())</script></td>
+  }())
+</script></td>
 <td class="yes obsolete" data-browser="konq4_13">Yes</td>
 <td class="yes" data-browser="konq4_14">Yes</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
@@ -6979,7 +6995,8 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <tr><th colspan="69" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-String.prototype.quote"><span><a class="anchor" href="#test-String.prototype.quote">&#xA7;</a>String.prototype.quote <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/quote" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return typeof String.prototype.quote === &apos;function&apos; }">test(
-function () { return typeof String.prototype.quote === 'function' }())</script></td>
+function () { return typeof String.prototype.quote === 'function' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7048,7 +7065,8 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no" data-browser="ios12">No</td>
 </tr>
 <tr significance="1"><td id="test-String.prototype.replace_flags"><span><a class="anchor" href="#test-String.prototype.replace_flags">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace flags</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Firefox-specific_notes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return &apos;foofoo&apos;.replace(&apos;foo&apos;, &apos;bar&apos;, &apos;g&apos;) === &apos;barbar&apos; }">test(
-function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</script></td>
+function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7119,7 +7137,8 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <tr><th colspan="69" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Date.prototype.toLocaleFormat"><span><a class="anchor" href="#test-Date.prototype.toLocaleFormat">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat">Date.prototype.toLocaleFormat</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return typeof Date.prototype.toLocaleFormat === &apos;function&apos; }">test(
-function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</script></td>
+function () { return typeof Date.prototype.toLocaleFormat === 'function' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7198,7 +7217,8 @@ var brokenOnFirefox = !isNaN(Date.parse('2012-04-04T24:00:00.500Z'));
 var brokenOnIE10 = !isNaN(Date.parse('2012-12-31T24:01:00.000Z'));
 var brokenOnChrome = !isNaN(Date.parse('2011-02-29T12:00:00.000Z'));
 return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7269,7 +7289,8 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <tr><th colspan="69" class="separator"></th>
 </tr>
 <tr significance="1"><td id="test-Object.prototype.watch"><span><a class="anchor" href="#test-Object.prototype.watch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return typeof Object.prototype.watch == &apos;function&apos; }">test(
-function () { return typeof Object.prototype.watch == 'function' }())</script></td>
+function () { return typeof Object.prototype.watch == 'function' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7338,7 +7359,8 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no" data-browser="ios12">No</td>
 </tr>
 <tr significance="1"><td id="test-Object.prototype.unwatch"><span><a class="anchor" href="#test-Object.prototype.unwatch">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch">Object.prototype.unwatch</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return typeof Object.prototype.unwatch == &apos;function&apos; }">test(
-function () { return typeof Object.prototype.unwatch == 'function' }())</script></td>
+function () { return typeof Object.prototype.unwatch == 'function' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7407,7 +7429,8 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no" data-browser="ios12">No</td>
 </tr>
 <tr significance="1"><td id="test-Object.prototype.eval"><span><a class="anchor" href="#test-Object.prototype.eval">&#xA7;</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval">Object.prototype.eval</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () { return typeof Object.prototype.eval == &apos;function&apos; }">test(
-function () { return typeof Object.prototype.eval == 'function' }())</script></td>
+function () { return typeof Object.prototype.eval == 'function' }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7561,7 +7584,8 @@ try {
 } catch (err) {
   return 'stack' in err;
 }
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7634,7 +7658,8 @@ return &apos;lineNumber&apos; in new Error();
   }">test(
 function () {
 return 'lineNumber' in new Error();
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7707,7 +7732,8 @@ return &apos;columnNumber&apos; in new Error();
   }">test(
 function () {
 return 'columnNumber' in new Error();
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7780,7 +7806,8 @@ return &apos;fileName&apos; in new Error();
   }">test(
 function () {
 return 'fileName' in new Error();
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="no obsolete" data-browser="ie8">No</td>
@@ -7853,7 +7880,8 @@ return &apos;description&apos; in new Error();
   }">test(
 function () {
 return 'description' in new Error();
-  }())</script></td>
+  }())
+</script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
 <td class="yes obsolete" data-browser="ie8">Yes</td>
