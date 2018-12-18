@@ -519,7 +519,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     firefox65: false,
-    firefox66: true,
+    firefox66: firefox.nightly,
     chrome67: false,
     chrome68: chrome.harmony,
     opera10_50: false,
