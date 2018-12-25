@@ -2445,6 +2445,36 @@ exports.tests = [
         graalvm: false,
       }
     },
+    {
+      name: 'Set.prototype.isDisjointWith',
+      exec: function () {/*
+        return new Set([1, 2, 3]).isDisjointWith([4, 5, 6]);
+      */},
+      res: {
+        firefox2: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'Set.prototype.isSubsetOf',
+      exec: function () {/*
+        return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
+      */},
+      res: {
+        firefox2: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'Set.prototype.isSupersetOf',
+      exec: function () {/*
+        return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
+      */},
+      res: {
+        firefox2: false,
+        graalvm: false,
+      }
+    },
   ]
 },
 {
