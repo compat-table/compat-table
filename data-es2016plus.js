@@ -2864,21 +2864,61 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description',
     category: '2019 misc',
     significance: 'small',
-    exec: function(){/*
-     return Symbol('foo').description === 'foo';
-  */},
-    res : {
-      ie11: false,
-      firefox45: false,
-      firefox63: true,
-      chrome67: false,
-      chrome69: chrome.harmony,
-      chrome70: true,
-      safari11: false,
-      safari12: true,
-      safaritp: true,
-      graalvm: false,
-    }
+    subtests: [
+      {
+        name: 'basic',
+        exec: function(){/*
+          return Symbol('foo').description === 'foo';
+        */},
+        res : {
+          ie11: false,
+          firefox45: false,
+          firefox63: true,
+          chrome67: false,
+          chrome69: chrome.harmony,
+          chrome70: true,
+          safari11: false,
+          safari12: true,
+          safaritp: true,
+          graalvm: false,
+        },
+      },
+      {
+        name: 'empty description',
+        exec: function(){/*
+          return Symbol('').description === '';
+        */},
+        res : {
+          ie11: false,
+          firefox45: false,
+          firefox63: true,
+          chrome67: false,
+          chrome69: chrome.harmony,
+          chrome70: true,
+          safari11: false,
+          safari12: true,
+          safaritp: true,
+          graalvm: false,
+        },
+      },
+      {
+        name: 'undefined description',
+        exec: function(){/*
+          return Symbol().description === undefined;
+        */},
+        res : {
+          ie11: false,
+          firefox45: false,
+          firefox63: true,
+          chrome67: false,
+          chrome69: chrome.harmony,
+          chrome70: true,
+          safari11: false,
+          safari12: false,
+          graalvm: false,
+        },
+      },
+    ]
   },
   {
     name: 'Function.prototype.toString revision',
