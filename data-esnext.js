@@ -2526,6 +2526,16 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.every',
+      exec: function () {/*
+        return new Map([[1, 4], [2, 5], [3, 6]]).every(key => typeof key == 'number');
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Map.prototype.filter',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
