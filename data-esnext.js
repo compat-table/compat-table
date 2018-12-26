@@ -2915,6 +2915,30 @@ exports.tests = [
   res: {
   }
 },
+{
+  name: '{ BigInt, Number }.fromString',
+  category: STAGE1,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-number-fromstring',
+  subtests: [
+    {
+      name: 'Number.fromString',
+      exec: function () {/*
+        return Number.fromString('42') === 42;
+      */},
+      res: {
+      },
+    },
+    {
+      name: 'BigInt.fromString',
+      exec: function () {/*
+        return BigInt.fromString('42') === 42n;
+      */},
+      res: {
+      },
+    },
+  ]
+},
 ];
 
 
