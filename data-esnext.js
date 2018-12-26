@@ -2571,7 +2571,19 @@ exports.tests = [
     {
       name: 'Map.prototype.includes',
       exec: function () {/*
-        return new Map([[1, 2], [2, NaN]]).includes(NaN);
+        return new Map([[1, 2], [2, NaN]]).includes(2)
+          && new Map([[1, 2], [2, NaN]]).includes(NaN);
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'Map.prototype.keyOf',
+      exec: function () {/*
+        return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
+          && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;
       */},
       res: {
         firefox52: false,
