@@ -2569,6 +2569,16 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.includes',
+      exec: function () {/*
+        return new Map([[1, 2], [2, NaN]]).includes(NaN);
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Map.prototype.mapKeys',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);
