@@ -2880,10 +2880,10 @@ exports.tests = [
   ]
 },
 {
-  name: 'compositeKey and compositeSymbol',
+  name: 'richer keys',
   category: STAGE1,
   significance: 'small',
-  spec: 'https://github.com/bmeck/proposal-richer-keys/tree/master/compositeKey',
+  spec: 'https://github.com/bmeck/proposal-richer-keys/',
   subtests: [
     {
       name: 'compositeKey',
