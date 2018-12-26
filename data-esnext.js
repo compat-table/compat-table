@@ -2777,6 +2777,25 @@ exports.tests = [
       }
     },
     {
+      name: 'WeakSet.prototype.addAll',
+      exec: function () {/*
+        var a = {};
+        var b = {};
+        var c = {};
+        var d = {};
+        var set = new WeakSet([a, b]);
+        set.addAll(c, d)
+        return set.has(a)
+          && set.has(b)
+          && set.has(c)
+          && set.has(d);
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'WeakSet.prototype.deleteAll',
       exec: function () {/*
         var a = {};
