@@ -2549,6 +2549,16 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.find',
+      exec: function () {/*
+        return new Map([[1, 2], [2, 3], [3, 4]]).find(key => key % 2) === 3;
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Map.prototype.mapKeys',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);
