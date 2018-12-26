@@ -2512,6 +2512,20 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.deleteAll',
+      exec: function () {/*
+        var map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);
+        map.deleteAll(1, 5)
+        return map.size === 2
+          && map.get(3) === 4
+          && map.get(7) === 8;
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Map.prototype.filter',
       exec: function () {/*
         var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));
@@ -2665,6 +2679,44 @@ exports.tests = [
       name: 'Set.prototype.some',
       exec: function () {/*
         return new Set([1, 2, 3]).some(it => it % 2);
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'WeakMap.prototype.deleteAll',
+      exec: function () {/*
+        var a = {};
+        var b = {};
+        var c = {};
+        var d = {};
+        var map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);
+        map.deleteAll(a, c)
+        return !map.has(a)
+          && map.get(b) === 2
+          && !map.has(c)
+          && map.get(d) === 4;
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'WeakSet.prototype.deleteAll',
+      exec: function () {/*
+        var a = {};
+        var b = {};
+        var c = {};
+        var d = {};
+        var set = new WeakSet([a, b, c, d]);
+        set.deleteAll(a, c)
+        return !set.has(a)
+          && set.has(b)
+          && !set.has(c)
+          && set.has(d);
       */},
       res: {
         firefox52: false,
