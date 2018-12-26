@@ -2528,7 +2528,7 @@ exports.tests = [
     {
       name: 'Map.prototype.every',
       exec: function () {/*
-        return new Map([[1, 4], [2, 5], [3, 6]]).every(key => typeof key == 'number');
+        return new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');
       */},
       res: {
         firefox52: false,
@@ -2551,7 +2551,17 @@ exports.tests = [
     {
       name: 'Map.prototype.find',
       exec: function () {/*
-        return new Map([[1, 2], [2, 3], [3, 4]]).find(key => key % 2) === 3;
+        return new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'Map.prototype.findKey',
+      exec: function () {/*
+        return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;
       */},
       res: {
         firefox52: false,
