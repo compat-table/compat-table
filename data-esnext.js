@@ -2633,6 +2633,16 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.reduce',
+      exec: function () {/*
+        return new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Set.prototype.addAll',
       exec: function () {/*
         var set = new Set([1, 2]).addAll(2, 3);
