@@ -2643,6 +2643,16 @@ exports.tests = [
       }
     },
     {
+      name: 'Map.prototype.some',
+      exec: function () {/*
+        return new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);
+      */},
+      res: {
+        firefox52: false,
+        graalvm: false,
+      }
+    },
+    {
       name: 'Set.prototype.addAll',
       exec: function () {/*
         var set = new Set([1, 2]).addAll(2, 3);
