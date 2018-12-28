@@ -398,26 +398,27 @@ function handle(options) {
   }
 }
 
-function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
-  var wrapWithScript = function(assertions) {
-    // wrap a single test in an array so we can deal with them consistently
-    if (assertions && !Array.isArray(assertions)) {
-      assertions = [].concat(assertions);
-    }
+function wrapWithScript(assertions) {
+  // wrap a single test in an array so we can deal with them consistently
+  if (assertions) {
+    assertions = [].concat(assertions);
+  }
 
-    return assertions.filter(function(assertion) {
-      return assertion && assertion.script;
-    })
-    .map(function(assertion) {
-      var $ = cheerio.load(''
-          + '<script' + (assertion.type ? ' type="' + assertion.type + '"' : '') + '>'
-          + assertion.script
-          + '\n</script>'
-      );
-      $('script').attr('data-source', assertion.source);
-      return $.html();
-    }).join('');
-  };
+  return assertions.filter(function(assertion) {
+    return assertion && assertion.script;
+  })
+  .map(function(assertion) {
+    var $ = cheerio.load(''
+        + '<script' + (assertion.type ? ' type="' + assertion.type + '"' : '') + '>'
+        + assertion.script
+        + '\n</script>'
+    );
+    $('script').attr('data-source', assertion.source);
+    return $.html();
+  }).join('');
+}
+
+function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
   var body = $('table tbody');

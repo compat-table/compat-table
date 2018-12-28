@@ -20,8 +20,6 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-function prepareTest(fn, transformFn, rowNum) {
-  var script, expr;
   function deindentFunc(fn) {
     fn = (fn+'');
     var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
@@ -31,6 +29,8 @@ function prepareTest(fn, transformFn, rowNum) {
     return fn;
   }
 
+function prepareTest(fn, transformFn, rowNum) {
+  var script, expr;
   if (!fn) {
     return { script: script, source: expr };
   }
