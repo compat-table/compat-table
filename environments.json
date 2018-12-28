@@ -32,11 +32,11 @@
     ]
   },
   "babel7": {
-    "full": "Babel 7 beta + core-js 2.5",
+    "full": "Babel 7 + core-js 2.5",
     "short": "Babel 7 +<br><nobr>core-js</nobr>",
     "family": "Babel",
     "platformtype": "compiler",
-    "unstable": true,
+    "obsolete": false,
     "test_suites": [
       "es6",
       "es2016plus",

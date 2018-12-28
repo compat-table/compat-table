@@ -126,7 +126,7 @@
           <!-- TABLE HEADERS -->
         <th class="platform tr compiler" data-browser="tr"><a href="#tr" class="browser-name"><abbr title="Traceur">Traceur</abbr></a></th>
 <th class="platform babel6 compiler" data-browser="babel6"><a href="#babel6" class="browser-name"><abbr title="Babel 6.5 + core-js 2.5">Babel 6 +<br><nobr>core-js</nobr></abbr></a></th>
-<th class="platform babel7 compiler unstable" data-browser="babel7"><a href="#babel7" class="browser-name"><abbr title="Babel 7 beta + core-js 2.5">Babel 7 +<br><nobr>core-js</nobr></abbr></a></th>
+<th class="platform babel7 compiler" data-browser="babel7"><a href="#babel7" class="browser-name"><abbr title="Babel 7 + core-js 2.5">Babel 7 +<br><nobr>core-js</nobr></abbr></a></th>
 <th class="platform closure compiler obsolete" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20180204">Closure 2018.02</abbr></a></th>
 <th class="platform closure20180319 compiler obsolete" data-browser="closure20180319"><a href="#closure20180319" class="browser-name"><abbr title="Closure Compiler v20180319">Closure 2018.03</abbr></a></th>
 <th class="platform closure20180402 compiler obsolete" data-browser="closure20180402"><a href="#closure20180402" class="browser-name"><abbr title="Closure Compiler v20180402">Closure 2018.04</abbr></a></th>
@@ -218,7 +218,7 @@
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally" data-browser="babel6" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="1">3/3</td>
@@ -307,7 +307,7 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -396,7 +396,7 @@ var a = 2; a **= 3; return a === 8;
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -490,7 +490,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -576,7 +576,7 @@ return true;
 <tr class="supertest" significance="0.25"><td id="test-Array.prototype.includes"><span><a class="anchor" href="#test-Array.prototype.includes">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes">Array.prototype.includes</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel6" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -669,7 +669,7 @@ return [1, 2, 3].includes(1)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -780,7 +780,7 @@ return 24;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -874,7 +874,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -972,7 +972,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -1074,7 +1074,7 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -1168,7 +1168,7 @@ return true;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -1258,7 +1258,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -1349,7 +1349,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -1445,7 +1445,7 @@ return passed;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -1543,7 +1543,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -1631,7 +1631,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <tr class="supertest" significance="0.5"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/4</td>
 <td class="tally" data-browser="babel6" data-tally="1">4/4</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">4/4</td>
+<td class="tally" data-browser="babel7" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
@@ -1723,7 +1723,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -1819,7 +1819,7 @@ return Array.isArray(e)
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -1916,7 +1916,7 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2008,7 +2008,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -2094,7 +2094,7 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <tr class="supertest" significance="0.25"><td id="test-String_padding"><span><a class="anchor" href="#test-String_padding">&#xA7;</a><a href="https://github.com/tc39/proposal-string-pad-start-end">String padding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="1">2/2</td>
@@ -2188,7 +2188,7 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2282,7 +2282,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2368,7 +2368,7 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <tr class="supertest" significance="0.25"><td id="test-trailing_commas_in_function_syntax"><span><a class="anchor" href="#test-trailing_commas_in_function_syntax">&#xA7;</a><a href="https://github.com/tc39/proposal-trailing-function-commas">trailing commas in function syntax</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="1">2/2</td>
@@ -2457,7 +2457,7 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2546,7 +2546,7 @@ return Math.min(1,2,3,) === 1;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2632,7 +2632,7 @@ return Math.min(1,2,3,) === 1;
 <tr class="supertest" significance="1"><td id="test-async_functions"><span><a class="anchor" href="#test-async_functions">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-async-function-definitions">async functions</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
 <td class="tally" data-browser="babel6" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
-<td class="tally unstable" data-browser="babel7" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
+<td class="tally" data-browser="babel7" data-tally="0.2" style="background-color:hsl(24,77%,50%)">3/15</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0.6" style="background-color:hsl(72,59%,50%)">9/15</td>
@@ -2732,7 +2732,7 @@ p.then(function(result) {
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2832,7 +2832,7 @@ p.catch(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -2922,7 +2922,7 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -3012,7 +3012,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -3108,7 +3108,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3206,7 +3206,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3296,7 +3296,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3391,7 +3391,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3481,7 +3481,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -3581,7 +3581,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3681,7 +3681,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3779,7 +3779,7 @@ p.then(function(result) {
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -3870,7 +3870,7 @@ return asyncFunctionProto !== function(){}.prototype
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -3959,7 +3959,7 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4057,7 +4057,7 @@ p.then(function(result) {
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="unknown" data-browser="babel6">?</td>
-<td class="unknown unstable" data-browser="babel7">?</td>
+<td class="unknown" data-browser="babel7">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4143,7 +4143,7 @@ p.then(function(result) {
 <tr class="supertest" significance="0.5"><td id="test-shared_memory_and_atomics"><span><a class="anchor" href="#test-shared_memory_and_atomics">&#xA7;</a>shared memory and atomics</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/17</td>
 <td class="tally" data-browser="babel6" data-tally="0">0/17</td>
-<td class="tally unstable" data-browser="babel7" data-tally="0">0/17</td>
+<td class="tally" data-browser="babel7" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/17</td>
@@ -4232,7 +4232,7 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4321,7 +4321,7 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4410,7 +4410,7 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4499,7 +4499,7 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4588,7 +4588,7 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4677,7 +4677,7 @@ return typeof Atomics.add == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4766,7 +4766,7 @@ return typeof Atomics.and == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4855,7 +4855,7 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -4944,7 +4944,7 @@ return typeof Atomics.exchange == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5033,7 +5033,7 @@ return typeof Atomics.wait == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5122,7 +5122,7 @@ return typeof Atomics.wake == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5211,7 +5211,7 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5300,7 +5300,7 @@ return typeof Atomics.load == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5389,7 +5389,7 @@ return typeof Atomics.or == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5478,7 +5478,7 @@ return typeof Atomics.store == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5567,7 +5567,7 @@ return typeof Atomics.sub == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5656,7 +5656,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5752,7 +5752,7 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5844,7 +5844,7 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -5936,7 +5936,7 @@ return (function(){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -6024,7 +6024,7 @@ return (function(){
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
-<td class="tally unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
+<td class="tally not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -6118,7 +6118,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6213,7 +6213,7 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6308,7 +6308,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6402,7 +6402,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6497,7 +6497,7 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6592,7 +6592,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6688,7 +6688,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6784,7 +6784,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6881,7 +6881,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -6975,7 +6975,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7068,7 +7068,7 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7164,7 +7164,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7260,7 +7260,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7357,7 +7357,7 @@ return foo() === &quot;bar&quot;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7451,7 +7451,7 @@ return true;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7544,7 +7544,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7630,7 +7630,7 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Proxy_internal_calls,_getter/setter_methods"><span><a class="anchor" href="#test-Proxy_internal_calls,_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Proxy internal calls, getter/setter methods</a></span></td>
 <td class="tally not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
-<td class="tally unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
+<td class="tally not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -7723,7 +7723,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7816,7 +7816,7 @@ return def + &apos;&apos; === &quot;foo&quot;;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7914,7 +7914,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8012,7 +8012,7 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8102,7 +8102,7 @@ return i === 0;
 </script></td>
 <td class="yes not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="no not-applicable" data-browser="babel6" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="babel7" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180319" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20180402" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8190,7 +8190,7 @@ return i === 0;
 <tr class="supertest" significance="0.5"><td id="test-object_rest/spread_properties"><span><a class="anchor" href="#test-object_rest/spread_properties">&#xA7;</a><a href="https://github.com/tc39/proposal-object-rest-spread">object rest/spread properties</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="1">2/2</td>
@@ -8280,7 +8280,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -8371,7 +8371,7 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
 <td class="yes obsolete" data-browser="closure20180319">Yes</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -8457,7 +8457,7 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <tr class="supertest" significance="0.5"><td id="test-Promise.prototype.finally"><span><a class="anchor" href="#test-Promise.prototype.finally">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-finally">Promise.prototype.finally</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel6" data-tally="1">3/3</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="1">3/3</td>
@@ -8572,7 +8572,7 @@ function check() {
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -8679,7 +8679,7 @@ function check() {
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -8788,7 +8788,7 @@ function check() {
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes unstable" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="babel7">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="yes obsolete" data-browser="closure20180402">Yes</td>
@@ -8878,7 +8878,7 @@ return regex.test(&apos;foo\nbar&apos;);
 </script></td>
 <td class="unknown" data-browser="tr">?</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -8974,7 +8974,7 @@ return result.groups.year === &apos;2016&apos;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9064,7 +9064,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9154,7 +9154,7 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9240,7 +9240,7 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <tr class="supertest" significance="0.5"><td id="test-Asynchronous_Iterators"><span><a class="anchor" href="#test-Asynchronous_Iterators">&#xA7;</a><a href="https://github.com/tc39/proposal-async-iteration">Asynchronous Iterators</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6" data-tally="1">2/2</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">2/2</td>
+<td class="tally" data-browser="babel7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/2</td>
@@ -9336,7 +9336,7 @@ iterator.next().then(function(step){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9442,7 +9442,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6">Yes</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9540,7 +9540,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9628,7 +9628,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <tr class="supertest" significance="0.25"><td id="test-optional_catch_binding"><span><a class="anchor" href="#test-optional_catch_binding">&#xA7;</a><a href="https://tc39.github.io/proposal-optional-catch-binding/">optional catch binding</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel6" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="babel7" data-tally="1">3/3</td>
+<td class="tally" data-browser="babel7" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/3</td>
@@ -9723,7 +9723,7 @@ return false;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9819,7 +9819,7 @@ return false;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -9920,7 +9920,7 @@ return it.next().value;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="yes unstable" data-browser="babel7">Yes</td>
+<td class="yes" data-browser="babel7">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10006,7 +10006,7 @@ return it.next().value;
 <tr class="supertest" significance="0.25"><td id="test-Symbol.prototype.description"><span><a class="anchor" href="#test-Symbol.prototype.description">&#xA7;</a><a href="https://github.com/tc39/proposal-Symbol-description">Symbol.prototype.description</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel6" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="babel7" data-tally="0">0/3</td>
+<td class="tally" data-browser="babel7" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/3</td>
@@ -10095,7 +10095,7 @@ return Symbol(&apos;foo&apos;).description === &apos;foo&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10184,7 +10184,7 @@ return Symbol(&apos;&apos;).description === &apos;&apos;;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10273,7 +10273,7 @@ return Symbol().description === undefined;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10359,7 +10359,7 @@ return Symbol().description === undefined;
 <tr class="supertest" significance="0.25"><td id="test-Function.prototype.toString_revision"><span><a class="anchor" href="#test-Function.prototype.toString_revision">&#xA7;</a><a href="https://github.com/tc39/Function-prototype-toString-revision">Function.prototype.toString revision</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/7</td>
 <td class="tally" data-browser="babel6" data-tally="0">0/7</td>
-<td class="tally unstable" data-browser="babel7" data-tally="0">0/7</td>
+<td class="tally" data-browser="babel7" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/7</td>
@@ -10450,7 +10450,7 @@ return fn + &apos;&apos; === str;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10540,7 +10540,7 @@ return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10630,7 +10630,7 @@ return NATIVE_EVAL_RE.test(eval + &apos;&apos;);
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10720,7 +10720,7 @@ return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10810,7 +10810,7 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10900,7 +10900,7 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
@@ -10990,7 +10990,7 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6">No</td>
-<td class="no unstable" data-browser="babel7">No</td>
+<td class="no" data-browser="babel7">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20180319">No</td>
 <td class="no obsolete" data-browser="closure20180402">No</td>
