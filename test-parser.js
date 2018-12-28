@@ -20,14 +20,14 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-  function deindentFunc(fn) {
-    fn = (fn+'');
-    var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
-    if (indent) {
-      fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
-    }
-    return fn;
+function deindentFunc(fn) {
+  fn = (fn+'');
+  var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
+  if (indent) {
+    fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
   }
+  return fn;
+}
 
 function prepareTest(fn, transformFn, rowNum) {
   var script, expr;
@@ -67,9 +67,6 @@ function prepareTest(fn, transformFn, rowNum) {
           expr = "/* Error during compilation: " + e.message + "*/";
         }
       }
-      /* jshint unused: true */ // this appears unused, but removing it might break things.
-      var async = !!/asyncTestPassed/.exec(fn);
-      /* jshint unused: false */
       var codeString = JSON.stringify(expr).replace(/\\r/g,'');
       var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
       var strictAsyncFn = 'global.__strictAsyncPassedFn && __strictAsyncPassedFn("' + rowNum + '")';
