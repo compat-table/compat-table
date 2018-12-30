@@ -6288,7 +6288,9 @@ exports.tests = [
         return true;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         firefox35: true,
@@ -16261,7 +16263,9 @@ exports.tests = [
         return a[0] === b;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         edge15: true,
         ejs: true,
@@ -16365,7 +16369,9 @@ exports.tests = [
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
@@ -16392,7 +16398,9 @@ exports.tests = [
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
@@ -16419,7 +16427,9 @@ exports.tests = [
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
@@ -16446,7 +16456,9 @@ exports.tests = [
         return Array.prototype.slice.call(obj, 0).foo === 1;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         edge13: true,
         firefox2: false,
@@ -16473,7 +16485,9 @@ exports.tests = [
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
@@ -16503,7 +16517,9 @@ exports.tests = [
         return passed;
       */},
       res: {
+        babel6: false,
         babel7corejs3: babel.corejs,
+        typescript1: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         edge14: edge.experimental,
         firefox2: false,
