@@ -43,6 +43,19 @@
       "esnext"
     ]
   },
+  "babel7corejs3": {
+    "full": "Babel 7 + core-js 3",
+    "short": "Babel 7 +<br><nobr>core-js 3</nobr>",
+    "family": "Babel",
+    "platformtype": "compiler",
+    "obsolete": false,
+    "unstable": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
   "closure": {
     "full": "Closure Compiler v20180204",
     "short": "Closure 2018.02",
@@ -360,6 +373,20 @@
     "platformtype": "compiler",
     "release": "2018-11-29",
     "obsolete": false,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_2corejs3": {
+    "full": "TypeScript 3.2 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2018-11-29",
+    "obsolete": false,
+    "unstable": true,
     "test_suites": [
       "es6",
       "es2016plus",
