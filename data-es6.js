@@ -6288,6 +6288,8 @@ exports.tests = [
         return true;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         firefox35: true,
         opera10_50: false,
@@ -16259,7 +16261,8 @@ exports.tests = [
         return a[0] === b;
       */},
       res: {
-        typescript1: typescript.fallthrough,
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         edge15: true,
         ejs: true,
         chrome48: true,
@@ -16362,6 +16365,8 @@ exports.tests = [
         return Array.prototype.concat.call(obj, []).foo === 1;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
         firefox2: false,
@@ -16387,6 +16392,8 @@ exports.tests = [
         return Array.prototype.filter.call(obj, Boolean).foo === 1;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
         firefox2: false,
@@ -16412,6 +16419,8 @@ exports.tests = [
         return Array.prototype.map.call(obj, Boolean).foo === 1;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
         firefox2: false,
@@ -16437,6 +16446,8 @@ exports.tests = [
         return Array.prototype.slice.call(obj, 0).foo === 1;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         edge13: true,
         firefox2: false,
         firefox48: true,
@@ -16462,6 +16473,8 @@ exports.tests = [
         return Array.prototype.splice.call(obj, 0).foo === 1;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         ejs: true,
         edge13: true,
         firefox2: false,
@@ -16490,6 +16503,8 @@ exports.tests = [
         return passed;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         edge14: edge.experimental,
         firefox2: false,
         firefox49: true,

@@ -305,8 +305,8 @@ exports.tests = [
       return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
     */},
     res: {
-      babel6: false,
-      typescript1: false,
+      babel7corejs3: babel.corejs,
+      typescript3_2corejs3: typescript.corejs,
       ie11: false,
       firefox2: false,
       firefox53: false,
@@ -343,8 +343,8 @@ exports.tests = [
       return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
     */},
     res: {
-      babel6: false,
-      typescript1: false,
+      babel7corejs3: babel.corejs,
+      typescript3_2corejs3: typescript.corejs,
       ie11: false,
       firefox2: false,
       firefox53: false,
@@ -1418,8 +1418,8 @@ exports.tests = [
         return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
       */},
       res: {
-        babel6: false,
-        typescript1: false,
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         ie11: false,
         firefox2: false,
         firefox58: false,
@@ -2315,6 +2315,8 @@ exports.tests = [
     return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
   */},
   res: {
+      babel7corejs3: babel.corejs,
+      typescript3_2corejs3: typescript.corejs,
       ie11: false,
       firefox52: false,
       graalvm: false,
@@ -2334,6 +2336,8 @@ exports.tests = [
       && results[2] === 98;
   */},
   res: {
+    babel7corejs3: babel.corejs,
+    typescript3_2corejs3: typescript.corejs,
     ie11: false,
     firefox52: false,
     graalvm: false,
@@ -2350,6 +2354,8 @@ exports.tests = [
     return object.foo === 42 && object.bar === 23;
   */},
   res: {
+      babel7corejs3: babel.corejs,
+      typescript3_2corejs3: typescript.corejs,
       firefox52: false,
       firefox62: false,
       firefox63: true,
@@ -2370,6 +2376,8 @@ exports.tests = [
         return [1, 2, 3].lastItem === 3;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2380,6 +2388,8 @@ exports.tests = [
         return [1, 2, 3].lastIndex === 2;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2401,6 +2411,8 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2415,6 +2427,8 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2428,6 +2442,8 @@ exports.tests = [
           && set.has(2);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2441,6 +2457,8 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2451,6 +2469,8 @@ exports.tests = [
         return new Set([1, 2, 3]).isDisjointWith([4, 5, 6]);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2461,6 +2481,8 @@ exports.tests = [
         return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2471,6 +2493,8 @@ exports.tests = [
         return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
       }
@@ -2494,6 +2518,8 @@ exports.tests = [
           && map.get(1)[1] === 3;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2507,6 +2533,8 @@ exports.tests = [
           && map.get(102).id === 102;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2521,6 +2549,8 @@ exports.tests = [
           && map.get(7) === 8;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2531,6 +2561,8 @@ exports.tests = [
         return new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2544,6 +2576,8 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2554,6 +2588,8 @@ exports.tests = [
         return new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2564,6 +2600,8 @@ exports.tests = [
         return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2575,6 +2613,8 @@ exports.tests = [
           && new Map([[1, 2], [2, NaN]]).includes(NaN);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2586,6 +2626,8 @@ exports.tests = [
           && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2600,6 +2642,8 @@ exports.tests = [
           && map.get(9) === 6;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2614,6 +2658,8 @@ exports.tests = [
           && map.get(3) === 36;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2628,6 +2674,8 @@ exports.tests = [
           && map.get(3) === 6;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2638,6 +2686,8 @@ exports.tests = [
         return new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2648,6 +2698,8 @@ exports.tests = [
         return new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2662,6 +2714,8 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2676,6 +2730,8 @@ exports.tests = [
           && set.has(4);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2686,6 +2742,8 @@ exports.tests = [
         return new Set([1, 2, 3]).every(it => typeof it === 'number');
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2699,6 +2757,8 @@ exports.tests = [
           && set.has(3);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2709,6 +2769,8 @@ exports.tests = [
         return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2719,6 +2781,8 @@ exports.tests = [
         return new Set([1, 2, 3]).join('|') === '1|2|3';
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2733,6 +2797,8 @@ exports.tests = [
           && set.has(9);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2743,6 +2809,8 @@ exports.tests = [
         return new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2753,6 +2821,8 @@ exports.tests = [
         return new Set([1, 2, 3]).some(it => it % 2);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2772,6 +2842,8 @@ exports.tests = [
           && map.get(d) === 4;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2791,6 +2863,8 @@ exports.tests = [
           && set.has(d);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2810,6 +2884,8 @@ exports.tests = [
           && set.has(d);
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
       }
@@ -2894,6 +2970,8 @@ exports.tests = [
     });
   */},
   res: {
+    babel7corejs3: babel.corejs,
+    typescript3_2corejs3: typescript.corejs,
   }
 },
 {
@@ -2913,6 +2991,8 @@ exports.tests = [
     return second === gen2.next().value;
   */},
   res: {
+    babel7corejs3: babel.corejs,
+    typescript3_2corejs3: typescript.corejs,
   }
 },
 {
@@ -2927,6 +3007,8 @@ exports.tests = [
         return Number.fromString('42') === 42;
       */},
       res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
       },
     },
     {

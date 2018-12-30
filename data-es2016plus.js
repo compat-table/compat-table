@@ -2871,6 +2871,8 @@ exports.tests = [
           return Symbol('foo').description === 'foo';
         */},
         res : {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox45: false,
           firefox63: true,
@@ -2889,6 +2891,8 @@ exports.tests = [
           return Symbol('').description === '';
         */},
         res : {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox45: false,
           firefox63: true,
@@ -2907,6 +2911,8 @@ exports.tests = [
           return Symbol().description === undefined;
         */},
         res : {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox45: false,
           firefox63: true,
