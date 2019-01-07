@@ -561,6 +561,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape2_0: false,
+        graalvm: true,
       }
     },
     {
@@ -852,6 +853,7 @@ exports.tests = [
         xs6: true,
         jxa: true,
         duktape2_0: false,
+        graalvm: true,
       }
     },
     {
@@ -1156,6 +1158,7 @@ exports.tests = [
         node6_5: true,
         xs6: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -1387,6 +1390,7 @@ exports.tests = [
         node4: true,
         xs6: true,
         duktape2_0: false,
+        graalvm: true,
       },
     },
     {
@@ -10195,7 +10199,7 @@ exports.tests = [
         edge14: edge.experimental,
         safari10: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm: true,
       },
     },
     {

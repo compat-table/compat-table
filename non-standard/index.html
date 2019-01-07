@@ -174,7 +174,7 @@
 <th class="platform duktape2_0 engine obsolete" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
-<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC3">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[4]</sup></a></th>
+<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC10">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[4]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
 <th class="platform ios10 mobile obsolete" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
@@ -4638,7 +4638,7 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_2" data-tally="0">0/4</td>
-<td class="tally" data-browser="graalvm" data-tally="1">4/4</td>
+<td class="tally" data-browser="graalvm" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/4</td>
@@ -4712,7 +4712,7 @@ return typeof uneval == &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -4794,7 +4794,7 @@ return &apos;toSource&apos; in Object.prototype
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -4868,7 +4868,7 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5029,7 +5029,7 @@ return true;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5104,7 +5104,7 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5262,7 +5262,7 @@ return (function () {}).arity === 0 &&
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5420,7 +5420,7 @@ return typeof Function.prototype.isGenerator == 'function';
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5497,7 +5497,7 @@ return new C instanceof C;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5575,7 +5575,7 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5651,7 +5651,7 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5737,7 +5737,7 @@ return executed;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no flagged" data-browser="graalvm">Flag<a href="#graalvm-nashorn-compat-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5813,7 +5813,7 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5889,7 +5889,7 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -5967,7 +5967,7 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6041,7 +6041,7 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6115,7 +6115,7 @@ return (function(x)x)(1) === 1;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6189,7 +6189,7 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6267,7 +6267,7 @@ return str === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6342,7 +6342,7 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6450,7 +6450,7 @@ catch(e) {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6564,7 +6564,7 @@ catch(e) {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6677,7 +6677,7 @@ global.test((function () {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6753,7 +6753,7 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6834,7 +6834,7 @@ return passed;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -6926,7 +6926,7 @@ try {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7162,7 +7162,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7237,7 +7237,7 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7311,7 +7311,7 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7383,7 +7383,7 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7457,7 +7457,7 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7539,7 +7539,7 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="yes obsolete" data-browser="ios10">Yes</td>
@@ -7613,7 +7613,7 @@ function () { return typeof Object.prototype.watch == 'function' }())</script></
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7685,7 +7685,7 @@ function () { return typeof Object.prototype.unwatch == 'function' }())</script>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7757,7 +7757,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7831,7 +7831,7 @@ return typeof Object.observe == &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -7993,7 +7993,7 @@ return 'lineNumber' in new Error();
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -8069,7 +8069,7 @@ return 'columnNumber' in new Error();
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -8145,7 +8145,7 @@ return 'fileName' in new Error();
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -8221,7 +8221,7 @@ return 'description' in new Error();
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -8294,7 +8294,7 @@ return 'description' in new Error();
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">2/2</td>
 <td class="tally" data-browser="duktape2_2" data-tally="1">2/2</td>
-<td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
+<td class="tally" data-browser="graalvm" data-tally="0.5">1/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
@@ -8451,7 +8451,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -8467,7 +8467,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
       </table>
       <div id="footnotes">
         <!-- FOOTNOTES -->
-      <p id="khtml-note">  <sup>[1]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-old-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[4]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-simd-note">  <sup>[7]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p></div>
+      <p id="khtml-note">  <sup>[1]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-old-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[4]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-simd-note">  <sup>[7]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p><p id="graalvm-nashorn-compat-note">  <sup>[8]</sup> The feature has to be enabled via the <code>--nashorn-compat</code> flag.</p></div>
     </div>
     <pre class="info-tooltip" style="display:none"></pre>
     <script src="../jquery.floatThead.min.js"></script>

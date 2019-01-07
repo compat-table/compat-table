@@ -574,7 +574,7 @@ exports.tests = [
         opera10_50: false,
         node0_12: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm: true,
       }
     }
   ],
