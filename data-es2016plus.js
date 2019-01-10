@@ -3069,6 +3069,46 @@ exports.tests = [
       },
     }]
   },
+  {
+    name: 'JSON superset',
+    spec: 'https://github.com/tc39/proposal-json-superset',
+    category: '2019 misc',
+    significance: 'small',
+    subtests: [
+      {
+        name: 'LINE SEPARATOR can appear in string literals',
+        exec: function(){/*
+          return eval("'\u2028'") === "\u2028";
+        */},
+        res : {
+          ie11: false,
+          firefox2: false,
+          firefox61: false,
+          firefox62: true,
+          chrome65: false,
+          chrome66: true,
+          safari11: false,
+          safari12: true,
+        },
+      },
+      {
+        name: 'PARAGRAPH SEPARATOR can appear in string literals',
+        exec: function(){/*
+          return eval("'\u2029'") === "\u2029";
+        */},
+        res : {
+          ie11: false,
+          firefox2: false,
+          firefox61: false,
+          firefox62: true,
+          chrome65: false,
+          chrome66: true,
+          safari11: false,
+          safari12: true,
+        },
+      },
+    ]
+  },
 
 ];
 
