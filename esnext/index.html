@@ -203,7 +203,7 @@
 <th class="platform duktape2_0 engine obsolete" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
-<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC3">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
+<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC10">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
 <th class="platform ios10 mobile obsolete" data-browser="ios10"><a href="#ios10" class="browser-name"><abbr title="iOS Safari">iOS 10.0-10.2</abbr></a></th>
@@ -737,7 +737,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_2" data-tally="0">0/2</td>
-<td class="tally" data-browser="graalvm" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
@@ -828,7 +828,7 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -923,7 +923,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -1022,7 +1022,7 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -1752,7 +1752,7 @@ return new C().x() === 42;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_2" data-tally="0">0/2</td>
-<td class="tally" data-browser="graalvm" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/2</td>
@@ -1841,7 +1841,7 @@ return [1, [2, 3], [4, [5, 6]]].flat().join(&apos;&apos;) === &apos;12345,6&apos
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -1932,7 +1932,7 @@ return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -2018,7 +2018,7 @@ return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/8</td>
 <td class="tally" data-browser="duktape2_2" data-tally="0">0/8</td>
-<td class="tally" data-browser="graalvm" data-tally="0.5" style="background-color:hsl(60,64%,50%)">4/8</td>
+<td class="tally" data-browser="graalvm" data-tally="1">8/8</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="ios10" data-tally="0">0/8</td>
@@ -2466,7 +2466,7 @@ return view[0] === -0x8000000000000000n;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -2558,7 +2558,7 @@ return view[0] === 0n;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -2647,7 +2647,7 @@ return typeof DataView.prototype.getBigInt64 === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -2736,7 +2736,7 @@ return typeof DataView.prototype.getBigUint64 === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>
@@ -2916,7 +2916,7 @@ return JSON.stringify(&apos;\uDF06\uD834&apos;) === &quot;\&quot;\\udf06\\ud834\
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10">No</td>

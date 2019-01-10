@@ -55,7 +55,7 @@ $('#body tbody tr').each(function (index) {
   }
 });
 
-setTimeout(function(){
+process.on('exit', function(){
   Object.keys(results).forEach(function(test) {
     var result = results[test];
     var name = desc[test];
@@ -65,4 +65,4 @@ setTimeout(function(){
       console.log(chalk[result === "Strict" ? 'cyan' : result ? 'green' : 'red']((result ? '\u2714' : '\u2718') + '\t' + (name[0]!== '§' ? '\t' + name : name.slice(1)) + '\t'));
     }
   });
-},500);
+});

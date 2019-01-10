@@ -599,7 +599,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
-          graalvm: false,
+          graalvm: true,
         }
       },
       {
@@ -631,7 +631,7 @@ exports.tests = [
           opera10_50: false,
           safari10_1: true,
           duktape2_0: false,
-          graalvm: false,
+          graalvm: true,
         }
       },
       {
@@ -2790,7 +2790,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
-          graalvm: false,
+          graalvm: true,
         },
       },
       {
@@ -2819,7 +2819,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
-          graalvm: false,
+          graalvm: true,
         },
       },
       {
@@ -2853,7 +2853,7 @@ exports.tests = [
           safaritp: true,
           webkit: true,
           duktape2_2: false,
-          graalvm: false,
+          graalvm: true,
         }
       }
     ]
@@ -2884,7 +2884,7 @@ exports.tests = [
           safari11: false,
           safari12: true,
           safaritp: true,
-          graalvm: false,
+          graalvm: true,
         },
       },
       {
@@ -2906,7 +2906,7 @@ exports.tests = [
           safari11: false,
           safari12: true,
           safaritp: true,
-          graalvm: false,
+          graalvm: true,
         },
       },
       {
@@ -2927,7 +2927,7 @@ exports.tests = [
           chrome70: true,
           safari11: false,
           safari12: false,
-          graalvm: false,
+          graalvm: true,
         },
       },
     ]

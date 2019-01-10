@@ -331,7 +331,7 @@ exports.tests = [
       node8_7: false,
       duktape2_0: false,
       duktape2_1: false,
-      graalvm: false,
+      graalvm: true,
     }
   }, {
     name: '"globalThis" global property has correct property descriptor',
@@ -371,7 +371,7 @@ exports.tests = [
       node8_7: false,
       duktape2_0: false,
       duktape2_1: false,
-      graalvm: false,
+      graalvm: true,
     }
   }]
 },
@@ -528,7 +528,7 @@ exports.tests = [
     chrome68: chrome.harmony,
     opera10_50: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm: true,
   }
 },
 {
@@ -1440,7 +1440,7 @@ exports.tests = [
         safari12: true,
         safaritp: true,
         duktape2_2: false,
-        graalvm: false,
+        graalvm: true,
       }
     },
     {
@@ -1463,7 +1463,7 @@ exports.tests = [
         opera10_50: false,
         safari12: true,
         duktape2_2: false,
-        graalvm: false,
+        graalvm: true,
       }
     }
   ]
@@ -2271,7 +2271,7 @@ exports.tests = [
       res: {
         firefox52: false,
         chrome67: true,
-        graalvm: false,
+        graalvm: true,
       },
     },
     {
@@ -2285,7 +2285,7 @@ exports.tests = [
       res: {
         firefox52: false,
         chrome67: true,
-        graalvm: false,
+        graalvm: true,
       },
     },
     {
@@ -2296,7 +2296,7 @@ exports.tests = [
       res: {
         firefox52: false,
         chrome67: true,
-        graalvm: false,
+        graalvm: true,
       },
     },
     {
@@ -2307,7 +2307,7 @@ exports.tests = [
       res: {
         firefox52: false,
         chrome67: true,
-        graalvm: false,
+        graalvm: true,
       },
     },
   ],
@@ -2992,6 +2992,7 @@ exports.tests = [
     chrome70: false,
     chrome71: false,
     chrome72: true,
+    graalvm: true,
   }
 },
 {
