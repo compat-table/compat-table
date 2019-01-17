@@ -2486,9 +2486,9 @@ exports.tests = [
       }
     },
     {
-      name: 'Set.prototype.isDisjointWith',
+      name: 'Set.prototype.isDisjointFrom',
       exec: function () {/*
-        return new Set([1, 2, 3]).isDisjointWith([4, 5, 6]);
+        return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
       */},
       res: {
         babel6corejs2: false,
