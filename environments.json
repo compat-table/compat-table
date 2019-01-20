@@ -181,6 +181,30 @@
     "short": "Closure 2018.11",
     "family": "Closure",
     "platformtype": "compiler",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "closure20181210": {
+    "full": "Closure Compiler v20181210",
+    "short": "Closure 2018.12",
+    "family": "Closure",
+    "platformtype": "compiler",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "closure20190106": {
+    "full": "Closure Compiler v20190106",
+    "short": "Closure 2019.01",
+    "family": "Closure",
+    "platformtype": "compiler",
     "obsolete": false,
     "test_suites": [
       "es6",
