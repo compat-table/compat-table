@@ -10432,19 +10432,19 @@ return it.next().value;
 <td class="tally" data-browser="babel6corejs2" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="babel7corejs3" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="closure" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180319" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180402" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180506" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180610" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180716" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180805" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20180910" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20181008" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20181125" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20181210" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally" data-browser="closure20190106" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
+<td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180319" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180402" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180506" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180610" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180716" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180805" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20180910" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20181008" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="closure20181210" data-tally="0">0/3</td>
+<td class="tally" data-browser="closure20190106" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="typescript1corejs2" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="typescript2_7corejs2" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="typescript2_8corejs2" data-tally="0">0/3</td>
@@ -10704,26 +10704,27 @@ return Symbol(&apos;&apos;).description === &apos;&apos;;
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
 <tr class="subtest" data-parent="Symbol.prototype.description" id="test-Symbol.prototype.description_undefined_description"><td><span><a class="anchor" href="#test-Symbol.prototype.description_undefined_description">&#xA7;</a>undefined description</span><script data-source="
-return Symbol().description === undefined;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn Symbol().description === undefined;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn Symbol().description === undefined;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return Symbol.prototype.hasOwnProperty(&apos;description&apos;)
+  &amp;&amp; Symbol().description === undefined;
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("108");try{return Function("asyncTestPassed","\nreturn Symbol.prototype.hasOwnProperty('description')\n  && Symbol().description === undefined;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("108");return Function("asyncTestPassed","'use strict';"+"\nreturn Symbol.prototype.hasOwnProperty('description')\n  && Symbol().description === undefined;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes unstable" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
-<td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20180319">Yes</td>
-<td class="yes obsolete" data-browser="closure20180402">Yes</td>
-<td class="yes obsolete" data-browser="closure20180506">Yes</td>
-<td class="yes obsolete" data-browser="closure20180610">Yes</td>
-<td class="yes obsolete" data-browser="closure20180716">Yes</td>
-<td class="yes obsolete" data-browser="closure20180805">Yes</td>
-<td class="yes obsolete" data-browser="closure20180910">Yes</td>
-<td class="yes obsolete" data-browser="closure20181008">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
-<td class="yes obsolete" data-browser="closure20181125">Yes</td>
-<td class="yes obsolete" data-browser="closure20181210">Yes</td>
-<td class="yes" data-browser="closure20190106">Yes</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20180319">No</td>
+<td class="no obsolete" data-browser="closure20180402">No</td>
+<td class="no obsolete" data-browser="closure20180506">No</td>
+<td class="no obsolete" data-browser="closure20180610">No</td>
+<td class="no obsolete" data-browser="closure20180716">No</td>
+<td class="no obsolete" data-browser="closure20180805">No</td>
+<td class="no obsolete" data-browser="closure20180910">No</td>
+<td class="no obsolete" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20181210">No</td>
+<td class="no" data-browser="closure20190106">No</td>
 <td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
 <td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
 <td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>

@@ -2912,12 +2912,12 @@ exports.tests = [
       {
         name: 'undefined description',
         exec: function(){/*
-          return Symbol().description === undefined;
+          return Symbol.prototype.hasOwnProperty('description')
+            && Symbol().description === undefined;
         */},
         res : {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
-          closure: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
