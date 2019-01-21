@@ -2509,15 +2509,69 @@
       "non-standard"
     ]
   },
-  "node10_13": {
+  "node10_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=10.13 &lt;11",
+    "short": "Node &gt;=10.0 &lt;10.4",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome66",
+    "release": "2018-04-24",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node10_4": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=10.4 &lt;10.9",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome67",
+    "release": "2018-06-06",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node10_9": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=10.9 &lt;11",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome68",
-    "release": "2018-10-30",
-    "unstable": false,
+    "release": "2018-08-15",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node11_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=11",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome70",
+    "release": "2018-10-23",
+    "obsolete": false,
     "test_suites": [
       "es5",
       "es6",
