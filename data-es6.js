@@ -19855,6 +19855,7 @@ exports.tests = [
         chrome1: null,
         chrome58: true,
         safari1: false,
+        safari12_1: true,
         safaritp: true,
         rhino1_7: null,
         xs6: null,

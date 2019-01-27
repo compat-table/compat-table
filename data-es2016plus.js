@@ -2928,6 +2928,7 @@ exports.tests = [
           chrome70: true,
           safari11: false,
           safari12: false,
+          safari12_1: true,
           safaritp: true,
           graalvm: true,
         },
