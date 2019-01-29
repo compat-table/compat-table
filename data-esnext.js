@@ -526,6 +526,7 @@ exports.tests = [
     firefox66: firefox.nightly,
     chrome67: false,
     chrome68: chrome.harmony,
+    chrome74: true,
     opera10_50: false,
     duktape2_0: false,
     graalvm: true,
@@ -2375,6 +2376,7 @@ exports.tests = [
     safaritp: true,
     graalvm: false,
     chrome73: chrome.harmony,
+    chrome74: true,
   }
 },
 {

@@ -1900,7 +1900,7 @@
     "short": "CH&nbsp;63,<br>OP&nbsp;50",
     "release": "2017-12-05",
     "retire": "2018-01-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome64": {
     "full": "Chrome",
@@ -1956,7 +1956,7 @@
     "short": "CH&nbsp;70,<br>OP&nbsp;57",
     "release": "2018-10-16",
     "retire": "2018-12-04",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome71": {
     "full": "Chrome",
@@ -1966,16 +1966,23 @@
     "obsolete": false
   },
   "chrome72": {
-    "full": "Chrome Beta",
+    "full": "Chrome",
     "family": "V8",
     "short": "CH&nbsp;72,<br>OP&nbsp;59",
     "release": "2019-01-29",
-    "unstable": true
+    "obsolete": false
   },
   "chrome73": {
-    "full": "Chrome Canary",
+    "full": "Chrome Beta",
     "family": "V8",
     "short": "CH&nbsp;73,<br>OP&nbsp;60",
+    "release": "2019-03-12",
+    "unstable": true
+  },
+  "chrome74": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;74,<br>OP&nbsp;61",
     "unstable": true
   },
   "safari1": {
