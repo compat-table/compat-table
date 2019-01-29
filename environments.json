@@ -1114,7 +1114,7 @@
     "short": "FF 57",
     "release": "2017-11-14",
     "retire": "2018-01-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox58": {
     "full": "Firefox 58",
@@ -1162,7 +1162,7 @@
     "short": "FF 63",
     "release": "2018-10-23",
     "retire": "2018-12-11",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox64": {
     "full": "Firefox 64",
@@ -1173,19 +1173,27 @@
     "obsolete": false
   },
   "firefox65": {
-    "full": "Firefox 65 Beta",
+    "full": "Firefox 65",
     "family": "SpiderMonkey",
-    "short": "FF 65 Beta",
+    "short": "FF 65",
     "release": "2019-01-29",
     "retire": "2019-03-19",
-    "unstable": true
+    "obsolete": false
   },
   "firefox66": {
-    "full": "Firefox 66 Nightly",
+    "full": "Firefox 66 Beta",
     "family": "SpiderMonkey",
-    "short": "FF 66 Nightly",
+    "short": "FF 66 Beta",
     "release": "2019-03-19",
     "retire": "2019-05-14",
+    "unstable": true
+  },
+  "firefox67": {
+    "full": "Firefox 67 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 67 Nightly",
+    "release": "2019-05-14",
+    "retire": "2019-07-09",
     "unstable": true
   },
   "opera7": {
