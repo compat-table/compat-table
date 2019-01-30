@@ -3346,7 +3346,30 @@ exports.tests = [
           duktape2_2: false,
           graalvm: true,
         }
-      }
+      },
+      {
+        name: 'flat and flatMap in Array.prototype[@@unscopables]',
+        exec: function(){/*
+        return Array.prototype[Symbol.unscopables].flat
+          && Array.prototype[Symbol.unscopables].flatMap;
+      */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox58: false,
+          firefox59: false,
+          firefox62: false,
+          chrome69: false,
+          opera10_50: false,
+          safari12: false,
+          duktape2_2: false,
+          graalvm: false,
+        }
+      },
     ]
   },
 ];
