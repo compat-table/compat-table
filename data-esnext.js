@@ -2803,7 +2803,7 @@ exports.tests = [
 },
 {
   name: 'Promise.allSettled',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-allSettled',
   exec: function () {/*
