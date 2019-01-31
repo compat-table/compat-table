@@ -2881,7 +2881,7 @@ exports.tests = [
 },
 {
   name: 'richer keys',
-  category: STAGE1,
+  category: STAGE2,
   significance: 'small',
   spec: 'https://github.com/bmeck/proposal-richer-keys/',
   subtests: [
