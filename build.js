@@ -24,6 +24,8 @@ require('object.assign').shim();
 var pickBy = require('lodash.pickby');
 
 var environments = require('./environments');
+var parser = require('./test-parser');
+var prepareTest = parser.prepareTest;
 
 var fs = require('fs');
 var path = require('path');
@@ -396,6 +398,26 @@ function handle(options) {
   }
 }
 
+function wrapWithScript(assertions) {
+  // wrap a single test in an array so we can deal with them consistently
+  if (assertions) {
+    assertions = [].concat(assertions);
+  }
+
+  return assertions.filter(function(assertion) {
+    return assertion && assertion.script;
+  })
+  .map(function(assertion) {
+    var $ = cheerio.load(''
+        + '<script' + (assertion.type ? ' type="' + assertion.type + '"' : '') + '>'
+        + assertion.script
+        + '\n</script>'
+    );
+    $('script').attr('data-source', assertion.source);
+    return $.html();
+  }).join('');
+}
+
 function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
@@ -536,6 +558,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       });
     }
 
+    var testAssertion = prepareTest(t.exec, compiler, rowNum++);
     var testRow = $('<tr></tr>')
       .addClass("subtests" in t ? 'supertest' : '')
       .attr("significance",
@@ -546,7 +569,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       .append($('<td></td>')
         .attr('id', getHtmlId(id))
         .append('<span><a class="anchor" href="#' + getHtmlId(id) + '">&sect;</a>' + name + footnoteHTML(t) + '</span></td>')
-        .append(testScript(t.exec, compiler, rowNum++))
+        .append(wrapWithScript(testAssertion))
       );
     body.append(testRow);
     // If this row has a different category to the last, add a title <tr> before it.
@@ -624,13 +647,14 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         if (subtest.spec) {
             subtestName = '<a href="' + subtest.spec + '">' + subtest.name + '</a>';
         }
-        
+
         if (subtest.mdn) {
           subtestName += generateMdnLink(subtest.mdn);
         }
 
         var subtestId = id + '_' + escapeTestName(subtestName);
 
+        var subtestAssertion = prepareTest(subtest.exec, compiler, rowNum++);
         var subtestRow = $('<tr class="subtest"></tr>')
           .attr('data-parent', id)
           .attr('id', getHtmlId(subtestId))
@@ -638,7 +662,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           .append(
             $('<td></td>')
               .append('<span><a class="anchor" href="#' + getHtmlId(subtestId) + '">&sect;</a>' + subtestName + '</span>')
-              .append(testScript(subtest.exec, compiler, rowNum++))
+              .append(wrapWithScript(subtestAssertion))
           );
         body.append(subtestRow);
 
@@ -725,99 +749,4 @@ function replaceAndIndent(str, replacements) {
       .join(replacement[1].join(indent[1]));
   }
   return str;
-}
-
-function testScript(fn, transformFn, rowNum) {
-
-  function deindentFunc(fn) {
-    fn = (fn+'');
-    var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
-    if (indent) {
-      fn = fn.replace(new RegExp('\n' + indent[1], 'g'), '\n');
-    }
-    return fn;
-  }
-
-  if (!fn) {
-    return '';
-  }
-  if (typeof fn === 'function') {
-    // see if the code is encoded in a comment
-    var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
-    var transformed = false;
-    // if there wasn't an expression, make the function statement into one
-    if (!expr) {
-      if (transformFn) {
-        try {
-          expr = transformFn("("+fn+")");
-          transformed = true;
-        } catch(e) {
-          expr = "false";
-        }
-      }
-      else {
-        expr = deindentFunc(fn);
-      }
-      return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
-    }
-    else {
-      expr = deindentFunc(expr[1]);
-      if (transformFn) {
-        try {
-          if (expr.search(/Function\s*\(|eval\s*\(/) > -1) {
-            throw new Error("This test's code invokes eval() and cannot be compiled.");
-          }
-          expr = transformFn("(function(){" + expr + "})");
-          transformed = true;
-        } catch(e) {
-          expr = "/* Error during compilation: " + e.message + "*/";
-        }
-      }
-      /* jshint unused: true */ // this appears unused, but removing it might break things.
-      var async = !!/asyncTestPassed/.exec(fn);
-      /* jshint unused: false */
-      var codeString = JSON.stringify(expr).replace(/\\r/g,'');
-      var asyncFn = 'global.__asyncPassedFn && __asyncPassedFn("' + rowNum + '")';
-      var strictAsyncFn = 'global.__strictAsyncPassedFn && __strictAsyncPassedFn("' + rowNum + '")';
-      var funcString =
-        transformed ? '' + asyncFn + ' && eval(' + codeString + ')()'
-        : 'Function("asyncTestPassed",' + codeString + ')(asyncTestPassed)';
-      var strictFuncString =
-        transformed ? '' + strictAsyncFn + ' && function(){"use strict";' + codeString + '}() && "Strict"'
-        : 'Function("asyncTestPassed","\'use strict\';"+' + codeString + ')(asyncTestPassed)';
-
-      return cheerio.load('')('<script>' +
-         'test(function(){'
-        +  'try{'
-        +    'var asyncTestPassed=' + asyncFn + ';'
-        +    'try{'
-        +      'return ' + funcString
-        +    '}'
-        +    'catch(e){'
-        +      'asyncTestPassed=' + strictAsyncFn + ';'
-        +      'return ' + strictFuncString + '&&"Strict"'
-        +    '}'
-        +  '}'
-        +  'catch(e){'
-        +    'return false;'
-        +  '}'
-        +'}());'
-        +'\n</script>').attr('data-source', expr);
-    }
-  } else {
-    // it's an array of objects like the following:
-    // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    return fn.reduce(function(text, script) {
-      var expr = deindentFunc(
-          (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
-        );
-      var $ = cheerio.load
-        ('<script' + (script.type ? ' type="' + script.type + '"' : '') + '>' +
-          expr +
-          '</script>'
-        );
-      $('script').attr('data-source', expr);
-      return text + $.html();
-    },'');
-  }
 }
