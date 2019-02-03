@@ -2879,6 +2879,27 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Promise.any',
+  category: STAGE0,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-promise-any',
+  exec: function () {/*
+    Promise.any([
+      Promise.resolve(1),
+      Promise.reject(2),
+      Promise.resolve(3)
+    ]).then(it => {
+      if (it === 1) asyncTestPassed();
+    });
+  */},
+  res: {
+    babel6corejs2: false,
+    babel7corejs3: babel.corejs,
+    typescript1corejs2: typescript.fallthrough,
+    typescript3_2corejs3: typescript.corejs,
+  }
+},
 ];
 
 
