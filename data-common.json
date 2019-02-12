@@ -65,6 +65,11 @@
       "val": false,
       "note_id": "firefox-nightly",
       "note_html": "The feature is available only in Firefox Nightly builds."
+    },
+    "bigint": {
+      "val": "flagged",
+      "note_id": "firefox-bigint",
+      "note_html": "The feature have to be enabled via \"javascript.options.bigint\" setting under <code>about:config</code>."
     }
   },
   "chrome": {
