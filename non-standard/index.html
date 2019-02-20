@@ -7373,181 +7373,9 @@ try {
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr significance="1"><td id="test-RegExp_lastMatch"><span><a class="anchor" href="#test-RegExp_lastMatch">&#xA7;</a>RegExp &quot;lastMatch&quot; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () {
-var re = /\w/;
-re.exec(&apos;x&apos;);
-return RegExp.lastMatch === &apos;x&apos;;
-  }">test(
-function () {
-var re = /\w/;
-re.exec('x');
-return RegExp.lastMatch === 'x';
-  }())</script></td>
-<td class="yes obsolete" data-browser="konq4_13">Yes</td>
-<td class="yes" data-browser="konq4_14">Yes</td>
-<td class="yes obsolete" data-browser="ie8">Yes</td>
-<td class="yes obsolete" data-browser="ie9">Yes</td>
-<td class="yes obsolete" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
-<td class="yes unstable" data-browser="edge19">Yes</td>
-<td class="yes obsolete" data-browser="firefox52">Yes</td>
-<td class="yes obsolete" data-browser="firefox58">Yes</td>
-<td class="yes obsolete" data-browser="firefox59">Yes</td>
-<td class="yes" data-browser="firefox60">Yes</td>
-<td class="yes obsolete" data-browser="firefox61">Yes</td>
-<td class="yes obsolete" data-browser="firefox62">Yes</td>
-<td class="yes obsolete" data-browser="firefox63">Yes</td>
-<td class="yes" data-browser="firefox64">Yes</td>
-<td class="yes" data-browser="firefox65">Yes</td>
-<td class="yes unstable" data-browser="firefox66">Yes</td>
-<td class="yes unstable" data-browser="firefox67">Yes</td>
-<td class="yes obsolete" data-browser="opera12_10">Yes</td>
-<td class="yes obsolete" data-browser="chrome64">Yes</td>
-<td class="yes obsolete" data-browser="chrome65">Yes</td>
-<td class="yes obsolete" data-browser="chrome66">Yes</td>
-<td class="yes obsolete" data-browser="chrome67">Yes</td>
-<td class="yes obsolete" data-browser="chrome68">Yes</td>
-<td class="yes obsolete" data-browser="chrome69">Yes</td>
-<td class="yes obsolete" data-browser="chrome70">Yes</td>
-<td class="yes" data-browser="chrome71">Yes</td>
-<td class="yes" data-browser="chrome72">Yes</td>
-<td class="yes unstable" data-browser="chrome73">Yes</td>
-<td class="yes unstable" data-browser="chrome74">Yes</td>
-<td class="yes obsolete" data-browser="safari10">Yes</td>
-<td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes obsolete" data-browser="safari11">Yes</td>
-<td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes" data-browser="safari12">Yes</td>
-<td class="yes unstable" data-browser="safari12_1">Yes</td>
-<td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="yes unstable" data-browser="webkit">Yes</td>
-<td class="yes obsolete" data-browser="rhino1_7">Yes</td>
-<td class="no" data-browser="besen">No</td>
-<td class="yes obsolete" data-browser="phantom2_1">Yes</td>
-<td class="yes obsolete" data-browser="node0_10">Yes</td>
-<td class="yes obsolete" data-browser="node0_12">Yes</td>
-<td class="yes obsolete" data-browser="node4">Yes</td>
-<td class="yes" data-browser="node6_5">Yes</td>
-<td class="yes obsolete" data-browser="node7">Yes</td>
-<td class="yes obsolete" data-browser="node7_6">Yes</td>
-<td class="yes obsolete" data-browser="node8">Yes</td>
-<td class="yes obsolete" data-browser="node8_3">Yes</td>
-<td class="yes obsolete" data-browser="node8_7">Yes</td>
-<td class="yes" data-browser="node8_10">Yes</td>
-<td class="yes obsolete" data-browser="node10_0">Yes</td>
-<td class="yes obsolete" data-browser="node10_4">Yes</td>
-<td class="yes" data-browser="node10_9">Yes</td>
-<td class="yes" data-browser="node11_0">Yes</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
-<td class="yes obsolete" data-browser="android4_4">Yes</td>
-<td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios10">Yes</td>
-<td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes obsolete" data-browser="ios11">Yes</td>
-<td class="yes" data-browser="ios11_3">Yes</td>
-<td class="yes" data-browser="ios12">Yes</td>
-<td class="yes obsolete" data-browser="samsung6_4">Yes</td>
-<td class="yes obsolete" data-browser="samsung7_2">Yes</td>
-<td class="yes" data-browser="samsung8_2">Yes</td>
-</tr>
-<tr significance="1"><td id="test-RegExp.$1-$9"><span><a class="anchor" href="#test-RegExp.$1-$9">&#xA7;</a>RegExp.$1-$9 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="function () {
-for (var i = 1; i &lt; 10; i++) {
-  if (!((&apos;$&apos; + i) in RegExp)) return false;
-}
-return true;
-  }">test(
-function () {
-for (var i = 1; i < 10; i++) {
-  if (!(('$' + i) in RegExp)) return false;
-}
-return true;
-  }())</script></td>
-<td class="yes obsolete" data-browser="konq4_13">Yes</td>
-<td class="yes" data-browser="konq4_14">Yes</td>
-<td class="yes obsolete" data-browser="ie8">Yes</td>
-<td class="yes obsolete" data-browser="ie9">Yes</td>
-<td class="yes obsolete" data-browser="ie10">Yes</td>
-<td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
-<td class="yes unstable" data-browser="edge19">Yes</td>
-<td class="yes obsolete" data-browser="firefox52">Yes</td>
-<td class="yes obsolete" data-browser="firefox58">Yes</td>
-<td class="yes obsolete" data-browser="firefox59">Yes</td>
-<td class="yes" data-browser="firefox60">Yes</td>
-<td class="yes obsolete" data-browser="firefox61">Yes</td>
-<td class="yes obsolete" data-browser="firefox62">Yes</td>
-<td class="yes obsolete" data-browser="firefox63">Yes</td>
-<td class="yes" data-browser="firefox64">Yes</td>
-<td class="yes" data-browser="firefox65">Yes</td>
-<td class="yes unstable" data-browser="firefox66">Yes</td>
-<td class="yes unstable" data-browser="firefox67">Yes</td>
-<td class="yes obsolete" data-browser="opera12_10">Yes</td>
-<td class="yes obsolete" data-browser="chrome64">Yes</td>
-<td class="yes obsolete" data-browser="chrome65">Yes</td>
-<td class="yes obsolete" data-browser="chrome66">Yes</td>
-<td class="yes obsolete" data-browser="chrome67">Yes</td>
-<td class="yes obsolete" data-browser="chrome68">Yes</td>
-<td class="yes obsolete" data-browser="chrome69">Yes</td>
-<td class="yes obsolete" data-browser="chrome70">Yes</td>
-<td class="yes" data-browser="chrome71">Yes</td>
-<td class="yes" data-browser="chrome72">Yes</td>
-<td class="yes unstable" data-browser="chrome73">Yes</td>
-<td class="yes unstable" data-browser="chrome74">Yes</td>
-<td class="yes obsolete" data-browser="safari10">Yes</td>
-<td class="yes obsolete" data-browser="safari10_1">Yes</td>
-<td class="yes obsolete" data-browser="safari11">Yes</td>
-<td class="yes" data-browser="safari11_1">Yes</td>
-<td class="yes" data-browser="safari12">Yes</td>
-<td class="yes unstable" data-browser="safari12_1">Yes</td>
-<td class="yes unstable" data-browser="safaritp">Yes</td>
-<td class="yes unstable" data-browser="webkit">Yes</td>
-<td class="yes obsolete" data-browser="rhino1_7">Yes</td>
-<td class="no" data-browser="besen">No</td>
-<td class="yes obsolete" data-browser="phantom2_1">Yes</td>
-<td class="yes obsolete" data-browser="node0_10">Yes</td>
-<td class="yes obsolete" data-browser="node0_12">Yes</td>
-<td class="yes obsolete" data-browser="node4">Yes</td>
-<td class="yes" data-browser="node6_5">Yes</td>
-<td class="yes obsolete" data-browser="node7">Yes</td>
-<td class="yes obsolete" data-browser="node7_6">Yes</td>
-<td class="yes obsolete" data-browser="node8">Yes</td>
-<td class="yes obsolete" data-browser="node8_3">Yes</td>
-<td class="yes obsolete" data-browser="node8_7">Yes</td>
-<td class="yes" data-browser="node8_10">Yes</td>
-<td class="yes obsolete" data-browser="node10_0">Yes</td>
-<td class="yes obsolete" data-browser="node10_4">Yes</td>
-<td class="yes" data-browser="node10_9">Yes</td>
-<td class="yes" data-browser="node11_0">Yes</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
-<td class="yes obsolete" data-browser="android4_4">Yes</td>
-<td class="yes obsolete" data-browser="android4_4_3">Yes</td>
-<td class="yes obsolete" data-browser="ios10">Yes</td>
-<td class="yes obsolete" data-browser="ios10_3">Yes</td>
-<td class="yes obsolete" data-browser="ios11">Yes</td>
-<td class="yes" data-browser="ios11_3">Yes</td>
-<td class="yes" data-browser="ios12">Yes</td>
-<td class="yes obsolete" data-browser="samsung6_4">Yes</td>
-<td class="yes obsolete" data-browser="samsung7_2">Yes</td>
-<td class="yes" data-browser="samsung8_2">Yes</td>
-</tr>
 <tr significance="1"><td id="test-Callable_RegExp"><span><a class="anchor" href="#test-Callable_RegExp">&#xA7;</a>Callable RegExp</span><script data-source="
 return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("88");try{return Function("asyncTestPassed","\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("88");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("86");try{return Function("asyncTestPassed","\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("86");return Function("asyncTestPassed","'use strict';"+"\nreturn /\\\\w/(\"x\")[0] === \"x\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
@@ -7627,7 +7455,7 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <tr significance="1"><td id="test-RegExp_named_groups"><span><a class="anchor" href="#test-RegExp_named_groups">&#xA7;</a>RegExp named groups</span><script data-source="
 return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
        !/(?P&lt;name&gt;a)(?P=name)/.test(&quot;&quot;)
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("89");try{return Function("asyncTestPassed","\nreturn /(?P<name>a)(?P=name)/.test(\"aa\") &&\n       !/(?P<name>a)(?P=name)/.test(\"\")\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("89");return Function("asyncTestPassed","'use strict';"+"\nreturn /(?P<name>a)(?P=name)/.test(\"aa\") &&\n       !/(?P<name>a)(?P=name)/.test(\"\")\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("87");try{return Function("asyncTestPassed","\nreturn /(?P<name>a)(?P=name)/.test(\"aa\") &&\n       !/(?P<name>a)(?P=name)/.test(\"\")\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("87");return Function("asyncTestPassed","'use strict';"+"\nreturn /(?P<name>a)(?P=name)/.test(\"aa\") &&\n       !/(?P<name>a)(?P=name)/.test(\"\")\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes obsolete" data-browser="konq4_13">Yes</td>
 <td class="yes" data-browser="konq4_14">Yes</td>
@@ -8261,7 +8089,7 @@ function () { return typeof Object.prototype.eval == 'function' }())</script></t
 </tr>
 <tr significance="1"><td id="test-Object.observe"><span><a class="anchor" href="#test-Object.observe">&#xA7;</a><a href="https://arv.github.io/ecmascript-object-observe/">Object.observe</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof Object.observe == &apos;function&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("97");try{return Function("asyncTestPassed","\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("97");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("95");try{return Function("asyncTestPassed","\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("95");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Object.observe == 'function';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
@@ -8835,7 +8663,7 @@ return 'description' in new Error();
 var actualGlobal = Function(&apos;return this&apos;)();
 actualGlobal.__system_global_test__ = 42;
 return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global === actualGlobal &amp;&amp; !global.lacksGlobal &amp;&amp; global.__system_global_test__ === 42;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("102");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("102");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof global === 'object' && global && global === actualGlobal && !global.lacksGlobal && global.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>
@@ -8921,7 +8749,7 @@ if (typeof Object.getOwnPropertyDescriptor !== &apos;function&apos;) { return tr
 
 var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, &apos;global&apos;);
 return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;&amp; descriptor.configurable &amp;&amp; descriptor.writable;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("105");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("105");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("103");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("103");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof global !== 'object') { return false; }\nif (!('global' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }\nif (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="konq4_13">No</td>
 <td class="no" data-browser="konq4_14">No</td>

@@ -2051,63 +2051,6 @@ exports.tests = [
   }
 },
 {
-  name: 'RegExp "lastMatch"',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch',
-  exec: function () {
-    var re = /\w/;
-    re.exec('x');
-    return RegExp.lastMatch === 'x';
-  },
-  res: {
-    ie7: true,
-    firefox2: true,
-    safari3_1: true,
-    chrome7: true,
-    opera7_5: false,
-    opera10_10: false,
-    opera10_50: true,
-    konq4_4: true,
-    besen: false,
-    rhino1_7: true,
-    phantom: true,
-    android4_0: true,
-    duktape2_0: false,
-    nashorn1_8: true,
-    nashorn9: true,
-    nashorn10: true,
-    graalvm: true,
-  }
-},
-{
-  name: 'RegExp.$1-$9',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n',
-  exec: function () {
-    for (var i = 1; i < 10; i++) {
-      if (!(('$' + i) in RegExp)) return false;
-    }
-    return true;
-  },
-  res: {
-    ie7: true,
-    firefox2: true,
-    safari3_1: true,
-    chrome7: true,
-    opera7_5: true,
-    opera10_10: true,
-    opera10_50: true,
-    konq4_4: true,
-    besen: false,
-    rhino1_7: true,
-    phantom: true,
-    android4_0: true,
-    duktape2_0: false,
-    nashorn1_8: true,
-    nashorn9: true,
-    nashorn10: true,
-    graalvm: true,
-  }
-},
-{
   name: 'Callable RegExp',
   exec: function () {/*
     return /\\w/("x")[0] === "x";
