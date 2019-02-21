@@ -2356,7 +2356,11 @@ exports.tests = [
         res: {
           babel6corejs2: true,
           closure: true,
-          closure20181028: false,
+          closure20181028: {
+            val: false,
+            note_id: 'closure-object-assign',
+            note_html: 'Requires native support for <code>Object.assign</code>',
+          },
           typescript2_1corejs2: true,
           jsx: true,
           ie11: false,
@@ -2383,6 +2387,10 @@ exports.tests = [
         res: {
           babel6corejs2: true,
           closure: true,
+          closure20190121: {
+            val: false,
+            note_id: 'closure-object-assign',
+          },
           jsx: true,
           ie11: false,
           firefox2: false,
@@ -2778,6 +2786,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
           firefox2: false,
@@ -2807,6 +2816,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
           firefox2: false,
@@ -2841,6 +2851,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
           firefox2: false,
@@ -3083,6 +3094,7 @@ exports.tests = [
           return eval("'\u2028'") === "\u2028";
         */},
         res : {
+          closure20190215: true,
           ie11: false,
           firefox2: false,
           firefox61: false,
@@ -3099,6 +3111,7 @@ exports.tests = [
           return eval("'\u2029'") === "\u2029";
         */},
         res : {
+          closure20190215: true,
           ie11: false,
           firefox2: false,
           firefox61: false,
