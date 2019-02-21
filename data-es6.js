@@ -18659,6 +18659,7 @@ exports.tests = [
       res: {
         ejs: true,
         babel6corejs2: babel.corejs,
+        closure20190215: true,
         typescript1corejs2: typescript.corejs,
         tr: true,
         es6shim: true,
