@@ -780,6 +780,42 @@ exports.tests = [
         }
       },
       {
+        name: 'async arrow functions in methods, classes',
+        exec: function () {/*
+          function doSomething(callback) {
+            callback();
+          }
+          class C {
+            a(){
+              doSomething(async () => {
+                await 1;
+                asyncTestPassed();
+              });
+            }
+          };
+          var p = new C().a();
+        */},
+        res: {
+          tr: true,
+          babel6corejs2: babel.regenerator,
+          closure: true,
+          typescript1corejs2: typescript.downlevelIteration,
+          chrome52: chrome.experimental,
+          chrome55: true,
+          ie11: false,
+          edge13: edge.experimental,
+          edge15: true,
+          firefox2: false,
+          firefox52: true,
+          opera10_50: false,
+          safari10: false,
+          safari10_1: false,
+          safari11: true,
+          duktape2_0: false,
+          graalvm: true,
+        }
+      },
+      {
         name: 'async arrow functions',
         exec: function () {/*
           var a = async () => await Promise.resolve("foo");
