@@ -5458,6 +5458,43 @@ exports.tests = [
         graalvm: true,
       },
     },
+    {
+      name: 'TemplateStrings call site caching',
+      exec: function () {/*
+        function strings(array) {
+          return array;
+        }
+        function getStrings() {
+          return strings`foo`;
+        }
+        var original = getStrings();
+        var other = strings`foo`;
+        return original === getStrings() && original !== other;
+      */},
+      res: {
+        tr: true,
+        babel6corejs2: true,
+        es6tr: true,
+        jsx: true,
+        ejs: true,
+        closure: true,
+        typescript1corejs2: true,
+        edge12: true,
+        firefox2: false,
+        firefox34: true,
+        opera10_50: false,
+        chrome41: true,
+        safari9: true,
+        safari12: false,
+        node4: true,
+        xs6: true,
+        jxa: true,
+        duktape2_0: false,
+        nashorn9: true,
+        nashorn10: true,
+        graalvm: true,
+      },
+    },
   ],
 },
 {
