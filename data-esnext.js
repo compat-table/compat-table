@@ -943,7 +943,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        chrome74: 74,
+        chrome74: true,
         opera10_50: false,
         duktape2_0: false,
         graalvm: false,
