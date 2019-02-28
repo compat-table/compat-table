@@ -1920,8 +1920,11 @@ return view[0] === 0n;
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
 <tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigInt64"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigInt64">&#xA7;</a>DataView.prototype.getBigInt64</span><script data-source="
-return typeof DataView.prototype.getBigInt64 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nreturn typeof DataView.prototype.getBigInt64 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof DataView.prototype.getBigInt64 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var buffer = new ArrayBuffer(64);
+var view = new DataView(buffer);
+view.setBigInt64(0, 1n);
+return view.getBigInt64(0) === 1n;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigInt64(0, 1n);\nreturn view.getBigInt64(0) === 1n;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigInt64(0, 1n);\nreturn view.getBigInt64(0) === 1n;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -2012,8 +2015,11 @@ return typeof DataView.prototype.getBigInt64 === &apos;function&apos;;
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
 <tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigUint64"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigUint64">&#xA7;</a>DataView.prototype.getBigUint64</span><script data-source="
-return typeof DataView.prototype.getBigUint64 === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nreturn typeof DataView.prototype.getBigUint64 === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof DataView.prototype.getBigUint64 === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+var buffer = new ArrayBuffer(64);
+var view = new DataView(buffer);
+view.setBigUint64(0, 1n);
+return view.getBigUint64(0) === 1n;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigUint64(0, 1n);\nreturn view.getBigUint64(0) === 1n;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nvar buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigUint64(0, 1n);\nreturn view.getBigUint64(0) === 1n;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>

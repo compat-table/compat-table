@@ -2110,7 +2110,10 @@ exports.tests = [
     {
       name: 'DataView.prototype.getBigInt64',
       exec: function () {/*
-        return typeof DataView.prototype.getBigInt64 === 'function';
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setBigInt64(0, 1n);
+        return view.getBigInt64(0) === 1n;
       */},
       res: {
         firefox52: false,
@@ -2122,7 +2125,10 @@ exports.tests = [
     {
       name: 'DataView.prototype.getBigUint64',
       exec: function () {/*
-        return typeof DataView.prototype.getBigUint64 === 'function';
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setBigUint64(0, 1n);
+        return view.getBigUint64(0) === 1n;
       */},
       res: {
         firefox52: false,
