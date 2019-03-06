@@ -11671,6 +11671,7 @@ exports.tests = [
       res: {
         babel6corejs2: babel.corejs,
         closure: true,
+        closure20190301: false,
         typescript1corejs2: typescript.corejs,
         ejs: true,
         es6shim: true,
@@ -16111,6 +16112,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6corejs2: babel.corejs,
+        closure20190301: true,
         typescript1corejs2: typescript.corejs,
         edge12: true,
         firefox2: false,
@@ -19868,6 +19870,7 @@ exports.tests = [
       res: {
         babel6corejs2: babel.corejs,
         closure: true,
+        closure20190301: false,
         typescript1corejs2: typescript.corejs,
         es6shim: true,
         edge12: true,
