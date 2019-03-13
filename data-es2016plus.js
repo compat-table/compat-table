@@ -2290,6 +2290,7 @@ exports.tests = [
       firefox57: false,
       opera10_50: false,
       chrome51: true,
+      chrome75: false,
       safari10: true,
       safari10_1: true,
       duktape2_0: true,
