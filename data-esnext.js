@@ -403,6 +403,7 @@ exports.tests = [
     firefox67: true,
     chrome67: false,
     chrome68: chrome.harmony,
+    chrome73: true,
     chrome74: true,
     opera10_50: false,
     duktape2_0: false,
