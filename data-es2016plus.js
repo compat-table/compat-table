@@ -3184,7 +3184,7 @@ exports.tests = [
       safari12_1: true,
       safaritp: true,
       graalvm: false,
-      chrome73: chrome.harmony,
+      chrome73: true,
       chrome74: true,
     }
   },
