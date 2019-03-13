@@ -70,6 +70,16 @@
       "val": "flagged",
       "note_id": "firefox-bigint",
       "note_html": "The feature have to be enabled via \"javascript.options.bigint\" setting under <code>about:config</code>."
+    },
+    "classFields": {
+      "val": "flagged",
+      "note_id": "firefox-class-fields",
+      "note_html": "The feature have to be enabled via \"javascript.options.experimental.fields\" setting under <code>about:config</code>."
+    },
+    "privateClassFields": {
+      "val": false,
+      "note_id": "firefox-private-class-fields",
+      "note_html": "The feature have to be enabled via \"javascript.options.experimental.fields\" setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
     }
   },
   "chrome": {
