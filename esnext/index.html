@@ -644,7 +644,7 @@ return a === &apos;1a2b&apos;
 <td class="tally" data-browser="firefox64" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox65" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox66" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="firefox67" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="firefox67" data-tally="0" data-flagged-tally="1">0/3</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome64" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome65" data-tally="0" data-flagged-tally="0.3333333333333333">0/3</td>
@@ -739,7 +739,7 @@ return new C().x === &apos;x&apos;;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
@@ -840,7 +840,7 @@ return new C(42).x() === 42;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -938,7 +938,7 @@ return new C().x() === 42;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -1401,7 +1401,7 @@ return (1n + 2n) === 3n;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -1493,7 +1493,7 @@ return BigInt(&quot;3&quot;) === 3n;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -1585,7 +1585,7 @@ return typeof BigInt.asUintN === &apos;function&apos;;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -1677,7 +1677,7 @@ return typeof BigInt.asIntN === &apos;function&apos;;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -1962,7 +1962,7 @@ return view.getBigInt64(0) === 1n;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -2057,7 +2057,7 @@ return view.getBigUint64(0) === 1n;
 <td class="no" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no unstable" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -2598,9 +2598,9 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
-<td class="no unstable" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[11]</sup></a></td>
+<td class="no" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[12]</sup></a></td>
+<td class="no" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[12]</sup></a></td>
+<td class="no unstable" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20181008">No</td>
 <td class="no obsolete" data-browser="closure20181028">No</td>
@@ -8005,16 +8005,16 @@ return result === &apos;Hello, hello!&apos;;
 <td class="no" data-browser="edge18">No</td>
 <td class="no unstable" data-browser="edge19">No</td>
 <td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox64">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged" data-browser="firefox65">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox66">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#ffox-pipeline-note"><sup>[12]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox58">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox62">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox63">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox64">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged" data-browser="firefox65">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox66">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#ffox-pipeline-note"><sup>[13]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome64">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
@@ -17664,7 +17664,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[8]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-bigint-note">  <sup>[10]</sup> The feature have to be enabled via &quot;javascript.options.bigint&quot; setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[11]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[12]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[8]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-class-fields-note">  <sup>[10]</sup> The feature have to be enabled via &quot;javascript.options.experimental.fields&quot; setting under <code>about:config</code>.</p><p id="firefox-bigint-note">  <sup>[11]</sup> The feature have to be enabled via &quot;javascript.options.bigint&quot; setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[12]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[13]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
