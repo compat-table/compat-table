@@ -27,9 +27,9 @@ var environments = require('./environments');
 
 var fs = require('fs');
 var path = require('path');
-var os = require('os');
+// var os = require('os');
 var cheerio = require('cheerio');
-var child_process = require('child_process');
+// var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
@@ -262,6 +262,7 @@ process.nextTick(function () {
         return ts.transpile(code, { downlevelIteration: true });
       }
     },
+    /*
     {
       name: 'Closure Compiler',
       url: 'https://developers.google.com/closure/compiler/',
@@ -282,6 +283,7 @@ process.nextTick(function () {
         return output;
       },
     },
+    */
   ].forEach(function(e){
     Object.assign(es6, e);
     es6.browsers = {};
