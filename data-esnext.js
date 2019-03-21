@@ -2171,9 +2171,9 @@ exports.tests = [
     var results = [];
     for (let code of 'a𠮷b'.codePoints()) results.push(code);
     return results.length === 3
-      && results[0] === 97
-      && results[1] === 134071
-      && results[2] === 98;
+      && results[0].codePoint === 97 && results[0].position === 0
+      && results[1].codePoint === 134071 && results[1].position === 1
+      && results[2].codePoint === 98 && results[2].position === 4;
   */},
   res: {
     babel6corejs2: false,
