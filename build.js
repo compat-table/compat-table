@@ -27,9 +27,9 @@ var environments = require('./environments');
 
 var fs = require('fs');
 var path = require('path');
-var os = require('os');
+// var os = require('os');
 var cheerio = require('cheerio');
-var child_process = require('child_process');
+// var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
@@ -132,7 +132,7 @@ process.nextTick(function () {
       name: 'babel + core-js',
       url: 'https://babeljs.io/',
       target_file: 'es6/compilers/babel-core-js.html',
-      polyfills: ['node_modules/babel-polyfill/browser.js'],
+      polyfills: ['node_modules/core-js-bundle/index.js', 'node_modules/regenerator-runtime/runtime.js'],
       compiler: function(code) {
         return babel.transform(code, {presets: ['es2015']}).code;
       },
@@ -257,11 +257,12 @@ process.nextTick(function () {
       name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
       target_file: 'es6/compilers/typescript-core-js.html',
-      polyfills: ["node_modules/core-js/client/core.js"],
+      polyfills: ["node_modules/core-js-bundle/index.js"],
       compiler: function (code) {
         return ts.transpile(code, { downlevelIteration: true });
       }
     },
+    /*
     {
       name: 'Closure Compiler',
       url: 'https://developers.google.com/closure/compiler/',
@@ -282,6 +283,7 @@ process.nextTick(function () {
         return output;
       },
     },
+    */
   ].forEach(function(e){
     Object.assign(es6, e);
     es6.browsers = {};
@@ -293,7 +295,7 @@ process.nextTick(function () {
       name: 'babel + core-js',
       url: 'https://babeljs.io/',
       target_file: 'esnext/compilers/babel-core-js.html',
-      polyfills: ['node_modules/babel-polyfill/browser.js'],
+      polyfills: ['node_modules/core-js-bundle/index.js', 'node_modules/regenerator-runtime/runtime.js'],
       compiler: function(code) {
         return babel.transform(code, {presets: ['es2015', 'es2016', 'es2017', 'babel-preset-stage-0']}).code;
       },
@@ -319,7 +321,7 @@ process.nextTick(function () {
       name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
       target_file: 'esnext/compilers/typescript-core-js.html',
-      polyfills: ["node_modules/core-js/client/core.js"],
+      polyfills: ["node_modules/core-js-bundle/index.js"],
       compiler: ts.transpile
     },
   ].forEach(function(e){
@@ -333,7 +335,7 @@ process.nextTick(function () {
       name: 'babel + core-js',
       url: 'https://babeljs.io/',
       target_file: 'es2016plus/compilers/babel-core-js.html',
-      polyfills: ['node_modules/babel-polyfill/browser.js'],
+      polyfills: ['node_modules/core-js-bundle/index.js', 'node_modules/regenerator-runtime/runtime.js'],
       compiler: function(code) {
         return babel.transform(code, {presets: ['es2015', 'es2016', 'es2017']}).code;
       },
@@ -359,7 +361,7 @@ process.nextTick(function () {
       name: 'TypeScript + core-js',
       url: 'https://www.typescriptlang.org/',
       target_file: 'es2016plus/compilers/typescript-core-js.html',
-      polyfills: ["node_modules/core-js/client/core.js"],
+      polyfills: ["node_modules/core-js-bundle/index.js"],
       compiler: ts.transpile
     },
   ].forEach(function(e){

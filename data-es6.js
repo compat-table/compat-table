@@ -2292,6 +2292,7 @@ exports.tests = [
       */},
       res: {
         tr: true,
+        babel7corejs3: babel.corejs,
         typescript1corejs2: typescript.notDownlevelIteration,
         es6tr: true,
         edge12: true,
