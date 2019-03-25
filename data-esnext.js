@@ -906,7 +906,26 @@ exports.tests = [
         duktape2_0: false,
         graalvm: false,
       }
-    }
+    },
+    {
+      name: 'computed instance class fields',
+      exec: function () {/*
+        class C {
+          ['x'] = 42;
+        }
+        return new C().x === 42;
+      */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        chrome73: true,
+        firefox66: false,
+        firefox68: firefox.classFields,
+        opera10_50: false,
+        duktape2_0: false,
+        graalvm: false,
+      }
+    },
   ]
 },
 {
@@ -953,7 +972,24 @@ exports.tests = [
         duktape2_0: false,
         graalvm: false,
       }
-    }
+    },
+    {
+      name: 'computed static class fields',
+      exec: function () {/*
+        class C {
+          static ['x'] = 42;
+        }
+        return C.x === 42;
+      */},
+      res: {
+        firefox2: false,
+        chrome73: true,
+        firefox66: false,
+        opera10_50: false,
+        duktape2_0: false,
+        graalvm: false,
+      }
+    },
   ]
 },
 {
