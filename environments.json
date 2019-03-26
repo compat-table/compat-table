@@ -2160,7 +2160,7 @@
     "family": "JavaScriptCore",
     "short": "SF 10",
     "release": "2016-09-20",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari10_1": {
     "full": "Safari 10.1",
@@ -2181,7 +2181,7 @@
     "family": "JavaScriptCore",
     "short": "SF 11.1",
     "release": "2018-03-30",
-    "obsolete": false
+    "obsolete": true
   },
   "safari12": {
     "full": "Safari 12",
@@ -2191,10 +2191,11 @@
     "obsolete": false
   },
   "safari12_1": {
-    "full": "Safari 12.1 Beta",
+    "full": "Safari 12.1",
     "family": "JavaScriptCore",
-    "short": "SF&nbsp;12.1<br>Beta",
-    "unstable": true
+    "short": "SF&nbsp;12.1",
+    "release": "2019-03-25",
+    "obsolete": false
   },
   "safaritp": {
     "full": "Safari Technology Preview Release 73",
@@ -3046,7 +3047,7 @@
     "platformtype": "mobile",
     "equals": "safari10",
     "release": "2016-09-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios10_3": {
     "full": "iOS Safari",
@@ -3072,7 +3073,7 @@
     "platformtype": "mobile",
     "equals": "safari11_1",
     "release": "2018-03-30",
-    "obsolete": false
+    "obsolete": true
   },
   "ios12": {
     "full": "iOS Safari",
@@ -3081,6 +3082,15 @@
     "platformtype": "mobile",
     "equals": "safari12",
     "release": "2018-09-17",
+    "obsolete": false
+  },
+  "ios12_2": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 12.2",
+    "platformtype": "mobile",
+    "equals": "safari12_1",
+    "release": "2019-03-25",
     "obsolete": false
   },
   "samsung2_1": {
