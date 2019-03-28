@@ -2080,6 +2080,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2092,6 +2093,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2104,6 +2106,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2116,6 +2119,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2159,6 +2163,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2174,6 +2179,7 @@ exports.tests = [
       res: {
         firefox52: false,
         firefox67: firefox.bigint,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
