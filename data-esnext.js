@@ -1884,7 +1884,7 @@ exports.tests = [
 {
   name: 'numeric separators',
   spec: 'https://github.com/tc39/proposal-numeric-separator',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     return 1_000_000.000_001 === 1000000.000001 &&
