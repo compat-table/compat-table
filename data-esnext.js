@@ -2155,7 +2155,7 @@ exports.tests = [
   name: 'String.prototype.replaceAll',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-replace-all',
-  category: STAGE1,
+  category: STAGE2,
   exec: function () {/*
     return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
   */},
@@ -2830,7 +2830,7 @@ exports.tests = [
 },
 {
   name: 'Promise.allSettled',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-allSettled',
   exec: function () {/*
