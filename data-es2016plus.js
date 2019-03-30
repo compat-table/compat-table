@@ -3429,11 +3429,46 @@ exports.tests = [
       },
     ]
   },
+  {
+    name: 'String.prototype.matchAll',
+    category: '2020 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/String.prototype.matchAll',
+    exec: function(){/*
+      var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
+      if(iterator[Symbol.iterator]() !== iterator)return false;
+      var a = '', b = '', c = '', step;
+      while(!(step = iterator.next()).done){
+        a += step.value[0];
+        b += step.value[1];
+        c += step.value[2];
+      }
+      return a === '1a2b'
+        && b === '12'
+        && c === 'ab';
+    */},
+    res: {
+      babel6corejs2: babel.corejs,
+      typescript1corejs2: typescript.corejs,
+      ie11: false,
+      firefox2: false,
+      firefox65: false,
+      firefox66: firefox.nightly,
+      firefox67: true,
+      chrome67: false,
+      chrome68: chrome.harmony,
+      chrome73: true,
+      chrome74: true,
+      opera10_50: false,
+      duktape2_0: false,
+      graalvm: true,
+    }
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }

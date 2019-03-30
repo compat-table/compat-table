@@ -501,107 +501,6 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a></span><script data-source="
-var iterator = &apos;11a2bb&apos;.matchAll(/(\d)(\D)/g);
-if(iterator[Symbol.iterator]() !== iterator)return false;
-var a = &apos;&apos;, b = &apos;&apos;, c = &apos;&apos;, step;
-while(!(step = iterator.next()).done){
-  a += step.value[0];
-  b += step.value[1];
-  c += step.value[2];
-}
-return a === &apos;1a2b&apos;
-  &amp;&amp; b === &apos;12&apos;
-  &amp;&amp; c === &apos;ab&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/g);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nvar iterator = '11a2bb'.matchAll(/(\\d)(\\D)/g);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="yes" data-browser="babel6corejs2">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181008">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
-<td class="no obsolete" data-browser="closure20181125">No</td>
-<td class="no obsolete" data-browser="closure20181210">No</td>
-<td class="no obsolete" data-browser="closure20190106">No</td>
-<td class="no obsolete" data-browser="closure20190121">No</td>
-<td class="no obsolete" data-browser="closure20190215">No</td>
-<td class="no" data-browser="closure20190301">No</td>
-<td class="yes obsolete" data-browser="typescript1corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_7corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_8corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_9corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_1corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes" data-browser="typescript3_2corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="edge15">No</td>
-<td class="no obsolete" data-browser="edge16">No</td>
-<td class="no" data-browser="edge17">No</td>
-<td class="no" data-browser="edge18">No</td>
-<td class="no unstable" data-browser="edge19">No</td>
-<td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no" data-browser="firefox60">No</td>
-<td class="no obsolete" data-browser="firefox61">No</td>
-<td class="no obsolete" data-browser="firefox62">No</td>
-<td class="no obsolete" data-browser="firefox63">No</td>
-<td class="no obsolete" data-browser="firefox64">No</td>
-<td class="no" data-browser="firefox65">No</td>
-<td class="no flagged" data-browser="firefox66">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
-<td class="yes unstable" data-browser="firefox67">Yes</td>
-<td class="yes unstable" data-browser="firefox68">Yes</td>
-<td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no obsolete" data-browser="chrome65">No</td>
-<td class="no obsolete" data-browser="chrome66">No</td>
-<td class="no obsolete" data-browser="chrome67">No</td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="yes" data-browser="chrome73">Yes</td>
-<td class="yes unstable" data-browser="chrome74">Yes</td>
-<td class="yes unstable" data-browser="chrome75">Yes</td>
-<td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no obsolete" data-browser="safari11">No</td>
-<td class="no obsolete" data-browser="safari11_1">No</td>
-<td class="no" data-browser="safari12">No</td>
-<td class="no" data-browser="safari12_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no obsolete" data-browser="phantom2_1">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="node4">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no obsolete" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="node8_7">No</td>
-<td class="no" data-browser="node8_10">No</td>
-<td class="no obsolete" data-browser="node10_0">No</td>
-<td class="no obsolete" data-browser="node10_4">No</td>
-<td class="no flagged" data-browser="node10_9">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="node11_0">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no obsolete" data-browser="ios11">No</td>
-<td class="no obsolete" data-browser="ios11_3">No</td>
-<td class="no" data-browser="ios12">No</td>
-<td class="no" data-browser="ios12_2">No</td>
-<td class="no obsolete" data-browser="samsung6_4">No</td>
-<td class="no obsolete" data-browser="samsung7_2">No</td>
-<td class="no" data-browser="samsung8_2">No</td>
-</tr>
 <tr class="supertest" significance="0.5"><td id="test-instance_class_fields"><span><a class="anchor" href="#test-instance_class_fields">&#xA7;</a><a href="https://github.com/tc39/proposal-class-fields">instance class fields</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
 <td class="tally" data-browser="babel6corejs2" data-tally="0.25" style="background-color:hsl(30,75%,50%)">1/4</td>
@@ -695,7 +594,7 @@ class C {
   x = &apos;x&apos;;
 }
 return new C().x === &apos;x&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n}\nreturn new C().x === 'x';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  x = 'x';\n}\nreturn new C().x === 'x';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nclass C {\n  x = 'x';\n}\nreturn new C().x === 'x';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  x = 'x';\n}\nreturn new C().x === 'x';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6corejs2">Yes</td>
@@ -732,8 +631,8 @@ return new C().x === &apos;x&apos;;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-class-fields-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-class-fields-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no flagged obsolete" data-browser="chrome65">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
 <td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
@@ -795,7 +694,7 @@ class C {
   }
 }
 return new C(42).x() === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nclass C {\n  #x;\n  constructor(x){\n    this.#x = x;\n  }\n  x(){\n    return this.#x;\n  }\n}\nreturn new C(42).x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  #x;\n  constructor(x){\n    this.#x = x;\n  }\n  x(){\n    return this.#x;\n  }\n}\nreturn new C(42).x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nclass C {\n  #x;\n  constructor(x){\n    this.#x = x;\n  }\n  x(){\n    return this.#x;\n  }\n}\nreturn new C(42).x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  #x;\n  constructor(x){\n    this.#x = x;\n  }\n  x(){\n    return this.#x;\n  }\n}\nreturn new C(42).x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -832,8 +731,8 @@ return new C(42).x() === 42;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No<a href="#firefox-private-class-fields-note"><sup>[11]</sup></a></td>
-<td class="no unstable" data-browser="firefox68">No<a href="#firefox-private-class-fields-note"><sup>[11]</sup></a></td>
+<td class="no unstable" data-browser="firefox67">No<a href="#firefox-private-class-fields-note"><sup>[10]</sup></a></td>
+<td class="no unstable" data-browser="firefox68">No<a href="#firefox-private-class-fields-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
@@ -892,7 +791,7 @@ class C {
   }
 }
 return new C().x() === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nclass C {\n  #x = 42;\n  x(){\n    return this.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  #x = 42;\n  x(){\n    return this.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nclass C {\n  #x = 42;\n  x(){\n    return this.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  #x = 42;\n  x(){\n    return this.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -929,8 +828,8 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No<a href="#firefox-private-class-fields-note"><sup>[11]</sup></a></td>
-<td class="no unstable" data-browser="firefox68">No<a href="#firefox-private-class-fields-note"><sup>[11]</sup></a></td>
+<td class="no unstable" data-browser="firefox67">No<a href="#firefox-private-class-fields-note"><sup>[10]</sup></a></td>
+<td class="no unstable" data-browser="firefox68">No<a href="#firefox-private-class-fields-note"><sup>[10]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no flagged obsolete" data-browser="chrome66">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
@@ -986,7 +885,7 @@ class C {
   [&apos;x&apos;] = 42;
 }
 return new C().x === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nclass C {\n  ['x'] = 42;\n}\nreturn new C().x === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  ['x'] = 42;\n}\nreturn new C().x === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nclass C {\n  ['x'] = 42;\n}\nreturn new C().x === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  ['x'] = 42;\n}\nreturn new C().x === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -1024,7 +923,7 @@ return new C().x === 42;
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
 <td class="no unstable" data-browser="firefox67">No</td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-class-fields-note"><sup>[10]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-class-fields-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -1168,7 +1067,7 @@ class C {
   static x = &apos;x&apos;;
 }
 return C.x === &apos;x&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nclass C {\n  static x = 'x';\n}\nreturn C.x === 'x';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static x = 'x';\n}\nreturn C.x === 'x';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nclass C {\n  static x = 'x';\n}\nreturn C.x === 'x';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static x = 'x';\n}\nreturn C.x === 'x';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="yes" data-browser="tr">Yes</td>
 <td class="yes" data-browser="babel6corejs2">Yes</td>
@@ -1265,7 +1164,7 @@ class C {
   }
 }
 return new C().x() === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nclass C {\n  static #x = 42;\n  x(){\n    return C.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static #x = 42;\n  x(){\n    return C.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nclass C {\n  static #x = 42;\n  x(){\n    return C.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static #x = 42;\n  x(){\n    return C.#x;\n  }\n}\nreturn new C().x() === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -1359,7 +1258,7 @@ class C {
   static [&apos;x&apos;] = 42;
 }
 return C.x === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nclass C {\n  static ['x'] = 42;\n}\nreturn C.x === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static ['x'] = 42;\n}\nreturn C.x === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nclass C {\n  static ['x'] = 42;\n}\nreturn C.x === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nclass C {\n  static ['x'] = 42;\n}\nreturn C.x === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -1432,6 +1331,98 @@ return C.x === 42;
 <td class="no obsolete" data-browser="node10_4">No</td>
 <td class="no" data-browser="node10_9">No</td>
 <td class="no" data-browser="node11_0">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="graalvm">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="no" data-browser="ios12_2">No</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
+<tr significance="0.25"><td id="test-numeric_separators"><span><a class="anchor" href="#test-numeric_separators">&#xA7;</a><a href="https://github.com/tc39/proposal-numeric-separator">numeric separators</a></span><script data-source="
+return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="yes" data-browser="babel7corejs2">Yes</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20181210">No</td>
+<td class="no obsolete" data-browser="closure20190106">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no" data-browser="closure20190301">No</td>
+<td class="no obsolete" data-browser="typescript1corejs2">No</td>
+<td class="yes obsolete" data-browser="typescript2_7corejs2">Yes</td>
+<td class="yes obsolete" data-browser="typescript2_8corejs2">Yes</td>
+<td class="yes obsolete" data-browser="typescript2_9corejs2">Yes</td>
+<td class="yes obsolete" data-browser="typescript3corejs2">Yes</td>
+<td class="yes obsolete" data-browser="typescript3_1corejs2">Yes</td>
+<td class="yes" data-browser="typescript3_2corejs2">Yes</td>
+<td class="yes" data-browser="typescript3_2corejs3">Yes</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox59">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox61">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="no" data-browser="firefox65">No</td>
+<td class="no" data-browser="firefox66">No</td>
+<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no unstable" data-browser="firefox68">No</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome65">No</td>
+<td class="no obsolete" data-browser="chrome66">No</td>
+<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="chrome73">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome74">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome75">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no" data-browser="safari12_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="no flagged obsolete" data-browser="node10_4">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="node10_9">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="node11_0">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
@@ -1575,8 +1566,8 @@ return (1n + 2n) === 3n;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -1666,8 +1657,8 @@ return BigInt(&quot;3&quot;) === 3n;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -1757,8 +1748,8 @@ return typeof BigInt.asUintN === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -1848,8 +1839,8 @@ return typeof BigInt.asIntN === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -2130,8 +2121,8 @@ return view.getBigInt64(0) === 1n;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -2224,8 +2215,8 @@ return view.getBigUint64(0) === 1n;
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
 <td class="no" data-browser="firefox66">No</td>
-<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[12]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox68">Flag<a href="#firefox-nightly-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
@@ -2265,6 +2256,108 @@ return view.getBigUint64(0) === 1n;
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="no" data-browser="ios12_2">No</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
+<tr significance="0.25"><td id="test-Promise.allSettled"><span><a class="anchor" href="#test-Promise.allSettled">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-allSettled">Promise.allSettled</a></span><script data-source="
+Promise.allSettled([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (
+    it.length === 3 &amp;&amp;
+    it[0].status === &apos;fulfilled&apos; &amp;&amp; it[0].value === 1 &amp;&amp;
+    it[1].status === &apos;rejected&apos; &amp;&amp; it[1].reason === 2 &amp;&amp;
+    it[2].status === &apos;fulfilled&apos; &amp;&amp; it[2].value === 3
+  ) asyncTestPassed();
+});
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nPromise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (\n    it.length === 3 &&\n    it[0].status === 'fulfilled' && it[0].value === 1 &&\n    it[1].status === 'rejected' && it[1].reason === 2 &&\n    it[2].status === 'fulfilled' && it[2].value === 3\n  ) asyncTestPassed();\n});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nPromise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (\n    it.length === 3 &&\n    it[0].status === 'fulfilled' && it[0].value === 1 &&\n    it[1].status === 'rejected' && it[1].reason === 2 &&\n    it[2].status === 'fulfilled' && it[2].value === 3\n  ) asyncTestPassed();\n});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20181210">No</td>
+<td class="no obsolete" data-browser="closure20190106">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no" data-browser="closure20190301">No</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox59">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox61">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="no" data-browser="firefox65">No</td>
+<td class="no" data-browser="firefox66">No</td>
+<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no unstable" data-browser="firefox68">No</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome65">No</td>
+<td class="no obsolete" data-browser="chrome66">No</td>
+<td class="no obsolete" data-browser="chrome67">No</td>
+<td class="no obsolete" data-browser="chrome68">No</td>
+<td class="no obsolete" data-browser="chrome69">No</td>
+<td class="no obsolete" data-browser="chrome70">No</td>
+<td class="no obsolete" data-browser="chrome71">No</td>
+<td class="no" data-browser="chrome72">No</td>
+<td class="no" data-browser="chrome73">No</td>
+<td class="no unstable" data-browser="chrome74">No</td>
+<td class="no unstable" data-browser="chrome75">No</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no" data-browser="safari12_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="no obsolete" data-browser="node10_4">No</td>
+<td class="no" data-browser="node10_9">No</td>
+<td class="no" data-browser="node11_0">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="graalvm">No</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
@@ -2570,7 +2663,7 @@ function* generator() {
 var iter = generator();
 iter.next(&apos;tromple&apos;);
 return result === &apos;tromple&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="yes" data-browser="babel6corejs2">Yes</td>
@@ -2757,7 +2850,7 @@ function nonconf(target, name, descriptor) {
   return descriptor;
 }
 return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable === false;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[13]</sup></a></td>
@@ -2851,7 +2944,7 @@ return typeof Realm === &quot;function&quot;
   &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
     return key in Realm.prototype;
   });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -2946,7 +3039,7 @@ var weakref = System.makeWeakRef(O);
 var works = weakref.get() === O;
 weakref.clear();
 return works &amp;&amp; weakref.get() === undefined;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = System.makeWeakRef(O);\nvar works = weakref.get() === O;\nweakref.clear();\nreturn works && weakref.get() === undefined;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3131,7 +3224,7 @@ try {
 } catch (e) {
   return a + e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3232,7 +3325,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3328,7 +3421,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3424,7 +3517,7 @@ try {
 } catch (e) {
   return e === 21;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3513,15 +3606,14 @@ try {
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr significance="0.25"><td id="test-numeric_separators"><span><a class="anchor" href="#test-numeric_separators">&#xA7;</a><a href="https://github.com/tc39/proposal-numeric-separator">numeric separators</a></span><script data-source="
-return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nreturn 1_000_000.000_001 === 1000000.000001 &&\n  0b1010_0001_1000_0101 === 0b1010000110000101;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr significance="0.25"><td id="test-String.prototype.replaceAll"><span><a class="anchor" href="#test-String.prototype.replaceAll">&#xA7;</a><a href="https://github.com/tc39/proposal-string-replace-all">String.prototype.replaceAll</a></span><script data-source="
+return &apos;q=query+string+parameters&apos;.replaceAll(&apos;+&apos;, &apos; &apos;) === &apos;q=query string parameters&apos;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
-<td class="yes" data-browser="babel7corejs2">Yes</td>
-<td class="yes" data-browser="babel7corejs3">Yes</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20181008">No</td>
 <td class="no obsolete" data-browser="closure20181028">No</td>
@@ -3531,14 +3623,14 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
 <td class="no" data-browser="closure20190301">No</td>
-<td class="no obsolete" data-browser="typescript1corejs2">No</td>
-<td class="yes obsolete" data-browser="typescript2_7corejs2">Yes</td>
-<td class="yes obsolete" data-browser="typescript2_8corejs2">Yes</td>
-<td class="yes obsolete" data-browser="typescript2_9corejs2">Yes</td>
-<td class="yes obsolete" data-browser="typescript3corejs2">Yes</td>
-<td class="yes obsolete" data-browser="typescript3_1corejs2">Yes</td>
-<td class="yes" data-browser="typescript3_2corejs2">Yes</td>
-<td class="yes" data-browser="typescript3_2corejs3">Yes</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no obsolete" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
@@ -3558,15 +3650,15 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome65">No</td>
 <td class="no obsolete" data-browser="chrome66">No</td>
-<td class="no flagged obsolete" data-browser="chrome67">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome68">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome69">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome70">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged obsolete" data-browser="chrome71">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="chrome72">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="chrome73">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome74">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged unstable" data-browser="chrome75">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no obsolete" data-browser="chrome67">No</td>
+<td class="no obsolete" data-browser="chrome68">No</td>
+<td class="no obsolete" data-browser="chrome69">No</td>
+<td class="no obsolete" data-browser="chrome70">No</td>
+<td class="no obsolete" data-browser="chrome71">No</td>
+<td class="no" data-browser="chrome72">No</td>
+<td class="no" data-browser="chrome73">No</td>
+<td class="no unstable" data-browser="chrome74">No</td>
+<td class="no unstable" data-browser="chrome75">No</td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
 <td class="no obsolete" data-browser="safari11_1">No</td>
@@ -3586,9 +3678,9 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="node8_7">No</td>
 <td class="no" data-browser="node8_10">No</td>
 <td class="no obsolete" data-browser="node10_0">No</td>
-<td class="no flagged obsolete" data-browser="node10_4">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="node10_9">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
-<td class="no flagged" data-browser="node11_0">Flag<a href="#chrome-harmony-note"><sup>[9]</sup></a></td>
+<td class="no obsolete" data-browser="node10_4">No</td>
+<td class="no" data-browser="node10_9">No</td>
+<td class="no" data-browser="node11_0">No</td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
@@ -3698,7 +3790,7 @@ var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
 return set.size === 2
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3793,7 +3885,7 @@ return set.size === 3
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3887,7 +3979,7 @@ var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("39");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("39");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -3981,7 +4073,7 @@ var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("40");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("40");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4072,7 +4164,7 @@ return set.size === 2
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isDisjointFrom"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isDisjointFrom">&#xA7;</a>Set.prototype.isDisjointFrom</span><script data-source="
 return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("41");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("41");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4163,7 +4255,7 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isSubsetOf"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isSubsetOf">&#xA7;</a>Set.prototype.isSubsetOf</span><script data-source="
 return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("42");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("42");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4254,7 +4346,7 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isSupersetOf"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isSupersetOf">&#xA7;</a>Set.prototype.isSupersetOf</span><script data-source="
 return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("43");try{return Function("asyncTestPassed","\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("43");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("44");try{return Function("asyncTestPassed","\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("44");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4436,7 +4528,7 @@ const buffer1 = new Uint8Array([1, 2]).buffer;
 const buffer2 = buffer1.transfer();
 return buffer1.byteLength === 0
   &amp;&amp; buffer2.byteLength === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("45");try{return Function("asyncTestPassed","\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("45");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4530,7 +4622,7 @@ const buffer1 = new ArrayBuffer(1024);
 const buffer2 = buffer1.realloc(256);
 return buffer1.byteLength === 0
   &amp;&amp; buffer2.byteLength === 256;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("46");try{return Function("asyncTestPassed","\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("46");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nconst buffer1 = new ArrayBuffer(1024);\nconst buffer2 = buffer1.realloc(256);\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 256;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -4553,108 +4645,6 @@ return buffer1.byteLength === 0
 <td class="no obsolete" data-browser="typescript3_1corejs2">No</td>
 <td class="no" data-browser="typescript3_2corejs2">No</td>
 <td class="no" data-browser="typescript3_2corejs3">No</td>
-<td class="no obsolete" data-browser="edge15">No</td>
-<td class="no obsolete" data-browser="edge16">No</td>
-<td class="no" data-browser="edge17">No</td>
-<td class="no" data-browser="edge18">No</td>
-<td class="no unstable" data-browser="edge19">No</td>
-<td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no" data-browser="firefox60">No</td>
-<td class="no obsolete" data-browser="firefox61">No</td>
-<td class="no obsolete" data-browser="firefox62">No</td>
-<td class="no obsolete" data-browser="firefox63">No</td>
-<td class="no obsolete" data-browser="firefox64">No</td>
-<td class="no" data-browser="firefox65">No</td>
-<td class="no" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No</td>
-<td class="no unstable" data-browser="firefox68">No</td>
-<td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no obsolete" data-browser="chrome65">No</td>
-<td class="no obsolete" data-browser="chrome66">No</td>
-<td class="no obsolete" data-browser="chrome67">No</td>
-<td class="no obsolete" data-browser="chrome68">No</td>
-<td class="no obsolete" data-browser="chrome69">No</td>
-<td class="no obsolete" data-browser="chrome70">No</td>
-<td class="no obsolete" data-browser="chrome71">No</td>
-<td class="no" data-browser="chrome72">No</td>
-<td class="no" data-browser="chrome73">No</td>
-<td class="no unstable" data-browser="chrome74">No</td>
-<td class="no unstable" data-browser="chrome75">No</td>
-<td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no obsolete" data-browser="safari11">No</td>
-<td class="no obsolete" data-browser="safari11_1">No</td>
-<td class="no" data-browser="safari12">No</td>
-<td class="no" data-browser="safari12_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no obsolete" data-browser="phantom2_1">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="node4">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no obsolete" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="node8_7">No</td>
-<td class="no" data-browser="node8_10">No</td>
-<td class="no obsolete" data-browser="node10_0">No</td>
-<td class="no obsolete" data-browser="node10_4">No</td>
-<td class="no" data-browser="node10_9">No</td>
-<td class="no" data-browser="node11_0">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no obsolete" data-browser="ios11">No</td>
-<td class="no obsolete" data-browser="ios11_3">No</td>
-<td class="no" data-browser="ios12">No</td>
-<td class="no" data-browser="ios12_2">No</td>
-<td class="no obsolete" data-browser="samsung6_4">No</td>
-<td class="no obsolete" data-browser="samsung7_2">No</td>
-<td class="no" data-browser="samsung8_2">No</td>
-</tr>
-<tr significance="0.25"><td id="test-Promise.allSettled"><span><a class="anchor" href="#test-Promise.allSettled">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-allSettled">Promise.allSettled</a></span><script data-source="
-Promise.allSettled([
-  Promise.resolve(1),
-  Promise.reject(2),
-  Promise.resolve(3)
-]).then(it =&gt; {
-  if (
-    it.length === 3 &amp;&amp;
-    it[0].status === &apos;fulfilled&apos; &amp;&amp; it[0].value === 1 &amp;&amp;
-    it[1].status === &apos;rejected&apos; &amp;&amp; it[1].reason === 2 &amp;&amp;
-    it[2].status === &apos;fulfilled&apos; &amp;&amp; it[2].value === 3
-  ) asyncTestPassed();
-});
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("47");try{return Function("asyncTestPassed","\nPromise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (\n    it.length === 3 &&\n    it[0].status === 'fulfilled' && it[0].value === 1 &&\n    it[1].status === 'rejected' && it[1].reason === 2 &&\n    it[2].status === 'fulfilled' && it[2].value === 3\n  ) asyncTestPassed();\n});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("47");return Function("asyncTestPassed","'use strict';"+"\nPromise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (\n    it.length === 3 &&\n    it[0].status === 'fulfilled' && it[0].value === 1 &&\n    it[1].status === 'rejected' && it[1].reason === 2 &&\n    it[2].status === 'fulfilled' && it[2].value === 3\n  ) asyncTestPassed();\n});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6corejs2">No</td>
-<td class="no" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181008">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
-<td class="no obsolete" data-browser="closure20181125">No</td>
-<td class="no obsolete" data-browser="closure20181210">No</td>
-<td class="no obsolete" data-browser="closure20190106">No</td>
-<td class="no obsolete" data-browser="closure20190121">No</td>
-<td class="no obsolete" data-browser="closure20190215">No</td>
-<td class="no" data-browser="closure20190301">No</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no obsolete" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
@@ -10809,97 +10799,6 @@ try {
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr significance="0.25"><td id="test-String.prototype.replaceAll"><span><a class="anchor" href="#test-String.prototype.replaceAll">&#xA7;</a><a href="https://github.com/tc39/proposal-string-replace-all">String.prototype.replaceAll</a></span><script data-source="
-return &apos;q=query+string+parameters&apos;.replaceAll(&apos;+&apos;, &apos; &apos;) === &apos;q=query string parameters&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nreturn 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nreturn 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6corejs2">No</td>
-<td class="no" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181008">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
-<td class="no obsolete" data-browser="closure20181125">No</td>
-<td class="no obsolete" data-browser="closure20181210">No</td>
-<td class="no obsolete" data-browser="closure20190106">No</td>
-<td class="no obsolete" data-browser="closure20190121">No</td>
-<td class="no obsolete" data-browser="closure20190215">No</td>
-<td class="no" data-browser="closure20190301">No</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="edge15">No</td>
-<td class="no obsolete" data-browser="edge16">No</td>
-<td class="no" data-browser="edge17">No</td>
-<td class="no" data-browser="edge18">No</td>
-<td class="no unstable" data-browser="edge19">No</td>
-<td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no" data-browser="firefox60">No</td>
-<td class="no obsolete" data-browser="firefox61">No</td>
-<td class="no obsolete" data-browser="firefox62">No</td>
-<td class="no obsolete" data-browser="firefox63">No</td>
-<td class="no obsolete" data-browser="firefox64">No</td>
-<td class="no" data-browser="firefox65">No</td>
-<td class="no" data-browser="firefox66">No</td>
-<td class="no unstable" data-browser="firefox67">No</td>
-<td class="no unstable" data-browser="firefox68">No</td>
-<td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="no obsolete" data-browser="chrome65">No</td>
-<td class="no obsolete" data-browser="chrome66">No</td>
-<td class="no obsolete" data-browser="chrome67">No</td>
-<td class="no obsolete" data-browser="chrome68">No</td>
-<td class="no obsolete" data-browser="chrome69">No</td>
-<td class="no obsolete" data-browser="chrome70">No</td>
-<td class="no obsolete" data-browser="chrome71">No</td>
-<td class="no" data-browser="chrome72">No</td>
-<td class="no" data-browser="chrome73">No</td>
-<td class="no unstable" data-browser="chrome74">No</td>
-<td class="no unstable" data-browser="chrome75">No</td>
-<td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no obsolete" data-browser="safari11">No</td>
-<td class="no obsolete" data-browser="safari11_1">No</td>
-<td class="no" data-browser="safari12">No</td>
-<td class="no" data-browser="safari12_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no obsolete" data-browser="phantom2_1">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="node4">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no obsolete" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="node8_7">No</td>
-<td class="no" data-browser="node8_10">No</td>
-<td class="no obsolete" data-browser="node10_0">No</td>
-<td class="no obsolete" data-browser="node10_4">No</td>
-<td class="no" data-browser="node10_9">No</td>
-<td class="no" data-browser="node11_0">No</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no obsolete" data-browser="ios11">No</td>
-<td class="no obsolete" data-browser="ios11_3">No</td>
-<td class="no" data-browser="ios12">No</td>
-<td class="no" data-browser="ios12_2">No</td>
-<td class="no obsolete" data-browser="samsung6_4">No</td>
-<td class="no obsolete" data-browser="samsung7_2">No</td>
-<td class="no" data-browser="samsung8_2">No</td>
-</tr>
 <tr significance="0.25"><td id="test-String.prototype.codePoints"><span><a class="anchor" href="#test-String.prototype.codePoints">&#xA7;</a><a href="https://github.com/tc39/proposal-string-prototype-codepoints">String.prototype.codePoints</a></span><script data-source="
 var results = [];
 for (let code of &apos;a&#x20BB7;b&apos;.codePoints()) results.push(code);
@@ -10907,7 +10806,7 @@ return results.length === 3
   &amp;&amp; results[0].codePoint === 97 &amp;&amp; results[0].position === 0
   &amp;&amp; results[1].codePoint === 134071 &amp;&amp; results[1].position === 1
   &amp;&amp; results[2].codePoint === 98 &amp;&amp; results[2].position === 3;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("114");try{return Function("asyncTestPassed","\nvar results = [];\nfor (let code of 'a𠮷b'.codePoints()) results.push(code);\nreturn results.length === 3\n  && results[0].codePoint === 97 && results[0].position === 0\n  && results[1].codePoint === 134071 && results[1].position === 1\n  && results[2].codePoint === 98 && results[2].position === 3;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("114");return Function("asyncTestPassed","'use strict';"+"\nvar results = [];\nfor (let code of 'a𠮷b'.codePoints()) results.push(code);\nreturn results.length === 3\n  && results[0].codePoint === 97 && results[0].position === 0\n  && results[1].codePoint === 134071 && results[1].position === 1\n  && results[2].codePoint === 98 && results[2].position === 3;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("113");try{return Function("asyncTestPassed","\nvar results = [];\nfor (let code of 'a𠮷b'.codePoints()) results.push(code);\nreturn results.length === 3\n  && results[0].codePoint === 97 && results[0].position === 0\n  && results[1].codePoint === 134071 && results[1].position === 1\n  && results[2].codePoint === 98 && results[2].position === 3;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("113");return Function("asyncTestPassed","'use strict';"+"\nvar results = [];\nfor (let code of 'a𠮷b'.codePoints()) results.push(code);\nreturn results.length === 3\n  && results[0].codePoint === 97 && results[0].position === 0\n  && results[1].codePoint === 134071 && results[1].position === 1\n  && results[2].codePoint === 98 && results[2].position === 3;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11086,7 +10985,7 @@ return results.length === 3
 </tr>
 <tr class="subtest" data-parent="getting_last_item_from_array" id="test-getting_last_item_from_array_Array.prototype.lastItem"><td><span><a class="anchor" href="#test-getting_last_item_from_array_Array.prototype.lastItem">&#xA7;</a>Array.prototype.lastItem</span><script data-source="
 return [1, 2, 3].lastItem === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].lastItem === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].lastItem === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("115");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].lastItem === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("115");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].lastItem === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11177,7 +11076,7 @@ return [1, 2, 3].lastItem === 3;
 </tr>
 <tr class="subtest" data-parent="getting_last_item_from_array" id="test-getting_last_item_from_array_Array.prototype.lastIndex"><td><span><a class="anchor" href="#test-getting_last_item_from_array_Array.prototype.lastIndex">&#xA7;</a>Array.prototype.lastIndex</span><script data-source="
 return [1, 2, 3].lastIndex === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("117");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].lastIndex === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("117");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].lastIndex === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("116");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].lastIndex === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("116");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].lastIndex === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11361,7 +11260,7 @@ return map.size === 2
   &amp;&amp; map.get(0)[1] === 4
   &amp;&amp; map.get(1)[0] === 1
   &amp;&amp; map.get(1)[1] === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("118");try{return Function("asyncTestPassed","\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("118");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.groupBy(new Set([1, 2, 3, 4]), it => it % 2)\nreturn map.size === 2\n  && map.get(0)[0] === 2\n  && map.get(0)[1] === 4\n  && map.get(1)[0] === 1\n  && map.get(1)[1] === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11455,7 +11354,7 @@ var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it =&gt; it.id)
 return map.size === 2
   &amp;&amp; map.get(101).id === 101
   &amp;&amp; map.get(102).id === 102;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("119");try{return Function("asyncTestPassed","\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("119");return Function("asyncTestPassed","'use strict';"+"\nvar map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)\nreturn map.size === 2\n  && map.get(101).id === 101\n  && map.get(102).id === 102;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11550,7 +11449,7 @@ map.deleteAll(1, 5)
 return map.size === 2
   &amp;&amp; map.get(3) === 4
   &amp;&amp; map.get(7) === 8;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);\nmap.deleteAll(1, 5)\nreturn map.size === 2\n  && map.get(3) === 4\n  && map.get(7) === 8;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);\nmap.deleteAll(1, 5)\nreturn map.size === 2\n  && map.get(3) === 4\n  && map.get(7) === 8;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("120");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);\nmap.deleteAll(1, 5)\nreturn map.size === 2\n  && map.get(3) === 4\n  && map.get(7) === 8;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("120");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);\nmap.deleteAll(1, 5)\nreturn map.size === 2\n  && map.get(3) === 4\n  && map.get(7) === 8;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11641,7 +11540,7 @@ return map.size === 2
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.every"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.every">&#xA7;</a>Map.prototype.every</span><script data-source="
 return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it == &apos;number&apos;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("122");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("122");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("121");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("121");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11735,7 +11634,7 @@ var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it =&gt; !(it % 2));
 return map.size === 2
   &amp;&amp; map.get(1) === 4
   &amp;&amp; map.get(3) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));\nreturn map.size === 2\n  && map.get(1) === 4\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));\nreturn map.size === 2\n  && map.get(1) === 4\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("122");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));\nreturn map.size === 2\n  && map.get(1) === 4\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("122");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it => !(it % 2));\nreturn map.size === 2\n  && map.get(1) === 4\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11826,7 +11725,7 @@ return map.size === 2
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.find"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.find">&#xA7;</a>Map.prototype.find</span><script data-source="
 return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("123");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("123");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, 3], [3, 4]]).find(it => it % 2) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -11917,7 +11816,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.findKey"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.findKey">&#xA7;</a>Map.prototype.findKey</span><script data-source="
 return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("125");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("125");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("124");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("124");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, 3], [3, 4]]).findKey(it => it % 2) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12009,7 +11908,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.includes"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.includes">&#xA7;</a>Map.prototype.includes</span><script data-source="
 return new Map([[1, 2], [2, NaN]]).includes(2)
   &amp;&amp; new Map([[1, 2], [2, NaN]]).includes(NaN);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("126");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).includes(2)\n  && new Map([[1, 2], [2, NaN]]).includes(NaN);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("126");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).includes(2)\n  && new Map([[1, 2], [2, NaN]]).includes(NaN);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("125");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).includes(2)\n  && new Map([[1, 2], [2, NaN]]).includes(NaN);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("125");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).includes(2)\n  && new Map([[1, 2], [2, NaN]]).includes(NaN);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12101,7 +12000,7 @@ return new Map([[1, 2], [2, NaN]]).includes(2)
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.keyOf"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.keyOf">&#xA7;</a>Map.prototype.keyOf</span><script data-source="
 return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
   &amp;&amp; new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("127");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("126");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("126");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12196,7 +12095,7 @@ return map.size === 3
   &amp;&amp; map.get(1) === 4
   &amp;&amp; map.get(4) === 5
   &amp;&amp; map.get(9) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(4) === 5\n  && map.get(9) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(4) === 5\n  && map.get(9) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("127");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(4) === 5\n  && map.get(9) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("127");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) => key * key);\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(4) === 5\n  && map.get(9) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12291,7 +12190,7 @@ return map.size === 3
   &amp;&amp; map.get(1) === 16
   &amp;&amp; map.get(2) === 25
   &amp;&amp; map.get(3) === 36;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);\nreturn map.size === 3\n  && map.get(1) === 16\n  && map.get(2) === 25\n  && map.get(3) === 36;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);\nreturn map.size === 3\n  && map.get(1) === 16\n  && map.get(2) === 25\n  && map.get(3) === 36;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("128");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);\nreturn map.size === 3\n  && map.get(1) === 16\n  && map.get(2) === 25\n  && map.get(3) === 36;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("128");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);\nreturn map.size === 3\n  && map.get(1) === 16\n  && map.get(2) === 25\n  && map.get(3) === 36;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12386,7 +12285,7 @@ return map.size === 3
   &amp;&amp; map.get(1) === 4
   &amp;&amp; map.get(2) === 7
   &amp;&amp; map.get(3) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("130");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("130");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("129");try{return Function("asyncTestPassed","\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("129");return Function("asyncTestPassed","'use strict';"+"\nvar map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));\nreturn map.size === 3\n  && map.get(1) === 4\n  && map.get(2) === 7\n  && map.get(3) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12477,7 +12376,7 @@ return map.size === 3
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.reduce"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.reduce">&#xA7;</a>Map.prototype.reduce</span><script data-source="
 return new Map([[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3], ]).reduce(((a, b) =&gt; a + b), 1) === 7;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nreturn new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("130");try{return Function("asyncTestPassed","\nreturn new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("130");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) => a + b), 1) === 7;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12568,7 +12467,7 @@ return new Map([[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3], ]).r
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.some"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.some">&#xA7;</a>Map.prototype.some</span><script data-source="
 return new Map([[1, 4], [2, 5], [3, 6]]).some(it =&gt; it % 2);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("132");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).some(it => it % 2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12663,7 +12562,7 @@ return set.size === 3
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).addAll(2, 3);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("133");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).addAll(2, 3);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("132");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).addAll(2, 3);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("132");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).addAll(2, 3);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12758,7 +12657,7 @@ return set.deleteAll(2, 3) === true
   &amp;&amp; set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(4);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("134");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3, 4]);\nreturn set.deleteAll(2, 3) === true\n  && set.size === 2\n  && set.has(1)\n  && set.has(4);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("134");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3, 4]);\nreturn set.deleteAll(2, 3) === true\n  && set.size === 2\n  && set.has(1)\n  && set.has(4);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("133");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3, 4]);\nreturn set.deleteAll(2, 3) === true\n  && set.size === 2\n  && set.has(1)\n  && set.has(4);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("133");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3, 4]);\nreturn set.deleteAll(2, 3) === true\n  && set.size === 2\n  && set.has(1)\n  && set.has(4);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12849,7 +12748,7 @@ return set.deleteAll(2, 3) === true
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Set.prototype.every"><td><span><a class="anchor" href="#test-Collections_methods_Set.prototype.every">&#xA7;</a>Set.prototype.every</span><script data-source="
 return new Set([1, 2, 3]).every(it =&gt; typeof it === &apos;number&apos;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("135");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("135");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("134");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("134");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -12943,7 +12842,7 @@ var set = new Set([1, 2, 3]).filter(it =&gt; it % 2);
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(3);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("136");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).filter(it => it % 2);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("136");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).filter(it => it % 2);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("135");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).filter(it => it % 2);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("135");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).filter(it => it % 2);\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13034,7 +12933,7 @@ return set.size === 2
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Set.prototype.find"><td><span><a class="anchor" href="#test-Collections_methods_Set.prototype.find">&#xA7;</a>Set.prototype.find</span><script data-source="
 return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("137");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).find(it => !(it % 2)) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("137");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).find(it => !(it % 2)) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("136");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).find(it => !(it % 2)) === 2;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("136");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).find(it => !(it % 2)) === 2;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13125,7 +13024,7 @@ return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Set.prototype.join"><td><span><a class="anchor" href="#test-Collections_methods_Set.prototype.join">&#xA7;</a>Set.prototype.join</span><script data-source="
 return new Set([1, 2, 3]).join(&apos;|&apos;) === &apos;1|2|3&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("138");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).join('|') === '1|2|3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("138");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).join('|') === '1|2|3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("137");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).join('|') === '1|2|3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("137");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).join('|') === '1|2|3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13220,7 +13119,7 @@ return set.size === 3
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(4)
   &amp;&amp; set.has(9);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("139");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).map(it => it * it);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(4)\n  && set.has(9);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("139");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).map(it => it * it);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(4)\n  && set.has(9);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("138");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).map(it => it * it);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(4)\n  && set.has(9);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("138");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).map(it => it * it);\nreturn set.size === 3\n  && set.has(1)\n  && set.has(4)\n  && set.has(9);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13311,7 +13210,7 @@ return set.size === 3
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Set.prototype.reduce"><td><span><a class="anchor" href="#test-Collections_methods_Set.prototype.reduce">&#xA7;</a>Set.prototype.reduce</span><script data-source="
 return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("140");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("140");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("139");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("139");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).reduce((memo, it) => memo + it) === 6;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13402,7 +13301,7 @@ return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Set.prototype.some"><td><span><a class="anchor" href="#test-Collections_methods_Set.prototype.some">&#xA7;</a>Set.prototype.some</span><script data-source="
 return new Set([1, 2, 3]).some(it =&gt; it % 2);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("141");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).some(it => it % 2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("141");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).some(it => it % 2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("140");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).some(it => it % 2);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("140");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).some(it => it % 2);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13502,7 +13401,7 @@ return !map.has(a)
   &amp;&amp; map.get(b) === 2
   &amp;&amp; !map.has(c)
   &amp;&amp; map.get(d) === 4;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);\nmap.deleteAll(a, c)\nreturn !map.has(a)\n  && map.get(b) === 2\n  && !map.has(c)\n  && map.get(d) === 4;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("142");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);\nmap.deleteAll(a, c)\nreturn !map.has(a)\n  && map.get(b) === 2\n  && !map.has(c)\n  && map.get(d) === 4;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("141");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);\nmap.deleteAll(a, c)\nreturn !map.has(a)\n  && map.get(b) === 2\n  && !map.has(c)\n  && map.get(d) === 4;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("141");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);\nmap.deleteAll(a, c)\nreturn !map.has(a)\n  && map.get(b) === 2\n  && !map.has(c)\n  && map.get(d) === 4;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13602,7 +13501,7 @@ return set.has(a)
   &amp;&amp; set.has(b)
   &amp;&amp; set.has(c)
   &amp;&amp; set.has(d);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b]);\nset.addAll(c, d)\nreturn set.has(a)\n  && set.has(b)\n  && set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("143");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b]);\nset.addAll(c, d)\nreturn set.has(a)\n  && set.has(b)\n  && set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("142");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b]);\nset.addAll(c, d)\nreturn set.has(a)\n  && set.has(b)\n  && set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("142");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b]);\nset.addAll(c, d)\nreturn set.has(a)\n  && set.has(b)\n  && set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13702,7 +13601,7 @@ return !set.has(a)
   &amp;&amp; set.has(b)
   &amp;&amp; !set.has(c)
   &amp;&amp; set.has(d);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("144");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b, c, d]);\nset.deleteAll(a, c)\nreturn !set.has(a)\n  && set.has(b)\n  && !set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("144");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b, c, d]);\nset.deleteAll(a, c)\nreturn !set.has(a)\n  && set.has(b)\n  && !set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("143");try{return Function("asyncTestPassed","\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b, c, d]);\nset.deleteAll(a, c)\nreturn !set.has(a)\n  && set.has(b)\n  && !set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("143");return Function("asyncTestPassed","'use strict';"+"\nvar a = {};\nvar b = {};\nvar c = {};\nvar d = {};\nvar set = new WeakSet([a, b, c, d]);\nset.deleteAll(a, c)\nreturn !set.has(a)\n  && set.has(b)\n  && !set.has(c)\n  && set.has(d);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13801,7 +13700,7 @@ if (first !== gen2.next().value) return false;
 var second = gen1.next().value;
 if (first === second) return false;
 return second === gen2.next().value;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("145");try{return Function("asyncTestPassed","\nvar gen1 = Math.seededPRNG({ seed: 42 });\nvar gen2 = Math.seededPRNG({ seed: 42 });\nif (!gen1.next || !gen1[Symbol.iterator]) return false;\nvar first = gen1.next().value;\nif (first < 0 || first > 1) return false;\nif (first !== gen2.next().value) return false;\nvar second = gen1.next().value;\nif (first === second) return false;\nreturn second === gen2.next().value;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("145");return Function("asyncTestPassed","'use strict';"+"\nvar gen1 = Math.seededPRNG({ seed: 42 });\nvar gen2 = Math.seededPRNG({ seed: 42 });\nif (!gen1.next || !gen1[Symbol.iterator]) return false;\nvar first = gen1.next().value;\nif (first < 0 || first > 1) return false;\nif (first !== gen2.next().value) return false;\nvar second = gen1.next().value;\nif (first === second) return false;\nreturn second === gen2.next().value;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("144");try{return Function("asyncTestPassed","\nvar gen1 = Math.seededPRNG({ seed: 42 });\nvar gen2 = Math.seededPRNG({ seed: 42 });\nif (!gen1.next || !gen1[Symbol.iterator]) return false;\nvar first = gen1.next().value;\nif (first < 0 || first > 1) return false;\nif (first !== gen2.next().value) return false;\nvar second = gen1.next().value;\nif (first === second) return false;\nreturn second === gen2.next().value;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("144");return Function("asyncTestPassed","'use strict';"+"\nvar gen1 = Math.seededPRNG({ seed: 42 });\nvar gen2 = Math.seededPRNG({ seed: 42 });\nif (!gen1.next || !gen1[Symbol.iterator]) return false;\nvar first = gen1.next().value;\nif (first < 0 || first > 1) return false;\nif (first !== gen2.next().value) return false;\nvar second = gen1.next().value;\nif (first === second) return false;\nreturn second === gen2.next().value;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -13980,7 +13879,7 @@ return second === gen2.next().value;
 </tr>
 <tr class="subtest" data-parent="{_BigInt,_Number_}.fromString" id="test-{_BigInt,_Number_}.fromString_Number.fromString"><td><span><a class="anchor" href="#test-{_BigInt,_Number_}.fromString_Number.fromString">&#xA7;</a>Number.fromString</span><script data-source="
 return Number.fromString(&apos;42&apos;) === 42;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("147");try{return Function("asyncTestPassed","\nreturn Number.fromString('42') === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("147");return Function("asyncTestPassed","'use strict';"+"\nreturn Number.fromString('42') === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");try{return Function("asyncTestPassed","\nreturn Number.fromString('42') === 42;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("146");return Function("asyncTestPassed","'use strict';"+"\nreturn Number.fromString('42') === 42;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -14071,7 +13970,7 @@ return Number.fromString(&apos;42&apos;) === 42;
 </tr>
 <tr class="subtest" data-parent="{_BigInt,_Number_}.fromString" id="test-{_BigInt,_Number_}.fromString_BigInt.fromString"><td><span><a class="anchor" href="#test-{_BigInt,_Number_}.fromString_BigInt.fromString">&#xA7;</a>BigInt.fromString</span><script data-source="
 return BigInt.fromString(&apos;42&apos;) === 42n;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("148");try{return Function("asyncTestPassed","\nreturn BigInt.fromString('42') === 42n;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("148");return Function("asyncTestPassed","'use strict';"+"\nreturn BigInt.fromString('42') === 42n;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("147");try{return Function("asyncTestPassed","\nreturn BigInt.fromString('42') === 42n;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("147");return Function("asyncTestPassed","'use strict';"+"\nreturn BigInt.fromString('42') === 42n;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -14094,6 +13993,103 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="no obsolete" data-browser="typescript3_1corejs2">No</td>
 <td class="no" data-browser="typescript3_2corejs2">No</td>
 <td class="no" data-browser="typescript3_2corejs3">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox52">No</td>
+<td class="no obsolete" data-browser="firefox59">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox61">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="no" data-browser="firefox65">No</td>
+<td class="no" data-browser="firefox66">No</td>
+<td class="no unstable" data-browser="firefox67">No</td>
+<td class="no unstable" data-browser="firefox68">No</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome65">No</td>
+<td class="no obsolete" data-browser="chrome66">No</td>
+<td class="no obsolete" data-browser="chrome67">No</td>
+<td class="no obsolete" data-browser="chrome68">No</td>
+<td class="no obsolete" data-browser="chrome69">No</td>
+<td class="no obsolete" data-browser="chrome70">No</td>
+<td class="no obsolete" data-browser="chrome71">No</td>
+<td class="no" data-browser="chrome72">No</td>
+<td class="no" data-browser="chrome73">No</td>
+<td class="no unstable" data-browser="chrome74">No</td>
+<td class="no unstable" data-browser="chrome75">No</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no" data-browser="safari12_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="no obsolete" data-browser="node10_4">No</td>
+<td class="no" data-browser="node10_9">No</td>
+<td class="no" data-browser="node11_0">No</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="graalvm">No</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="no" data-browser="ios12_2">No</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
+<tr significance="0.25"><td id="test-Promise.any"><span><a class="anchor" href="#test-Promise.any">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-any">Promise.any</a></span><script data-source="
+Promise.any([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (it === 1) asyncTestPassed();
+});
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("148");try{return Function("asyncTestPassed","\nPromise.any([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("148");return Function("asyncTestPassed","'use strict';"+"\nPromise.any([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181008">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20181210">No</td>
+<td class="no obsolete" data-browser="closure20190106">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no" data-browser="closure20190301">No</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="no needs-polyfill-or-native" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
+<td class="yes" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="edge15">No</td>
 <td class="no obsolete" data-browser="edge16">No</td>
 <td class="no" data-browser="edge17">No</td>
@@ -16656,103 +16652,6 @@ return fuz.bar === 42 &amp;&amp; fuz.baz === 33;
 <td class="no obsolete not-applicable" data-browser="samsung7_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="samsung8_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
-<tr significance="0.25" class="optional-feature"><td id="test-Promise.any"><span><a class="anchor" href="#test-Promise.any">&#xA7;</a><a href="https://github.com/tc39/proposal-promise-any">Promise.any</a></span><script data-source="
-Promise.any([
-  Promise.resolve(1),
-  Promise.reject(2),
-  Promise.resolve(3)
-]).then(it =&gt; {
-  if (it === 1) asyncTestPassed();
-});
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("176");try{return Function("asyncTestPassed","\nPromise.any([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("176");return Function("asyncTestPassed","'use strict';"+"\nPromise.any([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="babel7corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="yes not-applicable" data-browser="babel7corejs3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
-<td class="no obsolete not-applicable" data-browser="closure" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181008" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181125" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181210" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20190106" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20190121" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20190215" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="closure20190301" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript2_7corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript2_8corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript3corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="no needs-polyfill-or-native not-applicable" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[5]</sup></a></td>
-<td class="yes not-applicable" data-browser="typescript3_2corejs3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
-<td class="no obsolete not-applicable" data-browser="edge15" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="edge16" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge17" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="edge18" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="edge19" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox52" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox59" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox60" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox61" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox62" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox63" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="firefox64" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="firefox66" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox67" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="firefox68" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="opera12_10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome65" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome66" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome67" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome68" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome69" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome70" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="chrome71" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome72" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="chrome73" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome74" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="chrome75" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari10_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="safari11_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="safari12_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="phantom2_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node0_10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node0_12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node6_5" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node7_6" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node8" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node8_3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node8_7" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node8_10" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node10_0" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="node10_4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node10_9" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="node11_0" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="duktape2_0" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="graalvm" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android4_4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="android4_4_3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios10_3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios11" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="ios11_3" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios12" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="ios12_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="samsung6_4" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="samsung7_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no not-applicable" data-browser="samsung8_2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-</tr>
 <tr class="category"><td colspan="89">Pre-strawman</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.5"><td id="test-Metadata_reflection_API"><span><a class="anchor" href="#test-Metadata_reflection_API">&#xA7;</a><a href="https://github.com/rbuckton/ReflectDecorators">Metadata reflection API</a></span></td>
@@ -16845,7 +16744,7 @@ Promise.any([
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.defineMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.defineMetadata">&#xA7;</a>Reflect.defineMetadata</span><script data-source="
 return typeof Reflect.defineMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("178");try{return Function("asyncTestPassed","\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("178");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("177");try{return Function("asyncTestPassed","\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("177");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -16936,7 +16835,7 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasMetadata">&#xA7;</a>Reflect.hasMetadata</span><script data-source="
 return typeof Reflect.hasMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("179");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("179");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("178");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("178");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17027,7 +16926,7 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasOwnMetadata">&#xA7;</a>Reflect.hasOwnMetadata</span><script data-source="
 return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("180");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("180");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("179");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("179");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17118,7 +17017,7 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadata">&#xA7;</a>Reflect.getMetadata</span><script data-source="
 return typeof Reflect.getMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("181");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("181");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("180");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("180");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17209,7 +17108,7 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadata">&#xA7;</a>Reflect.getOwnMetadata</span><script data-source="
 return typeof Reflect.getOwnMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("182");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("182");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("181");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("181");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17300,7 +17199,7 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadataKeys">&#xA7;</a>Reflect.getMetadataKeys</span><script data-source="
 return typeof Reflect.getMetadataKeys == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("183");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("182");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("182");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17391,7 +17290,7 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadataKeys">&#xA7;</a>Reflect.getOwnMetadataKeys</span><script data-source="
 return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("184");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("184");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("183");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("183");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17482,7 +17381,7 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.deleteMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.deleteMetadata">&#xA7;</a>Reflect.deleteMetadata</span><script data-source="
 return typeof Reflect.deleteMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("185");try{return Function("asyncTestPassed","\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("185");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("184");try{return Function("asyncTestPassed","\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("184");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17573,7 +17472,7 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.metadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.metadata">&#xA7;</a>Reflect.metadata</span><script data-source="
 return typeof Reflect.metadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("186");try{return Function("asyncTestPassed","\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("186");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("185");try{return Function("asyncTestPassed","\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("185");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[4]</sup></a></td>
@@ -17666,7 +17565,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[8]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-class-fields-note">  <sup>[10]</sup> The feature have to be enabled via &quot;javascript.options.experimental.fields&quot; setting under <code>about:config</code>.</p><p id="firefox-private-class-fields-note">  <sup>[11]</sup> The feature have to be enabled via &quot;javascript.options.experimental.fields&quot; setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="firefox-bigint-note">  <sup>[12]</sup> The feature have to be enabled via &quot;javascript.options.bigint&quot; setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[13]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[14]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-class-fields-note">  <sup>[8]</sup> The feature have to be enabled via &quot;javascript.options.experimental.fields&quot; setting under <code>about:config</code>.</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[10]</sup> The feature have to be enabled via &quot;javascript.options.experimental.fields&quot; setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="firefox-bigint-note">  <sup>[11]</sup> The feature have to be enabled via &quot;javascript.options.bigint&quot; setting under <code>about:config</code>.</p><p id="firefox-nightly-note">  <sup>[12]</sup> The feature is available only in Firefox Nightly builds.</p><p id="babel-decorators-legacy-note">  <sup>[13]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[14]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>

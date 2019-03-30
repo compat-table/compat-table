@@ -376,41 +376,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'String.prototype.matchAll',
-  category: STAGE3,
-  significance: 'small',
-  spec: 'https://github.com/tc39/String.prototype.matchAll',
-  exec: function(){/*
-    var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
-    if(iterator[Symbol.iterator]() !== iterator)return false;
-    var a = '', b = '', c = '', step;
-    while(!(step = iterator.next()).done){
-      a += step.value[0];
-      b += step.value[1];
-      c += step.value[2];
-    }
-    return a === '1a2b'
-      && b === '12'
-      && c === 'ab';
-  */},
-  res: {
-    babel6corejs2: babel.corejs,
-    typescript1corejs2: typescript.corejs,
-    ie11: false,
-    firefox2: false,
-    firefox65: false,
-    firefox66: firefox.nightly,
-    firefox67: true,
-    chrome67: false,
-    chrome68: chrome.harmony,
-    chrome73: true,
-    chrome74: true,
-    opera10_50: false,
-    duktape2_0: false,
-    graalvm: true,
-  }
-},
-{
   name: 'additional meta properties',
   category: STAGE0,
   significance: 'medium',
@@ -1919,7 +1884,7 @@ exports.tests = [
 {
   name: 'numeric separators',
   spec: 'https://github.com/tc39/proposal-numeric-separator',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     return 1_000_000.000_001 === 1000000.000001 &&
@@ -2190,7 +2155,7 @@ exports.tests = [
   name: 'String.prototype.replaceAll',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-replace-all',
-  category: STAGE1,
+  category: STAGE2,
   exec: function () {/*
     return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
   */},
@@ -2865,7 +2830,7 @@ exports.tests = [
 },
 {
   name: 'Promise.allSettled',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-allSettled',
   exec: function () {/*
@@ -2942,7 +2907,7 @@ exports.tests = [
 },
 {
   name: 'Promise.any',
-  category: STAGE0,
+  category: STAGE1,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-any',
   exec: function () {/*
