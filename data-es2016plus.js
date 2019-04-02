@@ -3301,7 +3301,11 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
-          closure20190325: true,
+          closure20190325: {
+            val: false,
+            note_id: 'closure-string-trimstart',
+            note_html: 'Requires native support for String.prototype.trimLeft.',
+          },
           typescript1corejs2: typescript.corejs,
           ie11: false,
           firefox2: false,
@@ -3323,7 +3327,11 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
-          closure20190325: true,
+          closure20190325: {
+            val: false,
+            note_id: 'closure-string-trimend',
+            note_html: 'Requires native support for String.prototype.trimRight.',
+          },
           typescript1corejs2: typescript.corejs,
           ie11: false,
           firefox2: false,
