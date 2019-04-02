@@ -10244,7 +10244,7 @@ return object.foo === 42 &amp;&amp; object.bar === 23;
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="closure20190301" data-tally="0">0/4</td>
-<td class="tally" data-browser="closure20190325" data-tally="0.5" style="background-color:hsl(60,64%,50%)">2/4</td>
+<td class="tally" data-browser="closure20190325" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="typescript1corejs2" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="typescript2_7corejs2" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="typescript2_8corejs2" data-tally="1">4/4</td>
@@ -10523,7 +10523,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
 <td class="no obsolete" data-browser="closure20190301">No</td>
-<td class="yes" data-browser="closure20190325">Yes</td>
+<td class="no" data-browser="closure20190325">No<a href="#closure-string-trimstart-note"><sup>[27]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript1corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_7corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_8corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
@@ -10541,7 +10541,7 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="no unstable" data-browser="edge19">No</td>
 <td class="no obsolete" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox61">Yes</td>
 <td class="yes obsolete" data-browser="firefox62">Yes</td>
 <td class="yes obsolete" data-browser="firefox63">Yes</td>
@@ -10616,7 +10616,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
 <td class="no obsolete" data-browser="closure20190301">No</td>
-<td class="yes" data-browser="closure20190325">Yes</td>
+<td class="no" data-browser="closure20190325">No<a href="#closure-string-trimend-note"><sup>[29]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript1corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_7corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript2_8corejs2">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
@@ -10634,7 +10634,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no unstable" data-browser="edge19">No</td>
 <td class="no obsolete" data-browser="firefox52">No</td>
 <td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox61">Yes</td>
 <td class="yes obsolete" data-browser="firefox62">Yes</td>
 <td class="yes obsolete" data-browser="firefox63">Yes</td>
@@ -10693,7 +10693,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flat,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flat,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flat, flatMap}</a><a href="#flatten-compat-issue-note"><sup>[28]</sup></a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-Array.prototype.{flat,_flatMap}"><span><a class="anchor" href="#test-Array.prototype.{flat,_flatMap}">&#xA7;</a><a href="https://tc39.github.io/proposal-flatMap/">Array.prototype.{flat, flatMap}</a><a href="#flatten-compat-issue-note"><sup>[30]</sup></a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel6corejs2" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally" data-browser="babel7corejs2" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
@@ -10816,9 +10816,9 @@ return [1, [2, 3], [4, [5, 6]]].flat().join(&apos;&apos;) === &apos;12345,6&apos
 <td class="no" data-browser="edge18">No</td>
 <td class="no unstable" data-browser="edge19">No</td>
 <td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no obsolete" data-browser="firefox59">No<a href="#ffox-flatten-note"><sup>[29]</sup></a></td>
-<td class="no" data-browser="firefox60">No<a href="#ffox-flatten-note"><sup>[29]</sup></a></td>
-<td class="no obsolete" data-browser="firefox61">No<a href="#ffox-flatten-note"><sup>[29]</sup></a></td>
+<td class="no obsolete" data-browser="firefox59">No<a href="#ffox-flatten-note"><sup>[31]</sup></a></td>
+<td class="no" data-browser="firefox60">No<a href="#ffox-flatten-note"><sup>[31]</sup></a></td>
+<td class="no obsolete" data-browser="firefox61">No<a href="#ffox-flatten-note"><sup>[31]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox62">Yes</td>
 <td class="yes obsolete" data-browser="firefox63">Yes</td>
 <td class="yes obsolete" data-browser="firefox64">Yes</td>
@@ -10911,9 +10911,9 @@ return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
 <td class="no" data-browser="edge18">No</td>
 <td class="no unstable" data-browser="edge19">No</td>
 <td class="no obsolete" data-browser="firefox52">No</td>
-<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
-<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox59">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
+<td class="no flagged" data-browser="firefox60">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox61">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox62">Yes</td>
 <td class="yes obsolete" data-browser="firefox63">Yes</td>
 <td class="yes obsolete" data-browser="firefox64">Yes</td>
@@ -13002,7 +13002,7 @@ return a === &apos;1a2b&apos;
 <td class="no obsolete" data-browser="firefox63">No</td>
 <td class="no obsolete" data-browser="firefox64">No</td>
 <td class="no" data-browser="firefox65">No</td>
-<td class="no flagged" data-browser="firefox66">Flag<a href="#firefox-nightly-note"><sup>[27]</sup></a></td>
+<td class="no flagged" data-browser="firefox66">Flag<a href="#firefox-nightly-note"><sup>[28]</sup></a></td>
 <td class="yes unstable" data-browser="firefox67">Yes</td>
 <td class="yes unstable" data-browser="firefox68">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
@@ -13059,7 +13059,7 @@ return a === &apos;1a2b&apos;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="chrome-experimental-note">  <sup>[4]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="babel-core-js-note">  <sup>[5]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[7]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[8]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="typescript-downlevel-iteration-note">  <sup>[9]</sup> Requires the <code>downlevelIteration</code> compile option.</p><p id="strict-fn-non-strict-params-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[13]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[14]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="edge-experimental-flag-note">  <sup>[15]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="edg-shared-memory-spectre-note">  <sup>[16]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="firefox-developer-note">  <sup>[17]</sup> The feature is available only in Firefox Developer Edition and Firefox Nightly builds.</p><p id="fx-shared-memory-spectre-note">  <sup>[18]</sup> The feature was <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.  It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code></p><p id="chr-shared-memory-spectre-note">  <sup>[19]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="sf-shared-memory-spectre-note">  <sup>[20]</sup> The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.</p><p id="chrome-sharedmem-note">  <sup>[21]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under <code>about:flags</code></p><p id="proxy-duplictate-ownkeys-updated-note">  <sup>[22]</sup> The behaviour of the Proxy &#x201C;ownKeys&#x201D; handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.</p><p id="chrome-harmony-note">  <sup>[23]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="closure-object-assign-note">  <sup>[24]</sup> Requires native support for <code>Object.assign</code></p><p id="chrome-promise-note">  <sup>[25]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-promise-finally&quot;</code> flag</p><p id="typescript-es6-note">  <sup>[26]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="firefox-nightly-note">  <sup>[27]</sup> The feature is available only in Firefox Nightly builds.</p><p id="flatten-compat-issue-note">  <sup>[28]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[29]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="chrome-experimental-note">  <sup>[4]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="babel-core-js-note">  <sup>[5]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[7]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[8]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="typescript-downlevel-iteration-note">  <sup>[9]</sup> Requires the <code>downlevelIteration</code> compile option.</p><p id="strict-fn-non-strict-params-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[13]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[14]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="edge-experimental-flag-note">  <sup>[15]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="edg-shared-memory-spectre-note">  <sup>[16]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="firefox-developer-note">  <sup>[17]</sup> The feature is available only in Firefox Developer Edition and Firefox Nightly builds.</p><p id="fx-shared-memory-spectre-note">  <sup>[18]</sup> The feature was <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.  It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code></p><p id="chr-shared-memory-spectre-note">  <sup>[19]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="sf-shared-memory-spectre-note">  <sup>[20]</sup> The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.</p><p id="chrome-sharedmem-note">  <sup>[21]</sup> The feature have to be enabled via &quot;Experimental enabled SharedArrayBuffer support in JavaScript.&quot; setting under <code>about:flags</code></p><p id="proxy-duplictate-ownkeys-updated-note">  <sup>[22]</sup> The behaviour of the Proxy &#x201C;ownKeys&#x201D; handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.</p><p id="chrome-harmony-note">  <sup>[23]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="closure-object-assign-note">  <sup>[24]</sup> Requires native support for <code>Object.assign</code></p><p id="chrome-promise-note">  <sup>[25]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-promise-finally&quot;</code> flag</p><p id="typescript-es6-note">  <sup>[26]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="closure-string-trimstart-note">  <sup>[27]</sup> Requires native support for String.prototype.trimLeft.</p><p id="firefox-nightly-note">  <sup>[28]</sup> The feature is available only in Firefox Nightly builds.</p><p id="closure-string-trimend-note">  <sup>[29]</sup> Requires native support for String.prototype.trimRight.</p><p id="flatten-compat-issue-note">  <sup>[30]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="ffox-flatten-note">  <sup>[31]</sup> Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
