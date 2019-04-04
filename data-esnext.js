@@ -2099,6 +2099,7 @@ exports.tests = [
       */},
       res: {
         firefox52: false,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
@@ -2113,6 +2114,7 @@ exports.tests = [
       */},
       res: {
         firefox52: false,
+        firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
       },
