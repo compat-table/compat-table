@@ -1897,6 +1897,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     chrome67: chrome.harmony,
+    chrome75: true,
     opera10_50: false,
     graalvm: false,
   }
