@@ -2044,9 +2044,10 @@ exports.tests = [
         return (1n + 2n) === 3n;
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2057,9 +2058,10 @@ exports.tests = [
         return BigInt("3") === 3n;
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2070,9 +2072,10 @@ exports.tests = [
         return typeof BigInt.asUintN === 'function';
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2083,9 +2086,10 @@ exports.tests = [
         return typeof BigInt.asIntN === 'function';
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2099,8 +2103,9 @@ exports.tests = [
         return view[0] === -0x8000000000000000n;
       */},
       res: {
-        firefox52: false,
-        firefox68: firefox.nightly,
+        firefox45: false,
+        firefox67: false,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2114,8 +2119,9 @@ exports.tests = [
         return view[0] === 0n;
       */},
       res: {
-        firefox52: false,
-        firefox68: firefox.nightly,
+        firefox45: false,
+        firefox67: false,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2129,9 +2135,10 @@ exports.tests = [
         return view.getBigInt64(0) === 1n;
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
@@ -2145,9 +2152,10 @@ exports.tests = [
         return view.getBigUint64(0) === 1n;
       */},
       res: {
-        firefox52: false,
+        firefox45: false,
+        firefox66: false,
         firefox67: firefox.bigint,
-        firefox68: firefox.nightly,
+        firefox68: true,
         chrome67: true,
         graalvm: true,
       },
