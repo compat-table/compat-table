@@ -3,6 +3,7 @@
  *
  *  Reports discrepancies to console; fix them manually in data-*.js files.
  *  Expects a './duk' command in the current directory.  Example:
+ *  (Configure with -DDUK_USE_SYMBOL_BUILTIN and -DDUK_USE_GLOBAL_BINDING)
  *
  *    $ cp /path/to/duk ./duk
  *    $ node duktape.js
@@ -50,6 +51,8 @@ var dukKeyList = (function () {
     return res;
 })();
 console.log('Duktape key list for inheriting results is:', dukKeyList);
+
+var fixTests = [];
 
 // Run test / subtests, recursively.  Report results, indicate data files
 // which are out of date.
@@ -107,9 +110,11 @@ function runTest(parents, test, sublevel) {
             } else if (expect === void 0 && !success) {
                 testOutOfDate++;
                 console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
+                fixTests.push({path: testPath.split(' -> '), success: success});
             } else {
                 testOutOfDate++;
                 console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
+                fixTests.push({path: testPath.split(' -> '), success: success});
             }
         } else {
             testOutOfDate++;
@@ -139,3 +144,44 @@ fs.readdirSync('.').forEach(function (filename) {
 
 console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
 console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+
+console.log("Writing New Results To File...");
+for (var i = 0; i < fixTests.length; i++) {
+    var path = fixTests[i].path;
+    var success = fixTests[i].success;
+    var data = fs.readFileSync(path[0] + ".js", "utf8").split("\n");
+    var k = 1;
+    var done = false;
+    var line = 0;
+    while (!done) {
+        if (data[line].includes("'" + path[k].replace(new RegExp("'", "g"), "\\'") + "'")) {
+            k++;
+        }
+        if (k >= path.length) {
+            done = true;
+        } else {
+            line++;
+        }
+    }
+    while (!data[line].includes("res: {")) {
+        line++;
+    }
+    var keyExists = false;
+    while (!data[line].includes("}")) {
+        if (data[line].includes(dukKey)) {
+            keyExists = true;
+            break;
+        }
+        line++;
+    }
+    var indentStr = "";
+    for (var x = 0; x < path.length + 1; x++) {
+        indentStr = indentStr + "  ";
+    }
+    if (keyExists) {
+        data[line] = indentStr + dukKey + ": " + success + ",";
+    } else {
+        data.splice(line, 0, indentStr + dukKey + ": " + success + ",");
+    }
+    fs.writeFileSync(path[0] + ".js", data.join("\n"));
+}

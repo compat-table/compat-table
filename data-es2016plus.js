@@ -3007,6 +3007,7 @@ exports.tests = [
         chrome66: true,
         duktape2_0: false,
         graalvm: true,
+        duktape2_3: false,
       },
     }, {
       name: 'arrows',
@@ -3187,6 +3188,7 @@ exports.tests = [
       graalvm: false,
       chrome73: true,
       chrome74: true,
+        duktape2_3: false,
     }
   },
   {
@@ -3211,6 +3213,7 @@ exports.tests = [
       safari12_1: true,
       safaritp: true,
       graalvm: true,
+      duktape2_3: false,
     }
   },
   {

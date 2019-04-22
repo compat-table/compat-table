@@ -2049,6 +2049,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2062,6 +2063,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2075,6 +2077,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2088,6 +2091,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2103,6 +2107,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2118,6 +2123,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2134,6 +2140,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
     {
@@ -2150,6 +2157,7 @@ exports.tests = [
         firefox68: firefox.nightly,
         chrome67: true,
         graalvm: true,
+        duktape2_3: false,
       },
     },
   ],
@@ -2170,6 +2178,7 @@ exports.tests = [
       ie11: false,
       firefox52: false,
       graalvm: false,
+      duktape2_3: false,
   }
 },
 {
@@ -2193,6 +2202,7 @@ exports.tests = [
     ie11: false,
     firefox52: false,
     graalvm: false,
+      duktape2_3: false,
   }
 },
 {
@@ -2213,6 +2223,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2227,6 +2238,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -2252,6 +2264,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2270,6 +2283,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2287,6 +2301,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2304,6 +2319,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2318,6 +2334,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2332,6 +2349,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2346,6 +2364,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -2373,6 +2392,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2390,6 +2410,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2408,6 +2429,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2422,6 +2444,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2439,6 +2462,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2453,6 +2477,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2467,6 +2492,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2482,6 +2508,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2497,6 +2524,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2515,6 +2543,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2533,6 +2562,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2551,6 +2581,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2565,6 +2596,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2579,6 +2611,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2597,6 +2630,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2615,6 +2649,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2629,6 +2664,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2646,6 +2682,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2660,6 +2697,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2674,6 +2712,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2692,6 +2731,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2706,6 +2746,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2720,6 +2761,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2743,6 +2785,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2766,6 +2809,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -2789,6 +2833,7 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -2812,6 +2857,7 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
+        duktape2_3: false,
       },
     },
     {
@@ -2827,6 +2873,7 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
+        duktape2_3: false,
       },
     },
   ]
@@ -2856,6 +2903,7 @@ exports.tests = [
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
     firefox68: true,
+      duktape2_3: false,
   }
 },
 {
@@ -2879,6 +2927,7 @@ exports.tests = [
     babel7corejs3: babel.corejs,
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
+      duktape2_3: false,
   }
 },
 {
@@ -2897,6 +2946,7 @@ exports.tests = [
         babel7corejs3: babel.corejs,
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
+        duktape2_3: false,
       },
     },
     {
@@ -2905,6 +2955,7 @@ exports.tests = [
         return BigInt.fromString('42') === 42n;
       */},
       res: {
+        duktape2_3: false,
       },
     },
   ]
@@ -2928,6 +2979,7 @@ exports.tests = [
     babel7corejs3: babel.corejs,
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
+      duktape2_3: false,
   }
 },
 {
