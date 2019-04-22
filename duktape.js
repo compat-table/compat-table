@@ -235,7 +235,7 @@ for (var i = 0; i < fixTests.length; i++) {
     if (keyExists) {
         data[line] = itemIndentStr + dukKey + ": " + success + ",";
     } else {
-        data.splice(line, 0, itemIndentStr + dukKey + ": " + success + ",");
+        data[line] = data[line] + "\n" + itemIndentStr + dukKey + ": " + success + ",";
     }
     fs.writeFileSync(path[0] + ".js", data.join("\n"));
 }
