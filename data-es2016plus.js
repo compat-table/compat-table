@@ -2934,6 +2934,7 @@ exports.tests = [
           safari12: true,
           safaritp: true,
           graalvm: true,
+          duktape2_3: false,
         },
       },
       {
@@ -2957,6 +2958,7 @@ exports.tests = [
           safari12: true,
           safaritp: true,
           graalvm: true,
+          duktape2_3: false,
         },
       },
       {
@@ -2981,6 +2983,7 @@ exports.tests = [
           safari12_1: true,
           safaritp: true,
           graalvm: true,
+          duktape2_3: false,
         },
       },
     ]
@@ -3007,7 +3010,6 @@ exports.tests = [
         chrome66: true,
         duktape2_0: false,
         graalvm: true,
-        duktape2_3: false,
       },
     }, {
       name: 'arrows',
@@ -3143,6 +3145,7 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          duktape2_3: false,
         },
       },
       {
@@ -3160,6 +3163,7 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          duktape2_3: false,
         },
       },
     ]
@@ -3188,7 +3192,7 @@ exports.tests = [
       graalvm: false,
       chrome73: true,
       chrome74: true,
-        duktape2_3: false,
+      duktape2_3: false,
     }
   },
   {

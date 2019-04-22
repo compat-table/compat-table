@@ -153,8 +153,10 @@ for (var i = 0; i < fixTests.length; i++) {
     var k = 1;
     var done = false;
     var line = 0;
+
+    // Find Test
     while (!done) {
-        if (data[line].includes("'" + path[k].replace(new RegExp("'", "g"), "\\'") + "'")) {
+        if (data[line].includes("'" + path[k].replace(new RegExp(/'/g/, "g"), "\\'") + "'")) {
             k++;
         }
         if (k >= path.length) {
@@ -163,25 +165,55 @@ for (var i = 0; i < fixTests.length; i++) {
             line++;
         }
     }
-    while (!data[line].includes("res: {")) {
+
+    // Find Test Results
+    while (!data[line].includes("res: {") && !data[line].includes("res : {")) {
         line++;
     }
+
+    function getIndent(str) {
+        var indent = 0;
+        while (str[indent] === " ") {
+            indent++;
+        }
+        return indent;
+    }
+
+    // Get Indnets For Results Block
+    var indent = getIndent(data[line]);
+    var indentStr = "";
+    for (var x = 0; x < indent; x++) {
+        indentStr = indentStr + " ";
+    }
+
+    // Get Item Indent
+    if (getIndent(data[line + 1]) !== indent) {
+        var itemIndent = getIndent(data[line + 1]);
+        var itemIndentStr = "";
+        for (var x = 0; x < itemIndent; x++) {
+            itemIndentStr = itemIndentStr + " ";
+        }
+    } else {
+        // Assume RES Indent If None Is Found
+        var itemIndentStr = indentStr + "  ";
+    }
+
+    // Find (if there) Test Result Data
     var keyExists = false;
-    while (!data[line].includes("}")) {
+    while (!data[line].startsWith(indentStr + "}")) {
         if (data[line].includes(dukKey)) {
             keyExists = true;
             break;
         }
         line++;
     }
-    var indentStr = "";
-    for (var x = 0; x < path.length + 1; x++) {
-        indentStr = indentStr + "  ";
-    }
+
+    // Write Test Result
+    console.log("Writing " + path.join(" -> "));
     if (keyExists) {
-        data[line] = indentStr + dukKey + ": " + success + ",";
+        data[line] = itemIndentStr + dukKey + ": " + success + ",";
     } else {
-        data.splice(line, 0, indentStr + dukKey + ": " + success + ",");
+        data.splice(line, 0, itemIndentStr + dukKey + ": " + success + ",");
     }
     fs.writeFileSync(path[0] + ".js", data.join("\n"));
 }

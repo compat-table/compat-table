@@ -1478,6 +1478,7 @@ exports.tests = [
     },
     opera10_50: false,
     graalvm: false,
+    duktape2_3: false,
   }
 },
 {
@@ -1497,6 +1498,7 @@ exports.tests = [
     firefox52: false,
     opera10_50: false,
     graalvm: false,
+    duktape2_3: false,
   }
 },
 {
@@ -1522,6 +1524,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1545,6 +1548,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1563,6 +1567,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1581,6 +1586,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -1603,6 +1609,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1617,6 +1624,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1631,6 +1639,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -1652,6 +1661,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1666,6 +1676,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -1687,6 +1698,7 @@ exports.tests = [
     ie11: false,
     firefox52: false,
     graalvm: false,
+    duktape2_3: false,
   }
 },
 {
@@ -1708,6 +1720,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1723,6 +1736,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1738,6 +1752,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1753,6 +1768,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1768,6 +1784,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1783,6 +1800,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1798,6 +1816,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1816,6 +1835,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1832,6 +1852,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1847,6 +1868,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1862,6 +1884,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
     {
@@ -1877,6 +1900,7 @@ exports.tests = [
         ie11: false,
         firefox52: false,
         graalvm: false,
+        duktape2_3: false,
       }
     },
   ]
@@ -1900,6 +1924,7 @@ exports.tests = [
     chrome75: true,
     opera10_50: false,
     graalvm: false,
+    duktape2_3: false,
   }
 },
 {
@@ -1917,6 +1942,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -1928,6 +1954,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -1939,6 +1966,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -1950,6 +1978,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -1969,6 +1998,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -1989,6 +2019,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -2008,6 +2039,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
     {
@@ -2028,6 +2060,7 @@ exports.tests = [
           ie11: false,
           firefox52: false,
           graalvm: false,
+          duktape2_3: false,
       }
     },
   ]
@@ -2202,7 +2235,7 @@ exports.tests = [
     ie11: false,
     firefox52: false,
     graalvm: false,
-      duktape2_3: false,
+    duktape2_3: false,
   }
 },
 {
@@ -2903,7 +2936,7 @@ exports.tests = [
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
     firefox68: true,
-      duktape2_3: false,
+    duktape2_3: false,
   }
 },
 {
@@ -2927,7 +2960,7 @@ exports.tests = [
     babel7corejs3: babel.corejs,
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
-      duktape2_3: false,
+    duktape2_3: false,
   }
 },
 {
@@ -2979,7 +3012,7 @@ exports.tests = [
     babel7corejs3: babel.corejs,
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
-      duktape2_3: false,
+    duktape2_3: false,
   }
 },
 {
