@@ -29,6 +29,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -48,6 +49,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
   ],
@@ -74,6 +76,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -94,6 +97,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -114,6 +118,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -182,6 +187,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
   ],
@@ -208,6 +214,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
   ],
@@ -234,6 +241,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
   ],
@@ -260,25 +268,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
-      },
-    },
-    {
-      name: 'exists on intl object',
-      exec: function(){/*
-        return typeof Intl.NumberFormat === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -299,6 +289,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -319,6 +310,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -387,6 +379,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
   ],
@@ -413,6 +406,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -433,6 +427,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -453,6 +448,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -521,6 +517,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       },
     },
     {
@@ -548,6 +545,7 @@ exports.tests = [
         ios7: false,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       }
     },
     {
@@ -575,6 +573,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm: true,
+        duktape1_0: false,
       }
     }
   ],
@@ -605,6 +604,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -635,6 +635,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -665,6 +666,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -695,6 +697,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -725,6 +728,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -755,6 +759,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],
@@ -785,6 +790,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm: true,
+        duktape1_0: true,
       },
     },
   ],

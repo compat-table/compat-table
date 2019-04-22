@@ -81,9 +81,14 @@ function runTest(parents, test, sublevel) {
                      '}\n';
 
         fs.writeFileSync('duktest.js', script);
-        var stdout = child_process.execFileSync(dukCommand, [ 'duktest.js' ], {
-            encoding: 'utf-8'
-        });
+        var stdout;
+        try {
+            stdout = child_process.execFileSync(dukCommand, dukKey.startsWith('duktape1') ? [ 'dukconsole.js', 'duktest.js' ] : [ 'duktest.js' ], {
+                encoding: 'utf-8'
+            });
+        } catch(e) {
+            stdout = e.stdout;
+        }
         //console.log(stdout);
 
         var success = false;
@@ -145,6 +150,21 @@ fs.readdirSync('.').forEach(function (filename) {
 console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
 console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
 
+function getIndent(str) {
+    var indent = 0;
+    while (str[indent] === " ") {
+        indent++;
+    }
+    return indent;
+}
+
+function check(str, line) {
+    return line.endsWith("'" + str.replace(/'/g, "\\'") + "',") ||
+        line.endsWith(JSON.stringify(str) + ",") ||
+        line.endsWith("'" + str.replace(/'/g, "\\'") + "': {") ||
+        line.endsWith(JSON.stringify(str) + ": {");
+}
+
 console.log("Writing New Results To File...");
 for (var i = 0; i < fixTests.length; i++) {
     var path = fixTests[i].path;
@@ -154,9 +174,18 @@ for (var i = 0; i < fixTests.length; i++) {
     var done = false;
     var line = 0;
 
+    console.log("Writing " + path.join(" -> "));
+
+    // Find Start of Tests
+    while (!data[line].startsWith("exports.tests")) {
+        line++;
+    }
+
     // Find Test
     while (!done) {
-        if (data[line].includes("'" + path[k].replace(/'/g, "\\'") + "'")) {
+        if (check(path[k], data[line]) ||
+            (path[k].startsWith("%") && check(path[k].slice(path[k].lastIndexOf("%") + 1), data[line])) ||
+            check(path[k].slice(path[k].indexOf(".") + 1), data[line])) {
             k++;
         }
         if (k >= path.length) {
@@ -167,16 +196,10 @@ for (var i = 0; i < fixTests.length; i++) {
     }
 
     // Find Test Results
-    while (!data[line].includes("res: {") && !data[line].includes("res : {")) {
-        line++;
-    }
-
-    function getIndent(str) {
-        var indent = 0;
-        while (str[indent] === " ") {
-            indent++;
+    if (!(data[line + 1].split(" ").filter(Boolean)[0].endsWith(":") && data[line + 1].split(" ").filter(Boolean)[1].endsWith(","))) {
+        while (!data[line].includes("res: {") && !data[line].includes("res : {")) {
+            line++;
         }
-        return indent;
     }
 
     // Get Indnets For Results Block
@@ -187,7 +210,7 @@ for (var i = 0; i < fixTests.length; i++) {
     }
 
     // Get Item Indent
-    if (getIndent(data[line + 1]) !== indent) {
+    if (!data[line + 1].startsWith(indentStr + "}")) {
         var itemIndent = getIndent(data[line + 1]);
         var itemIndentStr = "";
         for (var x = 0; x < itemIndent; x++) {
@@ -209,7 +232,6 @@ for (var i = 0; i < fixTests.length; i++) {
     }
 
     // Write Test Result
-    console.log("Writing " + path.join(" -> "));
     if (keyExists) {
         data[line] = itemIndentStr + dukKey + ": " + success + ",";
     } else {
