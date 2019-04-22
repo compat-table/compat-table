@@ -156,7 +156,7 @@ for (var i = 0; i < fixTests.length; i++) {
 
     // Find Test
     while (!done) {
-        if (data[line].includes("'" + path[k].replace(/'/g/, "\\'") + "'")) {
+        if (data[line].includes("'" + path[k].replace(/'/g, "\\'") + "'")) {
             k++;
         }
         if (k >= path.length) {
