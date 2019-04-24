@@ -379,7 +379,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-01-31",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -392,7 +392,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-03-27",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -444,7 +444,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-11-29",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es6",
       "es2016plus",
@@ -457,6 +457,32 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-11-29",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_3corejs3": {
+    "full": "TypeScript 3.3 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2019-01-31",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_4corejs3": {
+    "full": "TypeScript 3.4 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2019-03-29",
     "obsolete": false,
     "unstable": false,
     "test_suites": [
