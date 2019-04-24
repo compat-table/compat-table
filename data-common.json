@@ -52,17 +52,17 @@
       "note_html": "The feature have to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
     },
     "nomob": {
-      "val": true,
+      "val": "flagged",
       "note_id": "firefox-nomob",
       "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
     },
     "developer": {
-      "val": false,
+      "val": "flagged",
       "note_id": "firefox-developer",
       "note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
     },
     "nightly": {
-      "val": false,
+      "val": "flagged",
       "note_id": "firefox-nightly",
       "note_html": "The feature is available only in Firefox Nightly builds."
     },
