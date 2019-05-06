@@ -5462,11 +5462,9 @@ exports.tests = [
     {
       name: 'TemplateStrings call site caching',
       exec: function () {/*
-        // Safari 12 sometimes garbage collects the cached TemplateStrings,
-        // even when the call site is still alive.
-        // This is almost impossible to write a test case for, but we can test
-        // the general semantics.
-        // https://bugs.webkit.org/show_bug.cgi?id=190756
+        // TemplateStrings caching was changed from per-contents to
+        // per-call-site.
+        // https://github.com/tc39/ecma262/pull/890
         function strings(array) {
           return array;
         }
@@ -5476,6 +5474,48 @@ exports.tests = [
         var original = getStrings();
         var other = strings`foo`;
         return original === getStrings() && original !== other;
+      */},
+      res: {
+        tr: true,
+        babel6corejs2: true,
+        es6tr: true,
+        jsx: true,
+        ejs: true,
+        closure: true,
+        typescript1corejs2: true,
+        edge12: true,
+        firefox2: false,
+        firefox34: true,
+        opera10_50: false,
+        chrome41: true,
+        safari9: true,
+        node4: true,
+        xs6: true,
+        jxa: true,
+        duktape2_0: false,
+        nashorn9: true,
+        nashorn10: true,
+        graalvm: true,
+      },
+    },
+    {
+      name: 'TemplateStrings permanent caching',
+      exec: function () {/*
+        // Safari 12 caches TemplateStrings using a GC-able "CodeBlock".
+        // But TemplateStrings are supposed to always be identical! When the
+        // CodeBlock is reclaimed, the TemplateStrings' identity is broken.
+        // Thankfully, [[Call]] vs [[Construct]] generate different CodeBlocks,
+        // which exposes the broken behavior.
+        // https://bugs.webkit.org/show_bug.cgi?id=190756
+        function strings(array) {
+          return array;
+        }
+        function getStrings() {
+          return strings`foo`;
+        }
+        var original = getStrings();
+        var newed = new getStrings();
+        return original === getStrings() && original === newed;
       */},
       res: {
         tr: true,
