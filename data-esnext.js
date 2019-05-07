@@ -1896,6 +1896,8 @@ exports.tests = [
     typescript2_7corejs2: true,
     ie11: false,
     firefox2: false,
+    firefox67: false,
+    firefox68: true,
     chrome67: chrome.harmony,
     chrome75: true,
     opera10_50: false,
