@@ -2850,7 +2850,7 @@ exports.tests = [
         safari10: true,
         xs6: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm: true,
       },
     },
     {
@@ -20329,7 +20329,7 @@ exports.tests = [
     xs6: false,
     duktape2_0: false,
     duktape2_1: true,
-    graalvm: false,
+    graalvm: true,
   }
 },
 ];
