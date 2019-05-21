@@ -3142,6 +3142,7 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          graalvm: true,
         },
       },
       {
@@ -3159,6 +3160,7 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          graalvm: true,
         },
       },
     ]
@@ -3184,7 +3186,7 @@ exports.tests = [
       firefox63: true,
       safari12_1: true,
       safaritp: true,
-      graalvm: false,
+      graalvm: true,
       chrome73: true,
       chrome74: true,
     }
@@ -3435,7 +3437,7 @@ exports.tests = [
           opera10_50: false,
           safari12: false,
           duktape2_2: false,
-          graalvm: false,
+          graalvm: true,
         }
       },
     ]

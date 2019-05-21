@@ -201,7 +201,7 @@
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine obsolete" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
 <th class="platform duktape2_3 engine" data-browser="duktape2_3"><a href="#duktape2_3" class="browser-name"><abbr title="Duktape 2.3">DUK 2.3</abbr></a></th>
-<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 1.0.0 RC10">GraalVM 1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
+<th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 19.0.0">GraalVM 19.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
 <th class="platform ios10_3 mobile obsolete" data-browser="ios10_3"><a href="#ios10_3" class="browser-name"><abbr title="iOS Safari">iOS &gt;=10.3 &lt;11</abbr></a></th>
@@ -10219,7 +10219,7 @@ return object.foo === 42 &amp;&amp; object.bar === 23;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
@@ -10771,7 +10771,7 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/3</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/3</td>
-<td class="tally" data-browser="graalvm" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally" data-browser="graalvm" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/3</td>
@@ -11053,7 +11053,7 @@ return Array.prototype[Symbol.unscopables].flat
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
@@ -12658,7 +12658,7 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="graalvm" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/2</td>
@@ -12751,7 +12751,7 @@ return eval(&quot;&apos;\u2028&apos;&quot;) === &quot;\u2028&quot;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
@@ -12844,7 +12844,7 @@ return eval(&quot;&apos;\u2029&apos;&quot;) === &quot;\u2029&quot;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
-<td class="no" data-browser="graalvm">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
 <td class="no obsolete" data-browser="android4_4">No</td>
 <td class="no obsolete" data-browser="android4_4_3">No</td>
 <td class="no obsolete" data-browser="ios10_3">No</td>
