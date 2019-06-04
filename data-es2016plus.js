@@ -3489,6 +3489,136 @@ exports.tests = [
     }
   },
   {
+    name: 'BigInt',
+    category: '2020 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-bigint',
+    subtests: [
+      {
+        name: 'basic functionality',
+        exec: function () {/*
+        return (1n + 2n) === 3n;
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'constructor',
+        exec: function () {/*
+        return BigInt("3") === 3n;
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'BigInt.asUintN',
+        exec: function () {/*
+        return typeof BigInt.asUintN === 'function';
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'BigInt.asIntN',
+        exec: function () {/*
+        return typeof BigInt.asIntN === 'function';
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'BigInt64Array',
+        exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new BigInt64Array(buffer);
+        view[0] = 0x8000000000000000n;
+        return view[0] === -0x8000000000000000n;
+      */},
+        res: {
+          firefox45: false,
+          firefox67: false,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'BigUint64Array',
+        exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new BigUint64Array(buffer);
+        view[0] = 0x10000000000000000n;
+        return view[0] === 0n;
+      */},
+        res: {
+          firefox45: false,
+          firefox67: false,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'DataView.prototype.getBigInt64',
+        exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setBigInt64(0, 1n);
+        return view.getBigInt64(0) === 1n;
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'DataView.prototype.getBigUint64',
+        exec: function () {/*
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setBigUint64(0, 1n);
+        return view.getBigUint64(0) === 1n;
+      */},
+        res: {
+          firefox45: false,
+          firefox66: false,
+          firefox67: firefox.bigint,
+          firefox68: true,
+          chrome67: true,
+          graalvm: true,
+        },
+      },
+    ],
+  },
+  {
     name: 'Promise.allSettled',
     category: '2020 features',
     significance: 'small',
