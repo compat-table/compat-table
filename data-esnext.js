@@ -102,7 +102,7 @@ exports.tests = [
   name: 'Class and Property Decorators',
   category: STAGE2,
   significance: 'medium',
-  spec: 'http://tc39.github.io/proposal-decorators/',
+  spec: 'https://github.com/tc39/proposal-decorators',
   subtests: [
     {
       name: 'class decorators',
@@ -1673,7 +1673,7 @@ exports.tests = [
 },
 {
   name: 'nullish coalescing operator (??)',
-  spec: 'https://github.com/tc39-transfer/proposal-nullish-coalescing',
+  spec: 'https://github.com/tc39/proposal-nullish-coalescing',
   category: STAGE2,
   significance: 'small',
   exec: function(){/*
@@ -2214,7 +2214,7 @@ exports.tests = [
   }
 },
 {
-  name: 'getting last item from array',
+  name: 'Getting last item from array',
   spec: 'https://github.com/keithamus/proposal-array-last',
   category: STAGE1,
   significance: 'small',
