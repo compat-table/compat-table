@@ -2765,6 +2765,7 @@ exports.tests = [
       },
       {
         name: 'for-await-of loops',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of',
         exec: function(){/*
           var asyncIterable = {};
           asyncIterable[Symbol.asyncIterator] = function(){
@@ -3194,6 +3195,7 @@ exports.tests = [
   {
     name: 'Well-formed JSON.stringify',
     spec: 'https://github.com/tc39/proposal-well-formed-stringify',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Well-formed_JSON.stringify()',
     category: '2019 misc',
     significance: 'small',
     exec: function () {/*
@@ -3447,6 +3449,7 @@ exports.tests = [
     category: '2020 features',
     significance: 'small',
     spec: 'https://github.com/tc39/String.prototype.matchAll',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll',
     exec: function(){/*
       var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
       if(iterator[Symbol.iterator]() !== iterator)return false;

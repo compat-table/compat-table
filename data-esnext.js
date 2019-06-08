@@ -173,6 +173,7 @@ exports.tests = [
   category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-global',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis',
   subtests: [{
     name: '"globalThis" global property is global object',
     exec: function(){/*
@@ -2039,6 +2040,7 @@ exports.tests = [
   category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-bigint',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt',
   subtests: [
     {
       name: 'basic functionality',
@@ -2069,21 +2071,8 @@ exports.tests = [
       },
     },
     {
-      name: 'BigInt.asUintN',
-      exec: function () {/*
-        return typeof BigInt.asUintN === 'function';
-      */},
-      res: {
-        firefox45: false,
-        firefox66: false,
-        firefox67: firefox.bigint,
-        firefox68: true,
-        chrome67: true,
-        graalvm: true,
-      },
-    },
-    {
       name: 'BigInt.asIntN',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN',
       exec: function () {/*
         return typeof BigInt.asIntN === 'function';
       */},
@@ -2097,7 +2086,23 @@ exports.tests = [
       },
     },
     {
+      name: 'BigInt.asUintN',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN',
+      exec: function () {/*
+        return typeof BigInt.asUintN === 'function';
+      */},
+      res: {
+        firefox45: false,
+        firefox66: false,
+        firefox67: firefox.bigint,
+        firefox68: true,
+        chrome67: true,
+        graalvm: true,
+      },
+    },
+    {
       name: 'BigInt64Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array',
       exec: function () {/*
         var buffer = new ArrayBuffer(64);
         var view = new BigInt64Array(buffer);
@@ -2114,6 +2119,7 @@ exports.tests = [
     },
     {
       name: 'BigUint64Array',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array',
       exec: function () {/*
         var buffer = new ArrayBuffer(64);
         var view = new BigUint64Array(buffer);
@@ -2130,6 +2136,7 @@ exports.tests = [
     },
     {
       name: 'DataView.prototype.getBigInt64',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64',
       exec: function () {/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);
@@ -2147,6 +2154,7 @@ exports.tests = [
     },
     {
       name: 'DataView.prototype.getBigUint64',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64',
       exec: function () {/*
         var buffer = new ArrayBuffer(64);
         var view = new DataView(buffer);

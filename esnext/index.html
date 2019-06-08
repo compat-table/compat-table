@@ -224,7 +224,7 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="90">Candidate (stage 3)</td>
 </tr>
-<tr class="supertest" significance="0.25"><td id="test-globalThis"><span><a class="anchor" href="#test-globalThis">&#xA7;</a><a href="https://github.com/tc39/proposal-global">globalThis</a></span></td>
+<tr class="supertest" significance="0.25"><td id="test-globalThis"><span><a class="anchor" href="#test-globalThis">&#xA7;</a><a href="https://github.com/tc39/proposal-global">globalThis</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel6corejs2" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/2</td>
@@ -1453,7 +1453,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="supertest" significance="0.5"><td id="test-BigInt"><span><a class="anchor" href="#test-BigInt">&#xA7;</a><a href="https://github.com/tc39/proposal-bigint">BigInt</a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-BigInt"><span><a class="anchor" href="#test-BigInt">&#xA7;</a><a href="https://github.com/tc39/proposal-bigint">BigInt</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/8</td>
 <td class="tally" data-browser="babel6corejs2" data-tally="0">0/8</td>
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/8</td>
@@ -1726,101 +1726,9 @@ return BigInt(&quot;3&quot;) === 3n;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt.asUintN"><td><span><a class="anchor" href="#test-BigInt_BigInt.asUintN">&#xA7;</a>BigInt.asUintN</span><script data-source="
-return typeof BigInt.asUintN === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn typeof BigInt.asUintN === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof BigInt.asUintN === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="no" data-browser="tr">No</td>
-<td class="no" data-browser="babel6corejs2">No</td>
-<td class="no" data-browser="babel7corejs2">No</td>
-<td class="no" data-browser="babel7corejs3">No</td>
-<td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
-<td class="no obsolete" data-browser="closure20181125">No</td>
-<td class="no obsolete" data-browser="closure20181210">No</td>
-<td class="no obsolete" data-browser="closure20190106">No</td>
-<td class="no obsolete" data-browser="closure20190121">No</td>
-<td class="no obsolete" data-browser="closure20190215">No</td>
-<td class="no obsolete" data-browser="closure20190301">No</td>
-<td class="no" data-browser="closure20190325">No</td>
-<td class="no obsolete" data-browser="typescript1corejs2">No</td>
-<td class="no obsolete" data-browser="typescript2_9corejs2">No</td>
-<td class="no obsolete" data-browser="typescript3corejs2">No</td>
-<td class="no obsolete" data-browser="typescript3_1corejs2">No</td>
-<td class="no obsolete" data-browser="typescript3_2corejs2">No</td>
-<td class="no obsolete" data-browser="typescript3_2corejs3">No</td>
-<td class="no obsolete" data-browser="typescript3_3corejs3">No</td>
-<td class="no obsolete" data-browser="typescript3_4corejs3">No</td>
-<td class="no" data-browser="typescript3_5corejs3">No</td>
-<td class="no obsolete" data-browser="edge15">No</td>
-<td class="no obsolete" data-browser="edge16">No</td>
-<td class="no" data-browser="edge17">No</td>
-<td class="no" data-browser="edge18">No</td>
-<td class="no unstable" data-browser="edge19">No</td>
-<td class="no obsolete" data-browser="firefox59">No</td>
-<td class="no" data-browser="firefox60">No</td>
-<td class="no obsolete" data-browser="firefox61">No</td>
-<td class="no obsolete" data-browser="firefox62">No</td>
-<td class="no obsolete" data-browser="firefox63">No</td>
-<td class="no obsolete" data-browser="firefox64">No</td>
-<td class="no obsolete" data-browser="firefox65">No</td>
-<td class="no" data-browser="firefox66">No</td>
-<td class="no flagged" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
-<td class="yes unstable" data-browser="firefox68">Yes</td>
-<td class="yes unstable" data-browser="firefox69">Yes</td>
-<td class="no obsolete" data-browser="opera12_10">No</td>
-<td class="yes obsolete" data-browser="chrome67">Yes</td>
-<td class="yes obsolete" data-browser="chrome68">Yes</td>
-<td class="yes obsolete" data-browser="chrome69">Yes</td>
-<td class="yes obsolete" data-browser="chrome70">Yes</td>
-<td class="yes obsolete" data-browser="chrome71">Yes</td>
-<td class="yes obsolete" data-browser="chrome72">Yes</td>
-<td class="yes obsolete" data-browser="chrome73">Yes</td>
-<td class="yes" data-browser="chrome74">Yes</td>
-<td class="yes" data-browser="chrome75">Yes</td>
-<td class="yes unstable" data-browser="chrome76">Yes</td>
-<td class="yes unstable" data-browser="chrome77">Yes</td>
-<td class="no obsolete" data-browser="safari10_1">No</td>
-<td class="no obsolete" data-browser="safari11">No</td>
-<td class="no obsolete" data-browser="safari11_1">No</td>
-<td class="no" data-browser="safari12">No</td>
-<td class="no" data-browser="safari12_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
-<td class="no obsolete" data-browser="phantom2_1">No</td>
-<td class="no obsolete" data-browser="node0_10">No</td>
-<td class="no obsolete" data-browser="node0_12">No</td>
-<td class="no obsolete" data-browser="node4">No</td>
-<td class="no" data-browser="node6_5">No</td>
-<td class="no obsolete" data-browser="node7">No</td>
-<td class="no obsolete" data-browser="node7_6">No</td>
-<td class="no obsolete" data-browser="node8">No</td>
-<td class="no obsolete" data-browser="node8_3">No</td>
-<td class="no obsolete" data-browser="node8_7">No</td>
-<td class="no" data-browser="node8_10">No</td>
-<td class="no obsolete" data-browser="node10_0">No</td>
-<td class="yes obsolete" data-browser="node10_4">Yes</td>
-<td class="yes" data-browser="node10_9">Yes</td>
-<td class="yes" data-browser="node11_0">Yes</td>
-<td class="no obsolete" data-browser="duktape2_0">No</td>
-<td class="no obsolete" data-browser="duktape2_1">No</td>
-<td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
-<td class="yes" data-browser="graalvm">Yes</td>
-<td class="no obsolete" data-browser="android4_4">No</td>
-<td class="no obsolete" data-browser="android4_4_3">No</td>
-<td class="no obsolete" data-browser="ios10_3">No</td>
-<td class="no obsolete" data-browser="ios11">No</td>
-<td class="no obsolete" data-browser="ios11_3">No</td>
-<td class="no" data-browser="ios12">No</td>
-<td class="no" data-browser="ios12_2">No</td>
-<td class="no obsolete" data-browser="samsung6_4">No</td>
-<td class="no obsolete" data-browser="samsung7_2">No</td>
-<td class="no" data-browser="samsung8_2">No</td>
-</tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt.asIntN"><td><span><a class="anchor" href="#test-BigInt_BigInt.asIntN">&#xA7;</a>BigInt.asIntN</span><script data-source="
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt.asIntN_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_BigInt.asIntN_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>BigInt.asIntN <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return typeof BigInt.asIntN === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nreturn typeof BigInt.asIntN === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof BigInt.asIntN === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn typeof BigInt.asIntN === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof BigInt.asIntN === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -1910,7 +1818,99 @@ return typeof BigInt.asIntN === &apos;function&apos;;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt64Array"><td><span><a class="anchor" href="#test-BigInt_BigInt64Array">&#xA7;</a>BigInt64Array</span><script data-source="
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt.asUintN_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_BigInt.asUintN_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>BigInt.asUintN <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
+return typeof BigInt.asUintN === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nreturn typeof BigInt.asUintN === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof BigInt.asUintN === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="no" data-browser="babel7corejs3">No</td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20181210">No</td>
+<td class="no obsolete" data-browser="closure20190106">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no obsolete" data-browser="closure20190301">No</td>
+<td class="no" data-browser="closure20190325">No</td>
+<td class="no obsolete" data-browser="typescript1corejs2">No</td>
+<td class="no obsolete" data-browser="typescript2_9corejs2">No</td>
+<td class="no obsolete" data-browser="typescript3corejs2">No</td>
+<td class="no obsolete" data-browser="typescript3_1corejs2">No</td>
+<td class="no obsolete" data-browser="typescript3_2corejs2">No</td>
+<td class="no obsolete" data-browser="typescript3_2corejs3">No</td>
+<td class="no obsolete" data-browser="typescript3_3corejs3">No</td>
+<td class="no obsolete" data-browser="typescript3_4corejs3">No</td>
+<td class="no" data-browser="typescript3_5corejs3">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no unstable" data-browser="edge19">No</td>
+<td class="no obsolete" data-browser="firefox59">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox61">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="no obsolete" data-browser="firefox65">No</td>
+<td class="no" data-browser="firefox66">No</td>
+<td class="no flagged" data-browser="firefox67">Flag<a href="#firefox-bigint-note"><sup>[11]</sup></a></td>
+<td class="yes unstable" data-browser="firefox68">Yes</td>
+<td class="yes unstable" data-browser="firefox69">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome67">Yes</td>
+<td class="yes obsolete" data-browser="chrome68">Yes</td>
+<td class="yes obsolete" data-browser="chrome69">Yes</td>
+<td class="yes obsolete" data-browser="chrome70">Yes</td>
+<td class="yes obsolete" data-browser="chrome71">Yes</td>
+<td class="yes obsolete" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="chrome73">Yes</td>
+<td class="yes" data-browser="chrome74">Yes</td>
+<td class="yes" data-browser="chrome75">Yes</td>
+<td class="yes unstable" data-browser="chrome76">Yes</td>
+<td class="yes unstable" data-browser="chrome77">Yes</td>
+<td class="no obsolete" data-browser="safari10_1">No</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no" data-browser="safari12">No</td>
+<td class="no" data-browser="safari12_1">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="yes obsolete" data-browser="node10_4">Yes</td>
+<td class="yes" data-browser="node10_9">Yes</td>
+<td class="yes" data-browser="node11_0">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="no" data-browser="ios12_2">No</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigInt64Array_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_BigInt64Array_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>BigInt64Array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new BigInt64Array(buffer);
 view[0] = 0x8000000000000000n;
@@ -2005,7 +2005,7 @@ return view[0] === -0x8000000000000000n;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigUint64Array"><td><span><a class="anchor" href="#test-BigInt_BigUint64Array">&#xA7;</a>BigUint64Array</span><script data-source="
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_BigUint64Array_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_BigUint64Array_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>BigUint64Array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new BigUint64Array(buffer);
 view[0] = 0x10000000000000000n;
@@ -2100,7 +2100,7 @@ return view[0] === 0n;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigInt64"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigInt64">&#xA7;</a>DataView.prototype.getBigInt64</span><script data-source="
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigInt64_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigInt64_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>DataView.prototype.getBigInt64 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
 view.setBigInt64(0, 1n);
@@ -2195,7 +2195,7 @@ return view.getBigInt64(0) === 1n;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigUint64"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigUint64">&#xA7;</a>DataView.prototype.getBigUint64</span><script data-source="
+<tr class="subtest" data-parent="BigInt" id="test-BigInt_DataView.prototype.getBigUint64_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-BigInt_DataView.prototype.getBigUint64_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>DataView.prototype.getBigUint64 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);
 view.setBigUint64(0, 1n);
