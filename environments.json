@@ -483,6 +483,19 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2019-03-29",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_5corejs3": {
+    "full": "TypeScript 3.5 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2019-05-29",
     "obsolete": false,
     "unstable": false,
     "test_suites": [
