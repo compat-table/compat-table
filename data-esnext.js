@@ -2206,7 +2206,7 @@ exports.tests = [
   }
 },
 {
-  name: 'Getting last element from array',
+  name: 'Getting last item from array',
   spec: 'https://github.com/keithamus/proposal-array-last',
   category: STAGE1,
   significance: 'small',
