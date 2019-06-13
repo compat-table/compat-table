@@ -1902,6 +1902,7 @@ exports.tests = [
     chrome67: chrome.harmony,
     chrome75: true,
     opera10_50: false,
+    safaritp: true,
     graalvm: false,
   }
 },
