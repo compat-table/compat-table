@@ -1902,6 +1902,7 @@ exports.tests = [
     chrome67: chrome.harmony,
     chrome75: true,
     opera10_50: false,
+    safari13: true,
     safaritp: true,
     graalvm: false,
   }
@@ -2876,6 +2877,7 @@ exports.tests = [
     typescript3_2corejs3: typescript.corejs,
     firefox68: true,
     chrome76: true,
+    safari13: true,
   }
 },
 {
