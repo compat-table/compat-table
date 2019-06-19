@@ -2720,11 +2720,29 @@
   "node11_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=11",
+    "short": "Node 11",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome70",
     "release": "2018-10-23",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node12_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 12",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome74",
+    "release": "2019-04-23",
     "obsolete": false,
     "test_suites": [
       "es5",
