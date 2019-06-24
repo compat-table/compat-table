@@ -483,7 +483,7 @@ exports.tests = [
 {
   name: 'weak references',
   spec: 'https://github.com/tc39/proposal-weakrefs',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'large',
   exec: function(){/*
     var O = {};
