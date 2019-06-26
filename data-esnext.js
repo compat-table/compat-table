@@ -481,25 +481,31 @@ exports.tests = [
   }
 },
 {
-  name: 'weak references',
+  name: 'WeakReferences',
   spec: 'https://github.com/tc39/proposal-weakrefs',
   category: STAGE3,
   significance: 'large',
-  exec: function(){/*
-    var O = {};
-    var weakref = System.makeWeakRef(O);
-    var works = weakref.get() === O;
-    weakref.clear();
-    return works && weakref.get() === undefined;
-  */},
-  res : {
-    ie11: false,
-    firefox2: false,
-    opera10_50: false,
-    chrome65: false,
-    duktape2_0: false,
-    graalvm: false,
-  }
+  subtests: [
+    {
+      name: 'Weak references',
+      spec: 'https://github.com/tc39/proposal-weakrefs#weak-references',
+      exec: function(){/*
+        var O = {};
+        var weakref = new WeakRef(O);
+        var works = weakref.deref() === O;
+        weakref.clear();
+        return works && weakref.deref() === undefined;
+      */},
+      res : {
+        ie11: false,
+        firefox2: false,
+        opera10_50: false,
+        chrome65: false,
+        duktape2_0: false,
+        graalvm: false,
+      }
+    }
+  ]
 },
 {
   name: 'Reflect.isCallable / Reflect.isConstructor',
