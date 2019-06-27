@@ -114,6 +114,13 @@
       "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
     }
   },
+  "safari": {
+    "templateStringsPermanentCaching": {
+      "val": false,
+      "note_id": "safari-templ-cahing",
+      "note_html": "Safari 12 caches TemplateStrings using a GC-able \"CodeBlock\". But TemplateStrings are supposed to always be identical! When the CodeBlock is reclaimed, the TemplateStrings' identity is broken. Thankfully, <code>[[Call]]</code> vs <code>[[Construct]]</code> generate different CodeBlocks, which exposes the <a href='https://bugs.webkit.org/show_bug.cgi?id=190756'>broken behavior.</a>"
+    }
+  },
   "sparseNote": {
     "val": true,
     "note_id": "sparse_arrays",
