@@ -484,17 +484,15 @@ exports.tests = [
   name: 'WeakReferences',
   spec: 'https://github.com/tc39/proposal-weakrefs',
   category: STAGE3,
-  significance: 'large',
+  significance: 'medium',
   subtests: [
     {
-      name: 'Weak references',
+      name: 'WeakRef minimal support',
       spec: 'https://github.com/tc39/proposal-weakrefs#weak-references',
       exec: function(){/*
         var O = {};
         var weakref = new WeakRef(O);
-        var works = weakref.deref() === O;
-        weakref.clear();
-        return works && weakref.deref() === undefined;
+        return weakref.deref() === O;
       */},
       res : {
         ie11: false,

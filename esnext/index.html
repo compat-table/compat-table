@@ -509,7 +509,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
-<tr class="supertest" significance="1"><td id="test-WeakReferences"><span><a class="anchor" href="#test-WeakReferences">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs">WeakReferences</a></span></td>
+<tr class="supertest" significance="0.5"><td id="test-WeakReferences"><span><a class="anchor" href="#test-WeakReferences">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs">WeakReferences</a></span></td>
 <td class="tally" data-browser="tr" data-tally="0">0/1</td>
 <td class="tally" data-browser="babel6corejs2" data-tally="0">0/1</td>
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/1</td>
@@ -599,13 +599,11 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="0">0/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="0">0/1</td>
 </tr>
-<tr class="subtest" data-parent="WeakReferences" id="test-WeakReferences_a_href=_https://github.com/tc39/proposal-weakrefs#weak-references_Weak_references_/a"><td><span><a class="anchor" href="#test-WeakReferences_a_href=_https://github.com/tc39/proposal-weakrefs#weak-references_Weak_references_/a">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs#weak-references">Weak references</a></span><script data-source="
+<tr class="subtest" data-parent="WeakReferences" id="test-WeakReferences_a_href=_https://github.com/tc39/proposal-weakrefs#weak-references_WeakRef_minimal_support_/a"><td><span><a class="anchor" href="#test-WeakReferences_a_href=_https://github.com/tc39/proposal-weakrefs#weak-references_WeakRef_minimal_support_/a">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs#weak-references">WeakRef minimal support</a></span><script data-source="
 var O = {};
 var weakref = new WeakRef(O);
-var works = weakref.deref() === O;
-weakref.clear();
-return works &amp;&amp; weakref.deref() === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = new WeakRef(O);\nvar works = weakref.deref() === O;\nweakref.clear();\nreturn works && weakref.deref() === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = new WeakRef(O);\nvar works = weakref.deref() === O;\nweakref.clear();\nreturn works && weakref.deref() === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return weakref.deref() === O;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nvar O = {};\nvar weakref = new WeakRef(O);\nreturn weakref.deref() === O;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nvar O = {};\nvar weakref = new WeakRef(O);\nreturn weakref.deref() === O;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
