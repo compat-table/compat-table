@@ -555,9 +555,9 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="chrome71" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="chrome72" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="chrome73" data-tally="0">0/1</td>
-<td class="tally" data-browser="chrome74" data-tally="0">0/1</td>
-<td class="tally" data-browser="chrome75" data-tally="0">0/1</td>
-<td class="tally unstable" data-browser="chrome76" data-tally="0">0/1</td>
+<td class="tally" data-browser="chrome74" data-tally="0" data-flagged-tally="1">0/1</td>
+<td class="tally" data-browser="chrome75" data-tally="0" data-flagged-tally="1">0/1</td>
+<td class="tally unstable" data-browser="chrome76" data-tally="0" data-flagged-tally="1">0/1</td>
 <td class="tally unstable" data-browser="chrome77" data-tally="0" data-flagged-tally="1">0/1</td>
 <td class="tally obsolete" data-browser="safari10_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="0">0/1</td>
@@ -582,7 +582,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="node10_4" data-tally="0">0/1</td>
 <td class="tally" data-browser="node10_9" data-tally="0">0/1</td>
 <td class="tally" data-browser="node11_0" data-tally="0">0/1</td>
-<td class="tally" data-browser="node12_0" data-tally="0">0/1</td>
+<td class="tally" data-browser="node12_0" data-tally="0" data-flagged-tally="1">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
@@ -652,9 +652,9 @@ return works &amp;&amp; weakref.deref() === undefined;
 <td class="no obsolete" data-browser="chrome71">No</td>
 <td class="no obsolete" data-browser="chrome72">No</td>
 <td class="no obsolete" data-browser="chrome73">No</td>
-<td class="no" data-browser="chrome74">No</td>
-<td class="no" data-browser="chrome75">No</td>
-<td class="no unstable" data-browser="chrome76">No</td>
+<td class="no flagged" data-browser="chrome74">Flag<a href="#chrome-weakrefs-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="chrome75">Flag<a href="#chrome-weakrefs-note"><sup>[8]</sup></a></td>
+<td class="no flagged unstable" data-browser="chrome76">Flag<a href="#chrome-weakrefs-note"><sup>[8]</sup></a></td>
 <td class="no flagged unstable" data-browser="chrome77">Flag<a href="#chrome-weakrefs-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="safari10_1">No</td>
 <td class="no obsolete" data-browser="safari11">No</td>
@@ -679,7 +679,7 @@ return works &amp;&amp; weakref.deref() === undefined;
 <td class="no obsolete" data-browser="node10_4">No</td>
 <td class="no" data-browser="node10_9">No</td>
 <td class="no" data-browser="node11_0">No</td>
-<td class="no" data-browser="node12_0">No</td>
+<td class="no flagged" data-browser="node12_0">Flag<a href="#chrome-weakrefs-note"><sup>[8]</sup></a></td>
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
@@ -18029,7 +18029,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-weakrefs-note">  <sup>[8]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--harmony-weak-refs</code></a> flag in V8.</p><p id="firefox-class-fields-note">  <sup>[9]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="chrome-harmony-note">  <sup>[10]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[11]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="firefox-bigint-note">  <sup>[12]</sup> The feature have to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[13]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[14]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-weakrefs-note">  <sup>[8]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8.</p><p id="firefox-class-fields-note">  <sup>[9]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="chrome-harmony-note">  <sup>[10]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[11]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="firefox-bigint-note">  <sup>[12]</sup> The feature have to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[13]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[14]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
