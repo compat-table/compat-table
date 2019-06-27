@@ -503,6 +503,23 @@ exports.tests = [
         duktape2_0: false,
         graalvm: false,
       }
+    },
+    {
+      name: 'Finalizers minimal support',
+      spec: 'https://github.com/tc39/proposal-weakrefs#finalizers',
+      exec: function(){/*
+        var fg = new FinalizationGroup(function() {});
+        return Object.getPrototypeOf(fg) === FinalizationGroup.prototype;
+      */},
+      res : {
+        ie11: false,
+        firefox2: false,
+        opera10_50: false,
+        chrome65: false,
+        chrome74: {val: 'flagged', note_id: "chrome-weakrefs"},
+        duktape2_0: false,
+        graalvm: false,
+      }
     }
   ]
 },
