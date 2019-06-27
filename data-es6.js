@@ -4,6 +4,7 @@ var babel = common.babel;
 var typescript = common.typescript;
 var chrome = common.chrome;
 var edge = common.edge;
+var safari = common.safari;
 
 exports.name = 'ES6';
 exports.target_file = 'es6/index.html';
@@ -5505,12 +5506,6 @@ exports.tests = [
     {
       name: 'TemplateStrings permanent caching',
       exec: function () {/*
-        // Safari 12 caches TemplateStrings using a GC-able "CodeBlock".
-        // But TemplateStrings are supposed to always be identical! When the
-        // CodeBlock is reclaimed, the TemplateStrings' identity is broken.
-        // Thankfully, [[Call]] vs [[Construct]] generate different CodeBlocks,
-        // which exposes the broken behavior.
-        // https://bugs.webkit.org/show_bug.cgi?id=190756
         function strings(array) {
           return array;
         }
@@ -5535,7 +5530,8 @@ exports.tests = [
         opera10_50: false,
         chrome41: true,
         safari9: true,
-        safari12: false,
+        safari12: safari.templateStringsPermanentCaching,
+        safari13: true,
         node4: true,
         xs6: true,
         jxa: true,
