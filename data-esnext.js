@@ -484,7 +484,7 @@ exports.tests = [
   name: 'WeakReferences',
   spec: 'https://github.com/tc39/proposal-weakrefs',
   category: STAGE3,
-  significance: 'medium',
+  significance: 'large',
   subtests: [
     {
       name: 'WeakRef minimal support',
