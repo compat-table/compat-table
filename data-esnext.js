@@ -481,25 +481,47 @@ exports.tests = [
   }
 },
 {
-  name: 'weak references',
+  name: 'WeakReferences',
   spec: 'https://github.com/tc39/proposal-weakrefs',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'large',
-  exec: function(){/*
-    var O = {};
-    var weakref = System.makeWeakRef(O);
-    var works = weakref.get() === O;
-    weakref.clear();
-    return works && weakref.get() === undefined;
-  */},
-  res : {
-    ie11: false,
-    firefox2: false,
-    opera10_50: false,
-    chrome65: false,
-    duktape2_0: false,
-    graalvm: false,
-  }
+  subtests: [
+    {
+      name: 'WeakRef minimal support',
+      spec: 'https://github.com/tc39/proposal-weakrefs#weak-references',
+      exec: function(){/*
+        var O = {};
+        var weakref = new WeakRef(O);
+        return weakref.deref() === O;
+      */},
+      res : {
+        ie11: false,
+        firefox2: false,
+        opera10_50: false,
+        chrome65: false,
+        chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8."},
+        duktape2_0: false,
+        graalvm: false,
+      }
+    },
+    {
+      name: 'Finalizers minimal support',
+      spec: 'https://github.com/tc39/proposal-weakrefs#finalizers',
+      exec: function(){/*
+        var fg = new FinalizationGroup(function() {});
+        return Object.getPrototypeOf(fg) === FinalizationGroup.prototype;
+      */},
+      res : {
+        ie11: false,
+        firefox2: false,
+        opera10_50: false,
+        chrome65: false,
+        chrome74: {val: 'flagged', note_id: "chrome-weakrefs"},
+        duktape2_0: false,
+        graalvm: false,
+      }
+    }
+  ]
 },
 {
   name: 'Reflect.isCallable / Reflect.isConstructor',
