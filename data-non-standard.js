@@ -1645,6 +1645,7 @@ exports.tests = [
   res: {
     ie7: false,
     firefox2: true,
+    firefox70: {val: true, note_id: "firefox-not-nightly", note_html: "The feature is disabled only in Firefox Nightly builds."},
     safari3_1: false,
     chrome7: false,
     opera7_5: false,
