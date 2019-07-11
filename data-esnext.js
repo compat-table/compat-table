@@ -1922,7 +1922,7 @@ exports.tests = [
     ie11: false,
     firefox2: false,
     firefox67: false,
-    firefox68: true,
+    firefox68: firefox.nightly,
     chrome67: chrome.harmony,
     chrome75: true,
     opera10_50: false,
@@ -2899,7 +2899,7 @@ exports.tests = [
     babel7corejs3: babel.corejs,
     typescript1corejs2: typescript.fallthrough,
     typescript3_2corejs3: typescript.corejs,
-    firefox68: true,
+    firefox68: firefox.nightly,
     chrome76: true,
     safari13: true,
   }
