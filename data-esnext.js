@@ -1613,7 +1613,7 @@ exports.tests = [
 {
   name: 'optional chaining operator (?.)',
   spec: 'https://github.com/tc39/proposal-optional-chaining',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   subtests: [
     {
@@ -1698,7 +1698,7 @@ exports.tests = [
 {
   name: 'nullish coalescing operator (??)',
   spec: 'https://github.com/tc39/proposal-nullish-coalescing',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   exec: function(){/*
     return null ?? 42 === 42 &&
