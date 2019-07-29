@@ -3443,6 +3443,7 @@ exports.tests = [
           chrome74: true,
           opera10_50: false,
           safari12: false,
+          safari13: true,
           duktape2_2: false,
           graalvm: true,
         }
@@ -3481,6 +3482,7 @@ exports.tests = [
       chrome73: true,
       chrome74: true,
       opera10_50: false,
+      safari13: true,
       safaritp: true,
       duktape2_0: false,
       graalvm: true,
