@@ -2876,35 +2876,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'Promise.allSettled',
-  category: STAGE3,
-  significance: 'small',
-  spec: 'https://github.com/tc39/proposal-promise-allSettled',
-  exec: function () {/*
-    Promise.allSettled([
-      Promise.resolve(1),
-      Promise.reject(2),
-      Promise.resolve(3)
-    ]).then(it => {
-      if (
-        it.length === 3 &&
-        it[0].status === 'fulfilled' && it[0].value === 1 &&
-        it[1].status === 'rejected' && it[1].reason === 2 &&
-        it[2].status === 'fulfilled' && it[2].value === 3
-      ) asyncTestPassed();
-    });
-  */},
-  res: {
-    babel6corejs2: false,
-    babel7corejs3: babel.corejs,
-    typescript1corejs2: typescript.fallthrough,
-    typescript3_2corejs3: typescript.corejs,
-    firefox68: firefox.nightly,
-    chrome76: true,
-    safari13: true,
-  }
-},
-{
   name: 'Math.seededPRNG',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-seeded-random',
