@@ -1924,6 +1924,7 @@ exports.tests = [
     firefox2: false,
     firefox67: false,
     firefox68: firefox.nightly,
+    firefox70: true,
     chrome67: chrome.harmony,
     chrome75: true,
     opera10_50: false,
