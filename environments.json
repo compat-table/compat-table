@@ -2012,10 +2012,10 @@
     "short": "CH&nbsp;67,<br>OP&nbsp;54",
     "release": "2018-05-29",
     "retire": "2018-07-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome68": {
-    "full": "Chrome",
+    "full": "Chrome 68",
     "family": "V8",
     "short": "CH&nbsp;68,<br>OP&nbsp;55",
     "release": "2018-07-24",
@@ -2023,7 +2023,7 @@
     "obsolete": true
   },
   "chrome69": {
-    "full": "Chrome",
+    "full": "Chrome 69",
     "family": "V8",
     "short": "CH&nbsp;69,<br>OP&nbsp;56",
     "release": "2018-09-04",
@@ -2031,7 +2031,7 @@
     "obsolete": true
   },
   "chrome70": {
-    "full": "Chrome",
+    "full": "Chrome 70",
     "family": "V8",
     "short": "CH&nbsp;70,<br>OP&nbsp;57",
     "release": "2018-10-16",
@@ -2039,7 +2039,7 @@
     "obsolete": true
   },
   "chrome71": {
-    "full": "Chrome",
+    "full": "Chrome 71",
     "family": "V8",
     "short": "CH&nbsp;71,<br>OP&nbsp;58",
     "release": "2018-12-04",
@@ -2047,7 +2047,7 @@
     "obsolete": true
   },
   "chrome72": {
-    "full": "Chrome",
+    "full": "Chrome 72",
     "family": "V8",
     "short": "CH&nbsp;72,<br>OP&nbsp;59",
     "release": "2019-01-29",
@@ -2055,7 +2055,7 @@
     "obsolete": true
   },
   "chrome73": {
-    "full": "Chrome",
+    "full": "Chrome 73",
     "family": "V8",
     "short": "CH&nbsp;73,<br>OP&nbsp;60",
     "release": "2019-03-12",
@@ -2063,15 +2063,15 @@
     "obsolete": true
   },
   "chrome74": {
-    "full": "Chrome",
+    "full": "Chrome 74",
     "family": "V8",
     "short": "CH&nbsp;74,<br>OP&nbsp;61",
     "release": "2019-04-23",
     "retire": "2019-06-04",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome75": {
-    "full": "Chrome",
+    "full": "Chrome 75",
     "family": "V8",
     "short": "CH&nbsp;75,<br>OP&nbsp;62",
     "release": "2019-06-04",
@@ -2079,18 +2079,27 @@
     "obsolete": false
   },
   "chrome76": {
-    "full": "Chrome Beta",
+    "full": "Chrome 76",
     "family": "V8",
     "short": "CH&nbsp;76,<br>OP&nbsp;63",
     "release": "2019-07-30",
     "retire": "2019-09-10",
-    "unstable": true
+    "obsolete": false
   },
   "chrome77": {
-    "full": "Chrome Canary",
+    "full": "Chrome Beta",
     "family": "V8",
     "short": "CH&nbsp;77,<br>OP&nbsp;64",
     "release": "2019-09-10",
+    "retire": "2019-10-22",
+    "unstable": true
+  },
+  "chrome78": {
+    "full": "Chrome Canary",
+    "family": "V8",
+    "short": "CH&nbsp;78,<br>OP&nbsp;65",
+    "release": "2019-10-22",
+    "retire": "2019-12-10",
     "unstable": true
   },
   "safari1": {
