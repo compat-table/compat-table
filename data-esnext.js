@@ -1712,6 +1712,7 @@ exports.tests = [
     babel7corejs2: true,
     ie11: false,
     firefox52: false,
+    safaritp: true,
     graalvm: false,
   }
 },
