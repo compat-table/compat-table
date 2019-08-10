@@ -1,0 +1,1809 @@
+{
+    "name": "Non-standard",
+    "target_file": "non-standard/index.html",
+    "skeleton_file": "non-standard/skeleton.html",
+    "tests": [
+        {
+            "name": "SIMD (Single Instruction, Multiple Data)",
+            "spec": "https://tc39.github.io/ecmascript_simd/",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD",
+            "subtests": [
+                {
+                    "name": "basic support",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Float32x4",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#float32x4",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32x4",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Int32x4",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#int32x4",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32x4",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Int16x8",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#int16x8",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16x8",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Int8x16",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#int8x16",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8x16",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Uint32x4",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#uint32x4",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32x4",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Uint16x8",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#uint16x8",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16x8",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Uint8x16",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#uint8x16",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8x16",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Bool32x4",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#bool32x4",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool32x4",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Bool16x8",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#bool16x8",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool16x8",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Bool8x16",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#bool8x16",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Bool8x16",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.abs",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-abs",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/abs",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.add",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-add",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/add",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%integerType%.addSaturate",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-add-saturate",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/addSaturate",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.and",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-and",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/and",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%booleanType%.anyTrue",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-any-true",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/anyTrue",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%booleanType%.allTrue",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-all-true",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/allTrue",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.check",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-check",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/check",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.equal",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-equal",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/equal",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.extractLane",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-extract-lane",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/extractLane",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.greaterThan",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-greater-than",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThan",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.greaterThanOrEqual",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-greater-than-or-equal",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/greaterThanOrEqual",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.lessThan",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-less-than",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThan",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.lessThanOrEqual",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-less-than-or-equal",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/lessThanOrEqual",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.mul",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-mul",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/mul",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.div",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-div",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/div",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.load",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-load-function",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.load1",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.load2",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.load3",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/load",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.max",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-max",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/max",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.maxNum",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-max-num",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/maxNum",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "edge15": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.min",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-min",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/min",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.minNum",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-min-num",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/minNum",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "edge15": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.neg",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-neg",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/neg",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.not",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-not",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/not",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.notEqual",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-not-equal",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/notEqual",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.or",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-or",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/or",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.reciprocalApproximation",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-reciprocal-approximation",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalApproximation",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.reciprocalSqrtApproximation",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-reciprocal-sqrt-approximation",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/reciprocalSqrtApproximation",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.replaceLane",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-replace-lane",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/replaceLane",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.select",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-select",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/select",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%integerType%.shiftLeftByScalar",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-shift-left-by-scalar",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftLeftByScalar",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%integerType%.shiftRightByScalar",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-shift-right-by-scalar",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shiftRightByScalar",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.shuffle",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#shuffle",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/shuffle",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.splat",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-splat",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/splat",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%floatType%.sqrt",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-sqrt",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sqrt",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.store",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-store-function",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.store1",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.store2",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.store3",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/store",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.sub",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-sub",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/sub",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%integerType%.subSaturate",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-sub-saturate",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/subSaturate",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.swizzle",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#swizzle",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/swizzle",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.xor",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-xor",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/xor",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.fromTIMDBits",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-to-timd",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/fromFloat32x4Bits",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SIMD.%type%.fromTIMD",
+                    "spec": "https://tc39.github.io/ecmascript_simd/#simd-to-timd-logical",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD/fromFloat32x4",
+                    "res": {
+                        "ie11": false,
+                        "edge16": false,
+                        "firefox2": false,
+                        "firefox63": false,
+                        "opera10_50": false,
+                        "chrome58": false,
+                        "duktape2_0": false,
+                        "duktape2_4": false
+                    }
+                }
+            ],
+            "separator": "after"
+        },
+        {
+            "name": "decompilation",
+            "subtests": [
+                {
+                    "name": "uneval, existence",
+                    "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": true,
+                        "opera10_50": false,
+                        "rhino1_7": true,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "built-in \"toSource\" methods",
+                    "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource",
+                    "mdn": "https://developer.mozilla.org/en-US/search?q=tosource",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": true,
+                        "opera10_50": false,
+                        "besen": true,
+                        "rhino1_7": true,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "\"toSource\" method as hook for uneval",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": true,
+                        "opera10_50": false,
+                        "rhino1_7": null,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "eval(uneval(value)) is functionally equivalent to value",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": true,
+                        "opera10_50": false,
+                        "besen": null,
+                        "rhino1_7": null,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "optional \"scope\" argument of \"eval\"",
+            "spec": null,
+            "res": {
+                "ie11": false,
+                "firefox2": true,
+                "firefox3": false,
+                "firefox3_5": true,
+                "firefox4": false,
+                "opera10_50": false,
+                "rhino1_7": null,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "function \"caller\" property",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller",
+            "res": {
+                "ie7": true,
+                "firefox2": true,
+                "safari3_1": true,
+                "chrome7": true,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": true,
+                "konq4_4": true,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": true,
+                "android4_0": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "function \"arity\" property",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox7": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "function \"arguments\" property",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments",
+            "res": {
+                "ie7": true,
+                "firefox2": true,
+                "safari3_1": true,
+                "chrome7": true,
+                "opera7_5": true,
+                "opera10_10": true,
+                "opera10_50": true,
+                "konq4_4": true,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": true,
+                "android4_0": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Function.prototype.isGenerator",
+            "spec": "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "firefox5": true,
+                "firefox57": true,
+                "firefox58": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "class extends null",
+            "spec": "https://github.com/tc39/ecma262/issues/543",
+            "res": {
+                "ie11": false,
+                "safari10_1": true,
+                "safari11_1": false,
+                "safaritp": false,
+                "webkit": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "__count__",
+            "spec": "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/prototype",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox4": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "__parent__",
+            "spec": "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/Parent",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox4": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "__noSuchMethod__",
+            "spec": "https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/noSuchMethod",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox44": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": {
+                    "val": "flagged",
+                    "note_id": "graalvm-nashorn-compat",
+                    "note_html": "The feature has to be enabled via the <code>--nashorn-compat</code> flag."
+                },
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Array generics",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox70": {
+                    "val": true,
+                    "note_id": "firefox-not-nightly",
+                    "note_html": "The feature is disabled only in Firefox Nightly builds."
+                },
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "String generics",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox67": true,
+                "firefox68": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "Array comprehensions (JS 1.8 style)",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions#Differences_to_the_older_JS1.7JS1.8_comprehensions",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox44": true,
+                "firefox46": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Array comprehensions (ES draft style)",
+            "significance": "medium",
+            "spec": "http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "firefox30": true,
+                "firefox57": true,
+                "firefox58": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Expression closures",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "firefox3": true,
+                "firefox59": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": true,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "ECMAScript for XML (E4X)",
+            "spec": "https://developer.mozilla.org/en-US/docs/Archive/Web/E4X",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Archive/Web/E4X",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox17": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "\"for each..in\" loops",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox20": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Sharp variables",
+            "spec": "https://developer.mozilla.org/en/Sharp_variables_in_JavaScript",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox12": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "konq4_4": null,
+                "konq4_9": false,
+                "besen": null,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "Iterator",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox57": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "__iterator__",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox57": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Generators (JS 1.8)",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "firefox3": true,
+                "firefox58": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false
+            }
+        },
+        {
+            "name": "Generator comprehensions (JS 1.8 style)",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generator_expressions",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "firefox3": true,
+                "firefox46": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Generator comprehensions (ES draft style)",
+            "significance": "medium",
+            "spec": "http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "firefox30": true,
+                "firefox57": true,
+                "firefox58": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "RegExp \"x\" flag",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10": true,
+                "opera10_50": true,
+                "opera12_10": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Callable RegExp",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "safari3_1": false,
+                "chrome7": true,
+                "opera7_5": false,
+                "opera10_10": true,
+                "chrome11": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "RegExp named groups",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10": true,
+                "opera10_50": true,
+                "konq4_4": null,
+                "konq4_9": true,
+                "besen": null,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "String.prototype.quote",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/quote",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox37": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": null,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "String.prototype.replace flags",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Firefox-specific_notes",
+            "res": {
+                "ie11": false,
+                "firefox2": true,
+                "firefox49": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "Date.prototype.toLocaleFormat",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox58": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Date.parse produces NaN for invalid dates",
+            "res": {
+                "ie11": false,
+                "firefox2": true,
+                "firefox3_6": false,
+                "firefox49": true,
+                "safari3_1": true,
+                "opera7_5": false,
+                "opera10_10": true,
+                "opera10_50": true,
+                "konq4_3": true,
+                "besen": true,
+                "rhino1_7": true,
+                "ejs": true,
+                "android4_0": true,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "Object.prototype.watch",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox58": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "opera7_5": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Object.prototype.unwatch",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "firefox58": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Object.prototype.eval",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": true,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Object.observe",
+            "spec": "https://arv.github.io/ecmascript-object-observe/",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "chrome36": true,
+                "chrome49": false,
+                "opera7_5": false,
+                "opera10_50": false,
+                "node0_10": true,
+                "android5_0": true,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "error \"stack\"",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack",
+            "res": {
+                "ie7": false,
+                "ie11": true,
+                "firefox2": true,
+                "safari3_1": false,
+                "safari7_1": true,
+                "chrome7": true,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": true,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "android4_0": true,
+                "duktape2_0": true,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": true,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "error \"lineNumber\"",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": true,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": false,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "error \"columnNumber\"",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber",
+            "res": {
+                "ie7": false,
+                "firefox2": false,
+                "firefox17": true,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "error \"fileName\"",
+            "spec": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName",
+            "res": {
+                "ie7": false,
+                "firefox2": true,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": true,
+                "phantom": false,
+                "duktape2_0": true,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": false,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "error \"description\"",
+            "spec": "http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx",
+            "res": {
+                "ie7": true,
+                "firefox2": false,
+                "safari3_1": false,
+                "chrome7": false,
+                "opera7_5": false,
+                "opera10_10": false,
+                "opera10_50": false,
+                "konq4_4": false,
+                "besen": false,
+                "rhino1_7": false,
+                "phantom": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            },
+            "separator": "after"
+        },
+        {
+            "name": "global",
+            "subtests": [
+                {
+                    "name": "\"global\" global property is global object",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox53": false,
+                        "opera10_50": false,
+                        "safari10_1": false,
+                        "safaritp": false,
+                        "webkit": false,
+                        "node0_10": true,
+                        "node0_12": true,
+                        "node4": true,
+                        "node6": true,
+                        "node6_5": true,
+                        "node7": true,
+                        "node7_6": true,
+                        "node8": true,
+                        "node8_3": true,
+                        "node8_7": true,
+                        "duktape2_0": false,
+                        "duktape2_1": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "\"global\" global property has correct property descriptor",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox53": false,
+                        "opera10_50": false,
+                        "safaritp": false,
+                        "safari10_1": false,
+                        "webkit": false,
+                        "node0_10": false,
+                        "node0_12": false,
+                        "node4": false,
+                        "node6": false,
+                        "node6_5": false,
+                        "node7": false,
+                        "node7_6": false,
+                        "node8": false,
+                        "node8_3": false,
+                        "node8_7": false,
+                        "duktape2_0": false,
+                        "duktape2_1": true,
+                        "graalvm": false,
+                        "duktape2_4": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -13,11 +13,8 @@ var child_process = require('child_process');
 
 var testCount = 0;
 var testSuccess = 0;
-var testOutOfDate = 0;
 
 var dukCommand = './duk';
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 // Key for .res (e.g. test.res.duktape2_0), automatic based on Duktape.version.
 var dukKey = (function () {
@@ -32,24 +29,6 @@ var dukKey = (function () {
     return 'duktape' + (Math.floor(dukVersion / 10000)) + '_' + (Math.floor(dukVersion / 100 % 100));
 })();
 console.log('Duktape result key is: test.res.' + dukKey);
-
-// List of keys for inheriting results from previous versions.
-var dukKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'Duktape') {
-            continue;
-        }
-        res.push(k);
-        if (k === dukKey) {
-            // Include versions up to 'dukKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
-console.log('Duktape key list for inheriting results is:', dukKeyList);
 
 // Run test / subtests, recursively.  Report results, indicate data files
 // which are out of date.
@@ -92,29 +71,15 @@ function runTest(parents, test, sublevel) {
         }
         testCount++;
 
-        if (test.res) {
-            // Take expected result from newest Duktape version not newer
-            // than current version.
-            var expect = void 0;
-            dukKeyList.forEach(function (k) {
-                if (test.res[k] !== void 0) {
-                    expect = test.res[k];
-                }
-            });
+        // Take expected result from newest Duktape version not newer
+        // than current version.
 
-            if (expect === success) {
-                // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
-            } else {
-                testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
-            }
+        if (success) {
+            console.log(testPath + ': test passed');
         } else {
-            testOutOfDate++;
-            console.log(testPath + ': test.res missing');
+            console.log(testPath + ': test failed');
         }
+        test.success = success;
     }
     if (test.subtests) {
         var newParents = parents.slice(0);
@@ -123,8 +88,33 @@ function runTest(parents, test, sublevel) {
     }
 }
 
+function setResults(test, results) {
+    var resTest;
+    var i;
+    for (i = 0; i < results.length; i++) {
+        if (results[i].name === test.name) {
+            resTest = results[i];
+            break;
+        }
+    }
+    if (!resTest) {
+        throw new Error('Unable to find test in results JSON');
+    }
+    if (resTest.res) {
+        resTest.res[dukKey] = test.success;
+    }
+    if (test.subtests) {
+        if (!resTest.subtests) {
+            throw new Error('Test has subtests, but results don\'t');
+        }
+        for (i = 0; i < test.subtests.length; i++) {
+            setResults(test.subtests[i], resTest.subtests);
+        }
+    }
+}
+
 fs.readdirSync('.').forEach(function (filename) {
-    var m = /^(data-.*)\.js$/.exec(filename);
+    var m = /^(data-.*)\-tests.js$/.exec(filename);
     if (!m) {
         return;
     }
@@ -133,9 +123,14 @@ fs.readdirSync('.').forEach(function (filename) {
     console.log('');
     console.log('**** ' + suitename + ' ****');
     console.log('');
-    var testsuite = require('./' + suitename);
-    testsuite.tests.forEach(function (v) { runTest([ suitename ], v, 0); });
+    var testsuite = require('./' + suitename + '-tests');
+    testsuite.forEach(function (v) { runTest([ suitename ], v, 0); });
+    
+    var results = require('./' + suitename);
+    for (var i = 0; i < testsuite.length; i++) {
+        setResults(testsuite[i], results.tests);
+    }
+    fs.writeFileSync(suitename + '.json', JSON.stringify(results, null, 4));
 });
 
 console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');

@@ -1,0 +1,2723 @@
+{
+    "name": "ES2016+",
+    "target_file": "es2016plus/index.html",
+    "skeleton_file": "es2016plus/skeleton.html",
+    "tests": [
+        {
+            "name": "exponentiation (**) operator",
+            "category": "2016 features",
+            "significance": "small",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)",
+            "subtests": [
+                {
+                    "name": "basic support",
+                    "res": {
+                        "tr": true,
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "typescript1corejs2": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "chrome52": true,
+                        "safari10_1": true,
+                        "duktape2_0": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "assignment",
+                    "res": {
+                        "tr": true,
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "typescript1corejs2": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "chrome52": true,
+                        "safari10_1": true,
+                        "duktape2_0": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "early syntax error for unary negation without parens",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "chrome52": true,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Array.prototype.includes",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+            "category": "2016 features",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "Array.prototype.includes",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "safari9": true,
+                        "chrome47": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox43": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Array.prototype.includes is generic",
+                    "res": {
+                        "closure20180402": true,
+                        "es7shim": true,
+                        "safari9": true,
+                        "chrome47": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox43": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "%TypedArray%.prototype.includes",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes",
+                    "res": {
+                        "chrome47": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "firefox2": false,
+                        "firefox43": true,
+                        "opera10_50": false,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "generator functions can't be used with \"new\"",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable",
+            "links": [
+                {
+                    "note_id": "new-gen-fn",
+                    "note_html": "<a href=\"https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction\">TC39 meeting notes from July 28, 2015.</a>"
+                }
+            ],
+            "res": {
+                "ie11": false,
+                "edge13": true,
+                "firefox2": false,
+                "firefox43": true,
+                "opera10_50": false,
+                "chrome50": true,
+                "safari10": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "generator throw() caught by inner generator",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-generatorfunction-objects",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#IteratorResult_object_returned_instead_of_throwing",
+            "links": [
+                {
+                    "note_id": "gen-throw",
+                    "note_html": "<a href=\"https://github.com/tc39/ecma262/issues/293\">'Semantics of yield* in throw case' GitHub issue in ECMA-262 repo.</a>"
+                }
+            ],
+            "res": {
+                "closure20180319": true,
+                "ie11": false,
+                "edge14": true,
+                "firefox2": false,
+                "firefox27": true,
+                "opera10_50": false,
+                "chrome39": true,
+                "node0_12": "flagged",
+                "node4": true,
+                "safari10": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "strict fn w/ non-strict non-simple params is error",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation",
+            "links": [
+                {
+                    "note_id": "strict-fn-non-strict-params",
+                    "note_html": "<a href=\"https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists\">TC39 meeting notes from July 29, 2015.</a>"
+                }
+            ],
+            "res": {
+                "ie11": false,
+                "edge12": true,
+                "firefox2": false,
+                "firefox52": true,
+                "opera10_50": false,
+                "chrome47": true,
+                "safari10": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "nested rest destructuring, declarations",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Nested_object_and_array_destructuring",
+            "links": [
+                {
+                    "note_id": "nested-rest-destruct-decl",
+                    "note_html": "<a href=\"https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement\">TC39 meeting notes from July 28, 2015.</a>"
+                }
+            ],
+            "res": {
+                "babel6corejs2": true,
+                "closure": true,
+                "ie11": false,
+                "edge14": true,
+                "firefox2": false,
+                "firefox47": true,
+                "opera10_50": false,
+                "chrome49": true,
+                "safari10_1": true,
+                "typescript1corejs2": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "nested rest destructuring, parameters",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-destructuring-assignment",
+            "links": [
+                {
+                    "note_id": "nested-rest-destruct-params",
+                    "note_html": "<a href=\"https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement\">TC39 meeting notes from July 28, 2015.</a>"
+                }
+            ],
+            "res": {
+                "babel6corejs2": true,
+                "closure": true,
+                "ie11": false,
+                "edge14": true,
+                "firefox2": false,
+                "firefox47": true,
+                "opera10_50": false,
+                "typescript1corejs2": true,
+                "chrome49": true,
+                "safari10_1": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Proxy, \"enumerate\" handler removed",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-proxy-objects",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate",
+            "links": [
+                {
+                    "note_id": "proxy-enumerate-removed",
+                    "note_html": "<a href=\"https://github.com/tc39/ecma262/pull/367\">'Normative: Remove [[Enumerate]] and associated reflective capabilities' GitHub Pull Request in ECMA-262 repo.</a>"
+                }
+            ],
+            "res": {
+                "ie11": false,
+                "edge15": true,
+                "firefox2": false,
+                "firefox18": true,
+                "firefox25": false,
+                "firefox47": true,
+                "opera10_50": false,
+                "chrome50": true,
+                "safari10": true,
+                "duktape2_0": true,
+                "graalvm": true,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "Proxy internal calls, Array.prototype.includes",
+            "category": "2016 misc",
+            "significance": "tiny",
+            "spec": "http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes",
+            "res": {
+                "firefox2": false,
+                "firefox43": true,
+                "opera10_50": false,
+                "chrome49": true,
+                "ie11": false,
+                "edge14": true,
+                "safari10": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Object static methods",
+            "spec": "https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor",
+            "category": "2017 features",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "Object.values",
+                    "spec": "https://tc39.github.io/ecma262/#sec-object.values",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values",
+                    "category": "2017 features",
+                    "significance": "medium",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "firefox2": false,
+                        "firefox47": true,
+                        "opera10_50": false,
+                        "chrome54": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.entries",
+                    "spec": "https://tc39.github.io/ecma262/#sec-object.entries",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "firefox2": false,
+                        "firefox47": true,
+                        "opera10_50": false,
+                        "chrome54": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.getOwnPropertyDescriptors",
+                    "spec": "https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "chrome54": true,
+                        "firefox2": false,
+                        "firefox50": true,
+                        "opera10_50": false,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.getOwnPropertyDescriptors doesn't provide undefined descriptors",
+                    "res": {
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox50": true,
+                        "opera10_50": false,
+                        "chrome54": true,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "String padding",
+            "category": "2017 features",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-string-pad-start-end",
+            "subtests": [
+                {
+                    "name": "String.prototype.padStart",
+                    "spec": "https://tc39.github.io/ecma262/#sec-string.prototype.padstart",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "firefox2": false,
+                        "firefox48": true,
+                        "opera10_50": false,
+                        "ie11": false,
+                        "edge15": true,
+                        "chrome57": true,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "String.prototype.padEnd",
+                    "spec": "https://tc39.github.io/ecma262/#sec-string.prototype.padend",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd",
+                    "res": {
+                        "closure": true,
+                        "es7shim": true,
+                        "firefox2": false,
+                        "firefox48": true,
+                        "opera10_50": false,
+                        "ie11": false,
+                        "edge15": true,
+                        "chrome57": true,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "trailing commas in function syntax",
+            "spec": "https://github.com/tc39/proposal-trailing-function-commas",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas",
+            "category": "2017 features",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "in parameter lists",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "typescript2corejs2": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "chrome58": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "in argument lists",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "typescript2corejs2": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "chrome58": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "async functions",
+            "category": "2017 features",
+            "significance": "large",
+            "spec": "https://tc39.github.io/ecma262/#sec-async-function-definitions",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+            "subtests": [
+                {
+                    "name": "return",
+                    "res": {
+                        "tr": true,
+                        "closure": true,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "throw",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "no line break between async and function",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": null,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge13": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "no \"prototype\" property",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": false,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "await",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await",
+                    "res": {
+                        "tr": true,
+                        "closure": true,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "await, rejection",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "must await a value",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "typescript1corejs2": null,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "can await non-Promise values",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "cannot await in parameters",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": null,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async methods, object literals",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async methods, classes",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": true,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async arrow functions in methods, classes",
+                    "res": {
+                        "tr": true,
+                        "closure": true,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10": false,
+                        "safari10_1": false,
+                        "safari11": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async arrow functions",
+                    "res": {
+                        "tr": true,
+                        "closure": true,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "correct prototype chain",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": false,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge13": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async function prototype, Symbol.toStringTag",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": false,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge13": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "async function constructor",
+                    "res": {
+                        "tr": null,
+                        "babel6corejs2": null,
+                        "closure": false,
+                        "typescript1corejs2": false,
+                        "chrome52": null,
+                        "chrome55": true,
+                        "ie11": false,
+                        "edge13": false,
+                        "edge15": true,
+                        "firefox2": false,
+                        "firefox52": true,
+                        "opera10_50": false,
+                        "safari10_1": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "shared memory and atomics",
+            "category": "2017 features",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "SharedArrayBuffer",
+                    "spec": "https://tc39.github.io/ecma262/#sec-sharedarraybuffer-objects",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre",
+                            "note_html": "The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs."
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre",
+                            "note_html": "The feature was <a href=\"https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/\">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.  It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre",
+                            "note_html": "The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs."
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre",
+                            "note_html": "The feature was <a href=\"https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/\">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs."
+                        },
+                        "safaritp": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SharedArrayBuffer[Symbol.species]",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "safaritp": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SharedArrayBuffer.prototype.byteLength",
+                    "spec": "https://tc39.github.io/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari11": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "safaritp": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SharedArrayBuffer.prototype.slice",
+                    "spec": "https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.slice",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "safaritp": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "SharedArrayBuffer.prototype[Symbol.toStringTag]",
+                    "spec": "https://tc39.github.io/ecma262/#sec-sharedarraybuffer.prototype.toString",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "safaritp": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.add",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.add",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.and",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.and",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.compareExchange",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.compareExchange",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.exchange",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.exchange",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.wait",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.wait",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.wake",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.wake",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.isLockFree",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.isLockFree",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.load",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.load",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.or",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.or",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.store",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.store",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.sub",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.sub",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Atomics.xor",
+                    "spec": "https://tc39.github.io/ecma262/#sec-atomics.xor",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "edge17": {
+                            "val": false,
+                            "note_id": "edg-shared-memory-spectre"
+                        },
+                        "firefox2": false,
+                        "firefox55": true,
+                        "firefox57": {
+                            "val": "flagged",
+                            "note_id": "fx-shared-memory-spectre"
+                        },
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "chrome63": {
+                            "val": false,
+                            "note_id": "chr-shared-memory-spectre"
+                        },
+                        "chrome68": true,
+                        "safari10_1": true,
+                        "safari11_1": {
+                            "val": false,
+                            "note_id": "sf-shared-memory-spectre"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets (ES 2017 semantics)",
+            "category": "2017 misc",
+            "significance": "tiny",
+            "spec": "https://github.com/tc39/ecma262/pull/594",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys",
+            "links": [
+                {
+                    "note_id": "proxy-duplictate-ownkeys-updated",
+                    "note_html": "The behaviour of the Proxy “ownKeys” handler in presence of duplicate keys has been <a href=\"https://github.com/tc39/ecma262/issues/833\">modified later</a>."
+                }
+            ],
+            "res": {
+                "ie11": false,
+                "edge16": true,
+                "firefox2": false,
+                "firefox51": true,
+                "firefox56": true,
+                "firefox57": false,
+                "opera10_50": false,
+                "chrome51": true,
+                "chrome75": false,
+                "safari10": true,
+                "safari10_1": true,
+                "safari13": false,
+                "duktape2_0": true,
+                "graalvm": true,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "RegExp \"u\" flag, case folding",
+            "category": "2017 misc",
+            "significance": "tiny",
+            "spec": "https://github.com/tc39/ecma262/pull/525",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "firefox54": true,
+                "opera10_50": false,
+                "chrome59": true,
+                "safari10": true,
+                "safari10_1": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "arguments.caller removed",
+            "category": "2017 misc",
+            "significance": "tiny",
+            "spec": "https://github.com/tc39/ecma262/pull/689",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller",
+            "res": {
+                "ie11": false,
+                "edge16": true,
+                "firefox2": false,
+                "firefox53": true,
+                "opera10_50": false,
+                "chrome56": true,
+                "node8": true,
+                "safari10_1": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "Object.prototype getter/setter methods",
+            "spec": "https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__",
+            "category": "2017 annex b",
+            "significance": "tiny",
+            "subtests": [
+                {
+                    "name": "__defineGetter__",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__defineGetter__, symbols",
+                    "res": {
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox36": true,
+                        "opera10_50": false,
+                        "chrome38": true,
+                        "node0_12": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__defineGetter__, ToObject(this)",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "firefox2": false,
+                        "firefox48": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome62": true,
+                        "safari5_1": true,
+                        "safari9": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__defineSetter__",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__defineSetter__, symbols",
+                    "res": {
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox36": true,
+                        "opera10_50": false,
+                        "chrome38": true,
+                        "node0_12": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__defineSetter__, ToObject(this)",
+                    "res": {
+                        "ie11": false,
+                        "edge16": true,
+                        "firefox2": false,
+                        "firefox48": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome62": true,
+                        "safari5_1": true,
+                        "safari9": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupGetter__",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": true,
+                        "opera10_50": true,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari3_1": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupGetter__, prototype chain",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupGetter__, symbols",
+                    "res": {
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox36": true,
+                        "opera10_50": false,
+                        "chrome38": true,
+                        "node0_12": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupGetter__, ToObject(this)",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox24": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome62": true,
+                        "safari5_1": true,
+                        "safari9": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupGetter__, data properties can shadow accessors",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome57": true,
+                        "node8": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupSetter__",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": true,
+                        "opera10_50": true,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari3_1": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupSetter__, prototype chain",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome30": true,
+                        "node0_12": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupSetter__, symbols",
+                    "res": {
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox36": true,
+                        "opera10_50": false,
+                        "chrome38": true,
+                        "node0_12": true,
+                        "safari9": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupSetter__, ToObject(this)",
+                    "res": {
+                        "ie11": true,
+                        "firefox2": false,
+                        "firefox24": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome62": true,
+                        "safari5_1": true,
+                        "safari9": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "__lookupSetter__, data properties can shadow accessors",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox4": true,
+                        "opera10_50": false,
+                        "opera12": true,
+                        "chrome57": true,
+                        "node8": true,
+                        "safari4": true,
+                        "safari9": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "duktape2_2": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Proxy internal calls, getter/setter methods",
+            "spec": "https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__",
+            "category": "2017 annex b",
+            "significance": "tiny",
+            "subtests": [
+                {
+                    "name": "__defineGetter__",
+                    "res": {
+                        "firefox2": false,
+                        "firefox18": true,
+                        "opera10_50": false,
+                        "ie11": false,
+                        "edge13": true,
+                        "chrome52": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "__defineSetter__",
+                    "res": {
+                        "firefox2": false,
+                        "firefox18": true,
+                        "opera10_50": false,
+                        "ie11": false,
+                        "edge13": true,
+                        "chrome52": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "__lookupGetter__",
+                    "res": {
+                        "ie11": false,
+                        "edge14": true,
+                        "chrome57": true,
+                        "firefox2": false,
+                        "firefox49": true,
+                        "opera10_50": false,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "__lookupSetter__",
+                    "res": {
+                        "ie11": false,
+                        "edge14": true,
+                        "chrome57": true,
+                        "firefox2": false,
+                        "firefox49": true,
+                        "opera10_50": false,
+                        "node8": true,
+                        "safari10": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "assignments allowed in for-in head in non-strict mode",
+            "spec": "https://tc39.github.io/ecma262/#sec-initializers-in-forin-statement-heads",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in#Compatibility_Initializer_expressions_in_strict_mode",
+            "category": "2017 annex b",
+            "significance": "tiny",
+            "res": {
+                "tr": true,
+                "ie10": true,
+                "edge12": true,
+                "firefox2": true,
+                "firefox31": true,
+                "firefox40": false,
+                "firefox52": true,
+                "opera10_50": true,
+                "chrome30": true,
+                "safari3_1": true,
+                "safari9": false,
+                "safari10_1": true,
+                "node0_12": true,
+                "android4_0": true,
+                "ios5_1": true,
+                "duktape2_0": true,
+                "nashorn1_8": true,
+                "nashorn9": true,
+                "nashorn10": true,
+                "graalvm": true,
+                "duktape2_4": true
+            }
+        },
+        {
+            "name": "object rest/spread properties",
+            "significance": "medium",
+            "category": "2018 features",
+            "spec": "https://github.com/tc39/proposal-object-rest-spread",
+            "subtests": [
+                {
+                    "name": "object rest properties",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "closure20181028": {
+                            "val": false,
+                            "note_id": "closure-object-assign",
+                            "note_html": "Requires native support for <code>Object.assign</code>"
+                        },
+                        "typescript2_1corejs2": true,
+                        "jsx": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox55": true,
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "safari11": false,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "object spread properties",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure": true,
+                        "closure20190121": {
+                            "val": false,
+                            "note_id": "closure-object-assign"
+                        },
+                        "jsx": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox55": true,
+                        "opera10_50": false,
+                        "chrome60": true,
+                        "typescript2_1corejs2": true,
+                        "safari11": false,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Promise.prototype.finally",
+            "category": "2018 features",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-promise-finally",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally",
+            "subtests": [
+                {
+                    "name": "basic support",
+                    "res": {
+                        "closure20180402": true,
+                        "ie11": false,
+                        "edge18": true,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "chrome63": true,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "don't change resolution value",
+                    "res": {
+                        "closure20180402": true,
+                        "ie11": false,
+                        "edge18": true,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "chrome63": true,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "change rejection value",
+                    "res": {
+                        "closure20180402": true,
+                        "ie11": false,
+                        "edge18": true,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "chrome63": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "s (dotAll) flag for regular expressions",
+            "spec": "https://tc39.github.io/ecma262/#sec-get-regexp.prototype.dotAll",
+            "category": "2018 features",
+            "significance": "small",
+            "res": {
+                "es6tr": null,
+                "tr": null,
+                "babel6corejs2": true,
+                "closure": false,
+                "jsx": null,
+                "typescript1corejs2": null,
+                "es6shim": null,
+                "konq414": null,
+                "ie7": null,
+                "ie10": false,
+                "firefox1": null,
+                "firefox2": false,
+                "opera10_50": false,
+                "chrome1": null,
+                "chrome62": true,
+                "safari11_1": true,
+                "safaritp": true,
+                "webkit": true,
+                "rhino1_7": null,
+                "xs6": null,
+                "jxa": null,
+                "node0_10": null,
+                "duktape2_0": null,
+                "duktape2_2": false,
+                "android1_5": null,
+                "ios4": null,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "RegExp named capture groups",
+            "spec": "https://github.com/tc39/proposal-regexp-named-groups",
+            "category": "2018 features",
+            "significance": "small",
+            "res": {
+                "babel6corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "chrome64": true,
+                "safari11_1": true,
+                "safaritp": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "RegExp Lookbehind Assertions",
+            "spec": "https://github.com/tc39/proposal-regexp-lookbehind",
+            "category": "2018 features",
+            "significance": "small",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "chrome62": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "RegExp Unicode Property Escapes",
+            "category": "2018 features",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-regexp-unicode-property-escapes",
+            "res": {
+                "babel6corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "chrome64": true,
+                "safari11_1": true,
+                "safaritp": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Asynchronous Iterators",
+            "category": "2018 features",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-async-iteration",
+            "subtests": [
+                {
+                    "name": "async generators",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure20180805": true,
+                        "chrome63": true,
+                        "typescript2_3corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox57": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "webkit": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "for-await-of loops",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of",
+                    "res": {
+                        "babel6corejs2": true,
+                        "closure20180910": true,
+                        "chrome63": true,
+                        "typescript2_3corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox57": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "webkit": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "template literal revision",
+            "spec": "https://github.com/tc39/proposal-template-literal-revision",
+            "category": "2018 misc",
+            "significance": "small",
+            "res": {
+                "closure20181008": true,
+                "ie11": false,
+                "firefox2": false,
+                "firefox53": true,
+                "opera10_50": false,
+                "chrome62": true,
+                "safari11": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Object.fromEntries",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-object-from-entries",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries",
+            "category": "2019 features",
+            "res": {
+                "babel6corejs2": false,
+                "closure20190325": true,
+                "firefox52": false,
+                "firefox62": false,
+                "firefox63": true,
+                "safari12_1": true,
+                "safaritp": true,
+                "graalvm": true,
+                "chrome73": true,
+                "chrome74": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "string trimming",
+            "category": "2019 features",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-string-left-right-trim",
+            "subtests": [
+                {
+                    "name": "String.prototype.trimLeft",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft",
+                    "res": {
+                        "closure20190709": true,
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox3_5": true,
+                        "firefox3_6": true,
+                        "firefox4": true,
+                        "chrome7": true,
+                        "opera10_10": false,
+                        "konq4_4": false,
+                        "konq4_9": true,
+                        "besen": false,
+                        "rhino1_7": false,
+                        "phantom": true,
+                        "node0_12": true,
+                        "safari3": false,
+                        "safari4": true,
+                        "safari12": true,
+                        "webkit": true,
+                        "es7shim": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "nashorn1_8": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "String.prototype.trimRight",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight",
+                    "res": {
+                        "closure20190709": true,
+                        "ie11": false,
+                        "edge12": true,
+                        "firefox2": false,
+                        "firefox3_5": true,
+                        "firefox3_6": true,
+                        "firefox4": true,
+                        "chrome7": true,
+                        "opera10_10": false,
+                        "konq4_4": false,
+                        "konq4_9": true,
+                        "besen": false,
+                        "rhino1_7": false,
+                        "phantom": true,
+                        "node0_12": true,
+                        "safari3": false,
+                        "safari4": true,
+                        "safari12": true,
+                        "webkit": true,
+                        "es7shim": true,
+                        "android4_0": true,
+                        "ios5_1": true,
+                        "duktape2_0": false,
+                        "nashorn1_8": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "String.prototype.trimStart",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
+                    "res": {
+                        "closure20190325": {
+                            "val": false,
+                            "note_id": "closure-string-trimstart",
+                            "note_html": "Requires native support for String.prototype.trimLeft."
+                        },
+                        "closure20190709": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox59": false,
+                        "firefox61": true,
+                        "chrome66": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "String.prototype.trimEnd",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd",
+                    "res": {
+                        "closure20190325": {
+                            "val": false,
+                            "note_id": "closure-string-trimend",
+                            "note_html": "Requires native support for String.prototype.trimRight."
+                        },
+                        "closure20190709": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox59": false,
+                        "firefox61": true,
+                        "chrome66": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Array.prototype.{flat, flatMap}",
+            "category": "2019 features",
+            "significance": "medium",
+            "spec": "https://tc39.github.io/proposal-flatMap/",
+            "links": [
+                {
+                    "note_id": "flatten-compat-issue",
+                    "note_html": "Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href=\"https://github.com/tc39/proposal-flatMap/pull/56\">web compatibility issues.</a>"
+                }
+            ],
+            "subtests": [
+                {
+                    "name": "Array.prototype.flat",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat",
+                    "res": {
+                        "babel6corejs2": false,
+                        "closure20190301": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox58": false,
+                        "firefox59": {
+                            "val": false,
+                            "note_id": "ffox-flatten",
+                            "note_html": "Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>."
+                        },
+                        "firefox62": true,
+                        "chrome69": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "safaritp": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Array.prototype.flatMap",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap",
+                    "res": {
+                        "closure20190301": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox58": false,
+                        "firefox62": true,
+                        "chrome69": true,
+                        "opera10_50": false,
+                        "safari12": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "flat and flatMap in Array.prototype[@@unscopables]",
+                    "res": {
+                        "babel6corejs2": false,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox58": false,
+                        "firefox59": false,
+                        "firefox62": false,
+                        "firefox67": true,
+                        "chrome69": false,
+                        "chrome73": true,
+                        "chrome74": true,
+                        "opera10_50": false,
+                        "safari12": false,
+                        "safari13": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "optional catch binding",
+            "category": "2019 misc",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-optional-catch-binding",
+            "subtests": [
+                {
+                    "name": "basic",
+                    "res": {
+                        "babel7corejs2": true,
+                        "closure20190215": true,
+                        "typescript2_5corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "await",
+                    "res": {
+                        "babel7corejs2": true,
+                        "closure20190215": true,
+                        "typescript2_5corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "yield",
+                    "res": {
+                        "babel7corejs2": true,
+                        "closure20190215": true,
+                        "typescript2_5corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox57": false,
+                        "firefox58": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "safari11_1": true,
+                        "safaritp": true,
+                        "webkit": true,
+                        "duktape2_2": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Symbol.prototype.description",
+            "spec": "https://github.com/tc39/proposal-Symbol-description",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description",
+            "category": "2019 misc",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "basic",
+                    "res": {
+                        "babel6corejs2": false,
+                        "closure20190301": true,
+                        "ie11": false,
+                        "firefox45": false,
+                        "firefox63": true,
+                        "chrome67": false,
+                        "chrome70": true,
+                        "safari11": false,
+                        "safari12": true,
+                        "safaritp": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "empty description",
+                    "res": {
+                        "babel6corejs2": false,
+                        "closure20190301": true,
+                        "ie11": false,
+                        "firefox45": false,
+                        "firefox63": true,
+                        "chrome67": false,
+                        "chrome70": true,
+                        "safari11": false,
+                        "safari12": true,
+                        "safaritp": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "undefined description",
+                    "res": {
+                        "babel6corejs2": false,
+                        "ie11": false,
+                        "firefox45": false,
+                        "firefox63": true,
+                        "chrome67": false,
+                        "chrome70": true,
+                        "safari11": false,
+                        "safari12": false,
+                        "safari12_1": true,
+                        "safaritp": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Function.prototype.toString revision",
+            "category": "2019 misc",
+            "significance": "small",
+            "spec": "https://github.com/tc39/Function-prototype-toString-revision",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString",
+            "subtests": [
+                {
+                    "name": "functions created with the Function constructor",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox54": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "arrows",
+                    "res": {
+                        "node4": true,
+                        "firefox2": false,
+                        "firefox51": true,
+                        "opera10_50": false,
+                        "chrome50": true,
+                        "safari10": true,
+                        "ie11": false,
+                        "edge13": true,
+                        "duktape2_0": false,
+                        "nashorn1_8": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "[native code]",
+                    "res": {
+                        "node4": true,
+                        "firefox2": false,
+                        "firefox45": true,
+                        "opera10_50": true,
+                        "chrome50": true,
+                        "safari3_1": true,
+                        "ie11": true,
+                        "edge13": true,
+                        "duktape2_0": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": true
+                    }
+                },
+                {
+                    "name": "class expression with implicit constructor",
+                    "res": {
+                        "node4": true,
+                        "firefox2": false,
+                        "firefox55": true,
+                        "opera10_50": false,
+                        "chrome50": true,
+                        "safari10": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "class expression with explicit constructor",
+                    "res": {
+                        "node4": true,
+                        "firefox2": false,
+                        "firefox55": true,
+                        "opera10_50": false,
+                        "chrome50": true,
+                        "safari10": true,
+                        "ie11": false,
+                        "edge14": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "unicode escape sequences in identifiers",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox54": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "duktape2_0": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "methods and computed property names",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox54": true,
+                        "opera10_50": false,
+                        "chrome66": true,
+                        "duktape2_0": false,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "JSON superset",
+            "spec": "https://github.com/tc39/proposal-json-superset",
+            "category": "2019 misc",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "LINE SEPARATOR can appear in string literals",
+                    "res": {
+                        "closure20190215": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox61": false,
+                        "firefox62": true,
+                        "chrome65": false,
+                        "chrome66": true,
+                        "safari11": false,
+                        "safari12": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "PARAGRAPH SEPARATOR can appear in string literals",
+                    "res": {
+                        "closure20190215": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox61": false,
+                        "firefox62": true,
+                        "chrome65": false,
+                        "chrome66": true,
+                        "safari11": false,
+                        "safari12": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Well-formed JSON.stringify",
+            "spec": "https://github.com/tc39/proposal-well-formed-stringify",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Well-formed_JSON.stringify()",
+            "category": "2019 misc",
+            "significance": "small",
+            "res": {
+                "ie11": false,
+                "edge16": false,
+                "firefox52": false,
+                "firefox63": false,
+                "firefox64": true,
+                "chrome70": false,
+                "chrome71": false,
+                "chrome72": true,
+                "safari1": false,
+                "safari12_1": true,
+                "safaritp": true,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "String.prototype.matchAll",
+            "category": "2020 features",
+            "significance": "small",
+            "spec": "https://github.com/tc39/String.prototype.matchAll",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "firefox65": false,
+                "firefox67": true,
+                "chrome67": false,
+                "chrome73": true,
+                "chrome74": true,
+                "opera10_50": false,
+                "safari13": true,
+                "safaritp": true,
+                "duktape2_0": false,
+                "graalvm": true,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Promise.allSettled",
+            "category": "2020 features",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-promise-allSettled",
+            "res": {
+                "babel6corejs2": false,
+                "chrome76": true,
+                "safari13": true,
+                "duktape2_4": false
+            }
+        }
+    ]
+}

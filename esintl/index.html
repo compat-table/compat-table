@@ -192,7 +192,8 @@
 <th class="platform duktape2_0 engine obsolete" data-browser="duktape2_0"><a href="#duktape2_0" class="browser-name"><abbr title="Duktape 2.0">DUK 2.0</abbr></a></th>
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine obsolete" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
-<th class="platform duktape2_3 engine" data-browser="duktape2_3"><a href="#duktape2_3" class="browser-name"><abbr title="Duktape 2.3">DUK 2.3</abbr></a></th>
+<th class="platform duktape2_3 engine obsolete" data-browser="duktape2_3"><a href="#duktape2_3" class="browser-name"><abbr title="Duktape 2.3">DUK 2.3</abbr></a></th>
+<th class="platform duktape2_4 engine" data-browser="duktape2_4"><a href="#duktape2_4" class="browser-name"><abbr title="Duktape 2.4">DUK 2.4</abbr></a></th>
 <th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 19.0.0">GraalVM 19.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
@@ -269,7 +270,8 @@
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">2/2</td>
@@ -282,10 +284,16 @@
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">2/2</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">2/2</td>
 </tr>
-<tr class="subtest" data-parent="Intl_object" id="test-Intl_object_exists_on_global"><td><span><a class="anchor" href="#test-Intl_object_exists_on_global">&#xA7;</a>exists on global</span><script data-source="
-return typeof Intl === &apos;object&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("1");try{return Function("asyncTestPassed","\nreturn typeof Intl === 'object';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("1");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl === 'object';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl_object" id="test-Intl_object_exists_on_global"><td><span><a class="anchor" href="#test-Intl_object_exists_on_global">&#xA7;</a>exists on global</span><script data-source="function() {
+/*
+        return typeof Intl === &apos;object&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl === 'object';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -345,7 +353,8 @@ return typeof Intl === &apos;object&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -358,10 +367,16 @@ return typeof Intl === &apos;object&apos;;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Intl_object" id="test-Intl_object_has_prototype_of_Object"><td><span><a class="anchor" href="#test-Intl_object_has_prototype_of_Object">&#xA7;</a>has prototype of Object</span><script data-source="
-return Intl.constructor === Object;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("2");try{return Function("asyncTestPassed","\nreturn Intl.constructor === Object;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("2");return Function("asyncTestPassed","'use strict';"+"\nreturn Intl.constructor === Object;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl_object" id="test-Intl_object_has_prototype_of_Object"><td><span><a class="anchor" href="#test-Intl_object_has_prototype_of_Object">&#xA7;</a>has prototype of Object</span><script data-source="function() {
+/*
+        return Intl.constructor === Object;
+      */
+                }">test(
+function() {
+/*
+        return Intl.constructor === Object;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -421,7 +436,8 @@ return Intl.constructor === Object;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -494,7 +510,8 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/4</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/4</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/4</td>
 <td class="tally" data-browser="graalvm" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">4/4</td>
@@ -507,10 +524,16 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">4/4</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">4/4</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#test-Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.Collator === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("4");try{return Function("asyncTestPassed","\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("4");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.Collator === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_exists_on_intl_object"><td><span><a class="anchor" href="#test-Intl.Collator_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="function() {
+/*
+        return typeof Intl.Collator === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl.Collator === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -570,7 +593,8 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -583,10 +607,16 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new Collator instances</a></span><script data-source="
-return new Intl.Collator() instanceof Intl.Collator;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("5");try{return Function("asyncTestPassed","\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("5");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_Collator_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new Collator instances</a></span><script data-source="function() {
+/*
+        return new Intl.Collator() instanceof Intl.Collator;
+      */
+                }">test(
+function() {
+/*
+        return new Intl.Collator() instanceof Intl.Collator;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -646,7 +676,8 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -659,10 +690,16 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
-return Intl.Collator() instanceof Intl.Collator;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nreturn Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nreturn Intl.Collator() instanceof Intl.Collator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-Intl.Collator_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="function() {
+/*
+        return Intl.Collator() instanceof Intl.Collator;
+      */
+                }">test(
+function() {
+/*
+        return Intl.Collator() instanceof Intl.Collator;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -722,7 +759,8 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -735,38 +773,72 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.Collator(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.Collator(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator" id="test-Intl.Collator_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-Intl.Collator_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            &quot;de&quot;, // ISO 639 language code
+            &quot;de-DE&quot;, // + ISO 3166-1 country code
+            &quot;DE-de&quot;, // tags are case-insensitive
+            &quot;cmn&quot;, // ISO 639 language code
+            &quot;cmn-Hans&quot;, // + script code
+            &quot;CMN-hANS&quot;, // tags are case-insensitive
+            &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+            &quot;es-419&quot;, // + UN M.49 region code
+            &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+            &quot;i-klingon&quot;, // grandfathered tag
+            &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+            &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+            &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+            &quot;x-en-US-12345&quot;, // anything goes in private use tags
+            &quot;x-12345-12345-en-US&quot;,
+            &quot;x-en-US-12345-12345&quot;,
+            &quot;x-en-u-foo&quot;,
+            &quot;x-en-u-foo-u-bar&quot;
+          ];
+          for (var i in validLanguageTags) {
+            Intl.Collator(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }">test(
+function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.Collator(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -826,7 +898,8 @@ try {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -899,7 +972,8 @@ try {
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -912,10 +986,16 @@ try {
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator.prototype.compare" id="test-Intl.Collator.prototype.compare_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.compare_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
-return typeof Intl.Collator().compare === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nreturn typeof Intl.Collator().compare === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.Collator().compare === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator.prototype.compare" id="test-Intl.Collator.prototype.compare_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.compare_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="function() {
+/*
+        return typeof Intl.Collator().compare === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl.Collator().compare === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -975,7 +1055,8 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1048,7 +1129,8 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -1061,10 +1143,16 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions" id="test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="
-return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nreturn typeof Intl.Collator().resolvedOptions === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.Collator().resolvedOptions === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Intl.Collator.prototype.resolvedOptions" id="test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype"><td><span><a class="anchor" href="#test-Intl.Collator.prototype.resolvedOptions_exists_on_Collator_prototype">&#xA7;</a>exists on Collator prototype</span><script data-source="function() {
+/*
+        return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl.Collator().resolvedOptions === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1124,7 +1212,8 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1197,7 +1286,8 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/5</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/5</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/5</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/5</td>
 <td class="tally" data-browser="graalvm" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">5/5</td>
@@ -1210,10 +1300,16 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">5/5</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">5/5</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.NumberFormat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="function() {
+/*
+        return typeof Intl.NumberFormat === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl.NumberFormat === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1273,7 +1369,8 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1286,10 +1383,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.NumberFormat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.NumberFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-NumberFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1349,7 +1443,8 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1362,10 +1457,16 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new NumberFormat instances</a></span><script data-source="
-return new Intl.NumberFormat() instanceof Intl.NumberFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_NumberFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new NumberFormat instances</a></span><script data-source="function() {
+/*
+        return new Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */
+                }">test(
+function() {
+/*
+        return new Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1425,7 +1526,8 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1438,10 +1540,16 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
-return Intl.NumberFormat() instanceof Intl.NumberFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn Intl.NumberFormat() instanceof Intl.NumberFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-NumberFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="function() {
+/*
+        return Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */
+                }">test(
+function() {
+/*
+        return Intl.NumberFormat() instanceof Intl.NumberFormat;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1501,7 +1609,8 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1514,38 +1623,72 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.NumberFormat(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.NumberFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="NumberFormat" id="test-NumberFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-NumberFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            &quot;de&quot;, // ISO 639 language code
+            &quot;de-DE&quot;, // + ISO 3166-1 country code
+            &quot;DE-de&quot;, // tags are case-insensitive
+            &quot;cmn&quot;, // ISO 639 language code
+            &quot;cmn-Hans&quot;, // + script code
+            &quot;CMN-hANS&quot;, // tags are case-insensitive
+            &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+            &quot;es-419&quot;, // + UN M.49 region code
+            &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+            &quot;i-klingon&quot;, // grandfathered tag
+            &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+            &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+            &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+            &quot;x-en-US-12345&quot;, // anything goes in private use tags
+            &quot;x-12345-12345-en-US&quot;,
+            &quot;x-en-US-12345-12345&quot;,
+            &quot;x-en-u-foo&quot;,
+            &quot;x-en-u-foo-u-bar&quot;
+          ];
+          for (var i in validLanguageTags) {
+            Intl.NumberFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }">test(
+function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.NumberFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1605,7 +1748,8 @@ try {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1678,7 +1822,8 @@ try {
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/6</td>
-<td class="tally" data-browser="duktape2_3" data-tally="0">0/6</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="0">0/6</td>
+<td class="tally" data-browser="duktape2_4" data-tally="0">0/6</td>
 <td class="tally" data-browser="graalvm" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">6/6</td>
@@ -1691,10 +1836,16 @@ try {
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">6/6</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">6/6</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="
-return typeof Intl.DateTimeFormat === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Intl.DateTimeFormat === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_exists_on_intl_object"><td><span><a class="anchor" href="#test-DateTimeFormat_exists_on_intl_object">&#xA7;</a>exists on intl object</span><script data-source="function() {
+/*
+        return typeof Intl.DateTimeFormat === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Intl.DateTimeFormat === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1754,7 +1905,8 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1767,10 +1919,16 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new DateTimeFormat instances</a></span><script data-source="
-return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1_creates_new_DateTimeFormat_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1">creates new DateTimeFormat instances</a></span><script data-source="function() {
+/*
+        return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */
+                }">test(
+function() {
+/*
+        return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1830,7 +1988,8 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1843,10 +2002,16 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="
-return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a"><td><span><a class="anchor" href="#test-DateTimeFormat_a_href=_http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1_constructor_called_without_new_creates_instances_/a">&#xA7;</a><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1">constructor called without new creates instances</a></span><script data-source="function() {
+/*
+        return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */
+                }">test(
+function() {
+/*
+        return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -1906,7 +2071,8 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1919,38 +2085,72 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="
-try {
-  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-  var validLanguageTags = [
-    &quot;de&quot;, // ISO 639 language code
-    &quot;de-DE&quot;, // + ISO 3166-1 country code
-    &quot;DE-de&quot;, // tags are case-insensitive
-    &quot;cmn&quot;, // ISO 639 language code
-    &quot;cmn-Hans&quot;, // + script code
-    &quot;CMN-hANS&quot;, // tags are case-insensitive
-    &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
-    &quot;es-419&quot;, // + UN M.49 region code
-    &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
-    &quot;i-klingon&quot;, // grandfathered tag
-    &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
-    &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
-    &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
-    &quot;x-en-US-12345&quot;, // anything goes in private use tags
-    &quot;x-12345-12345-en-US&quot;,
-    &quot;x-en-US-12345-12345&quot;,
-    &quot;x-en-u-foo&quot;,
-    &quot;x-en-u-foo-u-bar&quot;
-  ];
-  for (var i in validLanguageTags) {
-    Intl.DateTimeFormat(validLanguageTags[i]);
-  }
-  return true;
-} catch(e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js\n  var validLanguageTags = [\n    \"de\", // ISO 639 language code\n    \"de-DE\", // + ISO 3166-1 country code\n    \"DE-de\", // tags are case-insensitive\n    \"cmn\", // ISO 639 language code\n    \"cmn-Hans\", // + script code\n    \"CMN-hANS\", // tags are case-insensitive\n    \"cmn-hans-cn\", // + ISO 3166-1 country code\n    \"es-419\", // + UN M.49 region code\n    \"es-419-u-nu-latn-cu-bob\", // + Unicode locale extension sequence\n    \"i-klingon\", // grandfathered tag\n    \"cmn-hans-cn-t-ca-u-ca-x-t-u\", // singleton subtags can also be used as private use subtags\n    \"de-gregory-u-ca-gregory\", // variant and extension subtags may be the same\n    \"aa-a-foo-x-a-foo-bar\", // variant subtags can also be used as private use subtags\n    \"x-en-US-12345\", // anything goes in private use tags\n    \"x-12345-12345-en-US\",\n    \"x-en-US-12345-12345\",\n    \"x-en-u-foo\",\n    \"x-en-u-foo-u-bar\"\n  ];\n  for (var i in validLanguageTags) {\n    Intl.DateTimeFormat(validLanguageTags[i]);\n  }\n  return true;\n} catch(e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_valid_language_tags"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_valid_language_tags">&#xA7;</a>accepts valid language tags</span><script data-source="function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            &quot;de&quot;, // ISO 639 language code
+            &quot;de-DE&quot;, // + ISO 3166-1 country code
+            &quot;DE-de&quot;, // tags are case-insensitive
+            &quot;cmn&quot;, // ISO 639 language code
+            &quot;cmn-Hans&quot;, // + script code
+            &quot;CMN-hANS&quot;, // tags are case-insensitive
+            &quot;cmn-hans-cn&quot;, // + ISO 3166-1 country code
+            &quot;es-419&quot;, // + UN M.49 region code
+            &quot;es-419-u-nu-latn-cu-bob&quot;, // + Unicode locale extension sequence
+            &quot;i-klingon&quot;, // grandfathered tag
+            &quot;cmn-hans-cn-t-ca-u-ca-x-t-u&quot;, // singleton subtags can also be used as private use subtags
+            &quot;de-gregory-u-ca-gregory&quot;, // variant and extension subtags may be the same
+            &quot;aa-a-foo-x-a-foo-bar&quot;, // variant subtags can also be used as private use subtags
+            &quot;x-en-US-12345&quot;, // anything goes in private use tags
+            &quot;x-12345-12345-en-US&quot;,
+            &quot;x-en-US-12345-12345&quot;,
+            &quot;x-en-u-foo&quot;,
+            &quot;x-en-u-foo-u-bar&quot;
+          ];
+          for (var i in validLanguageTags) {
+            Intl.DateTimeFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }">test(
+function() {
+/*
+        try {
+          // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
+          var validLanguageTags = [
+            "de", // ISO 639 language code
+            "de-DE", // + ISO 3166-1 country code
+            "DE-de", // tags are case-insensitive
+            "cmn", // ISO 639 language code
+            "cmn-Hans", // + script code
+            "CMN-hANS", // tags are case-insensitive
+            "cmn-hans-cn", // + ISO 3166-1 country code
+            "es-419", // + UN M.49 region code
+            "es-419-u-nu-latn-cu-bob", // + Unicode locale extension sequence
+            "i-klingon", // grandfathered tag
+            "cmn-hans-cn-t-ca-u-ca-x-t-u", // singleton subtags can also be used as private use subtags
+            "de-gregory-u-ca-gregory", // variant and extension subtags may be the same
+            "aa-a-foo-x-a-foo-bar", // variant subtags can also be used as private use subtags
+            "x-en-US-12345", // anything goes in private use tags
+            "x-12345-12345-en-US",
+            "x-en-US-12345-12345",
+            "x-en-u-foo",
+            "x-en-u-foo-u-bar"
+          ];
+          for (var i in validLanguageTags) {
+            Intl.DateTimeFormat(validLanguageTags[i]);
+          }
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -2010,7 +2210,8 @@ try {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2023,11 +2224,18 @@ try {
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment"><td><span><a class="anchor" href="#test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment">&#xA7;</a>resolvedOptions().timeZone defaults to the host environment</span><script data-source="
-var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-return tz !== undefined &amp;&amp; tz.length &gt; 0;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nvar tz = Intl.DateTimeFormat().resolvedOptions().timeZone;\nreturn tz !== undefined && tz.length > 0;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nvar tz = Intl.DateTimeFormat().resolvedOptions().timeZone;\nreturn tz !== undefined && tz.length > 0;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment"><td><span><a class="anchor" href="#test-DateTimeFormat_resolvedOptions().timeZone_defaults_to_the_host_environment">&#xA7;</a>resolvedOptions().timeZone defaults to the host environment</span><script data-source="function() {
+/*
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return tz !== undefined &amp;&amp; tz.length &gt; 0;
+      */
+                }">test(
+function() {
+/*
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return tz !== undefined && tz.length > 0;
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -2087,7 +2295,8 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2100,18 +2309,32 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="yes obsolete" data-browser="samsung7_2">Yes</td>
 <td class="yes" data-browser="samsung8_2">Yes</td>
 </tr>
-<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_IANA_timezone_names"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_IANA_timezone_names">&#xA7;</a>accepts IANA timezone names</span><script data-source="
-try {
-  new Intl.DateTimeFormat(&apos;en-US&apos;, {
-    timeZone: &apos;Australia/Sydney&apos;,
-    timeZoneName: &apos;long&apos;
-  }).format();
-  return true;
-} catch (e) {
-  return false;
-}
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\ntry {\n  new Intl.DateTimeFormat('en-US', {\n    timeZone: 'Australia/Sydney',\n    timeZoneName: 'long'\n  }).format();\n  return true;\n} catch (e) {\n  return false;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\ntry {\n  new Intl.DateTimeFormat('en-US', {\n    timeZone: 'Australia/Sydney',\n    timeZoneName: 'long'\n  }).format();\n  return true;\n} catch (e) {\n  return false;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="DateTimeFormat" id="test-DateTimeFormat_accepts_IANA_timezone_names"><td><span><a class="anchor" href="#test-DateTimeFormat_accepts_IANA_timezone_names">&#xA7;</a>accepts IANA timezone names</span><script data-source="function() {
+/*
+        try {
+          new Intl.DateTimeFormat(&apos;en-US&apos;, {
+            timeZone: &apos;Australia/Sydney&apos;,
+            timeZoneName: &apos;long&apos;
+          }).format();
+          return true;
+        } catch (e) {
+          return false;
+        }
+      */
+                }">test(
+function() {
+/*
+        try {
+          new Intl.DateTimeFormat('en-US', {
+            timeZone: 'Australia/Sydney',
+            timeZoneName: 'long'
+          }).format();
+          return true;
+        } catch (e) {
+          return false;
+        }
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
@@ -2171,7 +2394,8 @@ try {
 <td class="no obsolete" data-browser="duktape2_0">No</td>
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
-<td class="no" data-browser="duktape2_3">No</td>
+<td class="no obsolete" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="duktape2_4">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2244,7 +2468,8 @@ try {
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2257,10 +2482,16 @@ try {
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="String.prototype.localeCompare" id="test-String.prototype.localeCompare_exists_on_String_prototype"><td><span><a class="anchor" href="#test-String.prototype.localeCompare_exists_on_String_prototype">&#xA7;</a>exists on String prototype</span><script data-source="
-return typeof String.prototype.localeCompare === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nreturn typeof String.prototype.localeCompare === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof String.prototype.localeCompare === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="String.prototype.localeCompare" id="test-String.prototype.localeCompare_exists_on_String_prototype"><td><span><a class="anchor" href="#test-String.prototype.localeCompare_exists_on_String_prototype">&#xA7;</a>exists on String prototype</span><script data-source="function() {
+/*
+        return typeof String.prototype.localeCompare === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof String.prototype.localeCompare === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -2320,7 +2551,8 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2393,7 +2625,8 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2406,10 +2639,16 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Number.prototype.toLocaleString" id="test-Number.prototype.toLocaleString_exists_on_Number_prototype"><td><span><a class="anchor" href="#test-Number.prototype.toLocaleString_exists_on_Number_prototype">&#xA7;</a>exists on Number prototype</span><script data-source="
-return typeof Number.prototype.toLocaleString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nreturn typeof Number.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Number.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Number.prototype.toLocaleString" id="test-Number.prototype.toLocaleString_exists_on_Number_prototype"><td><span><a class="anchor" href="#test-Number.prototype.toLocaleString_exists_on_Number_prototype">&#xA7;</a>exists on Number prototype</span><script data-source="function() {
+/*
+        return typeof Number.prototype.toLocaleString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Number.prototype.toLocaleString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -2469,7 +2708,8 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2542,7 +2782,8 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2555,10 +2796,16 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Array.prototype.toLocaleString" id="test-Array.prototype.toLocaleString_exists_on_Array_prototype"><td><span><a class="anchor" href="#test-Array.prototype.toLocaleString_exists_on_Array_prototype">&#xA7;</a>exists on Array prototype</span><script data-source="
-return typeof Array.prototype.toLocaleString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn typeof Array.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Array.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Array.prototype.toLocaleString" id="test-Array.prototype.toLocaleString_exists_on_Array_prototype"><td><span><a class="anchor" href="#test-Array.prototype.toLocaleString_exists_on_Array_prototype">&#xA7;</a>exists on Array prototype</span><script data-source="function() {
+/*
+        return typeof Array.prototype.toLocaleString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Array.prototype.toLocaleString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -2618,7 +2865,8 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2691,7 +2939,8 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2704,10 +2953,16 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Object.prototype.toLocaleString" id="test-Object.prototype.toLocaleString_exists_on_Object_prototype"><td><span><a class="anchor" href="#test-Object.prototype.toLocaleString_exists_on_Object_prototype">&#xA7;</a>exists on Object prototype</span><script data-source="
-return typeof Object.prototype.toLocaleString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nreturn typeof Object.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Object.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Object.prototype.toLocaleString" id="test-Object.prototype.toLocaleString_exists_on_Object_prototype"><td><span><a class="anchor" href="#test-Object.prototype.toLocaleString_exists_on_Object_prototype">&#xA7;</a>exists on Object prototype</span><script data-source="function() {
+/*
+        return typeof Object.prototype.toLocaleString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Object.prototype.toLocaleString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -2767,7 +3022,8 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2840,7 +3096,8 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2853,10 +3110,16 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleString" id="test-Date.prototype.toLocaleString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
-return typeof Date.prototype.toLocaleString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Date.prototype.toLocaleString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Date.prototype.toLocaleString" id="test-Date.prototype.toLocaleString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="function() {
+/*
+        return typeof Date.prototype.toLocaleString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Date.prototype.toLocaleString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -2916,7 +3179,8 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2989,7 +3253,8 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -3002,10 +3267,16 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleDateString" id="test-Date.prototype.toLocaleDateString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleDateString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
-return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleDateString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Date.prototype.toLocaleDateString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Date.prototype.toLocaleDateString" id="test-Date.prototype.toLocaleDateString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleDateString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="function() {
+/*
+        return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Date.prototype.toLocaleDateString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -3065,7 +3336,8 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -3138,7 +3410,8 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_0" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
-<td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="duktape2_4" data-tally="1">1/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -3151,10 +3424,16 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="samsung7_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="samsung8_2" data-tally="1">1/1</td>
 </tr>
-<tr class="subtest" data-parent="Date.prototype.toLocaleTimeString" id="test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="
-return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nreturn typeof Date.prototype.toLocaleTimeString === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Date.prototype.toLocaleTimeString === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
+<tr class="subtest" data-parent="Date.prototype.toLocaleTimeString" id="test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype"><td><span><a class="anchor" href="#test-Date.prototype.toLocaleTimeString_exists_on_Date_prototype">&#xA7;</a>exists on Date prototype</span><script data-source="function() {
+/*
+        return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
+      */
+                }">test(
+function() {
+/*
+        return typeof Date.prototype.toLocaleTimeString === 'function';
+      */
+                }())</script></td>
 <td class="no obsolete" data-browser="ie8">No</td>
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
@@ -3214,7 +3493,8 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_0">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
-<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="duktape2_4">Yes</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>

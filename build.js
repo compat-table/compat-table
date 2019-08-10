@@ -43,24 +43,69 @@ var byTestSuite = function(suite) {
   };
 };
 
+var dataCommon = require('./data-common');
+function resolveResult(result) {
+  if (typeof result === 'string') {
+    if (result.startsWith('data-common:')) {
+      var prop = result.slice(result.indexOf(':') + 1);
+      return dataCommon[prop];
+    }
+  }
+  return result;
+}
+
+function setExec(test, results) {
+    var resTest;
+    var i;
+    for (i = 0; i < results.length; i++) {
+        if (results[i].name === test.name) {
+            resTest = results[i];
+            break;
+        }
+    }
+    if (!resTest) {
+        throw new Error('Unable to find test in results JSON');
+    }
+    if (test.exec) {
+        resTest.exec = test.exec;
+    }
+    if (test.subtests) {
+        if (!resTest.subtests) {
+            throw new Error('Test has subtests, but results test doesn\'t');
+        }
+        for (i = 0; i < test.subtests.length; i++) {
+            setExec(test.subtests[i], resTest.subtests);
+        }
+    }
+}
+
+function createSuite(suitename) {
+    var suite = require('./' + suitename);
+    var tests = require('./' + suitename + '-tests');
+    for (var i = 0; i < tests.length; i++) {
+        setExec(tests[i], suite.tests);
+    }
+    return suite;
+}
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
-  var es5 = require('./data-es5');
+  var es5 = createSuite('data-es5');
   es5.browsers = pickBy(environments, byTestSuite('es5'));
   handle(es5);
-  var es6 = require('./data-es6');
+  var es6 = createSuite('data-es6');
   es6.browsers = pickBy(environments, byTestSuite('es6'));
   handle(es6);
-  var es2016plus = require('./data-es2016plus');
+  var es2016plus = createSuite('data-es2016plus');
   es2016plus.browsers = pickBy(environments, byTestSuite('es2016plus'));
   handle(es2016plus);
-  var esnext = require('./data-esnext');
+  var esnext = createSuite('data-esnext');
   esnext.browsers = pickBy(environments, byTestSuite('esnext'));
   handle(esnext);
-  var esintl = require('./data-esintl');
+  var esintl = createSuite('data-esintl');
   esintl.browsers = pickBy(environments, byTestSuite('esintl'));
   handle(esintl);
-  var nonStandard = require('./data-non-standard');
+  var nonStandard = createSuite('data-non-standard');
   nonStandard.browsers = pickBy(environments, byTestSuite('non-standard'));
   handle(nonStandard);
 
@@ -420,7 +465,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     return obj;
   },{});
 
-  function interpolateResults(res) {
+  function interpolateResults(oldRes) {
+    var res = resolveResult(oldRes);
     var browser, prevBrowser, result, prevResult, bid, prevBid;
     for (bid in rawBrowsers) {
       // For browsers that are essentially equal to other browsers,
@@ -646,7 +692,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
 
         // Add all the result cells
         Object.keys(browsers).forEach(function(browserId) {
-          var result = subtest.res[browserId];
+          var result = resolveResult(subtest.res[browserId]);
 
           subtestRow.append(resultCell(
             browserId,
@@ -665,7 +711,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           var tally = 0, outOf = 0, flaggedTally = 0;
 
           t.subtests.forEach(function(e) {
-            var result = e.res[browserId];
+            var result = resolveResult(e.res[browserId]);
 
             tally += testValue(result) === true;
             flaggedTally += ['flagged','strict'].indexOf(testValue(result)) > -1;
@@ -687,7 +733,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }
       // For single tests:
       else {
-        var result = t.res[browserId];
+        var result = resolveResult(t.res[browserId]);
 
         testRow.append(resultCell(
           browserId,

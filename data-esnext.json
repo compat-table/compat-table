@@ -1,0 +1,2023 @@
+{
+    "name": "ES Next",
+    "target_file": "esnext/index.html",
+    "skeleton_file": "esnext/skeleton.html",
+    "tests": [
+        {
+            "name": "globalThis",
+            "category": "candidate (stage 3)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-global",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis",
+            "subtests": [
+                {
+                    "name": "\"globalThis\" global property is global object",
+                    "res": {
+                        "babel6corejs2": false,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox53": false,
+                        "firefox65": true,
+                        "chrome71": true,
+                        "opera10_50": false,
+                        "safari10_1": false,
+                        "safari12_1": true,
+                        "safaritp": true,
+                        "node0_10": false,
+                        "node0_12": false,
+                        "node4": false,
+                        "node6": false,
+                        "node6_5": false,
+                        "node7": false,
+                        "node7_6": false,
+                        "node8": false,
+                        "node8_3": false,
+                        "node8_7": false,
+                        "duktape2_0": false,
+                        "duktape2_1": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "\"globalThis\" global property has correct property descriptor",
+                    "res": {
+                        "babel6corejs2": false,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox53": false,
+                        "firefox65": true,
+                        "chrome71": true,
+                        "opera10_50": false,
+                        "safari10_1": false,
+                        "safari12_1": true,
+                        "safaritp": true,
+                        "node0_10": false,
+                        "node0_12": false,
+                        "node4": false,
+                        "node6": false,
+                        "node6_5": false,
+                        "node7": false,
+                        "node7_6": false,
+                        "node8": false,
+                        "node8_3": false,
+                        "node8_7": false,
+                        "duktape2_0": false,
+                        "duktape2_1": false,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "WeakReferences",
+            "spec": "https://github.com/tc39/proposal-weakrefs",
+            "category": "candidate (stage 3)",
+            "significance": "large",
+            "subtests": [
+                {
+                    "name": "WeakRef minimal support",
+                    "spec": "https://github.com/tc39/proposal-weakrefs#weak-references",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "chrome65": false,
+                        "chrome74": {
+                            "val": "flagged",
+                            "note_id": "chrome-weakrefs",
+                            "note_html": "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8."
+                        },
+                        "safari13": true,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Finalizers minimal support",
+                    "spec": "https://github.com/tc39/proposal-weakrefs#finalizers",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "chrome65": false,
+                        "chrome74": {
+                            "val": "flagged",
+                            "note_id": "chrome-weakrefs"
+                        },
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "instance class fields",
+            "category": "candidate (stage 3)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-class-fields",
+            "subtests": [
+                {
+                    "name": "public instance class fields",
+                    "res": {
+                        "babel6corejs2": true,
+                        "tr": true,
+                        "typescript1corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox69": true,
+                        "chrome72": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "private instance class fields basic support",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "chrome74": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "private instance class fields initializers",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "chrome74": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "computed instance class fields",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "chrome73": true,
+                        "firefox66": false,
+                        "firefox69": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "static class fields",
+            "category": "candidate (stage 3)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-static-class-features/",
+            "subtests": [
+                {
+                    "name": "public static class fields",
+                    "res": {
+                        "babel6corejs2": true,
+                        "tr": true,
+                        "typescript1corejs2": true,
+                        "firefox2": false,
+                        "chrome72": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "private static class fields",
+                    "res": {
+                        "firefox2": false,
+                        "chrome74": true,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "computed static class fields",
+                    "res": {
+                        "firefox2": false,
+                        "chrome73": true,
+                        "firefox66": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "optional chaining operator (?.)",
+            "spec": "https://github.com/tc39/proposal-optional-chaining",
+            "category": "candidate (stage 3)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "optional property access",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "optional bracket access",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "optional method call",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "nullish coalescing operator (??)",
+            "spec": "https://github.com/tc39/proposal-nullish-coalescing",
+            "category": "candidate (stage 3)",
+            "significance": "small",
+            "res": {
+                "babel7corejs2": true,
+                "ie11": false,
+                "firefox52": false,
+                "graalvm": false,
+                "duktape2_4": false,
+                "safaritp": {"val": "flagged", "note_id": "safari-nullish", "note_html": "The feature have to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishCoalescing=true open -a 'Safari Technology Preview'</code>."}
+            }
+        },
+        {
+            "name": "numeric separators",
+            "spec": "https://github.com/tc39/proposal-numeric-separator",
+            "category": "candidate (stage 3)",
+            "significance": "small",
+            "res": {
+                "babel7corejs2": true,
+                "typescript1corejs2": false,
+                "typescript2_7corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "firefox67": false,
+                "firefox70": true,
+                "chrome75": true,
+                "opera10_50": false,
+                "safari13": true,
+                "safaritp": true,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "BigInt",
+            "category": "candidate (stage 3)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-bigint",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+            "subtests": [
+                {
+                    "name": "basic functionality",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "constructor",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "BigInt.asIntN",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "BigInt.asUintN",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "BigInt64Array",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array",
+                    "res": {
+                        "firefox45": false,
+                        "firefox67": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "BigUint64Array",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array",
+                    "res": {
+                        "firefox45": false,
+                        "firefox67": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "DataView.prototype.getBigInt64",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "DataView.prototype.getBigUint64",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64",
+                    "res": {
+                        "firefox45": false,
+                        "firefox66": false,
+                        "firefox68": true,
+                        "chrome67": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Legacy RegExp features in JavaScript",
+            "category": "candidate (stage 3)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-regexp-legacy-features",
+            "subtests": [
+                {
+                    "name": "RegExp \"lastMatch\"",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch",
+                    "res": {
+                        "ie7": true,
+                        "firefox2": true,
+                        "safari3_1": true,
+                        "chrome7": true,
+                        "opera7_5": false,
+                        "opera10_10": false,
+                        "opera10_50": true,
+                        "konq4_4": true,
+                        "besen": false,
+                        "rhino1_7": true,
+                        "phantom": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "nashorn1_8": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "RegExp.$1-$9",
+                    "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n",
+                    "res": {
+                        "ie7": true,
+                        "firefox2": true,
+                        "safari3_1": true,
+                        "chrome7": true,
+                        "opera7_5": true,
+                        "opera10_10": true,
+                        "opera10_50": true,
+                        "konq4_4": true,
+                        "besen": false,
+                        "rhino1_7": true,
+                        "phantom": true,
+                        "android4_0": true,
+                        "duktape2_0": false,
+                        "nashorn1_8": true,
+                        "nashorn9": true,
+                        "nashorn10": true,
+                        "graalvm": true,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Generator function.sent Meta Property",
+            "category": "draft (stage 2)",
+            "significance": "small",
+            "spec": "https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md",
+            "res": {
+                "babel6corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Class and Property Decorators",
+            "category": "draft (stage 2)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-decorators",
+            "subtests": [
+                {
+                    "name": "class decorators",
+                    "spec": "https://github.com/wycats/javascript-decorators",
+                    "res": {
+                        "babel6corejs2": {
+                            "val": false,
+                            "note_id": "babel-decorators-legacy",
+                            "note_html": "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."
+                        },
+                        "typescript1corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Realms",
+            "category": "draft (stage 2)",
+            "significance": "large",
+            "spec": "https://github.com/tc39/proposal-realms",
+            "res": {
+                "ie11": false,
+                "firefox52": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "throw expressions",
+            "spec": "https://github.com/tc39/proposal-throw-expressions",
+            "category": "draft (stage 2)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "logical",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "parameter initializers",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "arrow function bodies",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "conditionals",
+                    "res": {
+                        "babel7corejs2": true,
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "String.prototype.replaceAll",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-string-replace-all",
+            "category": "draft (stage 2)",
+            "res": {
+                "babel6corejs2": false,
+                "ie11": false,
+                "firefox52": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Set methods",
+            "spec": "https://github.com/tc39/proposal-set-methods",
+            "category": "draft (stage 2)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "Set.prototype.intersection",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.union",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.difference",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.symmetricDifference",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.isDisjointFrom",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.isSubsetOf",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.isSupersetOf",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ArrayBuffer.prototype.transfer",
+            "category": "draft (stage 2)",
+            "significance": "small",
+            "spec": "https://github.com/domenic/proposal-arraybuffer-transfer/",
+            "subtests": [
+                {
+                    "name": "ArrayBuffer.prototype.transfer()",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "chrome70": false,
+                        "safari12": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "ArrayBuffer.prototype.realloc()",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "chrome70": false,
+                        "safari12": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Promise.any",
+            "category": "draft (stage 2)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-promise-any",
+            "res": {
+                "babel6corejs2": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "do expressions",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-do-expressions",
+            "res": {
+                "babel6corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Observable",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-observable",
+            "subtests": [
+                {
+                    "name": "basic support",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Symbol.observable well known symbol",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Observable.prototype.subscribe",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Observable constructor behavior",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Observable.prototype[Symbol.observable]",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Observable.of",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Observable.from",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Frozen Realms API",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-frozen-realms",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Math.signbit",
+            "spec": "http://jfbastien.github.io/papers/Math.signbit.html",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "res": {
+                "ie11": false,
+                "firefox52": false,
+                "opera10_50": false,
+                "duktape2_2": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Math extensions proposal",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "spec": "https://github.com/rwaldron/proposal-math-extensions",
+            "subtests": [
+                {
+                    "name": "Math.clamp",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.DEG_PER_RAD",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.degrees",
+                    "res": {
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.fscale",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.RAD_PER_DEG",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.radians",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Math.scale",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Promise.try",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-promise-try",
+            "subtests": [
+                {
+                    "name": "basic support",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "returns instance of Promise",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "call function synchronously",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function returns value",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function throws exception",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function returns fulfilled Promise",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function returns rejected Promise",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "`.of` and `.from` on collection constructors",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-setmap-offrom",
+            "subtests": [
+                {
+                    "name": "Map.of",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.from",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.of",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.from",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakMap.of",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakMap.from",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakSet.of",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakSet.from",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "opera10_50": false,
+                        "duktape2_2": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "the pipeline operator",
+            "spec": "https://github.com/tc39/proposal-pipeline-operator",
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "res": {
+                "babel7corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "firefox57": false,
+                "firefox58": {
+                    "val": "flagged",
+                    "note_id": "ffox-pipeline",
+                    "note_html": "Requires the <code>--enable-pipeline-operator</code> compile option."
+                },
+                "opera10_50": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "extensible numeric literals",
+            "spec": "https://github.com/tc39/proposal-extended-numeric-literals",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "res": {
+                "ie11": false,
+                "firefox52": false,
+                "opera10_50": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "partial application syntax",
+            "spec": "https://github.com/tc39/proposal-partial-application",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "partial application from left",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "partial application from right",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "partial application for any arg",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "partial application from left with rest",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "partial application from right with rest",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "partial application for any arg with rest",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "mixed partial application",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "runtime evaluation",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "runtime evaluation of property access",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "lexical `this`",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "constructor partial application",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "constructor partial application with rest",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Object.freeze and Object.seal syntax",
+            "spec": "https://github.com/keithamus/object-freeze-seal-syntax",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "Object.freeze syntax",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.freeze syntax with array literal",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.seal syntax",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Object.seal syntax with array literal",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Sealing, function destructuring",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Freezing, function destructuring",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Sealing, function arguments",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Freezing, function arguments",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "String.prototype.codePoints",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-string-prototype-codepoints",
+            "category": "proposal (stage 1)",
+            "res": {
+                "babel6corejs2": false,
+                "ie11": false,
+                "firefox52": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Getting last item from array",
+            "spec": "https://github.com/keithamus/proposal-array-last",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "Array.prototype.lastItem",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Array.prototype.lastIndex",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Collections methods",
+            "spec": "https://github.com/tc39/proposal-collection-methods",
+            "category": "proposal (stage 1)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "Map.groupBy",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.keyBy",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.deleteAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.every",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.filter",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.find",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.findKey",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.includes",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.keyOf",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.mapKeys",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.mapValues",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.merge",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.reduce",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Map.prototype.some",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.addAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.deleteAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.every",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.filter",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.find",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.join",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.map",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.reduce",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Set.prototype.some",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakMap.prototype.deleteAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakSet.prototype.addAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "WeakSet.prototype.deleteAll",
+                    "res": {
+                        "babel6corejs2": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Math.seededPRNG",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-seeded-random",
+            "category": "proposal (stage 1)",
+            "res": {
+                "babel6corejs2": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "{ BigInt, Number }.fromString",
+            "category": "proposal (stage 1)",
+            "significance": "small",
+            "spec": "https://github.com/tc39/proposal-number-fromstring",
+            "subtests": [
+                {
+                    "name": "Number.fromString",
+                    "res": {
+                        "babel6corejs2": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "BigInt.fromString",
+                    "res": {
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "bind (::) operator",
+            "spec": "https://github.com/zenparsing/es-function-bind",
+            "category": "strawman (stage 0)",
+            "significance": "medium",
+            "subtests": [
+                {
+                    "name": "binary form",
+                    "res": {
+                        "babel6corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "unary form",
+                    "res": {
+                        "babel6corejs2": true,
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "String.prototype.at",
+            "significance": "small",
+            "spec": "https://github.com/mathiasbynens/String.prototype.at",
+            "category": "strawman (stage 0)",
+            "res": {
+                "es7shim": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "additional meta properties",
+            "category": "strawman (stage 0)",
+            "significance": "medium",
+            "spec": "https://github.com/allenwb/ESideas/blob/master/ES7MetaProps.md",
+            "subtests": [
+                {
+                    "name": "function.callee",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function.count",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "function.arguments",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "method parameter decorators",
+            "spec": "https://docs.google.com/document/d/1Qpkqf_8NzAwfD8LdnqPjXAQ2wwh8BBUGynhn-ZlCWT0",
+            "category": "strawman (stage 0)",
+            "significance": "small",
+            "res": {
+                "typescript1corejs2": true,
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "function expression decorators",
+            "spec": "https://docs.google.com/document/d/1ikxIP5-RVYq6d_f8lAvf3pKC00W78ueyp-xIZ6q67uU/edit?pref=2&pli=1#",
+            "category": "strawman (stage 0)",
+            "significance": "small",
+            "res": {
+                "ie11": false,
+                "firefox2": false,
+                "opera10_50": false,
+                "duktape2_0": false,
+                "graalvm": false,
+                "duktape2_4": false
+            }
+        },
+        {
+            "name": "Reflect.isCallable / Reflect.isConstructor",
+            "category": "strawman (stage 0)",
+            "significance": "small",
+            "spec": "https://github.com/caitp/TC39-Proposals/blob/master/tc39-reflect-isconstructor-iscallable.md",
+            "subtests": [
+                {
+                    "name": "Reflect.isCallable",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.isConstructor",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "zones",
+            "category": "strawman (stage 0)",
+            "significance": "large",
+            "spec": "https://github.com/domenic/zones",
+            "subtests": [
+                {
+                    "name": "Zone",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.current",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.prototype.name",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.prototype.parent",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.prototype.fork",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.prototype.run",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Zone.prototype.wrap",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "syntactic tail calls",
+            "category": "strawman (stage 0)",
+            "significance": "medium",
+            "spec": "https://github.com/tc39/proposal-ptc-syntax",
+            "subtests": [
+                {
+                    "name": "direct recursion",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "mutual recursion",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "object shorthand improvements",
+            "spec": "https://github.com/rbuckton/proposal-shorthand-improvements",
+            "category": "strawman (stage 0)",
+            "significance": "small",
+            "subtests": [
+                {
+                    "name": "object initializers",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "destructuring assignments",
+                    "res": {
+                        "ie11": false,
+                        "firefox52": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Metadata reflection API",
+            "category": "pre-strawman",
+            "significance": "medium",
+            "spec": "https://github.com/rbuckton/ReflectDecorators",
+            "subtests": [
+                {
+                    "name": "Reflect.defineMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.hasMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.hasOwnMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.getMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.getOwnMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.getMetadataKeys",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.getOwnMetadataKeys",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.deleteMetadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                },
+                {
+                    "name": "Reflect.metadata",
+                    "res": {
+                        "ie11": false,
+                        "firefox2": false,
+                        "opera10_50": false,
+                        "duktape2_0": false,
+                        "graalvm": false,
+                        "duktape2_4": false
+                    }
+                }
+            ]
+        }
+    ]
+}
