@@ -2,9 +2,9 @@
  *  Node.js test runner for running data-*.js tests with QuickJS 'qjs' command.
  *
  *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects a './qjs' command in the current directory.  Example:
+ *  Expects a './qjsbn' command in the current directory.  Example:
  *
- *    $ cp /path/to/qjs ./qjs
+ *    $ cp /path/to/qjsbn ./qjsbn
  *    $ node qjs.js
  */
 
@@ -15,11 +15,10 @@ var testCount = 0;
 var testSuccess = 0;
 var testOutOfDate = 0;
 
-var qjsCommand = './qjs';
+var qjsCommand = './qjsbn';
 
 var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
-// QuickJS does not have a versioning system yet.
 var qjsKey = 'quickjs';
 console.log('QuickJS result key is: test.res.' + qjsKey);
 
