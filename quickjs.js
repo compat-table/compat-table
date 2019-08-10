@@ -17,8 +17,6 @@ var testOutOfDate = 0;
 
 var qjsCommand = './qjsbn';
 
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
-
 var qjsKey = 'quickjs';
 console.log('QuickJS result key is: test.res.' + qjsKey);
 

@@ -193,6 +193,7 @@
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine obsolete" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
 <th class="platform duktape2_3 engine" data-browser="duktape2_3"><a href="#duktape2_3" class="browser-name"><abbr title="Duktape 2.3">DUK 2.3</abbr></a></th>
+<th class="platform quickjs engine" data-browser="quickjs"><a href="#quickjs" class="browser-name"><abbr title="QuickJS">QJS</abbr></a></th>
 <th class="platform graalvm engine" data-browser="graalvm"><a href="#graalvm" class="browser-name"><abbr title="GraalVM JavaScript 19.0.0">GraalVM 19.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
@@ -270,6 +271,7 @@
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">2/2</td>
@@ -346,6 +348,7 @@ return typeof Intl === &apos;object&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -422,6 +425,7 @@ return Intl.constructor === Object;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -495,6 +499,7 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/4</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/4</td>
 <td class="tally" data-browser="graalvm" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">4/4</td>
@@ -571,6 +576,7 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -647,6 +653,7 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -723,6 +730,7 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -827,6 +835,7 @@ try {
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -900,6 +909,7 @@ try {
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -976,6 +986,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1049,6 +1060,7 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -1125,6 +1137,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1198,6 +1211,7 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/5</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/5</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/5</td>
 <td class="tally" data-browser="graalvm" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">5/5</td>
@@ -1274,6 +1288,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1350,6 +1365,7 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1426,6 +1442,7 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1502,6 +1519,7 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1606,6 +1624,7 @@ try {
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1679,6 +1698,7 @@ try {
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/6</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/6</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/6</td>
 <td class="tally" data-browser="graalvm" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">6/6</td>
@@ -1755,6 +1775,7 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1831,6 +1852,7 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -1907,6 +1929,7 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2011,6 +2034,7 @@ try {
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2088,6 +2112,7 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2172,6 +2197,7 @@ try {
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2245,6 +2271,7 @@ try {
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2321,6 +2348,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2394,6 +2422,7 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2470,6 +2499,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2543,6 +2573,7 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2619,6 +2650,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2692,6 +2724,7 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2768,6 +2801,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2841,6 +2875,7 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -2917,6 +2952,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -2990,6 +3026,7 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -3066,6 +3103,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
@@ -3139,6 +3177,7 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="1">1/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="1">1/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
@@ -3215,6 +3254,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="duktape2_1">Yes</td>
 <td class="yes obsolete" data-browser="duktape2_2">Yes</td>
 <td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
