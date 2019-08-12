@@ -1712,6 +1712,7 @@ exports.tests = [
     babel7corejs2: true,
     ie11: false,
     firefox52: false,
+    safaritp: {val: 'flagged', note_id: "safari-nullish", note_html: "The feature have to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishCoalescing=true open -a 'Safari Technology Preview'</code>."},
     graalvm: false,
   }
 },
