@@ -829,6 +829,7 @@ exports.tests = [
   subtests: [
     {
       name: 'public instance class fields',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Public_instance_fields',
       exec: function () {/*
         class C {
           x = 'x';
@@ -852,6 +853,7 @@ exports.tests = [
     },
     {
       name: 'private instance class fields basic support',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Private_instance_fields',
       exec: function () {/*
         class C {
           #x;
@@ -927,6 +929,7 @@ exports.tests = [
   subtests: [
     {
       name: 'public static class fields',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Public_static_fields',
       exec: function () {/*
         class C {
           static x = 'x';
@@ -947,6 +950,7 @@ exports.tests = [
     },
     {
       name: 'private static class fields',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Private_static_fields',
       exec: function () {/*
         class C {
           static #x = 42;
