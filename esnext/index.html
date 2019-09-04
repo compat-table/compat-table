@@ -184,7 +184,7 @@
 <th class="platform safari12 desktop" data-browser="safari12"><a href="#safari12" class="browser-name"><abbr title="Safari 12">SF 12</abbr></a></th>
 <th class="platform safari12_1 desktop" data-browser="safari12_1"><a href="#safari12_1" class="browser-name"><abbr title="Safari 12.1">SF&#xA0;12.1</abbr></a></th>
 <th class="platform safari13 desktop unstable" data-browser="safari13"><a href="#safari13" class="browser-name"><abbr title="Safari 13 Beta">SF&#xA0;13 Beta</abbr></a></th>
-<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 89">SF TP</abbr></a></th>
+<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 91">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r222556 (October 4, 2017)">WK</abbr></a></th>
 <th class="platform phantom2_1 engine obsolete" data-browser="phantom2_1"><a href="#phantom2_1" class="browser-name"><abbr title="PhantomJS 2.1">PJS</abbr></a></th>
 <th class="platform node0_10 engine obsolete" data-browser="node0_10"><a href="#node0_10" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-old-note"><sup>[1]</sup></a></th>
@@ -1707,8 +1707,8 @@ return C.x === 42;
 <td class="tally" data-browser="safari12" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari12_1" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="safari13" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0" data-flagged-tally="1">0/3</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0" data-flagged-tally="1">0/3</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/3</td>
@@ -1802,8 +1802,8 @@ return foo?.baz === 42 &amp;&amp; bar?.baz === undefined;
 <td class="no" data-browser="safari12">No</td>
 <td class="no" data-browser="safari12_1">No</td>
 <td class="no unstable" data-browser="safari13">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -1897,8 +1897,8 @@ return foo?.[&apos;baz&apos;] === 42 &amp;&amp; bar?.[&apos;baz&apos;] === undef
 <td class="no" data-browser="safari12">No</td>
 <td class="no" data-browser="safari12_1">No</td>
 <td class="no unstable" data-browser="safari13">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -1992,8 +1992,8 @@ return foo?.baz() === 42 &amp;&amp; bar?.baz() === undefined;
 <td class="no" data-browser="safari12">No</td>
 <td class="no" data-browser="safari12_1">No</td>
 <td class="no unstable" data-browser="safari13">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#safari-nullish-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -18017,7 +18017,7 @@ return typeof Reflect.metadata == &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-weakrefs-note">  <sup>[8]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8.</p><p id="firefox-class-fields-note">  <sup>[9]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="chrome-harmony-note">  <sup>[10]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[11]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="safari-nullish-note">  <sup>[12]</sup> The feature have to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishCoalescing=true open -a &apos;Safari Technology Preview&apos;</code>.</p><p id="firefox-nightly-note">  <sup>[13]</sup> The feature is available only in Firefox Nightly builds.</p><p id="firefox-bigint-note">  <sup>[14]</sup> The feature have to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[15]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[16]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[5]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-experimental-note">  <sup>[7]</sup> The feature have to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="chrome-weakrefs-note">  <sup>[8]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8.</p><p id="firefox-class-fields-note">  <sup>[9]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="chrome-harmony-note">  <sup>[10]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[11]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="safari-nullish-note">  <sup>[12]</sup> The feature has to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishAwareOperators=true open -a &apos;Safari Technology Preview&apos;</code>.</p><p id="firefox-nightly-note">  <sup>[13]</sup> The feature is available only in Firefox Nightly builds.</p><p id="firefox-bigint-note">  <sup>[14]</sup> The feature have to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[15]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[16]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
   <script src="../jquery.floatThead.min.js"></script>
