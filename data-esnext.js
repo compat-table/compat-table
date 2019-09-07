@@ -1632,6 +1632,7 @@ exports.tests = [
         babel7corejs2: true,
         ie11: false,
         firefox52: false,
+        chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
         safaritp: {val: 'flagged', note_id: "safari-nullish", note_html: "The feature has to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishAwareOperators=true open -a 'Safari Technology Preview'</code>."},
         graalvm: false,
       }
@@ -1647,6 +1648,7 @@ exports.tests = [
         babel7corejs2: true,
         ie11: false,
         firefox52: false,
+        chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
         safaritp: {val: 'flagged', note_id: "safari-nullish"},
         graalvm: false,
       }
@@ -1662,6 +1664,7 @@ exports.tests = [
         babel7corejs2: true,
         ie11: false,
         firefox52: false,
+        chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
         safaritp: {val: 'flagged', note_id: "safari-nullish"},
         graalvm: false,
       }
@@ -1719,6 +1722,7 @@ exports.tests = [
     babel7corejs2: true,
     ie11: false,
     firefox52: false,
+    chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
     safaritp: {val: 'flagged', note_id: "safari-nullish"},
     graalvm: false,
   }
