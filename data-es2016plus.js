@@ -3513,6 +3513,7 @@ exports.tests = [
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
       firefox68: firefox.nightly,
+      firefox71: true,
       chrome76: true,
       safari13: true,
     }
