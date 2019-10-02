@@ -14149,6 +14149,293 @@ Promise.allSettled([
 <td class="no obsolete" data-browser="samsung7_2">No</td>
 <td class="no" data-browser="samsung8_2">No</td>
 </tr>
+<tr class="supertest" significance="0.25"><td id="test-globalThis"><span><a class="anchor" href="#test-globalThis">&#xA7;</a><a href="https://github.com/tc39/proposal-global">globalThis</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
+<td class="tally" data-browser="tr" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel6corejs2" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel7corejs2" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20190301" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20190325" data-tally="0">0/2</td>
+<td class="tally" data-browser="closure20190709" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript1corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_9corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3_1corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3_2corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3_2corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript3_3corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript3_4corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript3_5corejs3" data-tally="1">2/2</td>
+<td class="tally" data-browser="typescript3_6corejs3" data-tally="1">2/2</td>
+<td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
+<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge16" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge17" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge18" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox60" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox62" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox63" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox64" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox65" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox66" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox67" data-tally="1">2/2</td>
+<td class="tally" data-browser="firefox68" data-tally="1">2/2</td>
+<td class="tally" data-browser="firefox69" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox70" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox71" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome69" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome70" data-tally="0" data-flagged-tally="1">0/2</td>
+<td class="tally obsolete" data-browser="chrome71" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome72" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome73" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome74" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome75" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome76" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome77" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome78" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome79" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="safari11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari11_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari12" data-tally="0">0/2</td>
+<td class="tally" data-browser="safari12_1" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari13" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node4" data-tally="0">0/2</td>
+<td class="tally" data-browser="node6_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node7" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node7_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node8" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node8_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node8_7" data-tally="0">0/2</td>
+<td class="tally" data-browser="node8_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node10_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node10_4" data-tally="0">0/2</td>
+<td class="tally" data-browser="node10_9" data-tally="0">0/2</td>
+<td class="tally" data-browser="node11_0" data-tally="0" data-flagged-tally="1">0/2</td>
+<td class="tally" data-browser="node12_0" data-tally="1">2/2</td>
+<td class="tally" data-browser="node12_5" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="duktape2_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
+<td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios11_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios12" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios12_2" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="samsung6_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung7_2" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung8_2" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="globalThis" id="test-globalThis_globalThis_global_property_is_global_object"><td><span><a class="anchor" href="#test-globalThis_globalThis_global_property_is_global_object">&#xA7;</a>&quot;globalThis&quot; global property is global object</span><script data-source="
+var actualGlobal = Function(&apos;return this&apos;)();
+actualGlobal.__system_global_test__ = 42;
+return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp; globalThis === actualGlobal &amp;&amp; !globalThis.lacksGlobalThis &amp;&amp; globalThis.__system_global_test__ === 42;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("144");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("144");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no obsolete" data-browser="closure20190301">No</td>
+<td class="no obsolete" data-browser="closure20190325">No</td>
+<td class="no" data-browser="closure20190709">No</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_5corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript3_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="yes obsolete" data-browser="firefox65">Yes</td>
+<td class="yes obsolete" data-browser="firefox66">Yes</td>
+<td class="yes obsolete" data-browser="firefox67">Yes</td>
+<td class="yes" data-browser="firefox68">Yes</td>
+<td class="yes" data-browser="firefox69">Yes</td>
+<td class="yes unstable" data-browser="firefox70">Yes</td>
+<td class="yes unstable" data-browser="firefox71">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome69">No</td>
+<td class="no flagged obsolete" data-browser="chrome70">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome71">Yes</td>
+<td class="yes obsolete" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="chrome73">Yes</td>
+<td class="yes obsolete" data-browser="chrome74">Yes</td>
+<td class="yes obsolete" data-browser="chrome75">Yes</td>
+<td class="yes" data-browser="chrome76">Yes</td>
+<td class="yes" data-browser="chrome77">Yes</td>
+<td class="yes unstable" data-browser="chrome78">Yes</td>
+<td class="yes unstable" data-browser="chrome79">Yes</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no obsolete" data-browser="safari12">No</td>
+<td class="yes" data-browser="safari12_1">Yes</td>
+<td class="yes" data-browser="safari13">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="no obsolete" data-browser="node10_4">No</td>
+<td class="no" data-browser="node10_9">No</td>
+<td class="no flagged" data-browser="node11_0">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="node12_0">Yes</td>
+<td class="yes" data-browser="node12_5">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="yes" data-browser="ios12_2">Yes</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
+<tr class="subtest" data-parent="globalThis" id="test-globalThis_globalThis_global_property_has_correct_property_descriptor"><td><span><a class="anchor" href="#test-globalThis_globalThis_global_property_has_correct_property_descriptor">&#xA7;</a>&quot;globalThis&quot; global property has correct property descriptor</span><script data-source="
+var actualGlobal = Function(&apos;return this&apos;)();
+if (typeof globalThis !== &apos;object&apos;) { return false; }
+if (!(&apos;globalThis&apos; in actualGlobal)) { return false; }
+if (Object.prototype.propertyIsEnumerable.call(actualGlobal, &apos;globalThis&apos;)) { return false; }
+
+var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, &apos;globalThis&apos;);
+return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;&amp; descriptor.configurable &amp;&amp; descriptor.writable;
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("145");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("145");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no" data-browser="tr">No</td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
+<td class="no obsolete" data-browser="closure">No</td>
+<td class="no obsolete" data-browser="closure20181028">No</td>
+<td class="no obsolete" data-browser="closure20181125">No</td>
+<td class="no obsolete" data-browser="closure20190121">No</td>
+<td class="no obsolete" data-browser="closure20190215">No</td>
+<td class="no obsolete" data-browser="closure20190301">No</td>
+<td class="no obsolete" data-browser="closure20190325">No</td>
+<td class="no" data-browser="closure20190709">No</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[25]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_5corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="yes" data-browser="typescript3_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[6]</sup></a></td>
+<td class="no" data-browser="es7shim">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="no obsolete" data-browser="edge16">No</td>
+<td class="no" data-browser="edge17">No</td>
+<td class="no" data-browser="edge18">No</td>
+<td class="no" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox62">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="yes obsolete" data-browser="firefox65">Yes</td>
+<td class="yes obsolete" data-browser="firefox66">Yes</td>
+<td class="yes obsolete" data-browser="firefox67">Yes</td>
+<td class="yes" data-browser="firefox68">Yes</td>
+<td class="yes" data-browser="firefox69">Yes</td>
+<td class="yes unstable" data-browser="firefox70">Yes</td>
+<td class="yes unstable" data-browser="firefox71">Yes</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="no obsolete" data-browser="chrome69">No</td>
+<td class="no flagged obsolete" data-browser="chrome70">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
+<td class="yes obsolete" data-browser="chrome71">Yes</td>
+<td class="yes obsolete" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="chrome73">Yes</td>
+<td class="yes obsolete" data-browser="chrome74">Yes</td>
+<td class="yes obsolete" data-browser="chrome75">Yes</td>
+<td class="yes" data-browser="chrome76">Yes</td>
+<td class="yes" data-browser="chrome77">Yes</td>
+<td class="yes unstable" data-browser="chrome78">Yes</td>
+<td class="yes unstable" data-browser="chrome79">Yes</td>
+<td class="no obsolete" data-browser="safari11">No</td>
+<td class="no obsolete" data-browser="safari11_1">No</td>
+<td class="no obsolete" data-browser="safari12">No</td>
+<td class="yes" data-browser="safari12_1">Yes</td>
+<td class="yes" data-browser="safari13">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="no" data-browser="node6_5">No</td>
+<td class="no obsolete" data-browser="node7">No</td>
+<td class="no obsolete" data-browser="node7_6">No</td>
+<td class="no obsolete" data-browser="node8">No</td>
+<td class="no obsolete" data-browser="node8_3">No</td>
+<td class="no obsolete" data-browser="node8_7">No</td>
+<td class="no" data-browser="node8_10">No</td>
+<td class="no obsolete" data-browser="node10_0">No</td>
+<td class="no obsolete" data-browser="node10_4">No</td>
+<td class="no" data-browser="node10_9">No</td>
+<td class="no flagged" data-browser="node11_0">Flag<a href="#chrome-experimental-note"><sup>[4]</sup></a></td>
+<td class="yes" data-browser="node12_0">Yes</td>
+<td class="yes" data-browser="node12_5">Yes</td>
+<td class="no obsolete" data-browser="duktape2_0">No</td>
+<td class="no obsolete" data-browser="duktape2_1">No</td>
+<td class="no obsolete" data-browser="duktape2_2">No</td>
+<td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="no obsolete" data-browser="ios10_3">No</td>
+<td class="no obsolete" data-browser="ios11">No</td>
+<td class="no obsolete" data-browser="ios11_3">No</td>
+<td class="no" data-browser="ios12">No</td>
+<td class="yes" data-browser="ios12_2">Yes</td>
+<td class="no obsolete" data-browser="samsung6_4">No</td>
+<td class="no obsolete" data-browser="samsung7_2">No</td>
+<td class="no" data-browser="samsung8_2">No</td>
+</tr>
 </tbody>
     </table>
     <div id="footnotes">
