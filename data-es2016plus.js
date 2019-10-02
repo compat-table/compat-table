@@ -3647,6 +3647,90 @@ exports.tests = [
       safari13: true,
     }
   },
+  {
+    name: 'globalThis',
+    category: '2020 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-global',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis',
+    subtests: [{
+      name: '"globalThis" global property is global object',
+      exec: function(){/*
+      var actualGlobal = Function('return this')();
+      actualGlobal.__system_global_test__ = 42;
+      return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
+    */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        firefox2: false,
+        firefox53: false,
+        firefox65: true,
+        chrome70: chrome.experimental,
+        chrome71: true,
+        opera10_50: false,
+        safari10_1: false,
+        safari12_1: true,
+        safaritp: true,
+        node0_10: false,
+        node0_12: false,
+        node4: false,
+        node6: false,
+        node6_5: false,
+        node7: false,
+        node7_6: false,
+        node8: false,
+        node8_3: false,
+        node8_7: false,
+        duktape2_0: false,
+        duktape2_1: false,
+        graalvm: true,
+      }
+    }, {
+      name: '"globalThis" global property has correct property descriptor',
+      exec: function(){/*
+      var actualGlobal = Function('return this')();
+      if (typeof globalThis !== 'object') { return false; }
+      if (!('globalThis' in actualGlobal)) { return false; }
+      if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }
+
+      var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');
+      return descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;
+    */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        firefox2: false,
+        firefox53: false,
+        firefox65: true,
+        chrome70: chrome.experimental,
+        chrome71: true,
+        opera10_50: false,
+        safari10_1: false,
+        safari12_1: true,
+        safaritp: true,
+        node0_10: false,
+        node0_12: false,
+        node4: false,
+        node6: false,
+        node6_5: false,
+        node7: false,
+        node7_6: false,
+        node8: false,
+        node8_3: false,
+        node8_7: false,
+        duktape2_0: false,
+        duktape2_1: false,
+        graalvm: true,
+      }
+    }]
+  },
 ];
 
 //Shift annex B features to the bottom
