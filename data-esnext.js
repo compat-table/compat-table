@@ -1995,7 +1995,7 @@ exports.tests = [
   name: 'String.prototype.replaceAll',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-replace-all',
-  category: STAGE2,
+  category: STAGE3,
   exec: function () {/*
     return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
   */},
