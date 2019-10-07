@@ -2721,7 +2721,7 @@ exports.tests = [
 },
 {
   name: 'Promise.any',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-any',
   exec: function () {/*
