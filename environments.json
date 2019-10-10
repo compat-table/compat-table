@@ -486,7 +486,19 @@
     "platformtype": "compiler",
     "release": "2019-08-28",
     "obsolete": false,
-    "unstable": false,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_7corejs3": {
+    "full": "TypeScript 3.7 Beta + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2019-10-01",
+    "unstable": true,
     "test_suites": [
       "es6",
       "es2016plus",
