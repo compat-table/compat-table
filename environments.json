@@ -3341,7 +3341,7 @@
     "short": "Samsung 6.4",
     "platformtype": "mobile",
     "release": "2018-02-19",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung7_2": {
     "full": "Samsung Internet for Android 7.2",
@@ -3358,6 +3358,30 @@
     "short": "Samsung 8.2",
     "platformtype": "mobile",
     "equals": "chrome63",
+    "obsolete": true
+  },
+  "samsung9_2": {
+    "full": "Samsung Internet for Android 9.2",
+    "family": "Samsung",
+    "short": "Samsung 9.2",
+    "platformtype": "mobile",
+    "equals": "chrome67",
     "obsolete": false
+  },
+  "samsung9_4": {
+    "full": "Samsung Internet for Android 9.4",
+    "family": "Samsung",
+    "short": "Samsung 9.4",
+    "platformtype": "mobile",
+    "equals": "chrome67",
+    "obsolete": false
+  },
+  "samsung10_2": {
+    "full": "Samsung Internet for Android 10.2",
+    "family": "Samsung",
+    "short": "Samsung 10.2",
+    "platformtype": "mobile",
+    "equals": "chrome71",
+    "unstable": true
   }
 }
