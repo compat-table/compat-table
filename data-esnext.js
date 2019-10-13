@@ -2864,6 +2864,26 @@ exports.tests = [
     typescript3_2corejs3: typescript.corejs,
   }
 },
+{
+  name: 'Iterator Helpers',
+  category: STAGE2,
+  significance: 'large',
+  spec: 'https://github.com/tc39/proposal-iterator-helpers',
+  subtests: [
+    {
+      name: 'instanceof Iterator',
+      exec: function () {/*
+        return [1, 2, 3].values() instanceof Iterator;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+  ]
+},
 ];
 
 
