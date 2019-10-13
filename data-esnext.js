@@ -2896,6 +2896,21 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
       },
     },
+    {
+      name: 'Iterator.from, iterable',
+      exec: function () {/*
+        const iterator = Iterator.from([1, 2, 3]);
+        return 'next' in iterator
+          && iterator instanceof Iterator
+          && Array.from(iterator).join() === '1,2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
   ]
 },
 ];
