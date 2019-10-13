@@ -2882,6 +2882,20 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
       },
     },
+    {
+      name: 'extends Iterator',
+      exec: function () {/*
+        class Class extends Iterator { }
+        const instance = new Class();
+        return instance[Symbol.iterator]() === instance;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
   ]
 },
 ];
