@@ -2809,6 +2809,45 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Map.prototype.upsert',
+  category: STAGE2,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-upsert',
+  subtests: [
+    {
+      name: 'Map.prototype.upsert',
+      exec: function () {/*
+        const map = new Map([['a', 1]]);
+        if (map.upsert('a', it => 2, () => 3) !== 2) return false;
+        if (map.upsert('b', it => 2, () => 3) !== 3) return false;
+        return Array.from(map).join() === 'a,2,b,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'WeakMap.prototype.upsert',
+      exec: function () {/*
+        const a = {}, b = {};
+        const map = new WeakMap([[a, 1]]);
+        if (map.upsert(a, it => 2, () => 3) !== 2) return false;
+        if (map.upsert(b, it => 2, () => 3) !== 3) return false;
+        return map.get(a) === 2 && map.get(b) === 3;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+  ]
+},
 ];
 
 
