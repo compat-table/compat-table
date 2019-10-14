@@ -3053,6 +3053,18 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
       },
     },
+    {
+      name: 'Iterator.prototype.take',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().take(2)).join() === '1,2';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
   ]
 },
 ];
