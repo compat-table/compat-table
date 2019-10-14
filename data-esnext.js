@@ -3177,7 +3177,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.asIndexedPairs',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).asIndexedPairs().toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).asIndexedPairs().toArray().then(it => {
           if (it.join() === '0,1,1,2,2,3') asyncTestPassed();
         });
       */},
@@ -3191,7 +3191,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.drop',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).drop(1).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).drop(1).toArray().then(it => {
           if (it.join() === '2,3') asyncTestPassed();
         });
       */},
@@ -3205,7 +3205,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.every',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).every(it => typeof it === 'number').then(it => {
+        AsyncIterator.from([1, 2, 3]).every(it => typeof it === 'number').then(it => {
           if (it === true) asyncTestPassed();
         });
       */},
@@ -3219,7 +3219,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.filter',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).filter(it => it % 2).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).filter(it => it % 2).toArray().then(it => {
           if (it.join() === '1,3') asyncTestPassed();
         });
       */},
@@ -3233,7 +3233,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.find',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).find(it => it % 2).then(it => {
+        AsyncIterator.from([1, 2, 3]).find(it => it % 2).then(it => {
           if (it === 1) asyncTestPassed();
         });
       */},
@@ -3247,8 +3247,23 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.flatMap',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).flatMap(it => [it, 0]).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).flatMap(it => [it, 0]).toArray().then(it => {
           if (it.join() === '1,0,2,0,3,0') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.forEach',
+      exec: function () {/*
+        let result = '';
+        AsyncIterator.from([1, 2, 3]).forEach(it => result += it).then(() => {
+          if (result === '123') asyncTestPassed();
         });
       */},
       res: {
@@ -3261,7 +3276,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.map',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).map(it => it * it).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).map(it => it * it).toArray().then(it => {
           if (it.join() === '1,4,9') asyncTestPassed();
         });
       */},
@@ -3275,7 +3290,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.reduce',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).reduce((a, b) => a + b).then(it => {
+        AsyncIterator.from([1, 2, 3]).reduce((a, b) => a + b).then(it => {
           if (it === 6) asyncTestPassed();
         });
       */},
@@ -3289,7 +3304,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.some',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).some(it => typeof it === 'number').then(it => {
+        AsyncIterator.from([1, 2, 3]).some(it => typeof it === 'number').then(it => {
           if (it === true) asyncTestPassed();
         });
       */},
@@ -3303,7 +3318,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.take',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).take(2).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).take(2).toArray().then(it => {
           if (it.join() === '1,2') asyncTestPassed();
         });
       */},
@@ -3317,7 +3332,7 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.toArray',
       exec: function () {/*
-        return AsyncIterator.from([1, 2, 3]).toArray().then(it => {
+        AsyncIterator.from([1, 2, 3]).toArray().then(it => {
           if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();
         });
       */},
