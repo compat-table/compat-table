@@ -3217,6 +3217,20 @@ exports.tests = [
       },
     },
     {
+      name: 'AsyncIterator.prototype.some',
+      exec: function () {/*
+        return AsyncIterator.from([1, 2, 3]).some(it => typeof it === 'number').then(it => {
+          if (it === true) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
       name: 'AsyncIterator.prototype.take',
       exec: function () {/*
         return AsyncIterator.from([1, 2, 3]).take(2).toArray().then(it => {
