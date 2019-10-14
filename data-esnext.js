@@ -3139,6 +3139,24 @@ exports.tests = [
       },
     },
     {
+      name: 'AsyncIterator.from, iterable',
+      exec: function () {/*
+        const iterator = AsyncIterator.from([1, 2, 3]);
+
+        if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
+
+        iterator.toArray().then(it => {
+          if (it.join() === '1,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
       name: 'AsyncIterator.prototype[@@toStringTag]',
       exec: function () {/*
         return AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';
