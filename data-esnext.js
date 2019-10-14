@@ -2848,6 +2848,22 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Array.isTemplateObject',
+  category: STAGE2,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-array-is-template-object',
+  exec: function () {/*
+    return !Array.isTemplateObject([])
+      && Array.isTemplateObject((it => it)`a{1}c`);
+  */},
+  res: {
+    babel6corejs2: false,
+    babel7corejs3: babel.corejs,
+    typescript1corejs2: typescript.fallthrough,
+    typescript3_2corejs3: typescript.corejs,
+  }
+},
 ];
 
 
