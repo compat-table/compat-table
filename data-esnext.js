@@ -3245,6 +3245,20 @@ exports.tests = [
       },
     },
     {
+      name: 'AsyncIterator.prototype.map',
+      exec: function () {/*
+        return AsyncIterator.from([1, 2, 3]).map(it => it * it).toArray().then(it => {
+          if (it.join() === '1,4,9') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
       name: 'AsyncIterator.prototype.reduce',
       exec: function () {/*
         return AsyncIterator.from([1, 2, 3]).reduce((a, b) => a + b).then(it => {
