@@ -2864,6 +2864,549 @@ exports.tests = [
     typescript3_2corejs3: typescript.corejs,
   }
 },
+{
+  name: 'Iterator Helpers',
+  category: STAGE2,
+  significance: 'large',
+  spec: 'https://github.com/tc39/proposal-iterator-helpers',
+  subtests: [
+    {
+      name: 'instanceof Iterator',
+      exec: function () {/*
+        return [1, 2, 3].values() instanceof Iterator;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'extends Iterator',
+      exec: function () {/*
+        class Class extends Iterator { }
+        const instance = new Class();
+        return instance[Symbol.iterator]() === instance;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.from, iterable',
+      exec: function () {/*
+        const iterator = Iterator.from([1, 2, 3]);
+        return 'next' in iterator
+          && iterator instanceof Iterator
+          && Array.from(iterator).join() === '1,2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.from, iterator',
+      exec: function () {/*
+        const iterator = Iterator.from({
+          i: 0,
+          next() {
+            return { value: ++this.i, done: this.i > 3 };
+          }
+        });
+        return 'next' in iterator
+          && iterator instanceof Iterator
+          && Array.from(iterator).join() === '1,2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.asIndexedPairs',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().asIndexedPairs()).join() === '0,1,1,2,2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.drop',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().drop(1)).join() === '2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.every',
+      exec: function () {/*
+        return [1, 2, 3].values().every(it => typeof it === 'number');
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.filter',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.find',
+      exec: function () {/*
+        return [1, 2, 3].values().find(it => it % 2) === 1;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.flatMap',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.forEach',
+      exec: function () {/*
+        let result = '';
+        [1, 2, 3].values().forEach(it => result += it);
+        return result === '123';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.map',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.reduce',
+      exec: function () {/*
+        return [1, 2, 3].values().reduce((a, b) => a + b) === 6;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.some',
+      exec: function () {/*
+        return [1, 2, 3].values().some(it => typeof it === 'number');
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.take',
+      exec: function () {/*
+        return Array.from([1, 2, 3].values().take(2)).join() === '1,2';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype.toArray',
+      exec: function () {/*
+        const array = [1, 2, 3].values().toArray();
+        return Array.isArray(array) && array.join() === '1,2,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Iterator.prototype[@@toStringTag]',
+      exec: function () {/*
+        return Iterator.prototype[Symbol.toStringTag] === 'Iterator';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'instanceof AsyncIterator',
+      exec: function () {/*
+        return (async function*() {})() instanceof AsyncIterator;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'extends AsyncIterator',
+      exec: function () {/*
+        class Class extends AsyncIterator { }
+        const instance = new Class();
+        return instance[Symbol.asyncIterator]() === instance;
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.from, async iterable',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        const iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());
+
+        if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
+
+        toArray(iterator).then(it => {
+          if (it.join() === '1,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.from, iterable',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        const iterator = AsyncIterator.from([1, 2, 3]);
+
+        if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
+
+        toArray(iterator).then(it => {
+          if (it.join() === '1,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.from, iterator',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        const iterator = AsyncIterator.from([1, 2, 3].values());
+
+        if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
+
+        toArray(iterator).then(it => {
+          if (it.join() === '1,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.asIndexedPairs',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it => {
+          if (it.join() === '0,1,1,2,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.drop',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {
+          if (it.join() === '2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.every',
+      exec: function () {/*
+        (async function*() { yield * [1, 2, 3] })().every(it => typeof it === 'number').then(it => {
+          if (it === true) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.filter',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {
+          if (it.join() === '1,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.find',
+      exec: function () {/*
+        (async function*() { yield * [1, 2, 3] })().find(it => it % 2).then(it => {
+          if (it === 1) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.flatMap',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {
+          if (it.join() === '1,0,2,0,3,0') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.forEach',
+      exec: function () {/*
+        let result = '';
+        (async function*() { yield * [1, 2, 3] })().forEach(it => result += it).then(() => {
+          if (result === '123') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.map',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {
+          if (it.join() === '1,4,9') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.reduce',
+      exec: function () {/*
+        (async function*() { yield * [1, 2, 3] })().reduce((a, b) => a + b).then(it => {
+          if (it === 6) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.some',
+      exec: function () {/*
+        (async function*() { yield * [1, 2, 3] })().some(it => typeof it === 'number').then(it => {
+          if (it === true) asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.take',
+      exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {
+          if (it.join() === '1,2') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype.toArray',
+      exec: function () {/*
+        (async function*() { yield * [1, 2, 3] })().toArray().then(it => {
+          if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();
+        });
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'AsyncIterator.prototype[@@toStringTag]',
+      exec: function () {/*
+        return AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+  ]
+},
 ];
 
 
