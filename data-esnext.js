@@ -3119,11 +3119,17 @@ exports.tests = [
     {
       name: 'AsyncIterator.from, async iterable',
       exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
         const iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());
 
         if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
 
-        iterator.toArray().then(it => {
+        toArray(iterator).then(it => {
           if (it.join() === '1,2,3') asyncTestPassed();
         });
       */},
@@ -3137,11 +3143,17 @@ exports.tests = [
     {
       name: 'AsyncIterator.from, iterable',
       exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
         const iterator = AsyncIterator.from([1, 2, 3]);
 
         if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
 
-        iterator.toArray().then(it => {
+        toArray(iterator).then(it => {
           if (it.join() === '1,2,3') asyncTestPassed();
         });
       */},
@@ -3155,11 +3167,17 @@ exports.tests = [
     {
       name: 'AsyncIterator.from, iterator',
       exec: function () {/*
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
         const iterator = AsyncIterator.from([1, 2, 3].values());
 
         if (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;
 
-        iterator.toArray().then(it => {
+        toArray(iterator).then(it => {
           if (it.join() === '1,2,3') asyncTestPassed();
         });
       */},
@@ -3173,7 +3191,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.asIndexedPairs',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().asIndexedPairs().toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it => {
           if (it.join() === '0,1,1,2,2,3') asyncTestPassed();
         });
       */},
@@ -3187,7 +3211,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.drop',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().drop(1).toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {
           if (it.join() === '2,3') asyncTestPassed();
         });
       */},
@@ -3215,7 +3245,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.filter',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().filter(it => it % 2).toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {
           if (it.join() === '1,3') asyncTestPassed();
         });
       */},
@@ -3243,7 +3279,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.flatMap',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().flatMap(it => [it, 0]).toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {
           if (it.join() === '1,0,2,0,3,0') asyncTestPassed();
         });
       */},
@@ -3272,7 +3314,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.map',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().map(it => it * it).toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {
           if (it.join() === '1,4,9') asyncTestPassed();
         });
       */},
@@ -3314,7 +3362,13 @@ exports.tests = [
     {
       name: 'AsyncIterator.prototype.take',
       exec: function () {/*
-        (async function*() { yield * [1, 2, 3] })().take(2).toArray().then(it => {
+        async function toArray(iterator) {
+          const result = [];
+          for await (const it of iterator) result.push(it);
+          return result;
+        }
+
+        toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {
           if (it.join() === '1,2') asyncTestPassed();
         });
       */},
