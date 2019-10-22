@@ -2833,11 +2833,29 @@
   "node12_11": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 12.11+",
+    "short": "Node &gt;=12.11 &lt;13",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome77",
     "release": "2019-09-25",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node13_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 13.0+",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome78",
+    "release": "2019-10-22",
     "obsolete": false,
     "test_suites": [
       "es5",
