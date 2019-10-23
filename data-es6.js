@@ -7009,6 +7009,8 @@ exports.tests = [
         es6shim: true,
         ie11: true,
         firefox2: false,
+        firefox10: true,
+        firefox17: false,
         firefox37: true,
         opera10_50: false,
         chrome21dev: chrome.experimental,
