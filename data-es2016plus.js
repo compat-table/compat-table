@@ -2351,7 +2351,7 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       nashorn10: true,
-	  graalvm: true,
+      graalvm: true,
     },
   },
   {
@@ -2376,7 +2376,7 @@ exports.tests = [
       node8: true,
       safari10_1: true,
       duktape2_0: false,
-	  graalvm: true,
+      graalvm: true,
     },
   },
   {
@@ -2685,7 +2685,7 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       duktape2_0: false,
-	  graalvm: true,
+      graalvm: true,
     }
   },
   {
@@ -2704,7 +2704,7 @@ exports.tests = [
       chrome50: chrome.harmony,
       chrome62: true,
       duktape2_0: false,
-	  graalvm: true,
+      graalvm: true,
     }
   },
   {
@@ -2726,7 +2726,7 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       duktape2_0: false,
-	  graalvm: true,
+      graalvm: true,
     }
   },
   {
@@ -2927,6 +2927,7 @@ exports.tests = [
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          firefox10: false,
           firefox45: false,
           firefox63: true,
           chrome67: false,
@@ -2950,6 +2951,7 @@ exports.tests = [
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          firefox10: false,
           firefox45: false,
           firefox63: true,
           chrome67: false,
@@ -2973,6 +2975,7 @@ exports.tests = [
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          firefox10: false,
           firefox45: false,
           firefox63: true,
           chrome67: false,
@@ -3040,6 +3043,7 @@ exports.tests = [
       res: {
         node4: true,
         firefox2: false,
+        firefox10: true,
         firefox45: true,
         opera10_50: true,
         chrome50: true,
@@ -3183,6 +3187,7 @@ exports.tests = [
       closure20190325: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
+      firefox10: false,
       firefox52: false,
       firefox62: false,
       firefox63: true,
@@ -3206,6 +3211,7 @@ exports.tests = [
     res: {
       ie11: false,
       edge16: false,
+      firefox10: false,
       firefox52: false,
       firefox63: false,
       firefox64: true,
@@ -3500,6 +3506,7 @@ exports.tests = [
         return (1n + 2n) === 3n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3514,6 +3521,7 @@ exports.tests = [
         return BigInt("3") === 3n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3528,6 +3536,7 @@ exports.tests = [
         return typeof BigInt.asUintN === 'function';
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3542,6 +3551,7 @@ exports.tests = [
         return typeof BigInt.asIntN === 'function';
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3559,6 +3569,7 @@ exports.tests = [
         return view[0] === -0x8000000000000000n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox67: false,
           firefox68: true,
@@ -3575,6 +3586,7 @@ exports.tests = [
         return view[0] === 0n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox67: false,
           firefox68: true,
@@ -3591,6 +3603,7 @@ exports.tests = [
         return view.getBigInt64(0) === 1n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3608,6 +3621,7 @@ exports.tests = [
         return view.getBigUint64(0) === 1n;
       */},
         res: {
+          firefox10: false,
           firefox45: false,
           firefox66: false,
           firefox67: firefox.bigint,
@@ -3642,6 +3656,7 @@ exports.tests = [
       babel7corejs3: babel.corejs,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
+      firefox10: false,
       firefox68: firefox.nightly,
       firefox71: true,
       chrome76: true,
