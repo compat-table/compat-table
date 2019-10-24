@@ -3462,37 +3462,74 @@ exports.tests = [
     significance: 'small',
     spec: 'https://github.com/tc39/String.prototype.matchAll',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll',
-    exec: function(){/*
-      var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
-      if(iterator[Symbol.iterator]() !== iterator)return false;
-      var a = '', b = '', c = '', step;
-      while(!(step = iterator.next()).done){
-        a += step.value[0];
-        b += step.value[1];
-        c += step.value[2];
-      }
-      return a === '1a2b'
-        && b === '12'
-        && c === 'ab';
-    */},
-    res: {
-      babel6corejs2: babel.corejs,
-      typescript1corejs2: typescript.corejs,
-      ie11: false,
-      firefox2: false,
-      firefox65: false,
-      firefox66: firefox.nightly,
-      firefox67: true,
-      chrome67: false,
-      chrome68: chrome.harmony,
-      chrome73: true,
-      chrome74: true,
-      opera10_50: false,
-      safari13: true,
-      safaritp: true,
-      duktape2_0: false,
-      graalvm: true,
-    }
+    subtests: [
+      {
+        name: 'basic functionality',
+        exec: function(){/*
+          var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
+          if(iterator[Symbol.iterator]() !== iterator)return false;
+          var a = '', b = '', c = '', step;
+          while(!(step = iterator.next()).done){
+            a += step.value[0];
+            b += step.value[1];
+            c += step.value[2];
+          }
+          return a === '1a2b'
+            && b === '12'
+            && c === 'ab';
+        */},
+        res: {
+          babel6corejs2: babel.corejs,
+          typescript1corejs2: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox65: false,
+          firefox66: firefox.nightly,
+          firefox67: true,
+          chrome67: false,
+          chrome68: chrome.harmony,
+          chrome73: true,
+          chrome74: true,
+          opera10_50: false,
+          safari13: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm: true,
+        },
+      },
+      {
+        name: 'throws on non-global regex',
+        exec: function(){/*
+          if (typeof String.prototype.matchAll !== 'function') return false;
+          try {
+            '11a2bb'.matchAll(/(\d)(\D)/);
+          } catch (e) {
+            return true;
+          }
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox65: false,
+          firefox66: false,
+          firefox67: false,
+          chrome67: false,
+          chrome68: false,
+          chrome73: false,
+          chrome74: false,
+          chrome80: true,
+          opera10_50: false,
+          safari13: false,
+          safaritp: false,
+          duktape2_0: false,
+          graalvm: null,
+        },
+      },
+    ],
   },
   {
     name: 'BigInt',
