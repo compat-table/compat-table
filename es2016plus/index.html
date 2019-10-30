@@ -129,7 +129,6 @@
 <th class="platform babel7corejs2 compiler" data-browser="babel7corejs2"><a href="#babel7corejs2" class="browser-name"><abbr title="Babel 7 + core-js 2.5">Babel 7 +<br><nobr>core-js 2</nobr></abbr></a></th>
 <th class="platform babel7corejs3 compiler" data-browser="babel7corejs3"><a href="#babel7corejs3" class="browser-name"><abbr title="Babel 7 + core-js 3">Babel 7 +<br><nobr>core-js 3</nobr></abbr></a></th>
 <th class="platform closure compiler obsolete" data-browser="closure"><a href="#closure" class="browser-name"><abbr title="Closure Compiler v20180204">Closure 2018.02</abbr></a></th>
-<th class="platform closure20181028 compiler obsolete" data-browser="closure20181028"><a href="#closure20181028" class="browser-name"><abbr title="Closure Compiler v20181028">Closure 2018.10</abbr></a></th>
 <th class="platform closure20181125 compiler obsolete" data-browser="closure20181125"><a href="#closure20181125" class="browser-name"><abbr title="Closure Compiler &gt;=v20181125 &lt;v20190121">Closure 2018.11</abbr></a></th>
 <th class="platform closure20190121 compiler obsolete" data-browser="closure20190121"><a href="#closure20190121" class="browser-name"><abbr title="Closure Compiler v20190121">Closure 2019.01</abbr></a></th>
 <th class="platform closure20190215 compiler obsolete" data-browser="closure20190215"><a href="#closure20190215" class="browser-name"><abbr title="Closure Compiler v20190215">Closure 2019.02</abbr></a></th>
@@ -226,7 +225,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="100">2016 features</td>
+      <tr class="category"><td colspan="99">2016 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-exponentiation_(**)_operator"><span><a class="anchor" href="#test-exponentiation_(**)_operator">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-exp-operator">exponentiation (**) operator</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation_(**)" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -234,7 +233,6 @@
 <td class="tally" data-browser="babel7corejs2" data-tally="1">3/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">3/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">3/3</td>
@@ -336,7 +334,6 @@ return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -438,7 +435,6 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -545,7 +541,6 @@ return true;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -644,7 +639,6 @@ return true;
 <td class="tally" data-browser="babel7corejs2" data-tally="1">3/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
@@ -750,7 +744,6 @@ return [1, 2, 3].includes(1)
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -874,7 +867,6 @@ return 24;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -981,7 +973,6 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -1074,7 +1065,7 @@ return new TypedArray([1, 2, 3]).includes(1)
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2016 misc</td>
+<tr class="category"><td colspan="99">2016 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-generator_functions_can&apos;t_be_used_with_new"><span><a class="anchor" href="#test-generator_functions_can&apos;t_be_used_with_new">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-createdynamicfunction">generator functions can&apos;t be used with &quot;new&quot;</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*#Generators_are_not_constructable" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#new-gen-fn-note"><sup>[7]</sup></a></span><script data-source="
 function * generator() {
@@ -1092,7 +1083,6 @@ return true;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -1207,7 +1197,6 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -1314,7 +1303,6 @@ return true;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -1417,7 +1405,6 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -1521,7 +1508,6 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + &apos;&apos; === &apos;3,4&apos
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -1630,7 +1616,6 @@ return passed;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -1741,7 +1726,6 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -1834,7 +1818,7 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2017 features</td>
+<tr class="category"><td colspan="99">2017 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-constructor">Object static methods</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/4</td>
@@ -1842,7 +1826,6 @@ return (get + &apos;&apos; === &quot;length,1,2&quot;);
 <td class="tally" data-browser="babel7corejs2" data-tally="1">4/4</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0.75" style="background-color:hsl(90,53%,50%)">3/4</td>
@@ -1947,7 +1930,6 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2056,7 +2038,6 @@ return Array.isArray(e)
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2166,7 +2147,6 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2271,7 +2251,6 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -2370,7 +2349,6 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty(&apos;a&apos;);
 <td class="tally" data-browser="babel7corejs2" data-tally="1">2/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">2/2</td>
@@ -2477,7 +2455,6 @@ return &apos;hello&apos;.padStart(10) === &apos;     hello&apos;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2584,7 +2561,6 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2683,7 +2659,6 @@ return &apos;hello&apos;.padEnd(10) === &apos;hello     &apos;
 <td class="tally" data-browser="babel7corejs2" data-tally="1">2/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">2/2</td>
@@ -2785,7 +2760,6 @@ return typeof function f( a, b, ){} === &apos;function&apos;;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2887,7 +2861,6 @@ return Math.min(1,2,3,) === 1;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -2986,7 +2959,6 @@ return Math.min(1,2,3,) === 1;
 <td class="tally" data-browser="babel7corejs2" data-tally="0.25" style="background-color:hsl(30,75%,50%)">4/16</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="0.25" style="background-color:hsl(30,75%,50%)">4/16</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
@@ -3099,7 +3071,6 @@ p.then(function(result) {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3212,7 +3183,6 @@ p.catch(function(result) {
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3315,7 +3285,6 @@ try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; 
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -3418,7 +3387,6 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -3527,7 +3495,6 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3638,7 +3605,6 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3741,7 +3707,6 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3849,7 +3814,6 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -3952,7 +3916,6 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -4065,7 +4028,6 @@ p.then(function(result) {
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -4178,7 +4140,6 @@ p.then(function(result) {
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -4291,7 +4252,6 @@ var p = new C().a();
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -4402,7 +4362,6 @@ p.then(function(result) {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-regenerator-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -4506,7 +4465,6 @@ return asyncFunctionProto !== function(){}.prototype
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -4608,7 +4566,6 @@ return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == &quot;A
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -4719,7 +4676,6 @@ p.then(function(result) {
 <td class="unknown" data-browser="babel7corejs2">?</td>
 <td class="unknown" data-browser="babel7corejs3">?</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -4818,7 +4774,6 @@ p.then(function(result) {
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/17</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/17</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/17</td>
@@ -4920,7 +4875,6 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5022,7 +4976,6 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5124,7 +5077,6 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5226,7 +5178,6 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5328,7 +5279,6 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5430,7 +5380,6 @@ return typeof Atomics.add == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5532,7 +5481,6 @@ return typeof Atomics.and == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5634,7 +5582,6 @@ return typeof Atomics.compareExchange == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5736,7 +5683,6 @@ return typeof Atomics.exchange == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5838,7 +5784,6 @@ return typeof Atomics.wait == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -5940,7 +5885,6 @@ return typeof Atomics.wake == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6042,7 +5986,6 @@ return typeof Atomics.isLockFree == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6144,7 +6087,6 @@ return typeof Atomics.load == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6246,7 +6188,6 @@ return typeof Atomics.or == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6348,7 +6289,6 @@ return typeof Atomics.store == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6450,7 +6390,6 @@ return typeof Atomics.sub == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6552,7 +6491,6 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6645,7 +6583,7 @@ return typeof Atomics.xor == &apos;function&apos;;
 <td class="no" data-browser="samsung9_4">No<a href="#chr-shared-memory-spectre-note"><sup>[20]</sup></a></td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2017 misc</td>
+<tr class="category"><td colspan="99">2017 misc</td>
 </tr>
 <tr significance="0.125"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;<a href="#proxy-duplictate-ownkeys-updated-note"><sup>[21]</sup></a></span><script data-source="
 var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
@@ -6661,7 +6599,6 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6766,7 +6703,6 @@ return &quot;&#x17F;&quot;.match(/\w/iu) &amp;&amp; !&quot;&#x17F;&quot;.match(/
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6871,7 +6807,6 @@ return (function(){
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -6964,7 +6899,7 @@ return (function(){
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2017 annex b</td>
+<tr class="category"><td colspan="99">2017 annex b</td>
 </tr>
 <tr class="supertest optional-feature" significance="0.125"><td id="test-Object.prototype_getter/setter_methods"><span><a class="anchor" href="#test-Object.prototype_getter/setter_methods">&#xA7;</a><a href="https://tc39.github.io/ecma262/#sec-object.prototype.__defineGetter__">Object.prototype getter/setter methods</a></span></td>
 <td class="tally obsolete not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -6972,7 +6907,6 @@ return (function(){
 <td class="tally not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="1">16/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
-<td class="tally obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
 <td class="tally obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/16</td>
@@ -7079,7 +7013,6 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7187,7 +7120,6 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7295,7 +7227,6 @@ return true;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7402,7 +7333,6 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7510,7 +7440,6 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7618,7 +7547,6 @@ return true;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7727,7 +7655,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7836,7 +7763,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -7946,7 +7872,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8053,7 +7978,6 @@ return true;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8159,7 +8083,6 @@ return b.__lookupGetter__(&quot;foo&quot;) === undefined
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8268,7 +8191,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8377,7 +8299,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8487,7 +8408,6 @@ return foo() === &quot;bar&quot;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8594,7 +8514,6 @@ return true;
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8700,7 +8619,6 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="yes not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -8799,7 +8717,6 @@ return b.__lookupSetter__(&quot;foo&quot;) === undefined
 <td class="tally not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
-<td class="tally obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
 <td class="tally obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/4</td>
@@ -8905,7 +8822,6 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9011,7 +8927,6 @@ return def + &apos;&apos; === &quot;foo&quot;;
 <td class="no not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9122,7 +9037,6 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9233,7 +9147,6 @@ return gopd + &apos;&apos; === &quot;foo&quot; &amp;&amp; gpo;
 <td class="no not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9336,7 +9249,6 @@ return i === 0;
 <td class="no not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
-<td class="no obsolete not-applicable" data-browser="closure20181028" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20181125" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190121" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="closure20190215" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -9429,7 +9341,7 @@ return i === 0;
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2018 features</td>
+<tr class="category"><td colspan="99">2018 features</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-object_rest/spread_properties"><span><a class="anchor" href="#test-object_rest/spread_properties">&#xA7;</a><a href="https://github.com/tc39/proposal-object-rest-spread">object rest/spread properties</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
@@ -9437,7 +9349,6 @@ return i === 0;
 <td class="tally" data-browser="babel7corejs2" data-tally="1">2/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/2</td>
@@ -9540,7 +9451,6 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="no obsolete" data-browser="closure20181028">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
 <td class="no obsolete" data-browser="closure20181125">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
 <td class="no obsolete" data-browser="closure20190121">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
 <td class="no obsolete" data-browser="closure20190215">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
@@ -9644,7 +9554,6 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure">Yes</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="no obsolete" data-browser="closure20190121">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
 <td class="no obsolete" data-browser="closure20190215">No<a href="#closure-object-assign-note"><sup>[23]</sup></a></td>
@@ -9743,7 +9652,6 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;
 <td class="tally" data-browser="babel7corejs2" data-tally="1">3/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">3/3</td>
@@ -9871,7 +9779,6 @@ function check() {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -9991,7 +9898,6 @@ function check() {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -10113,7 +10019,6 @@ function check() {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -10216,7 +10121,6 @@ return regex.test(&apos;foo\nbar&apos;);
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -10325,7 +10229,6 @@ return result.groups.year === &apos;2016&apos;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -10428,7 +10331,6 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -10531,7 +10433,6 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -10630,7 +10531,6 @@ return regexGreekSymbol.test(&apos;&#x3C0;&apos;);
 <td class="tally" data-browser="babel7corejs2" data-tally="1">2/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">2/2</td>
@@ -10739,7 +10639,6 @@ iterator.next().then(function(step){
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -10858,7 +10757,6 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -10951,7 +10849,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2018 misc</td>
+<tr class="category"><td colspan="99">2018 misc</td>
 </tr>
 <tr significance="0.25"><td id="test-template_literal_revision"><span><a class="anchor" href="#test-template_literal_revision">&#xA7;</a><a href="https://github.com/tc39/proposal-template-literal-revision">template literal revision</a></span><script data-source="
 function tag(strings, a) {
@@ -10969,7 +10867,6 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="yes obsolete" data-browser="closure20181028">Yes</td>
 <td class="yes obsolete" data-browser="closure20181125">Yes</td>
 <td class="yes obsolete" data-browser="closure20190121">Yes</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -11062,7 +10959,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="yes" data-browser="samsung9_4">Yes</td>
 <td class="yes unstable" data-browser="samsung10_2">Yes</td>
 </tr>
-<tr class="category"><td colspan="100">2019 features</td>
+<tr class="category"><td colspan="99">2019 features</td>
 </tr>
 <tr significance="0.25"><td id="test-Object.fromEntries"><span><a class="anchor" href="#test-Object.fromEntries">&#xA7;</a><a href="https://github.com/tc39/proposal-object-from-entries">Object.fromEntries</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 var object = Object.fromEntries(new Map([[&apos;foo&apos;, 42], [&apos;bar&apos;, 23]]));
@@ -11074,7 +10971,6 @@ return object.foo === 42 &amp;&amp; object.bar === 23;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11173,7 +11069,6 @@ return object.foo === 42 &amp;&amp; object.bar === 23;
 <td class="tally" data-browser="babel7corejs2" data-tally="1">4/4</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/4</td>
@@ -11275,7 +11170,6 @@ return &apos; \t \n abc   \t\n&apos;.trimLeft() === &apos;abc   \t\n&apos;;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11377,7 +11271,6 @@ return &apos; \t \n abc   \t\n&apos;.trimRight() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11479,7 +11372,6 @@ return &apos; \t \n abc   \t\n&apos;.trimStart() === &apos;abc   \t\n&apos;;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11581,7 +11473,6 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11680,7 +11571,6 @@ return &apos; \t \n abc   \t\n&apos;.trimEnd() === &apos; \t \n abc&apos;;
 <td class="tally" data-browser="babel7corejs2" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">1/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/3</td>
@@ -11782,7 +11672,6 @@ return [1, [2, 3], [4, [5, 6]]].flat().join(&apos;&apos;) === &apos;12345,6&apos
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11886,7 +11775,6 @@ return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -11989,7 +11877,6 @@ return Array.prototype[Symbol.unscopables].flat
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -12082,7 +11969,7 @@ return Array.prototype[Symbol.unscopables].flat
 <td class="no" data-browser="samsung9_4">No</td>
 <td class="no unstable" data-browser="samsung10_2">No</td>
 </tr>
-<tr class="category"><td colspan="100">2019 misc</td>
+<tr class="category"><td colspan="99">2019 misc</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-optional_catch_binding"><span><a class="anchor" href="#test-optional_catch_binding">&#xA7;</a><a href="https://github.com/tc39/proposal-optional-catch-binding">optional catch binding</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/3</td>
@@ -12090,7 +11977,6 @@ return Array.prototype[Symbol.unscopables].flat
 <td class="tally" data-browser="babel7corejs2" data-tally="1">3/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">3/3</td>
@@ -12198,7 +12084,6 @@ return false;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -12307,7 +12192,6 @@ return false;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -12421,7 +12305,6 @@ return it.next().value;
 <td class="yes" data-browser="babel7corejs2">Yes</td>
 <td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -12520,7 +12403,6 @@ return it.next().value;
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/3</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/3</td>
@@ -12622,7 +12504,6 @@ return Symbol(&apos;foo&apos;).description === &apos;foo&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -12724,7 +12605,6 @@ return Symbol(&apos;&apos;).description === &apos;&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -12827,7 +12707,6 @@ return Symbol.prototype.hasOwnProperty(&apos;description&apos;)
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -12926,7 +12805,6 @@ return Symbol.prototype.hasOwnProperty(&apos;description&apos;)
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/7</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/7</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/7</td>
@@ -13030,7 +12908,6 @@ return fn + &apos;&apos; === str;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13133,7 +13010,6 @@ return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13236,7 +13112,6 @@ return NATIVE_EVAL_RE.test(eval + &apos;&apos;);
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13339,7 +13214,6 @@ return eval(&apos;(&apos; + str + &apos;)&apos;) + &apos;&apos; === str;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13442,7 +13316,6 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13545,7 +13418,6 @@ return eval(&apos;(/\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/)&apo
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13648,7 +13520,6 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -13747,7 +13618,6 @@ return eval(&apos;({ /\x2A before \x2A/&apos; + str + &apos;/\x2A after \x2A/ }.
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="1">2/2</td>
@@ -13849,7 +13719,6 @@ return eval(&quot;&apos;\u2028&apos;&quot;) === &quot;\u2028&quot;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -13951,7 +13820,6 @@ return eval(&quot;&apos;\u2029&apos;&quot;) === &quot;\u2029&quot;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="yes obsolete" data-browser="closure20190215">Yes</td>
@@ -14054,7 +13922,6 @@ return JSON.stringify(&apos;\uDF06\uD834&apos;) === &quot;\&quot;\\udf06\\ud834\
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14147,7 +14014,7 @@ return JSON.stringify(&apos;\uDF06\uD834&apos;) === &quot;\&quot;\\udf06\\ud834\
 <td class="no" data-browser="samsung9_4">No</td>
 <td class="no unstable" data-browser="samsung10_2">No</td>
 </tr>
-<tr class="category"><td colspan="100">2020 features</td>
+<tr class="category"><td colspan="99">2020 features</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-String.prototype.matchAll"><span><a class="anchor" href="#test-String.prototype.matchAll">&#xA7;</a><a href="https://github.com/tc39/String.prototype.matchAll">String.prototype.matchAll</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
@@ -14155,7 +14022,6 @@ return JSON.stringify(&apos;\uDF06\uD834&apos;) === &quot;\&quot;\\udf06\\ud834\
 <td class="tally" data-browser="babel7corejs2" data-tally="0.5" style="background-color:hsl(60,64%,50%)">1/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/2</td>
@@ -14267,7 +14133,6 @@ return a === &apos;1a2b&apos;
 <td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14374,7 +14239,6 @@ try {
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14473,7 +14337,6 @@ try {
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/8</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/8</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/8</td>
@@ -14575,7 +14438,6 @@ return (1n + 2n) === 3n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14677,7 +14539,6 @@ return BigInt(&quot;3&quot;) === 3n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14779,7 +14640,6 @@ return typeof BigInt.asUintN === &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14881,7 +14741,6 @@ return typeof BigInt.asIntN === &apos;function&apos;;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -14986,7 +14845,6 @@ return view[0] === -0x8000000000000000n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15091,7 +14949,6 @@ return view[0] === 0n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15196,7 +15053,6 @@ return view.getBigInt64(0) === 1n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15301,7 +15157,6 @@ return view.getBigUint64(0) === 1n;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="no" data-browser="babel7corejs3">No</td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15414,7 +15269,6 @@ Promise.allSettled([
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15513,7 +15367,6 @@ Promise.allSettled([
 <td class="tally" data-browser="babel7corejs2" data-tally="0">0/2</td>
 <td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="closure" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20181028" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20181125" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190121" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="closure20190215" data-tally="0">0/2</td>
@@ -15617,7 +15470,6 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
@@ -15725,7 +15577,6 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[5]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
-<td class="no obsolete" data-browser="closure20181028">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
 <td class="no obsolete" data-browser="closure20190121">No</td>
 <td class="no obsolete" data-browser="closure20190215">No</td>
