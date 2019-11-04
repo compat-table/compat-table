@@ -9673,16 +9673,17 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="no" data-browser="samsung9_4">No</td>
 <td class="no unstable" data-browser="samsung10_2">No</td>
 </tr>
-<tr significance="0.25"><td id="test-Math.signbit"><span><a class="anchor" href="#test-Math.signbit">&#xA7;</a><a href="http://jfbastien.github.io/papers/Math.signbit.html">Math.signbit</a></span><script data-source="
-return Math.signbit(-0) === false
-  &amp;&amp; Math.signbit(0) === true
-  &amp;&amp; Math.signbit(-42) === false
-  &amp;&amp; Math.signbit(42) === true;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.signbit(-0) === false\n  && Math.signbit(0) === true\n  && Math.signbit(-42) === false\n  && Math.signbit(42) === true;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+<tr significance="0.25"><td id="test-Math.signbit"><span><a class="anchor" href="#test-Math.signbit">&#xA7;</a><a href="https://github.com/tc39/proposal-Math.signbit">Math.signbit</a></span><script data-source="
+return Math.signbit(NaN) === false
+  &amp;&amp; Math.signbit(-0) === true
+  &amp;&amp; Math.signbit(0) === false
+  &amp;&amp; Math.signbit(-42) === true
+  &amp;&amp; Math.signbit(42) === false;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("93");try{return Function("asyncTestPassed","\nreturn Math.signbit(NaN) === false\n  && Math.signbit(-0) === true\n  && Math.signbit(0) === false\n  && Math.signbit(-42) === true\n  && Math.signbit(42) === false;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("93");return Function("asyncTestPassed","'use strict';"+"\nreturn Math.signbit(NaN) === false\n  && Math.signbit(-0) === true\n  && Math.signbit(0) === false\n  && Math.signbit(-42) === true\n  && Math.signbit(42) === false;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="tr">No</td>
-<td class="yes" data-browser="babel6corejs2">Yes<a href="#babel-core-js-note"><sup>[12]</sup></a></td>
-<td class="yes" data-browser="babel7corejs2">Yes<a href="#babel-core-js-note"><sup>[12]</sup></a></td>
+<td class="no" data-browser="babel6corejs2">No</td>
+<td class="no" data-browser="babel7corejs2">No</td>
 <td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[12]</sup></a></td>
 <td class="no obsolete" data-browser="closure">No</td>
 <td class="no obsolete" data-browser="closure20181125">No</td>
@@ -9692,10 +9693,10 @@ return Math.signbit(-0) === false
 <td class="no obsolete" data-browser="closure20190325">No</td>
 <td class="no obsolete" data-browser="closure20190709">No</td>
 <td class="no" data-browser="closure20191027">No</td>
-<td class="yes obsolete" data-browser="typescript1corejs2">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript2_9corejs2">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_1corejs2">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_2corejs2">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">No<a href="#typescript-es6-note"><sup>[13]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">No<a href="#typescript-es6-note"><sup>[13]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_1corejs2">No<a href="#typescript-es6-note"><sup>[13]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">No<a href="#typescript-es6-note"><sup>[13]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_2corejs3">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[14]</sup></a></td>
