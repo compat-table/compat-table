@@ -998,18 +998,21 @@ exports.tests = [
 },
 {
   name: 'Math.signbit',
-  spec: 'http://jfbastien.github.io/papers/Math.signbit.html',
+  spec: 'https://github.com/tc39/proposal-Math.signbit',
   category: STAGE1,
   significance: 'small',
   exec: function(){/*
-    return Math.signbit(-0) === false
-      && Math.signbit(0) === true
-      && Math.signbit(-42) === false
-      && Math.signbit(42) === true;
+    return Math.signbit(NaN) === false
+      && Math.signbit(-0) === true
+      && Math.signbit(0) === false
+      && Math.signbit(-42) === true
+      && Math.signbit(42) === false;
   */},
   res : {
-    babel6corejs2: babel.corejs,
-    typescript1corejs2: typescript.corejs,
+    babel6corejs2: false,
+    babel7corejs3: babel.corejs,
+    typescript1corejs2: typescript.fallthrough,
+    typescript3_2corejs3: typescript.corejs,
     ie11: false,
     firefox10: false,
     firefox52: false,
