@@ -419,7 +419,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-09-28",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -497,7 +497,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2019-08-28",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es6",
       "es2016plus",
@@ -505,12 +505,12 @@
     ]
   },
   "typescript3_7corejs3": {
-    "full": "TypeScript 3.7 Beta + core-js 3",
+    "full": "TypeScript 3.7 + core-js 3",
     "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
     "family": "TypeScript",
     "platformtype": "compiler",
-    "release": "2019-10-01",
-    "unstable": true,
+    "release": "2019-10-05",
+    "obsolete": false,
     "test_suites": [
       "es6",
       "es2016plus",
