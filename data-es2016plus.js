@@ -3209,6 +3209,10 @@ exports.tests = [
       && JSON.stringify('\uDEAD') === "\"\\udead\"";
   */},
     res: {
+      babel6corejs2: false,
+      babel7corejs3: babel.corejs,
+      typescript1corejs2: typescript.fallthrough,
+      typescript3_2corejs3: typescript.corejs,
       ie11: false,
       edge16: false,
       firefox10: false,
