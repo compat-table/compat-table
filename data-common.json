@@ -112,6 +112,11 @@
       "val": false,
       "note_id": "chrome-simd",
       "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+    },
+    "stringPrototypeReplaceAll": {
+      "val": false,
+      "note_id": "chrome-string-prototype-replace-all",
+      "note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-string-replaceall\"</code> flag"
     }
   },
   "safari": {

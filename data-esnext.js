@@ -2167,6 +2167,7 @@ exports.tests = [
       firefox71: false,
       firefox72: true,
       chrome77: false,
+      chrome80: chrome.stringPrototypeReplaceAll,
       graalvm: false,
   }
 },
