@@ -1829,12 +1829,13 @@ return foo?.baz() === 42 &amp;&amp; bar?.baz() === undefined;
 <td class="no unstable" data-browser="samsung10_2">No</td>
 </tr>
 <tr significance="0.25"><td id="test-nullish_coalescing_operator_(??)"><span><a class="anchor" href="#test-nullish_coalescing_operator_(??)">&#xA7;</a><a href="https://github.com/tc39/proposal-nullish-coalescing">nullish coalescing operator (??)</a></span><script data-source="
-return null ?? 42 === 42 &amp;&amp;
-  undefined ?? 42 === 42 &amp;&amp;
-  false ?? 42 === false &amp;&amp;
-  &apos;&apos; ?? 42 === &apos;&apos; &amp;&amp;
-  0 ?? 42 === 0;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn null ?? 42 === 42 &&\n  undefined ?? 42 === 42 &&\n  false ?? 42 === false &&\n  '' ?? 42 === '' &&\n  0 ?? 42 === 0;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn null ?? 42 === 42 &&\n  undefined ?? 42 === 42 &&\n  false ?? 42 === false &&\n  '' ?? 42 === '' &&\n  0 ?? 42 === 0;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return (null ?? 42) === 42 &amp;&amp;
+  (undefined ?? 42) === 42 &amp;&amp;
+  (false ?? 42) === false &amp;&amp;
+  (&apos;&apos; ?? 42) === &apos;&apos; &amp;&amp;
+  (0 ?? 42) === 0 &amp;&amp;
+  isNaN(NaN ?? 42);
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nreturn (null ?? 42) === 42 &&\n  (undefined ?? 42) === 42 &&\n  (false ?? 42) === false &&\n  ('' ?? 42) === '' &&\n  (0 ?? 42) === 0 &&\n  isNaN(NaN ?? 42);\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nreturn (null ?? 42) === 42 &&\n  (undefined ?? 42) === 42 &&\n  (false ?? 42) === false &&\n  ('' ?? 42) === '' &&\n  (0 ?? 42) === 0 &&\n  isNaN(NaN ?? 42);\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -1871,7 +1872,7 @@ return null ?? 42 === 42 &amp;&amp;
 <td class="no" data-browser="firefox69">No</td>
 <td class="no" data-browser="firefox70">No</td>
 <td class="no unstable" data-browser="firefox71">No</td>
-<td class="no unstable" data-browser="firefox72">No</td>
+<td class="yes unstable" data-browser="firefox72">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome70">No</td>
 <td class="no obsolete" data-browser="chrome71">No</td>
