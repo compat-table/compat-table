@@ -9456,11 +9456,101 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no" data-browser="samsung9_4">No</td>
 <td class="no unstable" data-browser="samsung10_2">No</td>
 </tr>
+<tr significance="1"><td id="test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)"><span><a class="anchor" href="#test-Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets_(ES_2017_semantics)">&#xA7;</a><a href="https://github.com/tc39/ecma262/pull/594">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a><a href="#proxy-duplictate-ownkeys-updated-note"><sup>[10]</sup></a></span><script data-source="
+var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
+ownKeys: function() {
+return [&apos;a&apos;,&apos;a&apos;,&apos;b&apos;,&apos;b&apos;];
+}
+});
+return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("104");try{return Function("asyncTestPassed","\nvar P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, \"b\", {value:1})), {\nownKeys: function() {\nreturn ['a','a','b','b'];\n}\n});\nreturn Object.getOwnPropertyNames(P) + '' === \"a,a,b,b\";\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("104");return Function("asyncTestPassed","'use strict';"+"\nvar P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, \"b\", {value:1})), {\nownKeys: function() {\nreturn ['a','a','b','b'];\n}\n});\nreturn Object.getOwnPropertyNames(P) + '' === \"a,a,b,b\";\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="no obsolete" data-browser="konq4_13">No</td>
+<td class="no" data-browser="konq4_14">No</td>
+<td class="no obsolete" data-browser="ie8">No</td>
+<td class="no obsolete" data-browser="ie9">No</td>
+<td class="no obsolete" data-browser="ie10">No</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no obsolete" data-browser="edge15">No</td>
+<td class="yes obsolete" data-browser="edge16">Yes</td>
+<td class="yes" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="no obsolete" data-browser="firefox60">No</td>
+<td class="no obsolete" data-browser="firefox63">No</td>
+<td class="no obsolete" data-browser="firefox64">No</td>
+<td class="no obsolete" data-browser="firefox65">No</td>
+<td class="no obsolete" data-browser="firefox66">No</td>
+<td class="no obsolete" data-browser="firefox67">No</td>
+<td class="no" data-browser="firefox68">No</td>
+<td class="no" data-browser="firefox69">No</td>
+<td class="no" data-browser="firefox70">No</td>
+<td class="no unstable" data-browser="firefox71">No</td>
+<td class="no unstable" data-browser="firefox72">No</td>
+<td class="no obsolete" data-browser="opera12_10">No</td>
+<td class="yes obsolete" data-browser="chrome70">Yes</td>
+<td class="yes obsolete" data-browser="chrome71">Yes</td>
+<td class="yes obsolete" data-browser="chrome72">Yes</td>
+<td class="yes obsolete" data-browser="chrome73">Yes</td>
+<td class="yes obsolete" data-browser="chrome74">Yes</td>
+<td class="no obsolete" data-browser="chrome75">No</td>
+<td class="no obsolete" data-browser="chrome76">No</td>
+<td class="no" data-browser="chrome77">No</td>
+<td class="no" data-browser="chrome78">No</td>
+<td class="no unstable" data-browser="chrome79">No</td>
+<td class="no unstable" data-browser="chrome80">No</td>
+<td class="yes obsolete" data-browser="safari11">Yes</td>
+<td class="yes obsolete" data-browser="safari11_1">Yes</td>
+<td class="yes obsolete" data-browser="safari12">Yes</td>
+<td class="yes" data-browser="safari12_1">Yes</td>
+<td class="no" data-browser="safari13">No</td>
+<td class="no unstable" data-browser="safaritp">No</td>
+<td class="no unstable" data-browser="webkit">No</td>
+<td class="no obsolete" data-browser="rhino1_7">No</td>
+<td class="no" data-browser="besen">No</td>
+<td class="no obsolete" data-browser="phantom2_1">No</td>
+<td class="no obsolete" data-browser="node0_10">No</td>
+<td class="no obsolete" data-browser="node0_12">No</td>
+<td class="no obsolete" data-browser="node4">No</td>
+<td class="yes obsolete" data-browser="node6_5">Yes</td>
+<td class="yes obsolete" data-browser="node7">Yes</td>
+<td class="yes obsolete" data-browser="node7_6">Yes</td>
+<td class="yes obsolete" data-browser="node8">Yes</td>
+<td class="yes obsolete" data-browser="node8_3">Yes</td>
+<td class="yes obsolete" data-browser="node8_7">Yes</td>
+<td class="yes" data-browser="node8_10">Yes</td>
+<td class="yes obsolete" data-browser="node10_0">Yes</td>
+<td class="yes obsolete" data-browser="node10_4">Yes</td>
+<td class="yes" data-browser="node10_9">Yes</td>
+<td class="yes obsolete" data-browser="node11_0">Yes</td>
+<td class="yes" data-browser="node12_0">Yes</td>
+<td class="no" data-browser="node12_5">No</td>
+<td class="no" data-browser="node12_9">No</td>
+<td class="no" data-browser="node12_11">No</td>
+<td class="no" data-browser="node13_0">No</td>
+<td class="yes obsolete" data-browser="duktape2_0">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_1">Yes</td>
+<td class="yes obsolete" data-browser="duktape2_2">Yes</td>
+<td class="yes" data-browser="duktape2_3">Yes</td>
+<td class="yes" data-browser="graalvm">Yes</td>
+<td class="no obsolete" data-browser="android4_4">No</td>
+<td class="no obsolete" data-browser="android4_4_3">No</td>
+<td class="yes obsolete" data-browser="ios10_3">Yes</td>
+<td class="yes obsolete" data-browser="ios11">Yes</td>
+<td class="yes obsolete" data-browser="ios11_3">Yes</td>
+<td class="yes" data-browser="ios12">Yes</td>
+<td class="yes" data-browser="ios12_2">Yes</td>
+<td class="no" data-browser="ios13">No</td>
+<td class="yes obsolete" data-browser="samsung7_2">Yes</td>
+<td class="yes obsolete" data-browser="samsung8_2">Yes</td>
+<td class="yes" data-browser="samsung9_2">Yes</td>
+<td class="yes" data-browser="samsung9_4">Yes</td>
+<td class="yes unstable" data-browser="samsung10_2">Yes</td>
+</tr>
 </tbody>
       </table>
       <div id="footnotes">
         <!-- FOOTNOTES -->
-      <p id="khtml-note">  <sup>[1]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-old-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[4]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-simd-note">  <sup>[7]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p><p id="graalvm-nashorn-compat-note">  <sup>[8]</sup> The feature has to be enabled via the <code>--nashorn-compat</code> flag.</p><p id="firefox-not-nightly-note">  <sup>[9]</sup> The feature is disabled only in Firefox Nightly builds.</p></div>
+      <p id="khtml-note">  <sup>[1]</sup> Results are only applicable for the KHTML rendering engine.</p><p id="harmony-flag-old-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[3]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[4]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="edge-experimental-flag-note">  <sup>[5]</sup> Flagged features have to be enabled via &quot;Enable experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="firefox-nightly-note">  <sup>[6]</sup> The feature is available only in Firefox Nightly builds.</p><p id="chrome-simd-note">  <sup>[7]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-simd&quot;</code> flag</p><p id="graalvm-nashorn-compat-note">  <sup>[8]</sup> The feature has to be enabled via the <code>--nashorn-compat</code> flag.</p><p id="firefox-not-nightly-note">  <sup>[9]</sup> The feature is disabled only in Firefox Nightly builds.</p><p id="proxy-duplictate-ownkeys-updated-note">  <sup>[10]</sup> The behaviour of the Proxy &#x201C;ownKeys&#x201D; handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.</p></div>
     </div>
     <pre class="info-tooltip" style="display:none"></pre>
     <script src="../jquery.floatThead.min.js"></script>
