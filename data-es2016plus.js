@@ -2262,40 +2262,29 @@ exports.tests = [
     ]
   },
   {
-    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets (ES 2017 semantics)',
+    name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
     category: '2017 misc',
     significance: 'tiny',
-    spec: 'https://github.com/tc39/ecma262/pull/594',
+    spec: 'https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
-    links: [
-      {
-        note_id: 'proxy-duplictate-ownkeys-updated',
-        note_html: 'The behaviour of the Proxy “ownKeys” handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.',
-      }
-    ],
     exec: function() {/*
-     var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
-     ownKeys: function() {
-     return ['a','a','b','b'];
-     }
-     });
-     return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
-     */},
+      var p = new Proxy({}, {
+        ownKeys() {
+          return ["a", "a"];
+        }
+      });
+      try {
+        Object.keys(p);
+      } catch (e) {
+         return e instanceof TypeError
+      }
+      return false;
+    */},
     res: {
-      ie11: false,
-      edge16: true,
-      firefox2: false,
-      firefox51: true,
-      firefox56: true,
-      firefox57: false,
-      opera10_50: false,
-      chrome51: true,
-      chrome75: false,
-      safari10: true,
-      safari10_1: true,
-      safari13: false,
-      duktape2_0: true,
-      graalvm: true,
+      edge16: false,
+      chrome75: true,
+      firefox70: true,
+      safari13: true,
     },
   },
   {

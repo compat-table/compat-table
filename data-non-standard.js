@@ -2418,7 +2418,7 @@ exports.tests = [
   },
   separator: 'after'
 },
-  {
+{
     name: 'global',
     subtests: [{
       name: '"global" global property is global object',
@@ -2486,5 +2486,39 @@ exports.tests = [
         graalvm: false,
       }
     }]
-  }
+  },
+{
+  name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets (ES 2017 semantics)',
+  spec: 'https://github.com/tc39/ecma262/pull/594',
+  links: [
+    {
+      note_id: 'proxy-duplictate-ownkeys-updated',
+      note_html: 'The behaviour of the Proxy “ownKeys” handler in presence of duplicate keys has been <a href="https://github.com/tc39/ecma262/issues/833">modified later</a>.',
+    }
+  ],
+  exec: function() {/*
+   var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, "b", {value:1})), {
+   ownKeys: function() {
+   return ['a','a','b','b'];
+   }
+   });
+   return Object.getOwnPropertyNames(P) + '' === "a,a,b,b";
+   */},
+  res: {
+    ie11: false,
+    edge16: true,
+    firefox2: false,
+    firefox51: true,
+    firefox56: true,
+    firefox57: false,
+    opera10_50: false,
+    chrome51: true,
+    chrome75: false,
+    safari10: true,
+    safari10_1: true,
+    safari13: false,
+    duktape2_0: true,
+    graalvm: true,
+  },
+},
 ];
