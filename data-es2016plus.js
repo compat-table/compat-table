@@ -2263,7 +2263,7 @@ exports.tests = [
   },
   {
     name: 'Proxy "ownKeys" handler, duplicate keys for non-extensible targets',
-    category: '2017 misc',
+    category: '2018 misc',
     significance: 'tiny',
     spec: 'https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
