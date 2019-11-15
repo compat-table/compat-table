@@ -2283,6 +2283,7 @@ exports.tests = [
     res: {
       edge16: false,
       chrome75: true,
+      firefox57: true,
       firefox70: true,
       safari13: true,
     },
