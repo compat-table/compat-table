@@ -3528,7 +3528,7 @@ exports.tests = [
           chrome80: true,
           opera10_50: false,
           safari13: false,
-          safaritp: false,
+          safaritp: true,
           duktape2_0: false,
           graalvm: null,
         },
