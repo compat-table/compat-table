@@ -2984,6 +2984,7 @@ exports.tests = [
     typescript3_2corejs3: typescript.corejs,
     firefox10: false,
     firefox60: false,
+    firefox72: firefox.nightly,
     chrome77: false,
   }
 },
