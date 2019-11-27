@@ -1635,6 +1635,7 @@ exports.tests = [
 {
   name: 'optional chaining operator (?.)',
   spec: 'https://github.com/tc39/proposal-optional-chaining',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining',
   category: STAGE3,
   significance: 'medium',
   subtests: [
@@ -1742,6 +1743,7 @@ exports.tests = [
 {
   name: 'nullish coalescing operator (??)',
   spec: 'https://github.com/tc39/proposal-nullish-coalescing',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator',
   category: STAGE3,
   significance: 'small',
   exec: function(){/*
@@ -2968,6 +2970,7 @@ exports.tests = [
   category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-promise-any',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any',
   exec: function () {/*
     Promise.any([
       Promise.resolve(1),
