@@ -3865,6 +3865,34 @@ exports.tests = [
       },
     ]
   },
+  {
+    name: 'nullish coalescing operator (??)',
+    spec: 'https://github.com/tc39/proposal-nullish-coalescing',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator',
+    category: '2020 features',
+    significance: 'small',
+    exec: function(){/*
+      return (null ?? 42) === 42 &&
+        (undefined ?? 42) === 42 &&
+        (false ?? 42) === false &&
+        ('' ?? 42) === '' &&
+        (0 ?? 42) === 0 &&
+        isNaN(NaN ?? 42);
+    */},
+    res : {
+      babel7corejs2: true,
+      typescript3_7corejs3: true,
+      ie11: false,
+      firefox10: false,
+      firefox52: false,
+      firefox72: true,
+      chrome77: false,
+      chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
+      chrome80: true,
+      safaritp: {val: 'flagged', note_id: "safari-nullish"},
+      graalvm: false,
+    }
+  },
 ];
 
 //Shift annex B features to the bottom
