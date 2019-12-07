@@ -3399,20 +3399,40 @@
     "release": "2019-09-19",
     "obsolete": false
   },
-  "samsung2_1": {
-    "full": "Samsung Internet for Android 2.1",
+  "samsung1": {
+    "full": "Samsung Internet for Android 1",
     "family": "Samsung",
-    "short": "Samsung 2.1",
+    "short": "Samsung 1",
+    "platformtype": "mobile",
+    "equals": "chrome18",
+    "release": "2013-09-25",
+    "obsolete": "very"
+  },
+  "samsung1_5": {
+    "full": "Samsung Internet for Android 1.5",
+    "family": "Samsung",
+    "short": "Samsung 1.5",
+    "platformtype": "mobile",
+    "equals": "chrome28",
+    "release": "2013-09-25",
+    "obsolete": "very"
+  },
+  "samsung2": {
+    "full": "Samsung Internet for Android 2",
+    "family": "Samsung",
+    "short": "Samsung 2",
     "platformtype": "mobile",
     "equals": "chrome34",
+    "release": "2014-10-17",
     "obsolete": "very"
   },
   "samsung3": {
-    "full": "Samsung Internet for Android 3.0",
+    "full": "Samsung Internet for Android 3",
     "family": "Samsung",
-    "short": "Samsung 3.0",
+    "short": "Samsung 3",
     "platformtype": "mobile",
     "equals": "chrome38",
+    "release": "2015-04-10",
     "obsolete": "very"
   },
   "samsung3_4": {
@@ -3424,86 +3444,66 @@
     "obsolete": "very"
   },
   "samsung4": {
-    "full": "Samsung Internet for Android 4.0",
+    "full": "Samsung Internet for Android 4",
     "family": "Samsung",
-    "short": "Samsung 4.0",
+    "short": "Samsung 4",
     "platformtype": "mobile",
     "equals": "chrome44",
+    "release": "2016-03-11",
     "obsolete": "very"
   },
   "samsung5": {
-    "full": "Samsung Internet for Android 5.0",
+    "full": "Samsung Internet for Android 5",
     "family": "Samsung",
-    "short": "Samsung 5.0",
+    "short": "Samsung 5",
     "platformtype": "mobile",
     "equals": "chrome51",
-    "release": "2016-12-16",
+    "release": "2016-12-15",
     "obsolete": "very"
   },
-  "samsung5_4": {
-    "full": "Samsung Internet for Android 5.4",
+  "samsung6": {
+    "full": "Samsung Internet for Android 6",
     "family": "Samsung",
-    "short": "Samsung 5.4",
-    "platformtype": "mobile",
-    "release": "2017-05-17",
-    "obsolete": "very"
-  },
-  "samsung6_2": {
-    "full": "Samsung Internet for Android 6.2",
-    "family": "Samsung",
-    "short": "Samsung 6.2",
+    "short": "Samsung 6",
     "platformtype": "mobile",
     "equals": "chrome56",
-    "release": "2017-10-30",
-    "obsolete": "very"
+    "release": "2017-08-23",
+    "obsolete": true
   },
-  "samsung6_4": {
-    "full": "Samsung Internet for Android 6.4",
+  "samsung7": {
+    "full": "Samsung Internet for Android 7",
     "family": "Samsung",
-    "short": "Samsung 6.4",
-    "platformtype": "mobile",
-    "release": "2018-02-19",
-    "obsolete": "very"
-  },
-  "samsung7_2": {
-    "full": "Samsung Internet for Android 7.2",
-    "family": "Samsung",
-    "short": "Samsung 7.2",
+    "short": "Samsung 7",
     "platformtype": "mobile",
     "equals": "chrome59",
-    "release": "2018-06-20",
+    "release": "2018-03-16",
     "obsolete": true
   },
-  "samsung8_2": {
-    "full": "Samsung Internet for Android 8.2",
+  "samsung8": {
+    "full": "Samsung Internet for Android 8",
     "family": "Samsung",
-    "short": "Samsung 8.2",
+    "short": "Samsung 8",
     "platformtype": "mobile",
     "equals": "chrome63",
+    "release": "2018-07-18",
     "obsolete": true
   },
-  "samsung9_2": {
-    "full": "Samsung Internet for Android 9.2",
+  "samsung9": {
+    "full": "Samsung Internet for Android 9",
     "family": "Samsung",
-    "short": "Samsung 9.2",
+    "short": "Samsung 9",
     "platformtype": "mobile",
     "equals": "chrome67",
+    "release": "2018-09-15",
     "obsolete": false
   },
-  "samsung9_4": {
-    "full": "Samsung Internet for Android 9.4",
+  "samsung10": {
+    "full": "Samsung Internet for Android 10",
     "family": "Samsung",
-    "short": "Samsung 9.4",
-    "platformtype": "mobile",
-    "equals": "chrome67",
-    "obsolete": false
-  },
-  "samsung10_2": {
-    "full": "Samsung Internet for Android 10.2",
-    "family": "Samsung",
-    "short": "Samsung 10.2",
+    "short": "Samsung 10",
     "platformtype": "mobile",
     "equals": "chrome71",
-    "unstable": true
+    "release": "2019-08-22",
+    "obsolete": false
   }
 }
