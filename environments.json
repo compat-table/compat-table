@@ -2441,15 +2441,7 @@
     "note_html": "Flagged features have to be enabled via <code>--harmony</code> flag",
     "release": "2013-03-11",
     "retire": "2016-10-31",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node0_12": {
     "full": "Node.js",
@@ -2461,15 +2453,7 @@
     "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
     "release": "2015-02-06",
     "retire": "2016-12-31",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "iojs1": {
     "full": "io.js",
@@ -2480,14 +2464,7 @@
     "note_id": "harmony-flag",
     "release": "2014-01-15",
     "retire": "2014-02-03",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl"
-    ]
+    "obsolete": "very"
   },
   "iojs1_1": {
     "full": "io.js",
@@ -2498,15 +2475,7 @@
     "note_id": "harmony-flag",
     "release": "2014-02-03",
     "retire": "2015-05-04",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": "very"
   },
   "iojs2": {
     "full": "io.js",
@@ -2516,15 +2485,7 @@
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "release": "2015-05-04",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": "very"
   },
   "iojs3": {
     "full": "io.js",
@@ -2535,15 +2496,7 @@
     "note_id": "harmony-flag",
     "release": "2015-08-04",
     "retire": "2015-09-08",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": "very"
   },
   "node4": {
     "full": "Node.js",
@@ -2554,15 +2507,7 @@
     "note_id": "harmony-flag",
     "release": "2015-09-08",
     "retire": "2018-04-01",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node5": {
     "full": "Node.js",
@@ -2573,15 +2518,7 @@
     "note_id": "harmony-flag",
     "release": "2015-10-29",
     "retire": "2016-04-26",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": "very"
   },
   "node6": {
     "full": "Node.js",
@@ -2592,15 +2529,7 @@
     "equals": "chrome50",
     "release": "2016-04-26",
     "retire": "2016-08-16",
-    "obsolete": "very",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": "very"
   },
   "node6_5": {
     "full": "Node.js",
@@ -2611,15 +2540,7 @@
     "equals": "chrome51",
     "release": "2016-08-16",
     "retire": "2019-04-18",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node7": {
     "full": "Node.js",
@@ -2630,15 +2551,7 @@
     "equals": "chrome54",
     "release": "2016-10-25",
     "retire": "2017-02-21",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node7_6": {
     "full": "Node.js",
@@ -2649,15 +2562,7 @@
     "equals": "chrome55",
     "release": "2017-02-21",
     "retire": "2017-05-30",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node8": {
     "full": "Node.js",
@@ -2668,15 +2573,7 @@
     "equals": "chrome58",
     "release": "2017-05-30",
     "retire": "2017-08-08",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node8_3": {
     "full": "Node.js",
@@ -2686,15 +2583,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome60",
     "release": "2017-08-08",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node8_7": {
     "full": "Node.js",
@@ -2704,15 +2593,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome61",
     "release": "2017-10-11",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node8_10": {
     "full": "Node.js",
@@ -2723,15 +2604,7 @@
     "equals": "chrome62",
     "release": "2018-03-07",
     "retire": "2019-12-31",
-    "unstable": false,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "unstable": false
   },
   "node10_0": {
     "full": "Node.js",
@@ -2741,15 +2614,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome66",
     "release": "2018-04-24",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node10_4": {
     "full": "Node.js",
@@ -2759,15 +2624,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome67",
     "release": "2018-06-06",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node10_9": {
     "full": "Node.js",
@@ -2778,15 +2635,7 @@
     "equals": "chrome68",
     "release": "2018-08-15",
     "retire": "2021-04-30",
-    "obsolete": false,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": false
   },
   "node11_0": {
     "full": "Node.js",
@@ -2796,15 +2645,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome70",
     "release": "2018-10-23",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node12_0": {
     "full": "Node.js",
@@ -2814,15 +2655,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome74",
     "release": "2019-04-23",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node12_5": {
     "full": "Node.js",
@@ -2832,15 +2665,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome75",
     "release": "2019-06-26",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node12_9": {
     "full": "Node.js",
@@ -2850,15 +2675,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome76",
     "release": "2019-08-20",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "node12_11": {
     "full": "Node.js",
@@ -2869,15 +2686,7 @@
     "equals": "chrome77",
     "release": "2019-09-25",
     "retire": "2022-04-30",
-    "obsolete": false,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": false
   },
   "node13_0": {
     "full": "Node.js",
@@ -2887,15 +2696,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome78",
     "release": "2019-10-22",
-    "obsolete": false,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": false
   },
   "node13_2": {
     "full": "Node.js",
@@ -2905,15 +2706,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome79",
     "release": "2019-11-21",
-    "obsolete": false,
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
+    "obsolete": false
   },
   "duktape1_0": {
     "full": "Duktape 1.0",
