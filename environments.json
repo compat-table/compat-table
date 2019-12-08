@@ -2431,10 +2431,65 @@
       "es6"
     ]
   },
+  "node0_5": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.5",
+    "equals": "chrome11",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
+    "release": "2011-08-26",
+    "obsolete": "very"
+  },
+  "node0_5_1": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.5.1-0.5.3",
+    "equals": "chrome14",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
+    "release": "2011-08-26",
+    "obsolete": "very"
+  },
+  "node0_5_4": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.5.4-0.5.5",
+    "equals": "chrome15",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
+    "release": "2011-08-26",
+    "obsolete": "very"
+  },
+  "node0_5_6": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.5.6-0.5.10",
+    "equals": "chrome16",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
+    "release": "2011-08-26",
+    "obsolete": "very"
+  },
+  "node0_6": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.6",
+    "equals": "chrome16",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag",
+    "release": "2011-11-04",
+    "obsolete": "very"
+  },
   "node0_7": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 0.7",
+    "short": "Node 0.7.0-0.7.2",
     "equals": "chrome18",
     "platformtype": "engine",
     "note_id": "harmony-flag",
@@ -2445,7 +2500,7 @@
   "node0_7_3": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 0.7.3",
+    "short": "Node 0.7.3-0.7.10",
     "equals": "chrome19",
     "platformtype": "engine",
     "note_id": "harmony-flag",
@@ -2456,7 +2511,7 @@
   "node0_7_11": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 0.7.11",
+    "short": "Node 0.7.11-0.7.12",
     "equals": "chrome21",
     "platformtype": "engine",
     "note_id": "harmony-flag",
