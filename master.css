@@ -29,15 +29,11 @@ body {
     }
 }
 table {
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
     min-width: 100%;
 }
 thead {
     background: white;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
 }
 thead > tr:nth-child(2) > th {
     box-shadow: 0 0 0 2px white;
@@ -470,18 +466,44 @@ label[for="sort"] {
     top: 7px;
 }
 
-.floatThead-container {
-    background: #fff;
-    overflow: visible !important;
-}
-body.hide-platformtype .floatThead-container.floating-header sup.num-features { 
-    top: -3px;
-    display: inline-block;
-    padding-left: 3px;
-}
 body.hide-platformtype .platformtype {
     display: none;
 }
 body.hide-platformtype sup.num-features {
     background-color: #fff;
 }
+
+/**
+ * Sticky header
+ *
+ * As of December, 2019, several browsers do not support
+ * position: sticky on `thead` and `tr` elements. As a solution, we apply
+ * position: sticky to the `th` elements.
+ * But there's a caveat: we have two rows of `th` elements and we do not want
+ * them to overlap. The default height of the first row is 44px, so we set
+ * top: 44px for the second row. But actual height may be different depending
+ * on browser rendering, so we also detect true first-header-row-height with
+ * javascript and update the custom css property.
+ */
+
+:root {
+  --first-header-row-height: 44px; /* will be recalculated by js */
+}
+
+@supports ((position: sticky) or (position: -webkit-sticky)) {
+  #table-wrapper thead tr:first-child th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  #table-wrapper thead tr:nth-child(2) th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 44px; /* for browsers that do not support custom-properties */
+    top: var(--first-header-row-height);
+    z-index: 1;
+  }
+}
+/** -- End Sticky header -- */

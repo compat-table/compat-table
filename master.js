@@ -68,24 +68,6 @@ $(function() {
   'use strict';
   var table = $('#table-wrapper');
   var currentBrowserSelector = ":nth-of-type(2)";
-  var thead = $('thead');
-
-  // position: sticky is implemented in chrome but buggy. currently makes the background transparent sometimes
-  if (thead.css('position') === "sticky" && window.chrome) {
-    thead.css('position', 'static');
-  }
-
-  if (thead.css('position') === "sticky" ||
-    thead.css('position') === "-webkit-sticky") {
-    // Remove floatThead when native position:sticky is usable.
-    $.fn.floatThead = function() { return this };
-  }
-
-  var initFloatingHeaders = function() {
-    table.floatThead({
-      headerCellSelector: 'tr:last>*:visible'
-    });
-  };
 
   var setColSpans = function() {
     $('#desktop-header' ).prop('colSpan', $('.platform.desktop:visible').length);
@@ -95,19 +77,24 @@ $(function() {
     $('tr.category>td'  ).prop('colSpan', $('tr.supertest:first>td:visible').length);
   };
 
-
-
-  table.on("floatThead", function (evt, isFloating, $container) {
-    $container.toggleClass("floating-header", isFloating);
-  });
-
+  /** Sticky header */
+  var platformTypesHeader = $(
+    "#table-wrapper thead tr:first-child th"
+  );
+  if (platformTypesHeader != null && platformTypesHeader.length) {
+    var actualPlatformTypesHeaderHeight = platformTypesHeader.outerHeight();
+    document.documentElement.style.setProperty(
+      "--first-header-row-height",
+      String(actualPlatformTypesHeaderHeight) + 'px'
+    );
+  }
+  /** -- End Sticky header -- */
 
   // Set up the Show Obsolete checkbox
   $('#show-obsolete, #show-unstable').on('click', function() {
     $('body').toggleClass(this.id, this.checked);
     setTimeout(function() {
       setColSpans();
-      table.triggerHandler('reflow'); //refresh floatThead
     }, 100);
   }).each(function() {
     if (this.checked) $(this).triggerHandler("click");
@@ -458,7 +445,6 @@ $(function() {
   $('.browser-name, th.current').each(window.__updateHeaderTotal);
 
   setColSpans();
-  initFloatingHeaders();
 
   // Cached arrays of sort orderings
   var ordering = { };
@@ -476,8 +462,6 @@ $(function() {
       'flagged-features': {attr: 'data-flagged-features', order: 1, hidePlatformtype: true},
       'engine-types':     {attr: 'data-num', order: -1, hidePlatformtype: false}
     };
-
-    table.floatThead('destroy');
 
     var sortSpec = sortSpecMap[this.value];
     var sortAttr = sortSpec.attr;
@@ -512,8 +496,6 @@ $(function() {
       }
     });
     table.insertBefore('#footnotes');
-
-    initFloatingHeaders();
   });
   if ($("#sort").val() !== defaultSortVal) {
     $("#sort").triggerHandler('change');
