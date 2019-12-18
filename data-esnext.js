@@ -2079,6 +2079,7 @@ exports.tests = [
       firefox72: firefox.nightly,
       chrome77: false,
       chrome80: chrome.stringPrototypeReplaceAll,
+      safaritp: true,
       graalvm: false,
   }
 },

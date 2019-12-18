@@ -3819,7 +3819,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
           chrome80: true,
-          safaritp: {val: 'flagged', note_id: "safari-nullish", note_html: "The feature has to be enabled via JSC runtime flag: <code>__XPC_JSC_useNullishAwareOperators=true open -a 'Safari Technology Preview'</code>."},
+          safaritp: true,
           graalvm: false,
         }
       },
@@ -3839,7 +3839,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
           chrome80: true,
-          safaritp: {val: 'flagged', note_id: "safari-nullish"},
+          safaritp: true,
           graalvm: false,
         }
       },
@@ -3859,7 +3859,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
           chrome80: true,
-          safaritp: {val: 'flagged', note_id: "safari-nullish"},
+          safaritp: true,
           graalvm: false,
         }
       },
@@ -3889,7 +3889,7 @@ exports.tests = [
       chrome77: false,
       chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
       chrome80: true,
-      safaritp: {val: 'flagged', note_id: "safari-nullish"},
+      safaritp: true,
       graalvm: false,
     }
   },
