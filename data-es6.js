@@ -5731,6 +5731,10 @@ exports.tests = [
         return (re.exec('xy')[0] === 'y');
       */},
       res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         firefox3: true,
         opera10_50: false,
@@ -5740,7 +5744,6 @@ exports.tests = [
         node6: true,
         node6_5: true,
         ejs: true,
-        typescript1corejs2: typescript.fallthrough,
         edge12: edge.experimental,
         edge13: true,
         xs6: true,
@@ -5759,6 +5762,10 @@ exports.tests = [
         return result === 'yy' && re.lastIndex === 5;
       */},
       res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         firefox3: true,
         opera10_50: false,
@@ -5768,7 +5775,6 @@ exports.tests = [
         node6: true,
         node6_5: true,
         ejs: true,
-        typescript1corejs2: typescript.fallthrough,
         edge12: edge.experimental,
         edge13: true,
         xs6: true,
