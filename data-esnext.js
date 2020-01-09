@@ -3672,6 +3672,62 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Object iteration',
+  category: STAGE1,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-object-iteration',
+  subtests: [
+    {
+      name: 'Object.iterateKeys',
+      exec: function () {/*
+        const object = { a: 1, b: 2, c: 3 };
+        const iterator = Object.iterateKeys(object);
+        if (typeof iterator[Symbol.iterator] !== 'function' || typeof iterator.next !== 'function') return false;
+        delete object.b;
+        return [...iterator].join() === 'a,c';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Object.iterateValues',
+      exec: function () {/*
+        const object = { a: 1, b: 2, c: 3 };
+        const iterator = Object.iterateValues(object);
+        if (typeof iterator[Symbol.iterator] !== 'function' || typeof iterator.next !== 'function') return false;
+        delete object.b;
+        return [...iterator].join() === '1,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'Object.iterateEntries',
+      exec: function () {/*
+        const object = { a: 1, b: 2, c: 3 };
+        const iterator = Object.iterateEntries(object);
+        if (typeof iterator[Symbol.iterator] !== 'function' || typeof iterator.next !== 'function') return false;
+        delete object.b;
+        return [...iterator].join() === 'a,1,c,3';
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+  ]
+},
 ];
 
 
