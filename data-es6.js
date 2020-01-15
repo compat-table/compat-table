@@ -14504,7 +14504,7 @@ exports.tests = [
       },
     },
     {
-      name: 'defaults, arrow function',
+      name: 'shorthand defaults, arrow function',
       exec: function(){/*
         return ((a, {b = 0, c = 3}) => {
           return a === 1 && b === 2 && c === 3;
