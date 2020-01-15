@@ -698,55 +698,6 @@
       "non-standard"
     ]
   },
-  "edge12": {
-    "full": "Microsoft Edge 12",
-    "family": "Chakra",
-    "short": "Edge 12",
-    "release": "2015-07-15",
-    "obsolete": "very"
-  },
-  "edge13": {
-    "full": "Microsoft Edge 13",
-    "family": "Chakra",
-    "short": "Edge 13",
-    "release": "2015-11-05",
-    "obsolete": "very"
-  },
-  "edge14": {
-    "full": "Microsoft Edge 14",
-    "family": "Chakra",
-    "short": "Edge 14",
-    "release": "2016-08-02",
-    "obsolete": "very"
-  },
-  "edge15": {
-    "full": "Microsoft Edge 15",
-    "family": "Chakra",
-    "short": "Edge 15",
-    "release": "2017-04-11",
-    "obsolete": true
-  },
-  "edge16": {
-    "full": "Microsoft Edge 16",
-    "family": "Chakra",
-    "short": "Edge 16",
-    "release": "2017-10-17",
-    "obsolete": true
-  },
-  "edge17": {
-    "full": "Microsoft Edge 17",
-    "family": "Chakra",
-    "short": "Edge 17",
-    "release": "2018-04-30",
-    "obsolete": false
-  },
-  "edge18": {
-    "full": "Microsoft Edge 18",
-    "family": "Chakra",
-    "release": "2018-10-02",
-    "short": "Edge 18",
-    "obsolete": false
-  },
   "firefox1": {
     "full": "Firefox 1.0",
     "family": "SpiderMonkey",
@@ -2205,6 +2156,63 @@
     "short": "CH&nbsp;81,<br>OP&nbsp;68",
     "release": "2020-03-17",
     "unstable": true
+  },
+  "edge12": {
+    "full": "Microsoft Edge 12",
+    "family": "Chakra",
+    "short": "Edge 12",
+    "release": "2015-07-15",
+    "obsolete": "very"
+  },
+  "edge13": {
+    "full": "Microsoft Edge 13",
+    "family": "Chakra",
+    "short": "Edge 13",
+    "release": "2015-11-05",
+    "obsolete": "very"
+  },
+  "edge14": {
+    "full": "Microsoft Edge 14",
+    "family": "Chakra",
+    "short": "Edge 14",
+    "release": "2016-08-02",
+    "obsolete": "very"
+  },
+  "edge15": {
+    "full": "Microsoft Edge 15",
+    "family": "Chakra",
+    "short": "Edge 15",
+    "release": "2017-04-11",
+    "obsolete": true
+  },
+  "edge16": {
+    "full": "Microsoft Edge 16",
+    "family": "Chakra",
+    "short": "Edge 16",
+    "release": "2017-10-17",
+    "obsolete": "very"
+  },
+  "edge17": {
+    "full": "Microsoft Edge 17",
+    "family": "Chakra",
+    "short": "Edge 17",
+    "release": "2018-04-30",
+    "obsolete": true
+  },
+  "edge18": {
+    "full": "Microsoft Edge 18",
+    "family": "Chakra",
+    "release": "2018-10-02",
+    "short": "Edge 18",
+    "obsolete": false
+  },
+  "edge79": {
+    "full": "Microsoft Edge 79",
+    "family": "V8",
+    "release": "2020-01-15",
+    "short": "Edge 79",
+    "equals": "chrome79",
+    "obsolete": false
   },
   "safari1": {
     "full": "Safari 1.0",

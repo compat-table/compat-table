@@ -137,10 +137,6 @@
 <th class="platform ie9 desktop obsolete" data-browser="ie9"><a href="#ie9" class="browser-name"><abbr title="Internet Explorer 9">IE 9</abbr></a></th>
 <th class="platform ie10 desktop obsolete" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer 10">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer 11">IE 11</abbr></a></th>
-<th class="platform edge15 desktop obsolete" data-browser="edge15"><a href="#edge15" class="browser-name"><abbr title="Microsoft Edge 15">Edge 15</abbr></a></th>
-<th class="platform edge16 desktop obsolete" data-browser="edge16"><a href="#edge16" class="browser-name"><abbr title="Microsoft Edge 16">Edge 16</abbr></a></th>
-<th class="platform edge17 desktop" data-browser="edge17"><a href="#edge17" class="browser-name"><abbr title="Microsoft Edge 17">Edge 17</abbr></a></th>
-<th class="platform edge18 desktop" data-browser="edge18"><a href="#edge18" class="browser-name"><abbr title="Microsoft Edge 18">Edge 18</abbr></a></th>
 <th class="platform firefox60 desktop obsolete" data-browser="firefox60"><a href="#firefox60" class="browser-name"><abbr title="Firefox 60 Extended Support Release">FF 60 ESR</abbr></a></th>
 <th class="platform firefox65 desktop obsolete" data-browser="firefox65"><a href="#firefox65" class="browser-name"><abbr title="Firefox 65">FF 65</abbr></a></th>
 <th class="platform firefox66 desktop obsolete" data-browser="firefox66"><a href="#firefox66" class="browser-name"><abbr title="Firefox 66">FF 66</abbr></a></th>
@@ -164,6 +160,10 @@
 <th class="platform chrome79 desktop" data-browser="chrome79"><a href="#chrome79" class="browser-name"><abbr title="Chrome">CH&#xA0;79,<br>OP&#xA0;66</abbr></a></th>
 <th class="platform chrome80 desktop unstable" data-browser="chrome80"><a href="#chrome80" class="browser-name"><abbr title="Chrome Beta">CH&#xA0;80,<br>OP&#xA0;67</abbr></a></th>
 <th class="platform chrome81 desktop unstable" data-browser="chrome81"><a href="#chrome81" class="browser-name"><abbr title="Chrome Canary">CH&#xA0;81,<br>OP&#xA0;68</abbr></a></th>
+<th class="platform edge15 desktop obsolete" data-browser="edge15"><a href="#edge15" class="browser-name"><abbr title="Microsoft Edge 15">Edge 15</abbr></a></th>
+<th class="platform edge17 desktop obsolete" data-browser="edge17"><a href="#edge17" class="browser-name"><abbr title="Microsoft Edge 17">Edge 17</abbr></a></th>
+<th class="platform edge18 desktop" data-browser="edge18"><a href="#edge18" class="browser-name"><abbr title="Microsoft Edge 18">Edge 18</abbr></a></th>
+<th class="platform edge79 desktop" data-browser="edge79"><a href="#edge79" class="browser-name"><abbr title="Microsoft Edge 79">Edge 79</abbr></a></th>
 <th class="platform safari11 desktop obsolete" data-browser="safari11"><a href="#safari11" class="browser-name"><abbr title="Safari 11">SF 11</abbr></a></th>
 <th class="platform safari11_1 desktop obsolete" data-browser="safari11_1"><a href="#safari11_1" class="browser-name"><abbr title="Safari 11.1">SF 11.1</abbr></a></th>
 <th class="platform safari12 desktop obsolete" data-browser="safari12"><a href="#safari12" class="browser-name"><abbr title="Safari 12">SF 12</abbr></a></th>
@@ -225,10 +225,6 @@
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/2</td>
 <td class="tally" data-browser="ie11" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">2/2</td>
-<td class="tally" data-browser="edge17" data-tally="1">2/2</td>
-<td class="tally" data-browser="edge18" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">2/2</td>
@@ -252,6 +248,10 @@
 <td class="tally" data-browser="chrome79" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">2/2</td>
+<td class="tally" data-browser="edge18" data-tally="1">2/2</td>
+<td class="tally" data-browser="edge79" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">2/2</td>
@@ -312,10 +312,6 @@ return typeof Intl === &apos;object&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -339,6 +335,10 @@ return typeof Intl === &apos;object&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -399,10 +399,6 @@ return Intl.constructor === Object;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -426,6 +422,10 @@ return Intl.constructor === Object;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -483,10 +483,6 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/4</td>
 <td class="tally" data-browser="ie11" data-tally="1">4/4</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">4/4</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">4/4</td>
-<td class="tally" data-browser="edge17" data-tally="1">4/4</td>
-<td class="tally" data-browser="edge18" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">4/4</td>
@@ -510,6 +506,10 @@ return Intl.constructor === Object;
 <td class="tally" data-browser="chrome79" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">4/4</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">4/4</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">4/4</td>
+<td class="tally" data-browser="edge18" data-tally="1">4/4</td>
+<td class="tally" data-browser="edge79" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">4/4</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">4/4</td>
@@ -570,10 +570,6 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -597,6 +593,10 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -657,10 +657,6 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -684,6 +680,10 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -744,10 +744,6 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -771,6 +767,10 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -859,10 +859,6 @@ try {
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -886,6 +882,10 @@ try {
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -943,10 +943,6 @@ try {
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -970,6 +966,10 @@ try {
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -1030,10 +1030,6 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1057,6 +1053,10 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1114,10 +1114,6 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -1141,6 +1137,10 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -1201,10 +1201,6 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1228,6 +1224,10 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1285,10 +1285,6 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/5</td>
 <td class="tally" data-browser="ie11" data-tally="1">5/5</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">5/5</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">5/5</td>
-<td class="tally" data-browser="edge17" data-tally="1">5/5</td>
-<td class="tally" data-browser="edge18" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">5/5</td>
@@ -1312,6 +1308,10 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">5/5</td>
+<td class="tally" data-browser="edge18" data-tally="1">5/5</td>
+<td class="tally" data-browser="edge79" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">5/5</td>
@@ -1372,10 +1372,6 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1399,6 +1395,10 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1459,10 +1459,6 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1486,6 +1482,10 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1546,10 +1546,6 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1573,6 +1569,10 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1633,10 +1633,6 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1660,6 +1656,10 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1748,10 +1748,6 @@ try {
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1775,6 +1771,10 @@ try {
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -1832,10 +1832,6 @@ try {
 <td class="tally obsolete" data-browser="ie9" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/6</td>
 <td class="tally" data-browser="ie11" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">6/6</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">6/6</td>
-<td class="tally" data-browser="edge17" data-tally="1">6/6</td>
-<td class="tally" data-browser="edge18" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">6/6</td>
@@ -1859,6 +1855,10 @@ try {
 <td class="tally" data-browser="chrome79" data-tally="1">6/6</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">6/6</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">6/6</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">6/6</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">6/6</td>
+<td class="tally" data-browser="edge18" data-tally="1">6/6</td>
+<td class="tally" data-browser="edge79" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">6/6</td>
@@ -1919,10 +1919,6 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -1946,6 +1942,10 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2006,10 +2006,6 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2033,6 +2029,10 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2093,10 +2093,6 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2120,6 +2116,10 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2208,10 +2208,6 @@ try {
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2235,6 +2231,10 @@ try {
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2296,10 +2296,6 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2323,6 +2319,10 @@ return tz !== undefined &amp;&amp; tz.length &gt; 0;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2391,10 +2391,6 @@ try {
 <td class="no obsolete" data-browser="ie9">No</td>
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2418,6 +2414,10 @@ try {
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2475,10 +2475,6 @@ try {
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -2502,6 +2498,10 @@ try {
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -2562,10 +2562,6 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2589,6 +2585,10 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2646,10 +2646,6 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -2673,6 +2669,10 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -2733,10 +2733,6 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2760,6 +2756,10 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2817,10 +2817,6 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -2844,6 +2840,10 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -2904,10 +2904,6 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -2931,6 +2927,10 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -2988,10 +2988,6 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -3015,6 +3011,10 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -3075,10 +3075,6 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -3102,6 +3098,10 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -3159,10 +3159,6 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -3186,6 +3182,10 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -3246,10 +3246,6 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -3273,6 +3269,10 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -3330,10 +3330,6 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -3357,6 +3353,10 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -3417,10 +3417,6 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -3444,6 +3440,10 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
@@ -3501,10 +3501,6 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="ie9" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ie10" data-tally="1">1/1</td>
 <td class="tally" data-browser="ie11" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
-<td class="tally obsolete" data-browser="edge16" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge17" data-tally="1">1/1</td>
-<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox60" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox65" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="firefox66" data-tally="1">1/1</td>
@@ -3528,6 +3524,10 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally" data-browser="chrome79" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome80" data-tally="1">1/1</td>
 <td class="tally unstable" data-browser="chrome81" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge15" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="edge17" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge18" data-tally="1">1/1</td>
+<td class="tally" data-browser="edge79" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari11_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="safari12" data-tally="1">1/1</td>
@@ -3588,10 +3588,6 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="ie9">Yes</td>
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
-<td class="yes obsolete" data-browser="edge15">Yes</td>
-<td class="yes obsolete" data-browser="edge16">Yes</td>
-<td class="yes" data-browser="edge17">Yes</td>
-<td class="yes" data-browser="edge18">Yes</td>
 <td class="yes obsolete" data-browser="firefox60">Yes</td>
 <td class="yes obsolete" data-browser="firefox65">Yes</td>
 <td class="yes obsolete" data-browser="firefox66">Yes</td>
@@ -3615,6 +3611,10 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes" data-browser="chrome79">Yes</td>
 <td class="yes unstable" data-browser="chrome80">Yes</td>
 <td class="yes unstable" data-browser="chrome81">Yes</td>
+<td class="yes obsolete" data-browser="edge15">Yes</td>
+<td class="yes obsolete" data-browser="edge17">Yes</td>
+<td class="yes" data-browser="edge18">Yes</td>
+<td class="yes" data-browser="edge79">Yes</td>
 <td class="yes obsolete" data-browser="safari11">Yes</td>
 <td class="yes obsolete" data-browser="safari11_1">Yes</td>
 <td class="yes obsolete" data-browser="safari12">Yes</td>
