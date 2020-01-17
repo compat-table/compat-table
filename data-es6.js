@@ -14504,7 +14504,36 @@ exports.tests = [
       },
     },
     {
-      name: 'defaults, arrow function',
+      name: 'aliased defaults, arrow function',
+      exec: function(){/*
+        return ((a, {b: x = 0, c: y = 3}) => {
+          return a === 1 && x === 2 && y === 3;
+        })(1, {b: 2});
+      */},
+      res: {
+        babel6corejs2: true,
+        closure: true,
+        typescript1corejs2: true,
+        traceur: true,
+        edge11: false,
+        edge15: true,
+        chrome47: chrome.experimental,
+        chrome49: true,
+        firefox50: false,
+        firefox52: true,
+        opera10_50: false,
+        node6: true,
+        node6_5: true,
+        node8: true,
+        safari9: false,
+        safari10: true,
+        duktape2_2: false,
+        graalvm: true,
+        jerryscript2_0: false,
+      },
+    },
+    {
+      name: 'shorthand defaults, arrow function',
       exec: function(){/*
         return ((a, {b = 0, c = 3}) => {
           return a === 1 && b === 2 && c === 3;
