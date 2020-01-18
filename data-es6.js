@@ -2871,6 +2871,7 @@ exports.tests = [
       res: {
         tr: true,
         babel6corejs2: true,
+        closure20200112: true,
         typescript1corejs2: true,
         es6tr: true,
         ejs: true,
