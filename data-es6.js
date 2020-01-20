@@ -1342,6 +1342,29 @@ exports.tests = [
       },
     },
     {
+      name: 'for-in loop binding shadowing parameter',
+      exec: function(){/*
+        try {
+          Function("function f(e) { for (let e in {}) e }");
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        ie11: true,
+        edge14: true,
+        firefox2: false,
+        firefox44: true,
+        opera10_50: false,
+        chrome48: chrome.experimental,
+        chrome49: true,
+        safari10_1: false,
+        safari11: true,
+        node6: true,
+      },
+    },
+    {
       name: 'basic support (strict mode)',
       exec: function(){/*
         'use strict';
@@ -1585,6 +1608,29 @@ exports.tests = [
         jerryscript2_0: false,
       },
     },
+    {
+      name: 'for-in loop binding shadowing parameter (strict mode)',
+      exec: function(){/*
+        try {
+          Function("'use strict'; function f(e) { for (let e in {}) e }");
+          return true;
+        } catch(e) {
+          return false;
+        }
+      */},
+      res: {
+        ie11: true,
+        edge14: true,
+        firefox2: false,
+        firefox44: true,
+        opera10_50: false,
+        chrome41: true,
+        safari10_1: false,
+        safari11: true,
+        node0_12: "flagged",
+        node4: true,
+      },
+    }
   ],
 },
 {
