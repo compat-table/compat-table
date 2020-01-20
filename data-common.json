@@ -80,6 +80,11 @@
       "val": false,
       "note_id": "firefox-private-class-fields",
       "note_html": "The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
+    },
+    "weakrefs": {
+      "val": "flagged",
+      "note_id": "firefox-weakrefs",
+      "note_html": "The feature have to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>."
     }
   },
   "chrome": {

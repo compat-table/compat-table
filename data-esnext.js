@@ -433,6 +433,7 @@ exports.tests = [
       res : {
         ie11: false,
         firefox2: false,
+        firefox74: common.firefox.weakrefs,
         opera10_50: false,
         chrome65: false,
         chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8."},
@@ -451,6 +452,7 @@ exports.tests = [
       res : {
         ie11: false,
         firefox2: false,
+        firefox74: common.firefox.weakrefs,
         opera10_50: false,
         chrome65: false,
         chrome74: {val: 'flagged', note_id: "chrome-weakrefs"},
