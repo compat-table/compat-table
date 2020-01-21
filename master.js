@@ -374,8 +374,7 @@ $(function() {
       id = elem.attr('href').slice(1);
       name = elem.attr('href').replace("#", '[data-browser="')+'"]';
       elem = elem.parent();
-    }
-    else {
+    } else {
       name = currentBrowserSelector;
     }
 

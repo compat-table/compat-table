@@ -518,8 +518,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       t.subtests.forEach(function(e) {
         interpolateResults(e.res);
       });
-    }
-    else interpolateResults(t.res);
+    } else interpolateResults(t.res);
 
     var id = escapeTestName(t.name);
     var name = t.name;
@@ -577,8 +576,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }[result] || '');
       if (result === "needs-polyfill-or-native") {
         cell.attr('title', "Requires native support or a polyfill.");
-      }
-      else if (result === "strict") {
+      } else if (result === "strict") {
         cell.attr('title', "Support for this feature incorrectly requires strict mode.");
       }
 
@@ -626,7 +624,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         if (subtest.spec) {
             subtestName = '<a href="' + subtest.spec + '">' + subtest.name + '</a>';
         }
-        
+
         if (subtest.mdn) {
           subtestName += generateMdnLink(subtest.mdn);
         }
@@ -756,13 +754,11 @@ function testScript(fn, transformFn, rowNum) {
         } catch(e) {
           expr = "false";
         }
-      }
-      else {
+      } else {
         expr = deindentFunc(fn);
       }
       return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
-    }
-    else {
+    } else {
       expr = deindentFunc(expr[1]);
       if (transformFn) {
         try {

@@ -5254,8 +5254,7 @@ exports.tests = [
             var f = function(){};
             if (Object.setPrototypeOf) {
               Object.setPrototypeOf(f, proto);
-            }
-            else {
+            } else {
               f.__proto__ = proto;
             }
             var boundF = Function.prototype.bind.call(f, null);
@@ -5289,8 +5288,7 @@ exports.tests = [
             var f = function*(){};
             if (Object.setPrototypeOf) {
               Object.setPrototypeOf(f, proto);
-            }
-            else {
+            } else {
               f.__proto__ = proto;
             }
             var boundF = Function.prototype.bind.call(f, null);
@@ -5322,8 +5320,7 @@ exports.tests = [
             var f = ()=>5;
             if (Object.setPrototypeOf) {
               Object.setPrototypeOf(f, proto);
-            }
-            else {
+            } else {
               f.__proto__ = proto;
             }
             var boundF = Function.prototype.bind.call(f, null);
@@ -5355,8 +5352,7 @@ exports.tests = [
             class C {}
             if (Object.setPrototypeOf) {
               Object.setPrototypeOf(C, proto);
-            }
-            else {
+            } else {
               C.__proto__ = proto;
             }
             var boundF = Function.prototype.bind.call(C, null);
