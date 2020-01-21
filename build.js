@@ -744,13 +744,11 @@ function testScript(fn, transformFn, rowNum) {
   if (typeof fn === 'function') {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
-    var transformed = false;
     // if there wasn't an expression, make the function statement into one
     if (!expr) {
       if (transformFn) {
         try {
           expr = transformFn("("+fn+")");
-          transformed = true;
         } catch(e) {
           expr = "false";
         }
@@ -760,6 +758,7 @@ function testScript(fn, transformFn, rowNum) {
       return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
     } else {
       expr = deindentFunc(expr[1]);
+      var transformed = false;
       if (transformFn) {
         try {
           if (expr.search(/Function\s*\(|eval\s*\(/) > -1) {
