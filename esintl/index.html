@@ -13,11 +13,11 @@
       var __script_executed = {};
       if (typeof global === 'undefined') {
         this.lacksGlobal = true;
-        var global = this;
+        window.global = this;
       }
       if (typeof globalThis === 'undefined') {
         this.lacksGlobalThis = true;
-        var globalThis = this;
+        window.globalThis = this;
       }
       function __createIterableObject(a, b, c) {
         if (typeof Symbol === "function" && Symbol.iterator) {
