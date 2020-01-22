@@ -2174,7 +2174,9 @@
     "family": "Chakra",
     "short": "Edge 12",
     "release": "2015-07-15",
-    "obsolete": "very"
+    "obsolete": "very",
+    "#": "IE11 and Edge12 are not equal, but we can use IE11 as a baseline",
+    "equals": "ie11"
   },
   "edge13": {
     "full": "Microsoft Edge 13",
