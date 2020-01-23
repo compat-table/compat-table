@@ -1263,6 +1263,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: true,
+        firefox74: false,
         opera10_50: false,
         chrome77: false,
         rhino1_7: true,
@@ -1288,6 +1289,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: true,
+        firefox74: false,
         opera10_50: false,
         chrome77: false,
         besen: true,
@@ -1304,6 +1306,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: true,
+        firefox74: false,
         opera10_50: false,
         chrome77: false,
         rhino1_7: null,
@@ -1406,6 +1409,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: true,
+        firefox74: false,
         opera10_50: false,
         chrome77: false,
         besen: null,
