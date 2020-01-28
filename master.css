@@ -495,7 +495,7 @@ body.hide-platformtype sup.num-features {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
   }
 
   #table-wrapper thead tr:nth-child(2) th {
@@ -503,7 +503,50 @@ body.hide-platformtype sup.num-features {
     position: sticky;
     top: 44px; /* for browsers that do not support custom-properties */
     top: var(--first-header-row-height);
-    z-index: 1;
+    z-index: 2;
   }
 }
 /** -- End Sticky header -- */
+
+/** -- Horizontally sticky 'feature name' row -- */
+@supports ((position: sticky) or (position: -webkit-sticky)) {
+  /* Test names */
+  tr.supertest td:first-child,
+  tr.subtest td:first-child,
+  tr.optional-feature td:first-child,
+  tr:not([class]) td:first-child,
+  /* Column header */
+  table#table-wrapper thead tr th.test-name,
+  /* Compatibility header */
+  table#table-wrapper thead tr:first-child th:first-child,
+  /* 'current browser' column */
+  td.current,
+  td.current + td,
+  table#table-wrapper thead th.current,
+  table#table-wrapper thead th.current + th {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    outline: #fff solid 3px;
+  }
+  /* Items in the header need a higher z-index than both the header and column */
+  table#table-wrapper thead tr th.test-name,
+  table#table-wrapper thead tr:first-child th:first-child,
+  table#table-wrapper thead th.current,
+  table#table-wrapper thead th.current + th {
+    z-index:3;
+  }
+  /* 'current browser' column offset */
+  td.current,
+  table#table-wrapper thead th.current {
+    left:360px;
+  }
+  /* 'current browser' spacer column offset */
+  td.current + td,
+  table#table-wrapper thead th.current + th {
+    left:423px;
+  }
+}
