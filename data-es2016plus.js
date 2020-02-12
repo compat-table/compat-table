@@ -3842,6 +3842,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
           chrome80: true,
+          safari13_1: true,
           safaritp: true,
           graalvm: false,
         }
@@ -3864,6 +3865,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
           chrome80: true,
+          safari13_1: true,
           safaritp: true,
           graalvm: false,
         }
@@ -3886,6 +3888,7 @@ exports.tests = [
           chrome77: false,
           chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
           chrome80: true,
+          safari13_1: true,
           safaritp: true,
           graalvm: false,
         }
@@ -3916,6 +3919,7 @@ exports.tests = [
       chrome77: false,
       chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
       chrome80: true,
+      safari13_1: true,
       safaritp: true,
       graalvm: false,
     }
