@@ -3874,9 +3874,34 @@ exports.tests = [
       {
         name: 'optional method call',
         exec: function(){/*
-          var foo = { baz: function () { return 42; } };
+          var foo = { baz: function () { return this.value; }, value: 42 };
           var bar = null;
           return foo?.baz() === 42 && bar?.baz() === undefined;
+        */},
+        res : {
+          babel7corejs2: true,
+          typescript3_7corejs3: true,
+          ie11: false,
+          firefox10: false,
+          firefox52: false,
+          firefox73: false,
+          firefox74: true,
+          chrome77: false,
+          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
+          chrome80: true,
+          safari13_1: true,
+          safaritp: true,
+          graalvm: false,
+        }
+      },
+      {
+        name: 'optional function call',
+        exec: function(){/*
+          var foo = { baz: function () { return 42; } };
+          var bar = {};
+          function baz() { return 42; };
+          var n;
+          return foo.baz?.() === 42 && bar.baz?.() === undefined && baz?.() === 42 && n?.() === undefined;
         */},
         res : {
           babel7corejs2: true,
