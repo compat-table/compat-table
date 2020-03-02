@@ -1352,7 +1352,6 @@ exports.tests = [
         }
       */},
       res: {
-        closure: true,
         ie11: true,
         edge14: true,
         firefox2: false,
@@ -1628,7 +1627,6 @@ exports.tests = [
         }
       */},
       res: {
-        closure: true,
         ie11: true,
         edge14: true,
         firefox2: false,
