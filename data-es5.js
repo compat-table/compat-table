@@ -1369,6 +1369,7 @@ exports.tests = [
       nashorn10: true,
       graalvm: true,
       jerryscript1_0: false,
+      jerryscript2_2_0: true,
     }
   },
   {

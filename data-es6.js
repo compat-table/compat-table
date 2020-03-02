@@ -296,6 +296,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -349,6 +350,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -371,6 +373,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -515,6 +518,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -548,6 +552,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -584,6 +589,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -620,6 +626,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -688,6 +695,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -719,6 +727,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -750,6 +759,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -780,6 +790,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -816,6 +827,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -850,6 +862,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -887,6 +900,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -924,6 +938,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -994,6 +1009,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1026,6 +1042,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1058,6 +1075,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1089,6 +1107,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ]
@@ -1134,6 +1153,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1167,6 +1187,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1202,6 +1223,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1238,6 +1260,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1271,6 +1294,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1301,6 +1325,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1339,6 +1364,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1371,6 +1397,7 @@ exports.tests = [
         safari10_1: false,
         safari11: true,
         node6: true,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1404,6 +1431,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1438,6 +1466,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1474,6 +1503,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1511,6 +1541,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1545,6 +1576,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1576,6 +1608,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1615,6 +1648,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1647,6 +1681,7 @@ exports.tests = [
         safari11: true,
         node0_12: "flagged",
         node4: true,
+        jerryscript2_2_0: true,
       },
     }
   ],
@@ -1780,6 +1815,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1843,6 +1879,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -1871,6 +1908,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: true,
+        jerryscript2_2_0: true,
       },
     },
   ]
@@ -1972,6 +2010,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2005,6 +2044,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2068,6 +2108,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2095,6 +2136,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2125,6 +2167,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2149,6 +2192,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2175,6 +2219,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2200,6 +2245,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2225,6 +2271,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2249,6 +2296,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2277,6 +2325,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2303,6 +2352,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2336,6 +2386,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2364,6 +2415,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2393,6 +2445,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2421,6 +2474,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -2451,6 +2505,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ]
@@ -2523,6 +2578,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -3245,6 +3301,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -3462,6 +3519,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -3767,6 +3825,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -3796,6 +3855,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript1_0: true,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4128,6 +4188,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4160,6 +4221,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4192,6 +4254,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4220,6 +4283,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4250,6 +4314,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -4296,6 +4361,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4333,6 +4399,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4372,6 +4439,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4400,6 +4468,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4435,6 +4504,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4468,6 +4538,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4504,6 +4575,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4538,6 +4610,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4576,6 +4649,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4611,6 +4685,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4645,6 +4720,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4681,6 +4757,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4717,6 +4794,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4753,6 +4831,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4788,6 +4867,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4826,6 +4906,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4864,6 +4945,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4902,6 +4984,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4939,6 +5022,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -4980,6 +5064,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5018,6 +5103,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5056,6 +5142,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5094,6 +5181,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5132,6 +5220,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5169,6 +5258,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5207,6 +5297,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5239,6 +5330,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -5281,6 +5373,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5313,6 +5406,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5345,6 +5439,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5379,6 +5474,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5411,6 +5507,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -5449,6 +5546,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5479,6 +5577,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5504,6 +5603,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5529,6 +5629,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -5566,6 +5667,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5591,6 +5693,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5631,6 +5734,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5660,6 +5764,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5694,6 +5799,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5734,6 +5840,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5773,6 +5880,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -5812,6 +5920,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5843,6 +5952,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5866,6 +5976,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -5890,6 +6001,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -6527,6 +6639,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -6660,6 +6773,7 @@ exports.tests = [
         duktape2_1: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ].concat([ //@@ jph
@@ -7166,6 +7280,7 @@ exports.tests = [
       duktape2_0: false,
       graalvm: true,
       jerryscript2_0: false,
+      jerryscript2_2_0: true,
     }},
     ].map(function(m) {
       var eqFn = ' === "function"';
@@ -7358,6 +7473,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -7386,6 +7502,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -7789,6 +7906,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -7962,6 +8080,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -7993,6 +8112,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8398,6 +8518,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -8440,6 +8561,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8471,6 +8593,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8502,6 +8625,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8533,6 +8657,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8567,6 +8692,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8597,6 +8723,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8625,6 +8752,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8655,6 +8783,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8684,6 +8813,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8720,6 +8850,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8748,6 +8879,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8782,6 +8914,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -8825,6 +8958,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8854,6 +8988,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8885,6 +9020,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8914,6 +9050,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8948,6 +9085,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -8976,6 +9114,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -9005,6 +9144,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -9033,6 +9173,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -9066,6 +9207,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -9093,6 +9235,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -9127,6 +9270,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -12005,6 +12149,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12031,6 +12176,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12055,6 +12201,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12081,6 +12228,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12106,6 +12254,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12132,6 +12281,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12219,6 +12369,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12483,6 +12634,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12512,6 +12664,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12541,6 +12694,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12568,6 +12722,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12595,6 +12750,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12623,6 +12779,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12651,6 +12808,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12679,6 +12837,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12707,6 +12866,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12741,6 +12901,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12773,6 +12934,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12803,6 +12965,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12846,6 +13009,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12874,6 +13038,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12904,6 +13069,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12935,6 +13101,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12962,6 +13129,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -12991,6 +13159,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13023,6 +13192,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13054,6 +13224,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13084,6 +13255,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13118,6 +13290,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -13157,6 +13330,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13187,6 +13361,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -13217,6 +13392,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13245,6 +13421,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13273,6 +13450,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13302,6 +13480,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13331,6 +13510,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13359,6 +13539,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13387,6 +13568,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13416,6 +13598,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13446,6 +13629,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13481,6 +13665,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13516,6 +13701,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13549,6 +13735,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13577,6 +13764,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13610,6 +13798,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13642,6 +13831,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13686,6 +13876,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13714,6 +13905,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13749,6 +13941,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13781,6 +13974,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13808,6 +14002,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13838,6 +14033,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13869,6 +14065,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -13908,6 +14105,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13938,6 +14136,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -13968,6 +14167,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -13996,6 +14196,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14025,6 +14226,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14054,6 +14256,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14083,6 +14286,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14110,6 +14314,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14140,6 +14345,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14175,6 +14381,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14207,6 +14414,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14238,6 +14446,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14275,6 +14484,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14304,6 +14514,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14335,6 +14546,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14366,6 +14578,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14392,6 +14605,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },{
       name: 'in parameters, function \'length\' property',
@@ -14419,6 +14633,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14450,6 +14665,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14479,6 +14695,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14509,6 +14726,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14537,6 +14755,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14562,6 +14781,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14591,6 +14811,7 @@ exports.tests = [
         duktape2_2: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14620,6 +14841,7 @@ exports.tests = [
         duktape2_2: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -14676,6 +14898,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14776,6 +14999,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14813,6 +15037,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14853,6 +15078,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14890,6 +15116,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -14913,6 +15140,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -14980,6 +15208,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15105,6 +15334,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15133,6 +15363,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15158,6 +15389,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15183,6 +15415,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15208,6 +15441,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15233,6 +15467,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15258,6 +15493,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15283,6 +15519,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -15309,6 +15546,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -15977,6 +16215,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -16006,6 +16245,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -16043,6 +16283,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -16468,6 +16709,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -16527,6 +16769,7 @@ exports.tests = [
         duktape2_2: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -16556,6 +16799,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
   ]
@@ -16886,6 +17130,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: true,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -16930,6 +17175,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17002,6 +17248,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17031,6 +17278,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17088,6 +17336,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17142,6 +17391,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17172,6 +17422,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17202,6 +17453,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17232,6 +17484,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17262,6 +17515,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17294,6 +17548,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17321,6 +17576,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17348,6 +17604,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17375,6 +17632,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17402,6 +17660,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17429,6 +17688,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17482,6 +17742,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17509,6 +17770,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17536,6 +17798,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -17568,6 +17831,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17686,6 +17950,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17743,6 +18008,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -17801,6 +18067,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17824,6 +18091,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17847,6 +18115,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17870,6 +18139,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -17894,6 +18164,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ]
@@ -18127,6 +18398,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -18215,6 +18487,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18242,6 +18515,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18269,6 +18543,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18295,6 +18570,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18322,6 +18598,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18350,6 +18627,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18378,6 +18656,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18405,6 +18684,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -18434,6 +18714,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -18464,6 +18745,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -18488,6 +18770,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -18522,6 +18805,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -18609,6 +18893,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -18830,6 +19115,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -19038,6 +19324,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -19067,6 +19354,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -19096,6 +19384,7 @@ exports.tests = [
         duktape2_3: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -19540,6 +19829,7 @@ exports.tests = [
     duktape2_3: true,
     graalvm: true,
     jerryscript2_0: false,
+    jerryscript2_2_0: true,
   }
 },
 {
@@ -19670,6 +19960,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19693,6 +19984,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19716,6 +20008,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19740,6 +20033,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19764,6 +20058,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19789,6 +20084,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
     {
@@ -19814,6 +20110,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       }
     },
   ],
@@ -20072,6 +20369,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -20124,6 +20422,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -20221,6 +20520,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -20845,6 +21145,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
   ],
@@ -20937,6 +21238,7 @@ exports.tests = [
         nashorn10: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -21014,6 +21316,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
@@ -21036,6 +21339,7 @@ exports.tests = [
         duktape2_0: true,
         graalvm: true,
         jerryscript2_0: false,
+        jerryscript2_2_0: true,
       },
     },
     {
