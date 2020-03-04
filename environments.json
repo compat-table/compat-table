@@ -3240,14 +3240,32 @@
       "es6"
     ]
   },
-  "graalvm": {
-    "full": "GraalVM JavaScript 19.0.0",
+  "graalvm19": {
+    "full": "GraalVM JavaScript 19.3.1",
     "family": "GraalVM",
-    "short": "GraalVM 19.0.0",
+    "short": "GraalVM 19.3.1",
     "platformtype": "engine",
     "note_id": "graalvm-node-mode",
     "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2019-05-09",
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm20": {
+    "full": "GraalVM JavaScript 20.0.0",
+    "family": "GraalVM",
+    "short": "GraalVM 20.0.0",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2020-02-18",
     "unstable": false,
     "test_suites": [
       "es5",
