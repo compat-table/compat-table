@@ -3178,6 +3178,18 @@
     "short": "JrS 2.1.0",
     "platformtype": "engine",
     "release": "2019-10-16",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6"
+    ]
+  },
+  "jerryscript2_2_0": {
+    "full": "JerryScript 2.2.0",
+    "family": "JerryScript",
+    "short": "JrS 2.2.0",
+    "platformtype": "engine",
+    "release": "2020-02-11",
     "obsolete": false,
     "test_suites": [
       "es5",
