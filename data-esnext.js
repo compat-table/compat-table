@@ -902,7 +902,7 @@ exports.tests = [
         tr: true,
         typescript1corejs2: true,
         firefox2: false,
-        firefox75: firefox.nightly,
+        firefox75: firefox.developer,
         opera10_50: false,
         chrome71: chrome.harmony,
         chrome72: true,
@@ -940,7 +940,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        firefox75: firefox.nightly,
+        firefox75: firefox.developer,
         opera10_50: false,
         chrome73: true,
         duktape2_0: false,
