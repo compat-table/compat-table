@@ -85,7 +85,7 @@ exports.tests = [
   name: 'Generator function.sent Meta Property',
   category: STAGE2,
   significance: 'small',
-  spec: 'https://github.com/allenwb/ESideas/blob/master/Generator%20metaproperty.md',
+  spec: 'https://github.com/tc39/proposal-function.sent',
   exec: function () {/*
     var result;
     function* generator() {
