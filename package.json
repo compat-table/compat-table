@@ -44,7 +44,7 @@
     "build:compilers": "node build.js compilers",
     "git:clean": "if type git > /dev/null 2>&1; then git stash save --keep-index; fi",
     "test:no_change": "npm run --silent git:clean && if npm run --silent build | grep 'Write to file'; then echo 'Please run `npm run build` and commit the changes.' && exit 1; fi",
-    "graalvm": "node --jvm --shared-array-buffer --intl-402 node.js"
+    "graalvm": "node --jvm --intl-402 --js.ecmascript-version=2021 node.js"
   },
   "config": {
     "unsafe-perm": true

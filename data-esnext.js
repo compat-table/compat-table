@@ -36,7 +36,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -52,7 +53,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       },
     },
   ],
@@ -75,7 +77,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -99,7 +102,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -130,7 +134,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ],
@@ -153,7 +158,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -173,7 +179,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -195,7 +202,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -211,7 +219,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -227,7 +236,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -253,7 +263,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -270,7 +281,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -286,7 +298,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -302,7 +315,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -325,7 +339,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -339,7 +354,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -358,7 +374,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -389,7 +406,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -413,7 +431,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -443,7 +462,8 @@ exports.tests = [
         chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8."},
         safari13: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: {val: 'flagged', note_id: "graalvm-es2021", note_html: "The feature have to be enabled via <code>--js.ecmascript-version=2021</code> flag"},
       }
     },
     {
@@ -461,7 +481,8 @@ exports.tests = [
         chrome65: false,
         chrome74: {val: 'flagged', note_id: "chrome-weakrefs"},
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -485,7 +506,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -501,7 +523,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -525,7 +548,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -541,7 +565,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -557,7 +582,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -573,7 +599,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -589,7 +616,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -605,7 +633,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -621,7 +650,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -637,7 +667,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -653,7 +684,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -675,7 +707,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -689,7 +722,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -703,7 +737,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -717,7 +752,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -731,7 +767,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -745,7 +782,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -759,7 +797,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -779,7 +818,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -809,7 +849,8 @@ exports.tests = [
         chrome65: chrome.harmony,
         chrome72: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
     {
@@ -835,7 +876,8 @@ exports.tests = [
         chrome66: chrome.harmony,
         chrome74: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
     {
@@ -857,7 +899,8 @@ exports.tests = [
         chrome66: chrome.harmony,
         chrome74: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
     {
@@ -877,7 +920,8 @@ exports.tests = [
         opera10_50: false,
         chrome73: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
   ]
@@ -907,7 +951,8 @@ exports.tests = [
         chrome71: chrome.harmony,
         chrome72: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
     {
@@ -927,7 +972,8 @@ exports.tests = [
         opera10_50: false,
         chrome74: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
     {
@@ -944,7 +990,8 @@ exports.tests = [
         opera10_50: false,
         chrome73: true,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: true,
       }
     },
   ]
@@ -972,7 +1019,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       },
     },
     {
@@ -999,7 +1047,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_0: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       },
     }
   ]
@@ -1027,7 +1076,8 @@ exports.tests = [
     opera10_50: false,
     chrome77: false,
     duktape2_2: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -1051,7 +1101,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.DEG_PER_RAD',
@@ -1067,7 +1118,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.degrees',
@@ -1083,7 +1135,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.fscale',
@@ -1099,7 +1152,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.RAD_PER_DEG',
@@ -1115,7 +1169,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.radians',
@@ -1132,7 +1187,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }, {
     name: 'Math.scale',
@@ -1148,7 +1204,8 @@ exports.tests = [
       opera10_50: false,
       chrome77: false,
       duktape2_2: false,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: false,
     },
   }]
 },
@@ -1173,7 +1230,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1191,7 +1249,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1211,7 +1270,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1236,7 +1296,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1261,7 +1322,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1286,7 +1348,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1311,7 +1374,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     }
   ]
@@ -1339,7 +1403,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1361,7 +1426,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1381,7 +1447,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1401,7 +1468,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1421,7 +1489,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1443,7 +1512,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1463,7 +1533,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1483,7 +1554,8 @@ exports.tests = [
         opera10_50: false,
         chrome77: false,
         duktape2_2: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -1522,7 +1594,8 @@ exports.tests = [
     },
     opera10_50: false,
     chrome77: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -1543,7 +1616,8 @@ exports.tests = [
     firefox52: false,
     opera10_50: false,
     chrome77: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -1570,7 +1644,8 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1595,7 +1670,8 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1615,7 +1691,8 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1635,7 +1712,8 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -1658,7 +1736,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1674,7 +1753,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -1699,7 +1779,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1716,7 +1797,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1733,7 +1815,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1750,7 +1833,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1767,7 +1851,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1784,7 +1869,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1801,7 +1887,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1821,7 +1908,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1839,7 +1927,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1856,7 +1945,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1872,7 +1962,8 @@ exports.tests = [
         ie11: false,
         firefox10: false,
         firefox52: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -1889,7 +1980,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -1918,7 +2010,8 @@ exports.tests = [
     chrome75: true,
     safari13: true,
     safaritp: true,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: {val: 'flagged', note_id: "graalvm-es2020", note_html: "The feature have to be enabled via <code>--js.ecmascript-version=2020</code> flag"},
   }
 },
 {
@@ -1937,7 +2030,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -1950,7 +2044,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -1963,7 +2058,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -1976,7 +2072,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -1997,7 +2094,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -2019,7 +2117,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -2040,7 +2139,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
     {
@@ -2062,7 +2162,8 @@ exports.tests = [
           firefox10: false,
           firefox52: false,
           chrome77: false,
-          graalvm: false,
+          graalvm19: false,
+          graalvm20: false,
       }
     },
   ]
@@ -2089,7 +2190,8 @@ exports.tests = [
       chrome80: chrome.stringPrototypeReplaceAll,
       safari13_1: true,
       safaritp: true,
-      graalvm: false,
+      graalvm19: false,
+      graalvm20: {val: 'flagged', note_id: "graalvm-es2020"},
   }
 },
 {
@@ -2114,7 +2216,8 @@ exports.tests = [
     firefox10: false,
     firefox52: false,
     chrome77: false,
-    graalvm: false,
+    graalvm19: false,
+    graalvm20: false,
   }
 },
 {
@@ -2136,7 +2239,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2152,7 +2256,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -2178,7 +2283,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2197,7 +2303,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2215,7 +2322,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2233,7 +2341,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2248,7 +2357,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2263,7 +2373,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2278,7 +2389,8 @@ exports.tests = [
         typescript3_2corejs3: typescript.corejs,
         firefox2: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -2307,7 +2419,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2326,7 +2439,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2346,7 +2460,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2362,7 +2477,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2381,7 +2497,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2397,7 +2514,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2413,7 +2531,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2430,7 +2549,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2447,7 +2567,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2467,7 +2588,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2487,7 +2609,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2507,7 +2630,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2523,7 +2647,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2539,7 +2664,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2559,7 +2685,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2579,7 +2706,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2595,7 +2723,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2614,7 +2743,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2630,7 +2760,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2646,7 +2777,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2666,7 +2798,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2682,7 +2815,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2698,7 +2832,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2723,7 +2858,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2748,7 +2884,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
     {
@@ -2773,7 +2910,8 @@ exports.tests = [
         firefox10: false,
         firefox52: false,
         chrome77: false,
-        graalvm: false,
+        graalvm19: false,
+        graalvm20: false,
       }
     },
   ]
@@ -2935,7 +3073,8 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
-        graalvm: true,
+        graalvm19: true,
+        graalvm20: true,
       },
     },
     {
@@ -2964,7 +3103,8 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
-        graalvm: true,
+        graalvm19: true,
+        graalvm20: true,
       },
     },
   ]
