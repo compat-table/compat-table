@@ -946,7 +946,7 @@ exports.tests = [
         tr: true,
         typescript1corejs2: true,
         firefox2: false,
-        firefox74:false,
+        firefox74: false,
         firefox75: true,
         opera10_50: false,
         chrome71: chrome.harmony,
@@ -987,7 +987,7 @@ exports.tests = [
       */},
       res: {
         firefox2: false,
-        firefox74:false,
+        firefox74: false,
         firefox75: true,
         opera10_50: false,
         chrome73: true,
