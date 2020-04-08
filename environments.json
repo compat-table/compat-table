@@ -2169,30 +2169,33 @@
     "short": "CH 79",
     "release": "2019-12-10",
     "retire": "2020-02-04",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome80": {
     "full": "Chrome 80",
     "family": "V8",
     "short": "CH 80",
     "release": "2020-02-04",
-    "retire": "2020-03-17",
+    "retire": "2020-04-07",
     "obsolete": false
   },
   "chrome81": {
-    "full": "Chrome 81 Beta",
+    "full": "Chrome 81",
     "family": "V8",
     "short": "CH 81",
-    "release": "2020-03-17",
-    "retire": "2020-04-28",
+    "release": "2020-04-07",
+    "obsolete": false
+  },
+  "chrome83": {
+    "full": "Chrome 83 Beta",
+    "family": "V8",
+    "short": "CH 83",
     "unstable": true
   },
-  "chrome82": {
-    "full": "Chrome 82 Canary",
+  "chrome84": {
+    "full": "Chrome 84 Canary",
     "family": "V8",
-    "short": "CH 82",
-    "release": "2020-04-28",
-    "retire": "2020-06-09",
+    "short": "CH 84",
     "unstable": true
   },
   "edge12": {
