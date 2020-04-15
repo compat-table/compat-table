@@ -8,9 +8,6 @@ module.exports = buildEnvsTree;
 // This function returns an object mapping "browser id" -> "parent browser id"
 function buildEnvsTree(data) {
   var result = {};
-  // Pre-initialize the "result" object to make it have the same order as "data"
-  Object.keys(data).forEach(function (id) { result[id] = null; });
-
   var envs = Object.create(null);
 
   Object.keys(data).forEach(function (id) {
