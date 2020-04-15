@@ -424,7 +424,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var browersTree = buildEnvironmentsTree(environments);
 
   function interpolateResults(res) {
-    var result, bid, prevBid;
+    var bid, prevBid;
     for (bid in rawBrowsers) {
       if (res[bid] !== undefined) continue;
 
