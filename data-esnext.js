@@ -1001,6 +1001,108 @@ exports.tests = [
   ]
 },
 {
+  name: 'private class methods',
+  category: STAGE3,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-private-methods',
+  subtests: [
+    {
+      name: 'private instance methods',
+      exec: function () {/*
+        class C {
+          #x() { return 42; }
+          x() {
+            return this.#x();
+          }
+        }
+        return new C().x() === 42;
+      */},
+      res: {
+        firefox75: false,
+        opera10_50: false,
+        chrome79: chrome.harmony,
+        chrome84: true,
+        duktape2_0: false,
+        safari13: false,
+        safaritp: false,
+        graalvm20: false,
+      }
+    },
+    {
+      name: 'private static methods',
+      exec: function () {/*
+        class C {
+          static #x() { return 42; }
+          x() {
+            return C.#x();
+          }
+        }
+        return new C().x() === 42;
+      */},
+      res: {
+        firefox75: false,
+        opera10_50: false,
+        chrome79: chrome.harmony,
+        chrome84: true,
+        duktape2_0: false,
+        safari13: false,
+        safaritp: false,
+        graalvm20: false,
+      }
+    },
+    {
+      name: 'private accessor properties',
+      exec: function () {/*
+        var y = false;
+        class C {
+          get #x() { return 42; }
+          set #x(x) { y = x; }
+          x() {
+            this.#x = true;
+            return this.#x;
+          }
+        }
+        return new C().x() === 42 && y;
+      */},
+      res: {
+        firefox75: false,
+        opera10_50: false,
+        chrome79: chrome.harmony,
+        chrome84: true,
+        duktape2_0: false,
+        safari13: false,
+        safaritp: false,
+        graalvm20: false,
+      }
+    },
+    {
+      name: 'private static accessor properties',
+      exec: function () {/*
+        var y = false;
+        class C {
+          static get #x() { return 42; }
+          static set #x(x) { y = x; }
+          x() {
+            C.#x = true;
+            return C.#x;
+          }
+        }
+        return new C().x() === 42 && y;
+      */},
+      res: {
+        firefox75: false,
+        opera10_50: false,
+        chrome79: chrome.harmony,
+        chrome84: true,
+        duktape2_0: false,
+        safari13: false,
+        safaritp: false,
+        graalvm20: false,
+      }
+    }
+  ]
+},
+{
   name: 'syntactic tail calls',
   category: STAGE0,
   significance: 'medium',
