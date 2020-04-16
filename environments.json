@@ -1468,6 +1468,8 @@
     "family": "Carakan",
     "short": "OP 10.5",
     "obsolete": "very",
+    "#": "Opera 10.20 uses the 'Futhark' engine, while Opera 10.50 uses 'Carakan'. TODO: Check it can inherit.",
+    "equals": false,
     "test_suites": [
       "es5",
       "es6",
@@ -2461,6 +2463,8 @@
     "family": "JavaScriptCore",
     "short": "WK",
     "release": "2017-10-04",
+    "#": "Webkit and Safari TP are not equal, but we can use Safari TP as a baseline",
+    "equals": "safaritp",
     "unstable": true
   },
   "opera15": {
