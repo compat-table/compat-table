@@ -3983,6 +3983,65 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Logical Assignment',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-logical-assignment/',
+  subtests: [
+    {
+      name: '||=',
+      exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a ||= 2;
+        b ||= 2;
+        c ||= 2;
+        return a === 2 && b === 2 && c === 1;
+      */},
+      res: {
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+      },
+    },
+    {
+      name: '&&=',
+      exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a &&= 2;
+        b &&= 2;
+        c &&= 2;
+        return typeof a === 'undefined' && b === 0 && c === 2;
+      */},
+      res: {
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+      },
+    },
+    {
+      name: '??=',
+      exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a ??= 2;
+        b ??= 2;
+        c ??= 2;
+        return a === 2 && b === 0 && c === 1;
+      */},
+      res: {
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+      },
+    },
+  ]
+},
 ];
 
 
