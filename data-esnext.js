@@ -4004,6 +4004,7 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        safari13: false,
       },
     },
     {
@@ -4021,6 +4022,7 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        safari13: false,
       },
     },
     {
@@ -4038,6 +4040,7 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        safari13: false,
       },
     },
   ]
