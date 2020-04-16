@@ -904,7 +904,7 @@ exports.tests = [
       {
         name: 'async function prototype, Symbol.toStringTag',
         exec: function() {/*
-          return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] == "AsyncFunction";
+          return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] === "AsyncFunction";
         */},
         res: {
           tr: null,
@@ -1143,7 +1143,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.add',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add',
         exec: function () {/*
-         return typeof Atomics.add == 'function';
+         return typeof Atomics.add === 'function';
          */},
         res: {
           ie11: false,
@@ -1175,7 +1175,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.and',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and',
         exec: function () {/*
-         return typeof Atomics.and == 'function';
+         return typeof Atomics.and === 'function';
          */},
         res: {
           ie11: false,
@@ -1207,7 +1207,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.compareExchange',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange',
         exec: function () {/*
-         return typeof Atomics.compareExchange == 'function';
+         return typeof Atomics.compareExchange === 'function';
          */},
         res: {
           ie11: false,
@@ -1239,7 +1239,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.exchange',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange',
         exec: function () {/*
-         return typeof Atomics.exchange == 'function';
+         return typeof Atomics.exchange === 'function';
          */},
         res: {
           ie11: false,
@@ -1271,7 +1271,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.wait',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait',
         exec: function () {/*
-         return typeof Atomics.wait == 'function';
+         return typeof Atomics.wait === 'function';
          */},
         res: {
           ie11: false,
@@ -1303,7 +1303,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.wake',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake',
         exec: function () {/*
-         return typeof Atomics.wake == 'function';
+         return typeof Atomics.wake === 'function';
          */},
         res: {
           ie11: false,
@@ -1335,7 +1335,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.isLockFree',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree',
         exec: function () {/*
-         return typeof Atomics.isLockFree == 'function';
+         return typeof Atomics.isLockFree === 'function';
          */},
         res: {
           ie11: false,
@@ -1367,7 +1367,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.load',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load',
         exec: function () {/*
-         return typeof Atomics.load == 'function';
+         return typeof Atomics.load === 'function';
          */},
         res: {
           ie11: false,
@@ -1399,7 +1399,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.or',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or',
         exec: function () {/*
-         return typeof Atomics.or == 'function';
+         return typeof Atomics.or === 'function';
          */},
         res: {
           ie11: false,
@@ -1431,7 +1431,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.store',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store',
         exec: function () {/*
-         return typeof Atomics.store == 'function';
+         return typeof Atomics.store === 'function';
          */},
         res: {
           ie11: false,
@@ -1463,7 +1463,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.sub',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub',
         exec: function () {/*
-         return typeof Atomics.sub == 'function';
+         return typeof Atomics.sub === 'function';
          */},
         res: {
           ie11: false,
@@ -1495,7 +1495,7 @@ exports.tests = [
         spec: 'https://tc39.github.io/ecma262/#sec-atomics.xor',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor',
         exec: function () {/*
-         return typeof Atomics.xor == 'function';
+         return typeof Atomics.xor === 'function';
          */},
         res: {
           ie11: false,
@@ -1966,8 +1966,8 @@ exports.tests = [
          };
          var foo = Object.prototype.__lookupGetter__.call(obj, "foo");
          return foo() === "bar"
-         && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
-         && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
+         && Object.prototype.__lookupGetter__.call(obj, "qux") === void undefined
+         && Object.prototype.__lookupGetter__.call(obj, "baz") === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -1997,8 +1997,8 @@ exports.tests = [
          };
          var foo = Object.prototype.__lookupGetter__.call(Object.create(obj), "foo");
          return foo() === "bar"
-         && Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
-         && Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
+         && Object.prototype.__lookupGetter__.call(obj, "qux") === void undefined
+         && Object.prototype.__lookupGetter__.call(obj, "baz") === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2030,8 +2030,8 @@ exports.tests = [
          Object.defineProperty(obj, sym2, { value: 1 });
          var foo = Object.prototype.__lookupGetter__.call(obj, sym);
          return foo() === "bar"
-         && Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
-         && Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
+         && Object.prototype.__lookupGetter__.call(obj, sym2) === void undefined
+         && Object.prototype.__lookupGetter__.call(obj, Symbol()) === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2087,7 +2087,7 @@ exports.tests = [
          var b = Object.create(a);
          b.foo = 1;
          a.__defineGetter__("foo", function () {})
-         return b.__lookupGetter__("foo") === undefined
+         return b.__lookupGetter__("foo") === void undefined
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2118,8 +2118,8 @@ exports.tests = [
          };
          var foo = Object.prototype.__lookupSetter__.call(obj, "foo");
          return foo() === "bar"
-         && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
-         && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
+         && Object.prototype.__lookupSetter__.call(obj, "qux") === void undefined
+         && Object.prototype.__lookupSetter__.call(obj, "baz") === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2149,8 +2149,8 @@ exports.tests = [
          };
          var foo = Object.prototype.__lookupSetter__.call(Object.create(obj), "foo");
          return foo() === "bar"
-         && Object.prototype.__lookupSetter__.call(obj, "qux") === undefined
-         && Object.prototype.__lookupSetter__.call(obj, "baz") === undefined;
+         && Object.prototype.__lookupSetter__.call(obj, "qux") === void undefined
+         && Object.prototype.__lookupSetter__.call(obj, "baz") === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2182,8 +2182,8 @@ exports.tests = [
          Object.defineProperty(obj, sym2, { value: 1 });
          var foo = Object.prototype.__lookupSetter__.call(obj, sym);
          return foo() === "bar"
-         && Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
-         && Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;
+         && Object.prototype.__lookupSetter__.call(obj, sym2) === void undefined
+         && Object.prototype.__lookupSetter__.call(obj, Symbol()) === void undefined;
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2239,7 +2239,7 @@ exports.tests = [
          var b = Object.create(a);
          b.foo = 1;
          a.__defineSetter__("foo", function () {})
-         return b.__lookupSetter__("foo") === undefined
+         return b.__lookupSetter__("foo") === void undefined
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -2492,7 +2492,7 @@ exports.tests = [
         name: 'object rest properties',
         exec: function () {/*
           var {a, ...rest} = {a: 1, b: 2, c: 3};
-          return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
+          return a === 1 && rest.a === void undefined && rest.b === 2 && rest.c === 3;
           */},
         res: {
           babel6corejs2: true,
@@ -3087,7 +3087,7 @@ exports.tests = [
         name: 'undefined description',
         exec: function(){/*
           return Symbol.prototype.hasOwnProperty('description')
-            && Symbol().description === undefined;
+            && Symbol().description === void undefined;
         */},
         res : {
           babel6corejs2: false,
@@ -3959,7 +3959,7 @@ exports.tests = [
         exec: function(){/*
           var foo = { baz: 42 };
           var bar = null;
-          return foo?.baz === 42 && bar?.baz === undefined;
+          return foo?.baz === 42 && bar?.baz === void undefined;
         */},
         res : {
           babel7corejs2: true,
@@ -3983,7 +3983,7 @@ exports.tests = [
         exec: function(){/*
           var foo = { baz: 42 };
           var bar = null;
-          return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+          return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
         */},
         res : {
           babel7corejs2: true,
@@ -4007,7 +4007,7 @@ exports.tests = [
         exec: function(){/*
           var foo = { baz: function () { return this.value; }, value: 42 };
           var bar = null;
-          return foo?.baz() === 42 && bar?.baz() === undefined;
+          return foo?.baz() === 42 && bar?.baz() === void undefined;
         */},
         res : {
           babel7corejs2: true,
@@ -4033,7 +4033,7 @@ exports.tests = [
           var bar = {};
           function baz() { return 42; };
           var n;
-          return foo.baz?.() === 42 && bar.baz?.() === undefined && baz?.() === 42 && n?.() === undefined;
+          return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
         */},
         res : {
           babel7corejs2: true,

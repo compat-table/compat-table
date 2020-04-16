@@ -156,7 +156,7 @@ exports.tests = [
     name: 'Object.create',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create',
     exec: function () {
-      return typeof Object.create == 'function';
+      return typeof Object.create === 'function';
     },
     res: {
       ie9: true,
@@ -184,7 +184,7 @@ exports.tests = [
     name: 'Object.defineProperty',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty',
     exec: function () {
-      return typeof Object.defineProperty == 'function';
+      return typeof Object.defineProperty === 'function';
     },
     res: {
       ie8: {
@@ -224,7 +224,7 @@ exports.tests = [
     name: 'Object.defineProperties',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties',
     exec: function () {
-      return typeof Object.defineProperties == 'function';
+      return typeof Object.defineProperties === 'function';
     },
     res: {
       ie9: true,
@@ -252,7 +252,7 @@ exports.tests = [
     name: 'Object.getPrototypeOf',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf',
     exec: function () {
-      return typeof Object.getPrototypeOf == 'function';
+      return typeof Object.getPrototypeOf === 'function';
     },
     res: {
       ie9: true,
@@ -282,7 +282,7 @@ exports.tests = [
     name: 'Object.keys',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys',
     exec: function () {
-      return typeof Object.keys == 'function';
+      return typeof Object.keys === 'function';
     },
     res: {
       es5shim: true,
@@ -313,7 +313,7 @@ exports.tests = [
     name: 'Object.seal',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal',
     exec: function () {
-      return typeof Object.seal == 'function';
+      return typeof Object.seal === 'function';
     },
     res: {
       ie9: true,
@@ -341,7 +341,7 @@ exports.tests = [
     name: 'Object.freeze',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
     exec: function () {
-      return typeof Object.freeze == 'function';
+      return typeof Object.freeze === 'function';
     },
     res: {
       ie9: true,
@@ -369,7 +369,7 @@ exports.tests = [
     name: 'Object.preventExtensions',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions',
     exec: function () {
-      return typeof Object.preventExtensions == 'function';
+      return typeof Object.preventExtensions === 'function';
     },
     res: {
       ie9: true,
@@ -397,7 +397,7 @@ exports.tests = [
     name: 'Object.isSealed',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed',
     exec: function () {
-      return typeof Object.isSealed == 'function';
+      return typeof Object.isSealed === 'function';
     },
     res: {
       ie9: true,
@@ -425,7 +425,7 @@ exports.tests = [
     name: 'Object.isFrozen',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen',
     exec: function () {
-      return typeof Object.isFrozen == 'function';
+      return typeof Object.isFrozen === 'function';
     },
     res: {
       ie9: true,
@@ -453,7 +453,7 @@ exports.tests = [
     name: 'Object.isExtensible',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible',
     exec: function () {
-      return typeof Object.isExtensible == 'function';
+      return typeof Object.isExtensible === 'function';
     },
     res: {
       ie9: true,
@@ -481,7 +481,7 @@ exports.tests = [
     name: 'Object.getOwnPropertyDescriptor',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor',
     exec: function () {
-      return typeof Object.getOwnPropertyDescriptor == 'function';
+      return typeof Object.getOwnPropertyDescriptor === 'function';
     },
     res: {
       ie7: false,
@@ -517,7 +517,7 @@ exports.tests = [
     name: 'Object.getOwnPropertyNames',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames',
     exec: function () {
-      return typeof Object.getOwnPropertyNames == 'function';
+      return typeof Object.getOwnPropertyNames === 'function';
     },
     res: {
       ie9: true,
@@ -552,7 +552,7 @@ exports.tests = [
     name: 'Array.isArray',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray',
     exec: function () {
-      return typeof Array.isArray == 'function';
+      return typeof Array.isArray === 'function';
     },
     res: {
       es5shim: true,
@@ -582,7 +582,7 @@ exports.tests = [
     name: 'Array.prototype.indexOf',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf',
     exec: function () {
-      return typeof Array.prototype.indexOf == 'function';
+      return typeof Array.prototype.indexOf === 'function';
     },
     res: {
       es5shim: true,
@@ -610,7 +610,7 @@ exports.tests = [
     name: 'Array.prototype.lastIndexOf',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf',
     exec: function () {
-      return typeof Array.prototype.lastIndexOf == 'function';
+      return typeof Array.prototype.lastIndexOf === 'function';
     },
     res: {
       es5shim: true,
@@ -638,7 +638,7 @@ exports.tests = [
     name: 'Array.prototype.every',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every',
     exec: function () {
-      return typeof Array.prototype.every == 'function';
+      return typeof Array.prototype.every === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -666,7 +666,7 @@ exports.tests = [
     name: 'Array.prototype.some',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some',
     exec: function () {
-      return typeof Array.prototype.some == 'function';
+      return typeof Array.prototype.some === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -694,7 +694,7 @@ exports.tests = [
     name: 'Array.prototype.forEach',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach',
     exec: function () {
-      return typeof Array.prototype.forEach == 'function';
+      return typeof Array.prototype.forEach === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -722,7 +722,7 @@ exports.tests = [
     name: 'Array.prototype.map',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map',
     exec: function () {
-      return typeof Array.prototype.map == 'function';
+      return typeof Array.prototype.map === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -750,7 +750,7 @@ exports.tests = [
     name: 'Array.prototype.filter',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter',
     exec: function () {
-      return typeof Array.prototype.filter == 'function';
+      return typeof Array.prototype.filter === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -778,7 +778,7 @@ exports.tests = [
     name: 'Array.prototype.reduce',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
     exec: function () {
-      return typeof Array.prototype.reduce == 'function';
+      return typeof Array.prototype.reduce === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -806,7 +806,7 @@ exports.tests = [
     name: 'Array.prototype.reduceRight',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight',
     exec: function () {
-      return typeof Array.prototype.reduceRight == 'function';
+      return typeof Array.prototype.reduceRight === 'function';
     },
     res: {
       es5shim: sparseNote,
@@ -955,7 +955,7 @@ exports.tests = [
     name: 'String.prototype.trim',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim',
     exec: function () {
-      return typeof String.prototype.trim == 'function';
+      return typeof String.prototype.trim === 'function';
     },
     res: {
       es5shim: true,
@@ -991,7 +991,7 @@ exports.tests = [
     name: 'Date.prototype.toISOString',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString',
     exec: function () {
-      return typeof Date.prototype.toISOString == 'function';
+      return typeof Date.prototype.toISOString === 'function';
     },
     res: {
       es5shim: true,
@@ -1019,7 +1019,7 @@ exports.tests = [
     name: 'Date.now',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now',
     exec: function () {
-      return typeof Date.now == 'function';
+      return typeof Date.now === 'function';
     },
     res: {
       es5shim: true,
@@ -1087,7 +1087,7 @@ exports.tests = [
   significance: 'medium',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind',
   exec: function () {
-    return typeof Function.prototype.bind == 'function';
+    return typeof Function.prototype.bind === 'function';
   },
   res: {
     es5shim: true,
@@ -1119,7 +1119,7 @@ exports.tests = [
   significance: 'medium',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON',
   exec: function () {
-    return typeof JSON == 'object';
+    return typeof JSON === 'object';
   },
   res: {
     ie7: false,
@@ -1158,7 +1158,7 @@ exports.tests = [
     name: 'undefined',
     exec: function () {/*
       undefined = 12345;
-      var result = typeof undefined == 'undefined';
+      var result = typeof undefined === 'undefined';
       undefined = void 0;
       return result;
     */},
@@ -1191,7 +1191,7 @@ exports.tests = [
     name: 'NaN',
     exec: function () {/*
       NaN = false;
-      var result = typeof NaN == 'number';
+      var result = typeof NaN === 'number';
       NaN = Math.sqrt(-1);
       return result;
     */},
@@ -1224,7 +1224,7 @@ exports.tests = [
     name: 'Infinity',
     exec: function () {/*
       Infinity = false;
-      var result = typeof Infinity == 'number';
+      var result = typeof Infinity === 'number';
       Infinity = 1/0;
       return result;
     */},
@@ -1453,7 +1453,7 @@ exports.tests = [
       var result = true;
       Object.prototype.length = 42;
       for (var i in Function) {
-          if (i == 'length') {
+          if (i === 'length') {
               result = false;
           }
       }
@@ -1560,7 +1560,7 @@ exports.tests = [
     name: '"this" is undefined in functions',
     exec: function() {/*
       'use strict';
-      return this === undefined && (function(){ return this === undefined; }).call();
+      return this === void undefined && (function(){ return this === void undefined; }).call();
     */},
     res: {
       ie10: {

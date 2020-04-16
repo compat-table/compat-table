@@ -17283,8 +17283,8 @@ return map.size === 2
 <td class="no" data-browser="opera_mobile55">No</td>
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.every"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.every">&#xA7;</a>Map.prototype.every</span><script data-source="
-return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it == &apos;number&apos;);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("146");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it === &apos;number&apos;);
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("146");try{return Function("asyncTestPassed","\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("146");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it === 'number');\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -17858,8 +17858,8 @@ return new Map([[1, 2], [2, NaN]]).includes(2)
 </tr>
 <tr class="subtest" data-parent="Collections_methods" id="test-Collections_methods_Map.prototype.keyOf"><td><span><a class="anchor" href="#test-Collections_methods_Map.prototype.keyOf">&#xA7;</a>Map.prototype.keyOf</span><script data-source="
 return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
-  &amp;&amp; new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("151");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("151");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  &amp;&amp; new Map([[1, 2], [2, NaN]]).keyOf(NaN) === void undefined;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("151");try{return Function("asyncTestPassed","\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === void undefined;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("151");return Function("asyncTestPassed","'use strict';"+"\nreturn new Map([[1, 2], [2, NaN]]).keyOf(2) === 1\n  && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === void undefined;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete" data-browser="tr">No</td>
 <td class="no" data-browser="babel6corejs2">No</td>
@@ -22507,8 +22507,8 @@ return Reflect.isConstructor(function(){})
 <td class="tally not-applicable" data-browser="opera_mobile55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone"><td><span><a class="anchor" href="#test-zones_Zone">&#xA7;</a>Zone</span><script data-source="
-return typeof Zone == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("191");try{return Function("asyncTestPassed","\nreturn typeof Zone == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("191");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Zone === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("191");try{return Function("asyncTestPassed","\nreturn typeof Zone === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("191");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -22963,8 +22963,8 @@ return &apos;parent&apos; in Zone.prototype;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.fork"><td><span><a class="anchor" href="#test-zones_Zone.prototype.fork">&#xA7;</a>Zone.prototype.fork</span><script data-source="
-return typeof Zone.prototype.fork == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("195");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.fork == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("195");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.fork == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Zone.prototype.fork === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("195");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.fork === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("195");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.fork === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -23077,8 +23077,8 @@ return typeof Zone.prototype.fork == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.run"><td><span><a class="anchor" href="#test-zones_Zone.prototype.run">&#xA7;</a>Zone.prototype.run</span><script data-source="
-return typeof Zone.prototype.run == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("196");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.run == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("196");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.run == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Zone.prototype.run === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("196");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.run === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("196");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.run === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -23191,8 +23191,8 @@ return typeof Zone.prototype.run == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="zones" id="test-zones_Zone.prototype.wrap"><td><span><a class="anchor" href="#test-zones_Zone.prototype.wrap">&#xA7;</a>Zone.prototype.wrap</span><script data-source="
-return typeof Zone.prototype.wrap == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("197");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.wrap == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("197");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.wrap == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Zone.prototype.wrap === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("197");try{return Function("asyncTestPassed","\nreturn typeof Zone.prototype.wrap === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("197");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Zone.prototype.wrap === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -24120,8 +24120,8 @@ return fuz.bar === 42 &amp;&amp; fuz.baz === 33;
 <td class="tally not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/9</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.defineMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.defineMetadata">&#xA7;</a>Reflect.defineMetadata</span><script data-source="
-return typeof Reflect.defineMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("205");try{return Function("asyncTestPassed","\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("205");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.defineMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.defineMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("205");try{return Function("asyncTestPassed","\nreturn typeof Reflect.defineMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("205");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.defineMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24234,8 +24234,8 @@ return typeof Reflect.defineMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasMetadata">&#xA7;</a>Reflect.hasMetadata</span><script data-source="
-return typeof Reflect.hasMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("206");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("206");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.hasMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("206");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("206");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24348,8 +24348,8 @@ return typeof Reflect.hasMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.hasOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.hasOwnMetadata">&#xA7;</a>Reflect.hasOwnMetadata</span><script data-source="
-return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("207");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("207");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.hasOwnMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("207");try{return Function("asyncTestPassed","\nreturn typeof Reflect.hasOwnMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("207");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.hasOwnMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24462,8 +24462,8 @@ return typeof Reflect.hasOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadata">&#xA7;</a>Reflect.getMetadata</span><script data-source="
-return typeof Reflect.getMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("208");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("208");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.getMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("208");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("208");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24576,8 +24576,8 @@ return typeof Reflect.getMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadata">&#xA7;</a>Reflect.getOwnMetadata</span><script data-source="
-return typeof Reflect.getOwnMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("209");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("209");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.getOwnMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("209");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("209");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24690,8 +24690,8 @@ return typeof Reflect.getOwnMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getMetadataKeys">&#xA7;</a>Reflect.getMetadataKeys</span><script data-source="
-return typeof Reflect.getMetadataKeys == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("210");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("210");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.getMetadataKeys === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("210");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getMetadataKeys === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("210");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getMetadataKeys === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24804,8 +24804,8 @@ return typeof Reflect.getMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.getOwnMetadataKeys"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.getOwnMetadataKeys">&#xA7;</a>Reflect.getOwnMetadataKeys</span><script data-source="
-return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("211");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("211");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadataKeys == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.getOwnMetadataKeys === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("211");try{return Function("asyncTestPassed","\nreturn typeof Reflect.getOwnMetadataKeys === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("211");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.getOwnMetadataKeys === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -24918,8 +24918,8 @@ return typeof Reflect.getOwnMetadataKeys == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.deleteMetadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.deleteMetadata">&#xA7;</a>Reflect.deleteMetadata</span><script data-source="
-return typeof Reflect.deleteMetadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("212");try{return Function("asyncTestPassed","\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("212");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.deleteMetadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.deleteMetadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("212");try{return Function("asyncTestPassed","\nreturn typeof Reflect.deleteMetadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("212");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.deleteMetadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>
@@ -25032,8 +25032,8 @@ return typeof Reflect.deleteMetadata == &apos;function&apos;;
 <td class="no not-applicable" data-browser="opera_mobile55" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 </tr>
 <tr class="subtest" data-parent="Metadata_reflection_API" id="test-Metadata_reflection_API_Reflect.metadata"><td><span><a class="anchor" href="#test-Metadata_reflection_API_Reflect.metadata">&#xA7;</a>Reflect.metadata</span><script data-source="
-return typeof Reflect.metadata == &apos;function&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("213");try{return Function("asyncTestPassed","\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("213");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.metadata == 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+return typeof Reflect.metadata === &apos;function&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("213");try{return Function("asyncTestPassed","\nreturn typeof Reflect.metadata === 'function';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("213");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Reflect.metadata === 'function';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="yes not-applicable" data-browser="babel6corejs2" title="This proposal has not yet been accepted by ECMA Technical Committee 39, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes<a href="#babel-core-js-note"><sup>[13]</sup></a></td>

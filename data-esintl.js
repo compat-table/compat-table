@@ -544,7 +544,7 @@ exports.tests = [
       name: 'resolvedOptions().timeZone defaults to the host environment',
       exec: function () {/*
         var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        return tz !== undefined && tz.length > 0;
+        return tz !== void undefined && tz.length > 0;
       */},
       res: {
         ie9: false,

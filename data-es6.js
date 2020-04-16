@@ -474,7 +474,7 @@ exports.tests = [
         function C() {
           return x => new.target;
         }
-        return new C()() === C && C()() === undefined;
+        return new C()() === C && C()() === void undefined;
       */},
       res: {
         firefox2: false,
@@ -3110,8 +3110,8 @@ exports.tests = [
           method() { return typeof C === "function"; }
         }
         var M = C.prototype.method;
-        C = undefined;
-        return C === undefined && M();
+        C = void undefined;
+        return C === void undefined && M();
       */},
       res: {
         tr: true,
@@ -3198,7 +3198,7 @@ exports.tests = [
       name: 'implicit strict mode',
       exec: function () {/*
         class C {
-          static method() { return this === undefined; }
+          static method() { return this === void undefined; }
         }
         return (0,C.method)();
       */},
@@ -4198,7 +4198,7 @@ exports.tests = [
         var arr = [,,];
         var count = 0;
         for (var item of arr)
-          count += (item === undefined);
+          count += (item === void undefined);
         return count === 2;
       */},
       res: {
@@ -4469,9 +4469,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4508,9 +4508,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4547,9 +4547,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4726,11 +4726,11 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 7 && item.done === false;
+        passed &= item.value === 7 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
 
         passed &= g.constructor === (function*(){}).constructor;
         return passed;
@@ -4804,9 +4804,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.return("quxquux");
-        passed    &= item.value === "quxquux" && item.done === true;
+        passed &= item.value === "quxquux" && item.done === true;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4876,9 +4876,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4912,11 +4912,11 @@ exports.tests = [
           yield * [,,];
         }());
         var item = iterator.next();
-        var passed = item.value === undefined && item.done === false;
+        var passed = item.value === void undefined && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === false;
+        passed &= item.value === void undefined && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4952,9 +4952,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === "5" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === "6" && item.done === false;
+        passed &= item.value === "6" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -4990,9 +4990,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === "𠮷" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === "𠮶" && item.done === false;
+        passed &= item.value === "𠮶" && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5027,11 +5027,11 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 7 && item.done === false;
+        passed &= item.value === 7 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5067,11 +5067,11 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 7 && item.done === false;
+        passed &= item.value === 7 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5107,11 +5107,11 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 7 && item.done === false;
+        passed &= item.value === 7 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5272,9 +5272,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5312,9 +5312,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5353,9 +5353,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5392,9 +5392,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -5432,9 +5432,9 @@ exports.tests = [
         var item = iterator.next();
         var passed = item.value === 5 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
+        passed &= item.value === 6 && item.done === false;
         item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
+        passed &= item.value === void undefined && item.done === true;
         return passed;
       */},
       res: {
@@ -7779,7 +7779,7 @@ exports.tests = [
         map.forEach(function (value, key) {
           k = 1 / key;
         });
-        return k === Infinity && map.get(+0) == "foo";
+        return k === Infinity && map.get(+0) === "foo";
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -9134,7 +9134,7 @@ exports.tests = [
       exec: function () {/*
         var m = new WeakMap;
         return m.has(1) === false
-          && m.get(1) === undefined
+          && m.get(1) === void undefined
           && m.delete(1) === false;
       */},
       res: {
@@ -11365,7 +11365,7 @@ exports.tests = [
         // Array.prototype.concat -> Get -> [[Get]]
         var get = [];
         var arr = [1];
-        arr.constructor = undefined;
+        arr.constructor = void undefined;
         var p = new Proxy(arr, { get: function(o, k) { get.push(k); return o[k]; }});
         Array.prototype.concat.call(p,p);
         return get[0] === "constructor"
@@ -13017,7 +13017,7 @@ exports.tests = [
       name: 'with arrays',
       exec: function(){/*
         var [a, , [b], c] = [5, null, [6]];
-        return a === 5 && b === 6 && c === undefined;
+        return a === 5 && b === 6 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13048,7 +13048,7 @@ exports.tests = [
       name: 'with sparse arrays',
       exec: function(){/*
         var [a, , b] = [,,,];
-        return a === undefined && b === undefined;
+        return a === void undefined && b === void undefined;
       */},
       res: {
         tr: true,
@@ -13079,7 +13079,7 @@ exports.tests = [
       name: 'with strings',
       exec: function(){/*
         var [a, b, c] = "ab";
-        return a === "a" && b === "b" && c === undefined;
+        return a === "a" && b === "b" && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13139,7 +13139,7 @@ exports.tests = [
       name: 'with generator instances',
       exec: function(){/*
         var [a, b, c] = (function*(){ yield 1; yield 2; }());
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13168,7 +13168,7 @@ exports.tests = [
       name: 'with generic iterables',
       exec: function(){/*
         var [a, b, c] = global.__createIterableObject([1, 2]);
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13198,7 +13198,7 @@ exports.tests = [
       name: 'with instances of generic iterables',
       exec: function(){/*
         var [a, b, c] = Object.create(global.__createIterableObject([1, 2]));
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13288,7 +13288,7 @@ exports.tests = [
       name: 'with objects',
       exec: function(){/*
         var {c, x:d, e} = {c:7, x:8};
-        return c === 7 && d === 8 && e === undefined;
+        return c === 7 && d === 8 && e === void undefined;
       */},
       res: {
         tr: true,
@@ -13397,7 +13397,7 @@ exports.tests = [
             return false;
         }
         try {
-          var {b} = undefined;
+          var {b} = void undefined;
           return false;
         } catch(e) {
           if (!(e instanceof TypeError))
@@ -13498,7 +13498,7 @@ exports.tests = [
       exec: function(){/*
         var [e, {x:f, g}] = [9, {x:10}];
         var {h, x:[i]} = {h:11, x:[12]};
-        return e === 9 && f === 10 && g === undefined
+        return e === 9 && f === 10 && g === void undefined
           && h === 11 && i === 12;
       */},
       res: {
@@ -13735,7 +13735,7 @@ exports.tests = [
       exec: function(){/*
         var a,b,c;
         [a, , [b], c] = [5, null, [6]];
-        return a === 5 && b === 6 && c === undefined;
+        return a === 5 && b === 6 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13767,7 +13767,7 @@ exports.tests = [
       exec: function(){/*
         var a, b;
         [a, , b] = [,,,];
-        return a === undefined && b === undefined;
+        return a === void undefined && b === void undefined;
       */},
       res: {
         tr: true,
@@ -13799,7 +13799,7 @@ exports.tests = [
       exec: function(){/*
         var a,b,c;
         [a, b, c] = "ab";
-        return a === "a" && b === "b" && c === undefined;
+        return a === "a" && b === "b" && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13861,7 +13861,7 @@ exports.tests = [
       exec: function(){/*
         var a,b,c;
         [a, b, c] = (function*(){ yield 1; yield 2; }());
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13891,7 +13891,7 @@ exports.tests = [
       exec: function(){/*
         var a,b,c;
         [a, b, c] = global.__createIterableObject([1, 2]);
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -13922,7 +13922,7 @@ exports.tests = [
       exec: function(){/*
         var a,b,c;
         [a, b, c] = Object.create(global.__createIterableObject([1, 2]));
-        return a === 1 && b === 2 && c === undefined;
+        return a === 1 && b === 2 && c === void undefined;
       */},
       res: {
         tr: true,
@@ -14076,7 +14076,7 @@ exports.tests = [
       exec: function(){/*
         var c,d,e;
         ({c, x:d, e} = {c:7, x:8});
-        return c === 7 && d === 8 && e === undefined;
+        return c === 7 && d === 8 && e === void undefined;
       */},
       res: {
         tr: true,
@@ -14291,7 +14291,7 @@ exports.tests = [
             return false;
         }
         try {
-          ({b} = undefined);
+          ({b} = void undefined);
           return false;
         } catch(e) {
           if (!(e instanceof TypeError))
@@ -14361,7 +14361,7 @@ exports.tests = [
         var e,f,g,h,i;
         [e, {x:f, g}] = [9, {x:10}];
         ({h, x:[i]} = {h:11, x:[12]});
-        return e === 9 && f === 10 && g === undefined
+        return e === 9 && f === 10 && g === void undefined
           && h === 11 && i === 12;
       */},
       res: {
@@ -14533,7 +14533,7 @@ exports.tests = [
       name: 'with arrays',
       exec: function(){/*
         return function([a, , [b], c]) {
-          return a === 5 && b === 6 && c === undefined;
+          return a === 5 && b === 6 && c === void undefined;
         }([5, null, [6]]);
       */},
       res: {
@@ -14565,7 +14565,7 @@ exports.tests = [
       name: 'with sparse arrays',
       exec: function(){/*
         return function([a, , b]) {
-          return a === undefined && b === undefined;
+          return a === void undefined && b === void undefined;
         }([,,,]);
       */},
       res: {
@@ -14597,7 +14597,7 @@ exports.tests = [
       name: 'with strings',
       exec: function(){/*
         return function([a, b, c]) {
-          return a === "a" && b === "b" && c === undefined;
+          return a === "a" && b === "b" && c === void undefined;
         }("ab");
       */},
       res: {
@@ -14659,7 +14659,7 @@ exports.tests = [
       name: 'with generator instances',
       exec: function(){/*
         return function([a, b, c]) {
-          return a === 1 && b === 2 && c === undefined;
+          return a === 1 && b === 2 && c === void undefined;
         }(function*(){ yield 1; yield 2; }());
       */},
       res: {
@@ -14690,7 +14690,7 @@ exports.tests = [
       name: 'with generic iterables',
       exec: function(){/*
         return function([a, b, c]) {
-          return a === 1 && b === 2 && c === undefined;
+          return a === 1 && b === 2 && c === void undefined;
         }(global.__createIterableObject([1, 2]));
       */},
       res: {
@@ -14721,7 +14721,7 @@ exports.tests = [
       name: 'with instances of generic iterables',
       exec: function(){/*
         return function([a, b, c]) {
-          return a === 1 && b === 2 && c === undefined;
+          return a === 1 && b === 2 && c === void undefined;
         }(Object.create(global.__createIterableObject([1, 2])));
       */},
       res: {
@@ -14813,7 +14813,7 @@ exports.tests = [
       name: 'with objects',
       exec: function(){/*
         return function({c, x:d, e}) {
-          return c === 7 && d === 8 && e === undefined;
+          return c === 7 && d === 8 && e === void undefined;
         }({c:7, x:8});
       */},
       res: {
@@ -14987,7 +14987,7 @@ exports.tests = [
       name: 'nested',
       exec: function(){/*
         return function([e, {x:f, g}], {h, x:[i]}) {
-          return e === 9 && f === 10 && g === undefined
+          return e === 9 && f === 10 && g === void undefined
             && h === 11 && i === 12;
         }([9, {x:10}],{h:11, x:[12]});
       */},
@@ -15054,7 +15054,7 @@ exports.tests = [
       exec: function(){/*
         return new Function("{a, x:b, y:e}","[c, d]",
           "return a === 1 && b === 2 && c === 3 && "
-          + "d === 4 && e === undefined;"
+          + "d === 4 && e === void undefined;"
         )({a:1, x:2}, [3, 4]);
       */},
       res: {
@@ -15805,7 +15805,7 @@ exports.tests = [
       name: 'Object.getOwnPropertyDescriptor',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor',
       exec: function () {/*
-        return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
+        return Object.getOwnPropertyDescriptor('a', 'foo') === void undefined;
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -17225,7 +17225,7 @@ exports.tests = [
     {
       name: 'in strings',
       exec: function () {/*
-        return '\u{1d306}' == '\ud834\udf06';
+        return '\u{1d306}' === '\ud834\udf06';
       */},
       res: {
         tr: true,
@@ -17290,7 +17290,7 @@ exports.tests = [
           passed = (new.target === f);
         }();
         (function() {
-          passed &= (new.target === undefined);
+          passed &= (new.target === void undefined);
         }());
         return passed;
       */},
@@ -17493,7 +17493,7 @@ exports.tests = [
       name: 'symbols inherit from Symbol.prototype',
       exec: function(){/*
         var symbol = Symbol();
-        var passed = symbol.foo === undefined;
+        var passed = symbol.foo === void undefined;
         Symbol.prototype.foo = 2;
         passed &= symbol.foo === 2;
         delete Symbol.prototype.foo;
@@ -17621,7 +17621,7 @@ exports.tests = [
 
         return typeof symbolObject === "object" &&
           symbolObject instanceof Symbol &&
-          symbolObject == symbol &&
+          symbolObject === symbol &&
           symbolObject !== symbol &&
           symbolObject.valueOf() === symbol;
       */},
@@ -17652,7 +17652,7 @@ exports.tests = [
         var object = { foo: Symbol() };
         object[Symbol()] = 1;
         var array = [Symbol()];
-        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
+        return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === void undefined;
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -18386,7 +18386,7 @@ exports.tests = [
 
         a >= 0;
         b in {};
-        c == 0;
+        c === 0;
         return passed === 3;
       */},
       res: {
@@ -21206,7 +21206,7 @@ exports.tests = [
         var c = new C(true);
         return c instanceof Boolean
           && c instanceof C
-          && c == true;
+          && c === true;
       */},
       res: {
         safari10: true,
@@ -21844,7 +21844,7 @@ exports.tests = [
       name: 'duplicate property names in strict mode',
       exec: function(){/*
         'use strict';
-        return this === undefined && ({ a:1, a:1 }).a === 1;
+        return this === void undefined && ({ a:1, a:1 }).a === 1;
       */},
       res: {
         ejs: true,

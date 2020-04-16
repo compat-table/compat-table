@@ -538,7 +538,7 @@ exports.tests = [
     {
       name: 'Reflect.defineMetadata',
       exec: function(){/*
-        return typeof Reflect.defineMetadata == 'function';
+        return typeof Reflect.defineMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -555,7 +555,7 @@ exports.tests = [
     {
       name: 'Reflect.hasMetadata',
       exec: function(){/*
-        return typeof Reflect.hasMetadata == 'function';
+        return typeof Reflect.hasMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -572,7 +572,7 @@ exports.tests = [
     {
       name: 'Reflect.hasOwnMetadata',
       exec: function(){/*
-        return typeof Reflect.hasOwnMetadata == 'function';
+        return typeof Reflect.hasOwnMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -589,7 +589,7 @@ exports.tests = [
     {
       name: 'Reflect.getMetadata',
       exec: function(){/*
-        return typeof Reflect.getMetadata == 'function';
+        return typeof Reflect.getMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -606,7 +606,7 @@ exports.tests = [
     {
       name: 'Reflect.getOwnMetadata',
       exec: function(){/*
-        return typeof Reflect.getOwnMetadata == 'function';
+        return typeof Reflect.getOwnMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -623,7 +623,7 @@ exports.tests = [
     {
       name: 'Reflect.getMetadataKeys',
       exec: function(){/*
-        return typeof Reflect.getMetadataKeys == 'function';
+        return typeof Reflect.getMetadataKeys === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -640,7 +640,7 @@ exports.tests = [
     {
       name: 'Reflect.getOwnMetadataKeys',
       exec: function(){/*
-        return typeof Reflect.getOwnMetadataKeys == 'function';
+        return typeof Reflect.getOwnMetadataKeys === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -657,7 +657,7 @@ exports.tests = [
     {
       name: 'Reflect.deleteMetadata',
       exec: function(){/*
-        return typeof Reflect.deleteMetadata == 'function';
+        return typeof Reflect.deleteMetadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -674,7 +674,7 @@ exports.tests = [
     {
       name: 'Reflect.metadata',
       exec: function(){/*
-        return typeof Reflect.metadata == 'function';
+        return typeof Reflect.metadata === 'function';
       */},
       res: {
         babel6corejs2: babel.corejs,
@@ -699,7 +699,7 @@ exports.tests = [
     {
       name: 'Zone',
       exec: function(){/*
-        return typeof Zone == 'function';
+        return typeof Zone === 'function';
       */},
       res: {
         ie11: false,
@@ -759,7 +759,7 @@ exports.tests = [
     {
       name: 'Zone.prototype.fork',
       exec: function(){/*
-        return typeof Zone.prototype.fork == 'function';
+        return typeof Zone.prototype.fork === 'function';
       */},
       res: {
         ie11: false,
@@ -774,7 +774,7 @@ exports.tests = [
     {
       name: 'Zone.prototype.run',
       exec: function(){/*
-        return typeof Zone.prototype.run == 'function';
+        return typeof Zone.prototype.run === 'function';
       */},
       res: {
         ie11: false,
@@ -789,7 +789,7 @@ exports.tests = [
     {
       name: 'Zone.prototype.wrap',
       exec: function(){/*
-        return typeof Zone.prototype.wrap == 'function';
+        return typeof Zone.prototype.wrap === 'function';
       */},
       res: {
         ie11: false,
@@ -2471,7 +2471,7 @@ exports.tests = [
     {
       name: 'Map.prototype.every',
       exec: function () {/*
-        return new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it == 'number');
+        return new Map([[1, 4], [2, 5], [3, 6]]).every(it => typeof it === 'number');
       */},
       res: {
         babel6corejs2: false,
@@ -2561,7 +2561,7 @@ exports.tests = [
       name: 'Map.prototype.keyOf',
       exec: function () {/*
         return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
-          && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;
+          && new Map([[1, 2], [2, NaN]]).keyOf(NaN) === void undefined;
       */},
       res: {
         babel6corejs2: false,

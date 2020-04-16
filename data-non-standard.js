@@ -1372,7 +1372,7 @@ exports.tests = [
       spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval',
       exec: function () {/*
-        return typeof uneval == 'function';
+        return typeof uneval === 'function';
       */},
       res: {
         ie11: false,
@@ -1436,7 +1436,6 @@ exports.tests = [
       exec: function () {/*
 
         function isEquivalent(x, y) {
-
             if (x == null || y == null)
                 return x === y;
 
@@ -1642,7 +1641,7 @@ exports.tests = [
   spec: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/isGenerator',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator',
   exec: function () {
-    return typeof Function.prototype.isGenerator == 'function';
+    return typeof Function.prototype.isGenerator === 'function';
   },
   res: {
     ie7: false,
@@ -2157,9 +2156,9 @@ exports.tests = [
     var item = iterator.next();
     var passed = item.value === 5 && item.done === false;
     item = iterator.next();
-    passed    &= item.value === 6 && item.done === false;
+    passed &= item.value === 6 && item.done === false;
     item = iterator.next();
-    passed    &= item.value === undefined && item.done === true;
+    passed &= item.value === void undefined && item.done === true;
     return passed;
   */},
   res: {
@@ -2352,7 +2351,7 @@ exports.tests = [
   name: 'Object.prototype.watch',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch',
-  exec: function () { return typeof Object.prototype.watch == 'function' },
+  exec: function () { return typeof Object.prototype.watch === 'function' },
   res: {
     ie7: false,
     firefox2: true,
@@ -2375,7 +2374,7 @@ exports.tests = [
   name: 'Object.prototype.unwatch',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch',
-  exec: function () { return typeof Object.prototype.unwatch == 'function' },
+  exec: function () { return typeof Object.prototype.unwatch === 'function' },
   res: {
     ie7: false,
     firefox2: true,
@@ -2398,7 +2397,7 @@ exports.tests = [
   name: 'Object.prototype.eval',
   spec: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/eval',
-  exec: function () { return typeof Object.prototype.eval == 'function' },
+  exec: function () { return typeof Object.prototype.eval === 'function' },
   res: {
     ie7: false,
     firefox2: false,
@@ -2421,7 +2420,7 @@ exports.tests = [
   spec: 'https://arv.github.io/ecmascript-object-observe/',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe',
   exec: function () {/*
-    return typeof Object.observe == 'function';
+    return typeof Object.observe === 'function';
   */},
   res: {
     ie11: false,
