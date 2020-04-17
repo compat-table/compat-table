@@ -24,7 +24,7 @@ require('object.assign').shim();
 var pickBy = require('lodash.pickby');
 
 var environments = require('./environments');
-var buildEnvironmentsTree = require('./scripts/build-environments-tree.js');
+var interpolateAllResults = require('./build-utils/interpolate-all-results');
 
 var fs = require('fs');
 var path = require('path');
@@ -421,22 +421,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     return obj;
   },{});
 
-  var browersTree = buildEnvironmentsTree(environments);
-
-  function interpolateResults(res) {
-    var bid, prevBid;
-    for (bid in rawBrowsers) {
-      if (res[bid] !== undefined) continue;
-
-      prevBid = bid;
-      do {
-        prevBid = browersTree[prevBid];
-      } while (prevBid !== null && res[prevBid] === undefined);
-
-      if (prevBid !== null) res[bid] = res[prevBid];
-    }
-  }
-
   function getHtmlId(id) {
     return 'test-' + id;
   }
@@ -501,15 +485,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     );
   });
 
+  interpolateAllResults(tests, environments);
+
   // Now print the results.
   tests.forEach(function(t, testNum) {
-    // Calculate the result totals for tests which consist solely of subtests.
-    if ("subtests" in t) {
-      t.subtests.forEach(function(e) {
-        interpolateResults(e.res);
-      });
-    } else interpolateResults(t.res);
-
     var id = escapeTestName(t.name);
     var name = t.name;
     if (t.spec) {

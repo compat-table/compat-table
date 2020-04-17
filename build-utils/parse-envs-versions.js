@@ -1,13 +1,11 @@
+var compareVersions = require("./compare-versions");
+
 var RE = {
   engine: /^(\w+?)(tp|[\d_]+)?(?:corejs[23])?$/,
   version: /^(\d{4})(\d{2})(\d{2})$|^(\d+)(?:_(\d+))?(?:_(\d+))?$/
 };
 
-module.exports = buildEnvsTree;
-
-// This function returns an object mapping "browser id" -> "parent browser id"
-function buildEnvsTree(data) {
-  var result = {};
+module.exports = function parseEnvsVersions(data) {
   var envs = Object.create(null);
 
   Object.keys(data).forEach(function (id) {
@@ -18,19 +16,10 @@ function buildEnvsTree(data) {
 
   Object.keys(envs).forEach(function (name) {
     envs[name].sort(compareVersions);
-
-    var id = envs[name][0].id;
-    result[id] = data[id].equals || null;
-
-    for (var i = 1; i < envs[name].length; i++) {
-      id = envs[name][i].id;
-      if (data[id].equals === false) result[id] = null;
-      else result[id] = data[id].equals || envs[name][i - 1].id;
-    }
   });
 
-  return result;
-}
+  return envs;
+};
 
 function parseEnvId(id) {
   var result = { id: id };
@@ -60,24 +49,6 @@ function parseVersion(version) {
   return result;
 }
 
-function compareVersions(a, b) {
-  var vA = a.version;
-  var vB = b.version;
 
-  if (!vA && !vB) return 0;
-  if (!vB) return 1;
-  if (!vA) return -1;
 
-  for (var i = 0; i < vA.length && i < vB.length; i++) {
-    if (vA[i] === "tp" && vB[i] === "tp") continue;
-    if (vA[i] === "tp") return 1;
-    if (vB[i] === "tp") return -1;
-    if (vA[i] > vB[i]) return 1;
-    if (vA[i] < vB[i]) return -1;
-  }
 
-  if (vA.length > vB.length) return 1;
-  if (vA.length < vB.length) return -1;
-
-  return 0;
-}
