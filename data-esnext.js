@@ -3990,7 +3990,7 @@ exports.tests = [
   spec: 'https://github.com/tc39/proposal-logical-assignment/',
   subtests: [
     {
-      name: '||=',
+      name: '||= basic support',
       exec: function () {/*
         let a;
         let b = 0;
@@ -4001,6 +4001,7 @@ exports.tests = [
         return a === 2 && b === 2 && c === 1;
       */},
       res: {
+        firefox60: false,
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
@@ -4008,7 +4009,39 @@ exports.tests = [
       },
     },
     {
-      name: '&&=',
+      name: '||= short-circuiting behaviour',
+      exec: function () {/*
+        let a = 1;
+        let i = 1;
+        a ||= ++i;
+        return a === 1 && i === 1;
+      */},
+      res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '||= setter not unecessarily invoked',
+      exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return 1 }, set x(n) { i++; } };
+        obj.x ||= 2;
+        return i === 1;
+      */},
+      res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '&&= basic support',
       exec: function () {/*
         let a;
         let b = 0;
@@ -4019,6 +4052,7 @@ exports.tests = [
         return typeof a === 'undefined' && b === 0 && c === 2;
       */},
       res: {
+        firefox60: false,
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
@@ -4026,7 +4060,39 @@ exports.tests = [
       },
     },
     {
-      name: '??=',
+      name: '&&= short-circuiting behaviour',
+      exec: function () {/*
+        let a;
+        let i = 1;
+        a &&= ++i;
+        return typeof a === 'undefined' && i === 1;
+      */},
+      res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '&&= setter not unecessarily invoked',
+      exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return }, set x(n) { i++; } };
+        obj.x &&= 2;
+        return i === 1;
+      */},
+      res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '??= basic support',
       exec: function () {/*
         let a;
         let b = 0;
@@ -4037,6 +4103,39 @@ exports.tests = [
         return a === 2 && b === 0 && c === 1;
       */},
       res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '??= short-circuiting behaviour',
+      exec: function () {/*
+        let a = 1;
+        let i = 1;
+        a ??= ++i;
+        return a === 1 && i === 1;
+      */},
+      res: {
+        firefox60: false,
+        firefox76: false,
+        firefox77: firefox.nightly,
+        chrome80: false,
+        safari13: false,
+      },
+    },
+    {
+      name: '??= setter not unecessarily invoked',
+      exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return 1 }, set x(n) { i++; } };
+        obj.x ??= 2;
+        return i === 1;
+      */},
+      res: {
+        firefox60: false,
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
