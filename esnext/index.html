@@ -23580,8 +23580,8 @@ return Array.isArray(arr)
 var target, key, index;
 function decorator(_target, _key, _index){
   target = _target;
-  key    = _key;
-  index  = _index;
+  key = _key;
+  index = _index;
 }
 class C {
   method(@decorator foo){ }
@@ -23589,7 +23589,7 @@ class C {
 return target === C.prototype
   &amp;&amp; key === &apos;method&apos;
   &amp;&amp; index === 0;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("200");try{return Function("asyncTestPassed","\nvar target, key, index;\nfunction decorator(_target, _key, _index){\n  target = _target;\n  key    = _key;\n  index  = _index;\n}\nclass C {\n  method(@decorator foo){ }\n}\nreturn target === C.prototype\n  && key === 'method'\n  && index === 0;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("200");return Function("asyncTestPassed","'use strict';"+"\nvar target, key, index;\nfunction decorator(_target, _key, _index){\n  target = _target;\n  key    = _key;\n  index  = _index;\n}\nclass C {\n  method(@decorator foo){ }\n}\nreturn target === C.prototype\n  && key === 'method'\n  && index === 0;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("200");try{return Function("asyncTestPassed","\nvar target, key, index;\nfunction decorator(_target, _key, _index){\n  target = _target;\n  key = _key;\n  index = _index;\n}\nclass C {\n  method(@decorator foo){ }\n}\nreturn target === C.prototype\n  && key === 'method'\n  && index === 0;\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("200");return Function("asyncTestPassed","'use strict';"+"\nvar target, key, index;\nfunction decorator(_target, _key, _index){\n  target = _target;\n  key = _key;\n  index = _index;\n}\nclass C {\n  method(@decorator foo){ }\n}\nreturn target === C.prototype\n  && key === 'method'\n  && index === 0;\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="no obsolete not-applicable" data-browser="tr" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="babel6corejs2" title="This proposal has not yet reached ECMA TC39 stage 1, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>

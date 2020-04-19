@@ -81,14 +81,14 @@ process.nextTick(function () {
   if (!fs.existsSync('esnext/compilers')) {
     fs.mkdirSync('esnext/compilers');
   }
-  var babel       = require('babel-core');
-  var traceur     = require('traceur');
-  var esdown      = require('esdown');
+  var babel = require('babel-core');
+  var traceur = require('traceur');
+  var esdown = require('esdown');
   var jstransform = require('jstransform/simple');
-  var ts          = require('typescript');
-  var esprima     = require('esprima');
-  var espree      = require('espree');
-  var jshint      = require('jshint');
+  var ts = require('typescript');
+  var esprima = require('esprima');
+  var espree = require('espree');
+  var jshint = require('jshint');
   [
     {
       name: 'es5-shim',
