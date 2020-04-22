@@ -4144,6 +4144,36 @@ exports.tests = [
     },
   ]
 },
+{
+  name: 'Hashbang Grammar',
+  category: STAGE3,
+  significance: 'tiny',
+  spec: 'https://github.com/tc39/proposal-hashbang/',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments',
+  exec: function() {/*
+    try {
+      return !eval('#!/wash/your/hands');
+    } catch (e) {
+      return false
+    }
+  */},
+  res: {
+    chrome1: false,
+    chrome74: true,
+    firefox2: false,
+    firefox67: true,
+    ie11: false,
+    opera10_50: false,
+    edge18: false,
+    safari1: false,
+    safari13: false,
+    safari13_1: true,
+    graalvm19: false,
+    babel7corejs3: false,
+    typescript3_2corejs3: false,
+    closure: false
+  }
+}
 ];
 
 
