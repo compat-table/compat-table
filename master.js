@@ -326,27 +326,27 @@ $(function() {
   // browser engine color stripes
   function getBrowserColour(name) {
     /* Chakra */
-    if (/^(ie|edge)/.exec(name)) {
+    if (/^(ie|edge1[2-8]$)/.test(name)) {
       return "hsla(217, 85%, 54%, .5)";
     }
     /* SpiderMonkey */
-    if (/^(firefox|rhino)/.exec(name)) {
+    if (/^(firefox|rhino)/.test(name)) {
       return "hsla(35, 100%, 50%, .5)";
     }
     /* JavaScriptCore */
-    if (/^(webkit|safari|jxa|phantom|ios|android4_0)/.exec(name)) {
+    if (/^(webkit|safari|jxa|phantom|ios|android4_0)/.test(name)) {
       return "hsla(220, 25%, 70%, .5)";
     }
     /* Carakan */
-    if (/^opera\d|opera_mobile1[120]/.exec(name)) {
+    if (/^opera\d|opera_mobile1[120]/.test(name)) {
       return "hsla(358, 86%, 43%, .5)";
     }
     /* V8 */
-    if (/^(chrome|node|iojs|android4[1-9]|android[5-9]|samsung|opera_mobile)/.exec(name)) {
+    if (/^(chrome|node|iojs|android4[1-9]|android[5-9]|samsung|opera_mobile|edge)/.test(name)) {
       return "hsla(79, 100%, 37%, .5)";
     }
     /* KJS */
-    if (/^konq/.exec(name)) {
+    if (/^konq/.test(name)) {
       return "hsla(200, 100%, 74%, .5)";
     }
     /* BESEN */
