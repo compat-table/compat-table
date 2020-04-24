@@ -2994,7 +2994,6 @@ exports.tests = [
           function *foo() {
             try {
               yield;
-              throw new Error();
             }
             catch {
               return true;
@@ -3003,7 +3002,7 @@ exports.tests = [
 
           var it = foo();
           it.next();
-          return it.next().value;
+          return it.throw().value;
         */},
         res: {
           babel7corejs2: true,
@@ -3013,15 +3012,12 @@ exports.tests = [
           firefox2: false,
           firefox57: false,
           firefox58: true,
-          opera10_50: false,
           chrome65: chrome.harmony,
           chrome66: true,
           safari11_1: true,
           safaritp: true,
           webkit: true,
           duktape2_2: false,
-          graalvm19: true,
-          graalvm20: true,
         }
       }
     ]
