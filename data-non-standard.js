@@ -40,7 +40,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs", note_html: "The feature have to be enabled via <code>--experimental-options --js.simdjs</code> flag"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -62,7 +63,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -84,7 +86,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -106,7 +109,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -128,7 +132,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -150,7 +155,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -172,7 +178,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -194,7 +201,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -216,7 +224,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -238,7 +247,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -260,7 +270,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -284,7 +295,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -308,7 +320,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -332,7 +345,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -356,7 +370,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -380,7 +395,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -404,7 +420,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -428,7 +445,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -452,7 +470,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -476,7 +495,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -500,7 +520,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -524,7 +545,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -548,7 +570,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -572,7 +595,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -596,7 +620,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -620,7 +645,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -644,7 +670,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -667,7 +694,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -690,7 +718,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -713,7 +742,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -737,7 +767,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -762,7 +793,8 @@ exports.tests = [
         edge15: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -786,7 +818,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -811,7 +844,8 @@ exports.tests = [
         edge15: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -835,7 +869,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -859,7 +894,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -883,7 +919,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -907,7 +944,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -931,7 +969,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -955,7 +994,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -979,7 +1019,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1003,7 +1044,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1027,7 +1069,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1051,7 +1094,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1075,7 +1119,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1099,7 +1144,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1123,7 +1169,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1147,7 +1194,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1170,7 +1218,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1193,7 +1242,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1216,7 +1266,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1240,7 +1291,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1264,7 +1316,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1288,7 +1341,8 @@ exports.tests = [
         chrome58: false,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1312,7 +1366,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1336,7 +1391,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1358,7 +1414,8 @@ exports.tests = [
         edge14: edge.experimental,
         duktape2_0: false,
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
-        graalvm20: {val: 'flagged', note_id: "graalvm-simdjs"},
+        graalvm20: false,
+        graalvm20_1: false,
       }
     }
   ],
@@ -1384,6 +1441,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
+        graalvm20_1: false,
       }
     },
     {
@@ -1412,6 +1470,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
+        graalvm20_1: false,
       },
     },
     {
@@ -1429,6 +1488,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
+        graalvm20_1: false,
       },
     },
     {
@@ -1533,6 +1593,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
+        graalvm20_1: false,
       },
     },
   ]
@@ -1556,6 +1617,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -1581,6 +1643,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: true,
     graalvm20: true,
+    graalvm20_1: true,
   }
 },
 {
@@ -1607,6 +1670,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1634,6 +1698,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: true,
     graalvm20: true,
+    graalvm20_1: true,
   }
 },
 {
@@ -1661,6 +1726,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -1683,6 +1749,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
 },
 {
@@ -1709,6 +1776,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1734,6 +1802,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1795,6 +1864,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1819,6 +1889,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -1848,6 +1919,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1870,6 +1942,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1898,6 +1971,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1923,6 +1997,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1955,6 +2030,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -1981,6 +2057,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2022,6 +2099,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2065,6 +2143,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2118,6 +2197,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
 },
 {
@@ -2145,6 +2225,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2173,6 +2254,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2204,6 +2286,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2226,6 +2309,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2250,6 +2334,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2273,6 +2358,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2292,6 +2378,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2316,6 +2403,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
 },
 {
@@ -2344,6 +2432,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2368,6 +2457,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2391,6 +2481,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2413,6 +2504,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
 },
 {
@@ -2434,6 +2526,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2469,6 +2562,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: true,
     graalvm20: true,
+    graalvm20_1: true,
   }
 },
 {
@@ -2496,6 +2590,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2524,6 +2619,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2551,6 +2647,7 @@ exports.tests = [
     nashorn10: true,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   }
 },
 {
@@ -2574,6 +2671,7 @@ exports.tests = [
     duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
+    graalvm20_1: false,
   },
   separator: 'after'
 },
@@ -2609,6 +2707,7 @@ exports.tests = [
         duktape2_1: true,
         graalvm19: true,
         graalvm20: true,
+        graalvm20_1: true,
       }
     }, {
       name: '"global" global property has correct property descriptor',
@@ -2645,6 +2744,7 @@ exports.tests = [
         duktape2_1: true,
         graalvm19: false,
         graalvm20: false,
+        graalvm20_1: false,
       }
     }]
   },
@@ -2681,6 +2781,7 @@ exports.tests = [
     duktape2_0: true,
     graalvm19: true,
     graalvm20: false,
+    graalvm20_1: false,
   },
 },
 ];

@@ -131,6 +131,18 @@
       "note_html": "Safari 12 caches TemplateStrings using a GC-able \"CodeBlock\". But TemplateStrings are supposed to always be identical! When the CodeBlock is reclaimed, the TemplateStrings' identity is broken. Thankfully, <code>[[Call]]</code> vs <code>[[Construct]]</code> generate different CodeBlocks, which exposes the <a href='https://bugs.webkit.org/show_bug.cgi?id=190756'>broken behavior.</a>"
     }
   },
+  "graalvm": {
+    "es2020flag": {
+      "val": "flagged",
+      "note_id": "graalvm-es2020",
+      "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2020</code> flag"
+    },
+    "es2021flag": {
+      "val": "flagged",
+      "note_id": "graalvm-es2021",
+      "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag"
+    }
+  },
   "sparseNote": {
     "val": true,
     "note_id": "sparse_arrays",
