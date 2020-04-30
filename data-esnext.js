@@ -930,6 +930,32 @@ exports.tests = [
       }
     },
     {
+      name: 'optional deep private instance class fields access',
+      exec: function () {/*
+        class C {
+          #x = 42;
+          x(o = {p: this}){
+            return o?.p.#x;
+          }
+        }
+        return new C().x() === 42 && new C().x(null) === void 0;
+      */},
+      res: {
+        ie11: false,
+        firefox2: false,
+        firefox74: firefox.privateClassFields,
+        chrome1: false,
+        chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
+        chrome80: true,
+        safari1: false,
+        safari13_1: false,
+        opera10_50: false,
+        graalvm20: false,
+        babel7corejs3: false,
+        typescript3_8corejs3: false,
+      }
+    },
+    {
       name: 'computed instance class fields',
       exec: function () {/*
         class C {
