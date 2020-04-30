@@ -17621,7 +17621,7 @@ exports.tests = [
 
         return typeof symbolObject === "object" &&
           symbolObject instanceof Symbol &&
-          symbolObject === symbol &&
+          symbolObject == symbol && // eslint-disable-line eqeqeq
           symbolObject !== symbol &&
           symbolObject.valueOf() === symbol;
       */},
@@ -18386,7 +18386,7 @@ exports.tests = [
 
         a >= 0;
         b in {};
-        c === 0;
+        c == 0; // eslint-disable-line eqeqeq
         return passed === 3;
       */},
       res: {
@@ -21206,7 +21206,7 @@ exports.tests = [
         var c = new C(true);
         return c instanceof Boolean
           && c instanceof C
-          && c === true;
+          && c == true; // eslint-disable-line eqeqeq
       */},
       res: {
         safari10: true,
