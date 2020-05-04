@@ -2717,6 +2717,7 @@ exports.tests = [
      */},
     res: {
       closure20181008: true,
+      closure20200315: false,
       ie11: false,
       firefox2: false,
       firefox53: true,
@@ -4066,6 +4067,8 @@ exports.tests = [
     */},
     res : {
       babel7corejs2: true,
+      closure: false,
+      closure20200315: true,
       typescript3_7corejs3: true,
       ie11: false,
       firefox10: false,
