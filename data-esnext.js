@@ -459,7 +459,7 @@ exports.tests = [
         },
         opera10_50: false,
         chrome65: false,
-        chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=--harmony-weak-refs --expose-gc</code></a> flag in V8."},
+        chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8."},
         safari13: false,
         duktape2_0: false,
         graalvm19: false,
@@ -3197,6 +3197,7 @@ exports.tests = [
     firefox60: false,
     firefox72: firefox.nightly,
     chrome77: false,
+    chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
   }
 },
 {
