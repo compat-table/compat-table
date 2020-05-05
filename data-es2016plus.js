@@ -3314,6 +3314,7 @@ exports.tests = [
       closure20190325: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
+      ie11: false,
       firefox10: false,
       firefox52: false,
       firefox62: false,
@@ -3688,6 +3689,7 @@ exports.tests = [
         return (1n + 2n) === 3n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3704,6 +3706,7 @@ exports.tests = [
         return BigInt("3") === 3n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3720,6 +3723,7 @@ exports.tests = [
         return typeof BigInt.asUintN === 'function';
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3736,6 +3740,7 @@ exports.tests = [
         return typeof BigInt.asIntN === 'function';
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3755,6 +3760,7 @@ exports.tests = [
         return view[0] === -0x8000000000000000n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox67: false,
@@ -3773,6 +3779,7 @@ exports.tests = [
         return view[0] === 0n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox67: false,
@@ -3791,6 +3798,7 @@ exports.tests = [
         return view.getBigInt64(0) === 1n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3810,6 +3818,7 @@ exports.tests = [
         return view.getBigUint64(0) === 1n;
       */},
         res: {
+          ie11: false,
           firefox10: false,
           firefox45: false,
           firefox66: false,
@@ -3847,6 +3856,7 @@ exports.tests = [
       closure20191027: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
+      ie11: false,
       firefox10: false,
       firefox68: firefox.nightly,
       firefox71: true,
