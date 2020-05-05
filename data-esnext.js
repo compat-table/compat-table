@@ -4057,7 +4057,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment", note_html: "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8."},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment", note_html: "The feature have to be enabled via <code>--useLogicalAssignmentOperators=true</code> JSC flag"},
       },
     },
     {
@@ -4073,7 +4075,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4089,7 +4093,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4108,7 +4114,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4124,7 +4132,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4140,7 +4150,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4159,7 +4171,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4175,7 +4189,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
     {
@@ -4191,7 +4207,9 @@ exports.tests = [
         firefox76: false,
         firefox77: firefox.nightly,
         chrome80: false,
+        chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
         safari13: false,
+        safaritp: {val: 'flagged', note_id: "jsc-logical-assignment"},
       },
     },
   ]

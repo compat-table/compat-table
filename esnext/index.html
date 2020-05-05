@@ -3277,7 +3277,7 @@ return true;
 <td class="tally" data-browser="chrome80" data-tally="0">0/9</td>
 <td class="tally" data-browser="chrome81" data-tally="0">0/9</td>
 <td class="tally unstable" data-browser="chrome83" data-tally="0">0/9</td>
-<td class="tally unstable" data-browser="chrome84" data-tally="0">0/9</td>
+<td class="tally unstable" data-browser="chrome84" data-tally="0" data-flagged-tally="1">0/9</td>
 <td class="tally obsolete" data-browser="edge15" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="edge17" data-tally="0">0/9</td>
 <td class="tally" data-browser="edge18" data-tally="0">0/9</td>
@@ -3288,8 +3288,8 @@ return true;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/9</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/9</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/9</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/9</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/9</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0" data-flagged-tally="1">0/9</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0" data-flagged-tally="1">0/9</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="opera62" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="opera63" data-tally="0">0/9</td>
@@ -3399,7 +3399,7 @@ return a === 2 &amp;&amp; b === 2 &amp;&amp; c === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -3410,8 +3410,8 @@ return a === 2 &amp;&amp; b === 2 &amp;&amp; c === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -3518,7 +3518,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -3529,8 +3529,8 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -3637,7 +3637,7 @@ return i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -3648,8 +3648,8 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -3759,7 +3759,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; b === 0 &amp;&amp; c === 2;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -3770,8 +3770,8 @@ return typeof a === &apos;undefined&apos; &amp;&amp; b === 0 &amp;&amp; c === 2;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -3878,7 +3878,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -3889,8 +3889,8 @@ return typeof a === &apos;undefined&apos; &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -3997,7 +3997,7 @@ return i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -4008,8 +4008,8 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -4119,7 +4119,7 @@ return a === 2 &amp;&amp; b === 0 &amp;&amp; c === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -4130,8 +4130,8 @@ return a === 2 &amp;&amp; b === 0 &amp;&amp; c === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -4238,7 +4238,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -4249,8 +4249,8 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -4357,7 +4357,7 @@ return i === 1;
 <td class="no" data-browser="chrome80">No</td>
 <td class="no" data-browser="chrome81">No</td>
 <td class="no unstable" data-browser="chrome83">No</td>
-<td class="no unstable" data-browser="chrome84">No</td>
+<td class="no flagged unstable" data-browser="chrome84">Flag<a href="#chrome-logical-assignment-note"><sup>[19]</sup></a></td>
 <td class="unknown obsolete" data-browser="edge15">?</td>
 <td class="unknown obsolete" data-browser="edge17">?</td>
 <td class="unknown" data-browser="edge18">?</td>
@@ -4368,8 +4368,8 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="no flagged unstable" data-browser="safaritp">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
+<td class="no flagged unstable" data-browser="webkit">Flag<a href="#jsc-logical-assignment-note"><sup>[20]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
 <td class="unknown obsolete" data-browser="opera62">?</td>
 <td class="unknown obsolete" data-browser="opera63">?</td>
@@ -4795,9 +4795,9 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
-<td class="no obsolete" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[19]</sup></a></td>
-<td class="no obsolete" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[19]</sup></a></td>
-<td class="no" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[19]</sup></a></td>
+<td class="no obsolete" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[21]</sup></a></td>
+<td class="no obsolete" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[21]</sup></a></td>
+<td class="no" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[21]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure">?</td>
 <td class="unknown obsolete" data-browser="closure20190121">?</td>
 <td class="unknown obsolete" data-browser="closure20190325">?</td>
@@ -15958,19 +15958,19 @@ return result === &apos;Hello, hello!&apos;;
 <td class="unknown obsolete" data-browser="typescript3_5corejs3">?</td>
 <td class="unknown obsolete" data-browser="typescript3_6corejs3">?</td>
 <td class="unknown" data-browser="typescript3_7corejs3">?</td>
-<td class="no flagged obsolete" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox66">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox67">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged" data-browser="firefox68">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox69">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox70">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox71">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox72">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox73">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged" data-browser="firefox74">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged" data-browser="firefox75">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox76">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox77">Flag<a href="#ffox-pipeline-note"><sup>[20]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox60">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox66">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox67">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged" data-browser="firefox68">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox69">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox70">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox71">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox72">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox73">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged" data-browser="firefox74">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged" data-browser="firefox75">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox76">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox77">Flag<a href="#ffox-pipeline-note"><sup>[22]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="unknown obsolete" data-browser="chrome74">?</td>
 <td class="unknown obsolete" data-browser="chrome75">?</td>
@@ -27743,7 +27743,7 @@ return typeof Reflect.metadata === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="firefox-weakrefs-note">  <sup>[4]</sup> The feature have to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.</p><p id="chrome-weakrefs-note">  <sup>[5]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=&quot;--harmony-weak-refs --expose-gc&quot;</code></a> flag in V8.</p><p id="graalvm-es2021-note">  <sup>[6]</sup> The feature have to be enabled via <code>--js.ecmascript-version=2021</code> flag</p><p id="firefox-class-fields-note">  <sup>[7]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="jsc-public-class-fields-note">  <sup>[8]</sup> The feature have to be enabled via <code>--useClassFields</code> JSC flag</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[10]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="chrome-optional-chaining-note">  <sup>[11]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony-optional-chaining&quot;</code> flag</p><p id="firefox-nightly-note">  <sup>[12]</sup> The feature is available only in Firefox Nightly builds.</p><p id="graalvm-es2020-note">  <sup>[13]</sup> The feature have to be enabled via <code>--js.ecmascript-version=2020</code> flag</p><p id="babel-core-js-note">  <sup>[14]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[15]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[16]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-string-prototype-replace-all-note">  <sup>[17]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-string-replaceall&quot;</code> flag</p><p id="chrome-promise-any-note">  <sup>[18]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=9808"><code>--js-flags=&quot;--harmony-promise-any&quot;</code></a> flag in V8.</p><p id="babel-decorators-legacy-note">  <sup>[19]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[20]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="firefox-weakrefs-note">  <sup>[4]</sup> The feature have to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.</p><p id="chrome-weakrefs-note">  <sup>[5]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=&quot;--harmony-weak-refs --expose-gc&quot;</code></a> flag in V8.</p><p id="graalvm-es2021-note">  <sup>[6]</sup> The feature have to be enabled via <code>--js.ecmascript-version=2021</code> flag</p><p id="firefox-class-fields-note">  <sup>[7]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>.</p><p id="jsc-public-class-fields-note">  <sup>[8]</sup> The feature have to be enabled via <code>--useClassFields</code> JSC flag</p><p id="chrome-harmony-note">  <sup>[9]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-private-class-fields-note">  <sup>[10]</sup> The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields.</p><p id="chrome-optional-chaining-note">  <sup>[11]</sup> The feature have to be enabled via <code>--js-flags=&quot;--harmony-optional-chaining&quot;</code> flag</p><p id="firefox-nightly-note">  <sup>[12]</sup> The feature is available only in Firefox Nightly builds.</p><p id="graalvm-es2020-note">  <sup>[13]</sup> The feature have to be enabled via <code>--js.ecmascript-version=2020</code> flag</p><p id="babel-core-js-note">  <sup>[14]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[15]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[16]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="chrome-string-prototype-replace-all-note">  <sup>[17]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-string-replaceall&quot;</code> flag</p><p id="chrome-promise-any-note">  <sup>[18]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=9808"><code>--js-flags=&quot;--harmony-promise-any&quot;</code></a> flag in V8.</p><p id="chrome-logical-assignment-note">  <sup>[19]</sup> Available behind the <a href="https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070"><code>--js-flags=&quot;--logical-assignment&quot;</code></a> flag in V8.</p><p id="jsc-logical-assignment-note">  <sup>[20]</sup> The feature have to be enabled via <code>--useLogicalAssignmentOperators=true</code> JSC flag</p><p id="babel-decorators-legacy-note">  <sup>[21]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ffox-pipeline-note">  <sup>[22]</sup> Requires the <code>--enable-pipeline-operator</code> compile option.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
