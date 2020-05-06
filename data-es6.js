@@ -6835,6 +6835,7 @@ exports.tests = [
       res: {
         babel6corejs2: babel.corejs,
         typescript1corejs2: typescript.corejs,
+        ie11: false,
         edge13: true,
         firefox2: false,
         firefox48: true,
@@ -6886,6 +6887,7 @@ exports.tests = [
         firefox2: false,
         firefox44: true,
         opera10_50: false,
+        ie11: false,
         edge14: true,
         chrome5: true,
         safari10: true,
@@ -6926,6 +6928,7 @@ exports.tests = [
         babel6corejs2: babel.corejs,
         typescript1corejs2: typescript.corejs,
         chrome45: true,
+        ie11: false,
         edge14: true,
         node4: true,
         safari10: true,
@@ -6976,6 +6979,7 @@ exports.tests = [
         firefox2: false,
         firefox35: true,
         opera10_50: false,
+        ie11: false,
         edge12: true,
         chrome51: true,
         safari10: true,
@@ -6996,6 +7000,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7016,6 +7021,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7067,6 +7073,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7088,6 +7095,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7110,6 +7118,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7132,6 +7141,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7153,6 +7163,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7174,6 +7185,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7194,6 +7206,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7215,6 +7228,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7235,6 +7249,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7256,6 +7271,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7277,6 +7293,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7298,6 +7315,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7319,6 +7337,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox46: true,
@@ -7339,6 +7358,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox34: true,
@@ -7361,6 +7381,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7382,6 +7403,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7403,6 +7425,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7424,6 +7447,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7445,6 +7469,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7466,6 +7491,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7486,6 +7512,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7509,6 +7536,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge13: true,
       firefox2: false,
       firefox48: true,
