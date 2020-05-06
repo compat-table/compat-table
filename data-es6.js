@@ -6327,7 +6327,7 @@ exports.tests = [
         ie11: {
           val: true,
           note_id: "ie-clampedarray",
-          note_html: "A partial implementation of <code>Uint8ClampedArray</code> has been introduced with <a href='https://support.microsoft.com/en-us/help/2929437/description-of-the-security-update-for-internet-explorer-11-on-windows'>KB2929437</a>, so this test fails on early IE11 builds."
+          note_html: "A buggy implementation of <code>Uint8ClampedArray</code> on initial IE11 release has been fixed with the patch on <a href='https://support.microsoft.com/en-us/help/2929437/description-of-the-security-update-for-internet-explorer-11-on-windows'>KB2929437</a>"
         },
         edge12: true,
         firefox2: false,
