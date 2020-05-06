@@ -6324,9 +6324,14 @@ exports.tests = [
       res: {
         babel6corejs2: babel.corejs,
         typescript1corejs2: typescript.corejs,
+        ie11: {
+          val: true,
+          note_id: "ie-clampedarray",
+          note_html: "A buggy implementation of <code>Uint8ClampedArray</code> on initial IE11 release has been fixed with the patch on <a href='https://support.microsoft.com/en-us/help/2929437/description-of-the-security-update-for-internet-explorer-11-on-windows'>KB2929437</a>"
+        },
+        edge12: true,
         firefox2: false,
         firefox4: true,
-        edge12: true,
         chrome5: true,
         safari6: true,
         opera10_50: false,
@@ -6830,6 +6835,7 @@ exports.tests = [
       res: {
         babel6corejs2: babel.corejs,
         typescript1corejs2: typescript.corejs,
+        ie11: false,
         edge13: true,
         firefox2: false,
         firefox48: true,
@@ -6881,6 +6887,7 @@ exports.tests = [
         firefox2: false,
         firefox44: true,
         opera10_50: false,
+        ie11: false,
         edge14: true,
         chrome5: true,
         safari10: true,
@@ -6921,6 +6928,7 @@ exports.tests = [
         babel6corejs2: babel.corejs,
         typescript1corejs2: typescript.corejs,
         chrome45: true,
+        ie11: false,
         edge14: true,
         node4: true,
         safari10: true,
@@ -6971,6 +6979,7 @@ exports.tests = [
         firefox2: false,
         firefox35: true,
         opera10_50: false,
+        ie11: false,
         edge12: true,
         chrome51: true,
         safari10: true,
@@ -6991,6 +7000,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7011,6 +7021,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7033,6 +7044,11 @@ exports.tests = [
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
       ejs: true,
+      ie11: {
+        val: true,
+        note_id: "ie-subarray",
+        note_html: "This test depends on <code>Uint8ClampedArray</code> which has been introduced with <a href='https://support.microsoft.com/en-us/help/2929437/description-of-the-security-update-for-internet-explorer-11-on-windows'>KB2929437</a>, so it fails on early IE11 builds."
+      },
       edge12: true,
       firefox2: false,
       firefox4: true,
@@ -7057,6 +7073,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7078,6 +7095,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7100,6 +7118,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7122,6 +7141,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7143,6 +7163,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7164,6 +7185,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7184,6 +7206,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7205,6 +7228,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox38: true,
@@ -7225,6 +7249,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7246,6 +7271,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7267,6 +7293,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7288,6 +7315,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7309,6 +7337,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox46: true,
@@ -7329,6 +7358,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox34: true,
@@ -7351,6 +7381,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7372,6 +7403,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7393,6 +7425,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       firefox2: false,
       firefox37: true,
@@ -7414,6 +7447,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7435,6 +7469,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7456,6 +7491,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7476,6 +7512,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge12: true,
       chrome38: true,
       node0_12: true,
@@ -7499,6 +7536,7 @@ exports.tests = [
       res: {
       babel6corejs2: babel.corejs,
       typescript1corejs2: typescript.corejs,
+      ie11: false,
       edge13: true,
       firefox2: false,
       firefox48: true,
@@ -21727,7 +21765,7 @@ exports.tests = [
         konq414: null,
         ie7: null,
         ie10: false,
-        edge12: null,
+        ie11: true,
         edge14: true,
         firefox1: null,
         firefox2: false,
