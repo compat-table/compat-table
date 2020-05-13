@@ -481,7 +481,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2018-11-29",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -494,7 +494,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2019-01-31",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -506,7 +506,7 @@
     "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
     "family": "TypeScript",
     "platformtype": "compiler",
-    "release": "2019-03-29",
+    "obsolete": "very",
     "obsolete": true,
     "test_suites": [
       "es6",
@@ -546,6 +546,32 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2019-10-05",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_8corejs3": {
+    "full": "TypeScript 3.8 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2019-02-20",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript3_9corejs3": {
+    "full": "TypeScript 3.9 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2020-05-12",
     "obsolete": false,
     "test_suites": [
       "es6",
