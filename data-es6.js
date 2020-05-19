@@ -6029,6 +6029,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         closure20200315: false,
+        closure20200517: true,
         typescript1corejs2: true,
         ie11: false,
         edge12: true,
@@ -6143,6 +6144,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         closure20200315: false,
+        closure20200517: true,
         typescript1corejs2: true,
         ie11: false,
         edge12: true,
@@ -6184,6 +6186,7 @@ exports.tests = [
         ejs: true,
         closure: true,
         closure20200315: false,
+        closure20200517: true,
         typescript1corejs2: true,
         ie11: false,
         edge12: true,
@@ -17727,6 +17730,7 @@ exports.tests = [
         return \u{102C0} === 2;
       */},
       res: {
+        closure20200517: true,
         ejs: true,
         ie11: false,
         edge12: true,
@@ -17751,6 +17755,7 @@ exports.tests = [
         return o['\ud800\udec0'] === 2;
       */},
       res: {
+        closure20200517: false,
         ejs: true,
         edge12: true,
         chrome44: true,
@@ -17774,6 +17779,7 @@ exports.tests = [
         return o.\u{102C0} === 2;
       */},
       res: {
+        closure20200517: false,
         edge12: true,
         chrome44: true,
         firefox2: false,
@@ -17805,6 +17811,8 @@ exports.tests = [
         return passed;
       */},
       res: {
+        closure: false,
+        closure20200517: true,
         firefox2: false,
         firefox41: true,
         opera10_50: false,
@@ -17838,6 +17846,8 @@ exports.tests = [
         }
       */},
       res: {
+        closure: false,
+        closure20200517: true,
         firefox2: false,
         firefox41: true,
         opera10_50: false,
