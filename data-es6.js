@@ -17723,8 +17723,8 @@ exports.tests = [
     {
       name: 'in identifiers',
       exec: function(){/*
-        var \u{102C0} = { \u{102C0} : 2 };
-        return \u{102C0}['\ud800\udec0'] === 2;
+        var \u{102C0} = 2;
+        return \u{102C0} === 2;
       */},
       res: {
         ejs: true,
@@ -17742,6 +17742,45 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         jerryscript2_0: false,
+      }
+    },
+    {
+      name: 'in property key definitions',
+      exec: function(){/*
+        var o = { \u{102C0} : 2 };
+        return o['\ud800\udec0'] === 2;
+      */},
+      res: {
+        ejs: true,
+        edge12: true,
+        chrome44: true,
+        firefox2: false,
+        firefox53: true,
+        opera10_50: false,
+        safari9: true,
+        node4: true,
+        xs6: true,
+        jxa: true,
+        duktape2_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        jerryscript2_0: false,
+      }
+    },
+    {
+      name: 'in property key accesses',
+      exec: function(){/*
+        var o = { '\ud800\udec0' : 2 };
+        return o.\u{102C0} === 2;
+      */},
+      res: {
+        edge12: true,
+        chrome44: true,
+        firefox2: false,
+        firefox53: true,
+        opera10_50: false,
+        safari9: true,
+        node4: true,
       }
     },
   ]
