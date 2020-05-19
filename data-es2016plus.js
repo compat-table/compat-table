@@ -2718,6 +2718,7 @@ exports.tests = [
     res: {
       closure20181008: true,
       closure20200315: false,
+      closure20200517: true,
       ie11: false,
       firefox2: false,
       firefox53: true,
