@@ -34,8 +34,10 @@ var cheerio = require('cheerio');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
+var STAGE1 = 'proposal (stage 1)';
+
 var isOptional = function isOptional(category) {
-  return (category || '').indexOf('annex b')>-1 || category === 'pre-strawman' || category === 'strawman (stage 0)';
+  return (category || '').indexOf('annex b') > -1 || category === STAGE1;
 };
 
 var byTestSuite = function(suite) {
@@ -560,12 +562,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         (t.category.indexOf("annex b")===-1 || (browsers[browserId].platformtype &&
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
           !browsers[browserId].needs_annex_b))) {
-        var msg = ({
-          'pre-strawman': "This proposal has not yet been accepted by ECMA Technical Committee 39",
-          'strawman (stage 0)': "This proposal has not yet reached ECMA TC39 stage 1",
-        }[t.category]
-          || "This feature is optional on non-browser platforms")
-         + ", and doesn't contribute to the platform's support percentage.";
+        var msg = (
+          t.category === STAGE1
+            ? "This proposal has not yet reached stage 2"
+            : "This feature is optional on non-browser platforms"
+        ) + ", and doesn't contribute to the platform's support percentage.";
         cell.attr('title', msg);
         cell.addClass("not-applicable");
       }
