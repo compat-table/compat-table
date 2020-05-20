@@ -468,19 +468,21 @@ exports.tests = [
       }
     },
     {
-      name: 'Finalizers minimal support',
+      name: 'FinalizationRegistry minimal support',
       spec: 'https://github.com/tc39/proposal-weakrefs#finalizers',
       exec: function(){/*
-        var fg = new FinalizationGroup(function() {});
-        return Object.getPrototypeOf(fg) === FinalizationGroup.prototype;
+        var fr = new FinalizationRegistry(function() {});
+        return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
       */},
       res : {
         ie11: false,
         firefox2: false,
-        firefox74: { val: 'flagged', note_id: 'firefox-weakrefs' },
+        firefox74: false,
+        firefox78: { val: 'flagged', note_id: 'firefox-weakrefs' },
         opera10_50: false,
         chrome65: false,
-        chrome74: {val: 'flagged', note_id: "chrome-weakrefs"},
+        chrome74: false,
+        chrome85: true,
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
