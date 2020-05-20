@@ -3495,6 +3495,8 @@ exports.tests = [
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ie11: false,
+        firefox60: false,
+        chrome79: false,
       },
     },
     {
@@ -3512,6 +3514,8 @@ exports.tests = [
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ie11: false,
+        firefox60: false,
+        chrome79: false,
       },
     },
     {
@@ -3529,6 +3533,8 @@ exports.tests = [
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
         ie11: false,
+        firefox60: false,
+        chrome79: false,
       },
     },
   ]
