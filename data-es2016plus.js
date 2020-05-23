@@ -2810,6 +2810,8 @@ exports.tests = [
       babel6corejs2: true,
       ie11: false,
       firefox2: false,
+      firefox77: false,
+      firefox78: true,
       opera10_50: false,
       chrome60: chrome.harmony,
       chrome64: true,
