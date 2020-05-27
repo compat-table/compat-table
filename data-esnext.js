@@ -1746,6 +1746,7 @@ exports.tests = [
   name: 'String.prototype.replaceAll',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-replace-all',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll',
   category: STAGE3,
   exec: function () {/*
     return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
