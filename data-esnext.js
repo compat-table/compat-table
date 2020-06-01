@@ -3565,6 +3565,7 @@ exports.tests = [
         firefox77: firefox.nightly,
         chrome80: false,
         chrome84: {val: 'flagged', note_id: "chrome-logical-assignment", note_html: "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8."},
+        chrome85: true,
         safari13: false,
         safaritp: true,
       },
