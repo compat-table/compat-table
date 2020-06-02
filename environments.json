@@ -4075,7 +4075,7 @@
     "platformtype": "mobile",
     "equals": "chrome56",
     "release": "2017-08-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung7": {
     "full": "Samsung Internet for Android 7",
@@ -4102,7 +4102,7 @@
     "platformtype": "mobile",
     "equals": "chrome67",
     "release": "2018-09-15",
-    "obsolete": false
+    "obsolete": true
   },
   "samsung10": {
     "full": "Samsung Internet for Android 10",
@@ -4116,10 +4116,18 @@
   "samsung11": {
     "full": "Samsung Internet for Android 11",
     "family": "Samsung",
-    "short": "Samsung 11 Beta",
+    "short": "Samsung 11",
     "platformtype": "mobile",
     "equals": "chrome75",
-    "unstable": false
+    "obsolete": false
+  },
+  "samsung12": {
+    "full": "Samsung Internet for Android 12",
+    "family": "Samsung",
+    "short": "Samsung 12 Beta",
+    "platformtype": "mobile",
+    "equals": "chrome79",
+    "unstable": true
   },
   "opera_mobile10_1": {
     "full": "Opera Mobile for Android 10.1",

@@ -205,12 +205,12 @@
 <th class="platform ios12 mobile" data-browser="ios12"><a href="#ios12" class="browser-name"><abbr title="iOS Safari">iOS 12</abbr></a></th>
 <th class="platform ios12_2 mobile" data-browser="ios12_2"><a href="#ios12_2" class="browser-name"><abbr title="iOS Safari">iOS 12.2</abbr></a></th>
 <th class="platform ios13 mobile" data-browser="ios13"><a href="#ios13" class="browser-name"><abbr title="iOS Safari">iOS 13</abbr></a></th>
-<th class="platform samsung6 mobile obsolete" data-browser="samsung6"><a href="#samsung6" class="browser-name"><abbr title="Samsung Internet for Android 6">Samsung 6</abbr></a></th>
 <th class="platform samsung7 mobile obsolete" data-browser="samsung7"><a href="#samsung7" class="browser-name"><abbr title="Samsung Internet for Android 7">Samsung 7</abbr></a></th>
 <th class="platform samsung8 mobile obsolete" data-browser="samsung8"><a href="#samsung8" class="browser-name"><abbr title="Samsung Internet for Android 8">Samsung 8</abbr></a></th>
-<th class="platform samsung9 mobile" data-browser="samsung9"><a href="#samsung9" class="browser-name"><abbr title="Samsung Internet for Android 9">Samsung 9</abbr></a></th>
+<th class="platform samsung9 mobile obsolete" data-browser="samsung9"><a href="#samsung9" class="browser-name"><abbr title="Samsung Internet for Android 9">Samsung 9</abbr></a></th>
 <th class="platform samsung10 mobile" data-browser="samsung10"><a href="#samsung10" class="browser-name"><abbr title="Samsung Internet for Android 10">Samsung 10</abbr></a></th>
-<th class="platform samsung11 mobile" data-browser="samsung11"><a href="#samsung11" class="browser-name"><abbr title="Samsung Internet for Android 11">Samsung 11 Beta</abbr></a></th>
+<th class="platform samsung11 mobile" data-browser="samsung11"><a href="#samsung11" class="browser-name"><abbr title="Samsung Internet for Android 11">Samsung 11</abbr></a></th>
+<th class="platform samsung12 mobile unstable" data-browser="samsung12"><a href="#samsung12" class="browser-name"><abbr title="Samsung Internet for Android 12">Samsung 12 Beta</abbr></a></th>
 <th class="platform opera_mobile51 mobile obsolete" data-browser="opera_mobile51"><a href="#opera_mobile51" class="browser-name"><abbr title="Opera Mobile for Android 51">Opera Mobile 51</abbr></a></th>
 <th class="platform opera_mobile52 mobile obsolete" data-browser="opera_mobile52"><a href="#opera_mobile52" class="browser-name"><abbr title="Opera Mobile for Android 52">Opera Mobile 52</abbr></a></th>
 <th class="platform opera_mobile53 mobile obsolete" data-browser="opera_mobile53"><a href="#opera_mobile53" class="browser-name"><abbr title="Opera Mobile for Android 53">Opera Mobile 53</abbr></a></th>
@@ -311,12 +311,12 @@
 <td class="tally" data-browser="ios12" data-tally="0">0/57</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/57</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/57</td>
-<td class="tally obsolete" data-browser="samsung6" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/57</td>
-<td class="tally" data-browser="samsung9" data-tally="0">0/57</td>
+<td class="tally obsolete" data-browser="samsung9" data-tally="0">0/57</td>
 <td class="tally" data-browser="samsung10" data-tally="0">0/57</td>
 <td class="tally" data-browser="samsung11" data-tally="0">0/57</td>
+<td class="tally unstable" data-browser="samsung12" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="opera_mobile51" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="opera_mobile52" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="opera_mobile53" data-tally="0">0/57</td>
@@ -424,12 +424,12 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -529,12 +529,12 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -634,12 +634,12 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -739,12 +739,12 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -844,12 +844,12 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -949,12 +949,12 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1054,12 +1054,12 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1159,12 +1159,12 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1264,12 +1264,12 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1369,12 +1369,12 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1474,12 +1474,12 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1581,12 +1581,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1688,12 +1688,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1795,12 +1795,12 @@ return simdSmallIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -1902,12 +1902,12 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2009,12 +2009,12 @@ return simdBoolTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2116,12 +2116,12 @@ return simdBoolTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2223,12 +2223,12 @@ return simdAllTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2330,12 +2330,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2437,12 +2437,12 @@ return simdAllTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2544,12 +2544,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2651,12 +2651,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2758,12 +2758,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2865,12 +2865,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -2972,12 +2972,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3079,12 +3079,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3186,12 +3186,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3293,12 +3293,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3400,12 +3400,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3507,12 +3507,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3614,12 +3614,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3721,12 +3721,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3828,12 +3828,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -3935,12 +3935,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4042,12 +4042,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4149,12 +4149,12 @@ return simdBoolTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4256,12 +4256,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4363,12 +4363,12 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4470,12 +4470,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4577,12 +4577,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4684,12 +4684,12 @@ return simdAllTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4791,12 +4791,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -4898,12 +4898,12 @@ return simdIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5005,12 +5005,12 @@ return simdIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5112,12 +5112,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5219,12 +5219,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5326,12 +5326,12 @@ return simdFloatTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5433,12 +5433,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5540,12 +5540,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5647,12 +5647,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5754,12 +5754,12 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5861,12 +5861,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -5968,12 +5968,12 @@ return simdSmallIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -6075,12 +6075,12 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -6182,12 +6182,12 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -6289,12 +6289,12 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -6394,12 +6394,12 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No<a href="#chrome-simd-note"><sup>[7]</sup></a></td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -6498,12 +6498,12 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="tally" data-browser="ios12" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="samsung6" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/4</td>
-<td class="tally" data-browser="samsung9" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="samsung9" data-tally="0">0/4</td>
 <td class="tally" data-browser="samsung10" data-tally="0">0/4</td>
 <td class="tally" data-browser="samsung11" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="samsung12" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile51" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile52" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile53" data-tally="0">0/4</td>
@@ -6603,12 +6603,12 @@ return typeof uneval === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -6716,12 +6716,12 @@ return &apos;toSource&apos; in Object.prototype
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -6821,12 +6821,12 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -7012,12 +7012,12 @@ return true;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -7118,12 +7118,12 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -7227,12 +7227,12 @@ return 'caller' in function(){};
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
-<td class="yes obsolete" data-browser="samsung6">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
-<td class="yes" data-browser="samsung9">Yes</td>
+<td class="yes obsolete" data-browser="samsung9">Yes</td>
 <td class="yes" data-browser="samsung10">Yes</td>
 <td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="samsung12">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile51">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile52">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile53">Yes</td>
@@ -7338,12 +7338,12 @@ return (function () {}).arity === 0 &&
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -7451,12 +7451,12 @@ return f(1, 'boo');
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
-<td class="yes obsolete" data-browser="samsung6">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
-<td class="yes" data-browser="samsung9">Yes</td>
+<td class="yes obsolete" data-browser="samsung9">Yes</td>
 <td class="yes" data-browser="samsung10">Yes</td>
 <td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="samsung12">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile51">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile52">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile53">Yes</td>
@@ -7558,12 +7558,12 @@ return typeof Function.prototype.isGenerator === 'function';
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -7666,12 +7666,12 @@ return new C instanceof C;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -7775,12 +7775,12 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -7882,12 +7882,12 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -7999,12 +7999,12 @@ return executed;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8106,12 +8106,12 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8213,12 +8213,12 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8322,12 +8322,12 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8427,12 +8427,12 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -8532,12 +8532,12 @@ return (function(x)x)(1) === 1;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8637,12 +8637,12 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8746,12 +8746,12 @@ return str === &quot;foobarbaz&quot;;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8852,12 +8852,12 @@ return arr[1] === arr;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -8991,12 +8991,12 @@ catch(e) {
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9136,12 +9136,12 @@ catch(e) {
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9280,12 +9280,12 @@ global.test((function () {
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9387,12 +9387,12 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9499,12 +9499,12 @@ return passed;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -9622,12 +9622,12 @@ try {
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9727,12 +9727,12 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9833,12 +9833,12 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -9938,12 +9938,12 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10041,12 +10041,12 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -10146,12 +10146,12 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10259,12 +10259,12 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -10364,12 +10364,12 @@ function () { return typeof Object.prototype.watch === 'function' }())</script><
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10467,12 +10467,12 @@ function () { return typeof Object.prototype.unwatch === 'function' }())</script
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10570,12 +10570,12 @@ function () { return typeof Object.prototype.eval === 'function' }())</script></
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10675,12 +10675,12 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -10792,12 +10792,12 @@ try {
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
-<td class="yes obsolete" data-browser="samsung6">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
-<td class="yes" data-browser="samsung9">Yes</td>
+<td class="yes obsolete" data-browser="samsung9">Yes</td>
 <td class="yes" data-browser="samsung10">Yes</td>
 <td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="samsung12">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile51">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile52">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile53">Yes</td>
@@ -10899,12 +10899,12 @@ return 'lineNumber' in new Error();
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -11006,12 +11006,12 @@ return 'columnNumber' in new Error();
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -11113,12 +11113,12 @@ return 'fileName' in new Error();
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -11220,12 +11220,12 @@ return 'description' in new Error();
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="no obsolete" data-browser="samsung6">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
-<td class="no" data-browser="samsung9">No</td>
+<td class="no obsolete" data-browser="samsung9">No</td>
 <td class="no" data-browser="samsung10">No</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="no obsolete" data-browser="opera_mobile51">No</td>
 <td class="no obsolete" data-browser="opera_mobile52">No</td>
 <td class="no obsolete" data-browser="opera_mobile53">No</td>
@@ -11324,12 +11324,12 @@ return 'description' in new Error();
 <td class="tally" data-browser="ios12" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung6" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/2</td>
-<td class="tally" data-browser="samsung9" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung9" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung10" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung11" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="samsung12" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile51" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile52" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile53" data-tally="0">0/2</td>
@@ -11431,12 +11431,12 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -11543,12 +11543,12 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="unknown obsolete" data-browser="samsung6">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
-<td class="unknown" data-browser="samsung9">?</td>
+<td class="unknown obsolete" data-browser="samsung9">?</td>
 <td class="unknown" data-browser="samsung10">?</td>
 <td class="unknown" data-browser="samsung11">?</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile51">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile52">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile53">?</td>
@@ -11653,12 +11653,12 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="no" data-browser="ios13">No</td>
-<td class="yes obsolete" data-browser="samsung6">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
-<td class="yes" data-browser="samsung9">Yes</td>
+<td class="yes obsolete" data-browser="samsung9">Yes</td>
 <td class="yes" data-browser="samsung10">Yes</td>
 <td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="samsung12">No</td>
 <td class="yes obsolete" data-browser="opera_mobile51">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile52">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile53">Yes</td>
