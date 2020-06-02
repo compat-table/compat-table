@@ -1313,7 +1313,7 @@
     "short": "FF 67",
     "release": "2019-05-21",
     "retire": "2019-07-09",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox68": {
     "full": "Firefox 68 Extended Support Release",
@@ -1377,7 +1377,7 @@
     "short": "FF 75",
     "release": "2020-04-07",
     "retire": "2020-05-05",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox76": {
     "full": "Firefox 76",
@@ -1388,15 +1388,23 @@
     "obsolete": false
   },
   "firefox77": {
-    "full": "Firefox 77 Beta",
+    "full": "Firefox 77",
     "family": "SpiderMonkey",
-    "short": "FF 77 Beta",
+    "short": "FF 77",
     "release": "2020-06-02",
     "retire": "2020-06-30",
-    "unstable": true
+    "obsolete": false
   },
   "firefox78": {
-    "full": "Firefox 78 Nightly",
+    "full": "Firefox 78 Beta",
+    "family": "SpiderMonkey",
+    "short": "FF 78 Beta",
+    "release": "2020-06-30",
+    "retire": "2020-07-28",
+    "unstable": true
+  },
+  "firefox79": {
+    "full": "Firefox 79 Nightly",
     "family": "SpiderMonkey",
     "short": "FF 78 Nightly",
     "release": "2020-06-30",
