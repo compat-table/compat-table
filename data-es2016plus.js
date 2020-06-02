@@ -4123,11 +4123,39 @@ exports.tests = [
       graalvm20: {val: 'flagged', note_id: "graalvm-es2020"},
     }
   },
+  {
+    name: 'String.prototype.replaceAll',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-string-replace-all',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll',
+    category: 'finished (stage 4)',
+    exec: function () {/*
+    return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
+  */},
+    res: {
+      babel6corejs2: false,
+      babel7corejs3: babel.corejs,
+      typescript1corejs2: typescript.fallthrough,
+      typescript3_2corejs3: typescript.corejs,
+      ie11: false,
+      firefox10: false,
+      firefox52: false,
+      firefox71: false,
+      firefox72: firefox.nightly,
+      firefox77: true,
+      chrome77: false,
+      chrome80: chrome.stringPrototypeReplaceAll,
+      safari13_1: true,
+      safaritp: true,
+      graalvm19: false,
+      graalvm20: {val: 'flagged', note_id: "graalvm-es2020"},
+    }
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }

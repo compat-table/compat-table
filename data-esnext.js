@@ -1743,34 +1743,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'String.prototype.replaceAll',
-  significance: 'small',
-  spec: 'https://github.com/tc39/proposal-string-replace-all',
-  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll',
-  category: STAGE3,
-  exec: function () {/*
-    return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
-  */},
-  res: {
-      babel6corejs2: false,
-      babel7corejs3: babel.corejs,
-      typescript1corejs2: typescript.fallthrough,
-      typescript3_2corejs3: typescript.corejs,
-      ie11: false,
-      firefox10: false,
-      firefox52: false,
-      firefox71: false,
-      firefox72: firefox.nightly,
-      firefox77: true,
-      chrome77: false,
-      chrome80: chrome.stringPrototypeReplaceAll,
-      safari13_1: true,
-      safaritp: true,
-      graalvm19: false,
-      graalvm20: {val: 'flagged', note_id: "graalvm-es2020"},
-  }
-},
-{
   name: 'String.prototype.codePoints',
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-string-prototype-codepoints',
