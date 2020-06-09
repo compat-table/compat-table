@@ -2310,7 +2310,7 @@
     "family": "Chakra",
     "short": "Edge 15",
     "release": "2017-04-11",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge16": {
     "full": "Microsoft Edge 16",
@@ -2349,22 +2349,24 @@
     "retire": "2020-04-13",
     "short": "Edge 80",
     "equals": "chrome80",
-    "obsolete": false
+    "obsolete": true
   },
   "edge81": {
     "full": "Microsoft Edge 81",
     "family": "V8",
     "release": "2020-04-13",
+    "retire": "2020-05-21",
     "short": "Edge 81",
     "equals": "chrome81",
     "obsolete": false
   },
   "edge83": {
-    "full": "Microsoft Edge 83 Beta",
+    "full": "Microsoft Edge 83",
     "family": "V8",
-    "short": "Edge 83 Beta",
+    "short": "Edge 83",
+    "release": "2020-05-21",
     "equals": "chrome83",
-    "unstable": true
+    "obsolete": false
   },
   "safari1": {
     "full": "Safari 1.0",
