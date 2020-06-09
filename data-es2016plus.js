@@ -2751,6 +2751,7 @@ exports.tests = [
   {
     name: 's (dotAll) flag for regular expressions',
     spec: 'https://tc39.github.io/ecma262/#sec-get-regexp.prototype.dotAll',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll',
     category: '2018 features',
     significance: 'small',
     exec: function(){/*
@@ -2794,6 +2795,7 @@ exports.tests = [
   {
     name: 'RegExp named capture groups',
     spec: 'https://github.com/tc39/proposal-regexp-named-groups',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges',
     category: '2018 features',
     significance: 'small',
     exec: function(){/*
@@ -2825,6 +2827,7 @@ exports.tests = [
   {
     name: 'RegExp Lookbehind Assertions',
     spec: 'https://github.com/tc39/proposal-regexp-lookbehind',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions',
     category: '2018 features',
     significance: 'small',
     exec: function(){/*
@@ -2849,6 +2852,7 @@ exports.tests = [
     category: '2018 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-regexp-unicode-property-escapes',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes',
     exec: function () {/*
     const regexGreekSymbol = /\p{Script=Greek}/u;
     return regexGreekSymbol.test('π');
