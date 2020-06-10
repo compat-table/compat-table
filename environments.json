@@ -3762,6 +3762,28 @@
     "note_id": "graalvm-node-mode",
     "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2020-02-18",
+    "retire": "2020-05-19",
+    "unstable": false,
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm20_1": {
+    "full": "GraalVM JavaScript 20.1.0",
+    "family": "GraalVM",
+    "short": "GraalVM 20.1.0",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2020-05-19",
+    "equals": "graalvm20",
+    "obsolete": false,
     "unstable": false,
     "test_suites": [
       "es5",
