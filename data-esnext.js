@@ -2741,6 +2741,7 @@ exports.tests = [
     firefox10: false,
     firefox60: false,
     firefox72: firefox.nightly,
+    firefox79: true,
     chrome77: false,
     chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
     chrome85: true,
