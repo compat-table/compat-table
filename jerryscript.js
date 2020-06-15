@@ -83,7 +83,7 @@ var asyncTestHelperHead =
 '  if (!jobqueue[time]) {\n' +
 '    jobqueue[time] = [];\n' +
 '  }\n' +
-'  jobqueue[time].push({cb, cbarg, startTime: new Date().getTime(), timeout: time});\n' +
+'  jobqueue[time].push({cb, cbarg, startTime: Date.now(), timeout: time});\n' +
 '}\n' +
 '\n' +
 'var jobqueue = [];\n';
