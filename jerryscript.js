@@ -99,7 +99,7 @@ var asyncTestHelperTail =
 '\n' +
 'function jobRunner(job){\n' +
 '  return new Promise((resolve, reject) => {\n' +
-'    let diff = new Date().getTime() - job.startTime;\n' +
+'    let diff = Date.now() - job.startTime;\n' +
 '    if (diff >= job.timeout) {\n' +
 '      if (!job.run) {\n' +
 '        job.run = true;\n' +
