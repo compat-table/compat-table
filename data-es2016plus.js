@@ -4283,6 +4283,7 @@ exports.tests = [
       firefox77: true,
       chrome77: false,
       chrome80: chrome.stringPrototypeReplaceAll,
+      chrome85: true,
       safari13_1: true,
       safaritp: true,
       graalvm19: false,
