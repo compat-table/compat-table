@@ -1707,6 +1707,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: false,
+      jerryscript2_3_0: true,
     },
   },
   {
