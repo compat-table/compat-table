@@ -3,7 +3,7 @@ var common = require('./data-common');
 var babel = common.babel;
 var typescript = common.typescript;
 // var firefox = common.firefox;
-// var graalvm = common.graalvm;
+var graalvm = common.graalvm;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -325,7 +325,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
-        graalvm20_1: false,
+        graalvm20_1: graalvm.es2021flag,
         rhino1_7_13: false
       }
     },

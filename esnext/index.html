@@ -2909,10 +2909,10 @@ try {
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/7</td>
 <td class="tally" data-browser="graalvm19_3_6" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/7</td>
-<td class="tally obsolete" data-browser="graalvm20_1" data-tally="0">0/7</td>
-<td class="tally obsolete" data-browser="graalvm20_3" data-tally="0">0/7</td>
-<td class="tally" data-browser="graalvm20_3_1" data-tally="0">0/7</td>
-<td class="tally" data-browser="graalvm21" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="graalvm20_1" data-tally="0" data-flagged-tally="0.14285714285714285">0/7</td>
+<td class="tally obsolete" data-browser="graalvm20_3" data-tally="0" data-flagged-tally="0.14285714285714285">0/7</td>
+<td class="tally" data-browser="graalvm20_3_1" data-tally="0" data-flagged-tally="0.14285714285714285">0/7</td>
+<td class="tally" data-browser="graalvm21" data-tally="0" data-flagged-tally="0.14285714285714285">0/7</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0">0/7</td>
@@ -3687,10 +3687,10 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="no obsolete" data-browser="graalvm19">No</td>
 <td class="no" data-browser="graalvm19_3_6">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
-<td class="no obsolete" data-browser="graalvm20_1">No</td>
-<td class="no obsolete" data-browser="graalvm20_3">No</td>
-<td class="no" data-browser="graalvm20_3_1">No</td>
-<td class="no" data-browser="graalvm21">No</td>
+<td class="no flagged obsolete" data-browser="graalvm20_1">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="graalvm20_3">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="graalvm20_3_1">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
 <td class="unknown obsolete" data-browser="ios10_3">?</td>
@@ -10723,7 +10723,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="babel-decorators-legacy-note">  <sup>[6]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="babel-decorators-legacy-note">  <sup>[6]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="graalvm-es2021-note">  <sup>[8]</sup> The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
