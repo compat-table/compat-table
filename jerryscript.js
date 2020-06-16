@@ -33,7 +33,7 @@ var jerryKey = (function () {
     throw new Error('Invalid JerryScript version');
 })();
 console.log('JerryScript result key is: test.res.' + jerryKey);
-// jerryKey = "jerryscript2_3_0" // uncomment this line to test pre 2.3.0
+// jerryKey = "jerryscript2_4_0" // uncomment this line to test pre 2.4.0
 
 // List of keys for inheriting results from previous versions.
 var jerryKeyList = (function () {
@@ -79,19 +79,43 @@ var asyncTestHelperHead =
 '  asyncPassed = true;\n' +
 '}\n' +
 '\n' +
-'function setTimeout(cb, time, ...cbarg) {\n' +
+'function setTimeout(cb, time, cbarg) {\n' +
 '  if (!jobqueue[time]) {\n' +
 '    jobqueue[time] = [];\n' +
 '  }\n' +
-'  jobqueue[time].push({cb, cbarg});\n' +
+'  jobqueue[time].push({cb, cbarg, startTime: Date.now(), timeout: time});\n' +
 '}\n' +
 '\n' +
 'var jobqueue = [];\n';
 
 var asyncTestHelperTail =
-'jobqueue.forEach(function(jobs) {\n' +
+'const thenCb = job => {\n' +
+'  job.cb(job.cbarg)\n' +
+'}\n' +
+'\n' +
+'const catchCb = job => {\n' +
+'  jobRunner(job);\n' +
+'}\n' +
+'\n' +
+'function jobRunner(job){\n' +
+'  return new Promise((resolve, reject) => {\n' +
+'    let diff = Date.now() - job.startTime;\n' +
+'    if (diff >= job.timeout) {\n' +
+'      if (!job.run) {\n' +
+'        job.run = true;\n' +
+'        resolve (job);\n' +
+'      }\n' +
+'    } else {\n' +
+'      reject (job)\n' +
+'    }\n' +
+'  })\n' +
+'  .then(thenCb)\n' +
+'  .catch(catchCb)\n' +
+'}\n' +
+'\n' +
+'jobqueue.forEach(function(jobs, index) {\n' +
 '  for (var job of jobs) {\n' +
-'    job.cb(...job.cbarg);\n' +
+'    jobRunner(job);\n' +
 '  }\n' +
 '});\n' +
 '\n' +
@@ -134,7 +158,7 @@ function runTest(parents, test, sublevel) {
             script += 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
                      'try {\n' +
                      '    var res = eval(evalcode);\n' +
-                     '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
+                     '    if (!res) { throw new Error("failed: " + res); }\n' +
                      '    print("[SUCCESS]");\n' +
                      '} catch (e) {\n' +
                      '    print("[FAILURE]", e);\n' +
