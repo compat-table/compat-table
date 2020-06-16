@@ -1556,11 +1556,11 @@ exports.tests = [
         }
       },
       {
-        name: 'Atomics.wake',
-        spec: 'https://tc39.github.io/ecma262/#sec-atomics.wake',
-        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake',
+        name: 'Atomics.notify',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.notify',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify',
         exec: function () {/*
-         return typeof Atomics.wake === 'function';
+         return typeof Atomics.notify === 'function';
          */},
         res: {
           ie11: false,
@@ -1588,8 +1588,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
-          graalvm20: false,
-          graalvm20_1: false,
+          graalvm20: true,
+          graalvm20_1: true,
           hermes0_7_0: false,
           rhino1_7_13: false
         }
