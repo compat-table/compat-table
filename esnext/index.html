@@ -185,7 +185,8 @@
 <th class="platform safari12 desktop obsolete" data-browser="safari12"><a href="#safari12" class="browser-name"><abbr title="Safari 12">SF 12</abbr></a></th>
 <th class="platform safari12_1 desktop obsolete" data-browser="safari12_1"><a href="#safari12_1" class="browser-name"><abbr title="Safari 12.1">SF&#xA0;12.1</abbr></a></th>
 <th class="platform safari13 desktop" data-browser="safari13"><a href="#safari13" class="browser-name"><abbr title="Safari 13">SF&#xA0;13</abbr></a></th>
-<th class="platform safari13_1 desktop" data-browser="safari13_1"><a href="#safari13_1" class="browser-name"><abbr title="Safari 13.1 ">SF&#xA0;13.1</abbr></a></th>
+<th class="platform safari13_1 desktop" data-browser="safari13_1"><a href="#safari13_1" class="browser-name"><abbr title="Safari 13.1">SF&#xA0;13.1</abbr></a></th>
+<th class="platform safari14 desktop unstable" data-browser="safari14"><a href="#safari14" class="browser-name"><abbr title="Safari 14 Beta">SF&#xA0;14</abbr></a></th>
 <th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 106">SF TP</abbr></a></th>
 <th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r222556 (October 4, 2017)">WK</abbr></a></th>
 <th class="platform opera61 desktop obsolete" data-browser="opera61"><a href="#opera61" class="browser-name"><abbr title="Opera 61">OP 61</abbr></a></th>
@@ -248,7 +249,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="116">Candidate (stage 3)</td>
+      <tr class="category"><td colspan="117">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="1"><td id="test-WeakReferences"><span><a class="anchor" href="#test-WeakReferences">&#xA7;</a><a href="https://github.com/tc39/proposal-weakrefs">WeakReferences</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
@@ -307,6 +308,7 @@
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0" data-flagged-tally="0.5">0/2</td>
@@ -427,6 +429,7 @@ return weakref.deref() === O;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no flagged obsolete" data-browser="opera61">Flag<a href="#chrome-weakrefs-note"><sup>[5]</sup></a></td>
@@ -546,6 +549,7 @@ return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="no obsolete" data-browser="opera61">No</td>
@@ -661,6 +665,7 @@ return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/6</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/6</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0.3333333333333333" style="background-color:hsl(40,71%,50%)">2/6</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
@@ -782,6 +787,7 @@ return new C().x === &apos;x&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -909,6 +915,7 @@ return new C(42).x() === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1033,6 +1040,7 @@ return new C().x() === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1157,6 +1165,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="no obsolete" data-browser="safari12_1">No</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="opera61">No</td>
@@ -1281,6 +1290,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="no obsolete" data-browser="safari12_1">No</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="opera61">No</td>
@@ -1402,6 +1412,7 @@ return new C().x === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1517,6 +1528,7 @@ return new C().x === 42;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/3</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="1">3/3</td>
@@ -1638,6 +1650,7 @@ return C.x === &apos;x&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1762,6 +1775,7 @@ return new C().x() === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1883,6 +1897,7 @@ return C.x === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -1998,6 +2013,7 @@ return C.x === 42;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/4</td>
@@ -2122,6 +2138,7 @@ return new C().x() === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -2246,6 +2263,7 @@ return new C().x() === 42;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -2373,6 +2391,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -2500,6 +2519,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -2619,6 +2639,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="yes" data-browser="safari13">Yes</td>
 <td class="yes" data-browser="safari13_1">Yes</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no flagged obsolete" data-browser="opera61">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
@@ -2743,6 +2764,7 @@ Promise.any([
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -2858,6 +2880,7 @@ Promise.any([
 <td class="tally obsolete" data-browser="safari12_1" data-tally="1">2/2</td>
 <td class="tally" data-browser="safari13" data-tally="1">2/2</td>
 <td class="tally" data-browser="safari13_1" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="safari14" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="1">2/2</td>
@@ -2982,6 +3005,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes obsolete" data-browser="safari12_1">Yes</td>
 <td class="yes" data-browser="safari13">Yes</td>
 <td class="yes" data-browser="safari13_1">Yes</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -3108,6 +3132,7 @@ return true;
 <td class="yes obsolete" data-browser="safari12_1">Yes</td>
 <td class="yes" data-browser="safari13">Yes</td>
 <td class="yes" data-browser="safari13_1">Yes</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -3223,6 +3248,7 @@ return true;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/9</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/9</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/9</td>
+<td class="tally unstable" data-browser="safari14" data-tally="1">9/9</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="1">9/9</td>
 <td class="tally unstable" data-browser="webkit" data-tally="1">9/9</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/9</td>
@@ -3347,6 +3373,7 @@ return a === 2 &amp;&amp; b === 2 &amp;&amp; c === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -3468,6 +3495,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -3589,6 +3617,7 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -3713,6 +3742,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; b === 0 &amp;&amp; c === 2;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -3834,6 +3864,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -3955,6 +3986,7 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4079,6 +4111,7 @@ return a === 2 &amp;&amp; b === 0 &amp;&amp; c === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4200,6 +4233,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4321,6 +4355,7 @@ return i === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4443,6 +4478,7 @@ try {
 <td class="no obsolete" data-browser="safari12_1">No</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="yes" data-browser="safari13_1">Yes</td>
+<td class="yes unstable" data-browser="safari14">Yes</td>
 <td class="yes unstable" data-browser="safaritp">Yes</td>
 <td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera61">Yes</td>
@@ -4501,7 +4537,7 @@ try {
 <td class="yes" data-browser="opera_mobile54">Yes</td>
 <td class="yes" data-browser="opera_mobile55">Yes</td>
 </tr>
-<tr class="category"><td colspan="116">Draft (stage 2)</td>
+<tr class="category"><td colspan="117">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/tc39/proposal-function.sent">Generator function.sent Meta Property</a></span><script data-source="
 var result;
@@ -4569,6 +4605,7 @@ return result === &apos;tromple&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4684,6 +4721,7 @@ return result === &apos;tromple&apos;;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/1</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/1</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/1</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/1</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/1</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/1</td>
@@ -4810,6 +4848,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -4931,6 +4970,7 @@ return typeof Realm === &quot;function&quot;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5046,6 +5086,7 @@ return typeof Realm === &quot;function&quot;
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/4</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/4</td>
@@ -5170,6 +5211,7 @@ try {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5298,6 +5340,7 @@ try {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5421,6 +5464,7 @@ try {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5544,6 +5588,7 @@ try {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5659,6 +5704,7 @@ try {
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/7</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/7</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/7</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/7</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/7</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/7</td>
@@ -5780,6 +5826,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -5902,6 +5949,7 @@ return set.size === 3
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6023,6 +6071,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6144,6 +6193,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6262,6 +6312,7 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6380,6 +6431,7 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6498,6 +6550,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -6613,6 +6666,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/2</td>
@@ -6734,6 +6788,7 @@ return buffer1.byteLength === 0
 <td class="no obsolete" data-browser="safari12_1">No</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="opera61">No</td>
@@ -6855,6 +6910,7 @@ return buffer1.byteLength === 0
 <td class="no obsolete" data-browser="safari12_1">No</td>
 <td class="no" data-browser="safari13">No</td>
 <td class="no" data-browser="safari13_1">No</td>
+<td class="no unstable" data-browser="safari14">No</td>
 <td class="no unstable" data-browser="safaritp">No</td>
 <td class="no unstable" data-browser="webkit">No</td>
 <td class="no obsolete" data-browser="opera61">No</td>
@@ -6970,6 +7026,7 @@ return buffer1.byteLength === 0
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/2</td>
@@ -7091,6 +7148,7 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7213,6 +7271,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7332,6 +7391,7 @@ return !Array.isTemplateObject([])
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7447,6 +7507,7 @@ return !Array.isTemplateObject([])
 <td class="tally obsolete" data-browser="safari12_1" data-tally="0">0/35</td>
 <td class="tally" data-browser="safari13" data-tally="0">0/35</td>
 <td class="tally" data-browser="safari13_1" data-tally="0">0/35</td>
+<td class="tally unstable" data-browser="safari14" data-tally="0">0/35</td>
 <td class="tally unstable" data-browser="safaritp" data-tally="0">0/35</td>
 <td class="tally unstable" data-browser="webkit" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="opera61" data-tally="0">0/35</td>
@@ -7565,6 +7626,7 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7685,6 +7747,7 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7806,6 +7869,7 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -7932,6 +7996,7 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8050,6 +8115,7 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8168,6 +8234,7 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8286,6 +8353,7 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8404,6 +8472,7 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8522,6 +8591,7 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8640,6 +8710,7 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8760,6 +8831,7 @@ return result === &apos;123&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8878,6 +8950,7 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -8996,6 +9069,7 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9114,6 +9188,7 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9232,6 +9307,7 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9351,6 +9427,7 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9469,6 +9546,7 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9587,6 +9665,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9707,6 +9786,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9837,6 +9917,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -9967,6 +10048,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10097,6 +10179,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10223,6 +10306,7 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10349,6 +10433,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10469,6 +10554,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10595,6 +10681,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10715,6 +10802,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10841,6 +10929,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -10962,6 +11051,7 @@ let result = &apos;&apos;;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11088,6 +11178,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11208,6 +11299,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11328,6 +11420,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11454,6 +11547,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11574,6 +11668,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11692,6 +11787,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown obsolete" data-browser="safari12_1">?</td>
 <td class="unknown" data-browser="safari13">?</td>
 <td class="unknown" data-browser="safari13_1">?</td>
+<td class="unknown unstable" data-browser="safari14">?</td>
 <td class="unknown unstable" data-browser="safaritp">?</td>
 <td class="unknown unstable" data-browser="webkit">?</td>
 <td class="unknown obsolete" data-browser="opera61">?</td>
@@ -11750,7 +11846,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown" data-browser="opera_mobile54">?</td>
 <td class="no" data-browser="opera_mobile55">No</td>
 </tr>
-<tr class="category"><td colspan="116">Proposal (stage 1)</td>
+<tr class="category"><td colspan="117">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-do_expressions"><span><a class="anchor" href="#test-do_expressions">&#xA7;</a><a href="https://github.com/tc39/proposal-do-expressions">do expressions</a></span><script data-source="
 return do {
@@ -11815,6 +11911,7 @@ return do {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -11930,6 +12027,7 @@ return do {
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -12048,6 +12146,7 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12166,6 +12265,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12284,6 +12384,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12412,6 +12513,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12531,6 +12633,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12649,6 +12752,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12767,6 +12871,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12886,6 +12991,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13008,6 +13114,7 @@ return Math.signbit(NaN) === false
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13123,6 +13230,7 @@ return Math.signbit(NaN) === false
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -13243,6 +13351,7 @@ return Math.clamp(2, 4, 6) === 4
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13361,6 +13470,7 @@ return Math.DEG_PER_RAD === Math.PI / 180;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13480,6 +13590,7 @@ return Math.degrees(Math.PI / 2) === 90
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13598,6 +13709,7 @@ return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) 
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13716,6 +13828,7 @@ return Math.RAD_PER_DEG === 180 / Math.PI;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13835,6 +13948,7 @@ return Math.radians(90) === Math.PI / 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13953,6 +14067,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14068,6 +14183,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -14186,6 +14302,7 @@ return typeof Promise.try === &apos;function&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14304,6 +14421,7 @@ return Promise.try(function () {}) instanceof Promise;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14424,6 +14542,7 @@ return score === 1;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14549,6 +14668,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14674,6 +14794,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14799,6 +14920,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14924,6 +15046,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15039,6 +15162,7 @@ Promise.try(function() {
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -15160,6 +15284,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15283,6 +15408,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15404,6 +15530,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15525,6 +15652,7 @@ return C.has(3) + C.has(4);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15646,6 +15774,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15769,6 +15898,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15890,6 +16020,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16011,6 +16142,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16141,6 +16273,7 @@ return result === &apos;Hello, hello!&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16263,6 +16396,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16378,6 +16512,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
@@ -16500,6 +16635,7 @@ return p(&apos;b&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16622,6 +16758,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16744,6 +16881,7 @@ return p(&apos;a&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16866,6 +17004,7 @@ return p(&apos;b&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16988,6 +17127,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17110,6 +17250,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abcab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17232,6 +17373,7 @@ return p(&apos;a&apos;, &apos;c&apos;, &apos;d&apos;) === &apos;abcd&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17357,6 +17499,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17480,6 +17623,7 @@ return p(&apos;a&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17602,6 +17746,7 @@ return o.f(&apos;a&apos;) === &apos;abfalse&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17724,6 +17869,7 @@ return p(&apos;a&apos;).x === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17846,6 +17992,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17961,6 +18108,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -18079,6 +18227,7 @@ return Object.isFrozen({# foo: 42 #});
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18197,6 +18346,7 @@ return Object.isFrozen([# 42 #]);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18315,6 +18465,7 @@ return Object.isSealed({| foo: 42 |});
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18433,6 +18584,7 @@ return Object.isSealed([| 42 |]);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18559,6 +18711,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18686,6 +18839,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18812,6 +18966,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18939,6 +19094,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19062,6 +19218,7 @@ return results.length === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19177,6 +19334,7 @@ return results.length === 3
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -19295,6 +19453,7 @@ return [1, 2, 3].lastItem === 3;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19413,6 +19572,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19528,6 +19688,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
@@ -19651,6 +19812,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19772,6 +19934,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19894,6 +20057,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20012,6 +20176,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it === &apos;numb
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20133,6 +20298,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20251,6 +20417,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20369,6 +20536,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20488,6 +20656,7 @@ return new Map([[1, 2], [2, NaN]]).includes(2)
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20607,6 +20776,7 @@ return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20729,6 +20899,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20851,6 +21022,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20973,6 +21145,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21091,6 +21264,7 @@ return new Map([[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3], ]).r
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21209,6 +21383,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).some(it =&gt; it % 2);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21331,6 +21506,7 @@ return set.size === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21453,6 +21629,7 @@ return set.deleteAll(2, 3) === true
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21571,6 +21748,7 @@ return new Set([1, 2, 3]).every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21692,6 +21870,7 @@ return set.size === 2
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21810,6 +21989,7 @@ return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21928,6 +22108,7 @@ return new Set([1, 2, 3]).join(&apos;|&apos;) === &apos;1|2|3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22050,6 +22231,7 @@ return set.size === 3
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22168,6 +22350,7 @@ return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22286,6 +22469,7 @@ return new Set([1, 2, 3]).some(it =&gt; it % 2);
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22413,6 +22597,7 @@ return !map.has(a)
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22540,6 +22725,7 @@ return set.has(a)
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22667,6 +22853,7 @@ return !set.has(a)
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22793,6 +22980,7 @@ return second === gen2.next().value;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22908,6 +23096,7 @@ return second === gen2.next().value;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -23026,6 +23215,7 @@ return Number.fromString(&apos;42&apos;) === 42;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23144,6 +23334,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23259,6 +23450,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="tally obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -23381,6 +23573,7 @@ return [...iterator].join() === &apos;a,c&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23503,6 +23696,7 @@ return [...iterator].join() === &apos;1,3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23625,6 +23819,7 @@ return [...iterator].join() === &apos;a,1,c,3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="safari12_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="safari13_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown unstable not-applicable" data-browser="safari14" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="safaritp" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown unstable not-applicable" data-browser="webkit" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="opera61" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
