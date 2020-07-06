@@ -234,6 +234,7 @@
 <th class="platform ios12 mobile" data-browser="ios12"><a href="#ios12" class="browser-name"><abbr title="iOS Safari">iOS 12</abbr></a></th>
 <th class="platform ios12_2 mobile" data-browser="ios12_2"><a href="#ios12_2" class="browser-name"><abbr title="iOS Safari">iOS 12.2</abbr></a></th>
 <th class="platform ios13 mobile" data-browser="ios13"><a href="#ios13" class="browser-name"><abbr title="iOS Safari">iOS 13</abbr></a></th>
+<th class="platform ios13_4 mobile" data-browser="ios13_4"><a href="#ios13_4" class="browser-name"><abbr title="iOS Safari">iOS 13.4</abbr></a></th>
 <th class="platform samsung7 mobile obsolete" data-browser="samsung7"><a href="#samsung7" class="browser-name"><abbr title="Samsung Internet for Android 7">Samsung 7</abbr></a></th>
 <th class="platform samsung8 mobile obsolete" data-browser="samsung8"><a href="#samsung8" class="browser-name"><abbr title="Samsung Internet for Android 8">Samsung 8</abbr></a></th>
 <th class="platform samsung9 mobile obsolete" data-browser="samsung9"><a href="#samsung9" class="browser-name"><abbr title="Samsung Internet for Android 9">Samsung 9</abbr></a></th>
@@ -357,6 +358,7 @@
 <td class="tally" data-browser="ios12" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/2</td>
@@ -479,6 +481,7 @@ return weakref.deref() === O;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no obsolete" data-browser="samsung9">No</td>
@@ -600,6 +603,7 @@ return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no obsolete" data-browser="samsung9">No</td>
@@ -717,6 +721,7 @@ return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
 <td class="tally" data-browser="ios12" data-tally="0">0/6</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/6</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/6</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0" data-flagged-tally="0.5">0/6</td>
@@ -840,6 +845,7 @@ return new C().x === &apos;x&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no flagged obsolete" data-browser="samsung9">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
@@ -969,6 +975,7 @@ return new C(42).x() === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no flagged obsolete" data-browser="samsung9">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
@@ -1095,6 +1102,7 @@ return new C().x() === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no flagged obsolete" data-browser="samsung9">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
@@ -1221,6 +1229,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
 <td class="no obsolete" data-browser="samsung9">No</td>
@@ -1347,6 +1356,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
 <td class="no obsolete" data-browser="samsung9">No</td>
@@ -1470,6 +1480,7 @@ return new C().x === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -1587,6 +1598,7 @@ return new C().x === 42;
 <td class="tally" data-browser="ios12" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/3</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/3</td>
@@ -1710,6 +1722,7 @@ return C.x === &apos;x&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -1836,6 +1849,7 @@ return new C().x() === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -1959,6 +1973,7 @@ return C.x === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2076,6 +2091,7 @@ return C.x === 42;
 <td class="tally" data-browser="ios12" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/4</td>
@@ -2202,6 +2218,7 @@ return new C().x() === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2328,6 +2345,7 @@ return new C().x() === 42;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2457,6 +2475,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2586,6 +2605,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2707,6 +2727,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="yes" data-browser="ios13">Yes</td>
+<td class="yes" data-browser="ios13_4">Yes</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="no flagged obsolete" data-browser="samsung9">Flag<a href="#chrome-harmony-note"><sup>[8]</sup></a></td>
@@ -2833,6 +2854,7 @@ Promise.any([
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -2950,6 +2972,7 @@ Promise.any([
 <td class="tally" data-browser="ios12" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios12_2" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios13" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios13_4" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="1">2/2</td>
@@ -3076,6 +3099,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
+<td class="yes" data-browser="ios13_4">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
 <td class="yes obsolete" data-browser="samsung9">Yes</td>
@@ -3204,6 +3228,7 @@ return true;
 <td class="yes" data-browser="ios12">Yes</td>
 <td class="yes" data-browser="ios12_2">Yes</td>
 <td class="yes" data-browser="ios13">Yes</td>
+<td class="yes" data-browser="ios13_4">Yes</td>
 <td class="yes obsolete" data-browser="samsung7">Yes</td>
 <td class="yes obsolete" data-browser="samsung8">Yes</td>
 <td class="yes obsolete" data-browser="samsung9">Yes</td>
@@ -3321,6 +3346,7 @@ return true;
 <td class="tally" data-browser="ios12" data-tally="0">0/9</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/9</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/9</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/9</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/9</td>
@@ -3447,6 +3473,7 @@ return a === 2 &amp;&amp; b === 2 &amp;&amp; c === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -3570,6 +3597,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -3693,6 +3721,7 @@ return i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -3819,6 +3848,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; b === 0 &amp;&amp; c === 2;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -3942,6 +3972,7 @@ return typeof a === &apos;undefined&apos; &amp;&amp; i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4065,6 +4096,7 @@ return i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4191,6 +4223,7 @@ return a === 2 &amp;&amp; b === 0 &amp;&amp; c === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4314,6 +4347,7 @@ return a === 1 &amp;&amp; i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4437,6 +4471,7 @@ return i === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4561,6 +4596,7 @@ try {
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="yes" data-browser="ios13_4">Yes</td>
 <td class="no obsolete" data-browser="samsung7">No</td>
 <td class="no obsolete" data-browser="samsung8">No</td>
 <td class="no obsolete" data-browser="samsung9">No</td>
@@ -4689,6 +4725,7 @@ return result === &apos;tromple&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -4806,6 +4843,7 @@ return result === &apos;tromple&apos;;
 <td class="tally" data-browser="ios12" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/1</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/1</td>
@@ -4934,6 +4972,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5057,6 +5096,7 @@ return typeof Realm === &quot;function&quot;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5174,6 +5214,7 @@ return typeof Realm === &quot;function&quot;
 <td class="tally" data-browser="ios12" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/4</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/4</td>
@@ -5300,6 +5341,7 @@ try {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5430,6 +5472,7 @@ try {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5555,6 +5598,7 @@ try {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5680,6 +5724,7 @@ try {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -5797,6 +5842,7 @@ try {
 <td class="tally" data-browser="ios12" data-tally="0">0/7</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/7</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/7</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/7</td>
@@ -5920,6 +5966,7 @@ return set.size === 2
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6044,6 +6091,7 @@ return set.size === 3
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6167,6 +6215,7 @@ return set.size === 2
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6290,6 +6339,7 @@ return set.size === 2
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6410,6 +6460,7 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6530,6 +6581,7 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6650,6 +6702,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -6767,6 +6820,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="tally" data-browser="ios12" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/2</td>
@@ -6890,6 +6944,7 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7013,6 +7068,7 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="ios12">No</td>
 <td class="no" data-browser="ios12_2">No</td>
 <td class="no" data-browser="ios13">No</td>
+<td class="no" data-browser="ios13_4">No</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7130,6 +7186,7 @@ return buffer1.byteLength === 0
 <td class="tally" data-browser="ios12" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/2</td>
@@ -7253,6 +7310,7 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7377,6 +7435,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7498,6 +7557,7 @@ return !Array.isTemplateObject([])
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7615,6 +7675,7 @@ return !Array.isTemplateObject([])
 <td class="tally" data-browser="ios12" data-tally="0">0/35</td>
 <td class="tally" data-browser="ios12_2" data-tally="0">0/35</td>
 <td class="tally" data-browser="ios13" data-tally="0">0/35</td>
+<td class="tally" data-browser="ios13_4" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="samsung7" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="samsung8" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="samsung9" data-tally="0">0/35</td>
@@ -7735,6 +7796,7 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7857,6 +7919,7 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -7980,6 +8043,7 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8108,6 +8172,7 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8228,6 +8293,7 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8348,6 +8414,7 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8468,6 +8535,7 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8588,6 +8656,7 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8708,6 +8777,7 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8828,6 +8898,7 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -8950,6 +9021,7 @@ return result === &apos;123&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9070,6 +9142,7 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9190,6 +9263,7 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9310,6 +9384,7 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9430,6 +9505,7 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9551,6 +9627,7 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9671,6 +9748,7 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9791,6 +9869,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -9913,6 +9992,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10045,6 +10125,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10177,6 +10258,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10309,6 +10391,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10437,6 +10520,7 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10565,6 +10649,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10687,6 +10772,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10815,6 +10901,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -10937,6 +11024,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11065,6 +11153,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11188,6 +11277,7 @@ let result = &apos;&apos;;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11316,6 +11406,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11438,6 +11529,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11560,6 +11652,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11688,6 +11781,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11810,6 +11904,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -11930,6 +12025,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown" data-browser="ios12">?</td>
 <td class="unknown" data-browser="ios12_2">?</td>
 <td class="unknown" data-browser="ios13">?</td>
+<td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown obsolete" data-browser="samsung7">?</td>
 <td class="unknown obsolete" data-browser="samsung8">?</td>
 <td class="unknown obsolete" data-browser="samsung9">?</td>
@@ -12055,6 +12151,7 @@ return do {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12172,6 +12269,7 @@ return do {
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -12292,6 +12390,7 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12412,6 +12511,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12532,6 +12632,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12662,6 +12763,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12783,6 +12885,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -12903,6 +13006,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13023,6 +13127,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13144,6 +13249,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13268,6 +13374,7 @@ return Math.signbit(NaN) === false
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13385,6 +13492,7 @@ return Math.signbit(NaN) === false
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -13507,6 +13615,7 @@ return Math.clamp(2, 4, 6) === 4
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13627,6 +13736,7 @@ return Math.DEG_PER_RAD === Math.PI / 180;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13748,6 +13858,7 @@ return Math.degrees(Math.PI / 2) === 90
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13868,6 +13979,7 @@ return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) 
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -13988,6 +14100,7 @@ return Math.RAD_PER_DEG === 180 / Math.PI;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14109,6 +14222,7 @@ return Math.radians(90) === Math.PI / 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14229,6 +14343,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14346,6 +14461,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -14466,6 +14582,7 @@ return typeof Promise.try === &apos;function&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14586,6 +14703,7 @@ return Promise.try(function () {}) instanceof Promise;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14708,6 +14826,7 @@ return score === 1;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14835,6 +14954,7 @@ Promise.try(function() {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14962,6 +15082,7 @@ Promise.try(function() {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15089,6 +15210,7 @@ Promise.try(function() {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15216,6 +15338,7 @@ Promise.try(function() {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15333,6 +15456,7 @@ Promise.try(function() {
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -15456,6 +15580,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15581,6 +15706,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15704,6 +15830,7 @@ return C.has(A) + C.has(B);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15827,6 +15954,7 @@ return C.has(3) + C.has(4);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -15950,6 +16078,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16075,6 +16204,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16198,6 +16328,7 @@ return C.has(A) + C.has(B);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16321,6 +16452,7 @@ return C.has(A) + C.has(B);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16453,6 +16585,7 @@ return result === &apos;Hello, hello!&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16577,6 +16710,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16694,6 +16828,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
@@ -16818,6 +16953,7 @@ return p(&apos;b&apos;) === &apos;ab&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -16942,6 +17078,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17066,6 +17203,7 @@ return p(&apos;a&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17190,6 +17328,7 @@ return p(&apos;b&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17314,6 +17453,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abc&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17438,6 +17578,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abcab&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17562,6 +17703,7 @@ return p(&apos;a&apos;, &apos;c&apos;, &apos;d&apos;) === &apos;abcd&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17689,6 +17831,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17814,6 +17957,7 @@ return p(&apos;a&apos;) === &apos;abc&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -17938,6 +18082,7 @@ return o.f(&apos;a&apos;) === &apos;abfalse&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18062,6 +18207,7 @@ return p(&apos;a&apos;).x === &apos;ab&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18186,6 +18332,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18303,6 +18450,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -18423,6 +18571,7 @@ return Object.isFrozen({# foo: 42 #});
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18543,6 +18692,7 @@ return Object.isFrozen([# 42 #]);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18663,6 +18813,7 @@ return Object.isSealed({| foo: 42 |});
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18783,6 +18934,7 @@ return Object.isSealed([| 42 |]);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -18911,6 +19063,7 @@ try {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19040,6 +19193,7 @@ try {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19168,6 +19322,7 @@ try {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19297,6 +19452,7 @@ try {
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19422,6 +19578,7 @@ return results.length === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19539,6 +19696,7 @@ return results.length === 3
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -19659,6 +19817,7 @@ return [1, 2, 3].lastItem === 3;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19779,6 +19938,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -19896,6 +20056,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
@@ -20021,6 +20182,7 @@ return map.size === 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20144,6 +20306,7 @@ return map.size === 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20268,6 +20431,7 @@ return map.size === 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20388,6 +20552,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it === &apos;numb
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20511,6 +20676,7 @@ return map.size === 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20631,6 +20797,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20751,6 +20918,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20872,6 +21040,7 @@ return new Map([[1, 2], [2, NaN]]).includes(2)
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -20993,6 +21162,7 @@ return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21117,6 +21287,7 @@ return map.size === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21241,6 +21412,7 @@ return map.size === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21365,6 +21537,7 @@ return map.size === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21485,6 +21658,7 @@ return new Map([[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3], ]).r
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21605,6 +21779,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).some(it =&gt; it % 2);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21729,6 +21904,7 @@ return set.size === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21853,6 +22029,7 @@ return set.deleteAll(2, 3) === true
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -21973,6 +22150,7 @@ return new Set([1, 2, 3]).every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22096,6 +22274,7 @@ return set.size === 2
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22216,6 +22395,7 @@ return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22336,6 +22516,7 @@ return new Set([1, 2, 3]).join(&apos;|&apos;) === &apos;1|2|3&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22460,6 +22641,7 @@ return set.size === 3
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22580,6 +22762,7 @@ return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22700,6 +22883,7 @@ return new Set([1, 2, 3]).some(it =&gt; it % 2);
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22829,6 +23013,7 @@ return !map.has(a)
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22958,6 +23143,7 @@ return set.has(a)
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23087,6 +23273,7 @@ return !set.has(a)
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23215,6 +23402,7 @@ return second === gen2.next().value;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23332,6 +23520,7 @@ return second === gen2.next().value;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -23452,6 +23641,7 @@ return Number.fromString(&apos;42&apos;) === 42;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23572,6 +23762,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23689,6 +23880,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="tally not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -23813,6 +24005,7 @@ return [...iterator].join() === &apos;a,c&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -23937,6 +24130,7 @@ return [...iterator].join() === &apos;1,3&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -24061,6 +24255,7 @@ return [...iterator].join() === &apos;a,1,c,3&apos;;
 <td class="unknown not-applicable" data-browser="ios12" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios12_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="ios13" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="unknown not-applicable" data-browser="ios13_4" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung7" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung8" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="samsung9" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>

@@ -4426,6 +4426,7 @@ exports.tests = [
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: graalvm.es2021flag,
+      ios13_4: true,
     }
   },
 ];
