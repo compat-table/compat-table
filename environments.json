@@ -2373,14 +2373,23 @@
     "retire": "2020-05-21",
     "short": "Edge 81",
     "equals": "chrome81",
-    "obsolete": false
+    "obsolete": true
   },
   "edge83": {
     "full": "Microsoft Edge 83",
     "family": "V8",
     "short": "Edge 83",
     "release": "2020-05-21",
+    "retire": "2020-07-16",
     "equals": "chrome83",
+    "obsolete": false
+  },
+  "edge84": {
+    "full": "Microsoft Edge 84",
+    "family": "V8",
+    "short": "Edge 84",
+    "release": "2020-07-16",
+    "equals": "chrome84",
     "obsolete": false
   },
   "safari1": {
