@@ -4,7 +4,6 @@ var babel = common.babel;
 var typescript = common.typescript;
 var firefox = common.firefox;
 var chrome = common.chrome;
-var graalvm = common.graalvm;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
