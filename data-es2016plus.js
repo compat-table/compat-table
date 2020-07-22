@@ -4402,10 +4402,10 @@ exports.tests = [
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-string-replace-all',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll',
-    category: 'finished (stage 4)',
+    category: '2021 features',
     exec: function () {/*
-    return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
-  */},
+      return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';
+    */},
     res: {
       babel6corejs2: false,
       babel7corejs3: babel.corejs,
@@ -4427,6 +4427,373 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: graalvm.es2021flag,
       ios13_4: true,
+    }
+  },
+  {
+    name: 'Promise.any',
+    category: '2021 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-promise-any',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any',
+    subtests: [
+      {
+        name: 'fulfillment',
+        exec: function () {/*
+          Promise.any([
+            Promise.reject(1),
+            Promise.resolve(2),
+            Promise.resolve(3)
+          ]).then(it => {
+            if (it === 2) asyncTestPassed();
+          });
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox72: firefox.nightly,
+          firefox79: true,
+          chrome77: false,
+          chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
+          chrome85: true,
+          safari14: true,
+          safaritp: true,
+        }
+      },
+      {
+        name: 'AggregateError',
+        exec: function () {/*
+          Promise.any([
+            Promise.reject(1),
+            Promise.reject(2),
+            Promise.reject(3)
+          ]).catch(error => {
+            if (error instanceof AggregateError && error.errors.length === 3) asyncTestPassed();
+          });
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox72: firefox.nightly,
+          firefox79: true,
+          chrome77: false,
+          chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
+          chrome85: true,
+          safari14: true,
+          safaritp: true,
+        }
+      }
+    ],
+  },
+  {
+    name: 'WeakReferences',
+    spec: 'https://github.com/tc39/proposal-weakrefs',
+    category: '2021 features',
+    significance: 'large',
+    subtests: [
+      {
+        name: 'WeakRef minimal support',
+        spec: 'https://github.com/tc39/proposal-weakrefs#weak-references',
+        exec: function(){/*
+          var O = {};
+          var weakref = new WeakRef(O);
+          return weakref.deref() === O;
+        */},
+        res : {
+          ie11: false,
+          firefox2: false,
+          firefox74: {
+            val: 'flagged',
+            note_id: 'firefox-weakrefs',
+            note_html: 'The feature have to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.'
+          },
+          firefox79: true,
+          opera10_50: false,
+          chrome65: false,
+          chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8."},
+          chrome85: true,
+          safari13: false,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: graalvm.es2021flag,
+        }
+      },
+      {
+        name: 'FinalizationRegistry minimal support',
+        spec: 'https://github.com/tc39/proposal-weakrefs#finalizers',
+        exec: function(){/*
+          var fr = new FinalizationRegistry(function() {});
+          return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
+        */},
+        res : {
+          ie11: false,
+          firefox2: false,
+          firefox74: false,
+          firefox78: { val: 'flagged', note_id: 'firefox-weakrefs' },
+          firefox79: true,
+          opera10_50: false,
+          chrome65: false,
+          chrome74: false,
+          chrome85: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: false,
+          graalvm20_1: false,
+        }
+      }
+    ]
+  },
+  {
+    name: 'Logical Assignment',
+    category: '2021 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-logical-assignment/',
+    subtests: [
+      {
+        name: '||= basic support',
+        exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a ||= 2;
+        b ||= 2;
+        c ||= 2;
+        return a === 2 && b === 2 && c === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment", note_html: "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8."},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '||= short-circuiting behaviour',
+        exec: function () {/*
+        let a = 1;
+        let i = 1;
+        a ||= ++i;
+        return a === 1 && i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '||= setter not unecessarily invoked',
+        exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return 1 }, set x(n) { i++; } };
+        obj.x ||= 2;
+        return i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '&&= basic support',
+        exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a &&= 2;
+        b &&= 2;
+        c &&= 2;
+        return typeof a === 'undefined' && b === 0 && c === 2;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '&&= short-circuiting behaviour',
+        exec: function () {/*
+        let a;
+        let i = 1;
+        a &&= ++i;
+        return typeof a === 'undefined' && i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '&&= setter not unecessarily invoked',
+        exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return }, set x(n) { i++; } };
+        obj.x &&= 2;
+        return i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '??= basic support',
+        exec: function () {/*
+        let a;
+        let b = 0;
+        let c = 1;
+        a ??= 2;
+        b ??= 2;
+        c ??= 2;
+        return a === 2 && b === 0 && c === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '??= short-circuiting behaviour',
+        exec: function () {/*
+        let a = 1;
+        let i = 1;
+        a ??= ++i;
+        return a === 1 && i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+      {
+        name: '??= setter not unecessarily invoked',
+        exec: function () {/*
+        let i = 1;
+        var obj = { get x() { return 1 }, set x(n) { i++; } };
+        obj.x ??= 2;
+        return i === 1;
+      */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox76: false,
+          firefox77: firefox.nightly,
+          firefox79: true,
+          chrome80: false,
+          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome85: true,
+          safari13: false,
+          safari14: true,
+          safaritp: true,
+        },
+      },
+    ]
+  },
+  {
+    name: 'numeric separators',
+    spec: 'https://github.com/tc39/proposal-numeric-separator',
+    category: '2021 features',
+    significance: 'small',
+    exec: function(){/*
+      return 1_000_000.000_001 === 1000000.000001 &&
+        0b1010_0001_1000_0101 === 0b1010000110000101;
+    */},
+    res : {
+      babel7corejs2: true,
+      typescript1corejs2: false,
+      typescript2_7corejs2: true,
+      ie11: false,
+      firefox2: false,
+      firefox10: false,
+      firefox67: false,
+      firefox68: firefox.nightly,
+      firefox70: true,
+      opera10_50: false,
+      chrome67: chrome.harmony,
+      chrome75: true,
+      safari13: true,
+      safaritp: true,
+      graalvm19: false,
+      graalvm20: graalvm.es2020flag,
+      graalvm20_1: true,
     }
   },
 ];
