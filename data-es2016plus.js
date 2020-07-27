@@ -3028,6 +3028,7 @@ exports.tests = [
       opera10_50: false,
       chrome50: chrome.harmony,
       chrome62: true,
+      safari13_1: false,
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
