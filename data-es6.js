@@ -23275,6 +23275,7 @@ exports.tests = [
         chrome1: null,
         chrome58: true,
         safari1: false,
+        safari14: true,
         webkit: false,
         rhino1_7: null,
         xs6: null,
