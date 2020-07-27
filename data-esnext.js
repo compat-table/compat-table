@@ -339,6 +339,11 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         firefox67: firefox.privateClassFields,
+        firefox80: {
+          val: 'flagged',
+          note_id: 'fx-private-fields',
+          note_html: 'The feature have to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>.'
+        },
         opera10_50: false,
         chrome66: chrome.harmony,
         chrome74: true,
@@ -363,6 +368,10 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         firefox67: firefox.privateClassFields,
+        firefox80: {
+          val: 'flagged',
+          note_id: 'fx-private-fields'
+        },
         opera10_50: false,
         chrome66: chrome.harmony,
         chrome74: true,
@@ -386,6 +395,10 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: false,
+        firefox80: {
+          val: 'flagged',
+          note_id: 'fx-private-fields'
+        },
         chrome1: false,
         chrome83: false,
         chrome84: true,
@@ -413,6 +426,10 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         firefox74: firefox.privateClassFields,
+        firefox80: {
+          val: 'flagged',
+          note_id: 'fx-private-fields'
+        },
         chrome1: false,
         chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
         chrome80: true,
@@ -498,6 +515,10 @@ exports.tests = [
       res: {
         ie11: false,
         firefox2: false,
+        firefox80: {
+          val: 'flagged',
+          note_id: 'fx-private-fields'
+        },
         opera10_50: false,
         chrome74: true,
         duktape2_0: false,
