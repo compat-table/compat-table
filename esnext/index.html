@@ -225,6 +225,7 @@
 <th class="platform duktape2_1 engine obsolete" data-browser="duktape2_1"><a href="#duktape2_1" class="browser-name"><abbr title="Duktape 2.1">DUK 2.1</abbr></a></th>
 <th class="platform duktape2_2 engine obsolete" data-browser="duktape2_2"><a href="#duktape2_2" class="browser-name"><abbr title="Duktape 2.2">DUK 2.2</abbr></a></th>
 <th class="platform duktape2_3 engine" data-browser="duktape2_3"><a href="#duktape2_3" class="browser-name"><abbr title="Duktape 2.3">DUK 2.3</abbr></a></th>
+<th class="platform quickjs engine" data-browser="quickjs"><a href="#quickjs" class="browser-name"><abbr title="QuickJS">QJS</abbr></a></th>
 <th class="platform graalvm19 engine" data-browser="graalvm19"><a href="#graalvm19" class="browser-name"><abbr title="GraalVM JavaScript 19.3.1">GraalVM 19.3.1</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform graalvm20 engine obsolete" data-browser="graalvm20"><a href="#graalvm20" class="browser-name"><abbr title="GraalVM JavaScript 20.0.0">GraalVM 20.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform graalvm20_1 engine" data-browser="graalvm20_1"><a href="#graalvm20_1" class="browser-name"><abbr title="GraalVM JavaScript 20.1.0">GraalVM 20.1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
@@ -253,7 +254,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="121">Candidate (stage 3)</td>
+      <tr class="category"><td colspan="122">Candidate (stage 3)</td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-instance_class_fields"><span><a class="anchor" href="#test-instance_class_fields">&#xA7;</a><a href="https://github.com/tc39/proposal-class-fields">instance class fields</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
@@ -351,6 +352,7 @@
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/6</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/6</td>
+<td class="tally" data-browser="quickjs" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
@@ -477,6 +479,7 @@ return new C().x === &apos;x&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -609,6 +612,7 @@ return new C(42).x() === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -738,6 +742,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -867,6 +872,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -996,6 +1002,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -1122,6 +1129,7 @@ return new C().x === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -1242,6 +1250,7 @@ return new C().x === 42;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/3</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/3</td>
+<td class="tally" data-browser="quickjs" data-tally="1">3/3</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="1">3/3</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="1">3/3</td>
@@ -1368,6 +1377,7 @@ return C.x === &apos;x&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -1497,6 +1507,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -1623,6 +1634,7 @@ return C.x === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -1743,6 +1755,7 @@ return C.x === 42;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/4</td>
+<td class="tally" data-browser="quickjs" data-tally="1">4/4</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/4</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="1">4/4</td>
@@ -1872,6 +1885,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2001,6 +2015,7 @@ return new C().x() === 42;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2133,6 +2148,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2265,6 +2281,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2385,6 +2402,7 @@ return new C().x() === 42 &amp;&amp; y;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm19" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="1">2/2</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="1">2/2</td>
@@ -2514,6 +2532,7 @@ return RegExp.lastMatch === 'x';
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm19">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2645,6 +2664,7 @@ return true;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="yes" data-browser="graalvm19">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20">Yes</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2772,6 +2792,7 @@ try {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="yes" data-browser="quickjs">Yes</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="yes" data-browser="graalvm20_1">Yes</td>
@@ -2796,7 +2817,7 @@ try {
 <td class="yes" data-browser="opera_mobile54">Yes</td>
 <td class="yes" data-browser="opera_mobile55">Yes</td>
 </tr>
-<tr class="category"><td colspan="121">Draft (stage 2)</td>
+<tr class="category"><td colspan="122">Draft (stage 2)</td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/tc39/proposal-function.sent">Generator function.sent Meta Property</a></span><script data-source="
 var result;
@@ -2903,6 +2924,7 @@ return result === &apos;tromple&apos;;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3023,6 +3045,7 @@ return result === &apos;tromple&apos;;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/1</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/1</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/1</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/1</td>
@@ -3154,6 +3177,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3280,6 +3304,7 @@ return typeof Realm === &quot;function&quot;
 <td class="no obsolete" data-browser="duktape2_1">No</td>
 <td class="no obsolete" data-browser="duktape2_2">No</td>
 <td class="no" data-browser="duktape2_3">No</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3400,6 +3425,7 @@ return typeof Realm === &quot;function&quot;
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/4</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/4</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/4</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/4</td>
@@ -3529,6 +3555,7 @@ try {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3662,6 +3689,7 @@ try {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3790,6 +3818,7 @@ try {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -3918,6 +3947,7 @@ try {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4038,6 +4068,7 @@ try {
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/7</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/7</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/7</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/7</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/7</td>
@@ -4164,6 +4195,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4291,6 +4323,7 @@ return set.size === 3
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4417,6 +4450,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4543,6 +4577,7 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4666,6 +4701,7 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4789,6 +4825,7 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -4912,6 +4949,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="no" data-browser="graalvm19">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
 <td class="no" data-browser="graalvm20_1">No</td>
@@ -5032,6 +5070,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/2</td>
@@ -5158,6 +5197,7 @@ return buffer1.byteLength === 0
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -5284,6 +5324,7 @@ return buffer1.byteLength === 0
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -5404,6 +5445,7 @@ return buffer1.byteLength === 0
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/2</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/2</td>
@@ -5530,6 +5572,7 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -5657,6 +5700,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -5781,6 +5825,7 @@ return !Array.isTemplateObject([])
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -5901,6 +5946,7 @@ return !Array.isTemplateObject([])
 <td class="tally obsolete" data-browser="duktape2_1" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="duktape2_2" data-tally="0">0/35</td>
 <td class="tally" data-browser="duktape2_3" data-tally="0">0/35</td>
+<td class="tally" data-browser="quickjs" data-tally="0">0/35</td>
 <td class="tally" data-browser="graalvm19" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/35</td>
 <td class="tally" data-browser="graalvm20_1" data-tally="0">0/35</td>
@@ -6024,6 +6070,7 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6149,6 +6196,7 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6275,6 +6323,7 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6406,6 +6455,7 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6529,6 +6579,7 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6652,6 +6703,7 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6775,6 +6827,7 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -6898,6 +6951,7 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7021,6 +7075,7 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7144,6 +7199,7 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7269,6 +7325,7 @@ return result === &apos;123&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7392,6 +7449,7 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7515,6 +7573,7 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7638,6 +7697,7 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7761,6 +7821,7 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -7885,6 +7946,7 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8008,6 +8070,7 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8131,6 +8194,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8256,6 +8320,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8391,6 +8456,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8526,6 +8592,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8661,6 +8728,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8792,6 +8860,7 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -8923,6 +8992,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9048,6 +9118,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9179,6 +9250,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9304,6 +9376,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9435,6 +9508,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9561,6 +9635,7 @@ let result = &apos;&apos;;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9692,6 +9767,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9817,6 +9893,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -9942,6 +10019,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -10073,6 +10151,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -10198,6 +10277,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -10321,6 +10401,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown obsolete" data-browser="duktape2_1">?</td>
 <td class="unknown obsolete" data-browser="duktape2_2">?</td>
 <td class="unknown" data-browser="duktape2_3">?</td>
+<td class="no" data-browser="quickjs">No</td>
 <td class="unknown" data-browser="graalvm19">?</td>
 <td class="unknown obsolete" data-browser="graalvm20">?</td>
 <td class="unknown" data-browser="graalvm20_1">?</td>
@@ -10345,7 +10426,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown" data-browser="opera_mobile54">?</td>
 <td class="no" data-browser="opera_mobile55">No</td>
 </tr>
-<tr class="category"><td colspan="121">Proposal (stage 1)</td>
+<tr class="category"><td colspan="122">Proposal (stage 1)</td>
 </tr>
 <tr significance="0.25" class="optional-feature"><td id="test-do_expressions"><span><a class="anchor" href="#test-do_expressions">&#xA7;</a><a href="https://github.com/tc39/proposal-do-expressions">do expressions</a></span><script data-source="
 return do {
@@ -10449,6 +10530,7 @@ return do {
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -10569,6 +10651,7 @@ return do {
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -10692,6 +10775,7 @@ return typeof Observable !== &apos;undefined&apos;;
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -10815,6 +10899,7 @@ return typeof Symbol.observable === &apos;symbol&apos;;
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -10938,6 +11023,7 @@ return &apos;subscribe&apos; in Observable.prototype;
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11071,6 +11157,7 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11195,6 +11282,7 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11318,6 +11406,7 @@ return Observable.of(1, 2, 3) instanceof Observable;
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11441,6 +11530,7 @@ return (Observable.from([1,2,3,4]) instanceof Observable) &amp;&amp; (Observable
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11565,6 +11655,7 @@ return typeof Reflect.Realm.immutableRoot === &apos;function&apos;
 <td class="no obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11692,6 +11783,7 @@ return Math.signbit(NaN) === false
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -11812,6 +11904,7 @@ return Math.signbit(NaN) === false
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -11937,6 +12030,7 @@ return Math.clamp(2, 4, 6) === 4
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12060,6 +12154,7 @@ return Math.DEG_PER_RAD === Math.PI / 180;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12184,6 +12279,7 @@ return Math.degrees(Math.PI / 2) === 90
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12307,6 +12403,7 @@ return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) 
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12430,6 +12527,7 @@ return Math.RAD_PER_DEG === 180 / Math.PI;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12554,6 +12652,7 @@ return Math.radians(90) === Math.PI / 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12677,6 +12776,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -12797,6 +12897,7 @@ return Math.scale(0, 3, 5, 8, 10) === 5;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/7</td>
@@ -12920,6 +13021,7 @@ return typeof Promise.try === &apos;function&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13043,6 +13145,7 @@ return Promise.try(function () {}) instanceof Promise;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13168,6 +13271,7 @@ return score === 1;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13298,6 +13402,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13428,6 +13533,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13558,6 +13664,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13688,6 +13795,7 @@ Promise.try(function() {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -13808,6 +13916,7 @@ Promise.try(function() {
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -13934,6 +14043,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14062,6 +14172,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14188,6 +14299,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14314,6 +14426,7 @@ return C.has(3) + C.has(4);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14440,6 +14553,7 @@ return C.get(A) + C.get(B) === 3;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14568,6 +14682,7 @@ return C.get(A) + C.get(B) === 5;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14694,6 +14809,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14820,6 +14936,7 @@ return C.has(A) + C.has(B);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="no obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -14955,6 +15072,7 @@ return result === &apos;Hello, hello!&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15082,6 +15200,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15202,6 +15321,7 @@ return 123i === &apos;string123number123&apos;;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/12</td>
@@ -15329,6 +15449,7 @@ return p(&apos;b&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15456,6 +15577,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15583,6 +15705,7 @@ return p(&apos;a&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15710,6 +15833,7 @@ return p(&apos;b&apos;, &apos;c&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15837,6 +15961,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -15964,6 +16089,7 @@ return p(&apos;a&apos;, &apos;b&apos;) === &apos;abcab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16091,6 +16217,7 @@ return p(&apos;a&apos;, &apos;c&apos;, &apos;d&apos;) === &apos;abcd&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16221,6 +16348,7 @@ return p(&apos;a&apos;) === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16349,6 +16477,7 @@ return p(&apos;a&apos;) === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16476,6 +16605,7 @@ return o.f(&apos;a&apos;) === &apos;abfalse&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16603,6 +16733,7 @@ return p(&apos;a&apos;).x === &apos;ab&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16730,6 +16861,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -16850,6 +16982,7 @@ return p(&apos;b&apos;, &apos;c&apos;).x === &apos;abc&apos;;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/8</td>
@@ -16973,6 +17106,7 @@ return Object.isFrozen({# foo: 42 #});
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17096,6 +17230,7 @@ return Object.isFrozen([# 42 #]);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17219,6 +17354,7 @@ return Object.isSealed({| foo: 42 |});
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17342,6 +17478,7 @@ return Object.isSealed([| 42 |]);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17473,6 +17610,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17605,6 +17743,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17736,6 +17875,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17868,6 +18008,7 @@ try {
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -17996,6 +18137,7 @@ return results.length === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18116,6 +18258,7 @@ return results.length === 3
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -18239,6 +18382,7 @@ return [1, 2, 3].lastItem === 3;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18362,6 +18506,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18482,6 +18627,7 @@ return [1, 2, 3].lastIndex === 2;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/26</td>
@@ -18610,6 +18756,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18736,6 +18883,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18863,6 +19011,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -18986,6 +19135,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it === &apos;numb
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19112,6 +19262,7 @@ return map.size === 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19235,6 +19386,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19358,6 +19510,7 @@ return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19482,6 +19635,7 @@ return new Map([[1, 2], [2, NaN]]).includes(2)
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19606,6 +19760,7 @@ return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19733,6 +19888,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19860,6 +20016,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -19987,6 +20144,7 @@ return map.size === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20110,6 +20268,7 @@ return new Map([[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3], ]).r
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20233,6 +20392,7 @@ return new Map([[1, 4], [2, 5], [3, 6]]).some(it =&gt; it % 2);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20360,6 +20520,7 @@ return set.size === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20487,6 +20648,7 @@ return set.deleteAll(2, 3) === true
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20610,6 +20772,7 @@ return new Set([1, 2, 3]).every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20736,6 +20899,7 @@ return set.size === 2
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20859,6 +21023,7 @@ return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -20982,6 +21147,7 @@ return new Set([1, 2, 3]).join(&apos;|&apos;) === &apos;1|2|3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21109,6 +21275,7 @@ return set.size === 3
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21232,6 +21399,7 @@ return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21355,6 +21523,7 @@ return new Set([1, 2, 3]).some(it =&gt; it % 2);
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21487,6 +21656,7 @@ return !map.has(a)
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21619,6 +21789,7 @@ return set.has(a)
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21751,6 +21922,7 @@ return !set.has(a)
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="no not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
@@ -21882,6 +22054,7 @@ return second === gen2.next().value;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22002,6 +22175,7 @@ return second === gen2.next().value;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/2</td>
@@ -22125,6 +22299,7 @@ return Number.fromString(&apos;42&apos;) === 42;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22248,6 +22423,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22368,6 +22544,7 @@ return BigInt.fromString(&apos;42&apos;) === 42n;
 <td class="tally obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
+<td class="tally not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
 <td class="tally not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage." data-tally="0">0/3</td>
@@ -22495,6 +22672,7 @@ return [...iterator].join() === &apos;a,c&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22622,6 +22800,7 @@ return [...iterator].join() === &apos;1,3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -22749,6 +22928,7 @@ return [...iterator].join() === &apos;a,1,c,3&apos;;
 <td class="unknown obsolete not-applicable" data-browser="duktape2_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="duktape2_2" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="duktape2_3" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="no not-applicable" data-browser="quickjs" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">No</td>
 <td class="unknown not-applicable" data-browser="graalvm19" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="graalvm20" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown not-applicable" data-browser="graalvm20_1" title="This proposal has not yet reached stage 2, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
