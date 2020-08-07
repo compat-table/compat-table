@@ -44,6 +44,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -71,6 +72,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -99,6 +101,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ],
@@ -140,6 +143,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -175,6 +179,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -210,6 +215,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -235,6 +241,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
     ],
@@ -273,6 +280,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -319,6 +327,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -347,6 +356,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ],
@@ -389,6 +399,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -423,6 +434,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       }
     ]
@@ -458,6 +470,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -484,6 +497,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ],
@@ -532,6 +546,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -569,6 +584,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -597,6 +613,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -624,6 +641,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -658,6 +676,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -693,6 +712,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -720,6 +740,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -752,6 +773,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -779,6 +801,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -816,6 +839,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -853,6 +877,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -892,6 +917,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -927,6 +953,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -956,6 +983,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -982,6 +1010,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -1018,6 +1047,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         },
       },
     ]
@@ -1086,6 +1116,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1119,6 +1150,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1155,6 +1187,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1190,6 +1223,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1225,6 +1259,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1260,6 +1295,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1295,6 +1331,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1330,6 +1367,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1365,6 +1403,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1400,6 +1439,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1435,6 +1475,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: false,
           graalvm20_1: false,
+          quickjs: false,
         }
       },
       {
@@ -1470,6 +1511,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1505,6 +1547,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1540,6 +1583,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1575,6 +1619,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1610,6 +1655,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -1645,6 +1691,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       }
     ]
@@ -1684,6 +1731,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -1731,6 +1779,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -1765,6 +1814,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -1800,6 +1850,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -1835,6 +1886,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -1874,6 +1926,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -1906,6 +1959,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -1944,6 +1998,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       }
     },
       {
@@ -1976,6 +2031,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -2008,6 +2064,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2041,6 +2098,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2073,6 +2131,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2105,6 +2164,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2139,6 +2199,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2173,6 +2234,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2207,6 +2269,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2237,6 +2300,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2267,6 +2331,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2301,6 +2366,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2335,6 +2401,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2369,6 +2436,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2399,6 +2467,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -2429,6 +2498,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       }
     ]
@@ -2460,6 +2530,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       }
     },
       {
@@ -2484,6 +2555,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -2514,6 +2586,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -2544,6 +2617,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       }
     ]
@@ -2577,6 +2651,7 @@ exports.tests = [
       graalvm19: false,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -2603,6 +2678,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: false,
     },
   },
   {
@@ -2639,6 +2715,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -2667,6 +2744,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -2706,6 +2784,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -2739,6 +2818,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ],
@@ -2801,6 +2881,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -2846,6 +2927,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -2893,6 +2975,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       }
     ]
@@ -2928,6 +3011,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -2974,6 +3058,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     },
   },
   {
@@ -3008,6 +3093,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -3034,6 +3120,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -3062,6 +3149,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -3100,6 +3188,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       },
       {
@@ -3143,6 +3232,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         }
       }
     ]
@@ -3183,6 +3273,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -3216,6 +3307,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: false,
         },
       },
       {
@@ -3251,6 +3343,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       }
     ]
@@ -3287,6 +3380,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -3314,6 +3408,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -3342,6 +3437,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
     ]
@@ -3371,6 +3467,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: 'arrows',
@@ -3395,6 +3492,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: '[native code]',
@@ -3419,6 +3517,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: 'class expression with implicit constructor',
@@ -3440,6 +3539,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: 'class expression with explicit constructor',
@@ -3461,6 +3561,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: 'unicode escape sequences in identifiers',
@@ -3480,6 +3581,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }, {
       name: 'methods and computed property names',
@@ -3501,6 +3603,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       },
     }]
   },
@@ -3529,6 +3632,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -3550,6 +3654,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
     ]
@@ -3583,6 +3688,7 @@ exports.tests = [
       graalvm20_1: true,
       chrome73: true,
       chrome74: true,
+      quickjs: true,
     }
   },
   {
@@ -3616,6 +3722,7 @@ exports.tests = [
       graalvm19: true,
       graalvm20: true,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -3663,6 +3770,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -3704,6 +3812,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -3734,6 +3843,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -3764,6 +3874,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       }
     ]
@@ -3810,6 +3921,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -3837,6 +3949,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -3867,6 +3980,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ]
@@ -3914,6 +4028,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -3951,6 +4066,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
     ],
@@ -3980,6 +4096,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4001,6 +4118,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4022,6 +4140,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4043,6 +4162,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4064,6 +4184,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4085,6 +4206,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4107,6 +4229,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
       {
@@ -4129,6 +4252,7 @@ exports.tests = [
           graalvm19: true,
           graalvm20: true,
           graalvm20_1: true,
+          quickjs: true,
         },
       },
     ],
@@ -4168,6 +4292,7 @@ exports.tests = [
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
+      quickjs: false,
     }
   },
   {
@@ -4215,6 +4340,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       }
     }, {
       name: '"globalThis" global property has correct property descriptor',
@@ -4259,6 +4385,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: true,
       }
     }]
   },
@@ -4293,6 +4420,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -4319,6 +4447,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -4345,6 +4474,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
       {
@@ -4373,6 +4503,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
+          quickjs: true,
         }
       },
     ]
@@ -4409,6 +4540,7 @@ exports.tests = [
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
   {
@@ -4441,6 +4573,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: graalvm.es2021flag,
       ios13_4: true,
+      quickjs: true,
     }
   },
   {
@@ -4476,6 +4609,7 @@ exports.tests = [
           chrome85: true,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         }
       },
       {
@@ -4504,6 +4638,7 @@ exports.tests = [
           chrome85: true,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         }
       }
     ],
@@ -4539,6 +4674,7 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: graalvm.es2021flag,
+          quickjs: false,
         }
       },
       {
@@ -4562,6 +4698,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: false,
           graalvm20_1: false,
+          quickjs: false,
         }
       }
     ]
@@ -4595,6 +4732,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4617,6 +4755,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4639,6 +4778,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4664,6 +4804,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4686,6 +4827,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4708,6 +4850,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4733,6 +4876,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4755,6 +4899,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
       {
@@ -4777,6 +4922,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          quickjs: false,
         },
       },
     ]
@@ -4808,6 +4954,7 @@ exports.tests = [
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
+      quickjs: true,
     }
   },
 ];

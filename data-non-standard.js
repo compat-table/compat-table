@@ -42,6 +42,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs", note_html: "The feature have to be enabled via <code>--experimental-options --js.simdjs</code> flag"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -65,6 +66,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -88,6 +90,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -111,6 +114,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -134,6 +138,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -157,6 +162,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -180,6 +186,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -203,6 +210,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -226,6 +234,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -249,6 +258,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -272,6 +282,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -297,6 +308,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -322,6 +334,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -347,6 +360,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -372,6 +386,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -397,6 +412,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -422,6 +438,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -447,6 +464,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -472,6 +490,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -497,6 +516,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -522,6 +542,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -547,6 +568,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -572,6 +594,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -597,6 +620,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -622,6 +646,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -647,6 +672,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -672,6 +698,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -696,6 +723,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -720,6 +748,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -744,6 +773,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -769,6 +799,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -795,6 +826,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -820,6 +852,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -846,6 +879,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -871,6 +905,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -896,6 +931,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -921,6 +957,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -946,6 +983,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -971,6 +1009,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -996,6 +1035,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1021,6 +1061,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1046,6 +1087,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1071,6 +1113,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1096,6 +1139,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1121,6 +1165,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1146,6 +1191,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1171,6 +1217,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1196,6 +1243,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1220,6 +1268,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1244,6 +1293,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1268,6 +1318,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1293,6 +1344,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1318,6 +1370,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1343,6 +1396,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1368,6 +1422,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1393,6 +1448,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1416,6 +1472,7 @@ exports.tests = [
         graalvm19: {val: 'flagged', note_id: "graalvm-simdjs"},
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     }
   ],
@@ -1442,6 +1499,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     },
     {
@@ -1471,6 +1529,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       },
     },
     {
@@ -1489,6 +1548,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       },
     },
     {
@@ -1594,6 +1654,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       },
     },
   ]
@@ -1618,6 +1679,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -1644,6 +1706,7 @@ exports.tests = [
     graalvm19: true,
     graalvm20: true,
     graalvm20_1: true,
+    quickjs: true,
   }
 },
 {
@@ -1671,6 +1734,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1699,6 +1763,7 @@ exports.tests = [
     graalvm19: true,
     graalvm20: true,
     graalvm20_1: true,
+    quickjs: false,
   }
 },
 {
@@ -1727,6 +1792,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -1750,6 +1816,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
 },
 {
@@ -1777,6 +1844,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1803,6 +1871,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1839,7 +1908,8 @@ exports.tests = [
       note_id: 'graalvm-nashorn-compat',
       note_html: 'The feature has to be enabled via the <code>--nashorn-compat</code> flag.'
     },
-	graalvm20: {val: "flagged", note_id: 'graalvm-nashorn-compat'},
+    graalvm20: {val: "flagged", note_id: 'graalvm-nashorn-compat'},
+    quickjs: false,
   }
 },
 {
@@ -1865,6 +1935,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1890,6 +1961,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -1920,6 +1992,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1943,6 +2016,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1972,6 +2046,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -1998,6 +2073,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2031,6 +2107,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2058,6 +2135,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2100,6 +2178,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2144,6 +2223,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2198,6 +2278,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
 },
 {
@@ -2226,6 +2307,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2255,6 +2337,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2287,6 +2370,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2310,6 +2394,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2335,6 +2420,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2359,6 +2445,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2379,6 +2466,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2404,6 +2492,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
 },
 {
@@ -2433,6 +2522,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2458,6 +2548,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2482,6 +2573,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2505,6 +2597,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
 },
 {
@@ -2527,6 +2620,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2563,6 +2657,7 @@ exports.tests = [
     graalvm19: true,
     graalvm20: true,
     graalvm20_1: true,
+    quickjs: true,
   }
 },
 {
@@ -2591,6 +2686,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2620,6 +2716,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2648,6 +2745,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   }
 },
 {
@@ -2672,6 +2770,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
   separator: 'after'
 },
@@ -2708,6 +2807,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        quickjs: false,
       }
     }, {
       name: '"global" global property has correct property descriptor',
@@ -2745,6 +2845,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
+        quickjs: false,
       }
     }]
   },
@@ -2782,6 +2883,7 @@ exports.tests = [
     graalvm19: true,
     graalvm20: false,
     graalvm20_1: false,
+    quickjs: false,
   },
 },
 ];
