@@ -570,6 +570,10 @@ exports.tests = [
       res: {
         ie11: false,
         firefox75: false,
+        firefox81: {
+          val: 'flagged',
+          note_id: 'ff-private-instance-methods-and-accessors'
+        },
         opera10_50: false,
         chrome79: chrome.harmony,
         chrome84: true,
@@ -621,6 +625,11 @@ exports.tests = [
       res: {
         ie11: false,
         firefox75: false,
+        firefox81: {
+          val: 'flagged',
+          note_id: 'ff-private-instance-methods-and-accessors',
+          note_html: 'The feature have to be enabled via <code>javascript.options.experimental.private_fields</code> and <code>javascript.options.experimental.private_methods</code> settings under <code>about:config</code>.'
+        },
         opera10_50: false,
         chrome79: chrome.harmony,
         chrome84: true,
