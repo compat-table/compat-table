@@ -3576,6 +3576,79 @@ exports.tests = [
     typescript3_2corejs3: false,
     closure: false
   }
+}, {
+  name: '`.item` method',
+  category: STAGE2,
+  significance: 'tiny',
+  spec: 'https://github.com/tc39/proposal-item-method/',
+  subtests: [
+    {
+      name: 'Array.prototype.item',
+      exec: function() {/*
+        var arr = [1, 2, 3];
+        return arr.item(0) === 1
+          && arr.item(-3) === 1
+          && arr.item(1) === 2
+          && arr.item(-2) === 2
+          && arr.item(2) === 3
+          && arr.item(-1) === 3
+          && arr.item(3) === undefined
+          && arr.item(-4) === undefined;
+      */},
+      res: {
+      }
+    },
+    {
+      name: 'String.prototype.item',
+      exec: function() {/*
+        var str = 'abc';
+        return str.item(0) === 'a'
+          && str.item(-3) === 'a'
+          && str.item(1) === 'b'
+          && str.item(-2) === 'b'
+          && str.item(2) === 'c'
+          && str.item(-1) === 'c'
+          && str.item(3) === undefined
+          && str.item(-4) === undefined;
+      */},
+      res: {
+      }
+    },
+    {
+      name: '%TypedArray%.prototype.item',
+      exec: function() {/*
+         return [
+           'Int8Array',
+           'Uint8Array',
+           'Uint8ClampedArray',
+           'Int16Array',
+           'Uint16Array',
+           'Int32Array',
+           'Uint32Array',
+           'Float32Array',
+           'Float64Array',
+           'BigInt64Array',
+           'BigUint64Array'
+         ].every(function (TypedArray) {
+           var Constructor = globalThis[TypedArray];
+           if (typeof Constructor !== 'function') {
+             return true;
+           }
+           var arr = new Constructor([1, 2, 3]);
+           return arr.item(0) === 1
+             && arr.item(-3) === 1
+             && arr.item(1) === 2
+             && arr.item(-2) === 2
+             && arr.item(2) === 3
+             && arr.item(-1) === 3
+             && arr.item(3) === undefined
+             && arr.item(-4) === undefined;
+         });
+      */},
+      res: {
+      }
+    },
+  ]
 }
 ];
 
