@@ -983,6 +983,51 @@ exports.tests = [
     }
   },
   {
+    name: 'String.prototype.split',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split',
+    exec: function () {
+      // all of these tests reflect bugs that es5-shim patches
+      return typeof String.prototype.split === 'function'
+        && ''.split().length === 1 && ''.split()[0] === ''
+        && ''.split(undefined).length === 1 && ''.split(undefined)[0] === ''
+        && 'ab'.split().length === 1 && 'ab'.split()[0] === 'ab'
+        && 'ab'.split(undefined).length === 1 && 'ab'.split(undefined)[0] === 'ab'
+        && '0'.split(undefined, 0).length === 0
+        && 'ab'.split(/(?:ab)*/).length === 2
+        && '.'.split(/(.?)(.?)/).length === 4
+        && 'tesst'.split(/(s)*/)[1] !== 't'
+        && 'test'.split(/(?:)/, -1).length === 4
+        && ''.split(/.?/).length === 0
+        && '.'.split(/()()/).length === 1;
+    },
+    res: {
+      chrome15: true,
+      chrome37: true,
+      edge15: true,
+      edge18: true,
+      edge80: true,
+      es5shim: true,
+      firefox3: false,
+      firefox3_6: false,
+      firefox4: false,
+      firefox5: true,
+      firefox10: true,
+      ie8: false,
+      ie9: true,
+      node0_4: true,
+      node0_6: true,
+      node0_8: false,
+      node0_10: false,
+      node0_12: true,
+      opera10_60: false,
+      opera11: true,
+      safari4: false,
+      safari5: false,
+      safari5_1: true,
+      safari13: true
+    }
+  },
+  {
     name: 'String.prototype.trim',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim',
     exec: function () {
