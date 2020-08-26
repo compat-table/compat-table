@@ -570,6 +570,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox60: false,
+        firefox68: false,
+        firefox75: false,
         firefox81: {
           val: 'flagged',
           note_id: 'ff-private-instance-methods-and-accessors',
@@ -599,6 +601,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox60: false,
+        firefox68: false,
+        firefox75: false,
         firefox82: {
           val: 'flagged',
           note_id: 'ff-private-instance-methods-and-accessors'
@@ -630,6 +634,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox60: false,
+        firefox68: false,
+        firefox75: false,
         firefox81: {
           val: 'flagged',
           note_id: 'ff-private-instance-methods-and-accessors'
@@ -661,6 +667,8 @@ exports.tests = [
       res: {
         ie11: false,
         firefox60: false,
+        firefox68: false,
+        firefox75: false,
         firefox82: {
           val: 'flagged',
           note_id: 'ff-private-instance-methods-and-accessors'
