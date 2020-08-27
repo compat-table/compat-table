@@ -342,7 +342,7 @@ exports.tests = [
         firefox80: {
           val: 'flagged',
           note_id: 'fx-private-fields',
-          note_html: 'The feature have to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>.'
+          note_html: 'The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>.'
         },
         opera10_50: false,
         chrome66: chrome.harmony,
