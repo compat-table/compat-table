@@ -1393,7 +1393,7 @@
     "short": "FF 77",
     "release": "2020-06-02",
     "retire": "2020-06-30",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox78": {
     "full": "Firefox 78 Extended Support Release",
@@ -1406,24 +1406,32 @@
     "full": "Firefox 79",
     "family": "SpiderMonkey",
     "short": "FF 79",
-    "release": "2020-06-30",
-    "retire": "2020-07-28",
+    "release": "2020-07-28",
+    "retire": "2020-08-25",
     "obsolete": false
   },
   "firefox80": {
-    "full": "Firefox 80 Beta",
+    "full": "Firefox 80",
     "family": "SpiderMonkey",
-    "short": "FF 80 Beta",
-    "release": "2020-07-28",
-    "retire": "2020-08-25",
-    "unstable": true
-  },
-  "firefox81": {
-    "full": "Firefox 81 Nightly",
-    "family": "SpiderMonkey",
-    "short": "FF 81 Nightly",
+    "short": "FF 80",
     "release": "2020-08-25",
     "retire": "2020-09-22",
+    "obsolete": false
+  },
+  "firefox81": {
+    "full": "Firefox 81 Beta",
+    "family": "SpiderMonkey",
+    "short": "FF 81 Beta",
+    "release": "2020-09-22",
+    "retire": "2020-10-20",
+    "unstable": true
+  },
+  "firefox82": {
+    "full": "Firefox 82 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 82 Nightly",
+    "release": "2020-10-20",
+    "retire": "2020-11-17",
     "unstable": true
   },
   "opera7": {
