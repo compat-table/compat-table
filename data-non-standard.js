@@ -39,7 +39,7 @@ exports.tests = [
         chrome37: chrome.simd,
         chrome58: false,
         duktape2_0: false,
-        graalvm19: {val: 'flagged', note_id: "graalvm-simdjs", note_html: "The feature have to be enabled via <code>--experimental-options --js.simdjs</code> flag"},
+        graalvm19: {val: 'flagged', note_id: "graalvm-simdjs", note_html: "The feature has to be enabled via <code>--experimental-options --js.simdjs</code> flag"},
         graalvm20: false,
         graalvm20_1: false,
       }

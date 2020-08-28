@@ -4285,7 +4285,7 @@ exports.tests = [
           firefox73: false,
           firefox74: true,
           chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
+          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
           chrome80: true,
           safari13_1: true,
           safaritp: true,
@@ -4401,7 +4401,7 @@ exports.tests = [
       firefox52: false,
       firefox72: true,
       chrome77: false,
-      chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature have to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
+      chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
       chrome80: true,
       safari13_1: true,
       safaritp: true,
@@ -4528,7 +4528,7 @@ exports.tests = [
           firefox74: {
             val: 'flagged',
             note_id: 'firefox-weakrefs',
-            note_html: 'The feature have to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.'
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.'
           },
           firefox79: true,
           opera10_50: false,
