@@ -4138,6 +4138,7 @@ exports.tests = [
     category: '2020 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-promise-allSettled',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled',
     exec: function () {/*
       Promise.allSettled([
         Promise.resolve(1),
