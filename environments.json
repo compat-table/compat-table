@@ -4264,7 +4264,7 @@
     "platformtype": "mobile",
     "equals": "chrome59",
     "release": "2018-03-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung8": {
     "full": "Samsung Internet for Android 8",
@@ -4273,7 +4273,7 @@
     "platformtype": "mobile",
     "equals": "chrome63",
     "release": "2018-07-18",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung9": {
     "full": "Samsung Internet for Android 9",
@@ -4282,7 +4282,7 @@
     "platformtype": "mobile",
     "equals": "chrome67",
     "release": "2018-09-15",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung10": {
     "full": "Samsung Internet for Android 10",
@@ -4291,7 +4291,7 @@
     "platformtype": "mobile",
     "equals": "chrome71",
     "release": "2019-08-22",
-    "obsolete": false
+    "obsolete": true
   },
   "samsung11": {
     "full": "Samsung Internet for Android 11",
@@ -4304,9 +4304,18 @@
   "samsung12": {
     "full": "Samsung Internet for Android 12",
     "family": "Samsung",
-    "short": "Samsung 12 Beta",
+    "short": "Samsung 12",
     "platformtype": "mobile",
     "equals": "chrome79",
+    "unstable": false
+  },
+  "samsung13": {
+    "full": "Samsung Internet for Android 13",
+    "family": "Samsung",
+    "short": "Samsung 13 Beta",
+    "platformtype": "mobile",
+    "equals": "chrome83",
+    "release": "2020-09-01",
     "unstable": true
   },
   "opera_mobile10_1": {
