@@ -3960,6 +3960,7 @@ exports.tests = [
     category: '2020 features',
     significance: 'medium',
     spec: 'https://github.com/tc39/proposal-bigint',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt',
     subtests: [
       {
         name: 'basic functionality',
