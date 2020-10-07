@@ -1622,41 +1622,47 @@ exports.tests = [
     closure: false
   }
 }, {
-  name: '`.item` method',
-  category: STAGE2,
+  name: '.at() method on the built-in indexables',
+  category: STAGE3,
   significance: 'tiny',
-  spec: 'https://github.com/tc39/proposal-item-method/',
+  spec: 'https://github.com/tc39/proposal-relative-indexing-method/',
   subtests: [
     {
       name: 'Array.prototype.item',
       exec: function() {/*
         var arr = [1, 2, 3];
-        return arr.item(0) === 1
-          && arr.item(-3) === 1
-          && arr.item(1) === 2
-          && arr.item(-2) === 2
-          && arr.item(2) === 3
-          && arr.item(-1) === 3
-          && arr.item(3) === undefined
-          && arr.item(-4) === undefined;
+        return arr.at(0) === 1
+          && arr.at(-3) === 1
+          && arr.at(1) === 2
+          && arr.at(-2) === 2
+          && arr.at(2) === 3
+          && arr.at(-1) === 3
+          && arr.at(3) === undefined
+          && arr.at(-4) === undefined;
       */},
       res: {
+        ie11: false,
+        firefox68: false,
+        chrome85: false,
       }
     },
     {
       name: 'String.prototype.item',
       exec: function() {/*
         var str = 'abc';
-        return str.item(0) === 'a'
-          && str.item(-3) === 'a'
-          && str.item(1) === 'b'
-          && str.item(-2) === 'b'
-          && str.item(2) === 'c'
-          && str.item(-1) === 'c'
-          && str.item(3) === undefined
-          && str.item(-4) === undefined;
+        return str.at(0) === 'a'
+          && str.at(-3) === 'a'
+          && str.at(1) === 'b'
+          && str.at(-2) === 'b'
+          && str.at(2) === 'c'
+          && str.at(-1) === 'c'
+          && str.at(3) === undefined
+          && str.at(-4) === undefined;
       */},
       res: {
+        ie11: false,
+        firefox68: false,
+        chrome85: false,
       }
     },
     {
@@ -1680,17 +1686,20 @@ exports.tests = [
              return true;
            }
            var arr = new Constructor([1, 2, 3]);
-           return arr.item(0) === 1
-             && arr.item(-3) === 1
-             && arr.item(1) === 2
-             && arr.item(-2) === 2
-             && arr.item(2) === 3
-             && arr.item(-1) === 3
-             && arr.item(3) === undefined
-             && arr.item(-4) === undefined;
+           return arr.at(0) === 1
+             && arr.at(-3) === 1
+             && arr.at(1) === 2
+             && arr.at(-2) === 2
+             && arr.at(2) === 3
+             && arr.at(-1) === 3
+             && arr.at(3) === undefined
+             && arr.at(-4) === undefined;
          });
       */},
       res: {
+        ie11: false,
+        firefox68: false,
+        chrome85: false,
       }
     },
   ]
