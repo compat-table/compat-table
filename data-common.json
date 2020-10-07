@@ -49,7 +49,7 @@
     "sharedmem": {
       "val": "flagged",
       "note_id": "firefox-sharedmem",
-      "note_html": "The feature have to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+      "note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
     },
     "nomob": {
       "val": "flagged",
@@ -74,34 +74,39 @@
     "bigint": {
       "val": "flagged",
       "note_id": "firefox-bigint",
-      "note_html": "The feature have to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+      "note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
     },
     "classFields": {
       "val": "flagged",
       "note_id": "firefox-class-fields",
-      "note_html": "The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>."
+      "note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>."
+    },
+    "privateFields": {
+      "val": "flagged",
+      "note_id": "fx-private-fields",
+      "note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
     },
     "privateClassFields": {
       "val": false,
       "note_id": "firefox-private-class-fields",
-      "note_html": "The feature have to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
+      "note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
     }
   },
   "chrome": {
     "sharedmem": {
       "val": "flagged",
       "note_id": "chrome-sharedmem",
-      "note_html": "The feature have to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+      "note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
     },
     "experimental": {
       "val": "flagged",
       "note_id": "chrome-experimental",
-      "note_html": "The feature have to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+      "note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
     },
     "harmony": {
       "val": "flagged",
       "note_id": "chrome-harmony",
-      "note_html": "The feature have to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+      "note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
     },
     "tco": {
       "val": false,
