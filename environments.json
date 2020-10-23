@@ -3628,11 +3628,65 @@
   "node14_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 14.0+",
+    "short": "Node &gt;=14.0 &lt;14.5",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome81",
     "release": "2020-04-21",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node14_5": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=14.5 &lt;14.6",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome83",
+    "release": "2020-06-30",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node14_6": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=14.6 &lt;15",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome84",
+    "release": "2020-07-20",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node15_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 15+",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome86",
+    "release": "2020-10-20",
     "obsolete": false,
     "test_suites": [
       "es5",

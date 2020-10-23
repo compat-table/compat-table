@@ -206,7 +206,10 @@
 <th class="platform node12_11 engine" data-browser="node12_11"><a href="#node12_11" class="browser-name"><abbr title="Node.js">Node &gt;=12.11 &lt;13</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
 <th class="platform node13_0 engine" data-browser="node13_0"><a href="#node13_0" class="browser-name"><abbr title="Node.js">Node 13.0-13.1</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
 <th class="platform node13_2 engine" data-browser="node13_2"><a href="#node13_2" class="browser-name"><abbr title="Node.js">Node &gt;=13.2 &lt;14</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
-<th class="platform node14_0 engine" data-browser="node14_0"><a href="#node14_0" class="browser-name"><abbr title="Node.js">Node 14.0+</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
+<th class="platform node14_0 engine" data-browser="node14_0"><a href="#node14_0" class="browser-name"><abbr title="Node.js">Node &gt;=14.0 &lt;14.5</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
+<th class="platform node14_5 engine" data-browser="node14_5"><a href="#node14_5" class="browser-name"><abbr title="Node.js">Node &gt;=14.5 &lt;14.6</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
+<th class="platform node14_6 engine" data-browser="node14_6"><a href="#node14_6" class="browser-name"><abbr title="Node.js">Node &gt;=14.6 &lt;15</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
+<th class="platform node15_0 engine" data-browser="node15_0"><a href="#node15_0" class="browser-name"><abbr title="Node.js">Node 15+</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
 <th class="platform duktape1_5 engine obsolete" data-browser="duktape1_5"><a href="#duktape1_5" class="browser-name"><abbr title="Duktape 1.5">DUK 1.5</abbr></a></th>
 <th class="platform duktape1_6 engine obsolete" data-browser="duktape1_6"><a href="#duktape1_6" class="browser-name"><abbr title="Duktape 1.6">DUK 1.6</abbr></a></th>
 <th class="platform duktape1_7 engine obsolete" data-browser="duktape1_7"><a href="#duktape1_7" class="browser-name"><abbr title="Duktape 1.7">DUK 1.7</abbr></a></th>
@@ -331,6 +334,9 @@
 <td class="tally" data-browser="node13_0" data-tally="1">5/5</td>
 <td class="tally" data-browser="node13_2" data-tally="1">5/5</td>
 <td class="tally" data-browser="node14_0" data-tally="1">5/5</td>
+<td class="tally" data-browser="node14_5" data-tally="1">5/5</td>
+<td class="tally" data-browser="node14_6" data-tally="1">5/5</td>
+<td class="tally" data-browser="node15_0" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/5</td>
@@ -454,6 +460,9 @@ return ({ get x(){ return 1 } }).x === 1;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -579,6 +588,9 @@ return value === 1;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -702,6 +714,9 @@ return { a: true, }.a === true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -825,6 +840,9 @@ return [1,].length === 1;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -948,6 +966,9 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -986,7 +1007,7 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="opera_mobile54">Yes</td>
 <td class="yes" data-browser="opera_mobile55">Yes</td>
 </tr>
-<tr><th colspan="121" class="separator"></th>
+<tr><th colspan="124" class="separator"></th>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a>Object static methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0.07692307692307693" style="background-color:hsl(9,82%,50%)">1/13</td>
@@ -1070,6 +1091,9 @@ return ({ if: 1 }).if === 1;
 <td class="tally" data-browser="node13_0" data-tally="1">13/13</td>
 <td class="tally" data-browser="node13_2" data-tally="1">13/13</td>
 <td class="tally" data-browser="node14_0" data-tally="1">13/13</td>
+<td class="tally" data-browser="node14_5" data-tally="1">13/13</td>
+<td class="tally" data-browser="node14_6" data-tally="1">13/13</td>
+<td class="tally" data-browser="node15_0" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/13</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/13</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/13</td>
@@ -1195,6 +1219,9 @@ return typeof Object.create === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1320,6 +1347,9 @@ return typeof Object.defineProperty === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1445,6 +1475,9 @@ return typeof Object.defineProperties === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1570,6 +1603,9 @@ return typeof Object.getPrototypeOf === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1695,6 +1731,9 @@ return typeof Object.keys === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1820,6 +1859,9 @@ return typeof Object.seal === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -1945,6 +1987,9 @@ return typeof Object.freeze === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2070,6 +2115,9 @@ return typeof Object.preventExtensions === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2195,6 +2243,9 @@ return typeof Object.isSealed === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2320,6 +2371,9 @@ return typeof Object.isFrozen === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2445,6 +2499,9 @@ return typeof Object.isExtensible === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2570,6 +2627,9 @@ return typeof Object.getOwnPropertyDescriptor === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2695,6 +2755,9 @@ return typeof Object.getOwnPropertyNames === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -2815,6 +2878,9 @@ return typeof Object.getOwnPropertyNames === 'function';
 <td class="tally" data-browser="node13_0" data-tally="1">12/12</td>
 <td class="tally" data-browser="node13_2" data-tally="1">12/12</td>
 <td class="tally" data-browser="node14_0" data-tally="1">12/12</td>
+<td class="tally" data-browser="node14_5" data-tally="1">12/12</td>
+<td class="tally" data-browser="node14_6" data-tally="1">12/12</td>
+<td class="tally" data-browser="node15_0" data-tally="1">12/12</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/12</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/12</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/12</td>
@@ -2940,6 +3006,9 @@ return typeof Array.isArray === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3065,6 +3134,9 @@ return typeof Array.prototype.indexOf === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3190,6 +3262,9 @@ return typeof Array.prototype.lastIndexOf === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3315,6 +3390,9 @@ return typeof Array.prototype.every === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3440,6 +3518,9 @@ return typeof Array.prototype.some === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3565,6 +3646,9 @@ return typeof Array.prototype.forEach === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3690,6 +3774,9 @@ return typeof Array.prototype.map === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3815,6 +3902,9 @@ return typeof Array.prototype.filter === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -3940,6 +4030,9 @@ return typeof Array.prototype.reduce === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4065,6 +4158,9 @@ return typeof Array.prototype.reduceRight === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4230,6 +4326,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4365,6 +4464,9 @@ try {
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4485,6 +4587,9 @@ try {
 <td class="tally" data-browser="node13_0" data-tally="1">3/3</td>
 <td class="tally" data-browser="node13_2" data-tally="1">3/3</td>
 <td class="tally" data-browser="node14_0" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_5" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_6" data-tally="1">3/3</td>
+<td class="tally" data-browser="node15_0" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/3</td>
@@ -4610,6 +4715,9 @@ return "foobar"[3] === "b";
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4759,6 +4867,9 @@ return typeof String.prototype.split === 'function'
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -4884,6 +4995,9 @@ return typeof String.prototype.trim === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5004,6 +5118,9 @@ return typeof String.prototype.trim === 'function';
 <td class="tally" data-browser="node13_0" data-tally="1">3/3</td>
 <td class="tally" data-browser="node13_2" data-tally="1">3/3</td>
 <td class="tally" data-browser="node14_0" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_5" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_6" data-tally="1">3/3</td>
+<td class="tally" data-browser="node15_0" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/3</td>
@@ -5129,6 +5246,9 @@ return typeof Date.prototype.toISOString === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5254,6 +5374,9 @@ return typeof Date.now === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5387,6 +5510,9 @@ try {
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5512,6 +5638,9 @@ return typeof Function.prototype.bind === 'function';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5637,6 +5766,9 @@ return typeof JSON === 'object';
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -5675,7 +5807,7 @@ return typeof JSON === 'object';
 <td class="yes" data-browser="opera_mobile54">Yes</td>
 <td class="yes" data-browser="opera_mobile55">Yes</td>
 </tr>
-<tr><th colspan="121" class="separator"></th>
+<tr><th colspan="124" class="separator"></th>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Immutable_globals"><span><a class="anchor" href="#test-Immutable_globals">&#xA7;</a>Immutable globals</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0">0/3</td>
@@ -5759,6 +5891,9 @@ return typeof JSON === 'object';
 <td class="tally" data-browser="node13_0" data-tally="1">3/3</td>
 <td class="tally" data-browser="node13_2" data-tally="1">3/3</td>
 <td class="tally" data-browser="node14_0" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_5" data-tally="1">3/3</td>
+<td class="tally" data-browser="node14_6" data-tally="1">3/3</td>
+<td class="tally" data-browser="node15_0" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/3</td>
@@ -5885,6 +6020,9 @@ return result;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6011,6 +6149,9 @@ return result;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6137,6 +6278,9 @@ return result;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6257,6 +6401,9 @@ return result;
 <td class="tally" data-browser="node13_0" data-tally="1">8/8</td>
 <td class="tally" data-browser="node13_2" data-tally="1">8/8</td>
 <td class="tally" data-browser="node14_0" data-tally="1">8/8</td>
+<td class="tally" data-browser="node14_5" data-tally="1">8/8</td>
+<td class="tally" data-browser="node14_6" data-tally="1">8/8</td>
+<td class="tally" data-browser="node15_0" data-tally="1">8/8</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/8</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/8</td>
@@ -6390,6 +6537,9 @@ try {
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6515,6 +6665,9 @@ return parseInt('010') === 10;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6638,6 +6791,9 @@ return !Function().propertyIsEnumerable(&apos;prototype&apos;);
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6761,6 +6917,9 @@ return (function(){ return Object.prototype.toString.call(arguments) === &apos;[
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -6885,6 +7044,9 @@ return _\u200c\u200d;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7010,6 +7172,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7141,6 +7306,9 @@ return result;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7270,6 +7438,9 @@ catch(e) {
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7390,6 +7561,9 @@ catch(e) {
 <td class="tally" data-browser="node13_0" data-tally="1">19/19</td>
 <td class="tally" data-browser="node13_2" data-tally="1">19/19</td>
 <td class="tally" data-browser="node14_0" data-tally="1">19/19</td>
+<td class="tally" data-browser="node14_5" data-tally="1">19/19</td>
+<td class="tally" data-browser="node14_6" data-tally="1">19/19</td>
+<td class="tally" data-browser="node15_0" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="duktape1_5" data-tally="0">0/19</td>
 <td class="tally obsolete" data-browser="duktape1_6" data-tally="0">0/19</td>
 <td class="tally obsolete" data-browser="duktape1_7" data-tally="0">0/19</td>
@@ -7518,6 +7692,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7642,6 +7819,9 @@ return this === void undefined &amp;&amp; (function(){ return this === void unde
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7768,6 +7948,9 @@ return (function(){ return typeof this === &apos;string&apos; }).call(&apos;&apo
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -7908,6 +8091,9 @@ return test(String, &apos;&apos;)
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8034,6 +8220,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8158,6 +8347,9 @@ try { eval(&apos;__i_dont_exist = 1&apos;); } catch (err) { return err instanceo
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8286,6 +8478,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8414,6 +8609,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8544,6 +8742,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8671,6 +8872,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8796,6 +9000,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -8922,6 +9129,9 @@ return true;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9052,6 +9262,9 @@ return (function(x){
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9176,6 +9389,9 @@ try { eval(&apos;var __some_unique_variable;&apos;); __some_unique_variable; } c
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9300,6 +9516,9 @@ try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof 
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9424,6 +9643,9 @@ try { delete Object.prototype; } catch (err) { return err instanceof TypeError; 
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9548,6 +9770,9 @@ try { eval(&apos;with({}){}&apos;); } catch (err) { return err instanceof Syntax
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9672,6 +9897,9 @@ try { eval(&apos;function f(x, x) { }&apos;); } catch (err) { return err instanc
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
@@ -9796,6 +10024,9 @@ return typeof foo === &apos;function&apos;;
 <td class="yes" data-browser="node13_0">Yes</td>
 <td class="yes" data-browser="node13_2">Yes</td>
 <td class="yes" data-browser="node14_0">Yes</td>
+<td class="yes" data-browser="node14_5">Yes</td>
+<td class="yes" data-browser="node14_6">Yes</td>
+<td class="yes" data-browser="node15_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape1_5">?</td>
 <td class="unknown obsolete" data-browser="duktape1_6">?</td>
 <td class="unknown obsolete" data-browser="duktape1_7">?</td>
