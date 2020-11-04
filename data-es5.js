@@ -1024,7 +1024,8 @@ exports.tests = [
       safari4: false,
       safari5: false,
       safari5_1: true,
-      safari13: true
+      safari13: true,
+      graalvm20_3: true
     }
   },
   {
