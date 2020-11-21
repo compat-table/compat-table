@@ -397,6 +397,7 @@ exports.tests = [
         opera10_50: false,
         graalvm20: false,
         graalvm20_1: false,
+        graalvm20_3: true,
         babel7corejs3: false,
         typescript3_8corejs3: false,
       }
@@ -425,6 +426,7 @@ exports.tests = [
         opera10_50: false,
         graalvm20: false,
         graalvm20_1: false,
+        graalvm20_3: true,
         babel7corejs3: false,
         typescript3_8corejs3: false,
       }

@@ -4478,6 +4478,7 @@ exports.tests = [
           chrome85: true,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         }
       },
       {
@@ -4566,6 +4567,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: false,
           graalvm20_1: false,
+          graalvm20_3: graalvm.es2021flag,
         }
       }
     ]
@@ -4599,6 +4601,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4621,6 +4624,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4643,6 +4647,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4668,6 +4673,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4690,6 +4696,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4712,6 +4719,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4737,6 +4745,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4759,6 +4768,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
       {
@@ -4781,6 +4791,7 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          graalvm20_3: graalvm.es2021flag,
         },
       },
     ]
