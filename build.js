@@ -34,10 +34,10 @@ var cheerio = require('cheerio');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
 
-var STAGE1 = 'proposal (stage 1)';
+var STAGE2 = 'draft (stage 2)';
 
 var isOptional = function isOptional(category) {
-  return (category || '').indexOf('annex b') > -1 || category === STAGE1;
+  return (category || '').indexOf('annex b') > -1 || category === STAGE2;
 };
 
 var byTestSuite = function(suite) {
@@ -563,7 +563,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           "desktop|mobile".indexOf(browsers[browserId].platformtype) === -1 &&
           !browsers[browserId].needs_annex_b))) {
         var msg = (
-          t.category === STAGE1
+          t.category === STAGE2
             ? "This proposal has not yet reached stage 2"
             : "This feature is optional on non-browser platforms"
         ) + ", and doesn't contribute to the platform's support percentage.";
