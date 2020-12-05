@@ -1643,6 +1643,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox68: false,
+        firefox85: true,
         chrome85: false,
       }
     },
@@ -1662,6 +1663,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox68: false,
+        firefox85: true,
         chrome85: false,
       }
     },
