@@ -1628,7 +1628,7 @@ exports.tests = [
   spec: 'https://github.com/tc39/proposal-relative-indexing-method/',
   subtests: [
     {
-      name: 'Array.prototype.item',
+      name: 'Array.prototype.at()',
       exec: function() {/*
         var arr = [1, 2, 3];
         return arr.at(0) === 1
@@ -1648,7 +1648,7 @@ exports.tests = [
       }
     },
     {
-      name: 'String.prototype.item',
+      name: 'String.prototype.at()',
       exec: function() {/*
         var str = 'abc';
         return str.at(0) === 'a'
@@ -1668,7 +1668,7 @@ exports.tests = [
       }
     },
     {
-      name: '%TypedArray%.prototype.item',
+      name: '%TypedArray%.prototype.at()',
       exec: function() {/*
          return [
            'Int8Array',
