@@ -3000,7 +3000,7 @@ try {
 <td class="tally" data-browser="firefox82" data-tally="0">0/3</td>
 <td class="tally" data-browser="firefox83" data-tally="0">0/3</td>
 <td class="tally unstable" data-browser="firefox84" data-tally="0">0/3</td>
-<td class="tally unstable" data-browser="firefox85" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally unstable" data-browser="firefox85" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome79" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="chrome80" data-tally="0">0/3</td>
@@ -3381,8 +3381,6 @@ return [
   &apos;Uint32Array&apos;,
   &apos;Float32Array&apos;,
   &apos;Float64Array&apos;,
-  &apos;BigInt64Array&apos;,
-  &apos;BigUint64Array&apos;
 ].every(function (TypedArray) {
   var Constructor = globalThis[TypedArray];
   if (typeof Constructor !== &apos;function&apos;) {
@@ -3398,7 +3396,7 @@ return [
     &amp;&amp; arr.at(3) === undefined
     &amp;&amp; arr.at(-4) === undefined;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n  'BigInt64Array',\n  'BigUint64Array'\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return true;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n  'BigInt64Array',\n  'BigUint64Array'\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return true;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return true;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return true;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -3435,7 +3433,7 @@ return [
 <td class="no" data-browser="firefox82">No</td>
 <td class="no" data-browser="firefox83">No</td>
 <td class="no unstable" data-browser="firefox84">No</td>
-<td class="no unstable" data-browser="firefox85">No</td>
+<td class="yes unstable" data-browser="firefox85">Yes</td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
 <td class="unknown obsolete" data-browser="chrome79">?</td>
 <td class="unknown obsolete" data-browser="chrome80">?</td>

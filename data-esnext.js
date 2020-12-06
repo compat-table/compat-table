@@ -1680,8 +1680,6 @@ exports.tests = [
            'Uint32Array',
            'Float32Array',
            'Float64Array',
-           'BigInt64Array',
-           'BigUint64Array'
          ].every(function (TypedArray) {
            var Constructor = globalThis[TypedArray];
            if (typeof Constructor !== 'function') {
@@ -1701,6 +1699,7 @@ exports.tests = [
       res: {
         ie11: false,
         firefox68: false,
+        firefox85: true,
         chrome85: false,
       }
     },
