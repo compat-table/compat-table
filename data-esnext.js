@@ -1645,6 +1645,8 @@ exports.tests = [
         firefox68: false,
         firefox85: true,
         chrome85: false,
+        babel7corejs3: babel.corejs,
+        typescript4corejs3: typescript.corejs,
       }
     },
     {
@@ -1701,6 +1703,8 @@ exports.tests = [
         firefox68: false,
         firefox85: true,
         chrome85: false,
+        babel7corejs3: babel.corejs,
+        typescript4corejs3: typescript.corejs,
       }
     },
   ]
