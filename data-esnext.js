@@ -1685,7 +1685,7 @@ exports.tests = [
          ].every(function (TypedArray) {
            var Constructor = globalThis[TypedArray];
            if (typeof Constructor !== 'function') {
-             return true;
+             return false;
            }
            var arr = new Constructor([1, 2, 3]);
            return arr.at(0) === 1
