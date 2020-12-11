@@ -2462,14 +2462,41 @@
     "release": "2020-05-21",
     "retire": "2020-07-16",
     "equals": "chrome83",
-    "obsolete": false
+    "obsolete": true
   },
   "edge84": {
     "full": "Microsoft Edge 84",
     "family": "V8",
     "short": "Edge 84",
     "release": "2020-07-16",
+    "retire": "2020-08-27",
     "equals": "chrome84",
+    "obsolete": true
+  },
+  "edge85": {
+    "full": "Microsoft Edge 85",
+    "family": "V8",
+    "short": "Edge 85",
+    "release": "2020-08-27",
+    "retire": "2020-10-09",
+    "equals": "chrome85",
+    "obsolete": true
+  },
+  "edge86": {
+    "full": "Microsoft Edge 86",
+    "family": "V8",
+    "short": "Edge 86",
+    "release": "2020-10-09",
+    "retire": "2020-11-19",
+    "equals": "chrome86",
+    "obsolete": true
+  },
+  "edge87": {
+    "full": "Microsoft Edge 87",
+    "family": "V8",
+    "short": "Edge 87",
+    "release": "2020-11-19",
+    "equals": "chrome87",
     "obsolete": false
   },
   "safari1": {
