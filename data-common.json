@@ -148,6 +148,48 @@
       "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag"
     }
   },
+  "hermes": {
+    "xEs6PromiseFlag": {
+      "val": "flagged",
+      "note_id": "hermes-promise",
+      "note_html": "The feature can be enabled via <code>-Xes6-promise</code> flag"
+    },
+    "xEs6SymbolFlag": {
+      "val": "flagged",
+      "note_id": "hermes-symbol",
+      "note_html": "The feature can be enabled via <code>-Xes6-symbol</code> flag"
+    },
+    "xEs6ProxyFlag": {
+      "val": "flagged",
+      "note_id": "hermes-proxy",
+      "note_html": "The feature can be enabled via <code>-Xes6-proxy</code> flag"
+    },
+    "evalStrictMode": {
+      "val": false,
+      "note_id": "hermes-eval-strict-mode",
+      "note_html": "Hermes isn't supporting strict mode in eval, test result is unrepresentative. See <a href=\"https://github.com/facebook/hermes/issues/102#issuecomment-528489267\">this comment</a> for details"
+    },
+    "evalLexicalScopeFailed": {
+      "val": false,
+      "note_id": "hermes-eval-lexical-scope-failed",
+      "note_html": "Hermes isn't supporting lexical scope in eval"
+    },
+    "evalLexicalScopeSuccess": {
+      "val": true,
+      "note_id": "hermes-eval-lexical-scope-success",
+      "note_html": "Hermes isn't supporting lexical scope in eval, test result is unrepresentative"
+    },
+    "catchDestructuring": {
+      "val": false,
+      "note_id": "hermes-catch-destructuring",
+      "note_html": "Hermes isn't currently supporting destructuring in catch parameters"
+    },
+    "class": {
+      "val": false,
+      "note_id": "hermes-class",
+      "note_html": "Hermes isn't currently supporting classes apparently"
+    }
+  },
   "sparseNote": {
     "val": true,
     "note_id": "sparse_arrays",
