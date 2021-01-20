@@ -4019,6 +4019,26 @@
     "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2019-05-09",
     "unstable": false,
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm19_3_6": {
+    "full": "GraalVM JavaScript 19.3.6",
+    "family": "GraalVM",
+    "short": "GraalVM 19.3.6",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2021-01-19",
+    "equals": "graalvm19",
+    "unstable": false,
     "test_suites": [
       "es5",
       "es6",
@@ -4077,6 +4097,46 @@
     "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
     "release": "2020-11-17",
     "equals": "graalvm20_1",
+    "obsolete": true,
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm20_3_1": {
+    "full": "GraalVM JavaScript 20.3.1",
+    "family": "GraalVM",
+    "short": "GraalVM 20.3.1",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2021-01_19",
+    "equals": "graalvm20_3",
+    "obsolete": false,
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "graalvm21": {
+    "full": "GraalVM JavaScript 21.0.0",
+    "family": "GraalVM",
+    "short": "GraalVM 21.0.0",
+    "platformtype": "engine",
+    "note_id": "graalvm-node-mode",
+    "note_html": "Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.",
+    "release": "2021-01-19",
+    "equals": "graalvm20_3",
     "obsolete": false,
     "unstable": false,
     "test_suites": [

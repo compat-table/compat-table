@@ -4,6 +4,7 @@ var babel = common.babel;
 var typescript = common.typescript;
 var firefox = common.firefox;
 var chrome = common.chrome;
+var graalvm = common.graalvm;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
@@ -1655,6 +1656,7 @@ exports.tests = [
         safaritp: true,
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
+        graalvm21: graalvm.es2022flag,
       }
     },
     {
@@ -1676,6 +1678,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         chrome85: false,
         safaritp: true,
+        graalvm21: graalvm.es2022flag,
       }
     },
     {
@@ -1715,6 +1718,7 @@ exports.tests = [
         safaritp: true,
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
+        graalvm21: graalvm.es2022flag,
       }
     },
   ]
