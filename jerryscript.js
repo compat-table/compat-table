@@ -146,7 +146,7 @@ function runTest(parents, test, sublevel) {
         }
 
         if (src.includes('asyncTestPassed')) {
-            script += asyncTestHelperHead + m[1] + asyncTestHelperTail;
+            script += asyncTestHelperHead + '(function test() {' + m[1] + '})();' + asyncTestHelperTail;
             processArgs.unshift('--call-on-exit','onCloseAsyncCheck');
         } else {
             if (m) {

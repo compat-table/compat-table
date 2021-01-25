@@ -1058,6 +1058,8 @@ exports.tests = [
       safari5_1: true,
       safari13: true,
       graalvm20_3: true,
+      jerryscript1_0: false,
+      jerryscript2_2_0: true,
       hermes0_7_0: true,
     }
   },
