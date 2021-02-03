@@ -1608,6 +1608,7 @@ exports.tests = [
       edge13: true,
       firefox2: true,
       safari3_1: false,
+      safari14_1: true,
       safaritp: true,
       chrome5: false,
       chrome13: false,
