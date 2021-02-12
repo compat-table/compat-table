@@ -1661,7 +1661,11 @@ exports.tests = [
         firefox85: firefox.nightly,
         chrome85: false,
         safari14_1: true,
-        safaritp: true,
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
+          note_html: 'The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.'
+        },
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
         graalvm21: graalvm.es2022flag,
@@ -1686,7 +1690,10 @@ exports.tests = [
         firefox85: firefox.nightly,
         chrome85: false,
         safari14_1: true,
-        safaritp: true,
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
+        },
         graalvm21: graalvm.es2022flag,
       }
     },
@@ -1725,7 +1732,10 @@ exports.tests = [
         firefox85: firefox.nightly,
         chrome85: false,
         safari14_1: true,
-        safaritp: true,
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
+        },
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
         graalvm21: graalvm.es2022flag,
