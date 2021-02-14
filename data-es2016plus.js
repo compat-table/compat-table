@@ -797,6 +797,7 @@ exports.tests = [
           tr: null,
           babel6corejs2: null,
           closure: false,
+          closure20200614: true,
           typescript1corejs2: null,
           chrome52: null,
           chrome55: true,

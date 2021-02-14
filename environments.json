@@ -229,7 +229,7 @@
     "short": "Closure 2019.07",
     "family": "Closure",
     "platformtype": "compiler",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -285,8 +285,20 @@
     ]
   },
   "closure20200517": {
-    "full": "Closure Compiler >=v20200517",
+    "full": "Closure Compiler >=v20200517 <v20200614",
     "short": "Closure 2020.05",
+    "family": "Closure",
+    "platformtype": "compiler",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "closure20200614": {
+    "full": "Closure Compiler >=v20200614",
+    "short": "Closure 2020.06",
     "family": "Closure",
     "platformtype": "compiler",
     "obsolete": false,
