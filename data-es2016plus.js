@@ -4482,6 +4482,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
           firefox10: false,
@@ -4509,6 +4510,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
           firefox10: false,
@@ -4536,6 +4538,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
           firefox10: false,
@@ -4565,6 +4568,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
           firefox10: false,
