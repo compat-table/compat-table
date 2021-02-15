@@ -22565,6 +22565,8 @@ exports.tests = [
         return len1 === 0 && len2 === 3;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -22595,6 +22597,8 @@ exports.tests = [
         return c.length === 1 && !(2 in c);
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -22624,6 +22628,7 @@ exports.tests = [
       */},
       res: {
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
+        closure: false,
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -22652,6 +22657,8 @@ exports.tests = [
         return Array.isArray(new C());
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         safari9: true,
         chrome43: "strict",
         chrome49: true,
@@ -22679,6 +22686,7 @@ exports.tests = [
         return c.concat(1) instanceof C;
       */},
       res: {
+        closure: false,
         ie11: false,
         edge13: true,
         firefox2: false,
@@ -22707,6 +22715,7 @@ exports.tests = [
         return c.filter(Boolean) instanceof C;
       */},
       res: {
+        closure: false,
         ie11: false,
         edge13: true,
         firefox2: false,
@@ -22735,6 +22744,7 @@ exports.tests = [
         return c.map(Boolean) instanceof C;
       */},
       res: {
+        closure: false,
         ie11: false,
         edge13: true,
         firefox2: false,
@@ -22764,6 +22774,7 @@ exports.tests = [
         return c.slice(1,2) instanceof C;
       */},
       res: {
+        closure: false,
         ie11: false,
         edge13: true,
         firefox2: false,
@@ -22793,6 +22804,7 @@ exports.tests = [
         return c.splice(1,2) instanceof C;
       */},
       res: {
+        closure: false,
         ie11: false,
         edge13: true,
         firefox2: false,
@@ -22822,6 +22834,7 @@ exports.tests = [
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
+        closure: false,
         ie11: false,
         edge12: edge.experimental,
         edge13: true,
@@ -22852,6 +22865,7 @@ exports.tests = [
       res: {
         tr: { val: false, note_id: 'compiler-proto' },
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
+        closure: false,
         ie11: false,
         edge12: edge.experimental,
         edge13: true,
@@ -22889,6 +22903,8 @@ exports.tests = [
         return r.global && r.source === "baz";
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -22919,6 +22935,7 @@ exports.tests = [
       */},
       res: {
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
+        closure: false,
         node4: "strict",
         chrome43: "strict",
         chrome49: true,
@@ -22949,6 +22966,8 @@ exports.tests = [
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -22978,6 +22997,8 @@ exports.tests = [
         return r.test("foobarbaz");
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23015,6 +23036,8 @@ exports.tests = [
         return c() === 'foo';
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23043,6 +23066,7 @@ exports.tests = [
       */},
       res: {
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
+        closure: false,
         typescript1corejs2: false,
         ie11: false,
         edge12: edge.experimental,
@@ -23071,6 +23095,8 @@ exports.tests = [
         return new c().bar === 2 && new c().baz === 3;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome48: false,
@@ -23099,6 +23125,8 @@ exports.tests = [
         return c.call({bar:1}, 2) === 3;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23126,6 +23154,8 @@ exports.tests = [
         return c.apply({bar:1}, [2]) === 3;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23153,6 +23183,8 @@ exports.tests = [
         return c(6) === 9 && c instanceof C;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         ie11: false,
         edge13: true,
@@ -23208,6 +23240,7 @@ exports.tests = [
         }
       */},
       res: {
+        closure: false,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23237,6 +23270,8 @@ exports.tests = [
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23279,6 +23314,7 @@ exports.tests = [
         }
       */},
       res: {
+        closure: false,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23320,6 +23356,7 @@ exports.tests = [
         }
       */},
       res: {
+        closure: false,
         typescript1corejs2: false,
         chrome43: "strict",
         chrome49: true,
@@ -23358,6 +23395,7 @@ exports.tests = [
           && c == true; // eslint-disable-line eqeqeq
       */},
       res: {
+        closure: false,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -23388,6 +23426,7 @@ exports.tests = [
           && +c === 6;
       */},
       res: {
+        closure: false,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -23420,6 +23459,7 @@ exports.tests = [
           && c.length === 5;
       */},
       res: {
+        closure: false,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -23450,6 +23490,7 @@ exports.tests = [
           && Object.prototype.toString.call(c) === "[object Error]";
       */},
       res: {
+        closure: false,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -23482,6 +23523,8 @@ exports.tests = [
         return map instanceof M && map.has(key) && map.get(key) === 123;
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
@@ -23515,6 +23558,8 @@ exports.tests = [
         return set instanceof S && set.has(123);
       */},
       res: {
+        closure: false,
+        closure20200614: true,
         safari10: true,
         chrome43: "strict",
         chrome49: true,
