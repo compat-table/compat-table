@@ -2468,14 +2468,15 @@
     "family": "Chakra",
     "short": "Edge 17",
     "release": "2018-04-30",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge18": {
     "full": "Microsoft Edge 18",
     "family": "Chakra",
     "release": "2018-10-02",
+    "retire": "2021-03-09",
     "short": "Edge 18",
-    "obsolete": false
+    "obsolete": true
   },
   "edge79": {
     "full": "Microsoft Edge 79",
@@ -2484,7 +2485,7 @@
     "retire": "2020-02-07",
     "short": "Edge 79",
     "equals": "chrome79",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge80": {
     "full": "Microsoft Edge 80",
