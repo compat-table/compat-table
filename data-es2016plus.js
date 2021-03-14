@@ -4591,6 +4591,28 @@ exports.tests = [
           hermes0_7_0: true,
         }
       },
+      {
+        name: 'spread parameters after optional chaining',
+        exec: function(){/*
+          var fn = null;
+          var n = null;
+          var o = {};
+
+          return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
+        */},
+        res : {
+          ie11: false,
+          firefox10: false,
+          firefox52: false,
+          firefox73: false,
+          firefox74: true,
+          chrome77: false,
+          chrome80: false,
+          chrome89: false,
+          safari13_1: true,
+          safaritp: true,
+        }
+      }
     ]
   },
   {
