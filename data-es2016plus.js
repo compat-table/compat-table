@@ -4601,6 +4601,7 @@ exports.tests = [
           return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
         */},
         res : {
+          closure20200927: true,
           ie11: false,
           firefox10: false,
           firefox52: false,
