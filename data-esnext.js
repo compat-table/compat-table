@@ -1742,7 +1742,56 @@ exports.tests = [
       }
     },
   ]
+<<<<<<< HEAD
 }
+=======
+},
+{
+  name: 'keys composition',
+  category: STAGE1,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-richer-keys/tree/master/compositeKey',
+  subtests: [
+    {
+      name: 'compositeKey',
+      exec: function () {/*
+        var a = ['a'];
+        var b = ['b'];
+        var c = ['c'];
+        var ab = compositeKey(a, b);
+        return typeof ab == 'object'
+          && Object.isFrozen(ab)
+          && ab === compositeKey(a, b)
+          && ab !== compositeKey(a, c);
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+    {
+      name: 'compositeSymbol',
+      exec: function () {/*
+        var a = ['a'];
+        var b = ['b'];
+        var c = ['c'];
+        var ab = compositeSymbol(a, b);
+        return typeof ab == 'symbol'
+          && ab === compositeSymbol(a, b)
+          && ab !== compositeSymbol(a, c);
+      */},
+      res: {
+        babel6corejs2: false,
+        babel7corejs3: babel.corejs,
+        typescript1corejs2: typescript.fallthrough,
+        typescript3_2corejs3: typescript.corejs,
+      },
+    },
+  ]
+},
+>>>>>>> origin/composite-key
 ];
 
 
