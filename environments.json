@@ -1397,7 +1397,7 @@
     "short": "FF 73",
     "release": "2020-02-11",
     "retire": "2020-03-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox74": {
     "full": "Firefox 74",
@@ -1493,7 +1493,7 @@
     "short": "FF 85",
     "release": "2021-01-26",
     "retire": "2021-02-23",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox86": {
     "full": "Firefox 86",
@@ -1504,19 +1504,27 @@
     "obsolete": false
   },
   "firefox87": {
-    "full": "Firefox 87 Beta",
+    "full": "Firefox 87",
     "family": "SpiderMonkey",
-    "short": "FF 87 Beta",
+    "short": "FF 87",
     "release": "2021-03-23",
     "retire": "2021-04-20",
-    "unstable": true
+    "obsolete": false
   },
   "firefox88": {
-    "full": "Firefox 88 Nightly",
+    "full": "Firefox 88 Beta",
     "family": "SpiderMonkey",
-    "short": "FF 88 Nightly",
+    "short": "FF 88 Beta",
     "release": "2021-04-20",
     "retire": "2021-05-18",
+    "unstable": true
+  },
+  "firefox89": {
+    "full": "Firefox 89 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 89 Nightly",
+    "release": "2021-05-18",
+    "retire": "2021-06-15",
     "unstable": true
   },
   "opera7": {
