@@ -2409,7 +2409,7 @@
     "short": "CH 86",
     "release": "2020-10-06",
     "retire": "2020-11-17",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome87": {
     "full": "Chrome 87",
@@ -2417,21 +2417,35 @@
     "short": "CH 87",
     "release": "2020-11-17",
     "retire": "2021-01-19",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome88": {
-    "full": "Chrome 88 Beta",
+    "full": "Chrome 88",
     "family": "V8",
     "short": "CH 88",
     "release": "2021-01-19",
     "retire": "2021-03-02",
-    "unstable": true
+    "obsolete": false
   },
   "chrome89": {
-    "full": "Chrome 89 Canary",
+    "full": "Chrome 89",
     "family": "V8",
     "short": "CH 89",
     "release": "2021-03-02",
+    "obsolete": false
+  },
+  "chrome90": {
+    "full": "Chrome 90 Beta",
+    "family": "V8",
+    "short": "CH 90",
+    "release": "2021-04-13",
+    "unstable": true
+  },
+  "chrome91": {
+    "full": "Chrome 91 Canary",
+    "family": "V8",
+    "short": "CH 91",
+    "release": "2021-05-25",
     "unstable": true
   },
   "edge12": {
@@ -2547,7 +2561,7 @@
     "release": "2020-10-09",
     "retire": "2020-11-19",
     "equals": "chrome86",
-    "obsolete": false
+    "obsolete": true
   },
   "edge87": {
     "full": "Microsoft Edge 87",
@@ -2555,6 +2569,22 @@
     "short": "Edge 87",
     "release": "2020-11-19",
     "equals": "chrome87",
+    "obsolete": true
+  },
+  "edge88": {
+    "full": "Microsoft Edge 88",
+    "family": "V8",
+    "short": "Edge 88",
+    "release": "2020-12-09",
+    "equals": "chrome88",
+    "obsolete": false
+  },
+  "edge89": {
+    "full": "Microsoft Edge 89",
+    "family": "V8",
+    "short": "Edge 89",
+    "release": "2021-02-03",
+    "equals": "chrome89",
     "obsolete": false
   },
   "safari1": {
@@ -3184,7 +3214,7 @@
     "equals": "chrome83",
     "short": "OP 69",
     "release": "2020-06-24",
-    "obsolete": false
+    "obsolete": true
   },
   "opera70": {
     "full": "Opera 70",
@@ -3192,6 +3222,46 @@
     "equals": "chrome84",
     "short": "OP 70",
     "release": "2020-07-27",
+    "obsolete": true
+  },
+  "opera71": {
+    "full": "Opera 71",
+    "family": "V8",
+    "equals": "chrome85",
+    "short": "OP 71",
+    "release": "2020-09-15",
+    "obsolete": true
+  },
+  "opera72": {
+    "full": "Opera 72",
+    "family": "V8",
+    "equals": "chrome86",
+    "short": "OP 72",
+    "release": "2020-10-21",
+    "obsolete": true
+  },
+  "opera73": {
+    "full": "Opera 73",
+    "family": "V8",
+    "equals": "chrome87",
+    "short": "OP 73",
+    "release": "2020-12-09",
+    "obsolete": true
+  },
+  "opera74": {
+    "full": "Opera 74",
+    "family": "V8",
+    "equals": "chrome88",
+    "short": "OP 74",
+    "release": "2021-02-02",
+    "obsolete": false
+  },
+  "opera75": {
+    "full": "Opera 75",
+    "family": "V8",
+    "equals": "chrome89",
+    "short": "OP 75",
+    "release": "2021-03-24",
     "obsolete": false
   },
   "rhino1_7": {
