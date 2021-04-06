@@ -1636,7 +1636,8 @@ exports.tests = [
     typescript3_2corejs3: false,
     closure: false
   }
-}, {
+},
+{
   name: '.at() method on the built-in indexables',
   category: STAGE3,
   significance: 'tiny',
@@ -1742,6 +1743,32 @@ exports.tests = [
       }
     },
   ]
+},
+{
+  name: 'Class static initialization blocks',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-class-static-block',
+  exec: function () {/*
+    let ok = false;
+    class A {
+      static { ok = true; }
+    }
+    return ok;
+  */},
+  res: {
+    babel6corejs2: false,
+    babel7corejs2: true,
+    babel7corejs3: true,
+    chrome1: false,
+    chrome91: true,
+    edge18: false,
+    firefox2: false,
+    firefox87: false,
+    ie11: false,
+    opera10_50: false,
+    safati14: false,
+  }
 }
 ];
 
