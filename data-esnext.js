@@ -1769,6 +1769,33 @@ exports.tests = [
     opera10_50: false,
     safati14: false,
   }
+},
+{
+  name: 'Ergonomic brand checks for private fields',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-private-fields-in-in',
+  exec: function () {/*
+    class A {
+      #x;
+      static check(obj) {
+        return #x in obj;
+      }
+    }
+    return A.check(new A) && !A.check({});
+  */},
+  res: {
+    babel6corejs2: false,
+    babel7corejs2: true,
+    babel7corejs3: true,
+    chrome1: false,
+    chrome91: true,
+    edge18: false,
+    firefox2: false,
+    ie11: false,
+    opera10_50: false,
+    safati12: false,
+  }
 }
 ];
 
