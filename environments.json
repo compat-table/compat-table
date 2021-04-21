@@ -3883,11 +3883,29 @@
   "node15_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 15+",
+    "short": "Node &gt;=15.0 &lt;16",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome86",
     "release": "2020-10-20",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node16_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 16+",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome90",
+    "release": "2021-04-20",
     "obsolete": false,
     "test_suites": [
       "es5",
