@@ -1661,11 +1661,14 @@ exports.tests = [
         firefox68: false,
         firefox85: firefox.nightly,
         chrome85: false,
-        safari14_1: true,
-        safaritp: {
+        safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method',
           note_html: 'The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.'
+        },
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
         },
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
@@ -1690,7 +1693,10 @@ exports.tests = [
         firefox68: false,
         firefox85: firefox.nightly,
         chrome85: false,
-        safari14_1: true,
+        safari14_1: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
+        },
         safaritp: {
           val: 'flagged',
           note_id: 'safari-at-method',
@@ -1732,7 +1738,10 @@ exports.tests = [
         firefox68: false,
         firefox85: firefox.nightly,
         chrome85: false,
-        safari14_1: true,
+        safari14_1: {
+          val: 'flagged',
+          note_id: 'safari-at-method',
+        },
         safaritp: {
           val: 'flagged',
           note_id: 'safari-at-method',
@@ -1762,12 +1771,13 @@ exports.tests = [
     babel7corejs3: true,
     chrome1: false,
     chrome91: true,
+    safari13: false,
     edge18: false,
     firefox2: false,
     firefox87: false,
     ie11: false,
     opera10_50: false,
-    safati14: false,
+    safari12: false,
   }
 },
 {
@@ -1794,7 +1804,7 @@ exports.tests = [
     firefox2: false,
     ie11: false,
     opera10_50: false,
-    safati12: false,
+    safari12: false,
   }
 }
 ];
