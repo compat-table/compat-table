@@ -394,7 +394,7 @@ exports.tests = [
         chrome84: true,
         duktape2_0: false,
         safari13: false,
-        safaritp: false,
+        safaritp: true,
         graalvm20: false,
         graalvm20_1: true,
       }
@@ -424,7 +424,7 @@ exports.tests = [
         chrome84: true,
         duktape2_0: false,
         safari13: false,
-        safaritp: false,
+        safaritp: true,
         graalvm20: false,
         graalvm20_1: true,
       }
@@ -457,7 +457,7 @@ exports.tests = [
         chrome84: true,
         duktape2_0: false,
         safari13: false,
-        safaritp: false,
+        safaritp: true,
         graalvm20: false,
         graalvm20_1: true,
       }
@@ -490,7 +490,7 @@ exports.tests = [
         chrome84: true,
         duktape2_0: false,
         safari13: false,
-        safaritp: false,
+        safaritp: true,
         graalvm20: false,
         graalvm20_1: true,
       }
