@@ -5112,11 +5112,419 @@ exports.tests = [
       hermes0_7_0: true,
     }
   },
+  {
+    name: 'instance class fields',
+    category: '2022 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-class-fields',
+    subtests: [
+      {
+        name: 'public instance class fields',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Public_instance_fields',
+        exec: function () {/*
+          class C {
+            x = 'x';
+          }
+          return new C().x === 'x';
+        */},
+        res: {
+          babel6corejs2: true,
+          tr: true,
+          typescript1corejs2: true,
+          ie11: false,
+          firefox2: false,
+          firefox67: firefox.classFields,
+          firefox69: true,
+          opera10_50: false,
+          chrome65: chrome.harmony,
+          chrome72: true,
+          safari14: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private instance class fields basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Private_instance_fields',
+        exec: function () {/*
+          class C {
+            #x;
+            constructor(x){
+              this.#x = x;
+            }
+            x(){
+              return this.#x;
+            }
+          }
+          return new C(42).x() === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox67: firefox.privateClassFields,
+          firefox80: firefox.privateFields,
+          firefox90: true,
+          opera10_50: false,
+          chrome66: chrome.harmony,
+          chrome74: true,
+          safari14_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private instance class fields initializers',
+        exec: function () {/*
+          class C {
+            #x = 42;
+            x(){
+              return this.#x;
+            }
+          }
+          return new C().x() === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox67: firefox.privateClassFields,
+          firefox80: firefox.privateFields,
+          firefox90: true,
+          opera10_50: false,
+          chrome66: chrome.harmony,
+          chrome74: true,
+          safari14_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'optional private instance class fields access',
+        exec: function () {/*
+          class C {
+            #x = 42;
+            x(o = this){
+              return o?.#x;
+            }
+          }
+          return new C().x() === 42 && new C().x(null) === void 0;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox80: firefox.privateFields,
+          firefox90: true,
+          chrome1: false,
+          chrome83: false,
+          chrome84: true,
+          safari1: false,
+          safari13_1: false,
+          safari14_1: true,
+          safaritp: true,
+          opera10_50: false,
+          graalvm20: false,
+          graalvm20_1: false,
+          graalvm20_3: true,
+          babel7corejs3: false,
+          typescript3_8corejs3: false,
+        }
+      },
+      {
+        name: 'optional deep private instance class fields access',
+        exec: function () {/*
+          class C {
+            #x = 42;
+            x(o = {p: this}){
+              return o?.p.#x;
+            }
+          }
+          return new C().x() === 42 && new C().x(null) === void 0;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox74: firefox.privateClassFields,
+          firefox80: firefox.privateFields,
+          firefox90: true,
+          chrome1: false,
+          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
+          chrome80: true,
+          safari1: false,
+          safari13_1: false,
+          safari14_1: true,
+          safaritp: true,
+          opera10_50: false,
+          graalvm20: false,
+          graalvm20_1: false,
+          graalvm20_3: true,
+          babel7corejs3: false,
+          typescript3_8corejs3: false,
+        }
+      },
+      {
+        name: 'computed instance class fields',
+        exec: function () {/*
+          class C {
+            ['x'] = 42;
+          }
+          return new C().x === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox66: false,
+          firefox68: firefox.classFields,
+          firefox69: true,
+          opera10_50: false,
+          chrome73: true,
+          safari14: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+    ]
+  },
+  {
+    name: 'static class fields',
+    category: '2022 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-static-class-features/',
+    subtests: [
+      {
+        name: 'public static class fields',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Public_static_fields',
+        exec: function () {/*
+          class C {
+            static x = 'x';
+          }
+          return C.x === 'x';
+        */},
+        res: {
+          babel6corejs2: true,
+          tr: true,
+          typescript1corejs2: true,
+          ie11: false,
+          firefox2: false,
+          firefox74: false,
+          firefox75: true,
+          opera10_50: false,
+          chrome71: chrome.harmony,
+          chrome72: true,
+          safari14_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private static class fields',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Private_static_fields',
+        exec: function () {/*
+          class C {
+            static #x = 42;
+            x(){
+              return C.#x;
+            }
+          }
+          return new C().x() === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox80: firefox.privateFields,
+          firefox90: true,
+          opera10_50: false,
+          chrome74: true,
+          safari14_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'computed static class fields',
+        exec: function () {/*
+          class C {
+            static ['x'] = 42;
+          }
+          return C.x === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox2: false,
+          firefox74: false,
+          firefox75: true,
+          opera10_50: false,
+          chrome73: true,
+          safari14_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20: true,
+          graalvm20_1: true,
+        }
+      },
+    ]
+  },
+  {
+    name: 'private class methods',
+    category: '2022 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-private-methods',
+    subtests: [
+      {
+        name: 'private instance methods',
+        exec: function () {/*
+          class C {
+            #x() { return 42; }
+            x() {
+              return this.#x();
+            }
+          }
+          return new C().x() === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox68: false,
+          firefox75: false,
+          firefox81: {
+            val: 'flagged',
+            note_id: 'ff-private-instance-methods-and-accessors',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> and <code>javascript.options.experimental.private_methods</code> settings under <code>about:config</code>.'
+          },
+          firefox90: true,
+          opera10_50: false,
+          chrome79: chrome.harmony,
+          chrome84: true,
+          duktape2_0: false,
+          safari13: false,
+          safaritp: true,
+          graalvm20: false,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private static methods',
+        exec: function () {/*
+          class C {
+            static #x() { return 42; }
+            x() {
+              return C.#x();
+            }
+          }
+          return new C().x() === 42;
+        */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox68: false,
+          firefox75: false,
+          firefox82: {
+            val: 'flagged',
+            note_id: 'ff-private-instance-methods-and-accessors'
+          },
+          firefox90: true,
+          opera10_50: false,
+          chrome79: chrome.harmony,
+          chrome84: true,
+          duktape2_0: false,
+          safari13: false,
+          safaritp: true,
+          graalvm20: false,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private accessor properties',
+        exec: function () {/*
+          var y = false;
+          class C {
+            get #x() { return 42; }
+            set #x(x) { y = x; }
+            x() {
+              this.#x = true;
+              return this.#x;
+            }
+          }
+          return new C().x() === 42 && y;
+        */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox68: false,
+          firefox75: false,
+          firefox81: {
+            val: 'flagged',
+            note_id: 'ff-private-instance-methods-and-accessors'
+          },
+          firefox90: true,
+          opera10_50: false,
+          chrome79: chrome.harmony,
+          chrome84: true,
+          duktape2_0: false,
+          safari13: false,
+          safaritp: true,
+          graalvm20: false,
+          graalvm20_1: true,
+        }
+      },
+      {
+        name: 'private static accessor properties',
+        exec: function () {/*
+          var y = false;
+          class C {
+            static get #x() { return 42; }
+            static set #x(x) { y = x; }
+            x() {
+              C.#x = true;
+              return C.#x;
+            }
+          }
+          return new C().x() === 42 && y;
+        */},
+        res: {
+          ie11: false,
+          firefox60: false,
+          firefox68: false,
+          firefox75: false,
+          firefox82: {
+            val: 'flagged',
+            note_id: 'ff-private-instance-methods-and-accessors'
+          },
+          firefox90: true,
+          opera10_50: false,
+          chrome79: chrome.harmony,
+          chrome84: true,
+          duktape2_0: false,
+          safari13: false,
+          safaritp: true,
+          graalvm20: false,
+          graalvm20_1: true,
+        }
+      }
+    ]
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
