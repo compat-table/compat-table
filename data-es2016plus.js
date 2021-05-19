@@ -578,6 +578,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs2: babel.regenerator,
           closure: true,
           typescript1corejs2: typescript.downlevelIteration,
           chrome52: null,
@@ -707,6 +708,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs2: babel.regenerator,
           closure: true,
           typescript1corejs2: typescript.downlevelIteration,
           chrome52: null,
@@ -768,6 +770,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs2: babel.regenerator,
           closure: true,
           typescript1corejs2: typescript.downlevelIteration,
           chrome52: null,
@@ -835,6 +838,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs2: babel.regenerator,
           closure: true,
           typescript1corejs2: typescript.downlevelIteration,
           chrome52: null,
@@ -873,6 +877,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs2: babel.regenerator,
           closure: true,
           typescript1corejs2: typescript.downlevelIteration,
           chrome52: null,
@@ -1778,6 +1783,7 @@ exports.tests = [
      return iter['throw']().value === 'bar';
      */},
     res: {
+      babel7corejs3: true,
       closure20180319: true,
       typescript1corejs2: typescript.downlevelIteration,
       ie11: false,
@@ -3674,6 +3680,7 @@ exports.tests = [
         */},
         res : {
           closure20190215: true,
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox61: false,
@@ -3697,6 +3704,7 @@ exports.tests = [
         */},
         res : {
           closure20190215: true,
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox61: false,
@@ -4847,6 +4855,7 @@ exports.tests = [
         return a === 2 && b === 2 && c === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -4873,6 +4882,7 @@ exports.tests = [
         return a === 1 && i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -4899,6 +4909,7 @@ exports.tests = [
         return i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -4928,6 +4939,7 @@ exports.tests = [
         return typeof a === 'undefined' && b === 0 && c === 2;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -4954,6 +4966,7 @@ exports.tests = [
         return typeof a === 'undefined' && i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -4980,6 +4993,7 @@ exports.tests = [
         return i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5009,6 +5023,7 @@ exports.tests = [
         return a === 2 && b === 0 && c === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5035,6 +5050,7 @@ exports.tests = [
         return a === 1 && i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5061,6 +5077,7 @@ exports.tests = [
         return i === 1;
       */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5162,6 +5179,7 @@ exports.tests = [
           return new C(42).x() === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox67: firefox.privateClassFields,
@@ -5190,6 +5208,7 @@ exports.tests = [
           return new C().x() === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox67: firefox.privateClassFields,
@@ -5218,6 +5237,7 @@ exports.tests = [
           return new C().x() === 42 && new C().x(null) === void 0;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox80: firefox.privateFields,
@@ -5249,6 +5269,7 @@ exports.tests = [
           return new C().x() === 42 && new C().x(null) === void 0;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox74: firefox.privateClassFields,
@@ -5278,6 +5299,7 @@ exports.tests = [
           return new C().x === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox66: false,
@@ -5342,6 +5364,7 @@ exports.tests = [
           return new C().x() === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox80: firefox.privateFields,
@@ -5365,6 +5388,7 @@ exports.tests = [
           return C.x === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox2: false,
           firefox74: false,
@@ -5399,6 +5423,7 @@ exports.tests = [
           return new C().x() === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox68: false,
@@ -5431,6 +5456,7 @@ exports.tests = [
           return new C().x() === 42;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox68: false,
@@ -5465,6 +5491,7 @@ exports.tests = [
           return new C().x() === 42 && y;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox68: false,
@@ -5499,6 +5526,7 @@ exports.tests = [
           return new C().x() === 42 && y;
         */},
         res: {
+          babel7corejs2: true,
           ie11: false,
           firefox60: false,
           firefox68: false,
