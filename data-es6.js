@@ -19082,6 +19082,7 @@ exports.tests = [
         }
       */},
       res: {
+        babel7corejs2: true,
         closure: false,
         closure20200517: true,
         firefox2: false,
