@@ -1425,7 +1425,6 @@ exports.tests = [
     edge18: false,
     firefox2: false,
     firefox90: false,
-    ie11: false,
     opera10_50: false,
     safari12: false,
   }
