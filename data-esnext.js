@@ -1413,21 +1413,50 @@ exports.tests = [
   category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-accessible-object-hasownproperty',
-  exec: function () {/*
-    return Object.hasOwn({ x: 2 }, "x") === true;
-  */},
-  res: {
-    babel7corejs3: babel.corejs,
-    typescript3_2corejs3: typescript.corejs,
-    ie11: false,
-    chrome1: false,
-    chrome90: false,
-    edge18: false,
-    firefox2: false,
-    firefox90: false,
-    opera10_50: false,
-    safari12: false,
-  }
+  subtests: [
+    {
+      name: "Basic functionality",
+      exec: function () {/*
+        return Object.hasOwn({ x: 2 }, "x") === true;
+      */},
+      res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        chrome1: false,
+        chrome90: false,
+        edge18: false,
+        firefox2: false,
+        firefox90: false,
+        opera10_50: false,
+        safari12: false,
+      }
+    },
+    {
+      name: "ToObject called before ToPropertyKey",
+      exec: function () {/*
+        let ok = !!Object.hasOwn;
+        try {
+          Object.hasOwn(null, { toString() { ok = false } });
+          return false;
+        } catch {
+          return ok;
+        }
+      */},
+      res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        chrome1: false,
+        chrome90: false,
+        edge18: false,
+        firefox2: false,
+        firefox90: false,
+        opera10_50: false,
+        safari12: false,
+      }
+    }
+  ]
 }
 ];
 
