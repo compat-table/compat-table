@@ -1435,11 +1435,11 @@ exports.tests = [
     {
       name: "ToObject called before ToPropertyKey",
       exec: function () {/*
-        let ok = !!Object.hasOwn;
+        var ok = !!Object.hasOwn;
         try {
-          Object.hasOwn(null, { toString() { ok = false } });
+          Object.hasOwn(null, { toString: function () { ok = false } });
           return false;
-        } catch {
+        } catch (e) {
           return ok;
         }
       */},

@@ -1947,14 +1947,14 @@ return Object.hasOwn({ x: 2 }, &quot;x&quot;) === true;
 <td class="no" data-browser="opera_mobile63">No</td>
 </tr>
 <tr class="subtest" data-parent="Object.hasOwn" id="test-Object.hasOwn_ToObject_called_before_ToPropertyKey"><td><span><a class="anchor" href="#test-Object.hasOwn_ToObject_called_before_ToPropertyKey">&#xA7;</a>ToObject called before ToPropertyKey</span><script data-source="
-let ok = !!Object.hasOwn;
+var ok = !!Object.hasOwn;
 try {
-  Object.hasOwn(null, { toString() { ok = false } });
+  Object.hasOwn(null, { toString: function () { ok = false } });
   return false;
-} catch {
+} catch (e) {
   return ok;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nlet ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString() { ok = false } });\n  return false;\n} catch {\n  return ok;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nlet ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString() { ok = false } });\n  return false;\n} catch {\n  return ok;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nvar ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString: function () { ok = false } });\n  return false;\n} catch (e) {\n  return ok;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nvar ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString: function () { ok = false } });\n  return false;\n} catch (e) {\n  return ok;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
