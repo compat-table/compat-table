@@ -71,7 +71,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-    rhino1_7: false,
+        rhino1_7: false,
       }
     },
   ],
@@ -127,7 +127,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-    rhino1_7: false,
+        rhino1_7: false,
       }
     },
     {
@@ -561,7 +561,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-    rhino1_7: false,
+        rhino1_7: false,
       },
     },
     {
@@ -1328,7 +1328,7 @@ exports.tests = [
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
         graalvm21: graalvm.es2022flag,
-    rhino1_7: false,
+        rhino1_7: false,
       }
     },
     {
@@ -1491,7 +1491,7 @@ exports.tests = [
         firefox90: false,
         opera10_50: false,
         safari12: false,
-    rhino1_7: false,
+        rhino1_7: false,
       }
     },
     {
