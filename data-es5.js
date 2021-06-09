@@ -35,7 +35,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -64,8 +64,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Trailing commas in object literals',
@@ -82,7 +82,7 @@ exports.tests = [
       opera12_10: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -93,8 +93,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Trailing commas in array literals',
@@ -111,7 +111,7 @@ exports.tests = [
       opera12_10: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -122,8 +122,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Reserved words as property names',
@@ -144,7 +144,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: false,
+      rhino1_7: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -155,8 +155,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   }],
   separator: 'after'
 },
@@ -190,7 +190,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -232,7 +232,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -262,7 +262,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -294,7 +294,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -327,7 +327,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -357,7 +357,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -387,7 +387,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -417,7 +417,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -447,7 +447,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -477,7 +477,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -507,7 +507,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -545,7 +545,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -577,7 +577,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     },
     separator: 'after'
   }],
@@ -614,7 +614,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -644,7 +644,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -674,7 +674,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -704,7 +704,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -734,7 +734,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -764,7 +764,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -794,7 +794,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -824,7 +824,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -854,7 +854,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -884,8 +884,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   }, {
     name: 'Array.prototype.sort: compareFn must be function or undefined',
     exec: function () {
@@ -929,7 +929,7 @@ exports.tests = [
       konq4_9: null,
       konq4_13: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: false,
       duktape2_0: true,
@@ -940,8 +940,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Array.prototype.sort: compareFn may be explicit undefined',
@@ -966,7 +966,7 @@ exports.tests = [
       konq4_9: null,
       konq4_13: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: true,
       duktape2_0: true,
@@ -977,8 +977,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   }],
 },
 {
@@ -1011,7 +1011,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1061,6 +1061,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_2_0: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -1092,7 +1093,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     },
     separator: 'after'
   }
@@ -1128,7 +1129,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1157,7 +1158,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1198,7 +1199,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   }]
 },
@@ -1233,7 +1234,7 @@ exports.tests = [
     graalvm20: true,
     graalvm20_1: true,
     jerryscript1_0: true,
-    hermes0_7_0: true,
+    hermes0_7_0: true
   },
 },
 {
@@ -1270,7 +1271,7 @@ exports.tests = [
     graalvm20: true,
     graalvm20_1: true,
     jerryscript1_0: true,
-    hermes0_7_0: true,
+    hermes0_7_0: true
   },
   separator: 'after'
 },
@@ -1310,7 +1311,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1345,7 +1346,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1380,7 +1381,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   }]
 },
@@ -1409,7 +1410,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1420,8 +1421,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'parseInt ignores leading zeros',
@@ -1441,7 +1442,7 @@ exports.tests = [
       konq4_9: false,
       konq4_13: false,
       besen: true,
-      rhino1_7: false,
+      rhino1_7: true,
       ejs: true,
       android4_4: true,
       duktape2_0: true,
@@ -1452,7 +1453,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1473,7 +1474,7 @@ exports.tests = [
       opera12: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1484,8 +1485,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Arguments toStringTag is "Arguments"',
@@ -1506,7 +1507,7 @@ exports.tests = [
       opera12: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1517,8 +1518,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   },
   {
     name: 'Zero-width chars in identifiers',
@@ -1554,7 +1555,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_2_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1575,7 +1576,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1586,7 +1587,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
+      hermes0_7_0: true
     }
   },
   {
@@ -1617,7 +1618,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: false,
       ejs: null,
       android4_0: null,
       duktape2_0: false,
@@ -1629,7 +1630,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_0: true,
-      hermes0_7_0: false,
+      hermes0_7_0: false
     }
   },
   {
@@ -1653,7 +1654,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: null,
+      rhino1_7: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1664,8 +1665,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       jerryscript1_0: true,
-      hermes0_7_0: true,
-    },
+      hermes0_7_0: true
+    }
   }]
 },
 {
@@ -1704,7 +1705,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: '"this" is undefined in functions',
@@ -1737,7 +1739,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: '"this" is not coerced to object in primitive methods',
@@ -1768,7 +1771,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: '"this" is not coerced to object in primitive accessors',
@@ -1812,7 +1816,8 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_3_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'legacy octal is a SyntaxError',
@@ -1844,7 +1849,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'assignment to unresolvable identifiers is a ReferenceError',
@@ -1874,7 +1880,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'assignment to eval or arguments is a SyntaxError',
@@ -1908,7 +1915,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'assignment to non-writable properties is a TypeError',
@@ -1940,7 +1948,8 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: false,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'eval or arguments bindings is a SyntaxError',
@@ -1976,7 +1985,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'arguments.caller removed or is a TypeError',
@@ -2009,7 +2019,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'arguments.callee is a TypeError',
@@ -2040,7 +2051,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: '(function(){}).caller and (function(){}).arguments is a TypeError',
@@ -2072,7 +2084,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'arguments is unmapped',
@@ -2108,7 +2121,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'eval() can\'t create bindings',
@@ -2138,7 +2152,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalLexicalScopeSuccess,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'deleting bindings is a SyntaxError',
@@ -2168,7 +2183,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'deleting non-configurable properties is a TypeError',
@@ -2198,7 +2214,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: '"with" is a SyntaxError',
@@ -2228,7 +2245,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'repeated parameter names is a SyntaxError',
@@ -2258,7 +2276,8 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'function expressions with matching name and argument are valid',
@@ -2294,6 +2313,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: true,
+      rhino1_7: true
     }
   }]
 }

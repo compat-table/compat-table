@@ -45,6 +45,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -73,6 +74,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -102,9 +104,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
-      },
-    ],
+      }
+    ]
   },
   {
     name: 'Object static methods',
@@ -145,6 +148,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -182,6 +186,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -219,7 +224,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: "Object.getOwnPropertyDescriptors doesn't provide undefined descriptors",
@@ -246,9 +252,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
-      },
-    ],
+          rhino1_7: false
+        }
+      }
+    ]
   },
   {
     name: 'Array.prototype.includes',
@@ -286,6 +293,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       },
       {
@@ -334,6 +342,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -364,9 +373,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
-      },
-    ],
+      }
+    ]
   },
   {
     name: 'String padding',
@@ -408,6 +418,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       },
       {
@@ -444,6 +455,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       }
     ]
@@ -481,6 +493,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -508,9 +521,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
-      },
-    ],
+      }
+    ]
   },
   {
     name: 'async functions',
@@ -557,6 +571,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -597,6 +612,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -626,6 +642,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -654,7 +671,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'await',
@@ -689,6 +707,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -726,6 +745,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -754,6 +774,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -788,6 +809,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -817,6 +839,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -856,6 +879,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -895,6 +919,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -935,6 +960,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -971,6 +997,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1002,7 +1029,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'async function prototype, Symbol.toStringTag',
@@ -1030,7 +1058,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'async function constructor',
@@ -1068,8 +1097,9 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
-      },
+          rhino1_7: false
+        }
+      }
     ]
   },
   {
@@ -1091,7 +1121,7 @@ exports.tests = [
           edge17: {
             val: false,
             note_id: 'edg-shared-memory-spectre',
-            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.',
+            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.'
           },
           firefox2: false,
           firefox46: firefox.nightly,
@@ -1101,19 +1131,19 @@ exports.tests = [
           firefox57: {
             val: "flagged",
             note_id: 'fx-shared-memory-spectre',
-            note_html: 'The feature was <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs. It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>',
+            note_html: 'The feature was <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs. It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>'
           },
           firefox72: firefox.nightly,
           firefox74: firefox.beta,
           firefox77: {
             val: false,
             note_id: "fx-shared-memory-esr-disable",
-            note_html: 'The feature was intentionally disabled to prepare for Firefox 78 ESR',
+            note_html: 'The feature was intentionally disabled to prepare for Firefox 78 ESR'
           },
           firefox79: {
             val: true,
             note_id: "fx-shared-memory-cors-isolation",
-            note_html: 'The feature is available with <a href="https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/">properly set CORS isolation headers</a> or via enabling <code>dom.postMessage.sharedArrayBuffer.bypassCOOP_COEP.insecure.enabled</code> setting under <code>about:config</code>',
+            note_html: 'The feature is available with <a href="https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/">properly set CORS isolation headers</a> or via enabling <code>dom.postMessage.sharedArrayBuffer.bypassCOOP_COEP.insecure.enabled</code> setting under <code>about:config</code>'
           },
           opera10_50: false,
           chrome48: chrome.sharedmem,
@@ -1121,14 +1151,14 @@ exports.tests = [
           chrome63: {
             val: false,
             note_id: 'chr-shared-memory-spectre',
-            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.',
+            note_html: 'The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.'
           },
           chrome68: true,
           safari10_1: true,
           safari11: {
             val: false,
             note_id: 'sf-shared-memory-spectre',
-            note_html: 'The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.',
+            note_html: 'The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.'
           },
           safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
           duktape2_0: false,
@@ -1137,6 +1167,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1171,6 +1202,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1208,6 +1240,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1244,6 +1277,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1280,6 +1314,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1316,6 +1351,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1352,6 +1388,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1388,6 +1425,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1424,6 +1462,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1460,6 +1499,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1496,6 +1536,7 @@ exports.tests = [
           graalvm20: false,
           graalvm20_1: false,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1532,6 +1573,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1568,6 +1610,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1604,6 +1647,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1640,6 +1684,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1676,6 +1721,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -1712,6 +1758,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       }
     ]
@@ -1725,7 +1772,7 @@ exports.tests = [
     links: [
       {
         note_id: 'new-gen-fn',
-        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a>',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a>'
       }
     ],
     exec: function(){/*
@@ -1752,6 +1799,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -1763,7 +1811,7 @@ exports.tests = [
     links: [
       {
         note_id: 'gen-throw',
-        note_html: '<a href="https://github.com/tc39/ecma262/issues/293">\'Semantics of yield* in throw case\' GitHub issue in ECMA-262 repo.</a>',
+        note_html: '<a href="https://github.com/tc39/ecma262/issues/293">\'Semantics of yield* in throw case\' GitHub issue in ECMA-262 repo.</a>'
       }
     ],
     exec: function(){/*
@@ -1801,6 +1849,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: true
     }
   },
   {
@@ -1811,8 +1860,8 @@ exports.tests = [
     links: [
       {
         note_id: 'strict-fn-non-strict-params',
-        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a>',
-      },
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a>'
+      }
     ],
     exec: function(){/*
      function foo(...a){}
@@ -1836,6 +1885,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -1847,7 +1897,7 @@ exports.tests = [
     links: [
       {
         note_id: 'nested-rest-destruct-decl',
-        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>'
       }
     ],
     exec: function(){/*
@@ -1872,6 +1922,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -1882,8 +1933,8 @@ exports.tests = [
     links: [
       {
         note_id: 'nested-rest-destruct-params',
-        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
-      },
+        note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>'
+      }
     ],
     exec: function(){/*
      return function([x, ...[y, ...z]]) {
@@ -1908,6 +1959,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -1919,8 +1971,8 @@ exports.tests = [
     links: [
       {
         note_id: 'proxy-enumerate-removed',
-        note_html: '<a href="https://github.com/tc39/ecma262/pull/367">\'Normative: Remove [[Enumerate]] and associated reflective capabilities\' GitHub Pull Request in ECMA-262 repo.</a>',
-      },
+        note_html: '<a href="https://github.com/tc39/ecma262/pull/367">\'Normative: Remove [[Enumerate]] and associated reflective capabilities\' GitHub Pull Request in ECMA-262 repo.</a>'
+      }
     ],
     exec: function() {/*
      var passed = true;
@@ -1949,7 +2001,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'Proxy internal calls, Array.prototype.includes',
@@ -1983,7 +2036,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'Object.prototype getter/setter methods',
@@ -2023,6 +2077,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: true
       }
     },
       {
@@ -2057,6 +2112,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -2091,7 +2147,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__defineSetter__',
@@ -2126,7 +2183,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__defineSetter__, symbols',
@@ -2160,7 +2218,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '__defineSetter__, ToObject(this)',
@@ -2194,7 +2253,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupGetter__',
@@ -2230,7 +2290,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupGetter__, prototype chain',
@@ -2266,7 +2327,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupGetter__, symbols',
@@ -2302,7 +2364,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '__lookupGetter__, ToObject(this)',
@@ -2334,7 +2397,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '__lookupGetter__, data properties can shadow accessors',
@@ -2366,7 +2430,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupSetter__',
@@ -2402,7 +2467,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupSetter__, prototype chain',
@@ -2438,7 +2504,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       },
       {
         name: '__lookupSetter__, symbols',
@@ -2474,7 +2541,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '__lookupSetter__, ToObject(this)',
@@ -2506,7 +2574,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '__lookupSetter__, data properties can shadow accessors',
@@ -2538,7 +2607,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: true
+        }
       }
     ]
   },
@@ -2571,6 +2641,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false
       }
     },
       {
@@ -2597,6 +2668,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -2629,6 +2701,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -2661,6 +2734,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       }
     ]
@@ -2696,7 +2770,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'RegExp "u" flag, case folding',
@@ -2724,7 +2799,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'assignments allowed in for-in head in non-strict mode',
@@ -2761,7 +2837,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: true
+    }
   },
   {
     name: 'arguments.caller removed',
@@ -2791,7 +2868,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'object rest/spread properties',
@@ -2811,7 +2889,7 @@ exports.tests = [
           closure20181028: {
             val: false,
             note_id: 'closure-object-assign',
-            note_html: 'Requires native support for <code>Object.assign</code>',
+            note_html: 'Requires native support for <code>Object.assign</code>'
           },
           typescript2_1corejs2: true,
           jsx: true,
@@ -2832,6 +2910,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -2846,7 +2925,7 @@ exports.tests = [
           closure: true,
           closure20190121: {
             val: false,
-            note_id: 'closure-object-assign',
+            note_id: 'closure-object-assign'
           },
           jsx: true,
           ie11: false,
@@ -2867,9 +2946,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
-      },
-    ],
+      }
+    ]
   },
   {
     name: 'Promise.prototype.finally',
@@ -2931,6 +3011,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -2978,6 +3059,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -3027,6 +3109,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       }
     ]
@@ -3063,6 +3146,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -3097,7 +3181,6 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       webkit: true,
-      rhino1_7: null,
       xs6: null,
       jxa: null,
       node0_10: null,
@@ -3111,7 +3194,8 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
-    },
+      rhino1_7: false
+    }
   },
   {
     name: 'RegExp named capture groups',
@@ -3146,6 +3230,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false
     }
   },
   {
@@ -3173,6 +3258,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -3202,6 +3288,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false
     }
   },
   {
@@ -3242,6 +3329,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -3287,6 +3375,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       }
     ]
@@ -3329,7 +3418,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'await',
@@ -3364,7 +3454,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'yield',
@@ -3401,6 +3492,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       }
     ]
@@ -3439,7 +3531,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'empty description',
@@ -3468,7 +3561,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'undefined description',
@@ -3498,8 +3592,9 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
-      },
+          rhino1_7: false
+        }
+      }
     ]
   },
   {
@@ -3528,7 +3623,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }, {
       name: 'arrows',
       exec: function(){/*
@@ -3553,7 +3649,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }, {
       name: '[native code]',
       exec: function(){/*
@@ -3578,7 +3675,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
-      },
+        rhino1_7: true
+      }
     }, {
       name: 'class expression with implicit constructor',
       exec: function(){/*
@@ -3600,7 +3698,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }, {
       name: 'class expression with explicit constructor',
       exec: function(){/*
@@ -3622,7 +3721,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }, {
       name: 'unicode escape sequences in identifiers',
       exec: function(){/*
@@ -3642,7 +3742,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }, {
       name: 'methods and computed property names',
       exec: function(){/*
@@ -3664,7 +3765,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
-      },
+        rhino1_7: false
+      }
     }]
   },
   {
@@ -3695,7 +3797,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'PARAGRAPH SEPARATOR can appear in string literals',
@@ -3719,8 +3822,9 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
-      },
+          rhino1_7: false
+        }
+      }
     ]
   },
   {
@@ -3754,6 +3858,7 @@ exports.tests = [
       chrome73: true,
       chrome74: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -3789,6 +3894,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false
     }
   },
   {
@@ -3818,7 +3924,6 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          rhino1_7: false,
           phantom: true,
           node0_12: true,
           safari3: false,
@@ -3838,6 +3943,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       },
       {
@@ -3861,7 +3967,6 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          rhino1_7: false,
           phantom: true,
           node0_12: true,
           safari3: false,
@@ -3881,6 +3986,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       },
       {
@@ -3894,7 +4000,7 @@ exports.tests = [
           closure20190325: {
             val: false,
             note_id: 'closure-string-trimstart',
-            note_html: 'Requires native support for String.prototype.trimLeft.',
+            note_html: 'Requires native support for String.prototype.trimLeft.'
           },
           closure20190709: true,
           typescript1corejs2: typescript.corejs,
@@ -3913,6 +4019,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       },
       {
@@ -3926,7 +4033,7 @@ exports.tests = [
           closure20190325: {
             val: false,
             note_id: 'closure-string-trimend',
-            note_html: 'Requires native support for String.prototype.trimRight.',
+            note_html: 'Requires native support for String.prototype.trimRight.'
           },
           closure20190709: true,
           typescript1corejs2: typescript.corejs,
@@ -3945,6 +4052,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true
         }
       }
     ]
@@ -3957,7 +4065,7 @@ exports.tests = [
     links: [
       {
         note_id: 'flatten-compat-issue',
-        note_html: 'Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a>',
+        note_html: 'Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a>'
       }
     ],
     subtests: [
@@ -3993,6 +4101,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4022,6 +4131,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4054,8 +4164,9 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
-      },
+      }
     ]
   },
   {
@@ -4103,7 +4214,8 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'throws on non-global regex',
@@ -4142,9 +4254,10 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
-        },
-      },
-    ],
+          rhino1_7: false
+        }
+      }
+    ]
   },
   {
     name: 'BigInt',
@@ -4174,7 +4287,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'constructor',
@@ -4197,7 +4311,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'BigInt.asUintN',
@@ -4219,7 +4334,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'BigInt.asIntN',
@@ -4241,7 +4357,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'BigInt64Array',
@@ -4266,7 +4383,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'BigUint64Array',
@@ -4291,7 +4409,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'DataView.prototype.getBigInt64',
@@ -4317,7 +4436,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: 'DataView.prototype.getBigUint64',
@@ -4343,9 +4463,10 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
-        },
-      },
-    ],
+          rhino1_7: false
+        }
+      }
+    ]
   },
   {
     name: 'Promise.allSettled',
@@ -4384,6 +4505,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false
     }
   },
   {
@@ -4433,6 +4555,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false
       }
     }, {
       name: '"globalThis" global property has correct property descriptor',
@@ -4479,6 +4602,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false
       }
     }]
   },
@@ -4515,6 +4639,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4543,6 +4668,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4571,6 +4697,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4601,6 +4728,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false
         }
       },
       {
@@ -4624,6 +4752,7 @@ exports.tests = [
           chrome89: false,
           safari13_1: true,
           safaritp: true,
+          rhino1_7: false
         }
       }
     ]
@@ -4662,6 +4791,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -4697,6 +4827,7 @@ exports.tests = [
       graalvm21: true,
       ios13_4: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -4736,6 +4867,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -4765,12 +4897,13 @@ exports.tests = [
           safari14: true,
           safaritp: true,
           hermes0_7_0: false,
+          rhino1_7: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
-          graalvm21: true,
+          graalvm21: true
         }
       }
-    ],
+    ]
   },
   {
     name: 'WeakReferences',
@@ -4808,6 +4941,7 @@ exports.tests = [
           graalvm20: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       },
       {
@@ -4837,6 +4971,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false
         }
       }
     ]
@@ -4875,7 +5010,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '||= short-circuiting behaviour',
@@ -4902,7 +5038,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '||= setter not unecessarily invoked',
@@ -4929,7 +5066,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '&&= basic support',
@@ -4959,7 +5097,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '&&= short-circuiting behaviour',
@@ -4986,7 +5125,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '&&= setter not unecessarily invoked',
@@ -5013,7 +5153,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '??= basic support',
@@ -5043,7 +5184,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '??= short-circuiting behaviour',
@@ -5070,7 +5212,8 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
+          rhino1_7: false
+        }
       },
       {
         name: '??= setter not unecessarily invoked',
@@ -5097,8 +5240,9 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
-        },
-      },
+          rhino1_7: false
+        }
+      }
     ]
   },
   {
@@ -5131,6 +5275,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false
     }
   },
   {
@@ -5165,6 +5310,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5198,6 +5344,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5227,6 +5374,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5259,6 +5407,7 @@ exports.tests = [
           graalvm20_3: true,
           babel7corejs3: false,
           typescript3_8corejs3: false,
+          rhino1_7: false
         }
       },
       {
@@ -5292,6 +5441,7 @@ exports.tests = [
           graalvm20_3: true,
           babel7corejs3: false,
           typescript3_8corejs3: false,
+          rhino1_7: false
         }
       },
       {
@@ -5317,8 +5467,9 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
-      },
+      }
     ]
   },
   {
@@ -5353,6 +5504,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5381,6 +5533,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5405,8 +5558,9 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false
         }
-      },
+      }
     ]
   },
   {
@@ -5447,6 +5601,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5480,6 +5635,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5516,6 +5672,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false
         }
       },
       {
@@ -5552,6 +5709,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false
         }
       }
     ]

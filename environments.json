@@ -3312,13 +3312,9 @@
   "rhino1_7": {
     "full": "Rhino 1.7",
     "short": "Rhino 1.7",
+    "family": "Rhino",
     "platformtype": "engine",
-    "obsolete": true,
-    "test_suites": [
-      "es5",
-      "es6",
-      "non-standard"
-    ]
+    "obsolete": true
   },
   "besen": {
     "full": "Bero's EcmaScript Engine (version 1.0.0.489)",

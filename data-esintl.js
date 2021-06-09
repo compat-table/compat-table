@@ -31,7 +31,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'has prototype of Object',
@@ -52,8 +53,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -80,7 +82,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'creates new Collator instances',
@@ -102,7 +105,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor called without new creates instances',
@@ -124,7 +128,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
@@ -188,7 +193,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'rejects invalid language tags',
@@ -220,8 +226,9 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -248,8 +255,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -276,8 +284,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -304,7 +313,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'exists on intl object',
@@ -325,7 +335,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'creates new NumberFormat instances',
@@ -347,7 +358,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor called without new creates instances',
@@ -369,7 +381,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
@@ -433,7 +446,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'accepts valid language tags',
@@ -465,8 +479,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -493,7 +508,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'creates new DateTimeFormat instances',
@@ -515,7 +531,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor called without new creates instances',
@@ -537,7 +554,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
 //    {
@@ -601,7 +619,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'rejects invalid language tags',
@@ -632,7 +651,8 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'resolvedOptions().timeZone defaults to the host environment',
@@ -661,6 +681,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        rhino1_7: false
       }
     },
     {
@@ -690,6 +711,7 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
+        rhino1_7: false
       }
     }
   ],
@@ -722,8 +744,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -754,8 +777,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -786,8 +810,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -818,8 +843,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -850,8 +876,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -882,8 +909,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -914,8 +942,9 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 ];
