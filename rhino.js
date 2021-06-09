@@ -36,7 +36,7 @@ function executeScript(scriptName) {
     });
 }
 
-// Key for .res (e.g. test.res.nashorn), automatic based on nashorn version.
+// Key for .res (e.g. test.res.rhino1_7), automatic based on rhino version.
 var rhinoKey = (function () {
     var script = 'print(org.mozilla.javascript.ImplementationVersion.get());\n' +
                  'quit()\n';
