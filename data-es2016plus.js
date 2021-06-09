@@ -45,6 +45,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
+          rhino1_7: false,
         }
       },
       {
@@ -73,6 +75,8 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
+          rhino1_7: false,
         }
       },
       {
@@ -102,6 +106,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
     ],
@@ -145,6 +150,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
@@ -182,6 +188,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
@@ -219,6 +226,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -246,6 +254,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
     ],
@@ -260,7 +269,7 @@ exports.tests = [
       {
         name: 'Array.prototype.includes',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
-        exec: function(){/*
+        exec: function () {/*
          return [1, 2, 3].includes(1)
          && ![1, 2, 3].includes(4)
          && ![1, 2, 3].includes(1, 1)
@@ -286,11 +295,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
       {
         name: 'Array.prototype.includes is generic',
-        exec: function(){/*
+        exec: function () {/*
          var passed = 0;
          return [].includes.call({
          get "0"() {
@@ -334,12 +344,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: '%TypedArray%.prototype.includes',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes',
-        exec: function(){/*
+        exec: function () {/*
          return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
          Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
          return new TypedArray([1, 2, 3]).includes(1)
@@ -364,6 +375,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
     ],
@@ -378,7 +390,7 @@ exports.tests = [
         name: 'String.prototype.padStart',
         spec: 'https://tc39.github.io/ecma262/#sec-string.prototype.padstart',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart',
-        exec: function(){/*
+        exec: function () {/*
          return 'hello'.padStart(10) === '     hello'
          && 'hello'.padStart(10, '1234') === '12341hello'
          && 'hello'.padStart() === 'hello'
@@ -408,13 +420,14 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
       {
         name: 'String.prototype.padEnd',
         spec: 'https://tc39.github.io/ecma262/#sec-string.prototype.padend',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd',
-        exec: function(){/*
+        exec: function () {/*
          return 'hello'.padEnd(10) === 'hello     '
          && 'hello'.padEnd(10, '1234') === 'hello12341'
          && 'hello'.padEnd() === 'hello'
@@ -444,6 +457,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       }
     ]
@@ -458,7 +472,7 @@ exports.tests = [
       {
         name: 'in parameter lists',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Parameter_definitions',
-        exec: function(){/*
+        exec: function () {/*
           return typeof function f( a, b, ){} === 'function';
         */},
         res: {
@@ -481,12 +495,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'in argument lists',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Function_calls',
-        exec: function(){/*
+        exec: function () {/*
           return Math.min(1,2,3,) === 1;
         */},
         res: {
@@ -508,6 +523,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
     ],
@@ -557,6 +573,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -597,6 +614,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -626,11 +644,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'no "prototype" property',
-        exec: function(){/*
+        exec: function () {/*
           async function a(){};
           return !a.hasOwnProperty("prototype");
         */},
@@ -654,6 +673,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -689,6 +709,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -726,6 +747,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -754,6 +776,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -788,6 +811,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -817,6 +841,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -856,6 +881,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -895,6 +921,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -935,6 +962,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -971,11 +999,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'correct prototype chain',
-        exec: function() {/*
+        exec: function () {/*
           var asyncFunctionProto = Object.getPrototypeOf(async function (){});
           return asyncFunctionProto !== function(){}.prototype
             && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;
@@ -1002,11 +1031,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
         name: 'async function prototype, Symbol.toStringTag',
-        exec: function() {/*
+        exec: function () {/*
           return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] === "AsyncFunction";
         */},
         res: {
@@ -1030,11 +1060,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
         name: 'async function constructor',
-        exec: function() {/*
+        exec: function () {/*
           var a = async function (){}.constructor("return 'foo';");
           var p = a();
           if (!(p instanceof Promise)) {
@@ -1068,6 +1099,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
     ]
@@ -1137,6 +1169,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1156,8 +1189,8 @@ exports.tests = [
           firefox57: { val: "flagged", note_id: 'fx-shared-memory-spectre' },
           firefox72: firefox.nightly,
           firefox74: firefox.beta,
-          firefox77: {val: false, note_id: "fx-shared-memory-esr-disable" },
-          firefox79: {val: true, note_id: "fx-shared-memory-cors-isolation" },
+          firefox77: { val: false, note_id: "fx-shared-memory-esr-disable" },
+          firefox79: { val: true, note_id: "fx-shared-memory-cors-isolation" },
           opera10_50: false,
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
@@ -1171,6 +1204,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1193,8 +1227,8 @@ exports.tests = [
           firefox57: { val: "flagged", note_id: 'fx-shared-memory-spectre' },
           firefox72: firefox.nightly,
           firefox74: firefox.beta,
-          firefox77: {val: false, note_id: "fx-shared-memory-esr-disable" },
-          firefox79: {val: true, note_id: "fx-shared-memory-cors-isolation" },
+          firefox77: { val: false, note_id: "fx-shared-memory-esr-disable" },
+          firefox79: { val: true, note_id: "fx-shared-memory-cors-isolation" },
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
@@ -1208,6 +1242,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1229,8 +1264,8 @@ exports.tests = [
           firefox57: { val: "flagged", note_id: 'fx-shared-memory-spectre' },
           firefox72: firefox.nightly,
           firefox74: firefox.beta,
-          firefox77: {val: false, note_id: "fx-shared-memory-esr-disable" },
-          firefox79: {val: true, note_id: "fx-shared-memory-cors-isolation" },
+          firefox77: { val: false, note_id: "fx-shared-memory-esr-disable" },
+          firefox79: { val: true, note_id: "fx-shared-memory-cors-isolation" },
           opera10_50: false,
           chrome60: true,
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
@@ -1244,6 +1279,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1264,8 +1300,8 @@ exports.tests = [
           firefox57: { val: "flagged", note_id: 'fx-shared-memory-spectre' },
           firefox72: firefox.nightly,
           firefox74: firefox.beta,
-          firefox77: {val: false, note_id: "fx-shared-memory-esr-disable" },
-          firefox79: {val: true, note_id: "fx-shared-memory-cors-isolation" },
+          firefox77: { val: false, note_id: "fx-shared-memory-esr-disable" },
+          firefox79: { val: true, note_id: "fx-shared-memory-cors-isolation" },
           opera10_50: false,
           chrome48: chrome.sharedmem,
           chrome60: true,
@@ -1280,6 +1316,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1316,6 +1353,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1352,6 +1390,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1388,6 +1427,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1424,6 +1464,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1460,6 +1501,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1496,6 +1538,7 @@ exports.tests = [
           graalvm20: false,
           graalvm20_1: false,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1532,6 +1575,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1568,6 +1612,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1604,6 +1649,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1640,6 +1686,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1676,6 +1723,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -1712,6 +1760,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       }
     ]
@@ -1728,7 +1777,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a>',
       }
     ],
-    exec: function(){/*
+    exec: function () {/*
      function * generator() {
      yield 3;
      }
@@ -1752,6 +1801,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -1766,7 +1816,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/tc39/ecma262/issues/293">\'Semantics of yield* in throw case\' GitHub issue in ECMA-262 repo.</a>',
       }
     ],
-    exec: function(){/*
+    exec: function () {/*
      function * generator() {
      yield * (function * () {
      try {
@@ -1801,6 +1851,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: true,
     }
   },
   {
@@ -1814,7 +1865,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a>',
       },
     ],
-    exec: function(){/*
+    exec: function () {/*
      function foo(...a){}
      try {
      Function("function bar(...a){'use strict';}")();
@@ -1836,6 +1887,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -1850,7 +1902,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
       }
     ],
-    exec: function(){/*
+    exec: function () {/*
      var [x, ...[y, ...z]] = [1,2,3,4];
      return x === 1 && y === 2 && z + '' === '3,4';
      */},
@@ -1872,6 +1924,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -1885,7 +1938,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a>',
       },
     ],
-    exec: function(){/*
+    exec: function () {/*
      return function([x, ...[y, ...z]]) {
      return x === 1 && y === 2 && z + '' === '3,4';
      }([1,2,3,4]);
@@ -1908,6 +1961,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -1922,7 +1976,7 @@ exports.tests = [
         note_html: '<a href="https://github.com/tc39/ecma262/pull/367">\'Normative: Remove [[Enumerate]] and associated reflective capabilities\' GitHub Pull Request in ECMA-262 repo.</a>',
       },
     ],
-    exec: function() {/*
+    exec: function () {/*
      var passed = true;
      var proxy = new Proxy({}, {
      enumerate: function() {
@@ -1949,6 +2003,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     },
   },
   {
@@ -1956,7 +2011,7 @@ exports.tests = [
     category: '2016 misc',
     significance: 'tiny',
     spec: 'http://www.ecma-international.org/ecma-262/7.0/index.html#sec-array.prototype.includes',
-    exec: function() {/*
+    exec: function () {/*
      // Array.prototype.includes -> Get -> [[Get]]
      var get = [];
      var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
@@ -1983,6 +2038,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     },
   },
   {
@@ -2023,11 +2079,12 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: true,
       }
     },
-      {
-        name: '__defineGetter__, symbols',
-        exec: function () {/*
+    {
+      name: '__defineGetter__, symbols',
+      exec: function () {/*
          var obj = {};
          var sym = Symbol();
          function bar() { return "bar"; }
@@ -2036,32 +2093,33 @@ exports.tests = [
          return prop.get === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge12: true,
-          firefox2: false,
-          firefox36: true,
-          opera10_50: false,
-          chrome30: chrome.experimental,
-          chrome38: true,
-          node0_12: true,
-          safari9: true,
-          android4_0: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        }
-      },
-      {
-        name: '__defineGetter__, ToObject(this)',
-        exec: function () {/*
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge12: true,
+        firefox2: false,
+        firefox36: true,
+        opera10_50: false,
+        chrome30: chrome.experimental,
+        chrome38: true,
+        node0_12: true,
+        safari9: true,
+        android4_0: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
+      }
+    },
+    {
+      name: '__defineGetter__, ToObject(this)',
+      exec: function () {/*
          var key = '__accessors_test__';
          __defineGetter__.call(1, key, function(){});
          try {
@@ -2070,33 +2128,34 @@ exports.tests = [
          return true;
          }
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge16: true,
-          firefox2: false,
-          firefox48: true,
-          opera10_50: false,
-          opera12: true,
-          chrome60: chrome.harmony,
-          chrome62: true,
-          safari5_1: true,
-          safari9: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge16: true,
+        firefox2: false,
+        firefox48: true,
+        opera10_50: false,
+        opera12: true,
+        chrome60: chrome.harmony,
+        chrome62: true,
+        safari5_1: true,
+        safari9: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__defineSetter__',
-        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__',
-        exec: function () {/*
+    },
+    {
+      name: '__defineSetter__',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__',
+      exec: function () {/*
          var obj = {};
          function bar() {}
          Object.prototype.__defineSetter__.call(obj, "foo", bar);
@@ -2104,33 +2163,34 @@ exports.tests = [
          return prop.set === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: false,
-          firefox4: true,
-          opera10_50: false,
-          opera12: true,
-          chrome30: true,
-          node0_12: true,
-          safari4: true,
-          safari9: true,
-          android4_0: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: false,
+        firefox4: true,
+        opera10_50: false,
+        opera12: true,
+        chrome30: true,
+        node0_12: true,
+        safari4: true,
+        safari9: true,
+        android4_0: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__defineSetter__, symbols',
-        exec: function () {/*
+    },
+    {
+      name: '__defineSetter__, symbols',
+      exec: function () {/*
          var obj = {};
          var sym = Symbol();
          function bar(baz) {}
@@ -2139,32 +2199,33 @@ exports.tests = [
          return prop.set === bar && !prop.writable && prop.configurable
          && prop.enumerable;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge12: true,
-          firefox2: false,
-          firefox36: true,
-          opera10_50: false,
-          chrome30: chrome.experimental,
-          chrome38: true,
-          node0_12: true,
-          safari9: true,
-          android4_0: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge12: true,
+        firefox2: false,
+        firefox36: true,
+        opera10_50: false,
+        chrome30: chrome.experimental,
+        chrome38: true,
+        node0_12: true,
+        safari9: true,
+        android4_0: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       },
-      {
-        name: '__defineSetter__, ToObject(this)',
-        exec: function () {/*
+    },
+    {
+      name: '__defineSetter__, ToObject(this)',
+      exec: function () {/*
          var key = '__accessors_test__';
          __defineSetter__.call(1, key, function(){});
          try {
@@ -2173,33 +2234,34 @@ exports.tests = [
          return true;
          }
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge16: true,
-          firefox2: false,
-          firefox48: true,
-          opera10_50: false,
-          opera12: true,
-          chrome60: chrome.harmony,
-          chrome62: true,
-          safari5_1: true,
-          safari9: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge16: true,
+        firefox2: false,
+        firefox48: true,
+        opera10_50: false,
+        opera12: true,
+        chrome60: chrome.harmony,
+        chrome62: true,
+        safari5_1: true,
+        safari9: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupGetter__',
-        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupGetter__',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__',
+      exec: function () {/*
          var obj = {
          get foo() { return "bar"},
          qux: 1
@@ -2209,32 +2271,33 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "qux") === void undefined
          && Object.prototype.__lookupGetter__.call(obj, "baz") === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: true,
-          opera10_50: true,
-          opera12: true,
-          chrome30: true,
-          node0_12: true,
-          safari3_1: true,
-          safari9: true,
-          android4_0: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: true,
+        opera10_50: true,
+        opera12: true,
+        chrome30: true,
+        node0_12: true,
+        safari3_1: true,
+        safari9: true,
+        android4_0: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupGetter__, prototype chain',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupGetter__, prototype chain',
+      exec: function () {/*
          var obj = {
          get foo() { return "bar"},
          qux: 1
@@ -2244,33 +2307,34 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, "qux") === void undefined
          && Object.prototype.__lookupGetter__.call(obj, "baz") === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: false,
-          firefox4: true,
-          opera10_50: false,
-          opera12: true,
-          chrome30: true,
-          node0_12: true,
-          safari4: true,
-          safari9: true,
-          android4_0: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: false,
+        firefox4: true,
+        opera10_50: false,
+        opera12: true,
+        chrome30: true,
+        node0_12: true,
+        safari4: true,
+        safari9: true,
+        android4_0: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupGetter__, symbols',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupGetter__, symbols',
+      exec: function () {/*
          var sym = Symbol();
          var sym2 = Symbol();
          var obj = {};
@@ -2281,32 +2345,33 @@ exports.tests = [
          && Object.prototype.__lookupGetter__.call(obj, sym2) === void undefined
          && Object.prototype.__lookupGetter__.call(obj, Symbol()) === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge12: true,
-          firefox2: false,
-          firefox36: true,
-          opera10_50: false,
-          chrome30: chrome.experimental,
-          chrome38: true,
-          node0_12: true,
-          safari9: true,
-          android4_0: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge12: true,
+        firefox2: false,
+        firefox36: true,
+        opera10_50: false,
+        chrome30: chrome.experimental,
+        chrome38: true,
+        node0_12: true,
+        safari9: true,
+        android4_0: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       },
-      {
-        name: '__lookupGetter__, ToObject(this)',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupGetter__, ToObject(this)',
+      exec: function () {/*
          __lookupGetter__.call(1, 'key');
          try {
          __lookupGetter__.call(null, 'key');
@@ -2314,64 +2379,66 @@ exports.tests = [
          return true;
          }
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: false,
-          firefox24: true,
-          opera10_50: false,
-          opera12: true,
-          chrome60: chrome.harmony,
-          chrome62: true,
-          safari5_1: true,
-          safari9: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: false,
+        firefox24: true,
+        opera10_50: false,
+        opera12: true,
+        chrome60: chrome.harmony,
+        chrome62: true,
+        safari5_1: true,
+        safari9: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       },
-      {
-        name: '__lookupGetter__, data properties can shadow accessors',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupGetter__, data properties can shadow accessors',
+      exec: function () {/*
          var a = { };
          var b = Object.create(a);
          b.foo = 1;
          a.__defineGetter__("foo", function () {})
          return b.__lookupGetter__("foo") === void undefined
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          firefox2: false,
-          firefox4: true,
-          opera10_50: false,
-          opera12: true,
-          chrome57: true,
-          node8: true,
-          safari4: true,
-          safari9: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        firefox2: false,
+        firefox4: true,
+        opera10_50: false,
+        opera12: true,
+        chrome57: true,
+        node8: true,
+        safari4: true,
+        safari9: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupSetter__',
-        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupSetter__',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__',
+      exec: function () {/*
          var obj = {
          set foo(baz) { return "bar"; },
          qux: 1
@@ -2381,32 +2448,33 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "qux") === void undefined
          && Object.prototype.__lookupSetter__.call(obj, "baz") === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: true,
-          opera10_50: true,
-          opera12: true,
-          chrome30: true,
-          node0_12: true,
-          safari3_1: true,
-          safari9: true,
-          android4_0: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: true,
+        opera10_50: true,
+        opera12: true,
+        chrome30: true,
+        node0_12: true,
+        safari3_1: true,
+        safari9: true,
+        android4_0: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupSetter__, prototype chain',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupSetter__, prototype chain',
+      exec: function () {/*
          var obj = {
          set foo(baz) { return "bar"; },
          qux: 1
@@ -2416,33 +2484,34 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, "qux") === void undefined
          && Object.prototype.__lookupSetter__.call(obj, "baz") === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: false,
-          firefox4: true,
-          opera10_50: false,
-          opera12: true,
-          chrome30: true,
-          node0_12: true,
-          safari4: true,
-          safari9: true,
-          android4_0: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: false,
+        firefox4: true,
+        opera10_50: false,
+        opera12: true,
+        chrome30: true,
+        node0_12: true,
+        safari4: true,
+        safari9: true,
+        android4_0: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
       },
-      {
-        name: '__lookupSetter__, symbols',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupSetter__, symbols',
+      exec: function () {/*
          var sym = Symbol();
          var sym2 = Symbol();
          var obj = {};
@@ -2453,32 +2522,33 @@ exports.tests = [
          && Object.prototype.__lookupSetter__.call(obj, sym2) === void undefined
          && Object.prototype.__lookupSetter__.call(obj, Symbol()) === void undefined;
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          edge12: true,
-          firefox2: false,
-          firefox36: true,
-          opera10_50: false,
-          chrome30: chrome.experimental,
-          chrome38: true,
-          node0_12: true,
-          safari9: true,
-          android4_0: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        edge12: true,
+        firefox2: false,
+        firefox36: true,
+        opera10_50: false,
+        chrome30: chrome.experimental,
+        chrome38: true,
+        node0_12: true,
+        safari9: true,
+        android4_0: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       },
-      {
-        name: '__lookupSetter__, ToObject(this)',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupSetter__, ToObject(this)',
+      exec: function () {/*
          __lookupSetter__.call(1, 'key');
          try {
          __lookupSetter__.call(null, 'key');
@@ -2486,60 +2556,62 @@ exports.tests = [
          return true;
          }
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: true,
-          firefox2: false,
-          firefox24: true,
-          opera10_50: false,
-          opera12: true,
-          chrome60: chrome.harmony,
-          chrome62: true,
-          safari5_1: true,
-          safari9: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: true,
+        firefox2: false,
+        firefox24: true,
+        opera10_50: false,
+        opera12: true,
+        chrome60: chrome.harmony,
+        chrome62: true,
+        safari5_1: true,
+        safari9: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       },
-      {
-        name: '__lookupSetter__, data properties can shadow accessors',
-        exec: function () {/*
+    },
+    {
+      name: '__lookupSetter__, data properties can shadow accessors',
+      exec: function () {/*
          var a = { };
          var b = Object.create(a);
          b.foo = 1;
          a.__defineSetter__("foo", function () {})
          return b.__lookupSetter__("foo") === void undefined
          */},
-        res: {
-          babel6corejs2: babel.corejs,
-          typescript1corejs2: typescript.corejs,
-          ie11: false,
-          firefox2: false,
-          firefox4: true,
-          opera10_50: false,
-          opera12: true,
-          chrome57: true,
-          node8: true,
-          safari4: true,
-          safari9: true,
-          ios5_1: true,
-          duktape2_0: false,
-          duktape2_2: true,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        },
-      }
+      res: {
+        babel6corejs2: babel.corejs,
+        typescript1corejs2: typescript.corejs,
+        ie11: false,
+        firefox2: false,
+        firefox4: true,
+        opera10_50: false,
+        opera12: true,
+        chrome57: true,
+        node8: true,
+        safari4: true,
+        safari9: true,
+        ios5_1: true,
+        duktape2_0: false,
+        duktape2_2: true,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: true,
+      },
+    }
     ]
   },
   {
@@ -2571,37 +2643,39 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false,
       }
     },
-      {
-        name: '__defineSetter__',
-        exec: function () {/*
+    {
+      name: '__defineSetter__',
+      exec: function () {/*
          // Object.prototype.__defineSetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
          var def = [];
          var p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
          Object.prototype.__defineSetter__.call(p, "foo", Object);
          return def + '' === "foo";
          */},
-        res: {
-          firefox2: false,
-          firefox18: true,
-          opera10_50: false,
-          ie11: false,
-          edge13: true,
-          chrome52: true,
-          safari10: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        }
-      },
-      {
-        name: '__lookupGetter__',
-        exec: function () {/*
+      res: {
+        firefox2: false,
+        firefox18: true,
+        opera10_50: false,
+        ie11: false,
+        edge13: true,
+        chrome52: true,
+        safari10: true,
+        duktape2_0: false,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
+      }
+    },
+    {
+      name: '__lookupGetter__',
+      exec: function () {/*
          // Object.prototype.__lookupGetter__ -> [[GetOwnProperty]]
          // Object.prototype.__lookupGetter__ -> [[GetPrototypeOf]]
          var gopd = [];
@@ -2613,27 +2687,28 @@ exports.tests = [
          Object.prototype.__lookupGetter__.call(p, "foo");
          return gopd + '' === "foo" && gpo;
          */},
-        res: {
-          ie11: false,
-          edge14: true,
-          chrome57: true,
-          firefox2: false,
-          firefox49: true,
-          opera10_50: false,
-          node8: true,
-          safari10: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        }
-      },
-      {
-        name: '__lookupSetter__',
-        exec: function () {/*
+      res: {
+        ie11: false,
+        edge14: true,
+        chrome57: true,
+        firefox2: false,
+        firefox49: true,
+        opera10_50: false,
+        node8: true,
+        safari10: true,
+        duktape2_0: false,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
+      }
+    },
+    {
+      name: '__lookupSetter__',
+      exec: function () {/*
          // Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]
          // Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]
          var gopd = [];
@@ -2645,24 +2720,25 @@ exports.tests = [
          Object.prototype.__lookupSetter__.call(p, "foo");
          return gopd + '' === "foo" && gpo;
          */},
-        res: {
-          ie11: false,
-          edge14: true,
-          chrome57: true,
-          firefox2: false,
-          firefox49: true,
-          opera10_50: false,
-          node8: true,
-          safari10: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-        }
+      res: {
+        ie11: false,
+        edge14: true,
+        chrome57: true,
+        firefox2: false,
+        firefox49: true,
+        opera10_50: false,
+        node8: true,
+        safari10: true,
+        duktape2_0: false,
+        jerryscript2_3_0: false,
+        jerryscript2_4_0: true,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        hermes0_7_0: true,
+        rhino1_7: false,
       }
+    }
     ]
   },
   {
@@ -2671,7 +2747,7 @@ exports.tests = [
     significance: 'tiny',
     spec: 'https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys',
-    exec: function() {/*
+    exec: function () {/*
       var p = new Proxy({}, {
         ownKeys() {
           return ["a", "a"];
@@ -2696,6 +2772,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     },
   },
   {
@@ -2703,7 +2780,7 @@ exports.tests = [
     category: '2017 misc',
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/525',
-    exec: function() {/*
+    exec: function () {/*
      return "ſ".match(/\w/iu) && !"ſ".match(/\W/iu)
      && "\u212a".match(/\w/iu) && !"\u212a".match(/\W/iu)
      && "\u212a".match(/.\b/iu) && "ſ".match(/.\b/iu)
@@ -2724,6 +2801,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     },
   },
   {
@@ -2732,7 +2810,7 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in#Compatibility_Initializer_expressions_in_strict_mode',
     category: '2017 annex b',
     significance: 'tiny',
-    exec: function(){/*
+    exec: function () {/*
      for (var i = 0 in {}) {}
      return i === 0;
      */},
@@ -2761,6 +2839,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: true,
     },
   },
   {
@@ -2769,7 +2848,7 @@ exports.tests = [
     significance: 'tiny',
     spec: 'https://github.com/tc39/ecma262/pull/689',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller',
-    exec: function() {/*
+    exec: function () {/*
      return (function(){
        'use strict';
        return !Object.getOwnPropertyDescriptor(arguments,'caller');
@@ -2791,6 +2870,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     },
   },
   {
@@ -2832,6 +2912,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
@@ -2867,6 +2948,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
     ],
@@ -2880,7 +2962,7 @@ exports.tests = [
     subtests: [
       {
         name: 'basic support',
-        exec: function(){/*
+        exec: function () {/*
         var p1 = Promise.resolve("foo");
         var p2 = Promise.reject("bar");
         var score = 0;
@@ -2931,11 +3013,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'don\'t change resolution value',
-        exec: function(){/*
+        exec: function () {/*
         var score = 0;
         function thenFn(result)  {
           score += (result === "foo");
@@ -2978,11 +3061,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'change rejection value',
-        exec: function(){/*
+        exec: function () {/*
         var score = 0;
         Promise
           .reject("foobar")
@@ -3027,6 +3111,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       }
     ]
@@ -3036,7 +3121,7 @@ exports.tests = [
     spec: 'https://github.com/tc39/proposal-template-literal-revision',
     category: '2018 misc',
     significance: 'small',
-    exec: function() {/*
+    exec: function () {/*
      function tag(strings, a) {
      return strings[0] === void 0 &&
      strings.raw[0] === "\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}" &&
@@ -3063,6 +3148,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -3071,11 +3157,11 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll',
     category: '2018 features',
     significance: 'small',
-    exec: function(){/*
+    exec: function () {/*
     const regex = /foo.bar/s;
     return regex.test('foo\nbar');
   */},
-    res : {
+    res: {
       es6tr: null,
       tr: null,
       babel6corejs2: true,
@@ -3111,6 +3197,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     },
   },
   {
@@ -3119,7 +3206,7 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges',
     category: '2018 features',
     significance: 'small',
-    exec: function(){/*
+    exec: function () {/*
       var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
       return result.groups.year === '2016'
         && result.groups.month === '03'
@@ -3129,7 +3216,7 @@ exports.tests = [
         && result[2] === '03'
         && result[3] === '11';
       */},
-    res : {
+    res: {
       babel6corejs2: true,
       ie11: false,
       firefox2: false,
@@ -3146,6 +3233,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     }
   },
   {
@@ -3154,11 +3242,11 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions',
     category: '2018 features',
     significance: 'small',
-    exec: function(){/*
+    exec: function () {/*
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
            !/(?<=a)b/.test('b');
   */},
-    res : {
+    res: {
       ie11: false,
       firefox2: false,
       firefox77: false,
@@ -3173,6 +3261,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -3202,6 +3291,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     }
   },
   {
@@ -3212,7 +3302,7 @@ exports.tests = [
     subtests: [
       {
         name: 'async generators',
-        exec: function(){/*
+        exec: function () {/*
           async function*generator(){
             yield 42;
           }
@@ -3242,12 +3332,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'for-await-of loops',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of',
-        exec: function(){/*
+        exec: function () {/*
           var asyncIterable = {};
           asyncIterable[Symbol.asyncIterator] = function(){
             var i = 0;
@@ -3287,6 +3378,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       }
     ]
@@ -3299,7 +3391,7 @@ exports.tests = [
     subtests: [
       {
         name: 'basic',
-        exec: function(){/*
+        exec: function () {/*
           try {
             throw new Error();
           }
@@ -3329,11 +3421,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
         name: 'await',
-        exec: function(){/*
+        exec: function () {/*
           (async function (){
             try {
               await Promise.reject();
@@ -3364,11 +3457,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
         name: 'yield',
-        exec: function(){/*
+        exec: function () {/*
           function *foo() {
             try {
               yield;
@@ -3401,6 +3495,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       }
     ]
@@ -3414,10 +3509,10 @@ exports.tests = [
     subtests: [
       {
         name: 'basic',
-        exec: function(){/*
+        exec: function () {/*
           return Symbol('foo').description === 'foo';
         */},
-        res : {
+        res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
           closure20190301: true,
@@ -3439,14 +3534,15 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
         name: 'empty description',
-        exec: function(){/*
+        exec: function () {/*
           return Symbol('').description === '';
         */},
-        res : {
+        res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
           closure20190301: true,
@@ -3468,15 +3564,16 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
         name: 'undefined description',
-        exec: function(){/*
+        exec: function () {/*
           return Symbol.prototype.hasOwnProperty('description')
             && Symbol().description === void undefined;
         */},
-        res : {
+        res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
           typescript1corejs2: typescript.fallthrough,
@@ -3498,6 +3595,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
     ]
@@ -3510,7 +3608,7 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString',
     subtests: [{
       name: 'functions created with the Function constructor',
-      exec: function(){/*
+      exec: function () {/*
         var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
         var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
         return fn + '' === str;
@@ -3528,10 +3626,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }, {
       name: 'arrows',
-      exec: function(){/*
+      exec: function () {/*
         var str = 'a => b';
         return eval('(' + str + ')') + '' === str;
     */},
@@ -3553,10 +3652,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }, {
       name: '[native code]',
-      exec: function(){/*
+      exec: function () {/*
         const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
         return NATIVE_EVAL_RE.test(eval + '');
     */},
@@ -3578,10 +3678,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: true,
       },
     }, {
       name: 'class expression with implicit constructor',
-      exec: function(){/*
+      exec: function () {/*
         var str = 'class A {}';
         return eval('(' + str + ')') + '' === str;
     */},
@@ -3600,10 +3701,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }, {
       name: 'class expression with explicit constructor',
-      exec: function(){/*
+      exec: function () {/*
         var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
         return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
     */},
@@ -3622,10 +3724,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }, {
       name: 'unicode escape sequences in identifiers',
-      exec: function(){/*
+      exec: function () {/*
         var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
         return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
     */},
@@ -3642,10 +3745,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }, {
       name: 'methods and computed property names',
-      exec: function(){/*
+      exec: function () {/*
         var str = '[ /\x2A a \x2A/ "f" /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
         return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;
     */},
@@ -3664,6 +3768,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: false,
+        rhino1_7: false,
       },
     }]
   },
@@ -3675,10 +3780,10 @@ exports.tests = [
     subtests: [
       {
         name: 'LINE SEPARATOR can appear in string literals',
-        exec: function(){/*
+        exec: function () {/*
           return eval("'\u2028'") === "\u2028";
         */},
-        res : {
+        res: {
           closure20190215: true,
           babel7corejs2: true,
           ie11: false,
@@ -3695,14 +3800,15 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
         name: 'PARAGRAPH SEPARATOR can appear in string literals',
-        exec: function(){/*
+        exec: function () {/*
           return eval("'\u2029'") === "\u2029";
         */},
-        res : {
+        res: {
           closure20190215: true,
           babel7corejs2: true,
           ie11: false,
@@ -3719,6 +3825,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
     ]
@@ -3754,6 +3861,7 @@ exports.tests = [
       chrome73: true,
       chrome74: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -3789,6 +3897,7 @@ exports.tests = [
       graalvm20: true,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     }
   },
   {
@@ -3800,7 +3909,7 @@ exports.tests = [
       {
         name: 'String.prototype.trimLeft',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft',
-        exec: function(){/*
+        exec: function () {/*
         return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';
       */},
         res: {
@@ -3818,7 +3927,6 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          rhino1_7: false,
           phantom: true,
           node0_12: true,
           safari3: false,
@@ -3838,12 +3946,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
       {
         name: 'String.prototype.trimRight',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight',
-        exec: function(){/*
+        exec: function () {/*
         return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';
       */},
         res: {
@@ -3861,7 +3970,6 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          rhino1_7: false,
           phantom: true,
           node0_12: true,
           safari3: false,
@@ -3881,12 +3989,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
       {
         name: 'String.prototype.trimStart',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart',
-        exec: function(){/*
+        exec: function () {/*
         return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';
       */},
         res: {
@@ -3913,12 +4022,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       },
       {
         name: 'String.prototype.trimEnd',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd',
-        exec: function(){/*
+        exec: function () {/*
         return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';
       */},
         res: {
@@ -3945,6 +4055,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: true,
         }
       }
     ]
@@ -3964,7 +4075,7 @@ exports.tests = [
       {
         name: 'Array.prototype.flat',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat',
-        exec: function(){/*
+        exec: function () {/*
         return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
       */},
         res: {
@@ -3993,12 +4104,13 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'Array.prototype.flatMap',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap',
-        exec: function(){/*
+        exec: function () {/*
         return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
           return [it.a, it.b];
         }).join('') === '1234';
@@ -4022,11 +4134,12 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'flat and flatMap in Array.prototype[@@unscopables]',
-        exec: function(){/*
+        exec: function () {/*
         return Array.prototype[Symbol.unscopables].flat
           && Array.prototype[Symbol.unscopables].flatMap;
       */},
@@ -4054,6 +4167,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
     ]
@@ -4067,7 +4181,7 @@ exports.tests = [
     subtests: [
       {
         name: 'basic functionality',
-        exec: function(){/*
+        exec: function () {/*
           var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
           if(iterator[Symbol.iterator]() !== iterator)return false;
           var a = '', b = '', c = '', step;
@@ -4103,11 +4217,12 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
         name: 'throws on non-global regex',
-        exec: function(){/*
+        exec: function () {/*
           if (typeof String.prototype.matchAll !== 'function') return false;
           try {
             '11a2bb'.matchAll(/(\d)(\D)/);
@@ -4142,6 +4257,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
     ],
@@ -4174,6 +4290,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4197,6 +4314,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4219,6 +4337,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4241,6 +4360,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4266,6 +4386,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4291,6 +4412,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4317,6 +4439,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
       {
@@ -4343,6 +4466,7 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         },
       },
     ],
@@ -4384,6 +4508,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: false,
+      rhino1_7: false,
     }
   },
   {
@@ -4394,7 +4519,7 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis',
     subtests: [{
       name: '"globalThis" global property is global object',
-      exec: function(){/*
+      exec: function () {/*
       var actualGlobal = Function('return this')();
       actualGlobal.__system_global_test__ = 42;
       return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
@@ -4433,10 +4558,11 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false,
       }
     }, {
       name: '"globalThis" global property has correct property descriptor',
-      exec: function(){/*
+      exec: function () {/*
       var actualGlobal = Function('return this')();
       if (typeof globalThis !== 'object') { return false; }
       if (!('globalThis' in actualGlobal)) { return false; }
@@ -4479,6 +4605,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
+        rhino1_7: false,
       }
     }]
   },
@@ -4491,12 +4618,12 @@ exports.tests = [
     subtests: [
       {
         name: 'optional property access',
-        exec: function(){/*
+        exec: function () {/*
           var foo = { baz: 42 };
           var bar = null;
           return foo?.baz === 42 && bar?.baz === void undefined;
         */},
-        res : {
+        res: {
           babel7corejs2: true,
           closure20200927: true,
           typescript3_7corejs3: true,
@@ -4506,7 +4633,7 @@ exports.tests = [
           firefox73: false,
           firefox74: true,
           chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
+          chrome78: { val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag" },
           chrome80: true,
           safari13_1: true,
           safaritp: true,
@@ -4515,16 +4642,17 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'optional bracket access',
-        exec: function(){/*
+        exec: function () {/*
           var foo = { baz: 42 };
           var bar = null;
           return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
         */},
-        res : {
+        res: {
           babel7corejs2: true,
           closure20200927: true,
           typescript3_7corejs3: true,
@@ -4534,7 +4662,7 @@ exports.tests = [
           firefox73: false,
           firefox74: true,
           chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
+          chrome78: { val: 'flagged', note_id: "chrome-optional-chaining" },
           chrome80: true,
           safari13_1: true,
           safaritp: true,
@@ -4543,16 +4671,17 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'optional method call',
-        exec: function(){/*
+        exec: function () {/*
           var foo = { baz: function () { return this.value; }, value: 42 };
           var bar = null;
           return foo?.baz() === 42 && bar?.baz() === void undefined;
         */},
-        res : {
+        res: {
           babel7corejs2: true,
           closure20200927: true,
           typescript3_7corejs3: true,
@@ -4562,7 +4691,7 @@ exports.tests = [
           firefox73: false,
           firefox74: true,
           chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
+          chrome78: { val: 'flagged', note_id: "chrome-optional-chaining" },
           chrome80: true,
           safari13_1: true,
           safaritp: true,
@@ -4571,18 +4700,19 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'optional function call',
-        exec: function(){/*
+        exec: function () {/*
           var foo = { baz: function () { return 42; } };
           var bar = {};
           function baz() { return 42; };
           var n;
           return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
         */},
-        res : {
+        res: {
           babel7corejs2: true,
           closure20200927: true,
           typescript3_7corejs3: true,
@@ -4592,7 +4722,7 @@ exports.tests = [
           firefox73: false,
           firefox74: true,
           chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
+          chrome78: { val: 'flagged', note_id: "chrome-optional-chaining" },
           chrome80: true,
           safari13_1: true,
           safaritp: true,
@@ -4601,18 +4731,19 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         }
       },
       {
         name: 'spread parameters after optional chaining',
-        exec: function(){/*
+        exec: function () {/*
           var fn = null;
           var n = null;
           var o = {};
 
           return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
         */},
-        res : {
+        res: {
           closure20200927: true,
           ie11: false,
           firefox10: false,
@@ -4624,6 +4755,7 @@ exports.tests = [
           chrome89: false,
           safari13_1: true,
           safaritp: true,
+          rhino1_7: false,
         }
       }
     ]
@@ -4634,7 +4766,7 @@ exports.tests = [
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator',
     category: '2020 features',
     significance: 'small',
-    exec: function(){/*
+    exec: function () {/*
       return (null ?? 42) === 42 &&
         (undefined ?? 42) === 42 &&
         (false ?? 42) === false &&
@@ -4642,7 +4774,7 @@ exports.tests = [
         (0 ?? 42) === 0 &&
         isNaN(NaN ?? 42);
     */},
-    res : {
+    res: {
       babel7corejs2: true,
       closure: false,
       closure20200315: true,
@@ -4652,7 +4784,7 @@ exports.tests = [
       firefox52: false,
       firefox72: true,
       chrome77: false,
-      chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
+      chrome78: { val: 'flagged', note_id: "chrome-nullish", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag" },
       chrome80: true,
       safari13_1: true,
       safaritp: true,
@@ -4662,6 +4794,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -4697,6 +4830,7 @@ exports.tests = [
       graalvm21: true,
       ios13_4: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -4728,7 +4862,7 @@ exports.tests = [
           firefox72: firefox.nightly,
           firefox79: true,
           chrome77: false,
-          chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
+          chrome84: { val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8." },
           chrome85: true,
           safari14: true,
           safaritp: true,
@@ -4736,6 +4870,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
@@ -4760,11 +4895,12 @@ exports.tests = [
           firefox72: firefox.nightly,
           firefox79: true,
           chrome77: false,
-          chrome84: {val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."},
+          chrome84: { val: 'flagged', note_id: "chrome-promise-any", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8." },
           chrome85: true,
           safari14: true,
           safaritp: true,
           hermes0_7_0: false,
+          rhino1_7: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
@@ -4781,12 +4917,12 @@ exports.tests = [
       {
         name: 'WeakRef minimal support',
         spec: 'https://github.com/tc39/proposal-weakrefs#weak-references',
-        exec: function(){/*
+        exec: function () {/*
           var O = {};
           var weakref = new WeakRef(O);
           return weakref.deref() === O;
         */},
-        res : {
+        res: {
           ie11: false,
           firefox2: false,
           firefox74: {
@@ -4797,7 +4933,7 @@ exports.tests = [
           firefox79: true,
           opera10_50: false,
           chrome65: false,
-          chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8."},
+          chrome74: { val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8." },
           chrome85: true,
           safari13: false,
           safari14_1: true,
@@ -4808,16 +4944,17 @@ exports.tests = [
           graalvm20: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       },
       {
         name: 'FinalizationRegistry minimal support',
         spec: 'https://github.com/tc39/proposal-weakrefs#finalizers',
-        exec: function(){/*
+        exec: function () {/*
           var fr = new FinalizationRegistry(function() {});
           return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
         */},
-        res : {
+        res: {
           ie11: false,
           firefox2: false,
           firefox74: false,
@@ -4837,6 +4974,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          rhino1_7: false,
         }
       }
     ]
@@ -4866,7 +5004,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment", note_html: "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8."},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment", note_html: "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8." },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -4875,6 +5013,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -4893,7 +5032,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -4902,6 +5041,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -4920,7 +5060,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -4929,6 +5069,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -4950,7 +5091,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -4959,6 +5100,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -4977,7 +5119,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -4986,6 +5128,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -5004,7 +5147,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -5013,6 +5156,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -5034,7 +5178,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -5043,6 +5187,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -5061,7 +5206,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -5070,6 +5215,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
       {
@@ -5088,7 +5234,7 @@ exports.tests = [
           firefox77: firefox.nightly,
           firefox79: true,
           chrome80: false,
-          chrome84: {val: 'flagged', note_id: "chrome-logical-assignment"},
+          chrome84: { val: 'flagged', note_id: "chrome-logical-assignment" },
           chrome85: true,
           safari13: false,
           safari14: true,
@@ -5097,6 +5243,7 @@ exports.tests = [
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          rhino1_7: false,
         },
       },
     ]
@@ -5106,11 +5253,11 @@ exports.tests = [
     spec: 'https://github.com/tc39/proposal-numeric-separator',
     category: '2021 features',
     significance: 'small',
-    exec: function(){/*
+    exec: function () {/*
       return 1_000_000.000_001 === 1000000.000001 &&
         0b1010_0001_1000_0101 === 0b1010000110000101;
     */},
-    res : {
+    res: {
       babel7corejs2: true,
       typescript1corejs2: false,
       typescript2_7corejs2: true,
@@ -5131,6 +5278,7 @@ exports.tests = [
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
+      rhino1_7: false,
     }
   },
   {
@@ -5165,6 +5313,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5198,6 +5347,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5227,6 +5377,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5259,6 +5410,7 @@ exports.tests = [
           graalvm20_3: true,
           babel7corejs3: false,
           typescript3_8corejs3: false,
+          rhino1_7: false,
         }
       },
       {
@@ -5280,7 +5432,7 @@ exports.tests = [
           firefox80: firefox.privateFields,
           firefox90: true,
           chrome1: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
+          chrome78: { val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag" },
           chrome80: true,
           safari1: false,
           safari13_1: false,
@@ -5292,6 +5444,7 @@ exports.tests = [
           graalvm20_3: true,
           babel7corejs3: false,
           typescript3_8corejs3: false,
+          rhino1_7: false,
         }
       },
       {
@@ -5317,6 +5470,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
     ]
@@ -5353,6 +5507,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5381,6 +5536,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5405,6 +5561,7 @@ exports.tests = [
           graalvm19: false,
           graalvm20: true,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
     ]
@@ -5447,6 +5604,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5480,6 +5638,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5516,6 +5675,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       },
       {
@@ -5552,6 +5712,7 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          rhino1_7: false,
         }
       }
     ]
@@ -5559,13 +5720,13 @@ exports.tests = [
 ];
 
 //Shift annex B features to the bottom
-exports.tests = exports.tests.reduce(function(a,e) {
+exports.tests = exports.tests.reduce(function (a, e) {
   var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
   (a[index] = a[index] || []).push(e);
   return a;
-},[]).reduce(function(a,e) {
+}, []).reduce(function (a, e) {
   return a.concat(e);
-},[]);
+}, []);
