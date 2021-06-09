@@ -46,7 +46,6 @@ exports.tests = [
           graalvm20_1: true,
           hermes0_7_0: true,
           rhino1_7: false,
-          rhino1_7: false,
         }
       },
       {
@@ -75,7 +74,6 @@ exports.tests = [
           graalvm20: true,
           graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7: false,
           rhino1_7: false,
         }
       },
@@ -3183,7 +3181,6 @@ exports.tests = [
       safari11_1: true,
       safaritp: true,
       webkit: true,
-      rhino1_7: null,
       xs6: null,
       jxa: null,
       node0_10: null,
