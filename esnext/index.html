@@ -1258,7 +1258,7 @@ return [
   &apos;Int32Array&apos;,
   &apos;Uint32Array&apos;,
   &apos;Float32Array&apos;,
-  &apos;Float64Array&apos;,
+  &apos;Float64Array&apos;
 ].every(function (TypedArray) {
   var Constructor = globalThis[TypedArray];
   if (typeof Constructor !== &apos;function&apos;) {
@@ -1274,7 +1274,7 @@ return [
     &amp;&amp; arr.at(3) === undefined
     &amp;&amp; arr.at(-4) === undefined;
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return false;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array',\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return false;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return false;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nreturn [\n  'Int8Array',\n  'Uint8Array',\n  'Uint8ClampedArray',\n  'Int16Array',\n  'Uint16Array',\n  'Int32Array',\n  'Uint32Array',\n  'Float32Array',\n  'Float64Array'\n].every(function (TypedArray) {\n  var Constructor = globalThis[TypedArray];\n  if (typeof Constructor !== 'function') {\n    return false;\n  }\n  var arr = new Constructor([1, 2, 3]);\n  return arr.at(0) === 1\n    && arr.at(-3) === 1\n    && arr.at(1) === 2\n    && arr.at(-2) === 2\n    && arr.at(2) === 3\n    && arr.at(-1) === 3\n    && arr.at(3) === undefined\n    && arr.at(-4) === undefined;\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1553,11 +1553,11 @@ class A {
   #x;
   static check(obj) {
     return #x in obj;
-rhino1_7: false,
+rhino1_7: false
   }
 }
 return A.check(new A) &amp;&amp; !A.check({});
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nclass A {\n  #x;\n  static check(obj) {\n    return #x in obj;\nrhino1_7: false,\n  }\n}\nreturn A.check(new A) && !A.check({});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  #x;\n  static check(obj) {\n    return #x in obj;\nrhino1_7: false,\n  }\n}\nreturn A.check(new A) && !A.check({});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nclass A {\n  #x;\n  static check(obj) {\n    return #x in obj;\nrhino1_7: false\n  }\n}\nreturn A.check(new A) && !A.check({});\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  #x;\n  static check(obj) {\n    return #x in obj;\nrhino1_7: false\n  }\n}\nreturn A.check(new A) && !A.check({});\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
