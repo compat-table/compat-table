@@ -37,7 +37,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -71,9 +71,9 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ],
 },
 {
@@ -97,7 +97,7 @@ exports.tests = [
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -127,7 +127,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -155,7 +155,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -178,7 +178,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -201,9 +201,9 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ]
 },
 {
@@ -231,7 +231,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -254,7 +254,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -276,7 +276,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -298,7 +298,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -317,7 +317,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -336,7 +336,7 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -355,9 +355,9 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ]
 },
 {
@@ -380,8 +380,8 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'ArrayBuffer.prototype.realloc()',
@@ -397,9 +397,9 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -435,8 +435,8 @@ exports.tests = [
         nashorn10: true,
         graalvm19: true,
         graalvm20: true,
-        graalvm20_1: true,
-      },
+        graalvm20_1: true
+      }
     },
     {
       name: 'RegExp.$1-$9',
@@ -466,9 +466,9 @@ exports.tests = [
         nashorn10: true,
         graalvm19: true,
         graalvm20: true,
-        graalvm20_1: true,
-      },
-    },
+        graalvm20_1: true
+      }
+    }
   ]
 },
 {
@@ -494,8 +494,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'WeakMap.prototype.upsert',
@@ -515,9 +515,9 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -538,7 +538,7 @@ exports.tests = [
     firefox10: false,
     firefox60: false,
     chrome77: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -561,8 +561,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'extends Iterator',
@@ -580,8 +580,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.from, iterable',
@@ -600,8 +600,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.from, iterator',
@@ -625,8 +625,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.asIndexedPairs',
@@ -642,8 +642,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.drop',
@@ -659,8 +659,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.every',
@@ -676,8 +676,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.filter',
@@ -693,8 +693,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.find',
@@ -710,8 +710,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.flatMap',
@@ -727,8 +727,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.forEach',
@@ -746,8 +746,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.map',
@@ -763,8 +763,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.reduce',
@@ -780,8 +780,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.some',
@@ -797,8 +797,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.take',
@@ -814,8 +814,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype.toArray',
@@ -832,8 +832,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Iterator.prototype[@@toStringTag]',
@@ -849,8 +849,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'instanceof AsyncIterator',
@@ -866,8 +866,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'extends AsyncIterator',
@@ -885,8 +885,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.from, async iterable',
@@ -914,8 +914,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.from, iterable',
@@ -943,8 +943,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.from, iterator',
@@ -972,8 +972,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.asIndexedPairs',
@@ -997,8 +997,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.drop',
@@ -1022,8 +1022,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.every',
@@ -1041,8 +1041,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.filter',
@@ -1066,8 +1066,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.find',
@@ -1085,8 +1085,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.flatMap',
@@ -1110,8 +1110,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.forEach',
@@ -1130,8 +1130,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.map',
@@ -1155,8 +1155,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.reduce',
@@ -1174,8 +1174,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.some',
@@ -1193,8 +1193,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.take',
@@ -1218,8 +1218,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype.toArray',
@@ -1237,8 +1237,8 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'AsyncIterator.prototype[@@toStringTag]',
@@ -1254,9 +1254,9 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -1289,7 +1289,7 @@ exports.tests = [
     babel7corejs3: false,
     typescript3_2corejs3: false,
     closure: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -1323,12 +1323,12 @@ exports.tests = [
         },
         safaritp: {
           val: 'flagged',
-          note_id: 'safari-at-method',
+          note_id: 'safari-at-method'
         },
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
         graalvm21: graalvm.es2022flag,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1351,14 +1351,14 @@ exports.tests = [
         chrome85: false,
         safari14_1: {
           val: 'flagged',
-          note_id: 'safari-at-method',
+          note_id: 'safari-at-method'
         },
         safaritp: {
           val: 'flagged',
-          note_id: 'safari-at-method',
+          note_id: 'safari-at-method'
         },
         graalvm21: graalvm.es2022flag,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1373,7 +1373,7 @@ exports.tests = [
            'Int32Array',
            'Uint32Array',
            'Float32Array',
-           'Float64Array',
+           'Float64Array'
          ].every(function (TypedArray) {
            var Constructor = globalThis[TypedArray];
            if (typeof Constructor !== 'function') {
@@ -1397,18 +1397,18 @@ exports.tests = [
         chrome85: false,
         safari14_1: {
           val: 'flagged',
-          note_id: 'safari-at-method',
+          note_id: 'safari-at-method'
         },
         safaritp: {
           val: 'flagged',
-          note_id: 'safari-at-method',
+          note_id: 'safari-at-method'
         },
         babel7corejs3: babel.corejs,
         typescript4corejs3: typescript.corejs,
         graalvm21: graalvm.es2022flag,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ]
 },
 {
@@ -1436,7 +1436,7 @@ exports.tests = [
     ie11: false,
     opera10_50: false,
     safari12: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -1449,7 +1449,7 @@ exports.tests = [
       #x;
       static check(obj) {
         return #x in obj;
-    rhino1_7: false,
+    rhino1_7: false
       }
     }
     return A.check(new A) && !A.check({});
@@ -1466,7 +1466,7 @@ exports.tests = [
     ie11: false,
     opera10_50: false,
     safari12: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -1491,7 +1491,7 @@ exports.tests = [
         firefox90: false,
         opera10_50: false,
         safari12: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1516,7 +1516,7 @@ exports.tests = [
         firefox90: false,
         opera10_50: false,
         safari12: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     }
   ]

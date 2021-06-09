@@ -51,8 +51,8 @@ exports.tests = [
         graalvm20_1: false,
         jerryscript2_0: false,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'mutual recursion',
@@ -90,8 +90,8 @@ exports.tests = [
         graalvm20_1: false,
         jerryscript2_0: false,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     }
   ]
 },
@@ -135,8 +135,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '1 parameter, no brackets',
@@ -172,8 +172,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'multiple parameters',
@@ -209,8 +209,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'lexical "this" binding',
@@ -242,8 +242,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '"this" unchanged by call or apply',
@@ -275,8 +275,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'can\'t be bound, can be curried',
@@ -308,8 +308,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'lexical "arguments" binding',
@@ -342,8 +342,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'no line break between params and <code>=></code>',
@@ -374,8 +374,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'correct precedence',
@@ -406,8 +406,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'no "prototype" property',
@@ -434,8 +434,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'lexical "super" binding in constructors',
@@ -480,8 +480,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'lexical "super" binding in methods',
@@ -523,8 +523,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'lexical "new.target" binding',
@@ -552,9 +552,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -600,7 +600,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -638,7 +638,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -679,7 +679,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -720,7 +720,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -760,7 +760,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -798,8 +798,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-in loop iteration scope',
@@ -835,8 +835,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-of loop iteration scope',
@@ -872,8 +872,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'temporal dead zone',
@@ -907,8 +907,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'basic support (strict mode)',
@@ -948,7 +948,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -987,7 +987,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1029,7 +1029,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1071,7 +1071,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1112,7 +1112,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -1151,8 +1151,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-in loop iteration scope (strict mode)',
@@ -1189,8 +1189,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-of loop iteration scope (strict mode)',
@@ -1227,8 +1227,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'temporal dead zone (strict mode)',
@@ -1263,9 +1263,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -1313,8 +1313,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'is block-scoped',
@@ -1351,8 +1351,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'scope shadow resolution',
@@ -1391,8 +1391,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'cannot be in statements',
@@ -1432,8 +1432,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for loop statement scope',
@@ -1470,8 +1470,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'temporal dead zone',
@@ -1505,8 +1505,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for/for-in loop iteration scope',
@@ -1549,8 +1549,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-in loop binding shadowing parameter',
@@ -1587,8 +1587,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'basic support (strict mode)',
@@ -1625,8 +1625,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'is block-scoped (strict mode)',
@@ -1664,8 +1664,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'scope shadow resolution (strict mode)',
@@ -1705,8 +1705,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'cannot be in statements (strict mode)',
@@ -1747,8 +1747,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for loop statement scope (strict mode)',
@@ -1786,8 +1786,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'temporal dead zone (strict mode)',
@@ -1822,8 +1822,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for/for-in loop iteration scope (strict mode)',
@@ -1867,8 +1867,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'for-in loop binding shadowing parameter (strict mode)',
@@ -1905,8 +1905,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     }
   ],
 },
@@ -1949,8 +1949,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'explicit undefined defers to the default',
@@ -1984,8 +1984,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'defaults can refer to previous params',
@@ -2019,8 +2019,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'arguments object interaction',
@@ -2059,8 +2059,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'temporal dead zone',
@@ -2099,8 +2099,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'separate scope',
@@ -2134,8 +2134,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'new Function() support',
@@ -2168,9 +2168,9 @@ exports.tests = [
         jerryscript2_0: true,
         hermes0_7_0: true,
         jerryscript2_2_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -2213,8 +2213,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'function \'length\' property',
@@ -2245,8 +2245,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'arguments object interaction',
@@ -2285,8 +2285,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'can\'t be used in setters',
@@ -2324,8 +2324,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'new Function() support',
@@ -2354,9 +2354,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -2398,8 +2398,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with arrays, in array literals',
@@ -2431,8 +2431,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with sparse arrays, in function calls',
@@ -2467,8 +2467,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with sparse arrays, in array literals',
@@ -2497,8 +2497,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with strings, in function calls',
@@ -2529,8 +2529,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with strings, in array literals',
@@ -2560,8 +2560,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with astral plane strings, in function calls',
@@ -2591,8 +2591,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with astral plane strings, in array literals',
@@ -2621,8 +2621,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generator instances, in calls',
@@ -2655,8 +2655,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generator instances, in arrays',
@@ -2687,8 +2687,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generic iterables, in calls',
@@ -2726,8 +2726,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generic iterables, in arrays',
@@ -2760,8 +2760,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of iterables, in calls',
@@ -2795,8 +2795,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of iterables, in arrays',
@@ -2829,8 +2829,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'spreading non-iterables is a runtime error',
@@ -2865,9 +2865,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 {
@@ -2909,8 +2909,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'is block-scoped',
@@ -2948,8 +2948,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class expression',
@@ -2982,8 +2982,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'anonymous class',
@@ -3016,8 +3016,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor',
@@ -3054,8 +3054,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'prototype methods',
@@ -3092,8 +3092,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'string-keyed methods',
@@ -3130,8 +3130,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed prototype methods',
@@ -3168,8 +3168,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'optional semicolons',
@@ -3210,8 +3210,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'static methods',
@@ -3248,8 +3248,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed static methods',
@@ -3286,8 +3286,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'accessor properties',
@@ -3326,8 +3326,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed accessor properties',
@@ -3364,8 +3364,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'static accessor properties',
@@ -3404,8 +3404,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed static accessor properties',
@@ -3442,8 +3442,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class name is lexically scoped',
@@ -3480,8 +3480,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed names, temporal dead zone',
@@ -3513,8 +3513,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'methods aren\'t enumerable',
@@ -3547,8 +3547,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'implicit strict mode',
@@ -3583,8 +3583,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor requires new',
@@ -3617,8 +3617,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'extends',
@@ -3632,7 +3632,7 @@ exports.tests = [
         es6tr: {
           val: false,
           note_id: 'compiler-proto',
-          note_html: 'Requires native support for <code>Object.prototype.__proto__</code>',
+          note_html: 'Requires native support for <code>Object.prototype.__proto__</code>'
         },
         babel6corejs2: { val: false, note_id: 'compiler-proto' },
         tr: { val: false, note_id: 'compiler-proto' },
@@ -3665,8 +3665,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'extends expressions',
@@ -3682,11 +3682,11 @@ exports.tests = [
         tr: { val: false, note_id: 'compiler-proto' },
         typescript1corejs2: {
           val: false,
-          note_id: 'typescript-extends',
+          note_id: 'typescript-extends'
         },
         closure20180910: {
           val: false,
-          note_id: 'compiled-extends',
+          note_id: 'compiled-extends'
         },
         ejs: true,
         jsx: { val: false, note_id: 'compiled-extends' },
@@ -3708,8 +3708,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'extends null',
@@ -3745,8 +3745,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'new.target',
@@ -3784,9 +3784,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -3834,8 +3834,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'expression in constructors',
@@ -3874,8 +3874,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'in methods, property access',
@@ -3915,8 +3915,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'in methods, method calls',
@@ -3955,8 +3955,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'method calls use correct "this" binding',
@@ -3997,8 +3997,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor calls use correct "new.target" binding',
@@ -4032,8 +4032,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'is statically bound',
@@ -4076,8 +4076,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'super() invokes the correct constructor',
@@ -4120,9 +4120,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -4162,8 +4162,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand properties',
@@ -4198,8 +4198,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand methods',
@@ -4233,8 +4233,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'string-keyed shorthand methods',
@@ -4266,8 +4266,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'computed shorthand methods',
@@ -4299,7 +4299,7 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -4334,7 +4334,7 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     }
   ]
@@ -4381,8 +4381,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_2_0: true,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'labeled function statements',
@@ -4414,8 +4414,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript1_0: true,
         jerryscript2_2_0: true,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'function statements in if-statement clauses',
@@ -4448,9 +4448,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_1_0: true,
-        hermes0_7_0: false,
-      },
-    },
+        hermes0_7_0: false
+      }
+    }
   ],
 },
 {
@@ -4490,8 +4490,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_3_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'multiple __proto__ is an error',
@@ -4523,8 +4523,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'not a computed property',
@@ -4555,8 +4555,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'not a shorthand property',
@@ -4585,8 +4585,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'not a shorthand method',
@@ -4614,9 +4614,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -4659,8 +4659,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with sparse arrays',
@@ -4697,8 +4697,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with strings',
@@ -4732,8 +4732,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with astral plane strings',
@@ -4766,8 +4766,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with generator instances',
@@ -4803,8 +4803,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with generic iterables',
@@ -4841,8 +4841,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of generic iterables',
@@ -4879,8 +4879,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterator closing, break',
@@ -4913,8 +4913,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterator closing, throw',
@@ -4949,9 +4949,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -5001,8 +5001,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'generator function expressions',
@@ -5044,8 +5044,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'correct "this" binding',
@@ -5089,8 +5089,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'can\'t use "this" with new',
@@ -5123,8 +5123,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'sending',
@@ -5164,8 +5164,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '%GeneratorPrototype%',
@@ -5203,8 +5203,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '%GeneratorPrototype% prototype chain',
@@ -5245,8 +5245,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '%GeneratorPrototype%.constructor',
@@ -5285,8 +5285,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '%GeneratorPrototype%.throw',
@@ -5329,8 +5329,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '%GeneratorPrototype%.return',
@@ -5370,8 +5370,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'yield operator precedence',
@@ -5410,8 +5410,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, arrays',
@@ -5452,8 +5452,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, sparse arrays',
@@ -5494,8 +5494,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, strings',
@@ -5536,8 +5536,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, astral plane strings',
@@ -5577,8 +5577,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, generator instances',
@@ -5621,8 +5621,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, generic iterables',
@@ -5665,8 +5665,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'yield *, instances of iterables',
@@ -5709,8 +5709,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'yield * on non-iterables is a runtime error',
@@ -5752,8 +5752,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'yield *, iterator closing',
@@ -5799,8 +5799,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'yield *, iterator closing via throw()',
@@ -5843,8 +5843,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand generator methods',
@@ -5852,7 +5852,7 @@ exports.tests = [
         var o = {
           * generator() {
             yield 5; yield 6;
-          },
+          }
         };
         var iterator = o.generator();
         var item = iterator.next();
@@ -5887,8 +5887,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'string-keyed shorthand generator methods',
@@ -5896,7 +5896,7 @@ exports.tests = [
         var o = {
           * "foo bar"() {
             yield 5; yield 6;
-          },
+          }
         };
         var iterator = o["foo bar"]();
         var item = iterator.next();
@@ -5931,8 +5931,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed shorthand generators',
@@ -5941,7 +5941,7 @@ exports.tests = [
         var o = {
           * [garply] () {
             yield 5; yield 6;
-          },
+          }
         };
         var iterator = o.generator();
         var item = iterator.next();
@@ -5975,8 +5975,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand generator methods, classes',
@@ -6018,8 +6018,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed shorthand generators, classes',
@@ -6062,8 +6062,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand generators can\'t be constructors',
@@ -6100,9 +6100,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -6148,8 +6148,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'generator functions',
@@ -6186,8 +6186,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'arrow functions',
@@ -6224,8 +6224,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'classes',
@@ -6264,8 +6264,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'subclasses',
@@ -6302,9 +6302,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -6346,8 +6346,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'binary literals',
@@ -6382,8 +6382,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'octal supported by Number()',
@@ -6413,8 +6413,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'binary supported by Number()',
@@ -6444,9 +6444,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -6487,15 +6487,15 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'toString conversion',
       exec: function () {/*
         var a = {
           toString: function() { return "foo"; },
-          valueOf: function() { return "bar"; },
+          valueOf: function() { return "bar"; }
         };
         return `${a}` === "foo";
       */},
@@ -6519,8 +6519,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'tagged template literals',
@@ -6567,8 +6567,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'passed array is frozen',
@@ -6603,8 +6603,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'line break normalisation',
@@ -6643,8 +6643,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'TemplateStrings call site caching',
@@ -6691,8 +6691,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'TemplateStrings permanent caching',
@@ -6738,9 +6738,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -6783,8 +6783,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"y" flag, lastIndex',
@@ -6820,8 +6820,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"u" flag',
@@ -6849,8 +6849,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"u" flag, non-BMP Unicode characters',
@@ -6879,8 +6879,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"u" flag, Unicode code point escapes',
@@ -6908,8 +6908,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"u" flag, case folding',
@@ -6936,9 +6936,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -6982,8 +6982,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Uint8Array',
@@ -7019,8 +7019,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Uint8ClampedArray',
@@ -7058,8 +7058,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Int16Array',
@@ -7095,8 +7095,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Uint16Array',
@@ -7132,8 +7132,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Int32Array',
@@ -7169,8 +7169,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Uint32Array',
@@ -7206,8 +7206,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Float32Array',
@@ -7243,8 +7243,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Float64Array',
@@ -7281,8 +7281,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Int8)',
@@ -7318,8 +7318,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Uint8)',
@@ -7355,8 +7355,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Int16)',
@@ -7392,8 +7392,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Uint16)',
@@ -7429,8 +7429,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Int32)',
@@ -7466,8 +7466,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Uint32)',
@@ -7503,8 +7503,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Float32)',
@@ -7540,8 +7540,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'DataView (Float64)',
@@ -7577,8 +7577,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'ArrayBuffer[Symbol.species]',
@@ -7607,8 +7607,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructors require new',
@@ -7661,8 +7661,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructors accept generic iterables',
@@ -7704,8 +7704,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct prototype chains',
@@ -7757,9 +7757,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ].concat([ //@@ jph
     {
       name: '.from',
@@ -7783,7 +7783,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.of',
@@ -7808,7 +7808,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
     }},
     {
       name: '.prototype.subarray',
@@ -7841,7 +7841,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: true,
+      rhino1_7: true
     }},
     {
       name: '.prototype.join',
@@ -7866,7 +7866,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.indexOf',
@@ -7892,7 +7892,7 @@ exports.tests = [
       jerryscript2_0: false,
       jerryscript2_1_0: true,
       hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
     }},
     {
       name: '.prototype.lastIndexOf',
@@ -7918,7 +7918,7 @@ exports.tests = [
       jerryscript2_0: false,
       jerryscript2_1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.slice',
@@ -7943,7 +7943,7 @@ exports.tests = [
       jerryscript2_0: false,
       jerryscript2_1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.every',
@@ -7968,7 +7968,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.filter',
@@ -7992,7 +7992,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.forEach',
@@ -8017,7 +8017,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.map',
@@ -8041,7 +8041,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.reduce',
@@ -8066,7 +8066,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.reduceRight',
@@ -8091,7 +8091,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.reverse',
@@ -8116,7 +8116,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.some',
@@ -8141,7 +8141,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.sort',
@@ -8165,7 +8165,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.copyWithin',
@@ -8191,7 +8191,7 @@ exports.tests = [
       jerryscript2_0: false,
       jerryscript2_1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.find',
@@ -8216,7 +8216,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.findIndex',
@@ -8241,7 +8241,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.fill',
@@ -8266,7 +8266,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.keys',
@@ -8291,7 +8291,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.values',
@@ -8316,7 +8316,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype.entries',
@@ -8340,7 +8340,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false,
+      rhino1_7: false
     }},
     {
       name: '.prototype[Symbol.iterator]',
@@ -8367,7 +8367,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: true,
+      rhino1_7: true
     }},
     {
       name: '[Symbol.species]',
@@ -8393,8 +8393,8 @@ exports.tests = [
       jerryscript2_0: false,
       jerryscript2_2_0: true,
       hermes0_7_0: false,
-      rhino1_7: false,
-    }},
+      rhino1_7: false
+    }}
     ].map(function(m) {
       var eqFn = ' === "function"';
       var name = m.name;
@@ -8457,8 +8457,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor arguments',
@@ -8495,8 +8495,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor requires new',
@@ -8531,8 +8531,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor accepts null',
@@ -8567,8 +8567,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor invokes set',
@@ -8608,8 +8608,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'iterator closing',
@@ -8642,8 +8642,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Map.prototype.set returns this',
@@ -8677,8 +8677,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '-0 key converts to +0',
@@ -8716,8 +8716,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.size',
@@ -8755,8 +8755,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.delete',
@@ -8789,8 +8789,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.clear',
@@ -8823,8 +8823,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.forEach',
@@ -8857,8 +8857,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.keys',
@@ -8892,8 +8892,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.values',
@@ -8927,8 +8927,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype.entries',
@@ -8962,8 +8962,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype[Symbol.iterator]',
@@ -8996,8 +8996,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map.prototype isn\'t an instance',
@@ -9036,8 +9036,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Map iterator prototype chain',
@@ -9077,8 +9077,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Map[Symbol.species]',
@@ -9107,9 +9107,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -9155,8 +9155,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor arguments',
@@ -9192,8 +9192,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor requires new',
@@ -9228,8 +9228,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor accepts null',
@@ -9262,8 +9262,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor invokes add',
@@ -9303,8 +9303,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'iterator closing',
@@ -9340,8 +9340,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Set.prototype.add returns this',
@@ -9374,8 +9374,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '-0 key converts to +0',
@@ -9414,8 +9414,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.size',
@@ -9455,8 +9455,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.delete',
@@ -9489,8 +9489,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.clear',
@@ -9523,8 +9523,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.forEach',
@@ -9557,8 +9557,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.keys',
@@ -9591,8 +9591,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.values',
@@ -9626,8 +9626,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype.entries',
@@ -9661,8 +9661,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype[Symbol.iterator]',
@@ -9696,8 +9696,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set.prototype isn\'t an instance',
@@ -9736,8 +9736,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Set iterator prototype chain',
@@ -9777,8 +9777,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Set[Symbol.species]',
@@ -9807,9 +9807,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -9854,8 +9854,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor arguments',
@@ -9891,8 +9891,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor requires new',
@@ -9927,8 +9927,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor accepts null',
@@ -9963,8 +9963,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor invokes set',
@@ -10003,8 +10003,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'frozen objects as keys',
@@ -10039,8 +10039,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'iterator closing',
@@ -10073,8 +10073,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'WeakMap.prototype.set returns this',
@@ -10109,8 +10109,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'WeakMap.prototype.delete',
@@ -10143,8 +10143,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'no WeakMap.prototype.clear method',
@@ -10185,8 +10185,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '.has, .get and .delete methods accept primitives',
@@ -10218,8 +10218,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'WeakMap.prototype isn\'t an instance',
@@ -10257,9 +10257,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -10306,8 +10306,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor arguments',
@@ -10341,8 +10341,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor requires new',
@@ -10378,8 +10378,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor accepts null',
@@ -10413,8 +10413,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'constructor invokes add',
@@ -10453,8 +10453,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'iterator closing',
@@ -10487,8 +10487,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'WeakSet.prototype.add returns this',
@@ -10522,8 +10522,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'WeakSet.prototype.delete',
@@ -10556,8 +10556,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'no WeakSet.prototype.clear method',
@@ -10595,8 +10595,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '.has and .delete methods accept primitives',
@@ -10628,8 +10628,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'WeakSet.prototype isn\'t an instance',
@@ -10668,9 +10668,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -10713,8 +10713,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'no "prototype" property',
@@ -10740,8 +10740,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"get" handler',
@@ -10773,8 +10773,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"get" handler, instances of proxies',
@@ -10810,8 +10810,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"get" handler invariants',
@@ -10863,8 +10863,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"set" handler',
@@ -10898,8 +10898,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"set" handler, instances of proxies',
@@ -10932,8 +10932,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"set" handler invariants',
@@ -10985,8 +10985,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"has" handler',
@@ -11019,8 +11019,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"has" handler, instances of proxies',
@@ -11052,8 +11052,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"has" handler invariants',
@@ -11102,8 +11102,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"deleteProperty" handler',
@@ -11136,8 +11136,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"deleteProperty" handler invariant',
@@ -11177,8 +11177,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"getOwnPropertyDescriptor" handler',
@@ -11222,8 +11222,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"getOwnPropertyDescriptor" handler invariants',
@@ -11297,8 +11297,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"defineProperty" handler',
@@ -11336,8 +11336,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"defineProperty" handler invariants',
@@ -11390,8 +11390,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"getPrototypeOf" handler',
@@ -11424,8 +11424,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"getPrototypeOf" handler invariant',
@@ -11463,8 +11463,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"setPrototypeOf" handler',
@@ -11502,8 +11502,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"setPrototypeOf" handler invariant',
@@ -11543,8 +11543,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"isExtensible" handler',
@@ -11579,8 +11579,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"isExtensible" handler invariant',
@@ -11626,8 +11626,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"preventExtensions" handler',
@@ -11663,8 +11663,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"preventExtensions" handler invariant',
@@ -11702,8 +11702,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"ownKeys" handler',
@@ -11745,8 +11745,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"ownKeys" handler invariant',
@@ -11802,8 +11802,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"apply" handler',
@@ -11839,8 +11839,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"apply" handler invariant',
@@ -11878,8 +11878,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"construct" handler',
@@ -11913,8 +11913,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: '"construct" handler invariants',
@@ -11962,8 +11962,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Proxy.revocable',
@@ -11996,8 +11996,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.isArray support',
@@ -12022,8 +12022,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.stringify support',
@@ -12050,9 +12050,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -12089,8 +12089,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'CreateListFromArrayLike',
@@ -12118,8 +12118,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'instanceof operator',
@@ -12149,8 +12149,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'HasBinding',
@@ -12181,8 +12181,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'CreateDynamicFunction',
@@ -12210,8 +12210,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'ClassDefinitionEvaluation',
@@ -12240,8 +12240,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'IteratorComplete, IteratorValue',
@@ -12280,8 +12280,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'ToPropertyDescriptor',
@@ -12317,8 +12317,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Object.assign',
@@ -12345,8 +12345,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Object.defineProperties',
@@ -12373,8 +12373,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Function.prototype.bind',
@@ -12401,8 +12401,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Error.prototype.toString',
@@ -12430,8 +12430,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.raw',
@@ -12460,8 +12460,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp constructor',
@@ -12491,8 +12491,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.flags',
@@ -12534,8 +12534,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.test',
@@ -12562,8 +12562,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.toString',
@@ -12591,8 +12591,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.match]',
@@ -12621,8 +12621,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.replace]',
@@ -12651,8 +12651,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.search]',
@@ -12685,8 +12685,8 @@ exports.tests = [
         safaritp: true,
         webkit: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.split]',
@@ -12716,8 +12716,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.from',
@@ -12745,8 +12745,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.concat',
@@ -12782,8 +12782,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype iteration methods',
@@ -12823,8 +12823,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.pop',
@@ -12852,8 +12852,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.reverse',
@@ -12880,8 +12880,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.shift',
@@ -12909,8 +12909,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.splice',
@@ -12940,8 +12940,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.toString',
@@ -12969,8 +12969,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.stringify',
@@ -12998,8 +12998,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise resolve functions',
@@ -13027,8 +13027,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.prototype.match',
@@ -13057,8 +13057,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.prototype.replace',
@@ -13088,8 +13088,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.prototype.search',
@@ -13118,8 +13118,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.prototype.split',
@@ -13149,8 +13149,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Date.prototype.toJSON',
@@ -13179,9 +13179,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -13217,8 +13217,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.from',
@@ -13246,8 +13246,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.of',
@@ -13275,8 +13275,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.copyWithin',
@@ -13303,8 +13303,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.fill',
@@ -13331,8 +13331,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.pop',
@@ -13359,8 +13359,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.push',
@@ -13387,8 +13387,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.reverse',
@@ -13415,8 +13415,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.shift',
@@ -13445,8 +13445,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.splice',
@@ -13475,8 +13475,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.unshift',
@@ -13505,9 +13505,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -13542,8 +13542,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'SetIntegrityLevel',
@@ -13570,9 +13570,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -13607,8 +13607,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.pop',
@@ -13638,8 +13638,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.reverse',
@@ -13668,8 +13668,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.shift',
@@ -13698,8 +13698,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.splice',
@@ -13728,8 +13728,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype.unshift',
@@ -13758,9 +13758,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -13797,8 +13797,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Object.assign',
@@ -13826,8 +13826,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Object.prototype.hasOwnProperty',
@@ -13856,8 +13856,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Function.prototype.bind',
@@ -13885,9 +13885,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -13923,8 +13923,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'TestIntegrityLevel',
@@ -13952,8 +13952,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'SerializeJSONObject',
@@ -13981,9 +13981,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -14023,8 +14023,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.set',
@@ -14056,8 +14056,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.has',
@@ -14087,8 +14087,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.deleteProperty',
@@ -14119,8 +14119,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.getOwnPropertyDescriptor',
@@ -14152,8 +14152,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.defineProperty',
@@ -14184,8 +14184,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.getPrototypeOf',
@@ -14214,8 +14214,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.setPrototypeOf',
@@ -14246,8 +14246,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.isExtensible',
@@ -14277,8 +14277,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.preventExtensions',
@@ -14309,8 +14309,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.ownKeys, string keys',
@@ -14344,8 +14344,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.ownKeys, symbol keys',
@@ -14384,8 +14384,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.apply',
@@ -14414,8 +14414,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct',
@@ -14446,8 +14446,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct sets new.target meta-property',
@@ -14476,8 +14476,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct creates instances from third argument',
@@ -14507,8 +14507,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct, Array subclassing',
@@ -14536,8 +14536,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct, RegExp subclassing',
@@ -14567,8 +14567,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct, Function subclassing',
@@ -14595,8 +14595,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.construct, Promise subclassing',
@@ -14641,9 +14641,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -14689,7 +14689,7 @@ exports.tests = [
     jerryscript2_0: false,
     jerryscript2_3_0: true,
     hermes0_7_0: false,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -14731,8 +14731,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with sparse arrays',
@@ -14766,8 +14766,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with strings',
@@ -14801,8 +14801,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with astral plane strings',
@@ -14834,8 +14834,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generator instances',
@@ -14867,8 +14867,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generic iterables',
@@ -14901,8 +14901,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of generic iterables',
@@ -14935,8 +14935,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterator closing',
@@ -14969,8 +14969,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'trailing commas in iterable patterns',
@@ -15003,8 +15003,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with objects',
@@ -15043,8 +15043,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'object destructuring with primitives',
@@ -15081,8 +15081,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'trailing commas in object patterns',
@@ -15117,8 +15117,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'throws on null and undefined',
@@ -15166,8 +15166,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'computed properties',
@@ -15200,8 +15200,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'multiples in a single var statement',
@@ -15236,8 +15236,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'nested',
@@ -15273,8 +15273,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'in for-in loop heads',
@@ -15306,8 +15306,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'in for-of loop heads',
@@ -15341,8 +15341,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'in catch heads',
@@ -15379,8 +15379,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.catchDestructuring,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'rest',
@@ -15416,8 +15416,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'defaults',
@@ -15452,8 +15452,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'defaults, let temporal dead zone',
@@ -15492,9 +15492,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -15537,8 +15537,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with sparse arrays',
@@ -15573,7 +15573,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -15609,8 +15609,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with astral plane strings',
@@ -15643,8 +15643,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generator instances',
@@ -15677,8 +15677,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generic iterables',
@@ -15712,8 +15712,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of generic iterables',
@@ -15747,8 +15747,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterator closing',
@@ -15781,8 +15781,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterable destructuring expression',
@@ -15815,8 +15815,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'chained iterable destructuring',
@@ -15850,8 +15850,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'trailing commas in iterable patterns',
@@ -15886,8 +15886,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with objects',
@@ -15927,8 +15927,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'object destructuring with primitives',
@@ -15968,8 +15968,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'trailing commas in object patterns',
@@ -16007,8 +16007,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'object destructuring expression',
@@ -16041,8 +16041,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'parenthesised left-hand-side is a syntax error',
@@ -16080,8 +16080,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'chained object destructuring',
@@ -16118,8 +16118,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'throws on null and undefined',
@@ -16168,8 +16168,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'computed properties',
@@ -16202,8 +16202,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'nested',
@@ -16243,8 +16243,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'rest',
@@ -16281,8 +16281,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'nested rest',
@@ -16314,8 +16314,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'empty patterns',
@@ -16350,8 +16350,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'defaults',
@@ -16387,9 +16387,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -16432,8 +16432,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with sparse arrays',
@@ -16468,7 +16468,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -16504,8 +16504,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with astral plane strings',
@@ -16538,8 +16538,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generator instances',
@@ -16573,8 +16573,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with generic iterables',
@@ -16608,8 +16608,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'with instances of generic iterables',
@@ -16643,8 +16643,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'iterator closing',
@@ -16676,8 +16676,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'trailing commas in iterable patterns',
@@ -16712,8 +16712,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'with objects',
@@ -16753,8 +16753,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'object destructuring with primitives',
@@ -16791,8 +16791,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'trailing commas in object patterns',
@@ -16828,8 +16828,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'throws on null and undefined',
@@ -16871,8 +16871,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'computed properties',
@@ -16906,8 +16906,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'nested',
@@ -16943,8 +16943,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: '\'arguments\' interaction',
@@ -16980,8 +16980,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'new Function() support',
@@ -17012,8 +17012,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },{
       name: 'in parameters, function \'length\' property',
       exec: function(){/*
@@ -17045,8 +17045,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'rest',
@@ -17082,8 +17082,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'empty patterns',
@@ -17117,8 +17117,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'defaults',
@@ -17153,8 +17153,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'defaults, separate scope',
@@ -17187,8 +17187,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'defaults, new Function() support',
@@ -17218,8 +17218,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'aliased defaults, arrow function',
@@ -17253,8 +17253,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand defaults, arrow function',
@@ -17288,9 +17288,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -17350,8 +17350,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'constructor requires new',
@@ -17385,8 +17385,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.prototype isn\'t an instance',
@@ -17421,8 +17421,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.all',
@@ -17430,11 +17430,11 @@ exports.tests = [
       exec: function () {/*
         var fulfills = Promise.all([
           new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); })
         ]);
         var rejects = Promise.all([
           new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); })
         ]);
         var score = 0;
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -17466,19 +17466,19 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.all, generic iterables',
       exec: function () {/*
         var fulfills = Promise.all(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); })
         ]));
         var rejects = Promise.all(global.__createIterableObject([
           new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); })
         ]));
         var score = 0;
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -17509,8 +17509,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.race',
@@ -17518,11 +17518,11 @@ exports.tests = [
       exec: function () {/*
         var fulfills = Promise.race([
           new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); })
         ]);
         var rejects = Promise.race([
           new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); })
         ]);
         var score = 0;
         fulfills.then(function(result) { score += (result === "foo"); check(); });
@@ -17555,19 +17555,19 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.race, generic iterables',
       exec: function () {/*
         var fulfills = Promise.race(global.__createIterableObject([
           new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); })
         ]));
         var rejects = Promise.race(global.__createIterableObject([
           new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); })
         ]));
         var score = 0;
         fulfills.then(function(result) { score += (result === "foo"); check(); });
@@ -17598,8 +17598,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise[Symbol.species]',
@@ -17627,9 +17627,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -17668,8 +17668,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.is',
@@ -17705,8 +17705,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.getOwnPropertySymbols',
@@ -17746,8 +17746,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.setPrototypeOf',
@@ -17779,9 +17779,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -17819,8 +17819,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.getOwnPropertyDescriptor',
@@ -17850,8 +17850,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.getOwnPropertyNames',
@@ -17884,8 +17884,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.seal',
@@ -17915,8 +17915,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.freeze',
@@ -17946,8 +17946,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.preventExtensions',
@@ -17977,8 +17977,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.isSealed',
@@ -18008,8 +18008,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.isFrozen',
@@ -18039,8 +18039,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.isExtensible',
@@ -18070,8 +18070,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.keys',
@@ -18102,9 +18102,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -18144,8 +18144,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_3_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'set prototype',
@@ -18176,8 +18176,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_3_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'absent from Object.create(null)',
@@ -18207,8 +18207,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'present in hasOwnProperty()',
@@ -18238,8 +18238,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct property descriptor',
@@ -18274,8 +18274,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'present in Object.getOwnPropertyNames()',
@@ -18305,9 +18305,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -18352,8 +18352,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'function expressions',
@@ -18389,8 +18389,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'new Function',
@@ -18419,8 +18419,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'bound functions',
@@ -18448,8 +18448,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'variables (function)',
@@ -18478,8 +18478,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'object methods (function)',
@@ -18511,8 +18511,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'accessor properties',
@@ -18541,8 +18541,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand methods',
@@ -18573,8 +18573,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'shorthand methods (no lexical binding)',
@@ -18603,8 +18603,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'symbol-keyed methods',
@@ -18638,8 +18638,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class statements',
@@ -18653,7 +18653,7 @@ exports.tests = [
         babel6corejs2: {
           val: false,
           note_id: "name-configurable",
-          note_html: 'Requires function <code>"name"</code> properties to be natively configurable',
+          note_html: 'Requires function <code>"name"</code> properties to be natively configurable'
         },
         ie11: false,
         edge12: edge.experimental,
@@ -18673,8 +18673,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class expressions',
@@ -18702,8 +18702,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'variables (class)',
@@ -18735,8 +18735,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'object methods (class)',
@@ -18768,8 +18768,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class prototype methods',
@@ -18799,8 +18799,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'class static methods',
@@ -18830,8 +18830,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'isn\'t writable, is configurable',
@@ -18859,9 +18859,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -18899,8 +18899,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String.fromCodePoint',
@@ -18934,9 +18934,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -18977,8 +18977,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.normalize',
@@ -19006,8 +19006,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.repeat',
@@ -19041,8 +19041,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.startsWith',
@@ -19077,8 +19077,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.startsWith throws on RegExp',
@@ -19116,8 +19116,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.endsWith',
@@ -19152,8 +19152,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.endsWith throws on RegExp',
@@ -19191,8 +19191,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype.includes',
@@ -19232,8 +19232,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String.prototype[Symbol.iterator]',
@@ -19265,8 +19265,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'String iterator prototype chain',
@@ -19305,9 +19305,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -19351,8 +19351,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript2_0: false,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'tags\' names are lowercase',
@@ -19388,8 +19388,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript2_0: false,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'quotes in arguments are escaped',
@@ -19424,9 +19424,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -19464,7 +19464,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -19493,7 +19493,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_4_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -19521,7 +19521,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_4_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -19545,9 +19545,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_4_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ]
 },
 {
@@ -19590,7 +19590,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -19628,9 +19628,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ]
 },
 {
@@ -19674,8 +19674,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'typeof support',
@@ -19706,8 +19706,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'symbol keys are hidden to pre-ES6 code',
@@ -19748,8 +19748,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object.defineProperty support',
@@ -19790,8 +19790,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'symbols inherit from Symbol.prototype',
@@ -19826,8 +19826,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'cannot coerce to string or number',
@@ -19867,8 +19867,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'can convert with String()',
@@ -19893,8 +19893,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'new Symbol() throws',
@@ -19930,8 +19930,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Object(symbol)',
@@ -19967,8 +19967,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.stringify ignores symbol primitives',
@@ -20009,8 +20009,8 @@ exports.tests = [
         jerryscript2_0: true,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.stringify ignores symbol objects',
@@ -20059,7 +20059,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -20091,9 +20091,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -20142,8 +20142,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.isConcatSpreadable',
@@ -20177,8 +20177,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Symbol.iterator, existence',
@@ -20212,8 +20212,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Symbol.iterator, arguments object',
@@ -20245,8 +20245,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Symbol.species, existence',
@@ -20274,8 +20274,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: false,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Symbol.species, Array.prototype.concat',
@@ -20310,7 +20310,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20346,7 +20346,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20382,7 +20382,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20418,7 +20418,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20454,7 +20454,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20492,7 +20492,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20525,7 +20525,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20558,7 +20558,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20591,7 +20591,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20624,7 +20624,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20657,7 +20657,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20689,7 +20689,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20722,7 +20722,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20755,7 +20755,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20788,7 +20788,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -20826,8 +20826,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.toStringTag',
@@ -20859,8 +20859,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.toStringTag affects existing built-ins',
@@ -20909,8 +20909,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.toStringTag, new built-ins',
@@ -20960,8 +20960,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.toStringTag, misc. built-ins',
@@ -20991,8 +20991,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Symbol.unscopables',
@@ -21028,9 +21028,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -21068,8 +21068,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_1_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.match]',
@@ -21097,8 +21097,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.replace]',
@@ -21126,8 +21126,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.split]',
@@ -21155,8 +21155,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype[Symbol.search]',
@@ -21184,8 +21184,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'RegExp[Symbol.species]',
@@ -21214,9 +21214,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ]
 },
 // As this one is Annex B, it is separate from the above.
@@ -21255,7 +21255,7 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -21286,9 +21286,9 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript2_0: true,
-        hermes0_7_0: false,
+        hermes0_7_0: false
       }
-    },
+    }
   ]
 },
 {
@@ -21324,8 +21324,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'invalid character escapes',
@@ -21353,8 +21353,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'invalid control-character escapes',
@@ -21381,8 +21381,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'invalid Unicode escapes',
@@ -21411,8 +21411,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript2_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'invalid hexadecimal escapes',
@@ -21440,8 +21440,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript2_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'incomplete patterns and quantifiers',
@@ -21472,8 +21472,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_2_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'octal escape sequences',
@@ -21501,8 +21501,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_3_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'invalid backreferences become octal escapes',
@@ -21532,9 +21532,9 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
-    },
+        hermes0_7_0: true
+      }
+    }
   ],
 },
 {
@@ -21573,7 +21573,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -21606,7 +21606,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -21639,7 +21639,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -21671,7 +21671,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -21704,7 +21704,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -21738,7 +21738,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     },
     {
@@ -21772,7 +21772,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -21805,7 +21805,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -21840,8 +21840,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.of',
@@ -21876,8 +21876,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array[Symbol.species]',
@@ -21906,9 +21906,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -21946,8 +21946,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.find',
@@ -21980,8 +21980,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.findIndex',
@@ -22014,8 +22014,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.fill',
@@ -22049,8 +22049,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.keys',
@@ -22084,8 +22084,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.values',
@@ -22106,7 +22106,7 @@ exports.tests = [
         chrome52: {
           val: false,
           note_id: 'cr-array-prototype-values',
-          note_html: 'The feature was disabled due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615873">compatibility issue</a>.',
+          note_html: 'The feature was disabled due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615873">compatibility issue</a>.'
         },
         chrome66: true,
         safari9: true,
@@ -22130,7 +22130,7 @@ exports.tests = [
         firefox49: {
           val: false,
           note_id: 'fx-array-prototype-values',
-          note_html: 'The feature is enabled only in Firefox Nightly due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1299593">compatibility issue</a>.',
+          note_html: 'The feature is enabled only in Firefox Nightly due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1299593">compatibility issue</a>.'
         },
         firefox60: true,
         opera10_50: false,
@@ -22148,8 +22148,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype.entries',
@@ -22183,8 +22183,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array.prototype[Symbol.iterator]',
@@ -22204,11 +22204,11 @@ exports.tests = [
         firefox2: false,
         firefox17: {
           val: false,
-          note_id: 'fx-array-prototype-iterator',
+          note_id: 'fx-array-prototype-iterator'
         },
         firefox27: {
           val: false,
-          note_id: 'fx-array-prototype-iterator-2',
+          note_id: 'fx-array-prototype-iterator-2'
         },
         firefox36: true,
         opera10_50: false,
@@ -22225,8 +22225,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Array iterator prototype chain',
@@ -22264,8 +22264,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.prototype[Symbol.unscopables]',
@@ -22301,9 +22301,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -22345,8 +22345,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_1_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Number.isInteger',
@@ -22380,8 +22380,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_1_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Number.isSafeInteger',
@@ -22415,8 +22415,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_1_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Number.isNaN',
@@ -22451,8 +22451,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_1_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Number.parseFloat',
@@ -22482,8 +22482,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Number.parseInt',
@@ -22513,8 +22513,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Number.EPSILON',
@@ -22547,8 +22547,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Number.MIN_SAFE_INTEGER',
@@ -22582,8 +22582,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     },
     {
       name: 'Number.MAX_SAFE_INTEGER',
@@ -22617,9 +22617,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
-    },
+        rhino1_7: true
+      }
+    }
   ],
 },
 {
@@ -22655,7 +22655,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'imul': {
         ejs: true,
@@ -22689,7 +22689,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'sign': {
         ejs: true,
@@ -22717,7 +22717,7 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'log10': {
         ejs: true,
@@ -22744,7 +22744,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'log2': {
         ejs: true,
@@ -22772,7 +22772,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'log1p': {
         ejs: true,
@@ -22800,7 +22800,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'expm1': {
         ejs: true,
@@ -22827,7 +22827,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'cosh': {
         ejs: true,
@@ -22855,7 +22855,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'sinh': {
         ejs: true,
@@ -22883,7 +22883,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'tanh': {
         ejs: true,
@@ -22911,7 +22911,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'acosh': {
         ejs: true,
@@ -22939,7 +22939,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'asinh': {
         ejs: true,
@@ -22966,7 +22966,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'atanh': {
         ejs: true,
@@ -22994,7 +22994,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'trunc': {
         ejs: true,
@@ -23021,7 +23021,7 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'fround': {
         ejs: true,
@@ -23053,7 +23053,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       },
       'cbrt': {
         ejs: true,
@@ -23081,8 +23081,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
-      },
+        rhino1_7: true
+      }
     };
     var eqFn = ' === "function"';
     return Object.keys(methods).map(function(m) {
@@ -23128,7 +23128,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: true,
+        rhino1_7: true
       }
     });
   }()),
@@ -23165,7 +23165,7 @@ exports.tests = [
     jerryscript2_0: false,
     jerryscript2_2_0: true,
     hermes0_7_0: true,
-    rhino1_7: false,
+    rhino1_7: false
   }
 },
 {
@@ -23205,8 +23205,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'length property (setting)',
@@ -23238,8 +23238,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct prototype chain',
@@ -23270,8 +23270,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Array.isArray support',
@@ -23299,7 +23299,7 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23329,7 +23329,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23359,7 +23359,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23389,7 +23389,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23420,7 +23420,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23451,7 +23451,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23483,7 +23483,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
     },
     {
@@ -23515,9 +23515,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ],
 },
 {
@@ -23555,8 +23555,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct prototype chain',
@@ -23588,8 +23588,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.exec',
@@ -23620,8 +23620,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.test',
@@ -23652,9 +23652,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -23690,8 +23690,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct prototype chain',
@@ -23720,8 +23720,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'can be used with "new"',
@@ -23752,8 +23752,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Function.prototype.call',
@@ -23782,8 +23782,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Function.prototype.apply',
@@ -23812,8 +23812,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Function.prototype.bind',
@@ -23842,9 +23842,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -23901,8 +23901,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'correct prototype chain',
@@ -23933,8 +23933,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.all',
@@ -23942,11 +23942,11 @@ exports.tests = [
         class P extends Promise {}
         var fulfills = P.all([
           new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); })
         ]);
         var rejects = P.all([
           new Promise(function(_, reject) { setTimeout(reject, 2000,"baz"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 1000,"qux"); })
         ]);
         var score = +(fulfills instanceof P);
         fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
@@ -23976,8 +23976,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Promise.race',
@@ -23985,11 +23985,11 @@ exports.tests = [
         class P extends Promise {}
         var fulfills = P.race([
           new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
-          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
+          new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); })
         ]);
         var rejects = P.race([
           new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
-          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
+          new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); })
         ]);
         var score = +(fulfills instanceof P);
         fulfills.then(function(result) { score += (result === "foo"); check(); });
@@ -24019,9 +24019,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -24059,8 +24059,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Number is subclassable',
@@ -24091,8 +24091,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'String is subclassable',
@@ -24125,8 +24125,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Error is subclassable',
@@ -24157,8 +24157,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Map is subclassable',
@@ -24192,8 +24192,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Set is subclassable',
@@ -24228,9 +24228,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -24254,7 +24254,7 @@ exports.tests = [
           D: true,
           B: true,
           // Negative integers are treated as other names
-          '-1': true,
+          '-1': true
         };
         // Other string names are added in order of creation
         obj.A = true;
@@ -24300,8 +24300,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'Object.getOwnPropertyNames',
@@ -24344,8 +24344,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Object.assign',
@@ -24393,8 +24393,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.stringify',
@@ -24442,8 +24442,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'JSON.parse',
@@ -24484,8 +24484,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.ownKeys, string key order',
@@ -24533,8 +24533,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Reflect.ownKeys, symbol key order',
@@ -24542,7 +24542,7 @@ exports.tests = [
         var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
         var obj = {
           1: true,
-          A: true,
+          A: true
         };
         obj.B = true;
         obj[sym1] = true;
@@ -24579,9 +24579,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
+        rhino1_7: false
       }
-    },
+    }
   ],
 },
 {
@@ -24635,8 +24635,8 @@ exports.tests = [
         jerryscript1_0: true,
         jerryscript2_0: false,
         jerryscript2_4_0: true,
-        hermes0_7_0: false,
-      },
+        hermes0_7_0: false
+      }
     },
     {
       name: 'var 𐋀;',
@@ -24679,8 +24679,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_4_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'no escaped reserved words as identifiers',
@@ -24726,9 +24726,9 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: false,
         jerryscript2_2_0: true,
-        hermes0_7_0: false,
-      },
-    },
+        hermes0_7_0: false
+      }
+    }
   ],
 },
 {
@@ -24763,8 +24763,8 @@ exports.tests = [
         graalvm20_1: true,
         jerryscript2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'no semicolon needed after do-while',
@@ -24795,8 +24795,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'no assignments allowed in for-in head in strict mode',
@@ -24832,8 +24832,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'accessors aren\'t constructors',
@@ -24863,8 +24863,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'Invalid Date',
@@ -24896,8 +24896,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         jerryscript1_0: true,
-        hermes0_7_0: true,
-      },
+        hermes0_7_0: true
+      }
     },
     {
       name: 'RegExp constructor can alter flags',
@@ -24924,8 +24924,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'RegExp.prototype.toString generic and uses "flags" property',
@@ -24952,8 +24952,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'built-in prototypes are not instances',
@@ -24990,8 +24990,8 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
-        rhino1_7: false,
-      },
+        rhino1_7: false
+      }
     },
     {
       name: 'function \'length\' is configurable',
@@ -25024,9 +25024,9 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
-        rhino1_7: false,
-      },
-    },
+        rhino1_7: false
+      }
+    }
   ],
 },
 {
@@ -25061,7 +25061,7 @@ exports.tests = [
     graalvm20: true,
     graalvm20_1: true,
     jerryscript2_0: false,
-    hermes0_7_0: false,
+    hermes0_7_0: false
   }
 },
 ];
