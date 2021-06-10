@@ -1315,6 +1315,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
@@ -1348,6 +1349,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
@@ -1394,6 +1396,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
