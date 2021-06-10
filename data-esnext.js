@@ -1492,6 +1492,7 @@ exports.tests = [
         edge18: false,
         firefox2: false,
         firefox90: false,
+        firefox91: firefox.nightly,
         opera10_50: false,
         safari12: false,
         rhino1_7: false
@@ -1517,6 +1518,7 @@ exports.tests = [
         edge18: false,
         firefox2: false,
         firefox90: false,
+        firefox91: firefox.nightly,
         opera10_50: false,
         safari12: false,
         rhino1_7: false
