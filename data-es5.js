@@ -25,7 +25,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -54,7 +54,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -82,7 +82,7 @@ exports.tests = [
       opera12_10: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -111,7 +111,7 @@ exports.tests = [
       opera12_10: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -144,7 +144,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -179,7 +179,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -221,7 +221,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -251,7 +251,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -283,7 +283,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -316,7 +316,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -346,7 +346,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -376,7 +376,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -406,7 +406,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -436,7 +436,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -466,7 +466,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -496,7 +496,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -534,7 +534,7 @@ exports.tests = [
       opera12: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -566,7 +566,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -603,7 +603,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -633,7 +633,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -663,7 +663,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -693,7 +693,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -723,7 +723,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -753,7 +753,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -783,7 +783,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -813,7 +813,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -843,7 +843,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -873,7 +873,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -929,7 +929,7 @@ exports.tests = [
       konq4_9: null,
       konq4_13: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: false,
       duktape2_0: true,
@@ -966,7 +966,7 @@ exports.tests = [
       konq4_9: null,
       konq4_13: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: true,
       duktape2_0: true,
@@ -1000,7 +1000,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -1061,7 +1061,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_2_0: true,
       hermes0_7_0: true,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1082,7 +1082,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -1118,7 +1118,7 @@ exports.tests = [
       opera10_50: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: false,
       android4_0: true,
       duktape2_0: true,
@@ -1147,7 +1147,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -1188,7 +1188,7 @@ exports.tests = [
       opera12_10: true,
       konq4_3: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_0: true,
       duktape2_0: true,
@@ -1221,7 +1221,7 @@ exports.tests = [
     opera12: true,
     konq4_13: true,
     besen: true,
-    rhino1_7: true,
+    rhino1_7_13: true,
     phantom: true,
     ejs: true,
     ios7: true,
@@ -1258,7 +1258,7 @@ exports.tests = [
     konq4_9: true,
     konq4_13: true,
     besen: true,
-    rhino1_7: true,
+    rhino1_7_13: true,
     phantom: true,
     ejs: true,
     ios7: true,
@@ -1300,7 +1300,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: false,
       android4_1: true,
       duktape2_0: true,
@@ -1335,7 +1335,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: false,
       android4_1: true,
       duktape2_0: true,
@@ -1370,7 +1370,7 @@ exports.tests = [
       konq4_9: true,
       konq4_13: true,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: false,
       android4_1: true,
       duktape2_0: true,
@@ -1410,7 +1410,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1442,7 +1442,7 @@ exports.tests = [
       konq4_9: false,
       konq4_13: false,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_4: true,
       duktape2_0: true,
@@ -1474,7 +1474,7 @@ exports.tests = [
       opera12: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1507,7 +1507,7 @@ exports.tests = [
       opera12: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1543,7 +1543,7 @@ exports.tests = [
       konq4_9: false,
       konq4_13: false,
       besen: true,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: true,
       android4_1: true,
       duktape2_0: true,
@@ -1576,7 +1576,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1618,7 +1618,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: false,
+      rhino1_7_13: false,
       ejs: null,
       android4_0: null,
       duktape2_0: false,
@@ -1654,7 +1654,7 @@ exports.tests = [
       opera10_50: true,
       konq4_3: null,
       besen: null,
-      rhino1_7: true,
+      rhino1_7_13: true,
       ejs: null,
       android4_0: null,
       duktape2_0: true,
@@ -1705,7 +1705,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -1739,7 +1739,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1771,7 +1771,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1816,7 +1816,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_3_0: true,
       hermes0_7_0: true,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1849,7 +1849,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1880,7 +1880,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -1915,7 +1915,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1948,7 +1948,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: false,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -1985,7 +1985,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2019,7 +2019,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2051,7 +2051,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2084,7 +2084,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -2121,7 +2121,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2152,7 +2152,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalLexicalScopeSuccess,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -2183,7 +2183,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: false
+      rhino1_7_13: false
     }
   },
   {
@@ -2214,7 +2214,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2245,7 +2245,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2276,7 +2276,7 @@ exports.tests = [
       graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   },
   {
@@ -2313,7 +2313,7 @@ exports.tests = [
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: true,
-      rhino1_7: true
+      rhino1_7_13: true
     }
   }]
 }

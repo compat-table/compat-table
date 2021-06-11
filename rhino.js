@@ -36,7 +36,7 @@ function executeScript(scriptName) {
     });
 }
 
-// Key for .res (e.g. test.res.rhino1_7), automatic based on rhino version.
+// Key for .res (e.g. test.res.rhino1_7_13), automatic based on rhino version.
 var rhinoKey = (function () {
     var script = 'print(org.mozilla.javascript.ImplementationVersion.get());\n' +
                  'quit()\n';
@@ -46,7 +46,7 @@ var rhinoKey = (function () {
 
     console.log('rhino version is: ' + stdout);
     var match = stdout.match(/Rhino (\d+)\.(\d+)\.(\d+)/);
-    return match[1] + "_" + match[2];
+    return match[1] + "_" + match[2] + "_" + match[3];
 })();
 console.log('rhino result key is: test.res.rhino' + rhinoKey);
 
