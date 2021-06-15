@@ -1315,6 +1315,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
@@ -1348,6 +1349,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
@@ -1394,6 +1396,7 @@ exports.tests = [
         ie11: false,
         firefox68: false,
         firefox85: firefox.nightly,
+        firefox90: true,
         chrome85: false,
         safari14_1: {
           val: 'flagged',
@@ -1489,6 +1492,7 @@ exports.tests = [
         edge18: false,
         firefox2: false,
         firefox90: false,
+        firefox91: firefox.nightly,
         opera10_50: false,
         safari12: false,
         rhino1_7: false
@@ -1514,6 +1518,7 @@ exports.tests = [
         edge18: false,
         firefox2: false,
         firefox90: false,
+        firefox91: firefox.nightly,
         opera10_50: false,
         safari12: false,
         rhino1_7: false
