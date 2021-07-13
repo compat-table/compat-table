@@ -2806,6 +2806,13 @@
     "release": "2021-04-20",
     "obsolete": false
   },
+  "safari15": {
+    "full": "Safari 15 Beta",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15",
+    "release": "2021-06-08",
+    "unstable": true
+  },
   "safaritp": {
     "full": "Safari Technology Preview Release 123",
     "family": "JavaScriptCore",
@@ -4619,6 +4626,15 @@
     "release": "2020-09-16",
     "obsolete": false
   },
+  "ios15": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15",
+    "platformtype": "mobile",
+    "equals": "safari15",
+    "release": "2020-06-08",
+    "unstable": true
+  },
   "samsung1": {
     "full": "Samsung Internet for Android 1",
     "family": "Samsung",
@@ -4724,7 +4740,7 @@
     "platformtype": "mobile",
     "equals": "chrome71",
     "release": "2019-08-22",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung11": {
     "full": "Samsung Internet for Android 11",
@@ -4732,7 +4748,7 @@
     "short": "Samsung 11",
     "platformtype": "mobile",
     "equals": "chrome75",
-    "obsolete": false
+    "obsolete": "very"
   },
   "samsung12": {
     "full": "Samsung Internet for Android 12",
@@ -4740,7 +4756,7 @@
     "short": "Samsung 12",
     "platformtype": "mobile",
     "equals": "chrome79",
-    "unstable": false
+    "obsolete": false
   },
   "samsung13": {
     "full": "Samsung Internet for Android 13",
@@ -4749,7 +4765,25 @@
     "platformtype": "mobile",
     "equals": "chrome83",
     "release": "2020-12-02",
-    "unstable": false
+    "obsolete": false
+  },
+  "samsung14": {
+    "full": "Samsung Internet for Android 14",
+    "family": "Samsung",
+    "short": "Samsung 14",
+    "platformtype": "mobile",
+    "equals": "chrome87",
+    "release": "2020-03-09",
+    "obsolete": false
+  },
+  "samsung15": {
+    "full": "Samsung Internet for Android 15",
+    "family": "Samsung",
+    "short": "Samsung 15",
+    "platformtype": "mobile",
+    "equals": "chrome90",
+    "release": "2020-07-13",
+    "unstable": true
   },
   "opera_mobile10_1": {
     "full": "Opera Mobile for Android 10.1",
