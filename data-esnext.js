@@ -9,8 +9,8 @@ exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
 
-var STAGE2 = 'draft (stage 2)';
-var STAGE3 = 'candidate (stage 3)';
+var STAGE2 = 'Stage 2';
+var STAGE3 = 'Stage 3';
 
 exports.tests = [
 {
