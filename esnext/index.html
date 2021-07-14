@@ -250,10 +250,11 @@
 <th class="platform ios13 mobile" data-browser="ios13"><a href="#ios13" class="browser-name"><abbr title="iOS Safari">iOS 13</abbr></a></th>
 <th class="platform ios13_4 mobile" data-browser="ios13_4"><a href="#ios13_4" class="browser-name"><abbr title="iOS Safari">iOS 13.4</abbr></a></th>
 <th class="platform ios14 mobile" data-browser="ios14"><a href="#ios14" class="browser-name"><abbr title="iOS Safari">iOS 14</abbr></a></th>
-<th class="platform samsung10 mobile obsolete" data-browser="samsung10"><a href="#samsung10" class="browser-name"><abbr title="Samsung Internet for Android 10">Samsung 10</abbr></a></th>
-<th class="platform samsung11 mobile" data-browser="samsung11"><a href="#samsung11" class="browser-name"><abbr title="Samsung Internet for Android 11">Samsung 11</abbr></a></th>
+<th class="platform ios15 mobile unstable" data-browser="ios15"><a href="#ios15" class="browser-name"><abbr title="iOS Safari">iOS 15</abbr></a></th>
 <th class="platform samsung12 mobile" data-browser="samsung12"><a href="#samsung12" class="browser-name"><abbr title="Samsung Internet for Android 12">Samsung 12</abbr></a></th>
 <th class="platform samsung13 mobile" data-browser="samsung13"><a href="#samsung13" class="browser-name"><abbr title="Samsung Internet for Android 13">Samsung 13</abbr></a></th>
+<th class="platform samsung14 mobile" data-browser="samsung14"><a href="#samsung14" class="browser-name"><abbr title="Samsung Internet for Android 14">Samsung 14</abbr></a></th>
+<th class="platform samsung15 mobile unstable" data-browser="samsung15"><a href="#samsung15" class="browser-name"><abbr title="Samsung Internet for Android 15">Samsung 15</abbr></a></th>
 <th class="platform opera_mobile57 mobile obsolete" data-browser="opera_mobile57"><a href="#opera_mobile57" class="browser-name"><abbr title="Opera Mobile for Android 57">Opera Mobile 57</abbr></a></th>
 <th class="platform opera_mobile58 mobile obsolete" data-browser="opera_mobile58"><a href="#opera_mobile58" class="browser-name"><abbr title="Opera Mobile for Android 58">Opera Mobile 58</abbr></a></th>
 <th class="platform opera_mobile59 mobile obsolete" data-browser="opera_mobile59"><a href="#opera_mobile59" class="browser-name"><abbr title="Opera Mobile for Android 59">Opera Mobile 59</abbr></a></th>
@@ -266,7 +267,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="134">Stage 3</td>
+      <tr class="category"><td colspan="135">Stage 3</td>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Legacy_RegExp_features_in_JavaScript"><span><a class="anchor" href="#test-Legacy_RegExp_features_in_JavaScript">&#xA7;</a><a href="https://github.com/tc39/proposal-regexp-legacy-features">Legacy RegExp features in JavaScript</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
@@ -389,10 +390,11 @@
 <td class="tally" data-browser="ios13" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios13_4" data-tally="1">2/2</td>
 <td class="tally" data-browser="ios14" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="1">2/2</td>
-<td class="tally" data-browser="samsung11" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="ios15" data-tally="1">2/2</td>
 <td class="tally" data-browser="samsung12" data-tally="1">2/2</td>
 <td class="tally" data-browser="samsung13" data-tally="1">2/2</td>
+<td class="tally" data-browser="samsung14" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="1">2/2</td>
@@ -531,10 +533,11 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="ios13">Yes</td>
 <td class="yes" data-browser="ios13_4">Yes</td>
 <td class="yes" data-browser="ios14">Yes</td>
-<td class="yes obsolete" data-browser="samsung10">Yes</td>
-<td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="ios15">Yes</td>
 <td class="yes" data-browser="samsung12">Yes</td>
 <td class="yes" data-browser="samsung13">Yes</td>
+<td class="yes" data-browser="samsung14">Yes</td>
+<td class="yes unstable" data-browser="samsung15">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile57">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile58">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile59">Yes</td>
@@ -675,10 +678,11 @@ return true;
 <td class="yes" data-browser="ios13">Yes</td>
 <td class="yes" data-browser="ios13_4">Yes</td>
 <td class="yes" data-browser="ios14">Yes</td>
-<td class="yes obsolete" data-browser="samsung10">Yes</td>
-<td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="ios15">Yes</td>
 <td class="yes" data-browser="samsung12">Yes</td>
 <td class="yes" data-browser="samsung13">Yes</td>
+<td class="yes" data-browser="samsung14">Yes</td>
+<td class="yes unstable" data-browser="samsung15">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile57">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile58">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile59">Yes</td>
@@ -815,10 +819,11 @@ try {
 <td class="no" data-browser="ios13">No</td>
 <td class="yes" data-browser="ios13_4">Yes</td>
 <td class="yes" data-browser="ios14">Yes</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="yes" data-browser="samsung11">Yes</td>
+<td class="yes unstable" data-browser="ios15">Yes</td>
 <td class="yes" data-browser="samsung12">Yes</td>
 <td class="yes" data-browser="samsung13">Yes</td>
+<td class="yes" data-browser="samsung14">Yes</td>
+<td class="yes unstable" data-browser="samsung15">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile57">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile58">Yes</td>
 <td class="yes obsolete" data-browser="opera_mobile59">Yes</td>
@@ -948,10 +953,11 @@ try {
 <td class="tally" data-browser="ios13" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/3</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/3</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0" data-flagged-tally="1">0/3</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/3</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/3</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/3</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/3</td>
@@ -1092,10 +1098,11 @@ return arr.at(0) === 1
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="no flagged unstable" data-browser="ios15">Flag<a href="#safari-at-method-note"><sup>[7]</sup></a></td>
 <td class="unknown" data-browser="samsung12">?</td>
 <td class="unknown" data-browser="samsung13">?</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile57">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile58">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile59">?</td>
@@ -1236,10 +1243,11 @@ return str.at(0) === &apos;a&apos;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="no flagged unstable" data-browser="ios15">Flag<a href="#safari-at-method-note"><sup>[7]</sup></a></td>
 <td class="unknown" data-browser="samsung12">?</td>
 <td class="unknown" data-browser="samsung13">?</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile57">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile58">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile59">?</td>
@@ -1396,10 +1404,11 @@ return [
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="no flagged unstable" data-browser="ios15">Flag<a href="#safari-at-method-note"><sup>[7]</sup></a></td>
 <td class="unknown" data-browser="samsung12">?</td>
 <td class="unknown" data-browser="samsung13">?</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="unknown obsolete" data-browser="opera_mobile57">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile58">?</td>
 <td class="unknown obsolete" data-browser="opera_mobile59">?</td>
@@ -1536,10 +1545,11 @@ return ok;
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -1679,10 +1689,11 @@ return A.check(new A) &amp;&amp; !A.check({});
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -1812,10 +1823,11 @@ return A.check(new A) &amp;&amp; !A.check({});
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/2</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/2</td>
@@ -1948,10 +1960,11 @@ return Object.hasOwn({ x: 2 }, &quot;x&quot;) === true;
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -2090,10 +2103,11 @@ try {
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -2102,7 +2116,7 @@ try {
 <td class="no" data-browser="opera_mobile62">No</td>
 <td class="no" data-browser="opera_mobile63">No</td>
 </tr>
-<tr class="category"><td colspan="134">Stage 2</td>
+<tr class="category"><td colspan="135">Stage 2</td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/tc39/proposal-function.sent">Generator function.sent Meta Property</a></span><script data-source="
 var result;
@@ -2234,10 +2248,11 @@ return result === &apos;tromple&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -2367,10 +2382,11 @@ return result === &apos;tromple&apos;;
 <td class="tally" data-browser="ios13" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/1</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/1</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/1</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/1</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/1</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/1</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/1</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/1</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/1</td>
@@ -2511,10 +2527,11 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -2650,10 +2667,11 @@ return typeof Realm === &quot;function&quot;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -2783,10 +2801,11 @@ return typeof Realm === &quot;function&quot;
 <td class="tally" data-browser="ios13" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/4</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/4</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/4</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/4</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/4</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/4</td>
@@ -2925,10 +2944,11 @@ try {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3071,10 +3091,11 @@ try {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3212,10 +3233,11 @@ try {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3353,10 +3375,11 @@ try {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3486,10 +3509,11 @@ try {
 <td class="tally" data-browser="ios13" data-tally="0">0/7</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/7</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/7</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/7</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/7</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/7</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/7</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/7</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/7</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/7</td>
@@ -3625,10 +3649,11 @@ return set.size === 2
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3765,10 +3790,11 @@ return set.size === 3
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -3904,10 +3930,11 @@ return set.size === 2
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4043,10 +4070,11 @@ return set.size === 2
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4179,10 +4207,11 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4315,10 +4344,11 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4451,10 +4481,11 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4584,10 +4615,11 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/2</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/2</td>
@@ -4723,10 +4755,11 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4862,10 +4895,11 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="ios13">No</td>
 <td class="no" data-browser="ios13_4">No</td>
 <td class="no" data-browser="ios14">No</td>
-<td class="no obsolete" data-browser="samsung10">No</td>
-<td class="no" data-browser="samsung11">No</td>
+<td class="no unstable" data-browser="ios15">No</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -4995,10 +5029,11 @@ return buffer1.byteLength === 0
 <td class="tally" data-browser="ios13" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/2</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/2</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/2</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/2</td>
@@ -5134,10 +5169,11 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -5274,10 +5310,11 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -5411,10 +5448,11 @@ return !Array.isTemplateObject([])
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -5544,10 +5582,11 @@ return !Array.isTemplateObject([])
 <td class="tally" data-browser="ios13" data-tally="0">0/35</td>
 <td class="tally" data-browser="ios13_4" data-tally="0">0/35</td>
 <td class="tally" data-browser="ios14" data-tally="0">0/35</td>
-<td class="tally obsolete" data-browser="samsung10" data-tally="0">0/35</td>
-<td class="tally" data-browser="samsung11" data-tally="0">0/35</td>
+<td class="tally unstable" data-browser="ios15" data-tally="0">0/35</td>
 <td class="tally" data-browser="samsung12" data-tally="0">0/35</td>
 <td class="tally" data-browser="samsung13" data-tally="0">0/35</td>
+<td class="tally" data-browser="samsung14" data-tally="0">0/35</td>
+<td class="tally unstable" data-browser="samsung15" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="opera_mobile57" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="opera_mobile58" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="opera_mobile59" data-tally="0">0/35</td>
@@ -5680,10 +5719,11 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -5818,10 +5858,11 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -5957,10 +5998,11 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6101,10 +6143,11 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6237,10 +6280,11 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6373,10 +6417,11 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6509,10 +6554,11 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6645,10 +6691,11 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6781,10 +6828,11 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -6917,10 +6965,11 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7055,10 +7104,11 @@ return result === &apos;123&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7191,10 +7241,11 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7327,10 +7378,11 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7463,10 +7515,11 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7599,10 +7652,11 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7736,10 +7790,11 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -7872,10 +7927,11 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8008,10 +8064,11 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8146,10 +8203,11 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8294,10 +8352,11 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8442,10 +8501,11 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8590,10 +8650,11 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8734,10 +8795,11 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -8878,10 +8940,11 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9016,10 +9079,11 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9160,10 +9224,11 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9298,10 +9363,11 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9442,10 +9508,11 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9581,10 +9648,11 @@ let result = &apos;&apos;;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9725,10 +9793,11 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -9863,10 +9932,11 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -10001,10 +10071,11 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -10145,10 +10216,11 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -10283,10 +10355,11 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
@@ -10419,10 +10492,11 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown" data-browser="ios13">?</td>
 <td class="unknown" data-browser="ios13_4">?</td>
 <td class="unknown" data-browser="ios14">?</td>
-<td class="unknown obsolete" data-browser="samsung10">?</td>
-<td class="unknown" data-browser="samsung11">?</td>
+<td class="unknown unstable" data-browser="ios15">?</td>
 <td class="no" data-browser="samsung12">No</td>
 <td class="no" data-browser="samsung13">No</td>
+<td class="no" data-browser="samsung14">No</td>
+<td class="no unstable" data-browser="samsung15">No</td>
 <td class="no obsolete" data-browser="opera_mobile57">No</td>
 <td class="no obsolete" data-browser="opera_mobile58">No</td>
 <td class="no obsolete" data-browser="opera_mobile59">No</td>
