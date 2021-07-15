@@ -4750,6 +4750,8 @@ exports.tests = [
           chrome77: false,
           chrome80: false,
           chrome89: false,
+          chrome90: false,
+          chrome91: true,
           safari13_1: true,
           safaritp: true,
           rhino1_7_13: false
