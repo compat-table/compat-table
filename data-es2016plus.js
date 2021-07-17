@@ -5716,6 +5716,35 @@ exports.tests = [
       }
     ]
   },
+  {
+    name: 'Ergonomic brand checks for private fields',
+    category: '2022 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-private-fields-in-in',
+    exec: function () {/*
+      class A {
+        #x;
+        static check(obj) {
+          return #x in obj;
+        }
+      }
+      return A.check(new A) && !A.check({});
+    */},
+    res: {
+      babel6corejs2: false,
+      babel7corejs2: true,
+      babel7corejs3: true,
+      chrome1: false,
+      chrome91: true,
+      edge18: false,
+      firefox2: false,
+      firefox90: true,
+      ie11: false,
+      opera10_50: false,
+      safari12: false,
+      rhino1_7_13: false
+    }
+  },
 ];
 
 //Shift annex B features to the bottom
