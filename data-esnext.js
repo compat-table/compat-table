@@ -1525,6 +1525,54 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Array find from last',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-array-find-from-last',
+  subtests: [
+    {
+      name: "Array.prototype.findLast",
+      exec: function () {/*
+        var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+        return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
+      */},
+      res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        chrome1: false,
+        chrome90: false,
+        edge18: false,
+        firefox2: false,
+        firefox89: false,
+        opera10_50: false,
+        safari12: false,
+        rhino1_7_13: false
+      }
+    },
+    {
+      name: "Array.prototype.findLastIndex",
+      exec: function () {/*
+        var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+        return arr.findLast(function (o) { return o.x === 1; }) === 2;
+      */},
+      res: {
+        babel7corejs3: babel.corejs,
+        typescript3_2corejs3: typescript.corejs,
+        ie11: false,
+        chrome1: false,
+        chrome90: false,
+        edge18: false,
+        firefox2: false,
+        firefox89: false,
+        opera10_50: false,
+        safari12: false,
+        rhino1_7_13: false
+      }
+    }
+  ]
 }
 ];
 
