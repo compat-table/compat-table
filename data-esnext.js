@@ -1317,6 +1317,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method',
@@ -1351,6 +1352,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method'
@@ -1398,6 +1400,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method'
@@ -1431,7 +1434,11 @@ exports.tests = [
     babel7corejs2: true,
     babel7corejs3: true,
     chrome1: false,
-    chrome91: true,
+    chrome91: {
+      val: 'flagged',
+      note_id: 'ch-static-init-blocks',
+      note_html: 'The feature has to be enabled via <code>harmony_class_static_blocks</code> flag.'
+    },
     safari13: false,
     edge18: false,
     firefox2: false,
@@ -1459,6 +1466,7 @@ exports.tests = [
         ie11: false,
         chrome1: false,
         chrome90: false,
+        chrome93: true,
         edge18: false,
         firefox2: false,
         firefox90: false,
@@ -1485,6 +1493,7 @@ exports.tests = [
         ie11: false,
         chrome1: false,
         chrome90: false,
+        chrome93: true,
         edge18: false,
         firefox2: false,
         firefox90: false,
@@ -1542,6 +1551,158 @@ exports.tests = [
         rhino1_7_13: false
       }
     }
+  ]
+},
+{
+  name: 'Error.cause property',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-error-cause',
+  subtests: [
+    {
+      name: "Error has cause",
+      exec: function () {/*
+      var error = new Error('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "EvalError has cause",
+      exec: function () {/*
+      var error = new EvalError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "RangeError has cause",
+      exec: function () {/*
+      var error = new RangeError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "ReferenceError has cause",
+      exec: function () {/*
+      var error = new ReferenceError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "SyntaxError has cause",
+      exec: function () {/*
+      var error = new SyntaxError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "TypeError has cause",
+      exec: function () {/*
+      var error = new TypeError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "URIError has cause",
+      exec: function () {/*
+      var error = new URIError('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
+    {
+      name: "AggregateError has cause",
+      exec: function () {/*
+      var error = new AggregateError([], 'error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+      */},
+      res: {
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox90: false,
+          safari14: false,
+        }
+      }
+    },
   ]
 }
 ];
