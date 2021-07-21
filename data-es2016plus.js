@@ -5742,6 +5742,7 @@ exports.tests = [
       ie11: false,
       opera10_50: false,
       safari12: false,
+      safari15: true,
       rhino1_7_13: false
     }
   },

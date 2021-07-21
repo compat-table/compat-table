@@ -1317,6 +1317,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method',
@@ -1351,6 +1352,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method'
@@ -1398,6 +1400,7 @@ exports.tests = [
         firefox85: firefox.nightly,
         firefox90: true,
         chrome85: false,
+        chrome92: true,
         safari14_1: {
           val: 'flagged',
           note_id: 'safari-at-method'
@@ -1431,7 +1434,7 @@ exports.tests = [
     babel7corejs2: true,
     babel7corejs3: true,
     chrome1: false,
-    chrome91: true,
+    chrome92: false,
     safari13: false,
     edge18: false,
     firefox2: false,
@@ -1459,6 +1462,7 @@ exports.tests = [
         ie11: false,
         chrome1: false,
         chrome90: false,
+        chrome93: true,
         edge18: false,
         firefox2: false,
         firefox90: false,
@@ -1485,6 +1489,7 @@ exports.tests = [
         ie11: false,
         chrome1: false,
         chrome90: false,
+        chrome93: true,
         edge18: false,
         firefox2: false,
         firefox90: false,
@@ -1543,6 +1548,26 @@ exports.tests = [
       }
     }
   ]
+},
+{
+  name: 'Error.cause property',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-error-cause',
+  exec: function () {/*
+      var error = new Error('error', { cause: 'cause' })
+      return error.hasOwnProperty('cause') && error.cause === 'cause';
+    */
+  },
+  res: {
+    ie11: false,
+    chrome1: false,
+    chrome92: false,
+    chrome93: true,
+    edge90: false,
+    firefox90: false,
+    safari14: false,
+  }
 }
 ];
 

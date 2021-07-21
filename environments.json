@@ -2408,7 +2408,7 @@
     "short": "CH 83",
     "release": "2020-05-19",
     "retire": "2020-07-14",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome84": {
     "full": "Chrome 84",
@@ -2416,7 +2416,7 @@
     "short": "CH 84",
     "release": "2020-07-14",
     "retire": "2020-08-25",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome85": {
     "full": "Chrome 85",
@@ -2448,34 +2448,49 @@
     "short": "CH 88",
     "release": "2021-01-19",
     "retire": "2021-03-02",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome89": {
     "full": "Chrome 89",
     "family": "V8",
     "short": "CH 89",
     "release": "2021-03-02",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome90": {
     "full": "Chrome 90",
     "family": "V8",
     "short": "CH 90",
-    "release": "2021-04-13"
+    "release": "2021-04-13",
+    "obsolete": false
   },
   "chrome91": {
-    "full": "Chrome 91 Beta",
+    "full": "Chrome 91",
     "family": "V8",
     "short": "CH 91",
     "release": "2021-05-25",
-    "unstable": true
+    "obsolete": false
   },
   "chrome92": {
-    "full": "Chrome 92 Canary",
+    "full": "Chrome 92",
     "family": "V8",
     "short": "CH 92",
     "release": "2021-07-20",
-    "unstable": true
+    "obsolete": false
+  },
+  "chrome93": {
+    "full": "Chrome 93 Beta",
+    "family": "V8",
+    "short": "CH 93",
+    "release": "2021-07-20",
+    "obsolete": false
+  },
+  "chrome94": {
+    "full": "Chrome 94 Canary",
+    "family": "V8",
+    "short": "CH 94",
+    "release": "2021-07-20",
+    "obsolete": false
   },
   "edge12": {
     "full": "Microsoft Edge 12",
