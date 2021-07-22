@@ -1566,15 +1566,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1584,15 +1584,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1602,15 +1602,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1620,15 +1620,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1638,15 +1638,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1656,15 +1656,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1674,15 +1674,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
     {
@@ -1692,15 +1692,15 @@ exports.tests = [
       return error.hasOwnProperty('cause') && error.cause === 'cause';
       */},
       res: {
-        res: {
-          ie11: false,
-          chrome1: false,
-          chrome92: false,
-          chrome93: true,
-          edge90: false,
-          firefox90: false,
-          safari14: false,
-        }
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
       }
     },
   ]
