@@ -1443,6 +1443,11 @@ exports.tests = [
     edge18: false,
     firefox2: false,
     firefox87: false,
+    firefox90: {
+      val: 'flagged',
+      note_id: 'ff-static-init-blocks',
+      note_html: 'The feature has to be enabled via <code>javascript.options.experimental.class_static_blocks=true</code> flag.'
+    },
     ie11: false,
     opera10_50: false,
     safari12: false,
