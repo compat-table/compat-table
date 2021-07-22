@@ -78,7 +78,7 @@ exports.tests = [
 },
 {
   name: 'Realms',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'large',
   spec: 'https://github.com/tc39/proposal-realms',
   exec: function () {/*
