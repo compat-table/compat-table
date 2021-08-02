@@ -1439,6 +1439,7 @@ exports.tests = [
       note_id: 'ch-static-init-blocks',
       note_html: 'The feature has to be enabled via <code>harmony_class_static_blocks</code> flag.'
     },
+    chrome94: true,
     safari13: false,
     edge18: false,
     firefox2: false,
