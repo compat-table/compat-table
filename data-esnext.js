@@ -1504,6 +1504,7 @@ exports.tests = [
         firefox2: false,
         firefox90: false,
         firefox91: firefox.nightly,
+        firefox92: true,
         opera10_50: false,
         safari12: false,
         rhino1_7_13: false
