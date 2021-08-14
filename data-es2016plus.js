@@ -4808,6 +4808,7 @@ exports.tests = [
     res: {
       babel6corejs2: false,
       babel7corejs3: babel.corejs,
+      closure20210808: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
       ie11: false,
@@ -4853,6 +4854,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure20210808: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
@@ -4886,6 +4888,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure20210808: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
@@ -4997,6 +5000,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5025,6 +5029,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5053,6 +5058,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5084,6 +5090,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5112,6 +5119,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5140,6 +5148,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5171,6 +5180,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5199,6 +5209,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5227,6 +5238,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure20210808: true,
           ie11: false,
           firefox60: false,
           firefox76: false,
@@ -5258,6 +5270,7 @@ exports.tests = [
     */},
     res : {
       babel7corejs2: true,
+      closure20210808: true,
       typescript1corejs2: false,
       typescript2_7corejs2: true,
       ie11: false,
