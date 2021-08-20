@@ -1537,6 +1537,11 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-find-from-last',
+          note_html: 'The feature has to be enabled via <code>jscOptions=--useArrayFindLastMethod=true</code> flag.'
+        },
         rhino1_7_13: false
       }
     },
@@ -1557,6 +1562,10 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
+        safaritp: {
+          val: 'flagged',
+          note_id: 'safari-find-from-last'
+        },
         rhino1_7_13: false
       }
     }
