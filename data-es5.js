@@ -1386,6 +1386,61 @@ exports.tests = [
   }]
 },
 {
+  name: 'Number methods',
+  significance: 'small',
+  subtests: [{
+    name: 'Number.prototype.toExponential rounds properly',
+    exec: function () {
+      return (-6.9e-11).toExponential(4) === '-6.9000e-11';
+    },
+    res: {
+      ie6: true,
+      ie7: true,
+      ie8: true,
+      ie9: true,
+      ie10: true,
+      ie11: true,
+      chrome15: true,
+      firefox3: true,
+      opera10_10: true,
+      safari4: true,
+      edge15: false,
+      edge16: false,
+      edge17: false,
+      edge18: true,
+      edge80: true
+    }
+  }, {
+    name: 'Number.prototype.toExponential throws on ±Infinity fractionDigits',
+    exec: function () {
+      try {
+        (1).toExponential(Infinity);
+        (1).toExponential(-Infinity);
+        return false;
+      } catch (e) {
+        return true;
+      }
+    },
+    res: {
+      ie6: false,
+      ie7: false,
+      ie8: false,
+      ie9: true,
+      ie10: true,
+      ie11: true,
+      chrome15: true,
+      firefox3: true,
+      opera10_10: true,
+      safari4: true,
+      edge15: true,
+      edge16: true,
+      edge17: true,
+      edge18: true,
+      edge80: true
+    }
+  }],
+},
+{
   name: 'Miscellaneous',
   significance: 'medium',
   subtests: [{
