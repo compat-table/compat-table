@@ -2464,7 +2464,7 @@
     "short": "CH 85",
     "release": "2020-08-25",
     "retire": "2020-10-06",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome86": {
     "full": "Chrome 86",
@@ -2502,14 +2502,14 @@
     "family": "V8",
     "short": "CH 90",
     "release": "2021-04-13",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome91": {
     "full": "Chrome 91",
     "family": "V8",
     "short": "CH 91",
     "release": "2021-05-25",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome92": {
     "full": "Chrome 92",
@@ -2519,17 +2519,24 @@
     "obsolete": false
   },
   "chrome93": {
-    "full": "Chrome 93 Beta",
+    "full": "Chrome 93",
     "family": "V8",
     "short": "CH 93",
-    "release": "2021-07-20",
-    "unstable": true
+    "release": "2021-08-31",
+    "obsolete": false
   },
   "chrome94": {
-    "full": "Chrome 94 Canary",
+    "full": "Chrome 94 Beta",
     "family": "V8",
     "short": "CH 94",
-    "release": "2021-07-20",
+    "release": "2021-09-21",
+    "unstable": true
+  },
+  "chrome95": {
+    "full": "Chrome 95 Canary",
+    "family": "V8",
+    "short": "CH 95",
+    "release": "2021-10-19",
     "unstable": true
   },
   "edge12": {
@@ -2876,10 +2883,10 @@
     "unstable": true
   },
   "safaritp": {
-    "full": "Safari Technology Preview Release 130",
+    "full": "Safari Technology Preview Release 131",
     "family": "JavaScriptCore",
     "short": "SF TP",
-    "release": "2021-08-18",
+    "release": "2021-09-02",
     "unstable": true
   },
   "webkit": {
