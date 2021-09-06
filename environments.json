@@ -2444,7 +2444,7 @@
     "short": "CH 85",
     "release": "2020-08-25",
     "retire": "2020-10-06",
-    "obsolete": "very"
+    "obsolete": true
   },
   "chrome86": {
     "full": "Chrome 86",
@@ -2452,7 +2452,7 @@
     "short": "CH 86",
     "release": "2020-10-06",
     "retire": "2020-11-17",
-    "obsolete": "very"
+    "obsolete": true
   },
   "chrome87": {
     "full": "Chrome 87",
@@ -2482,14 +2482,14 @@
     "family": "V8",
     "short": "CH 90",
     "release": "2021-04-13",
-    "obsolete": true
+    "obsolete": false
   },
   "chrome91": {
     "full": "Chrome 91",
     "family": "V8",
     "short": "CH 91",
     "release": "2021-05-25",
-    "obsolete": true
+    "obsolete": false
   },
   "chrome92": {
     "full": "Chrome 92",
@@ -2605,7 +2605,7 @@
     "release": "2020-05-21",
     "retire": "2020-07-16",
     "equals": "chrome83",
-    "obsolete": "very"
+    "obsolete": true
   },
   "edge84": {
     "full": "Microsoft Edge 84",
@@ -2614,7 +2614,7 @@
     "release": "2020-07-16",
     "retire": "2020-08-27",
     "equals": "chrome84",
-    "obsolete": "very"
+    "obsolete": true
   },
   "edge85": {
     "full": "Microsoft Edge 85",
@@ -2623,7 +2623,7 @@
     "release": "2020-08-27",
     "retire": "2020-10-09",
     "equals": "chrome85",
-    "obsolete": "very"
+    "obsolete": true
   },
   "edge86": {
     "full": "Microsoft Edge 86",
@@ -2632,7 +2632,7 @@
     "release": "2020-10-09",
     "retire": "2020-11-19",
     "equals": "chrome86",
-    "obsolete": "very"
+    "obsolete": true
   },
   "edge87": {
     "full": "Microsoft Edge 87",
@@ -2640,7 +2640,7 @@
     "short": "Edge 87",
     "release": "2020-11-19",
     "equals": "chrome87",
-    "obsolete": true
+    "obsolete": false
   },
   "edge88": {
     "full": "Microsoft Edge 88",
@@ -2648,7 +2648,7 @@
     "short": "Edge 88",
     "release": "2020-12-09",
     "equals": "chrome88",
-    "obsolete": true
+    "obsolete": false
   },
   "edge89": {
     "full": "Microsoft Edge 89",
@@ -2656,7 +2656,7 @@
     "short": "Edge 89",
     "release": "2021-02-03",
     "equals": "chrome89",
-    "obsolete": true
+    "obsolete": false
   },
   "edge90": {
     "full": "Microsoft Edge 90",
@@ -2664,7 +2664,7 @@
     "short": "Edge 90",
     "release": "2021-04-15",
     "equals": "chrome90",
-    "obsolete": true
+    "obsolete": false
   },
   "edge91": {
     "full": "Microsoft Edge 91",
@@ -2672,7 +2672,7 @@
     "short": "Edge 91",
     "release": "2021-05-27",
     "equals": "chrome91",
-    "obsolete": true
+    "obsolete": false
   },
   "edge92": {
     "full": "Microsoft Edge 92",
@@ -3324,7 +3324,7 @@
     "equals": "chrome83",
     "short": "OP 69",
     "release": "2020-06-24",
-    "obsolete": "very"
+    "obsolete": true
   },
   "opera70": {
     "full": "Opera 70",
@@ -3332,7 +3332,7 @@
     "equals": "chrome84",
     "short": "OP 70",
     "release": "2020-07-27",
-    "obsolete": "very"
+    "obsolete": true
   },
   "opera71": {
     "full": "Opera 71",
@@ -3340,7 +3340,7 @@
     "equals": "chrome85",
     "short": "OP 71",
     "release": "2020-09-15",
-    "obsolete": "very"
+    "obsolete": true
   },
   "opera72": {
     "full": "Opera 72",
@@ -3348,7 +3348,7 @@
     "equals": "chrome86",
     "short": "OP 72",
     "release": "2020-10-21",
-    "obsolete": true
+    "obsolete": false
   },
   "opera73": {
     "full": "Opera 73",
@@ -3356,7 +3356,7 @@
     "equals": "chrome87",
     "short": "OP 73",
     "release": "2020-12-09",
-    "obsolete": true
+    "obsolete": false
   },
   "opera74": {
     "full": "Opera 74",
@@ -3364,7 +3364,7 @@
     "equals": "chrome88",
     "short": "OP 74",
     "release": "2021-02-02",
-    "obsolete": true
+    "obsolete": false
   },
   "opera75": {
     "full": "Opera 75",
@@ -3372,7 +3372,7 @@
     "equals": "chrome89",
     "short": "OP 75",
     "release": "2021-03-24",
-    "obsolete": true
+    "obsolete": false
   },
   "opera76": {
     "full": "Opera 76",
@@ -3380,7 +3380,7 @@
     "equals": "chrome90",
     "short": "OP 76",
     "release": "2021-04-28",
-    "obsolete": true
+    "obsolete": false
   },
   "opera77": {
     "full": "Opera 77",
