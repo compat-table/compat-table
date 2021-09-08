@@ -2891,6 +2891,7 @@ exports.tests = [
             note_id: 'closure-object-assign',
             note_html: 'Requires native support for <code>Object.assign</code>'
           },
+          closure20210906: true,
           typescript2_1corejs2: true,
           jsx: true,
           ie11: false,
@@ -2927,6 +2928,7 @@ exports.tests = [
             val: false,
             note_id: 'closure-object-assign'
           },
+          closure20210906: true,
           jsx: true,
           ie11: false,
           firefox2: false,
