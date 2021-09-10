@@ -1367,6 +1367,23 @@ exports.tests = [
       }
     },
     {
+      name: "Error.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in Error.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
       name: "EvalError has cause",
       exec: function () {/*
       var error = new EvalError('error', { cause: 'cause' })
@@ -1377,6 +1394,23 @@ exports.tests = [
         chrome1: false,
         chrome92: false,
         chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
+      name: "EvalError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in EvalError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
         edge90: false,
         firefox90: false,
         firefox91: true,
@@ -1403,6 +1437,23 @@ exports.tests = [
       }
     },
     {
+      name: "RangeError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in RangeError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
       name: "ReferenceError has cause",
       exec: function () {/*
       var error = new ReferenceError('error', { cause: 'cause' })
@@ -1413,6 +1464,23 @@ exports.tests = [
         chrome1: false,
         chrome92: false,
         chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
+      name: "ReferenceError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in ReferenceError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
         edge90: false,
         firefox90: false,
         firefox91: true,
@@ -1439,6 +1507,23 @@ exports.tests = [
       }
     },
     {
+      name: "SyntaxError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in SyntaxError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
       name: "TypeError has cause",
       exec: function () {/*
       var error = new TypeError('error', { cause: 'cause' })
@@ -1449,6 +1534,23 @@ exports.tests = [
         chrome1: false,
         chrome92: false,
         chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
+      name: "TypeError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in TypeError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
         edge90: false,
         firefox90: false,
         firefox91: true,
@@ -1475,6 +1577,23 @@ exports.tests = [
       }
     },
     {
+      name: "URIError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in URIError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
       name: "AggregateError has cause",
       exec: function () {/*
       var error = new AggregateError([], 'error', { cause: 'cause' })
@@ -1485,6 +1604,23 @@ exports.tests = [
         chrome1: false,
         chrome92: false,
         chrome93: true,
+        edge90: false,
+        firefox90: false,
+        firefox91: true,
+        safari14: false,
+        safari15: true,
+      }
+    },
+    {
+      name: "AggregateError.prototype lacks cause",
+      exec: function () {/*
+      return !('cause' in AggregateError.prototype);
+      */},
+      res: {
+        ie11: false,
+        chrome1: false,
+        chrome92: false,
+        chrome93: false,
         edge90: false,
         firefox90: false,
         firefox91: true,
