@@ -2863,6 +2863,7 @@ exports.tests = [
       node8: true,
       safari10_1: true,
       duktape2_0: false,
+      duktape2_4: true,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
