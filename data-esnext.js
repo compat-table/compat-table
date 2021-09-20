@@ -2,8 +2,8 @@ var common = require('./data-common');
 
 var babel = common.babel;
 var typescript = common.typescript;
-var firefox = common.firefox;
-var graalvm = common.graalvm;
+// var firefox = common.firefox;
+// var graalvm = common.graalvm;
 
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
