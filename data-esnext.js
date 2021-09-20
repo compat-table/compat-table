@@ -1293,228 +1293,6 @@ exports.tests = [
   }
 },
 {
-  name: '.at() method on the built-in indexables',
-  category: STAGE3,
-  significance: 'tiny',
-  spec: 'https://github.com/tc39/proposal-relative-indexing-method/',
-  subtests: [
-    {
-      name: 'Array.prototype.at()',
-      exec: function() {/*
-        var arr = [1, 2, 3];
-        return arr.at(0) === 1
-          && arr.at(-3) === 1
-          && arr.at(1) === 2
-          && arr.at(-2) === 2
-          && arr.at(2) === 3
-          && arr.at(-1) === 3
-          && arr.at(3) === undefined
-          && arr.at(-4) === undefined;
-      */},
-      res: {
-        ie11: false,
-        firefox68: false,
-        firefox85: firefox.nightly,
-        firefox90: true,
-        chrome85: false,
-        chrome92: true,
-        safari14_1: {
-          val: 'flagged',
-          note_id: 'safari-at-method',
-          note_html: 'The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.'
-        },
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-at-method'
-        },
-        babel7corejs3: babel.corejs,
-        typescript4corejs3: typescript.corejs,
-        graalvm21: graalvm.es2022flag,
-        rhino1_7_13: false
-      }
-    },
-    {
-      name: 'String.prototype.at()',
-      exec: function() {/*
-        var str = 'abc';
-        return str.at(0) === 'a'
-          && str.at(-3) === 'a'
-          && str.at(1) === 'b'
-          && str.at(-2) === 'b'
-          && str.at(2) === 'c'
-          && str.at(-1) === 'c'
-          && str.at(3) === undefined
-          && str.at(-4) === undefined;
-      */},
-      res: {
-        ie11: false,
-        firefox68: false,
-        firefox85: firefox.nightly,
-        firefox90: true,
-        chrome85: false,
-        chrome92: true,
-        safari14_1: {
-          val: 'flagged',
-          note_id: 'safari-at-method'
-        },
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-at-method'
-        },
-        graalvm21: graalvm.es2022flag,
-        rhino1_7_13: false
-      }
-    },
-    {
-      name: '%TypedArray%.prototype.at()',
-      exec: function() {/*
-         return [
-           'Int8Array',
-           'Uint8Array',
-           'Uint8ClampedArray',
-           'Int16Array',
-           'Uint16Array',
-           'Int32Array',
-           'Uint32Array',
-           'Float32Array',
-           'Float64Array'
-         ].every(function (TypedArray) {
-           var Constructor = globalThis[TypedArray];
-           if (typeof Constructor !== 'function') {
-             return false;
-           }
-           var arr = new Constructor([1, 2, 3]);
-           return arr.at(0) === 1
-             && arr.at(-3) === 1
-             && arr.at(1) === 2
-             && arr.at(-2) === 2
-             && arr.at(2) === 3
-             && arr.at(-1) === 3
-             && arr.at(3) === undefined
-             && arr.at(-4) === undefined;
-         });
-      */},
-      res: {
-        ie11: false,
-        firefox68: false,
-        firefox85: firefox.nightly,
-        firefox90: true,
-        chrome85: false,
-        chrome92: true,
-        safari14_1: {
-          val: 'flagged',
-          note_id: 'safari-at-method'
-        },
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-at-method'
-        },
-        babel7corejs3: babel.corejs,
-        typescript4corejs3: typescript.corejs,
-        graalvm21: graalvm.es2022flag,
-        rhino1_7_13: false
-      }
-    }
-  ]
-},
-{
-  name: 'Class static initialization blocks',
-  category: STAGE3,
-  significance: 'small',
-  spec: 'https://github.com/tc39/proposal-class-static-block',
-  exec: function () {/*
-    let ok = false;
-    class A {
-      static { ok = true; }
-    }
-    return ok;
-  */},
-  res: {
-    babel6corejs2: false,
-    babel7corejs2: true,
-    babel7corejs3: true,
-    chrome1: false,
-    chrome91: {
-      val: 'flagged',
-      note_id: 'ch-static-init-blocks',
-      note_html: 'The feature has to be enabled via <code>harmony_class_static_blocks</code> flag.'
-    },
-    chrome94: true,
-    safari13: false,
-    edge18: false,
-    firefox2: false,
-    firefox87: false,
-    firefox90: {
-      val: 'flagged',
-      note_id: 'ff-static-init-blocks',
-      note_html: 'The feature has to be enabled via <code>javascript.options.experimental.class_static_blocks=true</code> flag.'
-    },
-    firefox93: true,
-    ie11: false,
-    opera10_50: false,
-    safari12: false,
-    rhino1_7_13: false
-  }
-},
-{
-  name: 'Object.hasOwn',
-  category: STAGE3,
-  significance: 'small',
-  spec: 'https://github.com/tc39/proposal-accessible-object-hasownproperty',
-  subtests: [
-    {
-      name: "Basic functionality",
-      exec: function () {/*
-        return Object.hasOwn({ x: 2 }, "x") === true;
-      */},
-      res: {
-        babel7corejs3: babel.corejs,
-        typescript3_2corejs3: typescript.corejs,
-        ie11: false,
-        chrome1: false,
-        chrome90: false,
-        chrome93: true,
-        edge18: false,
-        firefox2: false,
-        firefox90: false,
-        firefox91: firefox.nightly,
-        firefox92: true,
-        opera10_50: false,
-        safari12: false,
-        rhino1_7_13: false
-      }
-    },
-    {
-      name: "ToObject called before ToPropertyKey",
-      exec: function () {/*
-        var ok = !!Object.hasOwn;
-        try {
-          Object.hasOwn(null, { toString: function () { ok = false } });
-          return false;
-        } catch (e) {
-          return ok;
-        }
-      */},
-      res: {
-        babel7corejs3: babel.corejs,
-        typescript3_2corejs3: typescript.corejs,
-        ie11: false,
-        chrome1: false,
-        chrome90: false,
-        chrome93: true,
-        edge18: false,
-        firefox2: false,
-        firefox90: false,
-        firefox91: firefox.nightly,
-        firefox92: true,
-        opera10_50: false,
-        safari12: false,
-        rhino1_7_13: false
-      }
-    }
-  ]
-},
-{
   name: 'Array find from last',
   category: STAGE3,
   significance: 'small',
@@ -1537,11 +1315,7 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-find-from-last',
-          note_html: 'The feature has to be enabled via <code>jscOptions=--useArrayFindLastMethod=true</code> flag.'
-        },
+        safaritp: true,
         rhino1_7_13: false
       }
     },
@@ -1549,7 +1323,7 @@ exports.tests = [
       name: "Array.prototype.findLastIndex",
       exec: function () {/*
         var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
-        return arr.findLast(function (o) { return o.x === 1; }) === 2;
+        return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
       */},
       res: {
         babel7corejs3: babel.corejs,
@@ -1562,10 +1336,7 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-find-from-last'
-        },
+        safaritp: true,
         rhino1_7_13: false
       }
     }
