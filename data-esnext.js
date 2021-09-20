@@ -1315,11 +1315,7 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-find-from-last',
-          note_html: 'The feature has to be enabled via <code>jscOptions=--useArrayFindLastMethod=true</code> flag.'
-        },
+        safaritp: true,
         rhino1_7_13: false
       }
     },
@@ -1327,7 +1323,7 @@ exports.tests = [
       name: "Array.prototype.findLastIndex",
       exec: function () {/*
         var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
-        return arr.findLast(function (o) { return o.x === 1; }) === 2;
+        return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
       */},
       res: {
         babel7corejs3: babel.corejs,
@@ -1340,10 +1336,7 @@ exports.tests = [
         firefox89: false,
         opera10_50: false,
         safari12: false,
-        safaritp: {
-          val: 'flagged',
-          note_id: 'safari-find-from-last'
-        },
+        safaritp: true,
         rhino1_7_13: false
       }
     }

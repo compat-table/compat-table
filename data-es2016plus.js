@@ -5792,10 +5792,7 @@ exports.tests = [
             note_id: 'safari-at-method',
             note_html: 'The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.'
           },
-          safaritp: {
-            val: 'flagged',
-            note_id: 'safari-at-method'
-          },
+          safaritp: true,
           babel7corejs3: babel.corejs,
           typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
@@ -5826,10 +5823,9 @@ exports.tests = [
             val: 'flagged',
             note_id: 'safari-at-method'
           },
-          safaritp: {
-            val: 'flagged',
-            note_id: 'safari-at-method'
-          },
+          safaritp: true,
+          babel7corejs3: babel.corejs,
+          typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
           rhino1_7_13: false
         }
@@ -5874,10 +5870,7 @@ exports.tests = [
             val: 'flagged',
             note_id: 'safari-at-method'
           },
-          safaritp: {
-            val: 'flagged',
-            note_id: 'safari-at-method'
-          },
+          safaritp: true,
           babel7corejs3: babel.corejs,
           typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
