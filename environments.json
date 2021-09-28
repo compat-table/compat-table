@@ -4091,7 +4091,7 @@
     "platformtype": "engine",
     "release": "2016-05-03",
     "retire": "2016-12-12",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6"
@@ -4104,7 +4104,7 @@
     "platformtype": "engine",
     "release": "2016-12-12",
     "retire": "2017-03-20",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6"
@@ -4117,7 +4117,7 @@
     "platformtype": "engine",
     "release": "2017-03-20",
     "retire": "2017-08-02",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6"
@@ -4129,7 +4129,7 @@
     "short": "DUK 1.8",
     "platformtype": "engine",
     "release": "2017-08-02",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6"
@@ -4142,7 +4142,7 @@
     "platformtype": "engine",
     "release": "2017-01-02",
     "retire": "2017-05-04",
-    "obsolete": true
+    "obsolete": "very"
   },
   "duktape2_1": {
     "full": "Duktape 2.1",
@@ -4151,7 +4151,7 @@
     "platformtype": "engine",
     "release": "2017-04-15",
     "retire": "2017-09-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "duktape2_2": {
     "full": "Duktape 2.2",
@@ -4159,7 +4159,7 @@
     "short": "DUK 2.2",
     "platformtype": "engine",
     "release": "2018-08-04",
-    "obsolete": true
+    "obsolete": "very"
   },
   "duktape2_3": {
     "full": "Duktape 2.3",
@@ -4167,6 +4167,30 @@
     "short": "DUK 2.3",
     "platformtype": "engine",
     "release": "2017-09-23",
+    "obsolete": "very"
+  },
+  "duktape2_4": {
+    "full": "Duktape 2.4",
+    "family": "Duktape",
+    "short": "DUK 2.4",
+    "platformtype": "engine",
+    "release": "2019-07-29",
+    "obsolete": true
+  },
+  "duktape2_5": {
+    "full": "Duktape 2.5",
+    "family": "Duktape",
+    "short": "DUK 2.5",
+    "platformtype": "engine",
+    "release": "2019-11-26",
+    "obsolete": true
+  },
+  "duktape2_6": {
+    "full": "Duktape 2.6",
+    "family": "Duktape",
+    "short": "DUK 2.6",
+    "platformtype": "engine",
+    "release": "2020-10-14",
     "obsolete": false
   },
   "jerryscript1_0": {

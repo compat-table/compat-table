@@ -1057,6 +1057,7 @@ exports.tests = [
       safari5: false,
       safari5_1: true,
       safari13: true,
+      duktape2_0: true,
       graalvm20_3: true,
       jerryscript1_0: false,
       jerryscript2_2_0: true,
@@ -1408,7 +1409,8 @@ exports.tests = [
       edge16: false,
       edge17: false,
       edge18: true,
-      edge80: true
+      edge80: true,
+      duktape2_0: true
     }
   }, {
     name: 'Number.prototype.toExponential throws on ±Infinity fractionDigits',
@@ -1436,7 +1438,8 @@ exports.tests = [
       edge16: true,
       edge17: true,
       edge18: true,
-      edge80: true
+      edge80: true,
+      duktape2_0: true
     }
   }],
 },

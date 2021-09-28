@@ -124,6 +124,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -152,6 +153,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -175,6 +177,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -198,6 +201,7 @@ exports.tests = [
         firefox52: false,
         opera10_50: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -228,6 +232,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -251,6 +256,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -273,6 +279,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -295,6 +302,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -314,6 +322,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -333,6 +342,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -352,6 +362,7 @@ exports.tests = [
         ie11: false,
         firefox2: false,
         chrome77: false,
+        duktape2_0: false,
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: false,
@@ -380,6 +391,7 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -397,6 +409,7 @@ exports.tests = [
         firefox52: false,
         chrome70: false,
         safari12: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     }
@@ -494,6 +507,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -515,6 +529,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     }
@@ -538,6 +553,7 @@ exports.tests = [
     firefox10: false,
     firefox60: false,
     chrome77: false,
+    duktape2_0: false,
     rhino1_7_13: false
   }
 },
@@ -561,6 +577,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -580,6 +597,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -600,6 +618,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -625,6 +644,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -642,6 +662,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -659,6 +680,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -676,6 +698,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -693,6 +716,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -710,6 +734,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -727,6 +752,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -746,6 +772,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -763,6 +790,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -780,6 +808,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -797,6 +826,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -814,6 +844,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -832,6 +863,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -849,6 +881,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -866,6 +899,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -885,6 +919,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -914,6 +949,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -943,6 +979,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -972,6 +1009,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -997,6 +1035,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1022,6 +1061,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1041,6 +1081,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1066,6 +1107,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1085,6 +1127,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1110,6 +1153,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1130,6 +1174,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1155,6 +1200,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1174,6 +1220,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1193,6 +1240,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1218,6 +1266,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1237,6 +1286,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1254,6 +1304,7 @@ exports.tests = [
         firefox10: false,
         firefox60: false,
         chrome77: false,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     }
@@ -1283,6 +1334,7 @@ exports.tests = [
     safari1: false,
     safari13: false,
     safari13_1: true,
+    duktape2_0: false,
     graalvm19: false,
     graalvm20: false,
     graalvm20_1: true,
@@ -1316,6 +1368,7 @@ exports.tests = [
         opera10_50: false,
         safari12: false,
         safaritp: true,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     },
@@ -1337,6 +1390,7 @@ exports.tests = [
         opera10_50: false,
         safari12: false,
         safaritp: true,
+        duktape2_0: false,
         rhino1_7_13: false
       }
     }
@@ -1364,6 +1418,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1399,6 +1454,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1434,6 +1490,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1469,6 +1526,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1504,6 +1562,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1539,6 +1598,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1574,6 +1634,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
@@ -1609,6 +1670,7 @@ exports.tests = [
         firefox91: true,
         safari14: false,
         safari15: true,
+        duktape2_0: false,
       }
     },
     {
