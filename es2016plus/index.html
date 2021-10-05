@@ -190,8 +190,8 @@
 <th class="platform safari14 desktop obsolete" data-browser="safari14"><a href="#safari14" class="browser-name"><abbr title="Safari 14">SF&#xA0;14</abbr></a></th>
 <th class="platform safari14_1 desktop" data-browser="safari14_1"><a href="#safari14_1" class="browser-name"><abbr title="Safari 14.1">SF&#xA0;14.1</abbr></a></th>
 <th class="platform safari15 desktop" data-browser="safari15"><a href="#safari15" class="browser-name"><abbr title="Safari 15">SF&#xA0;15</abbr></a></th>
-<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 132">SF TP</abbr></a></th>
-<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit r222556 (October 4, 2017)">WK</abbr></a></th>
+<th class="platform safaritp desktop unstable" data-browser="safaritp"><a href="#safaritp" class="browser-name"><abbr title="Safari Technology Preview Release 133">SF TP</abbr></a></th>
+<th class="platform webkit desktop unstable" data-browser="webkit"><a href="#webkit" class="browser-name"><abbr title="Webkit Nightly">WK</abbr></a></th>
 <th class="platform opera69 desktop obsolete" data-browser="opera69"><a href="#opera69" class="browser-name"><abbr title="Opera 69">OP 69</abbr></a></th>
 <th class="platform opera70 desktop obsolete" data-browser="opera70"><a href="#opera70" class="browser-name"><abbr title="Opera 70">OP 70</abbr></a></th>
 <th class="platform opera71 desktop obsolete" data-browser="opera71"><a href="#opera71" class="browser-name"><abbr title="Opera 71">OP 71</abbr></a></th>
@@ -6683,8 +6683,8 @@ p.then(function(result) {
 <td class="tally obsolete" data-browser="safari14" data-tally="0">0/17</td>
 <td class="tally" data-browser="safari14_1" data-tally="0">0/17</td>
 <td class="tally" data-browser="safari15" data-tally="0">0/17</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/17</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/17</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">17/17</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">17/17</td>
 <td class="tally obsolete" data-browser="opera69" data-tally="1">17/17</td>
 <td class="tally obsolete" data-browser="opera70" data-tally="1">17/17</td>
 <td class="tally obsolete" data-browser="opera71" data-tally="1">17/17</td>
@@ -6826,8 +6826,8 @@ return typeof SharedArrayBuffer === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -6969,8 +6969,8 @@ return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7112,8 +7112,8 @@ return &apos;byteLength&apos; in SharedArrayBuffer.prototype;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7255,8 +7255,8 @@ return typeof SharedArrayBuffer.prototype.slice === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7398,8 +7398,8 @@ return SharedArrayBuffer.prototype[Symbol.toStringTag] === &apos;SharedArrayBuff
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7541,8 +7541,8 @@ return typeof Atomics.add === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7684,8 +7684,8 @@ return typeof Atomics.and === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7827,8 +7827,8 @@ return typeof Atomics.compareExchange === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -7970,8 +7970,8 @@ return typeof Atomics.exchange === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8113,8 +8113,8 @@ return typeof Atomics.wait === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8256,8 +8256,8 @@ return typeof Atomics.wake === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8399,8 +8399,8 @@ return typeof Atomics.isLockFree === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8542,8 +8542,8 @@ return typeof Atomics.load === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8685,8 +8685,8 @@ return typeof Atomics.or === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8828,8 +8828,8 @@ return typeof Atomics.store === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -8971,8 +8971,8 @@ return typeof Atomics.sub === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -9114,8 +9114,8 @@ return typeof Atomics.xor === &apos;function&apos;;
 <td class="no obsolete" data-browser="safari14">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari14_1">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
 <td class="no" data-browser="safari15">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="safaritp">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
-<td class="no unstable" data-browser="webkit">No<a href="#sf-shared-memory-spectre-note"><sup>[19]</sup></a></td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="yes obsolete" data-browser="opera69">Yes</td>
 <td class="yes obsolete" data-browser="opera70">Yes</td>
 <td class="yes obsolete" data-browser="opera71">Yes</td>
@@ -28748,8 +28748,8 @@ return [
 <td class="tally obsolete" data-browser="safari14" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari14_1" data-tally="0">0/2</td>
 <td class="tally" data-browser="safari15" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="opera69" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera70" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera71" data-tally="0">0/2</td>
@@ -28891,8 +28891,8 @@ return Object.hasOwn({ x: 2 }, &quot;x&quot;) === true;
 <td class="no obsolete" data-browser="safari14">No</td>
 <td class="no" data-browser="safari14_1">No</td>
 <td class="no" data-browser="safari15">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera69">No</td>
 <td class="no obsolete" data-browser="opera70">No</td>
 <td class="no obsolete" data-browser="opera71">No</td>
@@ -29040,8 +29040,8 @@ try {
 <td class="no obsolete" data-browser="safari14">No</td>
 <td class="no" data-browser="safari14_1">No</td>
 <td class="no" data-browser="safari15">No</td>
-<td class="no unstable" data-browser="safaritp">No</td>
-<td class="no unstable" data-browser="webkit">No</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
 <td class="no obsolete" data-browser="opera69">No</td>
 <td class="no obsolete" data-browser="opera70">No</td>
 <td class="no obsolete" data-browser="opera71">No</td>
