@@ -17291,6 +17291,48 @@ exports.tests = [
         hermes0_7_0: true,
         rhino1_7_13: false
       }
+    },
+    {
+      name: 'duplicate identifier',
+      exec: function(){/*
+        var d = function d([d]) { return d };
+        if (!d([true])) return false;
+
+        try {
+          eval('var f = function f([id, id]) { return id }');
+          return false;
+        } catch (e) {
+          return e instanceof SyntaxError;
+        }
+      */},
+      res: {
+        tr: true,
+        babel6corejs2: babel.corejs,
+        ejs: true,
+        es6tr: true,
+        jsx: true,
+        closure: true,
+        typescript1corejs2: true,
+        firefox2: true,
+        opera10_50: false,
+        safari15_0: false,
+        ie11: false,
+        edge13: edge.experimental,
+        edge14: true,
+        xs6: true,
+        chrome49: true,
+        node6: true,
+        node6_5: true,
+        jxa: true,
+        duktape2_0: false,
+        graalvm19: true,
+        graalvm20: true,
+        graalvm20_1: true,
+        jerryscript2_0: false,
+        jerryscript2_2_0: true,
+        hermes0_7_0: true,
+        rhino1_7_13: true
+      }
     }
   ],
 },
