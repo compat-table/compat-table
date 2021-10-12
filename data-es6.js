@@ -17296,7 +17296,7 @@ exports.tests = [
       name: 'duplicate identifier',
       exec: function(){/*
         var d = function d([d]) { return d };
-        if (!d([true])) return false;
+        if (d([true]) !== true) return false;
 
         try {
           eval('var f = function f([id, id]) { return id }');
