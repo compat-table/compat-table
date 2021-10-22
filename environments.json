@@ -4089,6 +4089,38 @@
       "non-standard"
     ]
   },
+  "node16_9": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 16+",
+    "platformtype": "engine",
+    "equals": "chrome93",
+    "release": "2021-09-07",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node16_11": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 16+",
+    "platformtype": "engine",
+    "equals": "chrome94",
+    "release": "2021-10-08",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
   "duktape1_0": {
     "full": "Duktape 1.0",
     "family": "Duktape",
