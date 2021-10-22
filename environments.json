@@ -2684,13 +2684,14 @@
     "release": "2020-10-09",
     "retire": "2020-11-19",
     "equals": "chrome86",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge87": {
     "full": "Microsoft Edge 87",
     "family": "V8",
     "short": "Edge 87",
     "release": "2020-11-19",
+    "retire": "2020-12-09",
     "equals": "chrome87",
     "obsolete": true
   },
@@ -2699,6 +2700,7 @@
     "family": "V8",
     "short": "Edge 88",
     "release": "2020-12-09",
+    "retire": "2021-02-03",
     "equals": "chrome88",
     "obsolete": true
   },
@@ -2707,6 +2709,7 @@
     "family": "V8",
     "short": "Edge 89",
     "release": "2021-02-03",
+    "retire": "2021-04-15",
     "equals": "chrome89",
     "obsolete": true
   },
@@ -2715,6 +2718,7 @@
     "family": "V8",
     "short": "Edge 90",
     "release": "2021-04-15",
+    "retire": "2021-05-27",
     "equals": "chrome90",
     "obsolete": true
   },
@@ -2723,6 +2727,7 @@
     "family": "V8",
     "short": "Edge 91",
     "release": "2021-05-27",
+    "retire": "2021-07-22",
     "equals": "chrome91",
     "obsolete": true
   },
@@ -2731,6 +2736,7 @@
     "family": "V8",
     "short": "Edge 92",
     "release": "2021-07-22",
+    "retire": "2021-09-02",
     "equals": "chrome92",
     "obsolete": true
   },
@@ -2739,22 +2745,32 @@
     "family": "V8",
     "short": "Edge 93",
     "release": "2021-09-02",
+    "retire": "2021-09-24",
     "equals": "chrome93",
-    "obsolete": false
+    "obsolete": true
   },
   "edge94": {
     "full": "Microsoft Edge 94",
     "family": "V8",
     "short": "Edge 94",
     "release": "2021-09-24",
+    "retire": "2021-10-21",
     "equals": "chrome94",
     "obsolete": false
   },
   "edge95": {
-    "full": "Microsoft Edge 95 Beta",
+    "full": "Microsoft Edge 95",
     "family": "V8",
     "short": "Edge 95",
+    "release": "2021-10-22",
     "equals": "chrome95",
+    "obsolete": false
+  },
+  "edge96": {
+    "full": "Microsoft Edge 96 Beta",
+    "family": "V8",
+    "short": "Edge 96",
+    "equals": "chrome96",
     "unstable": true
   },
   "safari1": {
