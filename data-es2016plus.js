@@ -7006,7 +7006,8 @@ exports.tests = [
     spec: 'https://github.com/tc39/proposal-change-array-by-copy',
     subtests: [
       {
-        name: "Array.prototype.toReversed",
+        name: "Array.prototype.toReversed()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed',
         exec: function () {/*
           var arr = [1, 2, 3];
           return arr.toReversed()[0] === 3 && arr[0] === 1;
@@ -7015,22 +7016,19 @@ exports.tests = [
           babel7corejs3: babel.corejs,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          chrome94: false,
           chrome109: false,
           chrome110: true,
-          edge109: false,
-          edge110: true,
-          firefox114: false,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy", note_html: 'The feature has to be enabled via --enable-change-array-by-copy flag'},
           firefox115: true,
-          firefox102: false,
           safari15_5: false,
           safari16: true,
-          node16_11: false,
-          node18_3: false,
-          node20_0: true,
         }
       },
       {
-        name: "Array.prototype.toSorted",
+        name: "Array.prototype.toSorted()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted',
         exec: function () {/*
           var arr = ['C', 'A', 'B'];
           return arr.toSorted()[0] === 'A' && arr[0] === 'C';
@@ -7039,22 +7037,19 @@ exports.tests = [
           babel7corejs3: babel.corejs,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          chrome94: false,
           chrome109: false,
           chrome110: true,
-          edge109: false,
-          edge110: true,
-          firefox114: false,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
           firefox115: true,
-          firefox102: false,
           safari15_5: false,
           safari16: true,
-          node16_11: false,
-          node18_3: false,
-          node20_0: true,
         }
       },
       {
-        name: "Array.prototype.toSpliced",
+        name: "Array.prototype.toSpliced()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced',
         exec: function () {/*
           var arr = ['A', 'C'];
           return arr.toSpliced(1, 0, 'B')[1] === 'B' && arr[1] === 'C';
@@ -7063,22 +7058,19 @@ exports.tests = [
           babel7corejs3: babel.corejs,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          chrome94: false,
           chrome109: false,
           chrome110: true,
-          edge109: false,
-          edge110: true,
-          firefox114: false,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
           firefox115: true,
-          firefox102: false,
           safari15_5: false,
           safari16: true,
-          node16_11: false,
-          node18_3: false,
-          node20_0: true,
         }
       },
       {
-        name: "Array.prototype.with",
+        name: "Array.prototype.with()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with',
         exec: function () {/*
           var arr = ['A', 'X', 'C'];
           return arr.with(1, 'B')[1] === 'B' && arr[1] === 'X';
@@ -7087,20 +7079,73 @@ exports.tests = [
           babel7corejs3: babel.corejs,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
+          chrome94: false,
           chrome109: false,
           chrome110: true,
-          edge109: false,
-          edge110: true,
-          firefox114: false,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
           firefox115: true,
-          firefox102: false,
           safari15_5: false,
           safari16: true,
-          node16_11: false,
-          node18_3: false,
-          node20_0: true,
         }
-      }
+      },
+      {
+        name: "TypedArray.prototype.toReversed()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed',
+        exec: function () {/*
+          var arr = new Uint8Array([1, 2, 3]);
+          return arr.toReversed()[0] == 3 && arr[0] == 1;
+        */},
+        res: {
+          ie11: false,
+          chrome94: false,
+          chrome109: false,
+          chrome110: true,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
+          firefox115: true,
+          safari15_5: false,
+          safari16: true,
+        }
+      },
+      {
+        name: "TypedArray.prototype.toSorted()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted',
+        exec: function () {/*
+          var arr = new Uint8Array([3, 1, 2]);
+          return arr.toSorted()[0] == 1 && arr[0] == 3;
+        */},
+        res: {
+          ie11: false,
+          chrome94: false,
+          chrome109: false,
+          chrome110: true,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
+          firefox115: true,
+          safari15_5: false,
+          safari16: true,
+        }
+      },
+      {
+        name: "TypedArray.prototype.with()",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with',
+        exec: function () {/*
+          var arr = new Uint8Array([1, 0, 2]);
+          return arr.with(1, 2)[1] == 2 && arr[1] == 0;
+        */},
+        res: {
+          ie11: false,
+          chrome94: false,
+          chrome109: false,
+          chrome110: true,
+          firefox45: false,
+          firefox95: {val: "flagged", note_id: "fx-change-array-by-copy"},
+          firefox115: true,
+          safari15_5: false,
+          safari16: true,
+        }
+      },
     ]
   },
   {
