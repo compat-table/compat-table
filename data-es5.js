@@ -1392,19 +1392,26 @@ exports.tests = [
   subtests: [{
     name: 'Number.prototype.toExponential rounds properly',
     exec: function () {
-      return (-6.9e-11).toExponential(4) === '-6.9000e-11';
+      return (-6.9e-11).toExponential(4) === '-6.9000e-11' // Edge <= 17
+        && (25).toExponential(0) === '3e+1' // FF <= 86
+        && (1.255).toExponential(2) === '1.25e+0'; // IE <= 11 && Edge <= 14
     },
     res: {
-      ie6: true,
-      ie7: true,
-      ie8: true,
-      ie9: true,
-      ie10: true,
-      ie11: true,
+      ie6: false,
+      ie7: false,
+      ie8: false,
+      ie9: false,
+      ie10: false,
+      ie11: false,
       chrome15: true,
       firefox3: true,
+      firefox3_6: false,
+      firefox86: false,
+      firefox87: true,
       opera10_10: true,
       safari4: true,
+      edge13: false,
+      edge14: false,
       edge15: false,
       edge16: false,
       edge17: false,
@@ -1440,6 +1447,29 @@ exports.tests = [
       edge18: true,
       edge80: true,
       duktape2_0: true
+    }
+  }, {
+    name: 'Number.prototype.toExponential does not throw on edge cases',
+    exec: function () {
+      try {
+        NaN.toExponential(Infinity);
+        Infinity.toExponential(Infinity);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    res: {
+      chrome37: true,
+      firefox3: false,
+      firefox3_6: false,
+      firefox49: false,
+      firefox50: true,
+      ie6: true,
+      ie8: true,
+      edge11: true,
+      safari10: false,
+      safari11: true
     }
   }],
 },
