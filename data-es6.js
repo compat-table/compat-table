@@ -2224,6 +2224,7 @@ exports.tests = [
         tr: true,
         babel6corejs2: true,
         es6tr: true,
+        closure20211107: true,
         jsx: true,
         typescript1corejs2: true,
         ie11: false,
