@@ -4954,6 +4954,7 @@ exports.tests = [
   {
     name: 'WeakReferences',
     spec: 'https://github.com/tc39/proposal-weakrefs',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef',
     category: '2021 features',
     significance: 'large',
     subtests: [
@@ -5030,6 +5031,7 @@ exports.tests = [
     subtests: [
       {
         name: '||= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5123,6 +5125,7 @@ exports.tests = [
       },
       {
         name: '&&= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5216,6 +5219,7 @@ exports.tests = [
       },
       {
         name: '??= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5939,6 +5943,7 @@ exports.tests = [
     category: '2022 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-accessible-object-hasownproperty',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn',
     subtests: [
       {
         name: "Basic functionality",
