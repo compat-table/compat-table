@@ -17,6 +17,16 @@ exports.tests = [
   category: 'optimisation',
   significance: 'medium',
   spec: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tail-position-calls',
+  note_id: 'proper-tail-calls',
+  note_html: '<a href="https://www.stefanjudis.com/today-i-learned/proper-tail-calls-in-javascript/">'
+    + 'The feature can be enabled with <code>use strict</code> and JavaScript flag <code>"--harmony-tailcalls"</code></a> '
+    + 'in certain versions of Node.js. Since Node.js 8.2.1, the V8 flags '
+    + '<code>--harmony-tailcalls</code> and <code>--harmony-explicit-tailcalls</code> '
+    + 'have been removed. See: '
+    + '<a href="https://www.chromestatus.com/feature/5516876633341952">Chrome Platform Status</a>, '
+    + '<a href="https://javascript.plainenglish.io/tail-calls-in-javascript-will-there-be-a-comeback-63ac3a0523a5">'
+    + 'blog in JavaScript in Plain English</a>, '
+    + 'and <a href="https://v8.dev/blog/modern-javascript#proper-tail-calls">V8 Dev Blog</a> for details.',
   subtests: [
     {
       name: 'direct recursion',
