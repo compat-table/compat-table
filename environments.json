@@ -3025,7 +3025,7 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;12.1",
     "release": "2019-03-25",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari13": {
     "full": "Safari 13",
@@ -3053,13 +3053,20 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;14.1",
     "release": "2021-04-20",
-    "obsolete": false
+    "obsolete": true
   },
   "safari15": {
     "full": "Safari 15",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;15",
     "release": "2021-09-20",
+    "obsolete": false
+  },
+  "safari15_2": {
+    "full": "Safari 15.2",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15.2",
+    "release": "2021-12-13",
     "obsolete": false
   },
   "safaritp": {
