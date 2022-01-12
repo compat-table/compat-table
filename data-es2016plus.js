@@ -619,11 +619,12 @@ exports.tests = [
         name: 'no line break between async and function',
         exec: function () {/*
           async function a(){}
-          try { Function("async\n function a(){}")(); } catch(e) { return true; }
+          try { Function("async\n function a(){await 0}")(); } catch(e) { return true; }
         */},
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs3: true,
           closure: false,
           typescript1corejs2: null,
           chrome52: null,
@@ -757,6 +758,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs3: true,
           closure: true,
           typescript1corejs2: null,
           chrome52: null,
@@ -821,6 +823,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs3: true,
           closure: false,
           closure20200614: true,
           typescript1corejs2: null,
@@ -1901,6 +1904,7 @@ exports.tests = [
      }
      */},
     res: {
+      babel7corejs3: true,
       ie11: false,
       edge12: true,
       firefox2: false,
@@ -2844,6 +2848,7 @@ exports.tests = [
      */},
     res: {
       tr: true,
+      babel7corejs3: true,
       ie10: true,
       edge12: true,
       firefox2: true,
@@ -3163,6 +3168,7 @@ exports.tests = [
      return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
      */},
     res: {
+      babel7corejs3: true,
       closure20181008: true,
       closure20200315: false,
       closure20200517: true,
@@ -3277,6 +3283,7 @@ exports.tests = [
            !/(?<=a)b/.test('b');
   */},
     res : {
+      babel7corejs3: false,
       ie11: false,
       firefox2: false,
       firefox77: false,
@@ -4794,6 +4801,7 @@ exports.tests = [
           return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
         */},
         res : {
+          babel7corejs3: true,
           closure20200927: true,
           ie11: false,
           firefox10: false,
@@ -5477,6 +5485,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          babel7corejs3: true,
           ie11: false,
           firefox2: false,
           firefox80: firefox.privateFields,
@@ -5493,7 +5502,6 @@ exports.tests = [
           graalvm20: false,
           graalvm20_1: false,
           graalvm20_3: true,
-          babel7corejs3: false,
           typescript3_8corejs3: false,
           rhino1_7_13: false
         }
@@ -5511,6 +5519,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          babel7corejs3: true,
           ie11: false,
           firefox2: false,
           firefox74: firefox.privateClassFields,
@@ -5528,7 +5537,6 @@ exports.tests = [
           graalvm20: false,
           graalvm20_1: false,
           graalvm20_3: true,
-          babel7corejs3: false,
           typescript3_8corejs3: false,
           rhino1_7_13: false
         }
