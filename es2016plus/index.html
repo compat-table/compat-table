@@ -1807,7 +1807,7 @@ return true;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
@@ -4199,7 +4199,7 @@ return Math.min(1,2,3,) === 1;
 <td class="tally obsolete" data-browser="tr" data-tally="0.25" style="background-color:hsl(30,75%,50%)">4/16</td>
 <td class="tally obsolete" data-browser="babel6corejs2" data-tally="0.25" style="background-color:hsl(30,75%,50%)">4/16</td>
 <td class="tally obsolete" data-browser="babel7corejs2" data-tally="0.5625" style="background-color:hsl(67,61%,50%)">9/16</td>
-<td class="tally" data-browser="babel7corejs3" data-tally="0.5625" style="background-color:hsl(67,61%,50%)">9/16</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="0.75" style="background-color:hsl(90,53%,50%)">12/16</td>
 <td class="tally obsolete" data-browser="closure20200315" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="closure20200517" data-tally="0.625" style="background-color:hsl(75,58%,50%)">10/16</td>
 <td class="tally obsolete" data-browser="closure20200614" data-tally="0.6875" style="background-color:hsl(82,55%,50%)">11/16</td>
@@ -4657,13 +4657,13 @@ p.catch(function(result) {
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_no_line_break_between_async_and_function"><td><span><a class="anchor" href="#test-async_functions_no_line_break_between_async_and_function">&#xA7;</a>no line break between async and function</span><script data-source="
 async function a(){}
-try { Function(&quot;async\n function a(){}&quot;)(); } catch(e) { return true; }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nasync function a(){}\ntry { Function(\"async\\n function a(){}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){}\ntry { Function(\"async\\n function a(){}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+try { Function(&quot;async\n function a(){await 0}&quot;)(); } catch(e) { return true; }
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nasync function a(){}\ntry { Function(\"async\\n function a(){await 0}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nasync function a(){}\ntry { Function(\"async\\n function a(){await 0}\")(); } catch(e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure20200315">No</td>
 <td class="no obsolete" data-browser="closure20200517">No</td>
 <td class="no obsolete" data-browser="closure20200614">No</td>
@@ -5269,7 +5269,7 @@ try { Function(&quot;(async function a(){ await; }())&quot;)(); } catch(e) { ret
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="yes obsolete" data-browser="closure20200315">Yes</td>
 <td class="yes obsolete" data-browser="closure20200517">Yes</td>
 <td class="yes obsolete" data-browser="closure20200614">Yes</td>
@@ -5570,7 +5570,7 @@ try { Function(&quot;(async function a(b = await Promise.resolve()){}())&quot;)(
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure20200315">No</td>
 <td class="no obsolete" data-browser="closure20200517">No</td>
 <td class="yes obsolete" data-browser="closure20200614">Yes</td>
@@ -13097,7 +13097,7 @@ return i === 0;
 <td class="yes obsolete not-applicable" data-browser="tr" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="unknown obsolete not-applicable" data-browser="babel6corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="babel7corejs2" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
-<td class="unknown not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
+<td class="yes not-applicable" data-browser="babel7corejs3" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">Yes</td>
 <td class="unknown obsolete not-applicable" data-browser="closure20200315" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="closure20200517" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
 <td class="unknown obsolete not-applicable" data-browser="closure20200614" title="This feature is optional on non-browser platforms, and doesn&apos;t contribute to the platform&apos;s support percentage.">?</td>
@@ -14639,7 +14639,7 @@ return /(?&lt;=a)b/.test(&apos;ab&apos;) &amp;&amp; /(?&lt;!a)b/.test(&apos;cb&a
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="no" data-browser="babel7corejs3">No</td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
@@ -15562,7 +15562,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="no obsolete" data-browser="closure20200315">No</td>
 <td class="yes obsolete" data-browser="closure20200517">Yes</td>
 <td class="yes obsolete" data-browser="closure20200614">Yes</td>
@@ -22531,7 +22531,7 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="babel6corejs2" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="babel7corejs2" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
-<td class="tally" data-browser="babel7corejs3" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="closure20200315" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="closure20200517" data-tally="0">0/5</td>
 <td class="tally obsolete" data-browser="closure20200614" data-tally="0">0/5</td>
@@ -23280,7 +23280,7 @@ return fn?.(...[], 1) === void undefined &amp;&amp; fn?.(...[], ...[]) === void 
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="unknown obsolete" data-browser="babel7corejs2">?</td>
-<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
@@ -26269,7 +26269,7 @@ return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
 <td class="tally obsolete" data-browser="tr" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
 <td class="tally obsolete" data-browser="babel6corejs2" data-tally="0.16666666666666666" style="background-color:hsl(20,78%,50%)">1/6</td>
 <td class="tally obsolete" data-browser="babel7corejs2" data-tally="1">6/6</td>
-<td class="tally" data-browser="babel7corejs3" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">4/6</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="closure20200315" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="closure20200517" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="closure20200614" data-tally="0">0/6</td>
@@ -26881,7 +26881,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="yes obsolete" data-browser="babel7corejs2">Yes</td>
-<td class="no" data-browser="babel7corejs3">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
@@ -27034,7 +27034,7 @@ return new C().x() === 42 &amp;&amp; new C().x(null) === void 0;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
 <td class="yes obsolete" data-browser="babel7corejs2">Yes</td>
-<td class="no" data-browser="babel7corejs3">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes</td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
