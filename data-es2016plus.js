@@ -5605,6 +5605,35 @@ exports.tests = [
         }
       },
       {
+        name: 'static class fields use [[Define]]',
+        exec: function () { /*
+          return (class X { static name = "name"; }).name === 'name';
+        */},
+        res: {
+          chrome73: true,
+          chrome90: true,
+          chrome94: true,
+          chrome97: false,
+          firefox95: true,
+          firefox96: true,
+          node11_0: false,
+          node12_0: true,
+          node12_5: true,
+          node12_9: true,
+          node12_11: true,
+          node13_0: true,
+          node13_2: true,
+          node14_0: true,
+          node14_5: true,
+          node14_6: true,
+          node15_0: true,
+          node16_0: true,
+          node16_9: true,
+          node16_11: true,
+          safari15: true
+        }
+      },
+      {
         name: 'private static class fields',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_elements#Private_static_fields',
         exec: function () {/*
