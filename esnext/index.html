@@ -207,6 +207,7 @@
 <th class="platform opera80 desktop" data-browser="opera80"><a href="#opera80" class="browser-name"><abbr title="Opera 80">OP 80</abbr></a></th>
 <th class="platform opera81 desktop unstable" data-browser="opera81"><a href="#opera81" class="browser-name"><abbr title="Opera 81">OP 81</abbr></a></th>
 <th class="platform rhino1_7_13 engine obsolete" data-browser="rhino1_7_13"><a href="#rhino1_7_13" class="browser-name"><abbr title="Rhino 1.7.13">Rhino 1.7.13</abbr></a></th>
+<th class="platform rhino1_7_14 engine obsolete" data-browser="rhino1_7_14"><a href="#rhino1_7_14" class="browser-name"><abbr title="Rhino 1.7.14">Rhino 1.7.14</abbr></a></th>
 <th class="platform phantom2_1 engine obsolete" data-browser="phantom2_1"><a href="#phantom2_1" class="browser-name"><abbr title="PhantomJS 2.1">PJS</abbr></a></th>
 <th class="platform node0_10 engine obsolete" data-browser="node0_10"><a href="#node0_10" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-old-note"><sup>[1]</sup></a></th>
 <th class="platform node0_12 engine obsolete" data-browser="node0_12"><a href="#node0_12" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a><a href="#harmony-flag-note"><sup>[2]</sup></a></th>
@@ -272,7 +273,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="140">Stage 3</td>
+      <tr class="category"><td colspan="141">Stage 3</td>
 </tr>
 <tr significance="1"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/tc39/proposal-realms">Realms</a></span><script data-source="
 return typeof Realm === &quot;function&quot;
@@ -358,6 +359,7 @@ return typeof Realm === &quot;function&quot;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -497,6 +499,7 @@ return typeof Realm === &quot;function&quot;
 <td class="tally" data-browser="opera80" data-tally="1">2/2</td>
 <td class="tally unstable" data-browser="opera81" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">2/2</td>
@@ -645,6 +648,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="opera80">Yes</td>
 <td class="yes unstable" data-browser="opera81">Yes</td>
 <td class="yes obsolete" data-browser="rhino1_7_13">Yes</td>
+<td class="yes obsolete" data-browser="rhino1_7_14">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
@@ -795,6 +799,7 @@ return true;
 <td class="yes" data-browser="opera80">Yes</td>
 <td class="yes unstable" data-browser="opera81">Yes</td>
 <td class="yes obsolete" data-browser="rhino1_7_13">Yes</td>
+<td class="yes obsolete" data-browser="rhino1_7_14">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
@@ -941,6 +946,7 @@ try {
 <td class="yes" data-browser="opera80">Yes</td>
 <td class="yes unstable" data-browser="opera81">Yes</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -1080,6 +1086,7 @@ try {
 <td class="tally" data-browser="opera80" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
@@ -1223,6 +1230,7 @@ return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -1366,6 +1374,7 @@ return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
@@ -1427,7 +1436,7 @@ return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
 <td class="no" data-browser="opera_mobile64">No</td>
 <td class="no" data-browser="opera_mobile65">No</td>
 </tr>
-<tr class="category"><td colspan="140">Stage 2</td>
+<tr class="category"><td colspan="141">Stage 2</td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/tc39/proposal-function.sent">Generator function.sent Meta Property</a></span><script data-source="
 var result;
@@ -1516,6 +1525,7 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -1655,6 +1665,7 @@ return result === &apos;tromple&apos;;
 <td class="tally" data-browser="opera80" data-tally="0">0/1</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/1</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/1</td>
@@ -1805,6 +1816,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -1944,6 +1956,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="tally" data-browser="opera80" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/4</td>
@@ -2092,6 +2105,7 @@ try {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -2244,6 +2258,7 @@ try {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -2391,6 +2406,7 @@ try {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -2538,6 +2554,7 @@ try {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -2677,6 +2694,7 @@ try {
 <td class="tally" data-browser="opera80" data-tally="0">0/7</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/7</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/7</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/7</td>
@@ -2822,6 +2840,7 @@ return set.size === 2
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -2968,6 +2987,7 @@ return set.size === 3
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3113,6 +3133,7 @@ return set.size === 2
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3258,6 +3279,7 @@ return set.size === 2
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3400,6 +3422,7 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3542,6 +3565,7 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3684,6 +3708,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -3823,6 +3848,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="tally" data-browser="opera80" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
@@ -3968,6 +3994,7 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -4113,6 +4140,7 @@ return buffer1.byteLength === 0
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -4252,6 +4280,7 @@ return buffer1.byteLength === 0
 <td class="tally" data-browser="opera80" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
@@ -4397,6 +4426,7 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -4543,6 +4573,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -4686,6 +4717,7 @@ return !Array.isTemplateObject([])
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -4825,6 +4857,7 @@ return !Array.isTemplateObject([])
 <td class="tally" data-browser="opera80" data-tally="0">0/35</td>
 <td class="tally unstable" data-browser="opera81" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/35</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0">0/35</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0">0/35</td>
@@ -4967,6 +5000,7 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5111,6 +5145,7 @@ return instance[Symbol.iterator]() === instance;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5256,6 +5291,7 @@ return &apos;next&apos; in iterator
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5406,6 +5442,7 @@ return &apos;next&apos; in iterator
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5548,6 +5585,7 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5690,6 +5728,7 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5832,6 +5871,7 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -5974,6 +6014,7 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6116,6 +6157,7 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6258,6 +6300,7 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6402,6 +6445,7 @@ return result === &apos;123&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6544,6 +6588,7 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6686,6 +6731,7 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6828,6 +6874,7 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -6970,6 +7017,7 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7113,6 +7161,7 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7255,6 +7304,7 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7397,6 +7447,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7541,6 +7592,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7695,6 +7747,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -7849,6 +7902,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8003,6 +8057,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8153,6 +8208,7 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8303,6 +8359,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8447,6 +8504,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8597,6 +8655,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8741,6 +8800,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -8891,6 +8951,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9036,6 +9097,7 @@ let result = &apos;&apos;;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9186,6 +9248,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9330,6 +9393,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9474,6 +9538,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9624,6 +9689,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9768,6 +9834,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
@@ -9910,6 +9977,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="no" data-browser="opera80">No</td>
 <td class="no unstable" data-browser="opera81">No</td>
 <td class="no obsolete" data-browser="rhino1_7_13">No</td>
+<td class="no obsolete" data-browser="rhino1_7_14">No</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>

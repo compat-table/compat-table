@@ -2615,6 +2615,7 @@ exports.tests = [
     konq4_4: false,
     besen: false,
     rhino1_7_13: false,
+    rhino1_7_14: true,
     phantom: false,
     android4_0: true,
     duktape2_0: true,

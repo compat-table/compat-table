@@ -1417,7 +1417,8 @@ exports.tests = [
       edge17: false,
       edge18: true,
       edge80: true,
-      duktape2_0: true
+      duktape2_0: true,
+      rhino1_7_14: true,
     }
   }, {
     name: 'Number.prototype.toExponential throws on ±Infinity fractionDigits',
@@ -1446,7 +1447,8 @@ exports.tests = [
       edge17: true,
       edge18: true,
       edge80: true,
-      duktape2_0: true
+      duktape2_0: true,
+      rhino1_7_14: true,
     }
   }, {
     name: 'Number.prototype.toExponential does not throw on edge cases',
@@ -1469,7 +1471,8 @@ exports.tests = [
       ie8: true,
       edge11: true,
       safari10: false,
-      safari11: true
+      safari11: true,
+      rhino1_7_14: true,
     }
   }],
 },
