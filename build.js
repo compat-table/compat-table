@@ -33,6 +33,7 @@ var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
 var useCompilers = false;
+var excludeCurrentBrowser = false;
 var environments;
 
 process.argv.slice(2).forEach(function(arg) {
@@ -44,6 +45,9 @@ process.argv.slice(2).forEach(function(arg) {
 			break;
 		case 'environments':
 			environments = require(parts[1]);
+			break;
+		case 'excludecurrent':
+			excludeCurrentBrowser = true;
 			break;
 	}
 });
@@ -443,6 +447,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     mobile: 0
   };
 
+  if (excludeCurrentBrowser) {
+    $('table').addClass('no-current');
+    $('table thead tr:first-child th:first-child').attr('colspan', 1);
+  }
+
   // rawBrowsers includes very obsolete browsers which mustn't be printed, but should
   // be used by interpolateResults(). All other uses should use this, which filters
   // the very obsolete ones out.
@@ -764,7 +773,7 @@ function testScript(fn, transformFn, rowNum) {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
     // if there wasn't an expression, make the function statement into one
-    if (!expr) {
+    if (!expr || excludeCurrentBrowser) {
       if (transformFn) {
         try {
           expr = transformFn("("+fn+")");
