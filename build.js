@@ -23,7 +23,6 @@
 require('object.assign').shim();
 var pickBy = require('lodash.pickby');
 
-var environments = require('./environments');
 var interpolateAllResults = require('./build-utils/interpolate-all-results');
 
 var fs = require('fs');
@@ -34,6 +33,7 @@ var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
 var useCompilers = false;
+var environments;
 
 process.argv.slice(2).forEach(function(arg) {
 	var parts = String(arg).toLowerCase().split('=');
@@ -42,8 +42,13 @@ process.argv.slice(2).forEach(function(arg) {
 		case 'compilers':
 			useCompilers = true;
 			break;
+		case 'environments':
+			environments = require(parts[1]);
+			break;
 	}
 });
+
+if (!environments) environments = require('./environments');
 
 var STAGE2 = 'draft (stage 2)';
 
@@ -431,6 +436,13 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   var isNonStandardTable = $('.non-standard table').length > 0;
   var footnoteIndex = {};
   var rowNum = 0;
+  var noOfBrowserPerPlatformType = {
+    desktop: 0,
+    compiler: 0,
+    engine: 0,
+    mobile: 0
+  };
+
   // rawBrowsers includes very obsolete browsers which mustn't be printed, but should
   // be used by interpolateResults(). All other uses should use this, which filters
   // the very obsolete ones out.
@@ -438,6 +450,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     var browser = rawBrowsers[e];
     if (browser.obsolete !== "very") {
       obj[e] = browser;
+
+      if (!browser.obsolete && !browser.unstable) {
+           noOfBrowserPerPlatformType[browser.platformtype || 'desktop']++;
+      }
     }
     // Even if it's very obsolete, include its footnote if it has one
     else if (browser.note_html && browser.note_id) {
@@ -445,6 +461,12 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     }
     return obj;
   },{});
+
+  // Adjust platformType header colspans to match # of browsers displayed by default
+  Object.keys(noOfBrowserPerPlatformType).forEach(function (platformType) {
+	  var count = noOfBrowserPerPlatformType[platformType];
+      $('table thead tr:first-child th#' + platformType + '-header').attr('colspan', count);
+  });
 
   function getHtmlId(id) {
     return 'test-' + id;
@@ -492,7 +514,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
   }
 
   // Write the browser headers
-
   Object.keys(browsers).forEach(function(browserId) {
     var b = browsers[browserId];
     if (!b) {
