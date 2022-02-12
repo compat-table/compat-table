@@ -102,7 +102,7 @@ $(function() {
     );
   };
 
-  $('tr.supertest').each(function() {
+  $('table:not(no-current) tr.supertest').each(function() {
     var tr = $(this);
     var subtests = tr.nextUntil('tr:not(.subtest)');
     if (subtests.length === 0) {

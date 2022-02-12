@@ -47,8 +47,14 @@ th abbr {
 th:nth-child(3) {
     min-width: 10px;
 }
+table.no-current th:nth-child(2),
+table.no-current th:nth-child(3),
+table.no-current td:nth-child(2),
+table.no-current td:nth-child(3) {
+	display: none;
+}
 th[colspan="0"] {
-    display: none;	
+    display: none;
 }
 td {
     background: #eee; position:relative; margin-left: -10px; font-size: 14px;
