@@ -47,6 +47,9 @@ th abbr {
 th:nth-child(3) {
     min-width: 10px;
 }
+th[colspan="0"] {
+    display: none;	
+}
 td {
     background: #eee; position:relative; margin-left: -10px; font-size: 14px;
 }
