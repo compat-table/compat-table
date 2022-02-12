@@ -33,7 +33,17 @@ var cheerio = require('cheerio');
 var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
-var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
+var useCompilers = false;
+
+process.argv.slice(2).forEach(function(arg) {
+	var parts = String(arg).toLowerCase().split('=');
+
+	switch (parts[0]) {
+		case 'compilers':
+			useCompilers = true;
+			break;
+	}
+});
 
 var STAGE2 = 'draft (stage 2)';
 
