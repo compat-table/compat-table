@@ -1,14 +1,41 @@
 var parseEnvsVersions = require("./parse-envs-versions");
 
-module.exports = function interpolateAllResults(tests, envs) {
+module.exports = function interpolateAllResults(tests, envs, customResults = {}) {
   var envsTree = buildEnvsTree(envs);
 
   tests.forEach(function (t) {
+    const customRes = customResults[t.name];
+
     // Calculate the result totals for tests which consist solely of subtests.
     [].concat(t.subtests || t).forEach(function (e) {
-      interpolateTestResults(e.res, envsTree);
+      const res = e.res;
+
+      if (customRes) {
+        if (e === t) { // not a subtest
+          Object.assign(res, customRes);
+        } else {
+          Object.assign(res, customRes.subtests[e.name]);
+          delete customRes.subtests[e.name];
+        }
+      }
+
+      interpolateTestResults(res, envsTree);
     });
+
+    if (customRes?.subtests) {
+      const invalidSubTests = Object.keys(customRes.subtests)
+      if (invalidSubTests.length) {
+        console.warn(`Invalid custom subtest results for '${t.name}'`, invalidSubTests);
+      }
+    }
+
+    delete customResults[t.name];
   });
+
+  const invalidTests = Object.keys(customResults);
+  if (invalidTests.length) {
+    console.warn(`Invalid custom results`, invalidTests);
+  }
 };
 
 function interpolateTestResults(res, envsTree) {

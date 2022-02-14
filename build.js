@@ -33,11 +33,12 @@ var cheerio = require('cheerio');
 var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
-const {values: {environments: environmentsPath = './environments.json'}, flags, positionals} = parseArgs();
+const {values: {environments: environmentsPath = './environments.json', customResults: customResultsPath }, flags, positionals} = parseArgs();
 
 const environments = JSON.parse(fs.readFileSync(__dirname + path.sep + environmentsPath, 'utf-8'));
 const useCompilers = positionals.includes('compilers');
 const excludeCurrentBrowser = flags.x === true;
+const customResults = customResultsPath && JSON.parse(fs.readFileSync(__dirname + path.sep + customResultsPath, 'utf-8'));
 
 var STAGE2 = 'draft (stage 2)';
 
@@ -67,21 +68,27 @@ function closestString(possibilities, input) {
 process.nextTick(function () {
   var es5 = require('./data-es5');
   es5.browsers = pickBy(environments, byTestSuite('es5'));
+  es5.customResults = customResults?.es5;
   handle(es5);
   var es6 = require('./data-es6');
   es6.browsers = pickBy(environments, byTestSuite('es6'));
+  es6.customResults = customResults?.es6;
   handle(es6);
   var es2016plus = require('./data-es2016plus');
   es2016plus.browsers = pickBy(environments, byTestSuite('es2016plus'));
+  es2016plus.customResults = customResults?.es2016plus;
   handle(es2016plus);
   var esnext = require('./data-esnext');
   esnext.browsers = pickBy(environments, byTestSuite('esnext'));
+  esnext.customResults = customResults?.esnext;
   handle(esnext);
   var esintl = require('./data-esintl');
   esintl.browsers = pickBy(environments, byTestSuite('esintl'));
+  esintl.customResults = customResults?.esintl;
   handle(esintl);
   var nonStandard = require('./data-non-standard');
   nonStandard.browsers = pickBy(environments, byTestSuite('non-standard'));
+  nonStandard.customResults = customResults?.nonStandard;
   handle(nonStandard);
 
   // ES6 compilers
@@ -392,10 +399,9 @@ process.nextTick(function () {
   });
 });
 
-
 function handle(options) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
-  var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
+  var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler, options.customResults);
 
   var result = replaceAndIndent(html, [
     ["<!-- NAME -->", [options.name]],
@@ -418,7 +424,7 @@ function handle(options) {
   }
 }
 
-function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
+function dataToHtml(skeleton, rawBrowsers, tests, compiler, customResults) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
@@ -525,7 +531,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     );
   });
 
-  interpolateAllResults(tests, environments);
+  interpolateAllResults(tests, environments, customResults);
 
   // Now print the results.
   tests.forEach(function(t, testNum) {
