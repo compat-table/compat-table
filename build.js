@@ -463,9 +463,9 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler, customResults) {
   },{});
 
   // Adjust platformType header colspans to match # of browsers displayed by default
-  Object.keys(noOfBrowserPerPlatformType).forEach(function (platformType) {
-	  var count = noOfBrowserPerPlatformType[platformType];
-      $('table thead tr:first-child th#' + platformType + '-header').attr('colspan', count);
+  Object.keys(noOfBrowserPerPlatformType).forEach(platformType => {
+    const count = noOfBrowserPerPlatformType[platformType];
+    $(`table thead tr:first-child th#${platformType}-header`).attr('colspan', count);
   });
 
   function getHtmlId(id) {
