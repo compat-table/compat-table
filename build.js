@@ -22,6 +22,7 @@
 
 require('object.assign').shim();
 var pickBy = require('lodash.pickby');
+const { parseArgs } = require('@pkgjs/parseargs');
 
 var interpolateAllResults = require('./build-utils/interpolate-all-results');
 
@@ -32,27 +33,11 @@ var cheerio = require('cheerio');
 var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
-var useCompilers = false;
-var excludeCurrentBrowser = false;
-var environments;
+const {values: {environments: environmentsPath = './environments.json'}, flags, positionals} = parseArgs();
 
-process.argv.slice(2).forEach(function(arg) {
-	var parts = String(arg).toLowerCase().split('=');
-
-	switch (parts[0]) {
-		case 'compilers':
-			useCompilers = true;
-			break;
-		case 'environments':
-			environments = require(parts[1]);
-			break;
-		case 'excludecurrent':
-			excludeCurrentBrowser = true;
-			break;
-	}
-});
-
-if (!environments) environments = require('./environments');
+const environments = JSON.parse(fs.readFileSync(__dirname + path.sep + environmentsPath, 'utf-8'));
+const useCompilers = positionals.includes('compilers');
+const excludeCurrentBrowser = flags.x === true;
 
 var STAGE2 = 'draft (stage 2)';
 
