@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "node.js",
   "engine": {
-    "node": ">= 0.11.12",
+    "node": ">= 15",
     "npm": ">= 3.0"
   },
   "repository": {
@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@babel/standalone": "latest",
+    "@pkgjs/parseargs": "^0.3.0",
     "chalk": "^1.1.3",
     "cheerio": "^0.20.0",
     "core-js-bundle": "^3.0.0",
