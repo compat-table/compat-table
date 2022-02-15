@@ -764,7 +764,7 @@ function testScript(fn, transformFn, rowNum) {
     // see if the code is encoded in a comment
     var expr = (fn+"").match(/[^]*\/\*([^]*)\*\/\}$/);
     // if there wasn't an expression, make the function statement into one
-    if (!expr || excludeCurrentBrowser) {
+    if (!expr) {
       if (transformFn) {
         try {
           expr = transformFn("("+fn+")");
@@ -774,7 +774,7 @@ function testScript(fn, transformFn, rowNum) {
       } else {
         expr = deindentFunc(fn);
       }
-      return cheerio.load('')('<script>test(\n' + expr + '())</script>').attr('data-source', expr);
+      return cheerio.load('')(excludeCurrentBrowser ? '<script></script>' : '<script>test(\n' + expr + '())</script>').attr('data-source', expr);
     } else {
       expr = deindentFunc(expr[1]);
       var transformed = false;
@@ -802,7 +802,7 @@ function testScript(fn, transformFn, rowNum) {
         transformed ? '' + strictAsyncFn + ' && function(){"use strict";' + codeString + '}() && "Strict"'
         : 'Function("asyncTestPassed","\'use strict\';"+' + codeString + ')(asyncTestPassed)';
 
-      return cheerio.load('')('<script>' +
+      return cheerio.load('')(excludeCurrentBrowser ? '<script></script>' : '<script>' +
          'test(function(){'
         +  'try{'
         +    'var asyncTestPassed=' + asyncFn + ';'
