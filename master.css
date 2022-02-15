@@ -46,10 +46,10 @@ th abbr {
 th:nth-child(3) {
     min-width: 10px;
 }
-table.no-current th:nth-child(2),
-table.no-current th:nth-child(3),
-table.no-current td:nth-child(2),
-table.no-current td:nth-child(3) {
+table.no-current th.current,
+table.no-current th.current + th,
+table.no-current td.current,
+table.no-current td.current + td {
 	display: none;
 }
 th[colspan="0"] {
