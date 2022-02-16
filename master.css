@@ -479,6 +479,11 @@ body.hide-platformtype sup.num-features {
     background-color: #fff;
 }
 
+#table-wrapper {
+    display: block;
+    overflow: auto
+}
+
 /**
  * Sticky header
  *
