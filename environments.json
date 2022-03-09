@@ -2680,25 +2680,46 @@
     "family": "V8",
     "short": "CH 94",
     "release": "2021-09-21",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome95": {
     "full": "Chrome 95",
     "family": "V8",
     "short": "CH 95",
     "release": "2021-10-19",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome96": {
-    "full": "Chrome 96 Beta",
+    "full": "Chrome 96",
     "family": "V8",
     "short": "CH 96",
-    "unstable": true
+    "release": "2021-11-16",
+    "obsolete": true
   },
   "chrome97": {
-    "full": "Chrome 97 Canary",
+    "full": "Chrome 97",
     "family": "V8",
     "short": "CH 97",
+    "release": "2022-01-04",
+    "unstable": false
+  },
+  "chrome98": {
+    "full": "Chrome 98",
+    "family": "V8",
+    "short": "CH 98",
+    "release": "2022-02-01",
+    "unstable": false
+  },
+  "chrome99": {
+    "full": "Chrome 99 Beta",
+    "family": "V8",
+    "short": "CH 99",
+    "unstable": true
+  },
+  "chrome100": {
+    "full": "Chrome 100 Canary",
+    "family": "V8",
+    "short": "CH 100",
     "unstable": true
   },
   "edge12": {
