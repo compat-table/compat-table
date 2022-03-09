@@ -200,6 +200,7 @@ exports.tests = [
       name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.Collator !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
           var invalidLanguageTags = [
@@ -450,12 +451,13 @@ exports.tests = [
       }
     },
     {
-      name: 'accepts valid language tags',
+      name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.NumberFormat !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-          var validLanguageTags = [
+          var invalidLanguageTags = [
             "i-klingon", // grandfathered tag
             "x-en-US-12345", // anything goes in private use tags
             "x-12345-12345-en-US",
@@ -626,6 +628,7 @@ exports.tests = [
       name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.DateTimeFormat !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
           var invalidLanguageTags = [
