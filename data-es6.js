@@ -17347,6 +17347,7 @@ exports.tests = [
         node6: true,
         node6_5: true,
         jxa: true,
+        duktape2_0: false,
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,

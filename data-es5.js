@@ -1472,6 +1472,7 @@ exports.tests = [
       edge11: true,
       safari10: false,
       safari11: true,
+      duktape2_0: true,
       rhino1_7_14: true,
     }
   }],
