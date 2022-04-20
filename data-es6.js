@@ -12600,7 +12600,7 @@ exports.tests = [
         edge14: edge.experimental,
         chrome50: true,
         xs6: null,
-        echojs: null,
+        ejs: null,
         safari10: true,
         duktape2_0: true,
         graalvm19: true,
