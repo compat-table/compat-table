@@ -2709,25 +2709,33 @@
     "family": "V8",
     "short": "CH 97",
     "release": "2022-01-04",
-    "unstable": false
+    "obsolete": true
   },
   "chrome98": {
     "full": "Chrome 98",
     "family": "V8",
     "short": "CH 98",
     "release": "2022-02-01",
-    "unstable": false
+    "obsolete": true
   },
   "chrome99": {
-    "full": "Chrome 99 Beta",
+    "full": "Chrome 99",
     "family": "V8",
     "short": "CH 99",
-    "unstable": true
+    "release": "2022-03-01",
+    "unstable": false
   },
   "chrome100": {
-    "full": "Chrome 100 Canary",
+    "full": "Chrome 100",
     "family": "V8",
     "short": "CH 100",
+    "release": "2022-03-29",
+    "unstable": false
+  },
+  "chrome101": {
+    "full": "Chrome 101 Beta",
+    "family": "V8",
+    "short": "CH 101",
     "unstable": true
   },
   "edge12": {
@@ -4036,7 +4044,7 @@
     "equals": "chrome62",
     "release": "2018-03-07",
     "retire": "2019-12-31",
-    "unstable": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4091,7 +4099,7 @@
     "equals": "chrome68",
     "release": "2018-08-15",
     "retire": "2021-04-30",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4200,7 +4208,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome78",
     "release": "2019-10-22",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4218,7 +4226,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome79",
     "release": "2019-11-21",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4236,7 +4244,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome81",
     "release": "2020-04-21",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4254,7 +4262,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome83",
     "release": "2020-06-30",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4290,7 +4298,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome86",
     "release": "2020-10-20",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4303,12 +4311,12 @@
   "node16_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 16+",
+    "short": "Node &gt;=16.0 &lt;16.8",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome90",
     "release": "2021-04-20",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4321,10 +4329,11 @@
   "node16_9": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 16+",
+    "short": "Node &gt;=16.9 &lt;16.11",
     "platformtype": "engine",
     "equals": "chrome93",
     "release": "2021-09-07",
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4337,10 +4346,59 @@
   "node16_11": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node 16+",
+    "short": "Node &gt;=16.11 &lt;17",
     "platformtype": "engine",
     "equals": "chrome94",
     "release": "2021-10-08",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node17_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=17.0 &lt;17.2",
+    "platformtype": "engine",
+    "equals": "chrome95",
+    "release": "2021-10-19",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node17_2": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=17.2 &lt;18",
+    "platformtype": "engine",
+    "equals": "chrome96",
+    "release": "2021-11-30",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node18_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=18",
+    "platformtype": "engine",
+    "equals": "chrome101",
+    "release": "2022-04-18",
     "test_suites": [
       "es5",
       "es6",

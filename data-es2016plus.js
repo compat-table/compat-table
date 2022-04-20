@@ -6472,7 +6472,7 @@ exports.tests = [
         */},
         res: {
           safari15: true,
-          chrom100: true,
+          chrome90: true,
         }
       },
       {
@@ -6498,7 +6498,7 @@ exports.tests = [
         res: {
           node16_0: false,
           safari15: true,
-          chrome100: false,
+          chrome90: false,
         }
       }
     ]
