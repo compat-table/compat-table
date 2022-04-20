@@ -3213,7 +3213,7 @@ exports.tests = [
       jsx: null,
       typescript1corejs2: null,
       es6shim: null,
-      konq414: null,
+      konq4_14: null,
       ie7: null,
       ie10: false,
       firefox1: null,
