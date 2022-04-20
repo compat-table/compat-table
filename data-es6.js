@@ -24364,7 +24364,7 @@ exports.tests = [
         safari4: true,
         android4_0: true,
         xs6: true,
-        phantom: true,
+        phantom1_9: true,
         ejs: false,
         konq4_14: null,
         rhino1_7_13: true,
