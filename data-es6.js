@@ -17259,7 +17259,7 @@ exports.tests = [
         typescript1corejs2: true,
         traceur: true,
         ie11: false,
-        edge11: false,
+        edge12: false,
         edge15: true,
         chrome47: chrome.experimental,
         chrome49: true,

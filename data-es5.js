@@ -1469,7 +1469,7 @@ exports.tests = [
       firefox50: true,
       ie6: true,
       ie8: true,
-      edge11: true,
+      edge12: true,
       safari10: false,
       safari11: true,
       duktape2_0: true,
