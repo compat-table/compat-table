@@ -30,6 +30,7 @@ var fs = require('fs');
 var path = require('path');
 // var os = require('os');
 var cheerio = require('cheerio');
+var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
@@ -45,6 +46,18 @@ var byTestSuite = function(suite) {
     return Array.isArray(browser.test_suites) ? browser.test_suites.indexOf(suite)>-1 : true;
   };
 };
+
+function closestString(possibilities, input) {
+  var closest;
+  for (var i = possibilities.length - 1, distance_min = Infinity; i >= 0; i--) {
+    var next_dist = fl.get(possibilities[i], input);
+    if (next_dist < distance_min) {
+      closest = possibilities[i];
+      distance_min = next_dist;
+    }
+  }
+  return closest;
+}
 
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
@@ -529,7 +542,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     // Function to print out a single <td> result cell.
     function resultCell(browserId, result, footnote) {
       if (!browsers[browserId]) {
-        return;
+        throw new Error(browserId + " is not found\n- Did you mean \"" + closestString(Object.keys(browsers), browserId) + "\"?");
       }
       result = testValue(result);
 
@@ -613,6 +626,11 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
         body.append(subtestRow);
 
         // Add all the result cells
+        Object.keys(subtest.res).forEach(function(browserId) {
+          if (!environments[browserId]) {
+            throw new Error(browserId + " is not found in \"environments.json\"\n- Did you mean \"" + closestString(Object.keys(browsers), browserId) + "\"?");
+          }
+        });
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
 

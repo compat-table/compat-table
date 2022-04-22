@@ -199,6 +199,9 @@
 <th class="platform besen engine" data-browser="besen"><a href="#besen" class="browser-name"><abbr title="Bero&apos;s EcmaScript Engine (version 1.0.0.489)">BESEN</abbr></a></th>
 <th class="platform phantom2_1 engine obsolete" data-browser="phantom2_1"><a href="#phantom2_1" class="browser-name"><abbr title="PhantomJS 2.1">PJS</abbr></a></th>
 <th class="platform ejs engine unstable" data-browser="ejs"><a href="#ejs" class="browser-name"><abbr title="Echo JS">Echo JS</abbr></a></th>
+<th class="platform node0_4 engine obsolete" data-browser="node0_4"><a href="#node0_4" class="browser-name"><abbr title="Node.js">Node 0.4</abbr></a><a href="#harmony-flag-old-note"><sup>[2]</sup></a></th>
+<th class="platform node0_6 engine obsolete" data-browser="node0_6"><a href="#node0_6" class="browser-name"><abbr title="Node.js">Node 0.6</abbr></a><a href="#harmony-flag-old-note"><sup>[2]</sup></a></th>
+<th class="platform node0_8 engine obsolete" data-browser="node0_8"><a href="#node0_8" class="browser-name"><abbr title="Node.js">Node 0.8</abbr></a><a href="#harmony-flag-old-note"><sup>[2]</sup></a></th>
 <th class="platform node0_10 engine obsolete" data-browser="node0_10"><a href="#node0_10" class="browser-name"><abbr title="Node.js">Node 0.10</abbr></a><a href="#harmony-flag-old-note"><sup>[2]</sup></a></th>
 <th class="platform node0_12 engine obsolete" data-browser="node0_12"><a href="#node0_12" class="browser-name"><abbr title="Node.js">Node 0.12</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
 <th class="platform node4 engine obsolete" data-browser="node4"><a href="#node4" class="browser-name"><abbr title="Node.js">Node 4</abbr></a><a href="#harmony-flag-note"><sup>[3]</sup></a></th>
@@ -349,6 +352,9 @@
 <td class="tally" data-browser="besen" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="1">5/5</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.6" style="background-color:hsl(72,59%,50%)">3/5</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">5/5</td>
@@ -498,6 +504,9 @@ return ({ get x(){ return 1 } }).x === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -649,6 +658,9 @@ return value === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -798,6 +810,9 @@ return { a: true, }.a === true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -947,6 +962,9 @@ return [1,].length === 1;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1096,6 +1114,9 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1168,7 +1189,7 @@ return ({ if: 1 }).if === 1;
 <td class="yes" data-browser="opera_mobile67">Yes</td>
 <td class="yes" data-browser="opera_mobile68">Yes</td>
 </tr>
-<tr><th colspan="147" class="separator"></th>
+<tr><th colspan="150" class="separator"></th>
 </tr>
 <tr class="supertest" significance="1"><td id="test-Object_static_methods"><span><a class="anchor" href="#test-Object_static_methods">&#xA7;</a>Object static methods</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0.07692307692307693" style="background-color:hsl(9,82%,50%)">1/13</td>
@@ -1244,6 +1265,9 @@ return ({ if: 1 }).if === 1;
 <td class="tally" data-browser="besen" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="1">13/13</td>
 <td class="tally unstable" data-browser="ejs" data-tally="1">13/13</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="1">13/13</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="1">13/13</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">13/13</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">13/13</td>
@@ -1395,6 +1419,9 @@ return typeof Object.create === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1546,6 +1573,9 @@ return typeof Object.defineProperty === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1697,6 +1727,9 @@ return typeof Object.defineProperties === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1848,6 +1881,9 @@ return typeof Object.getPrototypeOf === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -1999,6 +2035,9 @@ return typeof Object.keys === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2150,6 +2189,9 @@ return typeof Object.seal === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2301,6 +2343,9 @@ return typeof Object.freeze === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2452,6 +2497,9 @@ return typeof Object.preventExtensions === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2603,6 +2651,9 @@ return typeof Object.isSealed === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2754,6 +2805,9 @@ return typeof Object.isFrozen === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -2905,6 +2959,9 @@ return typeof Object.isExtensible === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3056,6 +3113,9 @@ return typeof Object.getOwnPropertyDescriptor === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3207,6 +3267,9 @@ return typeof Object.getOwnPropertyNames === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3353,6 +3416,9 @@ return typeof Object.getOwnPropertyNames === 'function';
 <td class="tally" data-browser="besen" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">10/12</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
 <td class="tally obsolete" data-browser="node4" data-tally="0.9166666666666666" style="background-color:hsl(110,45%,50%)">11/12</td>
@@ -3504,6 +3570,9 @@ return typeof Array.isArray === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3655,6 +3724,9 @@ return typeof Array.prototype.indexOf === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3806,6 +3878,9 @@ return typeof Array.prototype.lastIndexOf === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -3957,6 +4032,9 @@ return typeof Array.prototype.every === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4108,6 +4186,9 @@ return typeof Array.prototype.some === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4259,6 +4340,9 @@ return typeof Array.prototype.forEach === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4410,6 +4494,9 @@ return typeof Array.prototype.map === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4561,6 +4648,9 @@ return typeof Array.prototype.filter === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4712,6 +4802,9 @@ return typeof Array.prototype.reduce === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -4863,6 +4956,9 @@ return typeof Array.prototype.reduceRight === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -5054,6 +5150,9 @@ return true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="no obsolete" data-browser="node0_4">No</td>
+<td class="no obsolete" data-browser="node0_6">No</td>
+<td class="no obsolete" data-browser="node0_8">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no obsolete" data-browser="node4">No</td>
@@ -5215,6 +5314,9 @@ try {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -5361,6 +5463,9 @@ try {
 <td class="tally" data-browser="besen" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">3/3</td>
@@ -5512,6 +5617,9 @@ return "foobar"[3] === "b";
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -5687,6 +5795,9 @@ return typeof String.prototype.split === 'function'
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="no obsolete" data-browser="node0_8">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -5838,6 +5949,9 @@ return typeof String.prototype.trim === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -5984,6 +6098,9 @@ return typeof String.prototype.trim === 'function';
 <td class="tally" data-browser="besen" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">3/3</td>
@@ -6135,6 +6252,9 @@ return typeof Date.prototype.toISOString === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -6286,6 +6406,9 @@ return typeof Date.now === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -6445,6 +6568,9 @@ try {
 <td class="yes" data-browser="besen">Yes</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -6596,6 +6722,9 @@ return typeof Function.prototype.bind === 'function';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -6747,6 +6876,9 @@ return typeof JSON === 'object';
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -6819,7 +6951,7 @@ return typeof JSON === 'object';
 <td class="yes" data-browser="opera_mobile67">Yes</td>
 <td class="yes" data-browser="opera_mobile68">Yes</td>
 </tr>
-<tr><th colspan="147" class="separator"></th>
+<tr><th colspan="150" class="separator"></th>
 </tr>
 <tr class="supertest" significance="0.25"><td id="test-Immutable_globals"><span><a class="anchor" href="#test-Immutable_globals">&#xA7;</a>Immutable globals</span></td>
 <td class="tally" data-browser="es5shim" data-tally="0">0/3</td>
@@ -6895,7 +7027,10 @@ return typeof JSON === 'object';
 <td class="tally" data-browser="besen" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="1">3/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="1">3/3</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node6_5" data-tally="1">3/3</td>
@@ -7047,7 +7182,10 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -7199,7 +7337,10 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -7351,7 +7492,10 @@ return result;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="no unstable" data-browser="ejs">No</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -7497,7 +7641,10 @@ return result;
 <td class="tally" data-browser="besen" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0">0/3</td>
-<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0">0/3</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0.6666666666666666" style="background-color:hsl(80,56%,50%)">2/3</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="node6_5" data-tally="1">3/3</td>
@@ -7652,7 +7799,10 @@ return (-6.9e-11).toExponential(4) === '-6.9000e-11' // Edge <= 17
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -7815,7 +7965,10 @@ try {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -7978,6 +8131,9 @@ try {
 <td class="unknown" data-browser="besen">?</td>
 <td class="unknown obsolete" data-browser="phantom2_1">?</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="unknown obsolete" data-browser="node0_8">?</td>
 <td class="unknown obsolete" data-browser="node0_10">?</td>
 <td class="unknown obsolete" data-browser="node0_12">?</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -8124,7 +8280,10 @@ try {
 <td class="tally" data-browser="besen" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally unstable" data-browser="ejs" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
-<td class="tally obsolete" data-browser="node0_10" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0.25" style="background-color:hsl(30,75%,50%)">2/8</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="0.625" style="background-color:hsl(75,58%,50%)">5/8</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="0.75" style="background-color:hsl(90,53%,50%)">6/8</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally obsolete" data-browser="node4" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
 <td class="tally obsolete" data-browser="node6_5" data-tally="0.875" style="background-color:hsl(105,47%,50%)">7/8</td>
@@ -8283,6 +8442,9 @@ try {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="no obsolete" data-browser="node0_4">No</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -8434,7 +8596,10 @@ return parseInt('010') === 10;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="unknown obsolete" data-browser="node0_8">?</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -8583,6 +8748,9 @@ return !Function().propertyIsEnumerable(&apos;prototype&apos;);
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="no obsolete" data-browser="node0_4">No</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -8732,6 +8900,9 @@ return (function(){ return Object.prototype.toString.call(arguments) === &apos;[
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -8882,7 +9053,10 @@ return _\u200c\u200d;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
-<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
+<td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
 <td class="yes obsolete" data-browser="node6_5">Yes</td>
@@ -9033,6 +9207,9 @@ return true;
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="no obsolete" data-browser="node0_4">No</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -9190,6 +9367,9 @@ return result;
 <td class="unknown" data-browser="besen">?</td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="no obsolete" data-browser="node0_4">No</td>
+<td class="no obsolete" data-browser="node0_6">No</td>
+<td class="no obsolete" data-browser="node0_8">No</td>
 <td class="no obsolete" data-browser="node0_10">No</td>
 <td class="no obsolete" data-browser="node0_12">No</td>
 <td class="no obsolete" data-browser="node4">No</td>
@@ -9345,6 +9525,9 @@ catch(e) {
 <td class="unknown" data-browser="besen">?</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="unknown unstable" data-browser="ejs">?</td>
+<td class="yes obsolete" data-browser="node0_4">Yes</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -9491,6 +9674,9 @@ catch(e) {
 <td class="tally" data-browser="besen" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="phantom2_1" data-tally="0.9473684210526315" style="background-color:hsl(113,44%,50%)">18/19</td>
 <td class="tally unstable" data-browser="ejs" data-tally="1">19/19</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0">0/19</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="1">19/19</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="node0_10" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="node0_12" data-tally="1">19/19</td>
 <td class="tally obsolete" data-browser="node4" data-tally="1">19/19</td>
@@ -9645,6 +9831,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -9795,6 +9984,9 @@ return this === void undefined &amp;&amp; (function(){ return this === void unde
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -9947,6 +10139,9 @@ return (function(){ return typeof this === &apos;string&apos; }).call(&apos;&apo
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10113,6 +10308,9 @@ return test(String, &apos;&apos;)
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10265,6 +10463,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10415,6 +10616,9 @@ try { eval(&apos;__i_dont_exist = 1&apos;); } catch (err) { return err instanceo
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10569,6 +10773,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10723,6 +10930,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -10879,6 +11089,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11032,6 +11245,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11183,6 +11399,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11335,6 +11554,9 @@ return true;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11491,6 +11713,9 @@ return (function(x){
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11641,6 +11866,9 @@ try { eval(&apos;var __some_unique_variable;&apos;); __some_unique_variable; } c
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11791,6 +12019,9 @@ try { eval(&apos;var x; delete x;&apos;); } catch (err) { return err instanceof 
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -11941,6 +12172,9 @@ try { delete Object.prototype; } catch (err) { return err instanceof TypeError; 
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -12091,6 +12325,9 @@ try { eval(&apos;with({}){}&apos;); } catch (err) { return err instanceof Syntax
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -12241,6 +12478,9 @@ try { eval(&apos;function f(x, x) { }&apos;); } catch (err) { return err instanc
 <td class="yes" data-browser="besen">Yes</td>
 <td class="yes obsolete" data-browser="phantom2_1">Yes</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>
@@ -12391,6 +12631,9 @@ return typeof foo === &apos;function&apos;;
 <td class="yes" data-browser="besen">Yes</td>
 <td class="no obsolete" data-browser="phantom2_1">No</td>
 <td class="yes unstable" data-browser="ejs">Yes</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="yes obsolete" data-browser="node0_6">Yes</td>
+<td class="yes obsolete" data-browser="node0_8">Yes</td>
 <td class="yes obsolete" data-browser="node0_10">Yes</td>
 <td class="yes obsolete" data-browser="node0_12">Yes</td>
 <td class="yes obsolete" data-browser="node4">Yes</td>

@@ -856,6 +856,17 @@
       "non-standard"
     ]
   },
+  "ie6": {
+    "full": "Internet Explorer 6",
+    "family": "Chakra",
+    "short": "IE 6",
+    "release": "2001-08-24",
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "non-standard"
+    ]
+  },
   "ie7": {
     "full": "Internet Explorer 7",
     "family": "Chakra",
@@ -3704,6 +3715,17 @@
       "non-standard"
     ]
   },
+  "phantom1_9": {
+    "full": "PhantomJS 1.9.7",
+    "short": "PJS",
+    "link": "https://github.com/ariya/phantomjs",
+    "release": "2014-01-26",
+    "retire": "2015-01-26",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "equals": "safari6",
+    "needs_annex_b": true
+  },
   "phantom2": {
     "full": "PhantomJS 2.0",
     "short": "PJS",
@@ -3752,11 +3774,68 @@
       "es6"
     ]
   },
+  "node0_4": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.4",
+    "equals": "chrome11",
+    "platformtype": "engine",
+    "note_id": "harmony-flag-old",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> flag",
+    "release": "2011-08-26",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node0_6": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.6",
+    "equals": "chrome16",
+    "platformtype": "engine",
+    "note_id": "harmony-flag-old",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> flag",
+    "release": "2011-11-04",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node0_8": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node 0.8",
+    "equals": "chrome21",
+    "platformtype": "engine",
+    "note_id": "harmony-flag-old",
+    "note_html": "Flagged features have to be enabled via <code>--harmony</code> flag",
+    "release": "2012-06-22",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
   "node0_10": {
     "full": "Node.js",
     "family": "Node.js",
     "short": "Node 0.10",
-    "equals": "chrome14",
+    "equals": "chrome24",
     "platformtype": "engine",
     "note_id": "harmony-flag-old",
     "note_html": "Flagged features have to be enabled via <code>--harmony</code> flag",
