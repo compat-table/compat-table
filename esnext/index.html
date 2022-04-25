@@ -298,12 +298,12 @@
         <!-- TABLE BODY -->
       <tr class="category"><td colspan="164"><span>Stage 3</span></td>
 </tr>
-<tr significance="1"><td id="test-Realms"><span><a class="anchor" href="#test-Realms">&#xA7;</a><a href="https://github.com/tc39/proposal-realms">Realms</a></span><script data-source="
-return typeof Realm === &quot;function&quot;
-  &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
-    return key in Realm.prototype;
+<tr significance="1"><td id="test-ShadowRealm"><span><a class="anchor" href="#test-ShadowRealm">&#xA7;</a><a href="https://github.com/tc39/proposal-shadowrealm">ShadowRealm</a></span><script data-source="
+return typeof ShadowRealm === &quot;function&quot;
+  &amp;&amp; [&quot;evaluate&quot;, &quot;importValue&quot;].every(function(key){
+    return key in ShadowRealm.prototype;
   });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("0");try{return Function("asyncTestPassed","\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("0");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>

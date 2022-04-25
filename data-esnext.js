@@ -73,14 +73,14 @@ exports.tests = [
   ],
 },
 {
-  name: 'Realms',
+  name: 'ShadowRealm',
   category: STAGE3,
   significance: 'large',
-  spec: 'https://github.com/tc39/proposal-realms',
+  spec: 'https://github.com/tc39/proposal-shadowrealm',
   exec: function () {/*
-    return typeof Realm === "function"
-      && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
-        return key in Realm.prototype;
+    return typeof ShadowRealm === "function"
+      && ["evaluate", "importValue"].every(function(key){
+        return key in ShadowRealm.prototype;
       });
   */},
   res: {
