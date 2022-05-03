@@ -276,8 +276,7 @@ exports.tests = [
          return [1, 2, 3].includes(1)
          && ![1, 2, 3].includes(4)
          && ![1, 2, 3].includes(1, 1)
-         && [NaN].includes(NaN)
-         && Array(1).includes();
+         && [NaN].includes(NaN);
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -290,6 +289,36 @@ exports.tests = [
           edge14: true,
           firefox2: false,
           firefox43: true,
+          opera10_50: false,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          jerryscript2_4_0: true,
+          graalvm19: true,
+          graalvm20: true,
+          graalvm20_1: true,
+          hermes0_7_0: true,
+          rhino1_7_13: true
+        }
+      },
+      {
+        name: 'Array.prototype.includes handles sparse arrays',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
+        exec: function(){/*
+         return [,].includes()
+          && Array(1).includes();
+         */},
+        res: {
+          babel6corejs2: babel.corejs,
+          closure: true,
+          es7shim: true,
+          typescript1corejs2: typescript.corejs,
+          safari9: true,
+          chrome47: true,
+          ie11: false,
+          edge14: true,
+          firefox2: false,
+          firefox43: true,
+          firefox99: false,
           opera10_50: false,
           duktape2_0: false,
           jerryscript2_3_0: false,
