@@ -20218,7 +20218,7 @@ exports.tests = [
       }
     },
     {
-      name: 'Symbol.isConcatSpreadable',
+      name: 'Symbol.isConcatSpreadable, non-spreadable array',
       mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable',
       exec: function() {/*
         var a = [], b = [];
@@ -20250,6 +20250,41 @@ exports.tests = [
         jerryscript2_2_0: true,
         hermes0_7_0: true,
         rhino1_7_13: true
+      }
+    },
+    {
+      name: 'Symbol.isConcatSpreadable, spreadable object with poisoned getter',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable',
+      exec: function() {/*
+        if (typeof Symbol !== 'function' || !Symbol.isConcatSpreadable) {
+          return null;
+        }
+        var spreadableHasPoisonedIndex = { length: Math.pow(2, 53) - 1 };
+        spreadableHasPoisonedIndex[Symbol.isConcatSpreadable] = true;
+        Object.defineProperty(spreadableHasPoisonedIndex, 0, {
+          get: function () { throw new SyntaxError(); }
+        });
+        try {
+          [].concat(spreadableHasPoisonedIndex);
+          return false;
+        } catch (e) {
+          return !!e && e.name === 'SyntaxError';
+        }
+      */},
+      res: {
+        chrome48: false,
+        chrome100: false,
+        chrome101: false,
+        safari5_1: false,
+        safari9: false,
+        safari12_1: false,
+        safari13: false,
+        safari14: true,
+        safari15: true,
+        firefox48: true,
+        firefox60: true,
+        firefox70: true,
+        firefox99: true
       }
     },
     {
