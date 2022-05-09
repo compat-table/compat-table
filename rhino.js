@@ -5,7 +5,7 @@
  *  If the environment variable JAVA_HOME is defined it will use it to
  *  construct the path to 'java' as $JAVA_HOME/bin/java
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console and updates them automatically in data-*.js files.
  *  Expects a 'rhino.jar' file in this directory.  Example:
  *
  *    $ node rhino.js
@@ -14,6 +14,7 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
+var updateResult = require("./update-result");
 
 var testCount = 0;
 var testSuccess = 0;
@@ -119,12 +120,10 @@ function runTest(parents, test, sublevel) {
 
             if (expect === success) {
                 // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
             } else {
+                updateResult(parents[0], parents.slice(1).concat([test.name]), 'rhino' + rhinoKey, success ? 'true' : 'false');
                 testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
+                console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
             }
         } else {
             testOutOfDate++;
