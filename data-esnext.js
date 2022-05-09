@@ -1429,7 +1429,8 @@ exports.tests = [
         safaritp: true,
         duktape2_0: false,
         rhino1_7_13: false,
-        hermes0_7_0: false
+        hermes0_7_0: false,
+        hermes0_11_0: true
       }
     },
     {
@@ -1454,7 +1455,8 @@ exports.tests = [
         safaritp: true,
         duktape2_0: false,
         rhino1_7_13: false,
-        hermes0_7_0: false
+        hermes0_7_0: false,
+        hermes0_11_0: true
       }
     }
   ]

@@ -327,7 +327,8 @@ exports.tests = [
         rhino1_7_13: false,
         hermes0_7_0: false,
         hermes0_8_1: false,
-        hermes0_9_0: false
+        hermes0_9_0: false,
+        hermes0_11_0: false
       }
     },
     {
