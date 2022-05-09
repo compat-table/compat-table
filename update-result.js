@@ -21,7 +21,6 @@ function updateResult(suite, testPath, resultKey, result) {
   var srcString = fs.readFileSync(suiteFile, "utf8");
   var testNodes = parseSourceForRootTestNodes(srcString);
   var testNode;
-  var testNameNode;
   for (var i = 0; i < testPath.length; i++) {
     if (!testNodes || testNodes.type !== "ArrayExpression") {
       throw new Error(
@@ -46,7 +45,6 @@ function updateResult(suite, testPath, resultKey, result) {
           '"'
       );
     }
-    testNameNode = maybeGetPropertyValue(testNode, "name");
     testNodes = maybeGetPropertyValue(testNode, "subtests");
   }
   var resNode = maybeGetPropertyValue(testNode, "res");
