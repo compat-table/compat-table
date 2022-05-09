@@ -4936,7 +4936,74 @@
     "test_suites": [
       "es5",
       "es6",
-      "es2016plus"
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "hermes0_8_1": {
+    "full": "Hermes 0.8.1",
+    "family": "Hermes",
+    "short": "Hermes 0.8.1",
+    "platformtype": "engine",
+    "release": "2021-07-12",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "hermes0_9_0": {
+    "full": "Hermes 0.9.0",
+    "family": "Hermes",
+    "short": "Hermes 0.9.0",
+    "platformtype": "engine",
+    "release": "2021-09-02",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "hermes0_10_0": {
+    "full": "Hermes 0.10.0",
+    "family": "Hermes",
+    "short": "Hermes 0.10.0",
+    "platformtype": "engine",
+    "release": "2021-11-14",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "hermes0_11_0": {
+    "full": "Hermes 0.11.0",
+    "family": "Hermes",
+    "short": "Hermes 0.11.0",
+    "platformtype": "engine",
+    "release": "2022-01-27",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
     ]
   },
   "android1_5": {

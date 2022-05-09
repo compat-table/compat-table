@@ -31,7 +31,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -53,7 +54,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     }
   ],
@@ -82,7 +84,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -105,7 +108,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -128,7 +132,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -193,7 +198,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -228,7 +234,8 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: false
       }
     }
   ],
@@ -257,7 +264,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     }
   ],
@@ -286,7 +294,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     }
   ],
@@ -315,7 +324,11 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false,
+        hermes0_8_1: false,
+        hermes0_9_0: false,
+        hermes0_11_0: false
       }
     },
     {
@@ -360,7 +373,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -383,7 +397,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -448,7 +463,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -483,7 +499,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: false
       }
     }
   ],
@@ -512,7 +529,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -535,7 +553,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -558,7 +577,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
 // The spec was updated making this test invalid.  It was disabled until it can be fixed
@@ -623,7 +643,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -657,7 +678,8 @@ exports.tests = [
         graalvm19: false,
         graalvm20: false,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: false
       }
     },
     {
@@ -687,7 +709,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     },
     {
@@ -717,7 +740,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        hermes0_7_0: false
       }
     }
   ],
@@ -750,7 +774,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -783,7 +808,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -816,7 +842,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -849,7 +876,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -882,7 +910,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -915,7 +944,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
@@ -948,7 +978,8 @@ exports.tests = [
         graalvm19: true,
         graalvm20: true,
         graalvm20_1: true,
-        rhino1_7_13: true
+        rhino1_7_13: true,
+        hermes0_7_0: true
       }
     }
   ],
