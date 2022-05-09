@@ -20284,7 +20284,8 @@ exports.tests = [
         firefox48: true,
         firefox60: true,
         firefox70: true,
-        firefox99: true
+        firefox99: true,
+        hermes0_7_0: true
       }
     },
     {
@@ -22364,7 +22365,8 @@ exports.tests = [
         safari4: false,
         safari5: false,
         safari5_1: true,
-        safari15: true
+        safari15: true,
+        hermes0_7_0: true
       }
     },
     {
