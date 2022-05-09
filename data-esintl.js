@@ -325,7 +325,8 @@ exports.tests = [
         graalvm20: true,
         graalvm20_1: true,
         rhino1_7_13: false,
-        hermes0_7_0: false
+        hermes0_7_0: false,
+        hermes0_8_1: false
       }
     },
     {
