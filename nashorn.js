@@ -118,7 +118,7 @@ function runTest(parents, test, sublevel) {
             if (expect === success) {
                 // Matches.
             } else {
-                updateResult(parents[0], parents.slice(1).concat([test.name]), 'nashorn' + jjsKey, success ? 'true' : 'false');
+                updateResult(parents[0], parents.slice(1).concat(test.name), 'nashorn' + jjsKey, success ? 'true' : 'false');
                 testOutOfDate++;
                 console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
             }

@@ -289,7 +289,7 @@ function runTest(parents, test, sublevel) {
                 if (expect === success) {
                     // Matches.
                 } else {
-                    updateResult(parents[0], parents.slice(1).concat([test.name]), hermesKey, success ? 'true' : 'false');
+                    updateResult(parents[0], parents.slice(1).concat(test.name), hermesKey, success ? 'true' : 'false');
                     testOutOfDate++;
                     console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
                 }
@@ -309,7 +309,7 @@ function runTest(parents, test, sublevel) {
     }
 
     if (test.subtests) {
-        test.subtests.forEach(function (v) { runTest(parents.concat([test.name]), v, sublevel + 1); });
+        test.subtests.forEach(function (v) { runTest(parents.concat(test.name), v, sublevel + 1); });
     }
 }
 

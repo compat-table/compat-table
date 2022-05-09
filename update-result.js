@@ -76,9 +76,9 @@ function updateResult(suite, testPath, resultKey, result) {
   );
   fs.writeFileSync(
     suiteFile,
-    srcString.substring(0, resNode.start) +
+    srcString.slice(0, resNode.start) +
       newRawResString +
-      srcString.substring(resNode.end)
+      srcString.slice(resNode.end)
   );
 }
 
@@ -93,18 +93,18 @@ function generateNewRawResString(
   var existingValue = maybeGetPropertyValue(resNode, resultKey);
   if (existingValue) {
     newResRaw =
-      srcString.substring(resNode.start, existingValue.start) +
+      srcString.slice(resNode.start, existingValue.start) +
       result +
-      srcString.substring(existingValue.end, resNode.end);
+      srcString.slice(existingValue.end, resNode.end);
   } else {
-    var indent = new Array(indentLength).fill(" ").join("");
+    var indent = " ".repeat(indentLength);
     if (resNode.properties.length === 0) {
       newResRaw =
         "{\n" + indent + "  " + resultKey + ": " + result + "\n" + indent + "}";
     } else {
       var lastProperty = resNode.properties[resNode.properties.length - 1];
       newResRaw =
-        srcString.substring(resNode.start, lastProperty.end) +
+        srcString.slice(resNode.start, lastProperty.end) +
         ",\n" +
         indent +
         "  " +
