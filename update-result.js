@@ -22,7 +22,6 @@ function updateResult(suite, testPath, resultKey, result) {
   var testNodes = parseSourceForRootTestNodes(srcString);
   var testNode;
   var testNameNode;
-  var readableTestPath = [];
   for (var i = 0; i < testPath.length; i++) {
     if (!testNodes || testNodes.type !== "ArrayExpression") {
       throw new Error(
@@ -48,15 +47,12 @@ function updateResult(suite, testPath, resultKey, result) {
       );
     }
     testNameNode = maybeGetPropertyValue(testNode, "name");
-    readableTestPath.push(
-      testNameNode ? testNameNode.value : ["MISSING TEST NAME"]
-    );
     testNodes = maybeGetPropertyValue(testNode, "subtests");
   }
   var resNode = maybeGetPropertyValue(testNode, "res");
   if (!resNode) {
     throw new Error(
-      'Missing "res" property on "' + readableTestPath.join('" / "') + '"'
+      'Missing "res" property on "' + testPath.join('" / "') + '"'
     );
   }
 
