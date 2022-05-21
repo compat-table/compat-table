@@ -6500,6 +6500,9 @@ exports.tests = [
             return new RegExp('a', 'd') instanceof RegExp;
         */},
         res: {
+          firefox68: false,
+          firefox78: false,
+          firefox91: true,
           safari15: true,
           chrome90: true,
         }
@@ -6526,6 +6529,9 @@ exports.tests = [
         */},
         res: {
           node16_0: false,
+          firefox68: false,
+          firefox78: false,
+          firefox91: true,
           safari15: true,
           chrome90: false,
         }
