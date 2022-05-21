@@ -319,6 +319,7 @@ exports.tests = [
           firefox2: false,
           firefox43: true,
           firefox99: false,
+          firefox102: true,
           opera10_50: false,
           duktape2_0: false,
           jerryscript2_3_0: false,
