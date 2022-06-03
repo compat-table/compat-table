@@ -1092,6 +1092,23 @@ exports.tests = [
     }
   },
   {
+    name: 'String.prototype.substr',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr',
+    exec: function () {
+      return '0b'.substr(-1) === 'b';
+    },
+    res: {
+      es5shim: true,
+      ie6: false,
+      ie7: false,
+      ie8: false,
+      ie9: true,
+      chrome15: true,
+      firefox3: true,
+      opera11: true
+    }
+  },
+  {
     name: 'String.prototype.trim',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim',
     exec: function () {
