@@ -661,7 +661,7 @@ exports.tests = [
           tr: null,
           babel6corejs2: null,
           babel7corejs3: true,
-          closure: false,
+          closure: true,
           typescript1corejs2: null,
           chrome52: null,
           chrome55: true,
