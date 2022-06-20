@@ -165,7 +165,7 @@
 <th class="platform firefox100 desktop" data-browser="firefox100"><a href="#firefox100" class="browser-name"><abbr title="Firefox 100">FF 100</abbr></a></th>
 <th class="platform firefox101 desktop" data-browser="firefox101"><a href="#firefox101" class="browser-name"><abbr title="Firefox 101">FF 101</abbr></a></th>
 <th class="platform firefox102 desktop unstable" data-browser="firefox102"><a href="#firefox102" class="browser-name"><abbr title="Firefox 102 Beta">FF 102</abbr></a></th>
-<th class="platform firefox103 desktop unstable" data-browser="firefox103"><a href="#firefox103" class="browser-name"><abbr title="Firefox 103 Nightly">FF 102</abbr></a></th>
+<th class="platform firefox103 desktop unstable" data-browser="firefox103"><a href="#firefox103" class="browser-name"><abbr title="Firefox 103 Nightly">FF 103</abbr></a></th>
 <th class="platform opera12_10 desktop obsolete" data-browser="opera12_10"><a href="#opera12_10" class="browser-name"><abbr title="Opera 12.10">OP 12.10</abbr></a></th>
 <th class="platform chrome86 desktop obsolete" data-browser="chrome86"><a href="#chrome86" class="browser-name"><abbr title="Chrome 86">CH 86</abbr></a></th>
 <th class="platform chrome87 desktop obsolete" data-browser="chrome87"><a href="#chrome87" class="browser-name"><abbr title="Chrome 87">CH 87</abbr></a></th>
@@ -1104,7 +1104,7 @@ try {
 <td class="tally" data-browser="firefox100" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox101" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox102" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox103" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox103" data-tally="0" data-flagged-tally="1">0/2</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome86" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome87" data-tally="0">0/2</td>
@@ -1258,7 +1258,7 @@ return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
 <td class="no" data-browser="firefox100">No</td>
 <td class="no" data-browser="firefox101">No</td>
 <td class="no unstable" data-browser="firefox102">No</td>
-<td class="no unstable" data-browser="firefox103">No</td>
+<td class="no flagged unstable" data-browser="firefox103">Flag<a href="#firefox-arrayfindfromlast-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome86">No</td>
 <td class="no obsolete" data-browser="chrome87">No</td>
@@ -1412,7 +1412,7 @@ return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
 <td class="no" data-browser="firefox100">No</td>
 <td class="no" data-browser="firefox101">No</td>
 <td class="no unstable" data-browser="firefox102">No</td>
-<td class="no unstable" data-browser="firefox103">No</td>
+<td class="no flagged unstable" data-browser="firefox103">Flag<a href="#firefox-arrayfindfromlast-note"><sup>[6]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome86">No</td>
 <td class="no obsolete" data-browser="chrome87">No</td>
@@ -1850,9 +1850,9 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
       ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nclass A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
-<td class="no obsolete" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[6]</sup></a></td>
-<td class="no obsolete" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[6]</sup></a></td>
-<td class="no" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[6]</sup></a></td>
+<td class="no obsolete" data-browser="babel6corejs2">No<a href="#babel-decorators-legacy-note"><sup>[7]</sup></a></td>
+<td class="no obsolete" data-browser="babel7corejs2">No<a href="#babel-decorators-legacy-note"><sup>[7]</sup></a></td>
+<td class="no" data-browser="babel7corejs3">No<a href="#babel-decorators-legacy-note"><sup>[7]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200315">?</td>
 <td class="unknown obsolete" data-browser="closure20200517">?</td>
 <td class="unknown obsolete" data-browser="closure20200614">?</td>
@@ -2955,9 +2955,9 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3112,9 +3112,9 @@ return set.size === 3
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3268,9 +3268,9 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3424,9 +3424,9 @@ return set.size === 2
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3577,9 +3577,9 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3687,10 +3687,10 @@ return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
 <td class="no obsolete" data-browser="graalvm19">No</td>
 <td class="no" data-browser="graalvm19_3_6">No</td>
 <td class="no obsolete" data-browser="graalvm20">No</td>
-<td class="no flagged obsolete" data-browser="graalvm20_1">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="graalvm20_3">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="graalvm20_3_1">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="graalvm21">Flag<a href="#graalvm-es2021-note"><sup>[8]</sup></a></td>
+<td class="no flagged obsolete" data-browser="graalvm20_1">Flag<a href="#graalvm-es2021-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="graalvm20_3">Flag<a href="#graalvm-es2021-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="graalvm20_3_1">Flag<a href="#graalvm-es2021-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21">Flag<a href="#graalvm-es2021-note"><sup>[9]</sup></a></td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
 <td class="unknown obsolete" data-browser="ios10_3">?</td>
@@ -3730,9 +3730,9 @@ return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -3883,9 +3883,9 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -4651,9 +4651,9 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -4808,9 +4808,9 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -4962,9 +4962,9 @@ return !Array.isTemplateObject([])
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -5265,9 +5265,9 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -5420,9 +5420,9 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -5576,9 +5576,9 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -5737,9 +5737,9 @@ return &apos;next&apos; in iterator
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -5890,9 +5890,9 @@ return Array.from([1, 2, 3].values().asIndexedPairs()).join() === &apos;0,1,1,2,
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6043,9 +6043,9 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6196,9 +6196,9 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6349,9 +6349,9 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6502,9 +6502,9 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6655,9 +6655,9 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6810,9 +6810,9 @@ return result === &apos;123&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -6963,9 +6963,9 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7116,9 +7116,9 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7269,9 +7269,9 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7422,9 +7422,9 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7576,9 +7576,9 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7729,9 +7729,9 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -7882,9 +7882,9 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8037,9 +8037,9 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8202,9 +8202,9 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8367,9 +8367,9 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8532,9 +8532,9 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8693,9 +8693,9 @@ toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it =&
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -8854,9 +8854,9 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9009,9 +9009,9 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9170,9 +9170,9 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9325,9 +9325,9 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9486,9 +9486,9 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9642,9 +9642,9 @@ let result = &apos;&apos;;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9803,9 +9803,9 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -9958,9 +9958,9 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -10113,9 +10113,9 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -10274,9 +10274,9 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -10429,9 +10429,9 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -10582,9 +10582,9 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
 <td class="unknown obsolete" data-browser="closure20211006">?</td>
 <td class="unknown" data-browser="closure20211107">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript1corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript3_2corejs2">?<a href="#typescript-es6-note"><sup>[8]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_3corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
 <td class="yes obsolete" data-browser="typescript4_4corejs3">Yes<a href="#typescript-core-js-note"><sup>[5]</sup></a></td>
@@ -10723,7 +10723,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="babel-decorators-legacy-note">  <sup>[6]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="graalvm-es2021-note">  <sup>[8]</sup> The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="babel-core-js-note">  <sup>[4]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[5]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="firefox-arrayfindfromlast-note">  <sup>[6]</sup> The feature has to be enabled via <code>javascript.options.experimental.array_find_last</code> setting under <code>about:config</code>.</p><p id="babel-decorators-legacy-note">  <sup>[7]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="typescript-es6-note">  <sup>[8]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="graalvm-es2021-note">  <sup>[9]</sup> The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>
