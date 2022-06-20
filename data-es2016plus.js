@@ -5941,6 +5941,12 @@ exports.tests = [
           && arr.at(-4) === undefined;
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-at-method',
+            note_html: 'Requires native support for <code>Math.trunc</code>'
+          },
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -5974,6 +5980,11 @@ exports.tests = [
           && str.at(-4) === undefined;
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-at-method'
+          },
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -6022,6 +6033,12 @@ exports.tests = [
          });
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-typed-array',
+            note_html: 'Requires native support for typed arrays'
+          },
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
