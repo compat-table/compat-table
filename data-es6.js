@@ -12941,6 +12941,7 @@ exports.tests = [
         return get + '' === "length,constructor,1,2,3,length,constructor,2,1";
       */},
       res: {
+        closure: true,
         ejs: true,
         ie11: false,
         edge13: true,
