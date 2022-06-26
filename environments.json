@@ -5828,7 +5828,7 @@
     "platformtype": "mobile",
     "equals": "chrome87",
     "release": "2021-02-17",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile63": {
     "full": "Opera Mobile for Android 63",
@@ -5873,7 +5873,7 @@
     "platformtype": "mobile",
     "equals": "chrome96",
     "release": "2022-02-07",
-    "obsolete": false
+    "obsolete": true
   },
   "opera_mobile68": {
     "full": "Opera Mobile for Android 68",
@@ -5882,6 +5882,15 @@
     "platformtype": "mobile",
     "equals": "chrome99",
     "release": "2022-04-01",
+    "obsolete": false
+  },
+  "opera_mobile69": {
+    "full": "Opera Mobile for Android 69",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 69",
+    "platformtype": "mobile",
+    "equals": "chrome100",
+    "release": "2022-05-12",
     "obsolete": false
   }
 }
