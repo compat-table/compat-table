@@ -2670,7 +2670,7 @@
     "short": "CH 86",
     "release": "2020-10-06",
     "retire": "2020-11-17",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome87": {
     "full": "Chrome 87",
@@ -2678,7 +2678,7 @@
     "short": "CH 87",
     "release": "2020-11-17",
     "retire": "2021-01-19",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome88": {
     "full": "Chrome 88",
@@ -2686,21 +2686,21 @@
     "short": "CH 88",
     "release": "2021-01-19",
     "retire": "2021-03-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome89": {
     "full": "Chrome 89",
     "family": "V8",
     "short": "CH 89",
     "release": "2021-03-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome90": {
     "full": "Chrome 90",
     "family": "V8",
     "short": "CH 90",
     "release": "2021-04-13",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome91": {
     "full": "Chrome 91",
@@ -2763,19 +2763,40 @@
     "family": "V8",
     "short": "CH 99",
     "release": "2022-03-01",
-    "unstable": false
+    "obsolete": true
   },
   "chrome100": {
     "full": "Chrome 100",
     "family": "V8",
     "short": "CH 100",
     "release": "2022-03-29",
-    "unstable": false
+    "obsolete": true
   },
   "chrome101": {
-    "full": "Chrome 101 Beta",
+    "full": "Chrome 101",
     "family": "V8",
     "short": "CH 101",
+    "release": "2022-04-26",
+    "obsolete": true
+  },
+  "chrome102": {
+    "full": "Chrome 102",
+    "family": "V8",
+    "short": "CH 102",
+    "release": "2022-05-24",
+    "obsolete": false
+  },
+  "chrome103": {
+    "full": "Chrome 103",
+    "family": "V8",
+    "short": "CH 103",
+    "release": "2022-06-21",
+    "obsolete": false
+  },
+  "chrome104": {
+    "full": "Chrome 104 Beta",
+    "family": "V8",
+    "short": "CH 104",
     "unstable": true
   },
   "edge12": {
@@ -3652,7 +3673,7 @@
     "equals": "chrome87",
     "short": "OP 73",
     "release": "2020-12-09",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera74": {
     "full": "Opera 74",
@@ -3660,7 +3681,7 @@
     "equals": "chrome88",
     "short": "OP 74",
     "release": "2021-02-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera75": {
     "full": "Opera 75",
@@ -3668,7 +3689,7 @@
     "equals": "chrome89",
     "short": "OP 75",
     "release": "2021-03-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera76": {
     "full": "Opera 76",
@@ -3676,7 +3697,7 @@
     "equals": "chrome90",
     "short": "OP 76",
     "release": "2021-04-28",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera77": {
     "full": "Opera 77",
@@ -3684,7 +3705,7 @@
     "equals": "chrome91",
     "short": "OP 77",
     "release": "2021-07-21",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera78": {
     "full": "Opera 78",
@@ -3692,7 +3713,7 @@
     "equals": "chrome92",
     "short": "OP 78",
     "release": "2021-08-03",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera79": {
     "full": "Opera 79",
@@ -3700,7 +3721,7 @@
     "equals": "chrome93",
     "short": "OP 79",
     "release": "2021-09-14",
-    "obsolete": false
+    "obsolete": true
   },
   "opera80": {
     "full": "Opera 80",
@@ -3708,13 +3729,77 @@
     "equals": "chrome94",
     "short": "OP 80",
     "release": "2021-10-05",
-    "obsolete": false
+    "obsolete": true
   },
   "opera81": {
     "full": "Opera 81",
     "family": "V8",
     "equals": "chrome95",
-    "short": "OP 81",
+    "short": "OP 82",
+    "release": "2021-11-04",
+    "obsolete": true
+  },
+  "opera82": {
+    "full": "Opera 82",
+    "family": "V8",
+    "equals": "chrome96",
+    "short": "OP 82",
+    "release": "2021-12-02",
+    "obsolete": true
+  },
+  "opera83": {
+    "full": "Opera 83",
+    "family": "V8",
+    "equals": "chrome97",
+    "short": "OP 83",
+    "release": "2022-01-19",
+    "obsolete": true
+  },
+  "opera84": {
+    "full": "Opera 84",
+    "family": "V8",
+    "equals": "chrome98",
+    "short": "OP 84",
+    "release": "2022-02-16",
+    "obsolete": true
+  },
+  "opera85": {
+    "full": "Opera 85",
+    "family": "V8",
+    "equals": "chrome99",
+    "short": "OP 85",
+    "release": "2022-03-23",
+    "obsolete": true
+  },
+  "opera86": {
+    "full": "Opera 86",
+    "family": "V8",
+    "equals": "chrome100",
+    "short": "OP 86",
+    "release": "2022-04-20",
+    "obsolete": true
+  },
+  "opera87": {
+    "full": "Opera 87",
+    "family": "V8",
+    "equals": "chrome101",
+    "short": "OP 87",
+    "release": "2022-05-17",
+    "obsolete": false
+  },
+  "opera88": {
+    "full": "Opera 88",
+    "family": "V8",
+    "equals": "chrome102",
+    "short": "OP 88",
+    "release": "2022-06-07",
+    "obsolete": false
+  },
+  "opera89": {
+    "full": "Opera 89",
+    "family": "V8",
+    "equals": "chrome103",
+    "short": "OP 89",
     "unstable": true
   },
   "rhino1_7_13": {
