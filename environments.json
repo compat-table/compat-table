@@ -2984,21 +2984,85 @@
     "release": "2021-09-24",
     "retire": "2021-10-21",
     "equals": "chrome94",
-    "obsolete": false
+    "obsolete": true
   },
   "edge95": {
     "full": "Microsoft Edge 95",
     "family": "V8",
     "short": "Edge 95",
-    "release": "2021-10-22",
+    "release": "2021-10-21",
     "equals": "chrome95",
-    "obsolete": false
+    "obsolete": true
   },
   "edge96": {
-    "full": "Microsoft Edge 96 Beta",
+    "full": "Microsoft Edge 96",
     "family": "V8",
     "short": "Edge 96",
+    "release": "2021-11-19",
     "equals": "chrome96",
+    "obsolete": true
+  },
+  "edge97": {
+    "full": "Microsoft Edge 97",
+    "family": "V8",
+    "short": "Edge 97",
+    "release": "2022-01-06",
+    "equals": "chrome97",
+    "obsolete": true
+  },
+  "edge98": {
+    "full": "Microsoft Edge 98",
+    "family": "V8",
+    "short": "Edge 98",
+    "release": "2022-02-03",
+    "equals": "chrome98",
+    "obsolete": true
+  },
+  "edge99": {
+    "full": "Microsoft Edge 99",
+    "family": "V8",
+    "short": "Edge 99",
+    "release": "2022-03-03",
+    "equals": "chrome99",
+    "obsolete": true
+  },
+  "edge100": {
+    "full": "Microsoft Edge 100",
+    "family": "V8",
+    "short": "Edge 100",
+    "release": "2022-04-01",
+    "equals": "chrome100",
+    "obsolete": true
+  },
+  "edge101": {
+    "full": "Microsoft Edge 101",
+    "family": "V8",
+    "short": "Edge 101",
+    "release": "2022-04-28",
+    "equals": "chrome101",
+    "obsolete": true
+  },
+  "edge102": {
+    "full": "Microsoft Edge 102",
+    "family": "V8",
+    "short": "Edge 102",
+    "release": "2022-05-31",
+    "equals": "chrome102",
+    "obsolete": false
+  },
+  "edge103": {
+    "full": "Microsoft Edge 103",
+    "family": "V8",
+    "short": "Edge 103",
+    "release": "2021-06-23",
+    "equals": "chrome103",
+    "obsolete": false
+  },
+  "edge104": {
+    "full": "Microsoft Edge 104 Beta",
+    "family": "V8",
+    "short": "Edge 104",
+    "equals": "chrome104",
     "unstable": true
   },
   "safari1": {
