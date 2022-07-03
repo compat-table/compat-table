@@ -6604,12 +6604,78 @@ exports.tests = [
         }
       }
     ]
-  }
+  },
+  {
+    name: 'Array find from last',
+    category: '2023 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-array-find-from-last',
+    subtests: [
+      {
+        name: "Array.prototype.findLast",
+        exec: function () {/*
+          var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+          return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome1: false,
+          chrome90: false,
+          chrome96: false,
+          chrome97: true,
+          edge18: false,
+          firefox2: false,
+          firefox89: false,
+          firefox102: false,
+          firefox103: {
+            val: 'flagged',
+            note_id: 'firefox-arrayfindfromlast',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.array_find_last</code> setting under <code>about:config</code>.'
+          },
+          firefox104: true,
+          opera10_50: false,
+          safari12: false,
+          safaritp: true,
+          duktape2_0: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: "Array.prototype.findLastIndex",
+        exec: function () {/*
+          var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+          return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome1: false,
+          chrome90: false,
+          chrome96: false,
+          chrome97: true,
+          edge18: false,
+          firefox2: false,
+          firefox89: false,
+          firefox102: false,
+          firefox103: { val: 'flagged', note_id: 'firefox-arrayfindfromlast' },
+          firefox104: true,
+          opera10_50: false,
+          safari12: false,
+          safaritp: true,
+          duktape2_0: false,
+          rhino1_7_13: false
+        }
+      }
+    ]
+  },
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
