@@ -5992,6 +5992,7 @@ exports.tests = [
             note_id: 'closure-at-method',
             note_html: 'Requires native support for <code>Math.trunc</code>'
           },
+          closure20220719: true,
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -6030,6 +6031,7 @@ exports.tests = [
             val: false,
             note_id: 'closure-at-method'
           },
+          closure20220719: true,
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -6118,6 +6120,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs3: babel.corejs,
+          closure20220719: true,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           chrome1: false,
@@ -6148,6 +6151,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs3: babel.corejs,
+          closure20220719: true,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           chrome1: false,
