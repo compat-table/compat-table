@@ -11,6 +11,7 @@ exports.skeleton_file = 'esnext/skeleton.html';
 
 var STAGE2 = 'Stage 2';
 var STAGE3 = 'Stage 3';
+var STAGE4 = 'Stage 4';
 
 exports.tests = [
 {
@@ -1312,7 +1313,7 @@ exports.tests = [
 },
 {
   name: 'Hashbang Grammar',
-  category: STAGE3,
+  category: STAGE4,
   significance: 'tiny',
   spec: 'https://github.com/tc39/proposal-hashbang/',
   mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments',
@@ -1346,7 +1347,7 @@ exports.tests = [
 },
 {
   name: 'Array find from last',
-  category: STAGE3,
+  category: STAGE4,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-array-find-from-last',
   subtests: [
@@ -1413,7 +1414,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = [STAGE3, STAGE2].indexOf(e.category);
+  var index = [STAGE4, STAGE3, STAGE2].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
