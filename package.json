@@ -42,7 +42,8 @@
     "build:compilers": "node build.js compilers",
     "git:clean": "if type git > /dev/null 2>&1; then git stash save --keep-index; fi",
     "test:no_change": "npm run --silent git:clean && if npm run --silent build | grep 'Write to file'; then echo 'Please run `npm run build` and commit the changes.' && exit 1; fi",
-    "graalvm": "node --jvm --intl-402 --js.ecmascript-version=2021 node.js"
+    "graalvm:node": "run() { if [[ -f $GRAALVM_NODE ]]; then $GRAALVM_NODE --unhandled-rejections=warn node.js $@; else echo \"Please set GRAALVM_NODE to the path of GraalVM's 'node' binary.\" && exit 1; fi; }; run",
+    "graalvm:js": "node graalvm.js"
   },
   "config": {
     "unsafe-perm": true
