@@ -32,8 +32,6 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -61,8 +59,6 @@ exports.tests = [
       nashorn1_8: true,
       nashorn9: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -90,8 +86,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -119,8 +113,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -152,8 +144,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -187,8 +177,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -229,8 +217,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -259,8 +245,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -291,8 +275,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -324,8 +306,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -354,8 +334,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -384,8 +362,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -414,8 +390,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -444,8 +418,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -474,8 +446,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -504,8 +474,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -542,8 +510,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -574,8 +540,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     },
@@ -612,8 +576,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -642,8 +604,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -672,8 +632,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -702,8 +660,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -732,8 +688,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -762,8 +716,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -792,8 +744,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -822,8 +772,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -852,8 +800,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -882,8 +828,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -939,8 +883,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -976,8 +918,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         jerryscript1_0: true,
         hermes0_7_0: true
       }
@@ -1034,8 +974,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1134,8 +1072,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     },
@@ -1170,8 +1106,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1199,8 +1133,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1240,8 +1172,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1275,8 +1205,6 @@ exports.tests = [
     nashorn9: true,
     nashorn10: true,
     graalvm19: true,
-    graalvm20: true,
-    graalvm20_1: true,
     jerryscript1_0: true,
     hermes0_7_0: true
   },
@@ -1312,8 +1240,6 @@ exports.tests = [
     nashorn9: true,
     nashorn10: true,
     graalvm19: true,
-    graalvm20: true,
-    graalvm20_1: true,
     jerryscript1_0: true,
     hermes0_7_0: true
   },
@@ -1352,8 +1278,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1387,8 +1311,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1422,8 +1344,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1553,8 +1473,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1585,8 +1503,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1617,8 +1533,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1650,8 +1564,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1686,8 +1598,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_2_0: true,
       hermes0_7_0: true
@@ -1719,8 +1629,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1761,8 +1669,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: false
@@ -1797,8 +1703,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true
     }
@@ -1836,8 +1740,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: true
@@ -1870,8 +1772,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: false
@@ -1902,8 +1802,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: false
@@ -1946,8 +1844,6 @@ exports.tests = [
       android4_1: true,
       duktape2_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_3_0: true,
       hermes0_7_0: true,
@@ -1980,8 +1876,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: false
@@ -2011,8 +1905,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: true
@@ -2046,8 +1938,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: false
@@ -2078,8 +1968,6 @@ exports.tests = [
       android4_1: true,
       duktape2_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: false,
@@ -2116,8 +2004,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: true
@@ -2150,8 +2036,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: true
@@ -2182,8 +2066,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: true
@@ -2215,8 +2097,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: false
@@ -2252,8 +2132,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: true
@@ -2283,8 +2161,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalLexicalScopeSuccess,
       rhino1_7_13: false
@@ -2314,8 +2190,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: false
@@ -2345,8 +2219,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: true
@@ -2376,8 +2248,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: true,
       rhino1_7_13: true
@@ -2407,8 +2277,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: true,
       hermes0_7_0: hermes.evalStrictMode,
       rhino1_7_13: true
@@ -2443,8 +2311,6 @@ exports.tests = [
       nashorn9: true,
       nashorn10: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       jerryscript1_0: false,
       jerryscript2_0: true,
       hermes0_7_0: true,
