@@ -5,6 +5,7 @@ var typescript = common.typescript;
 var chrome = common.chrome;
 var edge = common.edge;
 var safari = common.safari;
+var graalvm = common.graalvm;
 var hermes = common.hermes;
 
 exports.name = 'ES6';
@@ -11877,6 +11878,7 @@ exports.tests = [
         safari10: true,
         duktape2_0: true,
         graalvm19: true,
+        graalvm22_2: graalvm.es6flag,
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,

@@ -137,6 +137,11 @@
     }
   },
   "graalvm": {
+    "es6flag": {
+      "val": "flagged",
+      "note_id": "graalvm-js-ecmascript-version-6",
+      "note_html": "Requires the <code>--js.ecmascript-version=6</code> flag."
+    },
     "es2020flag": {
       "val": "flagged",
       "note_id": "graalvm-es2020",

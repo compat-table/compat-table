@@ -5145,6 +5145,25 @@
       "non-standard"
     ]
   },
+  "graalvm22_2": {
+    "full": "GraalVM JavaScript 22.2.0",
+    "family": "GraalVM",
+    "short": "GraalVM 22.2.0",
+    "platformtype": "engine",
+    "note_id": "graalvm-js-intl-mode",
+    "note_html": "Executed using <code>js --js.intl-402</code> (tests using <code>setTimeout</code> executed using <code>node</code>).",
+    "release": "2022-07-26",
+    "obsolete": false,
+    "unstable": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
   "hermes0_7_0": {
     "full": "Hermes 0.7.0",
     "family": "Hermes",
