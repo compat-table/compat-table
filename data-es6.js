@@ -19173,7 +19173,8 @@ exports.tests = [
         firefox48: true,
         firefox60: true,
         firefox70: true,
-        firefox99: true
+        firefox99: true,
+        graalvm21_3_3: true
       }
     },
     {
@@ -21137,7 +21138,8 @@ exports.tests = [
         safari4: false,
         safari5: false,
         safari5_1: true,
-        safari15: true
+        safari15: true,
+        graalvm21_3_3: true
       }
     },
     {

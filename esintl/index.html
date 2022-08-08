@@ -251,7 +251,8 @@
 <th class="platform graalvm20_1 engine obsolete" data-browser="graalvm20_1"><a href="#graalvm20_1" class="browser-name"><abbr title="GraalVM JavaScript 20.1.0">GraalVM 20.1.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform graalvm20_3 engine obsolete" data-browser="graalvm20_3"><a href="#graalvm20_3" class="browser-name"><abbr title="GraalVM JavaScript 20.3.0">GraalVM 20.3.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
 <th class="platform graalvm20_3_1 engine obsolete" data-browser="graalvm20_3_1"><a href="#graalvm20_3_1" class="browser-name"><abbr title="GraalVM JavaScript 20.3.1">GraalVM 20.3.1</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
-<th class="platform graalvm21 engine" data-browser="graalvm21"><a href="#graalvm21" class="browser-name"><abbr title="GraalVM JavaScript 21.0.0">GraalVM 21.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
+<th class="platform graalvm21 engine obsolete" data-browser="graalvm21"><a href="#graalvm21" class="browser-name"><abbr title="GraalVM JavaScript 21.0.0">GraalVM 21.0.0</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
+<th class="platform graalvm21_3_3 engine" data-browser="graalvm21_3_3"><a href="#graalvm21_3_3" class="browser-name"><abbr title="GraalVM JavaScript 21.3.3">GraalVM 21.3.3</abbr></a><a href="#graalvm-js-intl-mode-note"><sup>[4]</sup></a></th>
 <th class="platform android4_4 mobile obsolete" data-browser="android4_4"><a href="#android4_4" class="browser-name"><abbr title="Android Browser 4.4 (KitKat)">AN 4.4</abbr></a></th>
 <th class="platform android4_4_3 mobile obsolete" data-browser="android4_4_3"><a href="#android4_4_3" class="browser-name"><abbr title="Android Browser 4.4.3 (KitKat)">AN 4.4.3</abbr></a></th>
 <th class="platform ios10_3 mobile obsolete" data-browser="ios10_3"><a href="#ios10_3" class="browser-name"><abbr title="iOS Safari">iOS &gt;=10.3 &lt;11</abbr></a></th>
@@ -398,7 +399,8 @@
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">2/2</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">2/2</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">2/2</td>
@@ -544,7 +546,8 @@ return typeof Intl === &apos;object&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -690,7 +693,8 @@ return Intl.constructor === Object;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -833,7 +837,8 @@ return Intl.constructor === Object;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">5/5</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">5/5</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">5/5</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">5/5</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0.8" style="background-color:hsl(96,50%,50%)">4/5</td>
@@ -979,7 +984,8 @@ return typeof Intl.Collator === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -1125,7 +1131,8 @@ return new Intl.Collator() instanceof Intl.Collator;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -1271,7 +1278,8 @@ return Intl.Collator() instanceof Intl.Collator;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -1439,7 +1447,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -1602,7 +1611,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
 <td class="unknown obsolete" data-browser="ios10_3">?</td>
@@ -1745,7 +1755,8 @@ try {
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -1891,7 +1902,8 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -2034,7 +2046,8 @@ return typeof Intl.Collator().compare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -2180,7 +2193,8 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -2323,7 +2337,8 @@ return typeof Intl.Collator().resolvedOptions === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">6/6</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">6/6</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">6/6</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">6/6</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0.8333333333333334" style="background-color:hsl(100,49%,50%)">5/6</td>
@@ -2469,7 +2484,8 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -2615,7 +2631,8 @@ return typeof Intl.NumberFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -2761,7 +2778,8 @@ return new Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -2907,7 +2925,8 @@ return Intl.NumberFormat() instanceof Intl.NumberFormat;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -3075,7 +3094,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -3238,7 +3258,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
 <td class="unknown obsolete" data-browser="ios10_3">?</td>
@@ -3381,7 +3402,8 @@ try {
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">7/7</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">7/7</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">7/7</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">7/7</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">7/7</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">7/7</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">6/7</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">6/7</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="0.8571428571428571" style="background-color:hsl(102,48%,50%)">6/7</td>
@@ -3527,7 +3549,8 @@ return typeof Intl.DateTimeFormat === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -3673,7 +3696,8 @@ return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -3819,7 +3843,8 @@ return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -3987,7 +4012,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -4150,7 +4176,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="unknown obsolete" data-browser="android4_4">?</td>
 <td class="unknown obsolete" data-browser="android4_4_3">?</td>
 <td class="unknown obsolete" data-browser="ios10_3">?</td>
@@ -4297,7 +4324,8 @@ return tz !== void undefined &amp;&amp; tz.length &gt; 0;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -4451,7 +4479,8 @@ try {
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -4594,7 +4623,8 @@ try {
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -4740,7 +4770,8 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -4883,7 +4914,8 @@ return typeof String.prototype.localeCompare === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -5029,7 +5061,8 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -5172,7 +5205,8 @@ return typeof Number.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -5318,7 +5352,8 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -5461,7 +5496,8 @@ return typeof Array.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -5607,7 +5643,8 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -5750,7 +5787,8 @@ return typeof Object.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -5896,7 +5934,8 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -6039,7 +6078,8 @@ return typeof Date.prototype.toLocaleString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -6185,7 +6225,8 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -6328,7 +6369,8 @@ return typeof Date.prototype.toLocaleDateString === &apos;function&apos;;
 <td class="tally obsolete" data-browser="graalvm20_1" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="1">1/1</td>
-<td class="tally" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="1">1/1</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="android4_4_3" data-tally="1">1/1</td>
 <td class="tally obsolete" data-browser="ios10_3" data-tally="1">1/1</td>
@@ -6474,7 +6516,8 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
 <td class="yes obsolete" data-browser="graalvm20_1">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3">Yes</td>
 <td class="yes obsolete" data-browser="graalvm20_3_1">Yes</td>
-<td class="yes" data-browser="graalvm21">Yes</td>
+<td class="yes obsolete" data-browser="graalvm21">Yes</td>
+<td class="yes" data-browser="graalvm21_3_3">Yes</td>
 <td class="yes obsolete" data-browser="android4_4">Yes</td>
 <td class="yes obsolete" data-browser="android4_4_3">Yes</td>
 <td class="yes obsolete" data-browser="ios10_3">Yes</td>
@@ -6502,7 +6545,7 @@ return typeof Date.prototype.toLocaleTimeString === &apos;function&apos;;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code> (tests using <code>setTimeout</code> executed using <code>node</code>).</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

@@ -3,6 +3,7 @@ var common = require('./data-common');
 var firefox = common.firefox;
 var chrome = common.chrome;
 var edge = common.edge;
+var graalvm = common.graalvm;
 
 exports.name = 'Non-standard';
 exports.target_file = 'non-standard/index.html';
@@ -1682,7 +1683,8 @@ exports.tests = [
     phantom1_9: true,
     android4_0: true,
     duktape2_0: false,
-    graalvm19: true
+    graalvm19: true,
+    graalvm21_3_3: graalvm.v8CompatModeFlag
   }
 },
 {
@@ -1815,7 +1817,8 @@ exports.tests = [
       val: "flagged",
       note_id: 'graalvm-nashorn-compat',
       note_html: 'The feature has to be enabled via the <code>--nashorn-compat</code> flag.'
-    }
+    },
+    graalvm21_3_3: graalvm.nashornCompatModeFlag
   }
 },
 {
@@ -1938,7 +1941,8 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
-    graalvm19: false
+    graalvm19: false,
+    graalvm21_3_3: graalvm.nashornCompatModeFlag
   }
 },
 {
@@ -1993,7 +1997,8 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
-    graalvm19: false
+    graalvm19: false,
+    graalvm21_3_3: graalvm.nashornCompatModeFlag
   }
 },
 {
@@ -2518,7 +2523,8 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
-    graalvm19: false
+    graalvm19: false,
+    graalvm21_3_3: graalvm.nashornCompatModeFlag
   }
 },
 {
@@ -2545,7 +2551,8 @@ exports.tests = [
     nashorn1_8: true,
     nashorn9: true,
     nashorn10: true,
-    graalvm19: false
+    graalvm19: false,
+    graalvm21_3_3: graalvm.nashornCompatModeFlag
   }
 },
 {
@@ -2629,6 +2636,7 @@ exports.tests = [
         duktape2_1: true,
         duktape2_5: false,
         graalvm19: true,
+        graalvm21_3_3: graalvm.globalPropertyFlag,
         rhino1_7_13: false
       }
     }, {
@@ -2666,6 +2674,7 @@ exports.tests = [
         duktape2_1: true,
         duktape2_5: false,
         graalvm19: false,
+        graalvm21_3_3: graalvm.globalPropertyFlag,
         rhino1_7_13: false
       }
     }]

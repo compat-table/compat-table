@@ -151,6 +151,31 @@
       "val": "flagged",
       "note_id": "graalvm-es2022",
       "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2022</code> flag"
+    },
+    "esStagingFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-js-ecmascript-version-staging",
+      "note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+    },
+    "newSetMethodsFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-new-set-methods",
+      "note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+    },
+    "v8CompatModeFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-v8-compat",
+      "note_html": "Requires the <code>--experimental-options --js.v8-compat</code> flags."
+    },
+    "nashornCompatModeFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-nashorn-compat",
+      "note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+    },
+    "globalPropertyFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-global-property",
+      "note_html": "Requires the <code>--experimental-options --js.global-property</code> flags."
     }
   },
   "hermes": {

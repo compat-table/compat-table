@@ -942,7 +942,8 @@ exports.tests = [
         opera12_10: true,
         opera12: true,
         safari4: true,
-        safari15: true
+        safari15: true,
+        graalvm21_3_3: true
       }
     }
   ],
@@ -1043,7 +1044,8 @@ exports.tests = [
       ie9: true,
       chrome15: true,
       firefox3: true,
-      opera11: true
+      opera11: true,
+      graalvm21_3_3: true
     }
   },
   {
@@ -1381,6 +1383,7 @@ exports.tests = [
       edge18: true,
       edge80: true,
       duktape2_0: true,
+      graalvm21_3_3: true,
       rhino1_7_14: true,
     }
   }, {
@@ -1411,6 +1414,7 @@ exports.tests = [
       edge18: true,
       edge80: true,
       duktape2_0: true,
+      graalvm21_3_3: true,
       rhino1_7_14: true,
     }
   }, {
@@ -1436,6 +1440,7 @@ exports.tests = [
       safari10: false,
       safari11: true,
       duktape2_0: true,
+      graalvm21_3_3: true,
       rhino1_7_14: true,
     }
   }],

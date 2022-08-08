@@ -29,6 +29,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -49,6 +50,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     }
@@ -76,6 +78,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -97,6 +100,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -118,6 +122,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -181,6 +186,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -215,6 +221,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20_1: true,
+        graalvm21_3_3: true,
         rhino1_7_13: true
       }
     }
@@ -242,6 +249,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     }
@@ -269,6 +277,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     }
@@ -296,6 +305,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -316,6 +326,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -337,6 +348,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -358,6 +370,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -421,6 +434,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -454,6 +468,7 @@ exports.tests = [
         safari14: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: true
       }
     }
@@ -481,6 +496,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -502,6 +518,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -523,6 +540,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -586,6 +604,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -619,6 +638,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20_1: true,
+        graalvm21_3_3: true,
         rhino1_7_13: true
       }
     },
@@ -647,6 +667,7 @@ exports.tests = [
         ios7: false,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     },
@@ -675,6 +696,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        graalvm21_3_3: true,
         rhino1_7_13: false
       }
     }
