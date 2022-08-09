@@ -16,11 +16,16 @@ var testSuccess = 0;
 var testOutOfDate = 0;
 
 var jsCommand = 'js';
+var jsArgs = [ '--js.intl-402' ];
+var nodeCommand = process.env['GRAALVM_NODE'];
+var nodeArgs = [];
+
+var testScriptFilename = 'graalvmtest.js';
 
 var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 var flagsForSuite = {
-    'data-es5': [ [ '--js.ecmascript-version=5' ] ],
+    'data-es5': [],
     'data-es6': [ [ '--js.ecmascript-version=6' ] ],
     'data-es2016plus': [ [ '--js.ecmascript-version=staging' ] ],
     'data-esnext': [ [ '--js.ecmascript-version=staging' ], [ '--experimental-options', '--js.new-set-methods' ] ],
@@ -29,7 +34,6 @@ var flagsForSuite = {
 };
 
 var prelude = 
-    'var __script_executed = {};\n' + 
     'if (typeof global === "undefined") {\n' +
     '    this.lacksGlobal = true;\n' +
     '    global = this;\n' +
@@ -38,15 +42,17 @@ var prelude =
     '    this.lacksGlobalThis = true;\n' +
     '    globalThis = this;\n' +
     '}\n' +
-    'function test(expression) {\n' +
+    'var __script_executed = {};\n' + 
+    'global.__script_executed = __script_executed;\n' + 
+    'global.test = function test(expression) {\n' +
     '    if (expression) {\n' +
-    '        print("[SUCCESS]");\n' +
+    '        console.log("[SUCCESS]");\n' +
     '    }\n' +
     '}\n' +
-    'function asyncTestPassed() {\n' +
-    '    print("[SUCCESS]");\n' +
+    'global.asyncTestPassed = function asyncTestPassed() {\n' +
+    '    console.log("[SUCCESS]");\n' +
     '}\n' +
-    'function __createIterableObject(arr, methods) {\n' +
+    'global.__createIterableObject = function __createIterableObject(arr, methods) {\n' +
     '    methods = methods || {};\n' +
     '    if (typeof Symbol !== "function" || !Symbol.iterator) {\n' +
     '        return {};\n' +
@@ -94,25 +100,27 @@ var graalvmKeyList = (function () {
 })();
 console.log('GraalVM key list for inheriting results is:', graalvmKeyList);
 
-function executeTestScript(testScriptFilename, suite) {
-    var stdout = child_process.execFileSync(jsCommand, [ '--js.intl-402', testScriptFilename ], {
-        encoding: 'utf-8'
-    });
+function exec(launcherCommand, launcherArgs, flags) {
+    try {
+        var stdout = child_process.execFileSync(launcherCommand, launcherArgs.concat(flags, [ testScriptFilename ]), {
+            encoding: 'utf-8',
+            stdio: ['ignore', 'pipe', 'ignore']
+        });
 
-    if (/^\[SUCCESS\]$/gm.test(stdout)) {
+        return /^\[SUCCESS\]$/m.test(stdout);
+    } catch (e) {
+        return false;
+    }
+}
+
+function executeTestScript(launcherCommand, launcherArgs, suite) {
+    if (exec(launcherCommand, launcherArgs, [])) {
         return true;
     }
 
     for (var i = 0; i < flagsForSuite[suite].length; i++) {
         var flags = flagsForSuite[suite][i];
-        var args = flags.slice(0);
-        args.push('--js.intl-402');
-        args.push(testScriptFilename);
-        stdout = child_process.execFileSync(jsCommand, args, {
-            encoding: 'utf-8'
-        });
-
-        if (/^\[SUCCESS\]$/m.test(stdout)) {
+        if (exec(launcherCommand, launcherArgs, flags)) {
             return {
                 val: 'flagged',
                 note_id: ('graalvm-' + flags.join('-')).replace(/[=\.]/g, '-').replace(/-+/g, '-'),
@@ -158,22 +166,24 @@ function runTest(parents, test) {
 
     var evalcode = testCode(test.exec);
     if (evalcode !== undefined) {
-        if (evalcode.match(/\bsetTimeout\b/)) {
-            console.log(testPath + ': could not run test using setTimeout');
+        if (/\bsetTimeout\b/.test(evalcode) && !nodeCommand) {
+            console.log(testPath + ': could not run test using setTimeout (set GRAALVM_NODE to GraalVM\'s `node` binary and rerun to get results)');
         } else {
             var script =
                 prelude + '\n' +
                 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                'try {\n' +
-                '    var result = eval(evalcode);\n' +
-                '    if (result) {\n' +
-                '        print("[SUCCESS]");\n' +
-                '    }\n' +
-                '} catch (e) {\n' +
+                'var result = eval(evalcode);\n' +
+                'if (result) {\n' +
+                '    console.log("[SUCCESS]");\n' +
                 '}\n';
 
-            fs.writeFileSync('graalvmtest.js', script);
-            var actual = executeTestScript('graalvmtest.js', parents[0]);
+            fs.writeFileSync(testScriptFilename, script);
+            var actual;
+            if (evalcode.match(/\bsetTimeout\b/)) {
+                actual = executeTestScript(nodeCommand, nodeArgs, parents[0]);
+            } else {
+                actual = executeTestScript(jsCommand, jsArgs, parents[0]);
+            }
             testCount++;
             if (actual) {
                 testSuccess++;
