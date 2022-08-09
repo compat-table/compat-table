@@ -22,9 +22,9 @@ var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 var flagsForSuite = {
     'data-es5': [ [ '--js.ecmascript-version=5' ] ],
     'data-es6': [ [ '--js.ecmascript-version=6' ] ],
-    'data-es2016plus': [ [ '--js.ecmascript-version=latest' ] ],
+    'data-es2016plus': [ [ '--js.ecmascript-version=staging' ] ],
     'data-esnext': [ [ '--js.ecmascript-version=staging' ], [ '--experimental-options', '--js.new-set-methods' ] ],
-    'data-esintl': [ [ '--js.intl-402' ] ],
+    'data-esintl': [],
     'data-non-standard': [ [ '--experimental-options', '--js.nashorn-compat' ], [ '--experimental-options', '--js.v8-compat' ], [ '--experimental-options', '--js.global-property' ] ]
 };
 
@@ -95,7 +95,7 @@ var graalvmKeyList = (function () {
 console.log('GraalVM key list for inheriting results is:', graalvmKeyList);
 
 function executeTestScript(testScriptFilename, suite) {
-    var stdout = child_process.execFileSync(jsCommand, [ testScriptFilename ], {
+    var stdout = child_process.execFileSync(jsCommand, [ '--js.intl-402', testScriptFilename ], {
         encoding: 'utf-8'
     });
 
@@ -106,6 +106,7 @@ function executeTestScript(testScriptFilename, suite) {
     for (var i = 0; i < flagsForSuite[suite].length; i++) {
         var flags = flagsForSuite[suite][i];
         var args = flags.slice(0);
+        args.push('--js.intl-402');
         args.push(testScriptFilename);
         stdout = child_process.execFileSync(jsCommand, args, {
             encoding: 'utf-8'
@@ -115,7 +116,7 @@ function executeTestScript(testScriptFilename, suite) {
             return {
                 val: 'flagged',
                 note_id: ('graalvm-' + flags.join('-')).replace(/[=\.]/g, '-').replace(/-+/g, '-'),
-                note_html: 'Requires the <code>' + flags.join(' ') + '</code> flag' + flags.length > 1 ? 's' : '' + '.'
+                note_html: 'Requires the <code>' + flags.join(' ') + '</code> flag' + (flags.length > 1 ? 's' : '') + '.'
             };
         }
     }
