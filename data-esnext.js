@@ -542,7 +542,7 @@ exports.tests = [
   spec: 'https://github.com/tc39/proposal-array-is-template-object',
   exec: function () {/*
     return !Array.isTemplateObject([])
-      && Array.isTemplateObject((it => it)`a{1}c`);
+      && Array.isTemplateObject((it => it)`a${1}c`);
   */},
   res: {
     babel6corejs2: false,
