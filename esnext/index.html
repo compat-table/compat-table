@@ -5195,8 +5195,8 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 </tr>
 <tr significance="0.25"><td id="test-Array.isTemplateObject"><span><a class="anchor" href="#test-Array.isTemplateObject">&#xA7;</a><a href="https://github.com/tc39/proposal-array-is-template-object">Array.isTemplateObject</a></span><script data-source="
 return !Array.isTemplateObject([])
-  &amp;&amp; Array.isTemplateObject((it =&gt; it)`a{1}c`);
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a{1}c`);\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a{1}c`);\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  &amp;&amp; Array.isTemplateObject((it =&gt; it)`a${1}c`);
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
