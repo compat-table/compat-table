@@ -182,22 +182,18 @@ function runTest(parents, test, sublevel) {
     }
 }
 
-fs.readdirSync('.').forEach(function (filename) {
-    var m = /^data-(.*)\.js$/.exec(filename);
-    if (!m) {
-        return;
-    }
-    var suitename = m[1];
+for (var suitename in runner_support.suites) {
+    var testsuite = runner_support.suites[suitename];
     if (suites.length != 0 && !suites.includes(suitename)) {
-        return;
+        continue;
     }
-
     console.log('');
     console.log('**** ' + suitename + ' ****');
     console.log('');
-    var testsuite = require('./data-' + suitename + '.js');
-    testsuite.tests.forEach(function (v) { runTest([ suitename ], v, 0); });
-});
+    testsuite.tests.forEach(function (test) {
+        runTest([ suitename ], test);
+    });
+}
 
 console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
 console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');

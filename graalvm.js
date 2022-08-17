@@ -200,21 +200,15 @@ function runTest(parents, test) {
     }
 }
 
-fs.readdirSync('.').forEach(function (filename) {
-    var datafile = /^(data-.*)\.js$/.exec(filename);
-    if (!datafile) {
-        return;
-    }
-    var suitename = datafile[1];
-
+for (var suitename in runner_support.suites) {
+    var testsuite = runner_support.suites[suitename];
     console.log('');
     console.log('**** ' + suitename + ' ****');
     console.log('');
-    var testsuite = require('./' + suitename);
     testsuite.tests.forEach(function (test) {
         runTest([ suitename ], test);
     });
-});
+}
 
 console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
 console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');

@@ -39,3 +39,15 @@ exports.createIterableHelper =
 '    iterable[Symbol.iterator] = function(){ return iterator; };\n' +
 '    return iterable;\n' +
 '  };\n';
+
+exports.suites = {};
+fs.readdirSync('.').forEach(function (filename) {
+    var datafile = /^(data-.*)\.js$/.exec(filename);
+    if (!datafile) {
+        return;
+    }
+    var suitename = datafile[1];
+    var testsuite = require('./' + suitename);
+
+    exports.suites[suitename] = testsuite;
+});
