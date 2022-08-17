@@ -38,25 +38,6 @@ console.log('JerryScript result key is: test.res.' + jerryKey);
 var jerryKeyList = runner_support.keyList(jerryKey, 'JerryScript');
 console.log('JerryScript key list for inheriting results is:', jerryKeyList);
 
-var createIterableHelper =
-'var global = this;\n' +
-'global.__createIterableObject = function (arr, methods) {\n' +
-'    methods = methods || {};\n' +
-'    if (typeof Symbol !== "function" || !Symbol.iterator)\n' +
-'      return {};\n' +
-'    arr.length++;\n' +
-'    var iterator = {\n' +
-'      next: function() {\n' +
-'        return { value: arr.shift(), done: arr.length <= 0 };\n' +
-'      },\n' +
-'      "return": methods["return"],\n' +
-'      "throw": methods["throw"]\n' +
-'    };\n' +
-'    var iterable = {};\n' +
-'    iterable[Symbol.iterator] = function(){ return iterator; };\n' +
-'    return iterable;\n' +
-'  };\n';
-
 var asyncTestHelperHead =
 'var asyncPassed = false;\n' +
 '\n' +
@@ -125,7 +106,7 @@ function runTest(parents, test, sublevel) {
         var script = '';
 
         if (src.includes('__createIterableObject')) {
-            script += createIterableHelper;
+            script += runner_support.createIterableHelper;
         } else if (src.includes('global')) {
             script += 'var global = this;\n';
         }

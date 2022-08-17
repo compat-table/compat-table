@@ -5,6 +5,7 @@ var fs = require('fs');
 var chalk = require('chalk');
 var path = require('path');
 var cheerio = require('cheerio');
+var runner_support = require('./runner_support');
 
 var page = fs.readFileSync(path.join(__dirname, String(process.argv[2] || 'es6').toLowerCase(), 'index.html')).toString().replace(/data-source="[^"]*"/g,'');
 var $ = cheerio.load(page);
@@ -26,22 +27,7 @@ $('#body tbody tr').each(function (index) {
   global.asyncPassed = function asyncPassed() {
     results[index] = true;
   };
-  global.__createIterableObject = function (arr, methods) {
-    methods = methods || {};
-    if (typeof Symbol !== 'function' || !Symbol.iterator)
-      return {};
-    arr.length++;
-    var iterator = {
-      next: function() {
-        return { value: arr.shift(), done: arr.length <= 0 };
-      },
-      'return': methods['return'],
-      'throw': methods['throw']
-    };
-    var iterable = {};
-    iterable[Symbol.iterator] = function(){ return iterator; };
-    return iterable;
-  };
+  eval(runner_support.createIterableHelper);
 
   results[index] = null;
 

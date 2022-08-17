@@ -59,23 +59,7 @@ var prelude =
     'global.asyncTestPassed = function asyncTestPassed() {\n' +
     '    console.log("[SUCCESS]");\n' +
     '}\n' +
-    'global.__createIterableObject = function __createIterableObject(arr, methods) {\n' +
-    '    methods = methods || {};\n' +
-    '    if (typeof Symbol !== "function" || !Symbol.iterator) {\n' +
-    '        return {};\n' +
-    '    }\n' +
-    '    arr.length++;\n' +
-    '    var iterator = {\n' +
-    '        next: function() {\n' +
-    '            return { value: arr.shift(), done: arr.length <= 0 };\n' +
-    '        },\n' +
-    '        "return": methods["return"],\n' +
-    '        "throw": methods["throw"]\n' +
-    '    };\n' +
-    '    var iterable = {};\n' +
-    '    iterable[Symbol.iterator] = function(){ return iterator; };\n' +
-    '    return iterable;\n' +
-    '}\n';
+    runner_support.createIterableHelper;
 
 // Key for .res (e.g. test.res.graalvm), automatic based on GraalVM version.
 var graalvmKey = (function () {
