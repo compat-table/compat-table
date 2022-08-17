@@ -12,6 +12,7 @@
 var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
+var runner_support = require('./runner_support');
 
 var argv = require('yargs/yargs')(process.argv.slice(2))
     .option('hermes-bin', {
@@ -53,8 +54,6 @@ var suites = argv.suite;
 suites = suites === 'all' ? '' : suites;
 var testName = argv.testName;
 
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
-
 // Key for .res (e.g. test.res.hermes0_7_0), automatic based on `hermes -version`.
 var hermesKey = (function () {
     var stdout = child_process.execFileSync(hermesCommand, [ '-version' ], {
@@ -70,21 +69,7 @@ var hermesKey = (function () {
 console.log('Hermes result key is: test.res.' + hermesKey);
 
 // List of keys for inheriting results from previous versions.
-var hermesKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'Hermes') {
-            continue;
-        }
-        res.push(k);
-        if (k === hermesKey) {
-            // Include versions up to 'hermesKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var hermesKeyList = runner_support.keyList(hermesKey, 'Hermes');
 console.log('Hermes key list for inheriting results is:', hermesKeyList);
 
 var createIterableHelper =

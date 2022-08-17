@@ -14,6 +14,7 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
+var runner_support = require('./runner_support');
 
 var testCount = 0;
 var testSuccess = 0;
@@ -27,8 +28,6 @@ if (process.env.JAVA_HOME) {
     var jdkBin = path.resolve(process.env.JAVA_HOME, 'bin');
     javaCommand = path.resolve(jdkBin, 'java');
 }
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 function executeScript(scriptName) {
     return child_process.execFileSync(javaCommand, ['-jar', 'rhino.jar', '-version', '200', scriptName], {
@@ -51,21 +50,7 @@ var rhinoKey = (function () {
 console.log('rhino result key is: test.res.rhino' + rhinoKey);
 
 // List of keys for inheriting results from previous versions.
-var rhinoKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'Rhino') {
-            continue;
-        }
-        res.push(k);
-        if (k === rhinoKey) {
-            // Include versions up to 'rhinoKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var rhinoKeyList = runner_support.keyList(rhinoKey, 'Rhino');
 console.log('rhino key list for inheriting results is:', rhinoKeyList);
 
 // Run test / subtests, recursively.  Report results, indicate data files

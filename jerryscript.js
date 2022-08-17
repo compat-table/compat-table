@@ -10,6 +10,7 @@
 var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
+var runner_support = require('./runner_support');
 
 var testCount = 0;
 var testSuccess = 0;
@@ -17,8 +18,6 @@ var testOutOfDate = 0;
 
 var jerryCommand = process.argv[2];
 var suites = process.argv.slice(3);
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 // Key for .res (e.g. test.res.jerryscript1_0), automatic based on `jerry --version`.
 var jerryKey = (function () {
@@ -36,21 +35,7 @@ console.log('JerryScript result key is: test.res.' + jerryKey);
 // jerryKey = "jerryscript2_4_0" // uncomment this line to test pre 2.4.0
 
 // List of keys for inheriting results from previous versions.
-var jerryKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'JerryScript') {
-            continue;
-        }
-        res.push(k);
-        if (k === jerryKey) {
-            // Include versions up to 'jerryKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var jerryKeyList = runner_support.keyList(jerryKey, 'JerryScript');
 console.log('JerryScript key list for inheriting results is:', jerryKeyList);
 
 var createIterableHelper =

@@ -14,6 +14,7 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
+var runner_support = require('./runner_support');
 
 var testCount = 0;
 var testSuccess = 0;
@@ -27,8 +28,6 @@ if (process.env.JAVA_HOME) {
     var jdkBin = path.resolve(process.env.JAVA_HOME, 'bin');
     jjsCommand = path.resolve(jdkBin, 'jjs');
 }
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 // Key for .res (e.g. test.res.nashorn), automatic based on nashorn version.
 var jjsKey = (function () {
@@ -46,21 +45,7 @@ var jjsKey = (function () {
 console.log('jjs result key is: test.res.nashorn' + jjsKey);
 
 // List of keys for inheriting results from previous versions.
-var jjsKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'Nashorn') {
-            continue;
-        }
-        res.push(k);
-        if (k === jjsKey) {
-            // Include versions up to 'jjsKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var jjsKeyList = runner_support.keyList(jjsKey, 'Nashorn');
 console.log('jjs key list for inheriting results is:', jjsKeyList);
 
 // Run test / subtests, recursively.  Report results, indicate data files

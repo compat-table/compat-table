@@ -18,6 +18,7 @@
 
 var fs = require('fs');
 var child_process = require('child_process');
+var runner_support = require('./runner_support');
 
 var testCount = 0;
 var testSuccess = 0;
@@ -29,8 +30,6 @@ var nodeCommand = process.env['GRAALVM_NODE'];
 var nodeArgs = [];
 
 var testScriptFilename = 'graalvmtest.js';
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 var flagsForSuite = {
     'data-es5': [],
@@ -91,21 +90,7 @@ var graalvmKey = (function () {
 console.log('GraalVM result key is: test.res.graalvm' + graalvmKey);
 
 // List of keys for inheriting results from previous versions.
-var graalvmKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'GraalVM') {
-            continue;
-        }
-        res.push(k);
-        if (k === graalvmKey) {
-            // Include versions up to 'graalvmKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var graalvmKeyList = runner_support.keyList(graalvmKey, 'GraalVM');
 console.log('GraalVM key list for inheriting results is:', graalvmKeyList);
 
 function exec(launcherCommand, launcherArgs, flags) {

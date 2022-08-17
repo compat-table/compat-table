@@ -10,14 +10,13 @@
 
 var fs = require('fs');
 var child_process = require('child_process');
+var runner_support = require('./runner_support');
 
 var testCount = 0;
 var testSuccess = 0;
 var testOutOfDate = 0;
 
 var dukCommand = './duk';
-
-var environments = JSON.parse(fs.readFileSync('environments.json').toString());
 
 // Key for .res (e.g. test.res.duktape2_0), automatic based on Duktape.version.
 var dukKey = (function () {
@@ -34,21 +33,7 @@ var dukKey = (function () {
 console.log('Duktape result key is: test.res.' + dukKey);
 
 // List of keys for inheriting results from previous versions.
-var dukKeyList = (function () {
-    var res = [];
-    for (var k in environments) {
-        var env = environments[k];
-        if (env.family !== 'Duktape') {
-            continue;
-        }
-        res.push(k);
-        if (k === dukKey) {
-            // Include versions up to 'dukKey' but not newer.
-            break;
-        }
-    }
-    return res;
-})();
+var dukKeyList = runner_support.keyList(dukKey, 'Duktape');
 console.log('Duktape key list for inheriting results is:', dukKeyList);
 
 // Run test / subtests, recursively.  Report results, indicate data files
