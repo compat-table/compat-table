@@ -40,23 +40,16 @@ var jjsKey = (function () {
 })();
 console.log('jjs result key is: test.res.nashorn' + jjsKey);
 
-function runTest(evalcode) {
-    var script = 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                 'try {\n' +
-                 '    var res = eval(evalcode);\n' +
-                 '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
-                 '    print("[SUCCESS]");\n' +
-                 '} catch (e) {\n' +
-                 '    print("[FAILURE] " + e);\n' +
-                 '    /*throw e;*/\n' +
-                 '}\n';
+function jjsRunner(testFilename) {
+    try {
+        var stdout = child_process.execFileSync(jjsCommand, [ '--language=es6', testFilename ], {
+            encoding: 'utf-8'
+        });
 
-    fs.writeFileSync('jjstest.js', script);
-    var stdout = child_process.execFileSync(jjsCommand, [ '--language=es6', 'jjstest.js' ], {
-        encoding: 'utf-8'
-    });
-
-    return /^\[SUCCESS\]$/gm.test(stdout);
+        return /^\[SUCCESS\]$/m.test(stdout);
+    } catch (e) {
+        return false;
+    }
 }
 
-runner_support.runTests(runTest, jjsKey, 'Nashorn');
+runner_support.runTests(jjsRunner, jjsKey, 'Nashorn');

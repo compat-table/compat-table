@@ -36,8 +36,8 @@ var rhinoKey = (function () {
     var script = 'print(org.mozilla.javascript.ImplementationVersion.get());\n' +
                  'quit()\n';
 
-    fs.writeFileSync('rhinotest.js', script);
-    var stdout = executeScript('rhinotest.js');
+    fs.writeFileSync('rhinoversion.js', script);
+    var stdout = executeScript('rhinoversion.js');
 
     console.log('rhino version is: ' + stdout);
     var match = stdout.match(/Rhino (\d+)\.(\d+)\.(\d+)/);
@@ -45,21 +45,14 @@ var rhinoKey = (function () {
 })();
 console.log('rhino result key is: test.res.rhino' + rhinoKey);
 
-function runTest(evalcode) {
-    var script = 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                 'try {\n' +
-                 '    var res = eval(evalcode);\n' +
-                 '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
-                 '    print("[SUCCESS]");\n' +
-                 '} catch (e) {\n' +
-                 '    print("[FAILURE] " + e);\n' +
-                 '    /*throw e;*/\n' +
-                 '}\n';
+function rhinoRunner(testFilename) {
+    try {
+        var stdout = executeScript(testFilename);
 
-    fs.writeFileSync('rhinotest.js', script);
-    var stdout = executeScript('rhinotest.js');
-
-    return /^\[SUCCESS\]$/gm.test(stdout);
+        return /^\[SUCCESS\]$/m.test(stdout);
+    } catch (e) {
+        return false;
+    }
 }
 
-runner_support.runTests(runTest, rhinoKey, 'Rhino');
+runner_support.runTests(rhinoRunner, rhinoKey, 'Rhino');

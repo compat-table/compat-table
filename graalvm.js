@@ -16,46 +16,20 @@
  *    $ GRAALVM_NODE=<graalvm>/bin/node node graalvm.js
  */
 
-var fs = require('fs');
 var child_process = require('child_process');
 var runner_support = require('./runner_support');
 
 var jsCommand = 'js';
 var jsArgs = [ '--js.intl-402' ];
-var nodeCommand = process.env['GRAALVM_NODE'];
-var nodeArgs = [];
-
-var testScriptFilename = 'graalvmtest.js';
 
 var flagsForSuite = {
-    'data-es5': [],
-    'data-es6': [ [ '--js.ecmascript-version=6' ] ],
-    'data-es2016plus': [ [ '--js.ecmascript-version=staging' ] ],
-    'data-esnext': [ [ '--js.ecmascript-version=staging' ], [ '--experimental-options', '--js.new-set-methods' ] ],
-    'data-esintl': [],
-    'data-non-standard': [ [ '--experimental-options', '--js.nashorn-compat' ], [ '--experimental-options', '--js.v8-compat' ], [ '--experimental-options', '--js.global-property' ] ]
+    'es5': [],
+    'es6': [ [ '--js.ecmascript-version=6' ] ],
+    'es2016plus': [ [ '--js.ecmascript-version=staging' ] ],
+    'esnext': [ [ '--js.ecmascript-version=staging' ], [ '--experimental-options', '--js.new-set-methods' ] ],
+    'esintl': [],
+    'non-standard': [ [ '--experimental-options', '--js.nashorn-compat' ], [ '--experimental-options', '--js.v8-compat' ], [ '--experimental-options', '--js.global-property' ] ]
 };
-
-var prelude = 
-    'if (typeof global === "undefined") {\n' +
-    '    this.lacksGlobal = true;\n' +
-    '    global = this;\n' +
-    '}\n' +
-    'if (typeof globalThis === "undefined") {\n' +
-    '    this.lacksGlobalThis = true;\n' +
-    '    globalThis = this;\n' +
-    '}\n' +
-    'var __script_executed = {};\n' + 
-    'global.__script_executed = __script_executed;\n' + 
-    'global.test = function test(expression) {\n' +
-    '    if (expression) {\n' +
-    '        console.log("[SUCCESS]");\n' +
-    '    }\n' +
-    '}\n' +
-    'global.asyncTestPassed = function asyncTestPassed() {\n' +
-    '    console.log("[SUCCESS]");\n' +
-    '}\n' +
-    runner_support.createIterableHelper;
 
 // Key for .res (e.g. test.res.graalvm), automatic based on GraalVM version.
 var graalvmKey = (function () {
@@ -69,9 +43,9 @@ var graalvmKey = (function () {
 })();
 console.log('GraalVM result key is: test.res.graalvm' + graalvmKey);
 
-function exec(launcherCommand, launcherArgs, flags) {
+function exec(flags, testFilename) {
     try {
-        var stdout = child_process.execFileSync(launcherCommand, launcherArgs.concat(flags, [ testScriptFilename ]), {
+        var stdout = child_process.execFileSync(jsCommand, jsArgs.concat(flags, [ testFilename ]), {
             encoding: 'utf-8',
             stdio: ['ignore', 'pipe', 'ignore']
         });
@@ -82,14 +56,14 @@ function exec(launcherCommand, launcherArgs, flags) {
     }
 }
 
-function executeTestScript(launcherCommand, launcherArgs, suite) {
-    if (exec(launcherCommand, launcherArgs, [])) {
+function graalvmRunner(testFilename, suite) {
+    if (exec([], testFilename)) {
         return true;
     }
 
     for (var i = 0; i < flagsForSuite[suite].length; i++) {
         var flags = flagsForSuite[suite][i];
-        if (exec(launcherCommand, launcherArgs, flags)) {
+        if (exec(flags, testFilename)) {
             return {
                 val: 'flagged',
                 note_id: ('graalvm-' + flags.join('-')).replace(/[=\.]/g, '-').replace(/-+/g, '-'),
@@ -99,29 +73,6 @@ function executeTestScript(launcherCommand, launcherArgs, suite) {
     }
 
     return false;
-}
-
-function runTest(evalcode, suite, testPath) {
-    if (/\bsetTimeout\b/.test(evalcode) && !nodeCommand) {
-        console.log(testPath + ': could not run test using setTimeout (set GRAALVM_NODE to GraalVM\'s `node` binary and rerun to get results)');
-        return 'skip';
-    }
-
-    var script =
-        prelude + '\n' +
-        'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-        'var result = eval(evalcode);\n' +
-        'if (result) {\n' +
-        '    console.log("[SUCCESS]");\n' +
-        '}\n';
-
-    fs.writeFileSync(testScriptFilename, script);
-    
-    if (evalcode.match(/\bsetTimeout\b/)) {
-        return executeTestScript(nodeCommand, nodeArgs, suite);
-    } else {
-        return executeTestScript(jsCommand, jsArgs, suite);
-    }
 }
 
 function resultsMatch(expect, actual) {
@@ -134,4 +85,4 @@ function resultsMatch(expect, actual) {
     return false;
 }
 
-runner_support.runTests(runTest, graalvmKey, 'GraalVM', { resultsMatch: resultsMatch });
+runner_support.runTests(graalvmRunner, graalvmKey, 'GraalVM', { resultsMatch: resultsMatch });

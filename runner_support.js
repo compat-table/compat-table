@@ -1,26 +1,25 @@
 var fs = require('fs');
 
 exports.createIterableHelper =
-'if (typeof global === "undefined") {\n' +
-'    global = this;\n' +
-'}\n' +
-'global.__createIterableObject = function __createIterableObject(arr, methods) {\n' +
+'function __createIterableObject(arr, methods) {\n' +
 '    methods = methods || {};\n' +
 '    if (typeof Symbol !== "function" || !Symbol.iterator)\n' +
-'      return {};\n' +
+'        return {};\n' +
 '    arr.length++;\n' +
 '    var iterator = {\n' +
-'      next: function() {\n' +
-'        return { value: arr.shift(), done: arr.length <= 0 };\n' +
-'      },\n' +
-'      "return": methods["return"],\n' +
-'      "throw": methods["throw"]\n' +
+'        next: function() {\n' +
+'            return { value: arr.shift(), done: arr.length <= 0 };\n' +
+'        },\n' +
+'        "return": methods["return"],\n' +
+'        "throw": methods["throw"]\n' +
 '    };\n' +
 '    var iterable = {};\n' +
 '    iterable[Symbol.iterator] = function(){ return iterator; };\n' +
 '    return iterable;\n' +
-'  };\n';
-
+'}\n' +
+'if (typeof global !== "undefined") {\n' +
+'    global.__createIterableObject = __createIterableObject;\n' +
+'}\n';
 
 exports.runTests = function runTests(runner, key, family, { resultsMatch = (expect, actual) => expect === actual, suites = [], testName, bail } = {}) {
     var testCount = 0;
@@ -28,6 +27,45 @@ exports.runTests = function runTests(runner, key, family, { resultsMatch = (expe
     var testOutOfDate = 0;
 
     var environments = JSON.parse(fs.readFileSync('environments.json').toString());
+
+    var testFilename = 'test.js';
+
+    var asyncTestHelperHead =
+        'function asyncTestPassed() {\n' +
+        '   print("[SUCCESS]");\n' +
+        '}\n' +
+        '\n' +
+        'var jobQueue = [];\n' +
+        '\n' +
+        'function setTimeout(cb, time, cbarg) {\n' +
+        '    var runTime = Date.now() + time;\n' +
+        '    if (!jobQueue[runTime]) {\n' +
+        '        jobQueue[runTime] = [];\n' +
+        '    }\n' +
+        '    jobQueue[runTime].push(function() {\n' +
+        '        cb(cbarg);\n' + 
+        '    });\n' +
+        '}\n';
+    var asyncTestHelperTail =
+        'function flushQueue() {\n' +            
+        '    var curTime = Date.now();\n' +
+        '    var empty = true;\n' +
+        '    for (var runTime in jobQueue) {\n' +
+        '        empty = false;\n' +
+        '        if (curTime >= runTime) {\n' +
+        '            var jobs = jobQueue[runTime];\n' +
+        '            delete jobQueue[runTime];\n' +
+        '            jobs.forEach(function (job) {\n' +
+        '                job();\n' +
+        '            });\n' +
+        '        }\n' +
+        '    }\n' +
+        '    if (!empty) {\n' +
+        '        Promise.resolve().then(flushQueue);\n' +
+        '    }\n' +
+        '}\n' +
+        '\n' +
+        'Promise.resolve().then(flushQueue);\n';
 
     // List of keys for inheriting results from previous versions.
     var keyList = (function () {
@@ -52,12 +90,12 @@ exports.runTests = function runTests(runner, key, family, { resultsMatch = (expe
             var src = exec.toString();
             var functionBody = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
             if (functionBody) {
-                return '(function () { ' + removeIndent(functionBody[1]) + ' })();';
+                return '(function () { ' + removeIndent(functionBody[1]) + ' })()';
             } else {
                 return '(' + src + ')()';
             }
         } else if (Array.isArray(exec)) {
-            return exec.map(function (e) { return testCode(e.script); }).join(" || ");
+            return exec.map(function (e) { return testCode(e.script); }).join("; ");
         } else {
             return undefined;
         }
@@ -76,7 +114,59 @@ exports.runTests = function runTests(runner, key, family, { resultsMatch = (expe
 
             var evalcode = testCode(test.exec);
 
-            var actual = evalcode ? runner(evalcode, parents[0], testPath) : 'skip';
+            var actual;
+            if (evalcode) {
+                var script = '';
+                if (/\blacksGlobal\b/.test(evalcode)) {
+                    script += 'this.lacksGlobal = typeof global === "undefined";\n';
+                }
+                if (/\bglobal\b/.test(evalcode)) {
+                    script += 'if (typeof global === "undefined") {\n' +
+                              '    global = this;\n' +
+                              '}\n';
+                }
+                if (/\blacksGlobalThis\b/.test(evalcode)) {
+                    script += 'this.lacksGlobalThis = typeof globalThis === "undefined";\n';
+                }
+                if (/\bglobalThis\b/.test(evalcode)) {
+                    script += 'if (typeof globalThis === "undefined") {\n' +
+                              '    globalThis = this;\n' +
+                              '}\n';
+                }
+                if (/\b__script_executed\b/.test(evalcode)) {
+                    script += 'var __script_executed = {};\n' + 
+                              'global.__script_executed = __script_executed;\n' +
+                              'if (typeof global !== "undefined") {\n' +
+                              '    global.__script_executed = __script_executed;\n' +
+                              '}\n';
+                }
+                if (/\b__createIterableObject\b/.test(evalcode)) {
+                    script += exports.createIterableHelper;
+                }
+
+                if (/\basyncTestPassed\b/.test(evalcode)) {
+                    script += asyncTestHelperHead + '\n' + evalcode + '\n\n' + asyncTestHelperTail;
+                } else if (/\bglobal\.test\b/.test(evalcode)) {
+                    script += 'global.test = function (expression) {\n' +
+                              '    if (expression) {\n' +
+                              '        console.log("[SUCCESS]");\n' +
+                              '    }\n' +
+                              '}\n' +
+                              evalcode;
+                } else {
+                    script += 'var result = ' + evalcode + ';\n' + 
+                              'if (result) {\n' + 
+                              '    print("[SUCCESS]");\n' +
+                              '}\n';
+                }
+
+                fs.writeFileSync(testFilename, script);
+            
+                actual = runner(testFilename, parents[0]);
+            } else {
+                actual = 'skip';
+            }
+
 
             if (actual !== 'skip') {
                 testCount++;

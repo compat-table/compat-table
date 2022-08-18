@@ -8,7 +8,6 @@
  *    $ node duktape.js
  */
 
-var fs = require('fs');
 var child_process = require('child_process');
 var runner_support = require('./runner_support');
 
@@ -28,23 +27,16 @@ var dukKey = (function () {
 })();
 console.log('Duktape result key is: test.res.' + dukKey);
 
-function runTest(evalcode) {
-    var script = 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                 'try {\n' +
-                 '    var res = eval(evalcode);\n' +
-                 '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
-                 '    console.log("[SUCCESS]");\n' +
-                 '} catch (e) {\n' +
-                 '    console.log("[FAILURE]", e);\n' +
-                 '    /*throw e;*/\n' +
-                 '}\n';
+function dukRunner(testFilename) {
+    try {
+        var stdout = child_process.execFileSync(dukCommand, [ testFilename ], {
+            encoding: 'utf-8'
+        });
 
-    fs.writeFileSync('duktest.js', script);
-    var stdout = child_process.execFileSync(dukCommand, [ 'duktest.js' ], {
-        encoding: 'utf-8'
-    });
-
-    return /^\[SUCCESS\]$/gm.test(stdout);
+        return /^\[SUCCESS\]$/m.test(stdout);
+    } catch (e) {
+        return false;
+    }
 }
 
-runner_support.runTests(runTest, dukKey, 'Duktape');
+runner_support.runTests(dukRunner, dukKey, 'Duktape');

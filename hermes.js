@@ -9,7 +9,6 @@
  *  suitename can be 'all'
  */
 
-var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
 var runner_support = require('./runner_support');
@@ -47,7 +46,6 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
 var hermesCommand = argv.hermesBin;
 var suites = argv.suite;
 suites = suites === 'all' ? '' : suites;
-var testName = argv.testName;
 
 // Key for .res (e.g. test.res.hermes0_7_0), automatic based on `hermes -version`.
 var hermesKey = (function () {
@@ -62,63 +60,6 @@ var hermesKey = (function () {
     throw new Error('Invalid Hermes version');
 })();
 console.log('Hermes result key is: test.res.' + hermesKey);
-
-var asyncTestHelperHead =
-'var asyncPassed = false;\n' +
-'\n' +
-'function asyncTestPassed() {\n' +
-'  asyncPassed = true;\n' +
-'}\n' +
-'\n' +
-'function setTimeout(cb, time, cbarg) {\n' +
-'  if (!jobqueue[time]) {\n' +
-'    jobqueue[time] = [];\n' +
-'  }\n' +
-'  jobqueue[time].push({cb, cbarg, startTime: Date.now(), timeout: time});\n' +
-'}\n' +
-'\n' +
-'var jobqueue = [];\n';
-
-var asyncTestHelperTail =
-'const thenCb = job => {\n' +
-'  job.cb(job.cbarg)\n' +
-'}\n' +
-'\n' +
-'const catchCb = job => {\n' +
-'  jobRunner(job);\n' +
-'}\n' +
-'\n' +
-'function jobRunner(job){\n' +
-'  return new Promise((resolve, reject) => {\n' +
-'    let diff = Date.now() - job.startTime;\n' +
-'    if (diff >= job.timeout) {\n' +
-'      if (!job.run) {\n' +
-'        job.run = true;\n' +
-'        resolve (job);\n' +
-'      }\n' +
-'    } else {\n' +
-'      reject (job)\n' +
-'    }\n' +
-'  })\n' +
-'  .then(thenCb)\n' +
-'  .catch(catchCb)\n' +
-'}\n' +
-'\n' +
-'jobqueue.forEach(function(jobs, index) {\n' +
-'  for (var job of jobs) {\n' +
-'    jobRunner(job);\n' +
-'  }\n' +
-'});\n' +
-'\n' +
-'function onCloseAsyncCheck() {\n' +
-'  if (!asyncPassed) {\n' +
-'    print("Async[FAILURE]");\n' +
-'    throw "Async check failed";\n' +
-'  }\n' +
-'  print("[SUCCESS]");\n' +
-'}\n' +
-'\n' +
-'Promise.resolve().then(onCloseAsyncCheck);\n';
 
 function getArgs(testFilename) {
     var processArgs = [
@@ -146,39 +87,15 @@ function getArgs(testFilename) {
     return processArgs;
 }
 
-function runTest(evalcode) {
-    var testFilename = 'hermestest.js';
+function hermesRunner(testFilename) {
     var processArgs = getArgs(testFilename);
-    var script = '';
-
-    if (evalcode.includes('__createIterableObject')) {
-        script += runner_support.createIterableHelper;
-    } else if (evalcode.includes('global')) {
-        script += 'var global = this;\n';
-    }
-
-    if (evalcode.includes('asyncTestPassed')) {
-        script += asyncTestHelperHead + evalcode + asyncTestHelperTail;
-    } else {
-        script += 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                 'try {\n' +
-                 '    var res = eval(evalcode);\n' +
-                 '    if (!res) { throw new Error("failed: " + res); }\n' +
-                 '    print("[SUCCESS]");\n' +
-                 '} catch (e) {\n' +
-                 '    print("[FAILURE]", e);\n' +
-                 '    /*throw e;*/\n' +
-                 '}\n';
-    }
-
-    fs.writeFileSync(testFilename, script);
 
     try {
         var stdout = child_process.execFileSync(hermesCommand, processArgs, {
             encoding: 'utf-8'
         });
 
-        return /^\[SUCCESS\]$/gm.test(stdout);
+        return /^\[SUCCESS\]$/m.test(stdout);
     } catch (e) {
         // console.log(e);
         return false;
@@ -206,4 +123,4 @@ function resultsMatch(expect, actual) {
     return expect === actual;
 }
 
-runner_support.runTests(runTest, hermesKey, 'Hermes', { resultsMatch: resultsMatch, suites: suites, testName: testName, bail: argv.bail });
+runner_support.runTests(hermesRunner, hermesKey, 'Hermes', { resultsMatch: resultsMatch, suites: suites, testName: argv.testName, bail: argv.bail });
