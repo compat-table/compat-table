@@ -44,11 +44,6 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
     })
     .argv;
 
-var testCount = 0;
-var testSuccess = 0;
-var testFailure = 0;
-var testOutOfDate = 0;
-
 var hermesCommand = argv.hermesBin;
 var suites = argv.suite;
 suites = suites === 'all' ? '' : suites;
@@ -67,10 +62,6 @@ var hermesKey = (function () {
     throw new Error('Invalid Hermes version');
 })();
 console.log('Hermes result key is: test.res.' + hermesKey);
-
-// List of keys for inheriting results from previous versions.
-var hermesKeyList = runner_support.keyList(hermesKey, 'Hermes');
-console.log('Hermes key list for inheriting results is:', hermesKeyList);
 
 var asyncTestHelperHead =
 'var asyncPassed = false;\n' +
@@ -129,10 +120,6 @@ var asyncTestHelperTail =
 '\n' +
 'Promise.resolve().then(onCloseAsyncCheck);\n';
 
-function removeIndent(str) {
-  return str.split(/\n/g).map(function(s) { return s.trim(); }).filter(Boolean).join('\n');
-}
-
 function getArgs(testFilename) {
     var processArgs = [
         /*'-enable-eval',*/
@@ -159,142 +146,64 @@ function getArgs(testFilename) {
     return processArgs;
 }
 
-// Run test / subtests, recursively.  Report results, indicate data files
-// which are out of date.
-function runTest(parents, test, sublevel) {
-    var testPath = parents.join(' -> ') + ' -> ' + test.name;
+function runTest(evalcode) {
+    var testFilename = 'hermestest.js';
+    var processArgs = getArgs(testFilename);
+    var script = '';
 
-    if (!testName || (test.name.indexOf(testName) !== -1 || parents.some(function (p) { return p.indexOf(testName) !== -1; }))) {
-        if (typeof test.exec === 'function') {
-            var src = test.exec.toString();
-            var m = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
-            var evalcode;
+    if (evalcode.includes('__createIterableObject')) {
+        script += runner_support.createIterableHelper;
+    } else if (evalcode.includes('global')) {
+        script += 'var global = this;\n';
+    }
 
-            var testFilename = 'hermestest.js';
-            var processArgs = getArgs(testFilename);
-            var script = '';
+    if (evalcode.includes('asyncTestPassed')) {
+        script += asyncTestHelperHead + evalcode + asyncTestHelperTail;
+    } else {
+        script += 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
+                 'try {\n' +
+                 '    var res = eval(evalcode);\n' +
+                 '    if (!res) { throw new Error("failed: " + res); }\n' +
+                 '    print("[SUCCESS]");\n' +
+                 '} catch (e) {\n' +
+                 '    print("[FAILURE]", e);\n' +
+                 '    /*throw e;*/\n' +
+                 '}\n';
+    }
 
-            if (src.includes('__createIterableObject')) {
-                script += runner_support.createIterableHelper;
-            } else if (src.includes('global')) {
-                script += 'var global = this;\n';
-            }
+    fs.writeFileSync(testFilename, script);
 
-            if (src.includes('asyncTestPassed')) {
-                script += asyncTestHelperHead + removeIndent(m[1]) + asyncTestHelperTail;
+    try {
+        var stdout = child_process.execFileSync(hermesCommand, processArgs, {
+            encoding: 'utf-8'
+        });
+
+        return /^\[SUCCESS\]$/gm.test(stdout);
+    } catch (e) {
+        // console.log(e);
+        return false;
+    }
+}
+
+function resultsMatch(expect, actual) {
+    // Handling notes
+    if (typeof expect === 'object' && 'val' in expect) {
+        if (expect.val === 'flagged') {
+            if (expect.note_id === 'hermes-promise') {
+                expect = !!argv.promise;
+            } else if (expect.note_id === 'hermes-symbol') {
+                expect = !!argv.symbol;
+            } else if (expect.note_id === 'hermes-proxy') {
+                expect = !!argv.proxy;
             } else {
-                if (m) {
-                    evalcode = 'function test() {' + removeIndent(m[1]) + '}';
-                } else {
-                    evalcode = 'function test() { return (' + removeIndent(src) + ')(); }';
-                }
-
-                script += '' + evalcode + ';\n' +
-                        'try {\n' +
-                        '    var res = test();\n' +
-                        '    if (!res) { throw new Error("failed: " + res); }\n' +
-                        '    print("[SUCCESS]");\n' +
-                        '} catch (e) {\n' +
-                        '    print("[FAILURE]", e);\n' +
-                        '    /*throw e;*/\n' +
-                        '}\n';
+                // expect = true;
+                expect = expect.val;
             }
-
-            fs.writeFileSync(testFilename, script);
-            var success = false;
-            try {
-                var stdout = child_process.execFileSync(hermesCommand, processArgs, {
-                    encoding: 'utf-8'
-                });
-
-                if (/^\[SUCCESS\]$/gm.test(stdout)) {
-                    success = true;
-                    testSuccess++;
-                } else {
-                    // console.log(stdout);
-                }
-            } catch (e) {
-                // console.log(e);
-            }
-            testCount++;
-
-            if (test.res) {
-                // Take expected result from newest Hermes version not newer
-                // than current version.
-                var expect = void 0;
-                hermesKeyList.forEach(function (k) {
-                    if (test.res[k] !== void 0) {
-                        expect = test.res[k];
-                        
-                        // Handling notes
-                        if (typeof expect === 'object' && 'val' in expect) {
-                            if (expect.val === 'flagged') {
-                                if (expect.note_id === 'hermes-promise') {
-                                    expect = !!argv.promise;
-                                } else if (expect.note_id === 'hermes-symbol') {
-                                    expect = !!argv.symbol;
-                                } else if (expect.note_id === 'hermes-proxy') {
-                                    expect = !!argv.proxy;
-                                } else {
-                                    // expect = true;
-                                    expect = expect.val;
-                                }
-                            } else {
-                                expect = expect.val;
-                            }
-
-                        }
-                    }
-                });
-
-                if (!success) {
-                    testFailure++;
-                }
-
-                if (expect === success) {
-                    // Matches.
-                } else if (expect === void 0 && !success) {
-                    testOutOfDate++;
-                    console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
-                    // if (testFailure >= 2) throw new Error(testCount)
-                } else {
-                    testOutOfDate++;
-                    console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
-                }
-
-                // if (test.name === 'repeated parameter names is a SyntaxError') {
-                //     throw new Error('stop')
-                // }
-            } else {
-                testOutOfDate++;
-                console.log(testPath + ': test.res missing');
-            }
+        } else {
+            expect = expect.val;
         }
     }
-
-    if (argv.bail && testOutOfDate > 0) {
-        throw new Error('stop, tests not outdated: ' + (testCount - 1));
-    }
-
-    if (test.subtests) {
-        var newParents = parents.slice(0);
-        newParents.push(test.name);
-        test.subtests.forEach(function (v) { runTest(newParents, v, sublevel + 1); });
-    }
+    return expect === actual;
 }
 
-for (var suitename in runner_support.suites) {
-    var testsuite = runner_support.suites[suitename];
-    if (suites.length != 0 && !suites.includes(suitename)) {
-        continue;
-    }
-    console.log('');
-    console.log('**** ' + suitename + ' ****');
-    console.log('');
-    testsuite.tests.forEach(function (test) {
-        runTest([ suitename ], test);
-    });
-}
-
-console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+runner_support.runTests(runTest, hermesKey, 'Hermes', { resultsMatch: resultsMatch, suites: suites, testName: testName, bail: argv.bail });

@@ -20,10 +20,6 @@ var fs = require('fs');
 var child_process = require('child_process');
 var runner_support = require('./runner_support');
 
-var testCount = 0;
-var testSuccess = 0;
-var testOutOfDate = 0;
-
 var jsCommand = 'js';
 var jsArgs = [ '--js.intl-402' ];
 var nodeCommand = process.env['GRAALVM_NODE'];
@@ -73,10 +69,6 @@ var graalvmKey = (function () {
 })();
 console.log('GraalVM result key is: test.res.graalvm' + graalvmKey);
 
-// List of keys for inheriting results from previous versions.
-var graalvmKeyList = runner_support.keyList(graalvmKey, 'GraalVM');
-console.log('GraalVM key list for inheriting results is:', graalvmKeyList);
-
 function exec(launcherCommand, launcherArgs, flags) {
     try {
         var stdout = child_process.execFileSync(launcherCommand, launcherArgs.concat(flags, [ testScriptFilename ]), {
@@ -109,106 +101,37 @@ function executeTestScript(launcherCommand, launcherArgs, suite) {
     return false;
 }
 
-function resultsMatch(a, b) {
-    if (a === b) {
+function runTest(evalcode, suite, testPath) {
+    if (/\bsetTimeout\b/.test(evalcode) && !nodeCommand) {
+        console.log(testPath + ': could not run test using setTimeout (set GRAALVM_NODE to GraalVM\'s `node` binary and rerun to get results)');
+        return 'skip';
+    }
+
+    var script =
+        prelude + '\n' +
+        'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
+        'var result = eval(evalcode);\n' +
+        'if (result) {\n' +
+        '    console.log("[SUCCESS]");\n' +
+        '}\n';
+
+    fs.writeFileSync(testScriptFilename, script);
+    
+    if (evalcode.match(/\bsetTimeout\b/)) {
+        return executeTestScript(nodeCommand, nodeArgs, suite);
+    } else {
+        return executeTestScript(jsCommand, jsArgs, suite);
+    }
+}
+
+function resultsMatch(expect, actual) {
+    if (expect === actual) {
         return true;
     }
-    if (typeof a === 'object' && a.val === 'flagged' && typeof b === 'object' && b.val === 'flagged') {
-        return a.note_id === b.note_id && a.note_html === b.note_html;
+    if (typeof expect === 'object' && expect.val === 'flagged' && typeof actual === 'object' && actual.val === 'flagged') {
+        return expect.note_id === actual.note_id && expect.note_html === actual.note_html;
     }
     return false;
 }
 
-function testCode(exec) {
-    if (typeof exec === 'function') {
-        var src = exec.toString();
-        var functionBody = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
-        if (functionBody) {
-            var indentation = /^[\t ]+/m.exec(functionBody[1]);
-            return '(function () { ' + functionBody[1].replace(new RegExp('^' + indentation[0], 'gm'), '') + ' })();';
-        } else {
-            return '(' + src + ')()';
-        }
-    } else if (Array.isArray(exec)) {
-        return exec.map(function (e) { return testCode(e.script); }).join(" || ");
-    } else {
-        return undefined;
-    }
-}
-
-// Run test / subtests, recursively.  Report results, indicate data files
-// which are out of date.
-function runTest(parents, test) {
-    var testPath = parents.join(' -> ') + ' -> ' + test.name;
-
-    var evalcode = testCode(test.exec);
-    if (evalcode !== undefined) {
-        if (/\bsetTimeout\b/.test(evalcode) && !nodeCommand) {
-            console.log(testPath + ': could not run test using setTimeout (set GRAALVM_NODE to GraalVM\'s `node` binary and rerun to get results)');
-        } else {
-            var script =
-                prelude + '\n' +
-                'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                'var result = eval(evalcode);\n' +
-                'if (result) {\n' +
-                '    console.log("[SUCCESS]");\n' +
-                '}\n';
-
-            fs.writeFileSync(testScriptFilename, script);
-            var actual;
-            if (evalcode.match(/\bsetTimeout\b/)) {
-                actual = executeTestScript(nodeCommand, nodeArgs, parents[0]);
-            } else {
-                actual = executeTestScript(jsCommand, jsArgs, parents[0]);
-            }
-            testCount++;
-            if (actual) {
-                testSuccess++;
-            }
-    
-            if (test.res) {
-                // Take expected result from newest GraalVM version not newer
-                // than current version.
-                var expect;
-                graalvmKeyList.forEach(function (k) {
-                    if (test.res[k] !== undefined) {
-                        expect = test.res[k];
-                    }
-                });
-
-                if (resultsMatch(expect, actual)) {
-                    // Matches.
-                } else if (expect === undefined) {
-                    testOutOfDate++;
-                    console.log(testPath + ': test result missing, res: ' + JSON.stringify(expect) + ', actual: ' + JSON.stringify(actual));
-                } else {
-                    testOutOfDate++;
-                    console.log(testPath + ': test result out of date, res: ' + JSON.stringify(expect) + ', actual: ' + JSON.stringify(actual));
-                }
-            } else {
-                testOutOfDate++;
-                console.log(testPath + ': test.res missing');
-            }
-        }
-    }
-    if (test.subtests) {
-        var newParents = parents.slice(0);
-        newParents.push(test.name);
-        test.subtests.forEach(function (subtest) {
-            runTest(newParents, subtest);
-        });
-    }
-}
-
-for (var suitename in runner_support.suites) {
-    var testsuite = runner_support.suites[suitename];
-    console.log('');
-    console.log('**** ' + suitename + ' ****');
-    console.log('');
-    testsuite.tests.forEach(function (test) {
-        runTest([ suitename ], test);
-    });
-}
-
-console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+runner_support.runTests(runTest, graalvmKey, 'GraalVM', { resultsMatch: resultsMatch });

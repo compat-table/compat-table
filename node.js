@@ -1,4 +1,3 @@
-/* global Symbol */
 // run `npm install` to install deps first, then `node ./` to execute
 
 var fs = require('fs');

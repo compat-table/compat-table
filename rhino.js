@@ -16,10 +16,6 @@ var path = require('path');
 var child_process = require('child_process');
 var runner_support = require('./runner_support');
 
-var testCount = 0;
-var testSuccess = 0;
-var testOutOfDate = 0;
-
 var javaCommand = 'java';
 
 var jdkBin = '';
@@ -49,89 +45,21 @@ var rhinoKey = (function () {
 })();
 console.log('rhino result key is: test.res.rhino' + rhinoKey);
 
-// List of keys for inheriting results from previous versions.
-var rhinoKeyList = runner_support.keyList(rhinoKey, 'Rhino');
-console.log('rhino key list for inheriting results is:', rhinoKeyList);
+function runTest(evalcode) {
+    var script = 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
+                 'try {\n' +
+                 '    var res = eval(evalcode);\n' +
+                 '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
+                 '    print("[SUCCESS]");\n' +
+                 '} catch (e) {\n' +
+                 '    print("[FAILURE] " + e);\n' +
+                 '    /*throw e;*/\n' +
+                 '}\n';
 
-// Run test / subtests, recursively.  Report results, indicate data files
-// which are out of date.
-function runTest(parents, test, sublevel) {
-    var testPath = parents.join(' -> ') + ' -> ' + test.name;
+    fs.writeFileSync('rhinotest.js', script);
+    var stdout = executeScript('rhinotest.js');
 
-    if (typeof test.exec === 'function') {
-        var src = test.exec.toString();
-        var m = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
-        var evalcode;
-        if (m) {
-            evalcode = '(function test() {' + m[1] + '})();';
-        } else {
-            evalcode = '(' + src + ')()';
-        }
-        //console.log(evalcode);
-
-        var script = 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                     'try {\n' +
-                     '    var res = eval(evalcode);\n' +
-                     '    if (res !== true && res !== 1) { throw new Error("failed: " + res); }\n' +
-                     '    print("[SUCCESS]");\n' +
-                     '} catch (e) {\n' +
-                     '    print("[FAILURE] " + e);\n' +
-                     '    /*throw e;*/\n' +
-                     '}\n';
-
-        fs.writeFileSync('rhinotest.js', script);
-        var stdout = executeScript('rhinotest.js');
-        //console.log(stdout);
-
-        var success = false;
-        if (/^\[SUCCESS\]$/gm.test(stdout)) {
-            success = true;
-            testSuccess++;
-        } else {
-            //console.log(stdout);
-        }
-        testCount++;
-
-        if (test.res) {
-            // Take expected result from newest rhino version not newer
-            // than current version.
-            var expect = void 0;
-            rhinoKeyList.forEach(function (k) {
-                if (test.res[k] !== void 0) {
-                    expect = test.res[k];
-                }
-            });
-
-            if (expect === success) {
-                // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
-            } else {
-                testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
-            }
-        } else {
-            testOutOfDate++;
-            console.log(testPath + ': test.res missing');
-        }
-    }
-    if (test.subtests) {
-        var newParents = parents.slice(0);
-        newParents.push(test.name);
-        test.subtests.forEach(function (v) { runTest(newParents, v, sublevel + 1); });
-    }
+    return /^\[SUCCESS\]$/gm.test(stdout);
 }
 
-for (var suitename in runner_support.suites) {
-    var testsuite = runner_support.suites[suitename];
-    console.log('');
-    console.log('**** ' + suitename + ' ****');
-    console.log('');
-    testsuite.tests.forEach(function (test) {
-        runTest([ suitename ], test);
-    });
-}
-
-console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+runner_support.runTests(runTest, rhinoKey, 'Rhino');

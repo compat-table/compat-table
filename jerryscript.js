@@ -12,10 +12,6 @@ var child_process = require('child_process');
 var console = require('console');
 var runner_support = require('./runner_support');
 
-var testCount = 0;
-var testSuccess = 0;
-var testOutOfDate = 0;
-
 var jerryCommand = process.argv[2];
 var suites = process.argv.slice(3);
 
@@ -33,10 +29,6 @@ var jerryKey = (function () {
 })();
 console.log('JerryScript result key is: test.res.' + jerryKey);
 // jerryKey = "jerryscript2_4_0" // uncomment this line to test pre 2.4.0
-
-// List of keys for inheriting results from previous versions.
-var jerryKeyList = runner_support.keyList(jerryKey, 'JerryScript');
-console.log('JerryScript key list for inheriting results is:', jerryKeyList);
 
 var asyncTestHelperHead =
 'var asyncPassed = false;\n' +
@@ -95,105 +87,43 @@ var asyncTestHelperTail =
 
 // Run test / subtests, recursively.  Report results, indicate data files
 // which are out of date.
-function runTest(parents, test, sublevel) {
-    var testPath = parents.join(' -> ') + ' -> ' + test.name;
+function runTest(evalcode) {
+    var processArgs = ['jerrytest.js'];
+    var script = '';
 
-    if (typeof test.exec === 'function') {
-        var src = test.exec.toString();
-        var m = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
-        var evalcode;
-        var processArgs = ['jerrytest.js'];
-        var script = '';
-
-        if (src.includes('__createIterableObject')) {
-            script += runner_support.createIterableHelper;
-        } else if (src.includes('global')) {
-            script += 'var global = this;\n';
-        }
-
-        if (src.includes('asyncTestPassed')) {
-            script += asyncTestHelperHead + '(function test() {' + m[1] + '})();' + asyncTestHelperTail;
-            processArgs.unshift('--call-on-exit','onCloseAsyncCheck');
-        } else {
-            if (m) {
-                evalcode = '(function test() {' + m[1] + '})();';
-            } else {
-                evalcode = '(' + src + ')()';
-            }
-
-            script += 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
-                     'try {\n' +
-                     '    var res = eval(evalcode);\n' +
-                     '    if (!res) { throw new Error("failed: " + res); }\n' +
-                     '    print("[SUCCESS]");\n' +
-                     '} catch (e) {\n' +
-                     '    print("[FAILURE]", e);\n' +
-                     '    /*throw e;*/\n' +
-                     '}\n';
-        }
-
-        fs.writeFileSync(processArgs[processArgs.length - 1], script);
-        var success = false;
-        try {
-            var stdout = child_process.execFileSync(jerryCommand, processArgs, {
-                encoding: 'utf-8'
-            });
-            //console.log(stdout);
-
-            if (/^\[SUCCESS\]$/gm.test(stdout)) {
-                success = true;
-                testSuccess++;
-            } else {
-                //console.log(stdout);
-            }
-        } catch (e) {
-            //console.log(e);
-        }
-        testCount++;
-
-        if (test.res) {
-            // Take expected result from newest JerryScript version not newer
-            // than current version.
-            var expect = void 0;
-            jerryKeyList.forEach(function (k) {
-                if (test.res[k] !== void 0) {
-                    expect = test.res[k];
-                }
-            });
-
-            if (expect === success) {
-                // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
-            } else {
-                testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
-            }
-        } else {
-            testOutOfDate++;
-            console.log(testPath + ': test.res missing');
-        }
+    if (evalcode.includes('__createIterableObject')) {
+        script += runner_support.createIterableHelper;
+    } else if (evalcode.includes('global')) {
+        script += 'var global = this;\n';
     }
-    if (test.subtests) {
-        var newParents = parents.slice(0);
-        newParents.push(test.name);
-        test.subtests.forEach(function (v) { runTest(newParents, v, sublevel + 1); });
+
+    if (evalcode.includes('asyncTestPassed')) {
+        script += asyncTestHelperHead + '(function test() {' + evalcode + '})();' + asyncTestHelperTail;
+        processArgs.unshift('--call-on-exit','onCloseAsyncCheck');
+    } else {
+        script += 'var evalcode = ' + JSON.stringify(evalcode) + ';\n' +
+                 'try {\n' +
+                 '    var res = eval(evalcode);\n' +
+                 '    if (!res) { throw new Error("failed: " + res); }\n' +
+                 '    print("[SUCCESS]");\n' +
+                 '} catch (e) {\n' +
+                 '    print("[FAILURE]", e);\n' +
+                 '    /*throw e;*/\n' +
+                 '}\n';
+    }
+
+    fs.writeFileSync(processArgs[processArgs.length - 1], script);
+    try {
+        var stdout = child_process.execFileSync(jerryCommand, processArgs, {
+            encoding: 'utf-8'
+        });
+        //console.log(stdout);
+
+        return /^\[SUCCESS\]$/gm.test(stdout);
+    } catch (e) {
+        //console.log(e);
+        return false;
     }
 }
 
-for (var suitename in runner_support.suites) {
-    var testsuite = runner_support.suites[suitename];
-    if (suites.length != 0 && !suites.includes(suitename)) {
-        continue;
-    }
-    console.log('');
-    console.log('**** ' + suitename + ' ****');
-    console.log('');
-    testsuite.tests.forEach(function (test) {
-        runTest([ suitename ], test);
-    });
-}
-
-console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+runner_support.runTests(runTest, jerryKey, 'JerryScript', { suites: suites });
