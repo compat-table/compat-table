@@ -3,17 +3,13 @@
 
  *  The runner will always pass the `--js.intl-402` flag needed to enable Intl support.
  *  Furthermore, it will try to figure out which tests require additional flags in order
- *  to pass. The runner can also run tests that rely on `setTimeout` by using
- *  the `node` launcher as a fallback, if present.
- *
- *  Reports discrepancies to console; fix them manually in `data-*.js` files.
- *  Expects GraalVM's `js` command in the path. Optionally, GraalVM's `node` command
- *  can be specified in the `GRAALVM_NODE` environment variable.
+ *  to pass.
  * 
+ *  Reports discrepancies to console; fix them manually in `data-*.js` files.
+ *  Expects GraalVM's `js` command in the path. * 
  *  Examples:
  *
  *    $ node graalvm.js
- *    $ GRAALVM_NODE=<graalvm>/bin/node node graalvm.js
  */
 
 var child_process = require('child_process');
