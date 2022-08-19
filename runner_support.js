@@ -21,7 +21,23 @@ exports.createIterableHelper =
 '    global.__createIterableObject = __createIterableObject;\n' +
 '}\n';
 
-exports.runTests = function runTests(runner, key, family, { resultsMatch = (expect, actual) => expect === actual, suites = [], testName, bail } = {}) {
+exports.runTests = function runTests(runner, key, family, options) {
+    options = options === undefined ? {} : options;
+    var resultsMatch;
+    if (options.resultsMatch) {
+        resultsMatch = options.resultsMatch;
+    } else {
+        resultsMatch = function resultsMatch(expect, actual) {
+            return expect === actual;
+        };
+    }
+    var suites = options.suites;
+    if (suites === undefined) {
+        suites = [];
+    }
+    var testName = options.testName;
+    var bail = options.bail;
+
     var testCount = 0;
     var testSuccess = 0;
     var testOutOfDate = 0;
