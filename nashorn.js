@@ -36,9 +36,9 @@ var jjsKey = (function () {
     });
 
     console.log('jjs version is: ' + stdout);
-    return stdout.replace('.', '_');
+    return 'nashorn' + stdout.replace('.', '_');
 })();
-console.log('jjs result key is: test.res.nashorn' + jjsKey);
+console.log('jjs result key is: test.res.' + jjsKey);
 
 function jjsRunner(testFilename) {
     try {

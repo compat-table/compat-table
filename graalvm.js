@@ -39,9 +39,9 @@ var graalvmKey = (function () {
 
     var version = /[\d\.]+/.exec(stdout)[0];
     console.log('GraalVM version is: ' + version);
-    return version.replace(/\.0(?:$|(?=\.))/g, '').replace(/\./g, '_');
+    return 'graalvm' + version.replace(/\.0(?:$|(?=\.))/g, '').replace(/\./g, '_');
 })();
-console.log('GraalVM result key is: test.res.graalvm' + graalvmKey);
+console.log('GraalVM result key is: test.res.' + graalvmKey);
 
 function exec(flags, testFilename) {
     try {

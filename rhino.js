@@ -41,9 +41,9 @@ var rhinoKey = (function () {
 
     console.log('rhino version is: ' + stdout);
     var match = stdout.match(/Rhino (\d+)\.(\d+)\.(\d+)/);
-    return match[1] + "_" + match[2] + "_" + match[3];
+    return 'rhino' + match[1] + "_" + match[2] + "_" + match[3];
 })();
-console.log('rhino result key is: test.res.rhino' + rhinoKey);
+console.log('rhino result key is: test.res.' + rhinoKey);
 
 function rhinoRunner(testFilename) {
     try {
