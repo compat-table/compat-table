@@ -5177,6 +5177,431 @@
       "es2016plus"
     ]
   },
+  "deno1_0": {
+    "equals": "chrome84",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-05-13",
+    "short": "Deno 1.0",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_1": {
+    "equals": "chrome84",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-06-12",
+    "short": "Deno 1.1",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_2": {
+    "equals": "chrome85",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-07-13",
+    "short": "Deno 1.2",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_3": {
+    "equals": "chrome86",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-08-13",
+    "short": "Deno 1.3",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_4": {
+    "equals": "chrome87",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-09-13",
+    "short": "Deno 1.4",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_5": {
+    "equals": "chrome87",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-10-27",
+    "short": "Deno 1.5",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_6": {
+    "equals": "chrome88",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2020-12-08",
+    "short": "Deno 1.6",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_7": {
+    "equals": "chrome89",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-01-19",
+    "short": "Deno 1.7",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_8": {
+    "equals": "chrome90",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-03-02",
+    "short": "Deno 1.8",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_9": {
+    "equals": "chrome91",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-04-13",
+    "short": "Deno 1.9",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_10": {
+    "equals": "chrome91",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-05-11",
+    "short": "Deno 1.10",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_11": {
+    "equals": "chrome91",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-06-08",
+    "short": "Deno 1.11",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_12": {
+    "equals": "chrome92",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-07-13",
+    "short": "Deno 1.12",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_13": {
+    "equals": "chrome93",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-08-10",
+    "short": "Deno 1.13",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_14": {
+    "equals": "chrome94",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-09-14",
+    "short": "Deno 1.14",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_15": {
+    "equals": "chrome95",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-10-12",
+    "short": "Deno 1.15",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_16": {
+    "equals": "chrome97",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-11-08",
+    "short": "Deno 1.16",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_17": {
+    "equals": "chrome97",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2021-12-16",
+    "short": "Deno 1.17",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_18": {
+    "equals": "chrome98",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-01-20",
+    "short": "Deno 1.18",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_19": {
+    "equals": "chrome99",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2022-02-17",
+    "short": "Deno 1.19",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_20": {
+    "equals": "chrome100",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2022-03-17",
+    "short": "Deno 1.20",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_21": {
+    "equals": "chrome100",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2022-04-21",
+    "short": "Deno 1.21",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_22": {
+    "equals": "chrome100",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2022-05-18",
+    "short": "Deno 1.22",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_23": {
+    "equals": "chrome104",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2022-06-15",
+    "short": "Deno 1.23",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_24": {
+    "equals": "chrome104",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": false,
+    "platformtype": "engine",
+    "release": "2022-07-20",
+    "short": "Deno 1.24",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
   "android1_5": {
     "full": "Android Browser 1.5 (Cupcake)",
     "family": "Android Browser",
@@ -6110,430 +6535,5 @@
     "equals": "chrome100",
     "release": "2022-05-12",
     "obsolete": false
-  },
-  "deno1_0": {
-    "equals": "chrome84",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-05-13",
-    "short": "Deno 1.0",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_1": {
-    "equals": "chrome84",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-06-12",
-    "short": "Deno 1.1",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_10": {
-    "equals": "chrome91",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-05-11",
-    "short": "Deno 1.10",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_11": {
-    "equals": "chrome91",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-06-08",
-    "short": "Deno 1.11",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_12": {
-    "equals": "chrome92",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-07-13",
-    "short": "Deno 1.12",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_13": {
-    "equals": "chrome93",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-08-10",
-    "short": "Deno 1.13",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_14": {
-    "equals": "chrome94",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-09-14",
-    "short": "Deno 1.14",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_15": {
-    "equals": "chrome95",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-10-12",
-    "short": "Deno 1.15",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_16": {
-    "equals": "chrome97",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-11-08",
-    "short": "Deno 1.16",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_17": {
-    "equals": "chrome97",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-12-16",
-    "short": "Deno 1.17",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_18": {
-    "equals": "chrome98",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2022-01-20",
-    "short": "Deno 1.18",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_19": {
-    "equals": "chrome99",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": true,
-    "platformtype": "engine",
-    "release": "2022-02-17",
-    "short": "Deno 1.19",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_2": {
-    "equals": "chrome85",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-07-13",
-    "short": "Deno 1.2",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_20": {
-    "equals": "chrome100",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": true,
-    "platformtype": "engine",
-    "release": "2022-03-17",
-    "short": "Deno 1.20",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_21": {
-    "equals": "chrome100",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": true,
-    "platformtype": "engine",
-    "release": "2022-04-21",
-    "short": "Deno 1.21",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_22": {
-    "equals": "chrome100",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": true,
-    "platformtype": "engine",
-    "release": "2022-05-18",
-    "short": "Deno 1.22",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_23": {
-    "equals": "chrome104",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": true,
-    "platformtype": "engine",
-    "release": "2022-06-15",
-    "short": "Deno 1.23",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_24": {
-    "equals": "chrome104",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": false,
-    "platformtype": "engine",
-    "release": "2022-07-20",
-    "short": "Deno 1.24",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_3": {
-    "equals": "chrome86",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-08-13",
-    "short": "Deno 1.3",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_4": {
-    "equals": "chrome87",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-09-13",
-    "short": "Deno 1.4",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_5": {
-    "equals": "chrome87",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-10-27",
-    "short": "Deno 1.5",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_6": {
-    "equals": "chrome88",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2020-12-08",
-    "short": "Deno 1.6",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_7": {
-    "equals": "chrome89",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-01-19",
-    "short": "Deno 1.7",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_8": {
-    "equals": "chrome90",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-03-02",
-    "short": "Deno 1.8",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
-  },
-  "deno1_9": {
-    "equals": "chrome91",
-    "family": "V8",
-    "full": "Deno",
-    "obsolete": "very",
-    "platformtype": "engine",
-    "release": "2021-04-13",
-    "short": "Deno 1.9",
-    "test_suites": [
-      "es5",
-      "es6",
-      "es2016plus",
-      "esnext",
-      "esintl",
-      "non-standard"
-    ]
   }
 }
