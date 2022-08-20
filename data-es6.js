@@ -17317,7 +17317,7 @@ exports.tests = [
         var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
         var A = function(){};
 
-        return (desc !== undefined
+        return (typeof desc === "object"
           && "get" in desc
           && "set" in desc
           && desc.configurable
