@@ -1373,6 +1373,7 @@ exports.tests = [
           note_id: 'firefox-arrayfindfromlast',
           note_html: 'The feature has to be enabled via <code>javascript.options.experimental.array_find_last</code> setting under <code>about:config</code>.'
         },
+        firefox104: true,
         opera10_50: false,
         safari12: false,
         safaritp: true,
@@ -1399,6 +1400,7 @@ exports.tests = [
         firefox89: false,
         firefox102: false,
         firefox103: { val: 'flagged', note_id: 'firefox-arrayfindfromlast' },
+        firefox104: true,
         opera10_50: false,
         safari12: false,
         safaritp: true,
