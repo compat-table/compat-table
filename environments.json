@@ -1800,19 +1800,27 @@
     "obsolete": false
   },
   "firefox104": {
-    "full": "Firefox 104 Beta",
+    "full": "Firefox 104",
     "family": "SpiderMonkey",
     "short": "FF 104",
     "release": "2022-08-23",
     "retire": "2022-09-20",
-    "unstable": true
+    "obsolete": false
   },
   "firefox105": {
-    "full": "Firefox 105 Nightly",
+    "full": "Firefox 105 Beta",
     "family": "SpiderMonkey",
     "short": "FF 105",
     "release": "2022-09-20",
     "retire": "2022-10-18",
+    "unstable": true
+  },
+  "firefox106": {
+    "full": "Firefox 106 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 106",
+    "release": "2022-10-18",
+    "retire": "2022-11-15",
     "unstable": true
   },
   "opera7": {
