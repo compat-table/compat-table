@@ -5,7 +5,7 @@
  *  If the environment variable JAVA_HOME is defined it will use it to
  *  construct the path to 'jjs' as $JAVA_HOME/bin/jjs
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console and updates them automatically in data-*.js files.
  *  Expects a 'jjs' command in the path.  Example:
  *
  *    $ node nashorn.js
@@ -14,6 +14,7 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
+var updateResult = require("./update-result");
 
 var testCount = 0;
 var testSuccess = 0;
@@ -116,12 +117,10 @@ function runTest(parents, test, sublevel) {
 
             if (expect === success) {
                 // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
             } else {
+                updateResult(parents[0], parents.slice(1).concat(test.name), 'nashorn' + jjsKey, success ? 'true' : 'false');
                 testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
+                console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
             }
         } else {
             testOutOfDate++;

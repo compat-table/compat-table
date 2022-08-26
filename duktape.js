@@ -1,7 +1,7 @@
 /*
  *  Node.js test runner for running data-*.js tests with Duktape 'duk' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console and updates them automatically in data-*.js files.
  *  Expects a './duk' command in the current directory.  Example:
  *
  *    $ cp /path/to/duk ./duk
@@ -10,6 +10,7 @@
 
 var fs = require('fs');
 var child_process = require('child_process');
+var updateResult = require("./update-result");
 
 var testCount = 0;
 var testSuccess = 0;
@@ -104,12 +105,10 @@ function runTest(parents, test, sublevel) {
 
             if (expect === success) {
                 // Matches.
-            } else if (expect === void 0 && !success) {
-                testOutOfDate++;
-                console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
             } else {
+                updateResult(parents[0], parents.slice(1).concat(test.name), dukKey, success ? 'true' : 'false');
                 testOutOfDate++;
-                console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
+                console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
             }
         } else {
             testOutOfDate++;

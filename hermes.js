@@ -1,7 +1,7 @@
 /*
  *  Node.js test runner for running data-*.js tests with Hermes 'hermes' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console and updates them automatically in data-*.js files.
  *  Expects 'hermes' to be already built.  Example:
  *
  *  $ node hermes.js --hermes-bin /path/to/hermes --suite suitename
@@ -12,6 +12,7 @@
 var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
+var updateResult = require('./update-result');
 
 var argv = require('yargs/yargs')(process.argv.slice(2))
     .option('hermes-bin', {
@@ -21,7 +22,7 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
     .option('suite', {
         alias: 's',
         type: 'string',
-        choices: ['all', 'es5', 'es6', 'es2016plus'],
+        choices: ['all', 'es5', 'es6', 'es2016plus', 'esnext'],
         default: 'all'
     })
     .option('test-name', {
@@ -61,7 +62,7 @@ var hermesKey = (function () {
         encoding: 'utf-8'
     });
 
-    var m = /Hermes release version:\s+(\d)\.(\d)(?:\.(\d))?/.exec(stdout);
+    var m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
     if (m) {
         return 'hermes' + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
     }
@@ -78,7 +79,7 @@ var hermesKeyList = (function () {
             continue;
         }
         res.push(k);
-        if (k === hermesKey) {
+        if (k === hermesKey) {
             // Include versions up to 'hermesKey' but not newer.
             break;
         }
@@ -287,13 +288,10 @@ function runTest(parents, test, sublevel) {
 
                 if (expect === success) {
                     // Matches.
-                } else if (expect === void 0 && !success) {
-                    testOutOfDate++;
-                    console.log(testPath + ': test result missing, res: ' + expect + ', actual: ' + success);
-                    // if (testFailure >= 2) throw new Error(testCount)
                 } else {
+                    updateResult(parents[0], parents.slice(1).concat(test.name), hermesKey, success ? 'true' : 'false');
                     testOutOfDate++;
-                    console.log(testPath + ': test result out of date, res: ' + expect + ', actual: ' + success);
+                    console.log(testPath + ': test result added or updated, previously: ' + expect + ', new: ' + success);
                 }
 
                 // if (test.name === 'repeated parameter names is a SyntaxError') {
@@ -311,9 +309,7 @@ function runTest(parents, test, sublevel) {
     }
 
     if (test.subtests) {
-        var newParents = parents.slice(0);
-        newParents.push(test.name);
-        test.subtests.forEach(function (v) { runTest(newParents, v, sublevel + 1); });
+        test.subtests.forEach(function (v) { runTest(parents.concat(test.name), v, sublevel + 1); });
     }
 }
 
