@@ -137,20 +137,50 @@
     }
   },
   "graalvm": {
+    "es6flag": {
+      "val": "flagged",
+      "note_id": "graalvm-js-ecmascript-version-6",
+      "note_html": "Requires the <code>--js.ecmascript-version=6</code> flag."
+    },
     "es2020flag": {
       "val": "flagged",
-      "note_id": "graalvm-es2020",
-      "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2020</code> flag"
+      "note_id": "graalvm-js-ecmascript-version-2020",
+      "note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
     },
     "es2021flag": {
       "val": "flagged",
-      "note_id": "graalvm-es2021",
-      "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2021</code> flag"
+      "note_id": "graalvm-js-ecmascript-version-2021",
+      "note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
     },
     "es2022flag": {
       "val": "flagged",
-      "note_id": "graalvm-es2022",
-      "note_html": "The feature can be enabled via <code>--js.ecmascript-version=2022</code> flag"
+      "note_id": "graalvm-js-ecmascript-version-2022",
+      "note_html": "Requires the <code>--js.ecmascript-version=2022</code> flag."
+    },
+    "esStagingFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-js-ecmascript-version-staging",
+      "note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+    },
+    "newSetMethodsFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-new-set-methods",
+      "note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+    },
+    "v8CompatFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-v8-compat",
+      "note_html": "Requires the <code>--experimental-options --js.v8-compat</code> flags."
+    },
+    "nashornCompatFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-nashorn-compat",
+      "note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+    },
+    "globalPropertyFlag": {
+      "val": "flagged",
+      "note_id": "graalvm-experimental-options-js-global-property",
+      "note_html": "Requires the <code>--experimental-options --js.global-property</code> flags."
     }
   },
   "hermes": {

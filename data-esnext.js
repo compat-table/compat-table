@@ -35,8 +35,6 @@ exports.tests = [
     chrome77: false,
     duktape2_0: false,
     graalvm19: false,
-    graalvm20: false,
-    graalvm20_1: false,
     rhino1_7_13: false
   }
 },
@@ -69,8 +67,6 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
         rhino1_7_13: false
       }
     }
@@ -95,8 +91,6 @@ exports.tests = [
     chrome77: false,
     duktape2_0: false,
     graalvm19: false,
-    graalvm20: false,
-    graalvm20_1: false,
     rhino1_7_13: false
   }
 },
@@ -126,8 +120,6 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
         rhino1_7_13: false
       }
     },
@@ -155,8 +147,6 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
         rhino1_7_13: false
       }
     },
@@ -179,8 +169,6 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
         rhino1_7_13: false
       }
     },
@@ -203,8 +191,6 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
         rhino1_7_13: false
       }
     }
@@ -234,8 +220,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -258,8 +243,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -281,8 +265,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -304,8 +287,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -324,8 +306,8 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
         graalvm20_1: graalvm.es2021flag,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -344,8 +326,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     },
@@ -364,8 +345,7 @@ exports.tests = [
         chrome77: false,
         duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
-        graalvm20_1: false,
+        graalvm21_3_3: graalvm.newSetMethodsFlag,
         rhino1_7_13: false
       }
     }
@@ -392,6 +372,7 @@ exports.tests = [
         chrome70: false,
         safari12: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -410,6 +391,7 @@ exports.tests = [
         chrome70: false,
         safari12: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     }
@@ -447,8 +429,6 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true
       }
     },
     {
@@ -477,9 +457,7 @@ exports.tests = [
         nashorn1_8: true,
         nashorn9: true,
         nashorn10: true,
-        graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true
+        graalvm19: true
       }
     }
   ]
@@ -508,6 +486,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -530,6 +509,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     }
@@ -554,6 +534,7 @@ exports.tests = [
     firefox60: false,
     chrome77: false,
     duktape2_0: false,
+    graalvm21_3_3: false,
     rhino1_7_13: false
   }
 },
@@ -578,6 +559,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -598,6 +580,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -619,6 +602,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -645,6 +629,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -663,6 +648,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -681,6 +667,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -699,6 +686,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -717,6 +705,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -735,6 +724,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -753,6 +743,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -773,6 +764,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -791,6 +783,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -809,6 +802,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -827,6 +821,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -845,6 +840,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -864,6 +860,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -882,6 +879,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -900,6 +898,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -920,6 +919,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -950,6 +950,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -980,6 +981,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1010,6 +1012,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1036,6 +1039,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1062,6 +1066,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1082,6 +1087,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1108,6 +1114,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1128,6 +1135,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1154,6 +1162,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1175,6 +1184,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1201,6 +1211,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1221,6 +1232,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1241,6 +1253,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1267,6 +1280,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1287,6 +1301,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     },
@@ -1305,6 +1320,7 @@ exports.tests = [
         firefox60: false,
         chrome77: false,
         duktape2_0: false,
+        graalvm21_3_3: false,
         rhino1_7_13: false
       }
     }
