@@ -2848,7 +2848,7 @@
     "family": "V8",
     "short": "CH 105",
     "release": "2022-08-30",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome106": {
     "full": "Chrome 106",
@@ -3127,14 +3127,23 @@
     "family": "V8",
     "short": "Edge 104",
     "equals": "chrome104",
-    "release": "2021-08-05"
+    "release": "2021-08-05",
+    "obsolete": true
   },
   "edge105": {
     "full": "Microsoft Edge 105",
     "family": "V8",
     "short": "Edge 105",
     "equals": "chrome105",
-    "release": "2022-09-26"
+    "release": "2022-09-26",
+    "obsolete": false
+  },
+  "edge106": {
+    "full": "Microsoft Edge 105 Beta",
+    "family": "V8",
+    "short": "Edge 106 Beta",
+    "equals": "chrome106",
+    "unstable": true
   },
   "safari1": {
     "full": "Safari 1.0",
@@ -3316,14 +3325,14 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;14",
     "release": "2020-09-16",
-    "obsolete": false
+    "obsolete": true
   },
   "safari14_1": {
     "full": "Safari 14.1",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;14.1",
     "release": "2021-04-20",
-    "obsolete": false
+    "obsolete": true
   },
   "safari15": {
     "full": "Safari 15",
@@ -3934,35 +3943,39 @@
     "equals": "chrome101",
     "short": "OP 87",
     "release": "2022-05-17",
-    "obsolete": false
+    "obsolete": true
   },
   "opera88": {
     "full": "Opera 88",
     "family": "V8",
     "equals": "chrome102",
     "short": "OP 88",
-    "release": "2022-06-07"
+    "release": "2022-06-07",
+    "obsolete": true
   },
   "opera89": {
     "full": "Opera 89",
     "family": "V8",
     "equals": "chrome103",
     "short": "OP 89",
-    "release": "2022-07-07"
+    "release": "2022-07-07",
+    "obsolete": true
   },
   "opera90": {
     "full": "Opera 90",
     "family": "V8",
     "equals": "chrome104",
     "short": "OP 90",
-    "release": "2022-08-18"
+    "release": "2022-08-18",
+    "obsolete": true
   },
   "opera91": {
     "full": "Opera 91",
     "family": "V8",
     "equals": "chrome105",
     "short": "OP 91",
-    "release": "2022-09-14"
+    "release": "2022-09-14",
+    "obsolete": false
   },
   "opera92": {
     "full": "Opera 92",
@@ -5932,7 +5945,7 @@
     "platformtype": "mobile",
     "equals": "safari14",
     "release": "2020-09-16",
-    "obsolete": false
+    "obsolete": true
   },
   "ios15": {
     "full": "iOS Safari",
@@ -5941,6 +5954,24 @@
     "platformtype": "mobile",
     "equals": "safari15",
     "release": "2020-06-08",
+    "unstable": false
+  },
+  "ios15_2": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15.2",
+    "platformtype": "mobile",
+    "equals": "safari15_2",
+    "release": "2021-12-13",
+    "unstable": false
+  },
+  "ios15_4": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15.4",
+    "platformtype": "mobile",
+    "equals": "safari15_4",
+    "release": "2022-03-14",
     "unstable": false
   },
   "ios16": {
