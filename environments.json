@@ -5253,12 +5253,20 @@
     "short": "Hermes 0.7.0",
     "platformtype": "engine",
     "release": "2020-09-16",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
       "es2016plus"
     ]
+  },
+  "hermes0_12_0": {
+    "full": "Hermes 0.12.0",
+    "family": "Hermes",
+    "short": "Hermes 0.12.0",
+    "platformtype": "engine",
+    "release": "2022-08-24",
+    "obsolete": false
   },
   "deno1_0": {
     "equals": "chrome84",
