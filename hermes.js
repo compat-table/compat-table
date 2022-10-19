@@ -53,7 +53,7 @@ var hermesKey = (function () {
         encoding: 'utf-8'
     });
 
-    var m = /Hermes release version:\s+(\d)\.(\d)(?:\.(\d))?/.exec(stdout);
+    var m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
     if (m) {
         return 'hermes' + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
     }
