@@ -868,6 +868,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -1205,6 +1206,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     }
@@ -1435,6 +1437,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -1737,6 +1740,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -3338,6 +3342,7 @@ exports.tests = [
         graalvm19: true,
         jerryscript2_0: true,
         hermes0_7_0: hermes.class,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -4355,6 +4360,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -4382,6 +4388,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: true
       }
     }
@@ -6193,6 +6200,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -8266,6 +8274,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: true
       }
     },
@@ -8926,6 +8935,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: true
       }
     },
@@ -11465,6 +11475,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -11492,6 +11503,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -12344,6 +12356,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -12825,6 +12838,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -13064,6 +13078,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     },
@@ -14623,6 +14638,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -14661,6 +14677,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: true,
+        hermes0_12_0: false,
         rhino1_7_13: false
       }
     }
@@ -16464,6 +16481,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -16497,6 +16515,7 @@ exports.tests = [
         graalvm19: true,
         jerryscript2_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false,
         rhino1_7_14: true,
       }
@@ -16576,6 +16595,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -16661,6 +16681,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_2_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },
@@ -23796,6 +23817,7 @@ exports.tests = [
         jerryscript2_0: false,
         jerryscript2_3_0: true,
         hermes0_7_0: false,
+        hermes0_12_0: true,
         rhino1_7_13: false
       }
     },

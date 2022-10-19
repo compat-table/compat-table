@@ -576,6 +576,7 @@ exports.tests = [
           jerryscript2_3_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -615,6 +616,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -644,6 +646,7 @@ exports.tests = [
           jerryscript2_3_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -671,6 +674,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -705,6 +709,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -741,6 +746,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -769,6 +775,7 @@ exports.tests = [
           jerryscript2_3_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -802,6 +809,7 @@ exports.tests = [
           jerryscript2_3_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -869,6 +877,7 @@ exports.tests = [
           jerryscript2_3_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -1011,6 +1020,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -1038,6 +1048,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -1075,6 +1086,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       }
@@ -2926,6 +2938,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -2973,6 +2986,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -3022,6 +3036,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       }
@@ -3357,6 +3372,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -3434,6 +3450,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -3464,6 +3481,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -4170,6 +4188,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false,
           rhino1_7_14: true,
         }
@@ -4194,6 +4213,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false,
           rhino1_7_14: true,
         }
@@ -4217,6 +4237,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false,
           rhino1_7_14: true,
         }
@@ -4240,6 +4261,7 @@ exports.tests = [
           jerryscript2_3_0: false,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false,
           rhino1_7_14: true,
         }
@@ -4266,6 +4288,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -4291,6 +4314,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -4317,6 +4341,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       },
@@ -4343,6 +4368,7 @@ exports.tests = [
           jerryscript2_4_0: true,
           graalvm19: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
           rhino1_7_13: false
         }
       }
