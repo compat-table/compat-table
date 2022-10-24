@@ -4258,7 +4258,7 @@
     "note_id": "harmony-flag",
     "release": "2015-09-08",
     "retire": "2018-04-01",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4315,7 +4315,7 @@
     "equals": "chrome51",
     "release": "2016-08-16",
     "retire": "2019-04-18",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4334,7 +4334,7 @@
     "equals": "chrome54",
     "release": "2016-10-25",
     "retire": "2017-02-21",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4353,7 +4353,7 @@
     "equals": "chrome55",
     "release": "2017-02-21",
     "retire": "2017-05-30",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4372,7 +4372,7 @@
     "equals": "chrome58",
     "release": "2017-05-30",
     "retire": "2017-08-08",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4390,7 +4390,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome60",
     "release": "2017-08-08",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4408,7 +4408,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome61",
     "release": "2017-10-11",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4427,7 +4427,7 @@
     "equals": "chrome62",
     "release": "2018-03-07",
     "retire": "2019-12-31",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4445,7 +4445,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome66",
     "release": "2018-04-24",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4463,7 +4463,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome67",
     "release": "2018-06-06",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4482,7 +4482,7 @@
     "equals": "chrome68",
     "release": "2018-08-15",
     "retire": "2021-04-30",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4500,7 +4500,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome70",
     "release": "2018-10-23",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4573,7 +4573,7 @@
     "equals": "chrome77",
     "release": "2019-09-25",
     "retire": "2022-04-30",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4766,6 +4766,7 @@
     "platformtype": "engine",
     "equals": "chrome96",
     "release": "2021-11-30",
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -4778,10 +4779,42 @@
   "node18_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=18",
+    "short": "Node &gt;=18.0 &lt;18.3",
     "platformtype": "engine",
     "equals": "chrome101",
     "release": "2022-04-18",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node18_3": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=18.3 &lt;19",
+    "platformtype": "engine",
+    "equals": "chrome102",
+    "release": "2022-06-02",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node19_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=19",
+    "platformtype": "engine",
+    "equals": "chrome107",
+    "release": "2022-10-17",
     "test_suites": [
       "es5",
       "es6",
