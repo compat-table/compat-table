@@ -9,6 +9,7 @@
  *  suitename can be 'all'
  */
 
+var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
 var runner_support = require('./runner_support');
@@ -41,25 +42,41 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
         type: 'boolean',
         describe: 'Bail of first outdated test'
     })
+    .option('react-native-bundler', {
+        alias: 'r',
+        type: 'string'
+    })
     .argv;
 
 var hermesCommand = argv.hermesBin;
 var suites = argv.suite;
 suites = suites === 'all' ? '' : suites;
 
+var testFamily = argv.reactNativeBundler ? 'React-Native': 'Hermes';
+
 // Key for .res (e.g. test.res.hermes0_7_0), automatic based on `hermes -version`.
-var hermesKey = (function () {
-    var stdout = child_process.execFileSync(hermesCommand, [ '-version' ], {
+var testKey = (function () {
+    var stdout = child_process.execFileSync(hermesCommand, ['-version'], {
         encoding: 'utf-8'
     });
 
-    var m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    var m, prefix;
+
+    if (argv.reactNativeBundler) {
+        prefix = 'reactnative';
+        // make sure to use hermes bundled with react native release
+        m = /Hermes release version: for RN\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    } else {
+        prefix = 'hermes';
+        m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    }
+
     if (m) {
-        return 'hermes' + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
+        return prefix + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
     }
     throw new Error('Invalid Hermes version');
 })();
-console.log('Hermes result key is: test.res.' + hermesKey);
+console.log('Hermes result key is: test.res.' + testKey);
 
 function getArgs(testFilename) {
     var processArgs = [
@@ -87,8 +104,13 @@ function getArgs(testFilename) {
     return processArgs;
 }
 
-function hermesRunner(testFilename) {
+function testRunner(testFilename) {
     var processArgs = getArgs(testFilename);
+    if (argv.reactNativeBundler) {
+        var transpilerCommand = 'curl -s --upload-file ./' + testFilename +  ' "' + argv.reactNativeBundler +  '"';
+        var traspilerStdout = child_process.execSync(transpilerCommand);
+        fs.writeFileSync(testFilename, traspilerStdout.toString());
+    }
 
     try {
         var stdout = child_process.execFileSync(hermesCommand, processArgs, {
@@ -123,4 +145,4 @@ function resultsMatch(expect, actual) {
     return expect === actual;
 }
 
-runner_support.runTests(hermesRunner, hermesKey, 'Hermes', { resultsMatch: resultsMatch, suites: suites, testName: argv.testName, bail: argv.bail });
+runner_support.runTests(testRunner, testKey, testFamily, { resultsMatch: resultsMatch, suites: suites, testName: argv.testName, bail: argv.bail });
