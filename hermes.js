@@ -9,6 +9,7 @@
  *  suitename can be 'all'
  */
 
+var fs = require('fs');
 var child_process = require('child_process');
 var console = require('console');
 var runner_support = require('./runner_support');
@@ -41,6 +42,10 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
         type: 'boolean',
         describe: 'Bail of first outdated test'
     })
+    .option('react-native-bundler', {
+        alias: 'r',
+        type: 'string'
+    })
     .argv;
 
 var hermesCommand = argv.hermesBin;
@@ -49,13 +54,23 @@ suites = suites === 'all' ? '' : suites;
 
 // Key for .res (e.g. test.res.hermes0_7_0), automatic based on `hermes -version`.
 var hermesKey = (function () {
-    var stdout = child_process.execFileSync(hermesCommand, [ '-version' ], {
+    var stdout = child_process.execFileSync(hermesCommand, ['-version'], {
         encoding: 'utf-8'
     });
 
-    var m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    var m, prefix;
+
+    if (argv.reactNativeBundler) {
+        prefix = 'reactnative';
+        // make sure to use hermes bundled with react native release
+        m = /Hermes release version: for RN\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    } else {
+        prefix = 'hermes';
+        m = /Hermes release version:\s+(\d+)\.(\d+)(?:\.(\d+))?/.exec(stdout);
+    }
+
     if (m) {
-        return 'hermes' + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
+        return prefix + m[1] + '_' + m[2] + (m[3] ? '_' + m[3] : '');
     }
     throw new Error('Invalid Hermes version');
 })();
@@ -89,6 +104,11 @@ function getArgs(testFilename) {
 
 function hermesRunner(testFilename) {
     var processArgs = getArgs(testFilename);
+    if (argv.reactNativeBundler) {
+        var transpilerCommand = 'curl -s --upload-file ./' + testFilename +  ' "' + argv.reactNativeBundler +  '"';
+        var traspilerStdout = child_process.execSync(transpilerCommand);
+        fs.writeFileSync(testFilename, traspilerStdout.toString());
+    }
 
     try {
         var stdout = child_process.execFileSync(hermesCommand, processArgs, {
