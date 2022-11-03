@@ -22,7 +22,7 @@ var argv = require('yargs/yargs')(process.argv.slice(2))
     .option('suite', {
         alias: 's',
         type: 'string',
-        choices: ['all', 'es5', 'es6', 'es2016plus'],
+        choices: ['all', 'es5', 'es6', 'es2016plus', 'esintl', 'esnext', 'non-standard'],
         default: 'all'
     })
     .option('test-name', {
