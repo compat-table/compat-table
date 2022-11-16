@@ -6184,7 +6184,7 @@
     "short": "Samsung 12",
     "platformtype": "mobile",
     "equals": "chrome79",
-    "obsolete": false
+    "obsolete": "very"
   },
   "samsung13": {
     "full": "Samsung Internet for Android 13",
@@ -6193,7 +6193,7 @@
     "platformtype": "mobile",
     "equals": "chrome83",
     "release": "2020-12-02",
-    "obsolete": false
+    "obsolete": "very"
   },
   "samsung14": {
     "full": "Samsung Internet for Android 14",
@@ -6201,8 +6201,8 @@
     "short": "Samsung 14",
     "platformtype": "mobile",
     "equals": "chrome87",
-    "release": "2020-03-09",
-    "obsolete": false
+    "release": "2021-03-09",
+    "obsolete": "very"
   },
   "samsung15": {
     "full": "Samsung Internet for Android 15",
@@ -6210,8 +6210,35 @@
     "short": "Samsung 15",
     "platformtype": "mobile",
     "equals": "chrome90",
-    "release": "2020-07-13",
-    "unstable": true
+    "release": "2021-07-13",
+    "obsolete": true
+  },
+  "samsung16": {
+    "full": "Samsung Internet for Android 16",
+    "family": "Samsung",
+    "short": "Samsung 16",
+    "platformtype": "mobile",
+    "equals": "chrome92",
+    "release": "2021-11-26",
+    "obsolete": true
+  },
+  "samsung17": {
+    "full": "Samsung Internet for Android 17",
+    "family": "Samsung",
+    "short": "Samsung 17",
+    "platformtype": "mobile",
+    "equals": "chrome96",
+    "release": "2022-06-14",
+    "obsolete": true
+  },
+  "samsung18": {
+    "full": "Samsung Internet for Android 18",
+    "family": "Samsung",
+    "short": "Samsung 18",
+    "platformtype": "mobile",
+    "equals": "chrome99",
+    "release": "2022-08-06",
+    "obsolete": false
   },
   "opera_mobile10_1": {
     "full": "Opera Mobile for Android 10.1",
