@@ -6211,7 +6211,7 @@
     "platformtype": "mobile",
     "equals": "chrome90",
     "release": "2021-07-13",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung16": {
     "full": "Samsung Internet for Android 16",
@@ -6238,6 +6238,15 @@
     "platformtype": "mobile",
     "equals": "chrome99",
     "release": "2022-08-06",
+    "obsolete": true
+  },
+  "samsung19": {
+    "full": "Samsung Internet for Android 19",
+    "family": "Samsung",
+    "short": "Samsung 19",
+    "platformtype": "mobile",
+    "equals": "chrome102",
+    "release": "2022-11-01",
     "obsolete": false
   },
   "opera_mobile10_1": {
