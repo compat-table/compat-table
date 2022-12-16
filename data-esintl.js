@@ -29,6 +29,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -50,6 +51,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -78,6 +80,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -100,6 +103,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -122,6 +126,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -186,6 +191,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -221,6 +227,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20_1: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -249,6 +256,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -277,6 +285,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -305,6 +314,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -326,6 +336,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -348,6 +359,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -370,6 +382,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -434,6 +447,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -468,6 +482,7 @@ exports.tests = [
         safari14: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -496,6 +511,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -518,6 +534,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -540,6 +557,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -604,6 +622,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -638,6 +657,7 @@ exports.tests = [
         duktape2_0: false,
         graalvm19: false,
         graalvm20_1: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -667,6 +687,7 @@ exports.tests = [
         ios7: false,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -696,6 +717,7 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
+        hermes0_7_0: false,
         reactnative0_70_3: true,
         rhino1_7_13: false
       }
@@ -728,6 +750,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -760,6 +783,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -792,6 +816,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -824,6 +849,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -856,6 +882,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -888,6 +915,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
@@ -920,6 +948,7 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: true
       }
