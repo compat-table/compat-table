@@ -974,6 +974,7 @@ exports.tests = [
         safari4: true,
         safari15: true,
         graalvm21_3_3: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true
       }
     }
@@ -1079,6 +1080,7 @@ exports.tests = [
       firefox3: true,
       opera11: true,
       graalvm21_3_3: true,
+      hermes0_7_0: true,
       reactnative0_70_3: true
     }
   },
@@ -1427,6 +1429,7 @@ exports.tests = [
       edge80: true,
       duktape2_0: true,
       graalvm21_3_3: true,
+      hermes0_7_0: true,
       reactnative0_70_3: true,
       rhino1_7_14: true,
     }
@@ -1459,6 +1462,7 @@ exports.tests = [
       edge80: true,
       duktape2_0: true,
       graalvm21_3_3: true,
+      hermes0_7_0: true,
       reactnative0_70_3: true,
       rhino1_7_14: true,
     }
@@ -1486,6 +1490,7 @@ exports.tests = [
       safari11: true,
       duktape2_0: true,
       graalvm21_3_3: true,
+      hermes0_7_0: true,
       reactnative0_70_3: true,
       rhino1_7_14: true,
     }

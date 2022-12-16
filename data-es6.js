@@ -19759,6 +19759,7 @@ exports.tests = [
         firefox70: true,
         firefox99: true,
         graalvm21_3_3: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true
       }
     },
@@ -21783,6 +21784,7 @@ exports.tests = [
         safari5_1: true,
         safari15: true,
         graalvm21_3_3: true,
+        hermes0_7_0: true,
         reactnative0_70_3: true
       }
     },
@@ -23013,7 +23015,7 @@ exports.tests = [
         graalvm19: true,
         jerryscript2_0: false,
         jerryscript2_2_0: true,
-        hermes0_7_0: hermes.class,
+        hermes0_7_0: false,
         reactnative0_70_3: false,
         rhino1_7_13: false
       }
