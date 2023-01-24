@@ -3270,7 +3270,8 @@ exports.tests = [
       graalvm19: true,
       hermes0_7_0: true,
       reactnative0_70_3: true,
-      rhino1_7_13: false
+      rhino1_7_13: false,
+      safaritp: true
     }
   },
   {
