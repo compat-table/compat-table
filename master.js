@@ -338,11 +338,11 @@ $(function() {
       return "hsla(220, 25%, 70%, .5)";
     }
     /* Carakan */
-    if (/^opera\d|opera_mobile1[120]/.test(name)) {
+    if (/^opera([1-9]|1[0-2])(\D|$)|opera_mobile1[120]/.test(name)) {
       return "hsla(358, 86%, 43%, .5)";
     }
     /* V8 */
-    if (/^(chrome|node|iojs|android4[1-9]|android[5-9]|samsung|opera_mobile|edge)/.test(name)) {
+    if (/^(chrome|node|iojs|android4[1-9]|android[5-9]|samsung|opera(_mobile)?|edge|deno)/.test(name)) {
       return "hsla(79, 100%, 37%, .5)";
     }
     /* KJS */
