@@ -6775,6 +6775,79 @@ exports.tests = [
       rhino1_7_13: false
     }
   },
+  {
+    name: 'RegExp `v` flag',
+    category: 'finished (stage 4)',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-regexp-v-flag',
+    subtests: [
+      {
+        name: 'set notations',
+        exec: function () {/*
+          return /[\p{ASCII}&&\p{Decimal_Number}]/v.test("0")
+          && /[\p{Any}--[\x01-\u{10ffff}]]/v.test("\0")
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'properties of Strings',
+        exec: function () {/*
+          return /^\p{Emoji_Keycap_Sequence}$/v.test("*\uFE0F\u20E3")
+          && !/^\p{Emoji_Keycap_Sequence}$/v.test("*");
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'constructor supports it',
+        exec: function () {/*
+            return new RegExp('a', 'v') instanceof RegExp;
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'shows up in flags',
+        exec: function() {/*
+          var flags = [];
+          var p = new Proxy({}, { get: function(o, k) { flags.push(k); return o[k]; }});
+          Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
+          return flags.indexOf("unicodeSets") !== -1;
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      }
+    ]
+  }
 ];
 
 //Shift annex B features to the bottom
