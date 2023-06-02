@@ -3575,48 +3575,103 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;14",
     "release": "2020-09-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari14_1": {
     "full": "Safari 14.1",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;14.1",
-    "release": "2021-04-20",
-    "obsolete": true
+    "release": "2021-04-26",
+    "obsolete": "very"
   },
   "safari15": {
     "full": "Safari 15",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;15",
     "release": "2021-09-20",
-    "obsolete": false
+    "obsolete": "very"
+  },
+  "safari15_1": {
+    "full": "Safari 15.1",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15.1",
+    "release": "2021-10-25",
+    "obsolete": "very"
   },
   "safari15_2": {
     "full": "Safari 15.2",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;15.2",
     "release": "2021-12-13",
-    "obsolete": false
+    "obsolete": "very"
+  },
+  "safari15_3": {
+    "full": "Safari 15.3",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15.3",
+    "release": "2022-01-26",
+    "obsolete": "very"
   },
   "safari15_4": {
     "full": "Safari 15.4",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;15.4",
     "release": "2022-03-15",
-    "obsolete": false
+    "obsolete": "very"
+  },
+  "safari15_5": {
+    "full": "Safari 15.5",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15.5",
+    "release": "2022-05-16",
+    "obsolete": "very"
+  },
+  "safari15_6": {
+    "full": "Safari 15.6",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;15.6",
+    "release": "2022-07-20",
+    "obsolete": true
   },
   "safari16": {
     "full": "Safari 16",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16",
-    "release": "2022-12-09",
+    "release": "2022-09-12",
+    "obsolete": true
+  },
+  "safari16_1": {
+    "full": "Safari 16.1",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.1",
+    "release": "2022-10-24",
+    "obsolete": true
+  },
+  "safari16_2": {
+    "full": "Safari 16.2",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.2",
+    "release": "2022-12-13",
+    "obsolete": true
+  },
+  "safari16_3": {
+    "full": "Safari 16.3",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.3",
+    "release": "2023-02-13",
+    "obsolete": true
+  },
+  "safari16_4": {
+    "full": "Safari 16.4",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.4",
+    "release": "2023-03-27",
     "obsolete": false
   },
   "safaritp": {
-    "full": "Safari Technology Preview Release 154",
+    "full": "Safari Technology Preview Release 171",
     "family": "JavaScriptCore",
     "short": "SF TP",
-    "release": "2022-09-21",
     "unstable": true
   },
   "webkit": {
@@ -6254,7 +6309,7 @@
     "platformtype": "mobile",
     "equals": "safari12",
     "release": "2018-09-17",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios12_2": {
     "full": "iOS Safari",
@@ -6272,7 +6327,7 @@
     "platformtype": "mobile",
     "equals": "safari13",
     "release": "2019-09-19",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios13_4": {
     "full": "iOS Safari",
@@ -6290,6 +6345,15 @@
     "platformtype": "mobile",
     "equals": "safari14",
     "release": "2020-09-16",
+    "obsolete": "very"
+  },
+  "ios14_5": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 14.5",
+    "platformtype": "mobile",
+    "equals": "safari14_1",
+    "release": "2021-04-26",
     "obsolete": true
   },
   "ios15": {
@@ -6298,8 +6362,17 @@
     "short": "iOS 15",
     "platformtype": "mobile",
     "equals": "safari15",
-    "release": "2020-06-08",
-    "unstable": false
+    "release": "2020-09-20",
+    "obsolete": "very"
+  },
+  "ios15_1": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15.1",
+    "platformtype": "mobile",
+    "equals": "safari15_1",
+    "release": "2021-10-25",
+    "obsolete": "very"
   },
   "ios15_2": {
     "full": "iOS Safari",
@@ -6308,7 +6381,16 @@
     "platformtype": "mobile",
     "equals": "safari15_2",
     "release": "2021-12-13",
-    "unstable": false
+    "obsolete": "very"
+  },
+  "ios15_3": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15.3",
+    "platformtype": "mobile",
+    "equals": "safari15_3",
+    "release": "2022-01-26",
+    "obsolete": "very"
   },
   "ios15_4": {
     "full": "iOS Safari",
@@ -6317,7 +6399,16 @@
     "platformtype": "mobile",
     "equals": "safari15_4",
     "release": "2022-03-14",
-    "unstable": false
+    "obsolete": "very"
+  },
+  "ios15_5": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 15.5",
+    "platformtype": "mobile",
+    "equals": "safari15_5",
+    "release": "2022-05-16",
+    "obsolete": true
   },
   "ios16": {
     "full": "iOS Safari",
@@ -6326,7 +6417,43 @@
     "platformtype": "mobile",
     "equals": "safari16",
     "release": "2022-09-12",
-    "unstable": false
+    "obsolete": true
+  },
+  "ios16_1": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.1",
+    "platformtype": "mobile",
+    "equals": "safari16_1",
+    "release": "2022-10-24",
+    "obsolete": true
+  },
+  "ios16_2": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.2",
+    "platformtype": "mobile",
+    "equals": "safari16_2",
+    "release": "2022-12-13",
+    "obsolete": true
+  },
+  "ios16_3": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.3",
+    "platformtype": "mobile",
+    "equals": "safari16_3",
+    "release": "2023-01-23",
+    "obsolete": true
+  },
+  "ios16_4": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.4",
+    "platformtype": "mobile",
+    "equals": "safari16_4",
+    "release": "2022-03-27",
+    "obsolete": false
   },
   "samsung1": {
     "full": "Samsung Internet for Android 1",
