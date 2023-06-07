@@ -6792,7 +6792,9 @@ exports.tests = [
           chrome111: chrome.harmony,
           chrome112: true,
           firefox91: false,
-          firefox113: false,
+          firefox102: false,
+          firefox115: false,
+          firefox116: true,
           ie11: false,
           safari16: false,
         }
@@ -6808,7 +6810,9 @@ exports.tests = [
           chrome111: chrome.harmony,
           chrome112: true,
           firefox91: false,
-          firefox113: false,
+          firefox102: false,
+          firefox115: false,
+          firefox116: true,
           ie11: false,
           safari16: false,
         }
@@ -6823,7 +6827,9 @@ exports.tests = [
           chrome111: chrome.harmony,
           chrome112: true,
           firefox91: false,
-          firefox113: false,
+          firefox102: false,
+          firefox115: false,
+          firefox116: true,
           ie11: false,
           safari16: false,
         }
@@ -6841,7 +6847,9 @@ exports.tests = [
           chrome111: chrome.harmony,
           chrome112: true,
           firefox91: false,
-          firefox113: false,
+          firefox102: false,
+          firefox115: false,
+          firefox116: true,
           ie11: false,
           safari16: false,
         }
