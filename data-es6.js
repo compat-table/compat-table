@@ -16864,9 +16864,12 @@ exports.tests = [
     {
       name: 'duplicate identifier',
       exec: function(){/*
-        var d = function d([d]) { return d };
-        if (d([true]) !== true) return false;
-
+        try {
+          eval('var d = function d([d]) { return d };if (d([true]) !== true) return false;');
+        } catch (e) {
+          return !(e instanceof SyntaxError);
+        }
+        
         try {
           eval('var f = function f([id, id]) { return id }');
           return false;
@@ -16883,8 +16886,9 @@ exports.tests = [
         closure: true,
         typescript1corejs2: true,
         firefox2: true,
-        safari13: false,
-        safari15: false,
+        safari11: false,
+        safari16_2: false,
+        safari16_3: true,
         edge13: edge.experimental,
         edge14: true,
         xs6: true,
