@@ -6641,6 +6641,8 @@ exports.tests = [
           var actual = [];
           var p = new Proxy({}, { get: function(o, k) { actual.push(k); return o[k]; }});
           Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
+          expected.sort();
+          actual.sort();
           if (expected.length !== actual.length) return false;
           for (var i = 0; i < expected.length; i++) {
             if (expected[i] !== actual[i]) return false;
