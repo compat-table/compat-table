@@ -29,8 +29,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -51,8 +51,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     }
@@ -80,8 +80,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -103,8 +103,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -126,8 +126,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -191,8 +191,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -200,6 +200,7 @@ exports.tests = [
       name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.Collator !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
           var invalidLanguageTags = [
@@ -223,9 +224,11 @@ exports.tests = [
         firefox76: true,
         chrome81: true,
         safari14: false,
+        duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
         graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -253,8 +256,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     }
@@ -282,8 +285,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     }
@@ -311,8 +314,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -333,8 +336,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -356,8 +359,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -379,8 +382,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -444,18 +447,19 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
     {
-      name: 'accepts valid language tags',
+      name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.NumberFormat !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
-          var validLanguageTags = [
+          var invalidLanguageTags = [
             "i-klingon", // grandfathered tag
             "x-en-US-12345", // anything goes in private use tags
             "x-12345-12345-en-US",
@@ -476,9 +480,10 @@ exports.tests = [
         firefox76: true,
         chrome81: true,
         safari14: true,
+        duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -506,8 +511,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -529,8 +534,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -552,8 +557,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -617,8 +622,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -626,6 +631,7 @@ exports.tests = [
       name: 'rejects invalid language tags',
       spec: 'https://github.com/tc39/ecma402/pull/289',
       exec: function(){/*
+        if (typeof Intl.DateTimeFormat !== 'function') return false;
         try {
           // Taken from https://github.com/tc39/test262/blob/83b07ff15eadb141c3d6f4d236a8733b720041d2/test/intl402/6.2.2_a.js
           var invalidLanguageTags = [
@@ -648,9 +654,11 @@ exports.tests = [
         edge18: false,
         firefox76: true,
         chrome81: true,
+        duktape2_0: false,
         graalvm19: false,
-        graalvm20: false,
         graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     },
@@ -679,8 +687,8 @@ exports.tests = [
         ios7: false,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -709,8 +717,8 @@ exports.tests = [
         node0_12: true,
         duktape2_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: false,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     }
@@ -742,8 +750,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -775,8 +783,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -808,8 +816,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -841,8 +849,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -874,8 +882,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -907,8 +915,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }
@@ -940,8 +948,8 @@ exports.tests = [
         nashorn9: true,
         nashorn10: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
+        hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }

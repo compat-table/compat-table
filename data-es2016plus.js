@@ -42,10 +42,10 @@ exports.tests = [
           duktape2_0: true,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -71,10 +71,10 @@ exports.tests = [
           duktape2_0: true,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -101,10 +101,10 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       }
     ]
@@ -145,10 +145,10 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -183,10 +183,10 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -221,9 +221,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -249,9 +248,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -271,8 +269,7 @@ exports.tests = [
          return [1, 2, 3].includes(1)
          && ![1, 2, 3].includes(4)
          && ![1, 2, 3].includes(1, 1)
-         && [NaN].includes(NaN)
-         && Array(1).includes();
+         && [NaN].includes(NaN);
          */},
         res: {
           babel6corejs2: babel.corejs,
@@ -290,9 +287,38 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: true
+        }
+      },
+      {
+        name: 'Array.prototype.includes handles sparse arrays',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
+        exec: function(){/*
+         return [,].includes()
+          && Array(1).includes();
+         */},
+        res: {
+          babel6corejs2: babel.corejs,
+          closure: true,
+          es7shim: true,
+          typescript1corejs2: typescript.corejs,
+          safari9: true,
+          chrome47: true,
+          ie11: false,
+          edge14: true,
+          firefox2: false,
+          firefox43: true,
+          firefox99: false,
+          firefox102: true,
+          opera10_50: false,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          jerryscript2_4_0: true,
+          graalvm19: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -325,6 +351,7 @@ exports.tests = [
          */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20180402: true,
           es7shim: true,
           typescript1corejs2: typescript.corejs,
@@ -339,10 +366,10 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -370,9 +397,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -415,9 +441,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -452,9 +477,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       }
@@ -490,9 +514,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -518,9 +541,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       }
@@ -568,9 +590,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -609,9 +631,9 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -619,12 +641,13 @@ exports.tests = [
         name: 'no line break between async and function',
         exec: function () {/*
           async function a(){}
-          try { Function("async\n function a(){}")(); } catch(e) { return true; }
+          try { Function("async\n function a(){await 0}")(); } catch(e) { return true; }
         */},
         res: {
           tr: null,
           babel6corejs2: null,
-          closure: false,
+          babel7corejs3: true,
+          closure: true,
           typescript1corejs2: null,
           chrome52: null,
           chrome55: true,
@@ -639,9 +662,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -668,9 +691,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -704,9 +727,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -742,9 +765,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -757,6 +780,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs3: true,
           closure: true,
           typescript1corejs2: null,
           chrome52: null,
@@ -771,9 +795,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -806,9 +830,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -821,6 +845,7 @@ exports.tests = [
         res: {
           tr: null,
           babel6corejs2: null,
+          babel7corejs3: true,
           closure: false,
           closure20200614: true,
           typescript1corejs2: null,
@@ -836,9 +861,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -876,9 +900,9 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -916,9 +940,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -957,9 +980,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -994,9 +1016,8 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -1026,9 +1047,9 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1055,9 +1076,9 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1094,9 +1115,9 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -1160,13 +1181,13 @@ exports.tests = [
             note_id: 'sf-shared-memory-spectre',
             note_html: 'The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.'
           },
-          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1195,13 +1216,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
-          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1233,13 +1254,13 @@ exports.tests = [
           chrome63: { val: false, note_id: 'chr-shared-memory-spectre' },
           chrome68: true,
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
-          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1270,13 +1291,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
-          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1307,13 +1328,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11: { val: false, note_id: 'sf-shared-memory-spectre' },
-          safaritp: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1345,12 +1366,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1382,12 +1404,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1419,12 +1442,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1456,12 +1480,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1493,21 +1518,22 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
       {
-        name: 'Atomics.wake',
-        spec: 'https://tc39.github.io/ecma262/#sec-atomics.wake',
-        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake',
+        name: 'Atomics.notify',
+        spec: 'https://tc39.github.io/ecma262/#sec-atomics.notify',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify',
         exec: function () {/*
-         return typeof Atomics.wake === 'function';
+         return typeof Atomics.notify === 'function';
          */},
         res: {
           ie11: false,
@@ -1530,12 +1556,14 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
-          graalvm20: false,
-          graalvm20_1: false,
+          graalvm20: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1567,12 +1595,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1604,12 +1633,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1641,12 +1671,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1678,12 +1709,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1715,12 +1747,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -1752,12 +1785,13 @@ exports.tests = [
           chrome68: true,
           safari10_1: true,
           safari11_1: { val: false, note_id: 'sf-shared-memory-spectre' },
+          safari15_2: true,
+          safaritp: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -1796,9 +1830,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -1832,6 +1865,7 @@ exports.tests = [
      */},
     res: {
       babel7corejs3: true,
+      closure: false,
       closure20180319: true,
       typescript1corejs2: typescript.downlevelIteration,
       ie11: false,
@@ -1846,9 +1880,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: true
     }
   },
@@ -1872,6 +1905,7 @@ exports.tests = [
      }
      */},
     res: {
+      babel7corejs3: true,
       ie11: false,
       edge12: true,
       firefox2: false,
@@ -1882,9 +1916,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -1919,9 +1952,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -1956,9 +1988,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -1998,9 +2029,8 @@ exports.tests = [
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -2033,9 +2063,8 @@ exports.tests = [
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -2074,9 +2103,8 @@ exports.tests = [
         jerryscript2_3_0: false,
         jerryscript2_4_0: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     },
@@ -2109,9 +2137,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2144,9 +2171,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2180,9 +2206,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2215,9 +2240,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2250,9 +2274,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2287,9 +2310,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2324,9 +2346,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2361,9 +2382,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2394,9 +2414,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2427,9 +2446,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2464,9 +2482,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2501,9 +2518,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -2538,9 +2554,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2571,9 +2586,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2604,9 +2618,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       }
@@ -2638,9 +2651,8 @@ exports.tests = [
         jerryscript2_3_0: false,
         jerryscript2_4_0: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: false
       }
     },
@@ -2665,9 +2677,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2698,9 +2709,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2731,9 +2741,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -2764,12 +2773,13 @@ exports.tests = [
       firefox57: true,
       firefox70: true,
       safari13: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: false,
       graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -2796,9 +2806,8 @@ exports.tests = [
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: false,
       rhino1_7_13: false
     }
   },
@@ -2814,6 +2823,7 @@ exports.tests = [
      */},
     res: {
       tr: true,
+      babel7corejs3: true,
       ie10: true,
       edge12: true,
       firefox2: true,
@@ -2834,9 +2844,8 @@ exports.tests = [
       nashorn10: true,
       jerryscript2_3_0: false,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: false,
       rhino1_7_13: true
     }
   },
@@ -2862,12 +2871,12 @@ exports.tests = [
       node8: true,
       safari10_1: true,
       duktape2_0: false,
+      duktape2_4: true,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: false,
       rhino1_7_13: false
     }
   },
@@ -2908,9 +2917,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -2945,9 +2953,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -2993,6 +3000,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20180402: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -3006,13 +3014,13 @@ exports.tests = [
           safari11_1: true,
           safaritp: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3041,6 +3049,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20180402: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -3054,13 +3063,13 @@ exports.tests = [
           safari11_1: true,
           safaritp: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3091,6 +3100,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20180402: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -3104,13 +3114,13 @@ exports.tests = [
           chrome61: chrome.promise,
           chrome63: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -3132,6 +3142,8 @@ exports.tests = [
      return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
      */},
     res: {
+      babel7corejs3: true,
+      closure: false,
       closure20181008: true,
       closure20200315: false,
       closure20200517: true,
@@ -3145,10 +3157,10 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
-      rhino1_7_13: false
+      reactnative0_70_3: true,
+      rhino1_7_13: false,
+      rhino1_7_14: true,
     }
   },
   {
@@ -3169,7 +3181,7 @@ exports.tests = [
       jsx: null,
       typescript1corejs2: null,
       es6shim: null,
-      konq414: null,
+      konq4_14: null,
       ie7: null,
       ie10: false,
       firefox1: null,
@@ -3186,16 +3198,15 @@ exports.tests = [
       xs6: null,
       jxa: null,
       node0_10: null,
-      duktape2_0: null,
+      duktape2_0: false,
       duktape2_2: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       android1_5: null,
       ios4: null,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -3229,9 +3240,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: false,
       rhino1_7_13: false
     }
   },
@@ -3246,6 +3256,7 @@ exports.tests = [
            !/(?<=a)b/.test('b');
   */},
     res : {
+      babel7corejs3: false,
       ie11: false,
       firefox2: false,
       firefox77: false,
@@ -3257,10 +3268,10 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: true,
-      rhino1_7_13: false
+      reactnative0_70_3: true,
+      rhino1_7_13: false,
+      safaritp: true
     }
   },
   {
@@ -3287,9 +3298,8 @@ exports.tests = [
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -3313,6 +3323,7 @@ exports.tests = [
         */},
         res: {
           babel6corejs2: true,
+          closure: false,
           closure20180805: true,
           chrome62: chrome.harmony,
           chrome63: true,
@@ -3328,9 +3339,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -3359,6 +3369,7 @@ exports.tests = [
         */},
         res: {
           babel6corejs2: true,
+          closure: false,
           closure20180910: true,
           chrome62: chrome.harmony,
           chrome63: true,
@@ -3374,9 +3385,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -3401,6 +3411,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
@@ -3413,13 +3424,12 @@ exports.tests = [
           safari11_1: true,
           safaritp: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3437,6 +3447,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
@@ -3449,13 +3460,13 @@ exports.tests = [
           safari11_1: true,
           safaritp: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3477,6 +3488,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20190215: true,
           typescript2_5corejs2: true,
           ie11: false,
@@ -3488,12 +3500,12 @@ exports.tests = [
           safari11_1: true,
           safaritp: true,
           webkit: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -3503,7 +3515,7 @@ exports.tests = [
     name: 'Symbol.prototype.description',
     spec: 'https://github.com/tc39/proposal-Symbol-description',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description',
-    category: '2019 misc',
+    category: '2019 features',
     significance: 'small',
     subtests: [
       {
@@ -3514,6 +3526,7 @@ exports.tests = [
         res : {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20190301: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -3527,12 +3540,13 @@ exports.tests = [
           safari11: false,
           safari12: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3544,6 +3558,7 @@ exports.tests = [
         res : {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20190301: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -3557,12 +3572,13 @@ exports.tests = [
           safari11: false,
           safari12: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -3588,12 +3604,12 @@ exports.tests = [
           safari12: false,
           safari12_1: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -3622,9 +3638,8 @@ exports.tests = [
         duktape2_0: false,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }, {
@@ -3648,9 +3663,8 @@ exports.tests = [
         nashorn10: true,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }, {
@@ -3674,9 +3688,8 @@ exports.tests = [
         nashorn10: true,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: true,
+        reactnative0_70_3: true,
         rhino1_7_13: true
       }
     }, {
@@ -3697,9 +3710,8 @@ exports.tests = [
         duktape2_0: false,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }, {
@@ -3720,9 +3732,8 @@ exports.tests = [
         duktape2_0: false,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }, {
@@ -3741,9 +3752,8 @@ exports.tests = [
         duktape2_0: false,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }, {
@@ -3764,9 +3774,8 @@ exports.tests = [
         nashorn10: true,
         jerryscript2_3_0: false,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: false,
+        reactnative0_70_3: false,
         rhino1_7_13: false
       }
     }]
@@ -3783,6 +3792,7 @@ exports.tests = [
           return eval("'\u2028'") === "\u2028";
         */},
         res : {
+          closure: false,
           closure20190215: true,
           babel7corejs2: true,
           ie11: false,
@@ -3793,13 +3803,14 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -3808,6 +3819,7 @@ exports.tests = [
           return eval("'\u2029'") === "\u2029";
         */},
         res : {
+          closure: false,
           closure20190215: true,
           babel7corejs2: true,
           ie11: false,
@@ -3818,13 +3830,14 @@ exports.tests = [
           chrome66: true,
           safari11: false,
           safari12: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
-          rhino1_7_13: false
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       }
     ]
@@ -3842,6 +3855,7 @@ exports.tests = [
     res: {
       babel6corejs2: false,
       babel7corejs3: babel.corejs,
+      closure: false,
       closure20190325: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
@@ -3852,15 +3866,16 @@ exports.tests = [
       firefox63: true,
       safari12_1: true,
       safaritp: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       chrome73: true,
       chrome74: true,
       hermes0_7_0: true,
-      rhino1_7_13: false
+      reactnative0_70_3: true,
+      rhino1_7_13: false,
+      rhino1_7_14: true,
     }
   },
   {
@@ -3890,12 +3905,12 @@ exports.tests = [
       safari1: false,
       safari12_1: true,
       safaritp: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: true,
-      graalvm20: true,
-      graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: false,
       rhino1_7_13: false
     }
   },
@@ -3913,6 +3928,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20190709: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -3926,7 +3942,7 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          phantom: true,
+          phantom1_9: true,
           node0_12: true,
           safari3: false,
           safari4: true,
@@ -3942,9 +3958,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -3956,6 +3971,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20190709: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -3969,7 +3985,7 @@ exports.tests = [
           konq4_4: false,
           konq4_9: true,
           besen: false,
-          phantom: true,
+          phantom1_9: true,
           node0_12: true,
           safari3: false,
           safari4: true,
@@ -3985,9 +4001,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -3999,6 +4014,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20190325: {
             val: false,
             note_id: 'closure-string-trimstart',
@@ -4018,9 +4034,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       },
@@ -4032,6 +4047,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20190325: {
             val: false,
             note_id: 'closure-string-trimend',
@@ -4051,9 +4067,8 @@ exports.tests = [
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: true
         }
       }
@@ -4080,6 +4095,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20190301: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -4096,13 +4112,12 @@ exports.tests = [
           opera10_50: false,
           safari12: true,
           safaritp: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4116,6 +4131,7 @@ exports.tests = [
       */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20190301: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -4126,13 +4142,12 @@ exports.tests = [
           chrome69: true,
           opera10_50: false,
           safari12: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4159,13 +4174,12 @@ exports.tests = [
           opera10_50: false,
           safari12: false,
           safari13: true,
-          duktape2_2: false,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -4195,6 +4209,7 @@ exports.tests = [
         */},
         res: {
           babel6corejs2: babel.corejs,
+          closure: false,
           closure20200101: true,
           typescript1corejs2: typescript.corejs,
           ie11: false,
@@ -4216,6 +4231,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4232,6 +4248,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20200101: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -4256,6 +4273,7 @@ exports.tests = [
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -4283,13 +4301,15 @@ exports.tests = [
           chrome67: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
-          rhino1_7_13: false
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -4307,13 +4327,15 @@ exports.tests = [
           chrome67: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
-          rhino1_7_13: false
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -4331,12 +4353,14 @@ exports.tests = [
           chrome67: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
-          rhino1_7_13: false
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -4354,12 +4378,14 @@ exports.tests = [
           chrome67: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
-          rhino1_7_13: false
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false,
+          rhino1_7_14: true,
         }
       },
       {
@@ -4379,12 +4405,13 @@ exports.tests = [
           chrome67: true,
           safari15: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4405,12 +4432,13 @@ exports.tests = [
           chrome67: true,
           safari15: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4432,12 +4460,13 @@ exports.tests = [
           chrome67: true,
           safari15: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4459,12 +4488,13 @@ exports.tests = [
           chrome67: true,
           safari15: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           jerryscript2_4_0: true,
           graalvm19: true,
-          graalvm20: true,
-          graalvm20_1: true,
           hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -4493,6 +4523,7 @@ exports.tests = [
     res: {
       babel6corejs2: false,
       babel7corejs3: babel.corejs,
+      closure: false,
       closure20191027: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
@@ -4502,11 +4533,13 @@ exports.tests = [
       firefox71: true,
       chrome76: true,
       safari13: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: false,
+      reactnative0_70_3: false,
       rhino1_7_13: false
     }
   },
@@ -4526,6 +4559,7 @@ exports.tests = [
       res: {
         babel6corejs2: false,
         babel7corejs3: babel.corejs,
+        closure: false,
         closure20200101: true,
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
@@ -4550,14 +4584,14 @@ exports.tests = [
         node8_3: false,
         node8_7: false,
         duktape2_0: false,
-        duktape2_1: false,
+        duktape2_5: true,
         jerryscript2_3_0: false,
         jerryscript2_4_0: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: true,
-        rhino1_7_13: false
+        reactnative0_70_3: true,
+        rhino1_7_13: false,
+        rhino1_7_14: true,
       }
     }, {
       name: '"globalThis" global property has correct property descriptor',
@@ -4573,6 +4607,7 @@ exports.tests = [
       res: {
         babel6corejs2: false,
         babel7corejs3: babel.corejs,
+        closure: false,
         closure20200101: true,
         typescript1corejs2: typescript.fallthrough,
         typescript3_2corejs3: typescript.corejs,
@@ -4597,14 +4632,14 @@ exports.tests = [
         node8_3: false,
         node8_7: false,
         duktape2_0: false,
-        duktape2_1: false,
+        duktape2_5: true,
         jerryscript2_3_0: false,
         jerryscript2_4_0: true,
         graalvm19: true,
-        graalvm20: true,
-        graalvm20_1: true,
         hermes0_7_0: true,
-        rhino1_7_13: false
+        reactnative0_70_3: true,
+        rhino1_7_13: false,
+        rhino1_7_14: true,
       }
     }]
   },
@@ -4624,6 +4659,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure: false,
           closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
@@ -4636,11 +4672,13 @@ exports.tests = [
           chrome80: true,
           safari13_1: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4653,6 +4691,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure: false,
           closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
@@ -4665,11 +4704,13 @@ exports.tests = [
           chrome80: true,
           safari13_1: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4682,6 +4723,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure: false,
           closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
@@ -4694,11 +4736,13 @@ exports.tests = [
           chrome80: true,
           safari13_1: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4713,6 +4757,7 @@ exports.tests = [
         */},
         res : {
           babel7corejs2: true,
+          closure: false,
           closure20200927: true,
           typescript3_7corejs3: true,
           ie11: false,
@@ -4725,11 +4770,13 @@ exports.tests = [
           chrome80: true,
           safari13_1: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
           graalvm20: graalvm.es2020flag,
           graalvm20_1: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -4743,6 +4790,8 @@ exports.tests = [
           return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
         */},
         res : {
+          babel7corejs3: true,
+          closure: false,
           closure20200927: true,
           ie11: false,
           firefox10: false,
@@ -4756,6 +4805,11 @@ exports.tests = [
           chrome91: true,
           safari13_1: true,
           safaritp: true,
+          duktape2_0: false,
+          graalvm21_3_3: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -4789,12 +4843,14 @@ exports.tests = [
       chrome80: true,
       safari13_1: true,
       safaritp: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -4810,6 +4866,7 @@ exports.tests = [
     res: {
       babel6corejs2: false,
       babel7corejs3: babel.corejs,
+      closure: false,
       closure20210808: true,
       typescript1corejs2: typescript.fallthrough,
       typescript3_2corejs3: typescript.corejs,
@@ -4824,6 +4881,7 @@ exports.tests = [
       chrome85: true,
       safari13_1: true,
       safaritp: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: false,
@@ -4832,6 +4890,7 @@ exports.tests = [
       graalvm21: true,
       ios13_4: true,
       hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -4856,6 +4915,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20210808: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -4869,10 +4929,12 @@ exports.tests = [
           chrome85: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -4890,6 +4952,7 @@ exports.tests = [
         res: {
           babel6corejs2: false,
           babel7corejs3: babel.corejs,
+          closure: false,
           closure20210808: true,
           typescript1corejs2: typescript.fallthrough,
           typescript3_2corejs3: typescript.corejs,
@@ -4903,7 +4966,9 @@ exports.tests = [
           chrome85: true,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
@@ -4915,6 +4980,7 @@ exports.tests = [
   {
     name: 'WeakReferences',
     spec: 'https://github.com/tc39/proposal-weakrefs',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef',
     category: '2021 features',
     significance: 'large',
     subtests: [
@@ -4948,6 +5014,7 @@ exports.tests = [
           graalvm20: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -4973,11 +5040,10 @@ exports.tests = [
           duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm19: false,
-          graalvm20: false,
-          graalvm20_1: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -4991,6 +5057,7 @@ exports.tests = [
     subtests: [
       {
         name: '||= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5002,6 +5069,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5014,10 +5082,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5031,6 +5101,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5043,10 +5114,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5060,6 +5133,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5072,15 +5146,18 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
       {
         name: '&&= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5092,6 +5169,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5104,10 +5182,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5121,6 +5201,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5133,10 +5214,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5150,6 +5233,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5162,15 +5246,18 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
       {
         name: '??= basic support',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment',
         exec: function () {/*
         let a;
         let b = 0;
@@ -5182,6 +5269,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5194,10 +5282,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5211,6 +5301,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5223,10 +5314,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5240,6 +5333,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs2: true,
+          closure: false,
           closure20210808: true,
           ie11: false,
           firefox60: false,
@@ -5252,10 +5346,12 @@ exports.tests = [
           safari13: false,
           safari14: true,
           safaritp: true,
+          duktape2_0: false,
           jerryscript2_3_0: false,
           graalvm20_3: graalvm.es2021flag,
           graalvm21: true,
           hermes0_7_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -5272,6 +5368,7 @@ exports.tests = [
     */},
     res : {
       babel7corejs2: true,
+      closure: false,
       closure20210808: true,
       typescript1corejs2: false,
       typescript2_7corejs2: true,
@@ -5286,13 +5383,16 @@ exports.tests = [
       chrome75: true,
       safari13: true,
       safaritp: true,
+      duktape2_0: false,
       jerryscript2_3_0: false,
       jerryscript2_4_0: true,
       graalvm19: false,
       graalvm20: graalvm.es2020flag,
       graalvm20_1: true,
       hermes0_7_0: true,
-      rhino1_7_13: false
+      reactnative0_70_3: true,
+      rhino1_7_13: false,
+      rhino1_7_14: true,
     }
   },
   {
@@ -5326,7 +5426,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5360,7 +5461,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5390,7 +5492,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5407,6 +5510,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          babel7corejs3: true,
           ie11: false,
           firefox2: false,
           firefox80: firefox.privateFields,
@@ -5418,12 +5522,13 @@ exports.tests = [
           safari13_1: false,
           safari14_1: true,
           safaritp: true,
+          duktape2_0: false,
           opera10_50: false,
           graalvm20: false,
-          graalvm20_1: false,
           graalvm20_3: true,
-          babel7corejs3: false,
           typescript3_8corejs3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5440,6 +5545,7 @@ exports.tests = [
         */},
         res: {
           babel7corejs2: true,
+          babel7corejs3: true,
           ie11: false,
           firefox2: false,
           firefox74: firefox.privateClassFields,
@@ -5453,11 +5559,12 @@ exports.tests = [
           safari14_1: true,
           safaritp: true,
           opera10_50: false,
+          duktape2_0: false,
           graalvm20: false,
-          graalvm20_1: false,
           graalvm20_3: true,
-          babel7corejs3: false,
           typescript3_8corejs3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5483,7 +5590,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -5520,8 +5628,45 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
+        }
+      },
+      {
+        name: 'static class fields use [[Define]]',
+        exec: function () { /*
+          return (class X { static name = "name"; }).name === 'name';
+        */},
+        res: {
+          chrome73: true,
+          chrome90: true,
+          chrome94: true,
+          chrome96: true,
+          chrome97: false,
+          chrome98: true,
+          firefox95: true,
+          firefox96: true,
+          node11_0: false,
+          node12_0: true,
+          node12_5: true,
+          node12_9: true,
+          node12_11: true,
+          node13_0: true,
+          node13_2: true,
+          node14_0: true,
+          node14_5: true,
+          node14_6: true,
+          node15_0: true,
+          node16_0: true,
+          node16_9: true,
+          node16_11: true,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true
         }
       },
       {
@@ -5549,7 +5694,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5574,7 +5720,8 @@ exports.tests = [
           duktape2_0: false,
           graalvm19: false,
           graalvm20: true,
-          graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -5618,6 +5765,8 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -5652,6 +5801,8 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -5689,6 +5840,8 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -5726,6 +5879,8 @@ exports.tests = [
           safaritp: true,
           graalvm20: false,
           graalvm20_1: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -5758,6 +5913,11 @@ exports.tests = [
       opera10_50: false,
       safari12: false,
       safari15: true,
+      duktape2_0: false,
+      graalvm21_3_3: graalvm.esStagingFlag,
+      graalvm22_2: true,
+      hermes0_7_0: false,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
   },
@@ -5781,6 +5941,13 @@ exports.tests = [
           && arr.at(-4) === undefined;
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-at-method',
+            note_html: 'Requires native support for <code>Math.trunc</code>'
+          },
+          closure20220719: true,
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -5792,10 +5959,16 @@ exports.tests = [
             note_id: 'safari-at-method',
             note_html: 'The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.'
           },
+          safari15_4: true,
           safaritp: true,
+          duktape2_0: false,
           babel7corejs3: babel.corejs,
           typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -5813,6 +5986,12 @@ exports.tests = [
           && str.at(-4) === undefined;
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-at-method'
+          },
+          closure20220719: true,
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -5823,10 +6002,16 @@ exports.tests = [
             val: 'flagged',
             note_id: 'safari-at-method'
           },
+          safari15_4: true,
           safaritp: true,
+          duktape2_0: false,
           babel7corejs3: babel.corejs,
           typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       },
@@ -5860,6 +6045,12 @@ exports.tests = [
          });
       */},
         res: {
+          closure: false,
+          closure20220502: {
+            val: false,
+            note_id: 'closure-typed-array',
+            note_html: 'Requires native support for typed arrays'
+          },
           ie11: false,
           firefox68: false,
           firefox85: firefox.nightly,
@@ -5870,10 +6061,16 @@ exports.tests = [
             val: 'flagged',
             note_id: 'safari-at-method'
           },
+          safari15_4: true,
           safaritp: true,
+          duktape2_0: false,
           babel7corejs3: babel.corejs,
           typescript4corejs3: typescript.corejs,
           graalvm21: graalvm.es2022flag,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
           rhino1_7_13: false
         }
       }
@@ -5884,6 +6081,7 @@ exports.tests = [
     category: '2022 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-accessible-object-hasownproperty',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn',
     subtests: [
       {
         name: "Basic functionality",
@@ -5892,6 +6090,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs3: babel.corejs,
+          closure20220719: true,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           chrome1: false,
@@ -5904,6 +6103,14 @@ exports.tests = [
           firefox92: true,
           opera10_50: false,
           safari12: false,
+          safari15_4: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       },
@@ -5920,6 +6127,7 @@ exports.tests = [
       */},
         res: {
           babel7corejs3: babel.corejs,
+          closure20220719: true,
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           chrome1: false,
@@ -5932,6 +6140,14 @@ exports.tests = [
           firefox92: true,
           opera10_50: false,
           safari12: false,
+          safari15_4: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
           rhino1_7_13: false
         }
       }
@@ -5973,14 +6189,670 @@ exports.tests = [
       ie11: false,
       opera10_50: false,
       safari12: false,
+      duktape2_0: false,
+      graalvm21_3_3: graalvm.esStagingFlag,
+      graalvm22_2: true,
+      hermes0_7_0: false,
+      reactnative0_70_3: false,
+      rhino1_7_13: false
+    },
+  },
+  {
+    name: 'Error.cause property',
+    category: '2022 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-error-cause',
+    subtests: [
+      {
+        name: "Error has cause",
+        exec: function () {/*
+        var error = new Error('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "Error.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in Error.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "EvalError has cause",
+        exec: function () {/*
+        var error = new EvalError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "EvalError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in EvalError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "RangeError has cause",
+        exec: function () {/*
+        var error = new RangeError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "RangeError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in RangeError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "ReferenceError has cause",
+        exec: function () {/*
+        var error = new ReferenceError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "ReferenceError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in ReferenceError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "SyntaxError has cause",
+        exec: function () {/*
+        var error = new SyntaxError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "SyntaxError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in SyntaxError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "TypeError has cause",
+        exec: function () {/*
+        var error = new TypeError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "TypeError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in TypeError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "URIError has cause",
+        exec: function () {/*
+        var error = new URIError('error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "URIError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in URIError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: true,
+          graalvm21_3_3: true,
+          hermes0_7_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_14: true,
+        }
+      },
+      {
+        name: "AggregateError has cause",
+        exec: function () {/*
+        var error = new AggregateError([], 'error', { cause: 'cause' })
+        return error.hasOwnProperty('cause') && error.cause === 'cause';
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_14: false,
+        }
+      },
+      {
+        name: "AggregateError.prototype lacks cause",
+        exec: function () {/*
+        return !('cause' in AggregateError.prototype);
+        */},
+        res: {
+          ie11: false,
+          chrome1: false,
+          chrome92: false,
+          chrome93: false,
+          chrome94: true,
+          edge90: false,
+          firefox45: false,
+          firefox90: false,
+          firefox91: true,
+          safari14: false,
+          safari15: true,
+          duktape2_0: false,
+          graalvm21_3_3: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_14: false,
+        }
+      },
+    ]
+  },
+  {
+    name: 'RegExp Match Indices (`hasIndices` / `d` flag)',
+    category: '2022 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-regexp-match-indices',
+    subtests: [
+      {
+        name: 'constructor supports it',
+        exec: function () {/*
+            return new RegExp('a', 'd') instanceof RegExp;
+        */},
+        res: {
+          firefox68: false,
+          firefox78: false,
+          firefox91: true,
+          safari15: true,
+          chrome90: true,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false
+        }
+      },
+      {
+        name: 'shows up in flags',
+        exec: function () {/*
+          var expected = ['hasIndices'];
+          // Sorted alphabetically by shortname – "dgimsuy".
+          if ('global' in RegExp.prototype) expected.push('global');
+          if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
+          if ('multiline' in RegExp.prototype) expected.push('multiline');
+          if ('dotAll' in RegExp.prototype) expected.push('dotAll');
+          if ('unicode' in RegExp.prototype) expected.push('unicode');
+          if ('sticky' in RegExp.prototype) expected.push('sticky');
+          var actual = [];
+          var p = new Proxy({}, { get: function(o, k) { actual.push(k); return o[k]; }});
+          Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
+          if (expected.length !== actual.length) return false;
+          for (var i = 0; i < expected.length; i++) {
+            if (expected[i] !== actual[i]) return false;
+          }
+          return true;
+        */},
+        res: {
+          node16_0: false,
+          firefox68: false,
+          firefox78: false,
+          firefox91: true,
+          safari15: true,
+          chrome90: false,
+          graalvm21_3_3: graalvm.esStagingFlag,
+          graalvm22_2: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: false
+        }
+      }
+    ]
+  },
+  {
+    name: 'Array find from last',
+    category: '2023 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-array-find-from-last',
+    subtests: [
+      {
+        name: "Array.prototype.findLast",
+        exec: function () {/*
+          var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+          return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome1: false,
+          chrome90: false,
+          chrome96: false,
+          chrome97: true,
+          edge18: false,
+          firefox2: false,
+          firefox89: false,
+          firefox102: false,
+          firefox103: {
+            val: 'flagged',
+            note_id: 'firefox-arrayfindfromlast',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.array_find_last</code> setting under <code>about:config</code>.'
+          },
+          firefox104: true,
+          opera10_50: false,
+          safari12: false,
+          safari15_4: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: graalvm.esStagingFlag,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: "Array.prototype.findLastIndex",
+        exec: function () {/*
+          var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
+          return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome1: false,
+          chrome90: false,
+          chrome96: false,
+          chrome97: true,
+          edge18: false,
+          firefox2: false,
+          firefox89: false,
+          firefox102: false,
+          firefox103: { val: 'flagged', note_id: 'firefox-arrayfindfromlast' },
+          firefox104: true,
+          opera10_50: false,
+          safari12: false,
+          safari15_4: true,
+          safaritp: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          graalvm22_2: graalvm.esStagingFlag,
+          hermes0_7_0: false,
+          hermes0_12_0: true,
+          reactnative0_70_3: true,
+          rhino1_7_13: false
+        }
+      }
+    ]
+  },
+  {
+    name: 'Hashbang Grammar',
+    category: '2023 features',
+    significance: 'tiny',
+    spec: 'https://github.com/tc39/proposal-hashbang/',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments',
+    exec: function() {/*
+      try {
+        return !eval('#!/wash/your/hands');
+      } catch (e) {
+        return false
+      }
+    */},
+    res: {
+      chrome1: false,
+      chrome74: true,
+      firefox2: false,
+      firefox67: true,
+      ie11: false,
+      opera10_50: false,
+      edge18: false,
+      safari1: false,
+      safari13: false,
+      safari13_1: true,
+      duktape2_0: false,
+      graalvm19: false,
+      graalvm20_1: true,
+      babel7corejs3: false,
+      typescript3_2corejs3: false,
+      closure: false,
+      hermes0_7_0: true,
+      reactnative0_70_3: true,
       rhino1_7_13: false
     }
+  },
+  {
+    name: 'RegExp `v` flag',
+    category: 'finished (stage 4)',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-regexp-v-flag',
+    subtests: [
+      {
+        name: 'set notations',
+        exec: function () {/*
+          return /[\p{ASCII}&&\p{Decimal_Number}]/v.test("0")
+          && /[\p{Any}--[\x01-\u{10ffff}]]/v.test("\0")
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'properties of Strings',
+        exec: function () {/*
+          return /^\p{Emoji_Keycap_Sequence}$/v.test("*\uFE0F\u20E3")
+          && !/^\p{Emoji_Keycap_Sequence}$/v.test("*");
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'constructor supports it',
+        exec: function () {/*
+            return new RegExp('a', 'v') instanceof RegExp;
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      },
+      {
+        name: 'shows up in flags',
+        exec: function() {/*
+          var flags = [];
+          var p = new Proxy({}, { get: function(o, k) { flags.push(k); return o[k]; }});
+          Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
+          return flags.indexOf("unicodeSets") !== -1;
+        */},
+        res: {
+          chrome110: false,
+          chrome111: chrome.harmony,
+          chrome112: true,
+          firefox91: false,
+          firefox113: false,
+          ie11: false,
+          safari16: false,
+        }
+      }
+    ]
   }
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }

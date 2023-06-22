@@ -101,6 +101,12 @@ tr.category td {
     padding-left: 5px;
 }
 
+tr.category td > span {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0.5em;
+}
+
 .controls, .legend {
   display: inline-block;
   width: 50%;
@@ -471,6 +477,11 @@ body.hide-platformtype .platformtype {
 }
 body.hide-platformtype sup.num-features {
     background-color: #fff;
+}
+
+#table-wrapper {
+    display: block;
+    overflow: auto
 }
 
 /**
