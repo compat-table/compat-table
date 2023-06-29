@@ -4877,7 +4877,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome74",
     "release": "2019-04-23",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4895,7 +4895,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome75",
     "release": "2019-06-26",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4913,7 +4913,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome76",
     "release": "2019-08-20",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4926,13 +4926,32 @@
   "node12_11": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=12.11 &lt;13",
+    "short": "Node &gt;=12.11 &lt;12.16",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome77",
     "release": "2019-09-25",
     "retire": "2022-04-30",
-    "obsolete": true,
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node12_16": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=12.16 &lt;13",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome78",
+    "release": "2020-02-11",
+    "retire": "2022-04-30",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4950,7 +4969,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome78",
     "release": "2019-10-22",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4968,7 +4987,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome79",
     "release": "2019-11-21",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4986,7 +5005,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome81",
     "release": "2020-04-21",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5004,7 +5023,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome83",
     "release": "2020-06-30",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5022,7 +5041,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome84",
     "release": "2020-07-20",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -5040,7 +5059,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome86",
     "release": "2020-10-20",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5142,6 +5161,7 @@
     "platformtype": "engine",
     "equals": "chrome101",
     "release": "2022-04-18",
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -5170,10 +5190,45 @@
   "node19_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=19",
+    "short": "Node &gt;=19 &lt;19.2",
     "platformtype": "engine",
     "equals": "chrome107",
     "release": "2022-10-17",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node19_2": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=19.2 &lt;20",
+    "platformtype": "engine",
+    "equals": "chrome108",
+    "release": "2022-11-29",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node20_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=20",
+    "platformtype": "engine",
+    "equals": "chrome113",
+    "release": "2023-04-18",
+    "obsolete": false,
     "test_suites": [
       "es5",
       "es6",
@@ -6630,7 +6685,7 @@
     "short": "iOS 16.4",
     "platformtype": "mobile",
     "equals": "safari16_4",
-    "release": "2022-03-27",
+    "release": "2023-03-27",
     "obsolete": false
   },
   "samsung1": {
