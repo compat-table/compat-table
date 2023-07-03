@@ -3674,6 +3674,13 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.4",
     "release": "2023-03-27",
+    "obsolete": true
+  },
+  "safari16_5": {
+    "full": "Safari 16.5",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.5",
+    "release": "2023-05-18",
     "obsolete": false
   },
   "safaritp": {
@@ -6686,6 +6693,15 @@
     "platformtype": "mobile",
     "equals": "safari16_4",
     "release": "2023-03-27",
+    "obsolete": true
+  },
+  "ios16_5": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.5",
+    "platformtype": "mobile",
+    "equals": "safari16_5",
+    "release": "2023-05-18",
     "obsolete": false
   },
   "samsung1": {

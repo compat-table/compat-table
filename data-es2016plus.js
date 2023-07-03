@@ -3265,6 +3265,7 @@ exports.tests = [
       chrome50: chrome.harmony,
       chrome62: true,
       safari13_1: false,
+      safari16_4: true,
       duktape2_0: false,
       jerryscript2_3_0: false,
       graalvm19: true,
@@ -6158,6 +6159,7 @@ exports.tests = [
     category: '2022 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-class-static-block',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks',
     exec: function () {/*
     let ok = false;
     class A {
@@ -6188,7 +6190,7 @@ exports.tests = [
       firefox93: true,
       ie11: false,
       opera10_50: false,
-      safari12: false,
+      safari16_4: true,
       duktape2_0: false,
       graalvm21_3_3: graalvm.esStagingFlag,
       graalvm22_2: true,
