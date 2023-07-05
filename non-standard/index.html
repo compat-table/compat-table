@@ -123,7 +123,6 @@
 <th class="platform ie10 desktop obsolete" data-browser="ie10"><a href="#ie10" class="browser-name"><abbr title="Internet Explorer 10">IE 10</abbr></a></th>
 <th class="platform ie11 desktop" data-browser="ie11"><a href="#ie11" class="browser-name"><abbr title="Internet Explorer 11">IE 11</abbr></a></th>
 <th class="platform firefox91 desktop obsolete" data-browser="firefox91"><a href="#firefox91" class="browser-name"><abbr title="Firefox 91 Extended Support Release">FF 91 ESR</abbr></a></th>
-<th class="platform firefox101 desktop obsolete" data-browser="firefox101"><a href="#firefox101" class="browser-name"><abbr title="Firefox 101">FF 101</abbr></a></th>
 <th class="platform firefox102 desktop" data-browser="firefox102"><a href="#firefox102" class="browser-name"><abbr title="Firefox 102 Extended Support Release">FF 102 ESR</abbr></a></th>
 <th class="platform firefox103 desktop obsolete" data-browser="firefox103"><a href="#firefox103" class="browser-name"><abbr title="Firefox 103">FF 103</abbr></a></th>
 <th class="platform firefox104 desktop obsolete" data-browser="firefox104"><a href="#firefox104" class="browser-name"><abbr title="Firefox 104">FF 104</abbr></a></th>
@@ -136,9 +135,10 @@
 <th class="platform firefox111 desktop obsolete" data-browser="firefox111"><a href="#firefox111" class="browser-name"><abbr title="Firefox 111">FF 111</abbr></a></th>
 <th class="platform firefox112 desktop obsolete" data-browser="firefox112"><a href="#firefox112" class="browser-name"><abbr title="Firefox 112">FF 112</abbr></a></th>
 <th class="platform firefox113 desktop obsolete" data-browser="firefox113"><a href="#firefox113" class="browser-name"><abbr title="Firefox 113">FF 113</abbr></a></th>
-<th class="platform firefox114 desktop" data-browser="firefox114"><a href="#firefox114" class="browser-name"><abbr title="Firefox 114">FF 114</abbr></a></th>
-<th class="platform firefox115 desktop unstable" data-browser="firefox115"><a href="#firefox115" class="browser-name"><abbr title="Firefox 115 Beta">FF 115</abbr></a></th>
-<th class="platform firefox116 desktop unstable" data-browser="firefox116"><a href="#firefox116" class="browser-name"><abbr title="Firefox 116 Nightly">FF 116</abbr></a></th>
+<th class="platform firefox114 desktop obsolete" data-browser="firefox114"><a href="#firefox114" class="browser-name"><abbr title="Firefox 114">FF 114</abbr></a></th>
+<th class="platform firefox115 desktop" data-browser="firefox115"><a href="#firefox115" class="browser-name"><abbr title="Firefox 115">FF 115</abbr></a></th>
+<th class="platform firefox116 desktop unstable" data-browser="firefox116"><a href="#firefox116" class="browser-name"><abbr title="Firefox 116 Beta">FF 116</abbr></a></th>
+<th class="platform firefox117 desktop unstable" data-browser="firefox117"><a href="#firefox117" class="browser-name"><abbr title="Firefox 117 Nightly">FF 116</abbr></a></th>
 <th class="platform opera12_10 desktop obsolete" data-browser="opera12_10"><a href="#opera12_10" class="browser-name"><abbr title="Opera 12.10">OP 12.10</abbr></a></th>
 <th class="platform chrome102 desktop obsolete" data-browser="chrome102"><a href="#chrome102" class="browser-name"><abbr title="Chrome 102">CH 102</abbr></a></th>
 <th class="platform chrome103 desktop obsolete" data-browser="chrome103"><a href="#chrome103" class="browser-name"><abbr title="Chrome 103">CH 103</abbr></a></th>
@@ -262,7 +262,6 @@
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/57</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="firefox91" data-tally="0">0/57</td>
-<td class="tally obsolete" data-browser="firefox101" data-tally="0">0/57</td>
 <td class="tally" data-browser="firefox102" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="firefox103" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="firefox104" data-tally="0">0/57</td>
@@ -275,9 +274,10 @@
 <td class="tally obsolete" data-browser="firefox111" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="firefox112" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="firefox113" data-tally="0">0/57</td>
-<td class="tally" data-browser="firefox114" data-tally="0">0/57</td>
-<td class="tally unstable" data-browser="firefox115" data-tally="0">0/57</td>
+<td class="tally obsolete" data-browser="firefox114" data-tally="0">0/57</td>
+<td class="tally" data-browser="firefox115" data-tally="0">0/57</td>
 <td class="tally unstable" data-browser="firefox116" data-tally="0">0/57</td>
+<td class="tally unstable" data-browser="firefox117" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="chrome102" data-tally="0">0/57</td>
 <td class="tally obsolete" data-browser="chrome103" data-tally="0">0/57</td>
@@ -408,7 +408,6 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -421,9 +420,10 @@ return typeof SIMD !== &apos;undefined&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -546,7 +546,6 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -559,9 +558,10 @@ return typeof SIMD.Float32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -684,7 +684,6 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -697,9 +696,10 @@ return typeof SIMD.Int32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -822,7 +822,6 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -835,9 +834,10 @@ return typeof SIMD.Int16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -960,7 +960,6 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -973,9 +972,10 @@ return typeof SIMD.Int8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1098,7 +1098,6 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1111,9 +1110,10 @@ return typeof SIMD.Uint32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1236,7 +1236,6 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1249,9 +1248,10 @@ return typeof SIMD.Uint16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1374,7 +1374,6 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1387,9 +1386,10 @@ return typeof SIMD.Uint8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1512,7 +1512,6 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1525,9 +1524,10 @@ return typeof SIMD.Bool32x4 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1650,7 +1650,6 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1663,9 +1662,10 @@ return typeof SIMD.Bool16x8 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1788,7 +1788,6 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1801,9 +1800,10 @@ return typeof SIMD.Bool8x16 === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -1928,7 +1928,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -1941,9 +1940,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2068,7 +2068,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2081,9 +2080,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2208,7 +2208,6 @@ return simdSmallIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2221,9 +2220,10 @@ return simdSmallIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2348,7 +2348,6 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2361,9 +2360,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2488,7 +2488,6 @@ return simdBoolTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2501,9 +2500,10 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2628,7 +2628,6 @@ return simdBoolTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2641,9 +2640,10 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2768,7 +2768,6 @@ return simdAllTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2781,9 +2780,10 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -2908,7 +2908,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -2921,9 +2920,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3048,7 +3048,6 @@ return simdAllTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3061,9 +3060,10 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3188,7 +3188,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3201,9 +3200,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3328,7 +3328,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3341,9 +3340,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3468,7 +3468,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3481,9 +3480,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3608,7 +3608,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3621,9 +3620,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3748,7 +3748,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3761,9 +3760,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -3888,7 +3888,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -3901,9 +3900,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4028,7 +4028,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4041,9 +4040,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4168,7 +4168,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4181,9 +4180,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4308,7 +4308,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4321,9 +4320,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4448,7 +4448,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4461,9 +4460,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4588,7 +4588,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4601,9 +4600,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4728,7 +4728,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4741,9 +4740,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -4868,7 +4868,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -4881,9 +4880,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5008,7 +5008,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5021,9 +5020,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5148,7 +5148,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5161,9 +5160,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5288,7 +5288,6 @@ return simdBoolTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5301,9 +5300,10 @@ return simdBoolTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5428,7 +5428,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5441,9 +5440,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5568,7 +5568,6 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5581,9 +5580,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5708,7 +5708,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5721,9 +5720,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5848,7 +5848,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -5861,9 +5860,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -5988,7 +5988,6 @@ return simdAllTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6001,9 +6000,10 @@ return simdAllTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6128,7 +6128,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6141,9 +6140,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6268,7 +6268,6 @@ return simdIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6281,9 +6280,10 @@ return simdIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6408,7 +6408,6 @@ return simdIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6421,9 +6420,10 @@ return simdIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6548,7 +6548,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6561,9 +6560,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6688,7 +6688,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6701,9 +6700,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6828,7 +6828,6 @@ return simdFloatTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6841,9 +6840,10 @@ return simdFloatTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -6968,7 +6968,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -6981,9 +6980,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7108,7 +7108,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7121,9 +7120,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7248,7 +7248,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7261,9 +7260,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7388,7 +7388,6 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7401,9 +7400,10 @@ return simd32bitFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7528,7 +7528,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7541,9 +7540,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7668,7 +7668,6 @@ return simdSmallIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7681,9 +7680,10 @@ return simdSmallIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7808,7 +7808,6 @@ return simdFloatIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7821,9 +7820,10 @@ return simdFloatIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -7948,7 +7948,6 @@ return simdBoolIntTypes.every(function(type){
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -7961,9 +7960,10 @@ return simdBoolIntTypes.every(function(type){
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -8088,7 +8088,6 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -8101,9 +8100,10 @@ return [&apos;Float32x4&apos;,&apos;Int32x4&apos;,&apos;Int8x16&apos;,&apos;Uint
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -8226,7 +8226,6 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -8239,9 +8238,10 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -8363,7 +8363,6 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/4</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox91" data-tally="0">0/4</td>
-<td class="tally obsolete" data-browser="firefox101" data-tally="0">0/4</td>
 <td class="tally" data-browser="firefox102" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox103" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox104" data-tally="0">0/4</td>
@@ -8376,9 +8375,10 @@ return typeof SIMD.Float32x4.fromInt32x4 === &apos;function&apos; &amp;&amp; typ
 <td class="tally obsolete" data-browser="firefox111" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox112" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="firefox113" data-tally="0">0/4</td>
-<td class="tally" data-browser="firefox114" data-tally="0">0/4</td>
-<td class="tally unstable" data-browser="firefox115" data-tally="0">0/4</td>
+<td class="tally obsolete" data-browser="firefox114" data-tally="0">0/4</td>
+<td class="tally" data-browser="firefox115" data-tally="0">0/4</td>
 <td class="tally unstable" data-browser="firefox116" data-tally="0">0/4</td>
+<td class="tally unstable" data-browser="firefox117" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome102" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="chrome103" data-tally="0">0/4</td>
@@ -8501,7 +8501,6 @@ return typeof uneval === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -8514,9 +8513,10 @@ return typeof uneval === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -8647,7 +8647,6 @@ return &apos;toSource&apos; in Object.prototype
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -8660,9 +8659,10 @@ return &apos;toSource&apos; in Object.prototype
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -8785,7 +8785,6 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -8798,9 +8797,10 @@ return uneval({ toSource: function() { return &quot;pwnd!&quot; } }) === &quot;p
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -9009,7 +9009,6 @@ return true;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -9022,9 +9021,10 @@ return true;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -9148,7 +9148,6 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -9161,9 +9160,10 @@ return eval(&quot;x&quot;, { x: 2 }) === 2;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -9290,7 +9290,6 @@ return 'caller' in function(){};
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -9303,9 +9302,10 @@ return 'caller' in function(){};
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="yes obsolete" data-browser="opera12_10">Yes</td>
 <td class="yes obsolete" data-browser="chrome102">Yes</td>
 <td class="yes obsolete" data-browser="chrome103">Yes</td>
@@ -9434,7 +9434,6 @@ return (function () {}).arity === 0 &&
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -9447,9 +9446,10 @@ return (function () {}).arity === 0 &&
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -9580,7 +9580,6 @@ return f(1, 'boo');
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -9593,9 +9592,10 @@ return f(1, 'boo');
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="yes obsolete" data-browser="opera12_10">Yes</td>
 <td class="yes obsolete" data-browser="chrome102">Yes</td>
 <td class="yes obsolete" data-browser="chrome103">Yes</td>
@@ -9720,7 +9720,6 @@ return typeof Function.prototype.isGenerator === 'function';
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -9733,9 +9732,10 @@ return typeof Function.prototype.isGenerator === 'function';
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -9861,7 +9861,6 @@ return new C instanceof C;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="unknown obsolete" data-browser="firefox91">?</td>
-<td class="unknown obsolete" data-browser="firefox101">?</td>
 <td class="unknown" data-browser="firefox102">?</td>
 <td class="unknown obsolete" data-browser="firefox103">?</td>
 <td class="unknown obsolete" data-browser="firefox104">?</td>
@@ -9874,9 +9873,10 @@ return new C instanceof C;
 <td class="unknown obsolete" data-browser="firefox111">?</td>
 <td class="unknown obsolete" data-browser="firefox112">?</td>
 <td class="unknown obsolete" data-browser="firefox113">?</td>
-<td class="unknown" data-browser="firefox114">?</td>
-<td class="unknown unstable" data-browser="firefox115">?</td>
+<td class="unknown obsolete" data-browser="firefox114">?</td>
+<td class="unknown" data-browser="firefox115">?</td>
 <td class="unknown unstable" data-browser="firefox116">?</td>
+<td class="unknown unstable" data-browser="firefox117">?</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10003,7 +10003,6 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10016,9 +10015,10 @@ return typeof ({}).__count__ === 'number' &&
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10143,7 +10143,6 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10156,9 +10155,10 @@ return typeof ({}).__parent__ !== 'undefined';
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10293,7 +10293,6 @@ return executed;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10306,9 +10305,10 @@ return executed;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10433,7 +10433,6 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10446,9 +10445,10 @@ return typeof Array.slice === 'function' && Array.slice('abc').length === 3;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10573,7 +10573,6 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10586,9 +10585,10 @@ return typeof String.slice === 'function' && String.slice(123, 1) === "23";
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10715,7 +10715,6 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10728,9 +10727,10 @@ return a instanceof Array &amp;&amp; a[0] === 4 &amp;&amp; a[1] === 8;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10853,7 +10853,6 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -10866,9 +10865,10 @@ return [for (a of [1, 2, 3]) a * a] + &apos;&apos; === &apos;1,4,9&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -10991,7 +10991,6 @@ return (function(x)x)(1) === 1;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11004,9 +11003,10 @@ return (function(x)x)(1) === 1;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11129,7 +11129,6 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11142,9 +11141,10 @@ return typeof &lt;foo/&gt; === &quot;xml&quot;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11271,7 +11271,6 @@ return str === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11284,9 +11283,10 @@ return str === &quot;foobarbaz&quot;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11410,7 +11410,6 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11423,9 +11422,10 @@ return arr[1] === arr;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11582,7 +11582,6 @@ catch(e) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11595,9 +11594,10 @@ catch(e) {
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11760,7 +11760,6 @@ catch(e) {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11773,9 +11772,10 @@ catch(e) {
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -11937,7 +11937,6 @@ global.test((function () {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -11950,9 +11949,10 @@ global.test((function () {
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12077,7 +12077,6 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12090,9 +12089,10 @@ return g.next() === 4 &amp;&amp; g.next() === 8;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12222,7 +12222,6 @@ return passed;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12235,9 +12234,10 @@ return passed;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12378,7 +12378,6 @@ try {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12391,9 +12390,10 @@ try {
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12516,7 +12516,6 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12529,9 +12528,10 @@ return /\\w/(&quot;x&quot;)[0] === &quot;x&quot;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12655,7 +12655,6 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12668,9 +12667,10 @@ return /(?P&lt;name&gt;a)(?P=name)/.test(&quot;aa&quot;) &amp;&amp;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="yes obsolete" data-browser="opera12_10">Yes</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12793,7 +12793,6 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12806,9 +12805,10 @@ function () { return typeof String.prototype.quote === 'function' }())</script><
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -12929,7 +12929,6 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -12942,9 +12941,10 @@ function () { return 'foofoo'.replace('foo', 'bar', 'g') === 'barbar' }())</scri
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13067,7 +13067,6 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -13080,9 +13079,10 @@ function () { return typeof Date.prototype.toLocaleFormat === 'function' }())</s
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13213,7 +13213,6 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -13226,9 +13225,10 @@ return !brokenOnFirefox && !brokenOnIE10 && !brokenOnChrome;
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="yes obsolete" data-browser="opera12_10">Yes</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13351,7 +13351,6 @@ function () { return typeof Object.prototype.watch === 'function' }())</script><
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -13364,9 +13363,10 @@ function () { return typeof Object.prototype.watch === 'function' }())</script><
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13487,7 +13487,6 @@ function () { return typeof Object.prototype.unwatch === 'function' }())</script
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -13500,9 +13499,10 @@ function () { return typeof Object.prototype.unwatch === 'function' }())</script
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13623,7 +13623,6 @@ function () { return typeof Object.prototype.eval === 'function' }())</script></
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -13636,9 +13635,10 @@ function () { return typeof Object.prototype.eval === 'function' }())</script></
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13761,7 +13761,6 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -13774,9 +13773,10 @@ return typeof Object.observe === &apos;function&apos;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -13911,7 +13911,6 @@ try {
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -13924,9 +13923,10 @@ try {
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="yes obsolete" data-browser="opera12_10">Yes</td>
 <td class="yes obsolete" data-browser="chrome102">Yes</td>
 <td class="yes obsolete" data-browser="chrome103">Yes</td>
@@ -14051,7 +14051,6 @@ return 'lineNumber' in new Error();
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -14064,9 +14063,10 @@ return 'lineNumber' in new Error();
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -14191,7 +14191,6 @@ return 'columnNumber' in new Error();
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -14204,9 +14203,10 @@ return 'columnNumber' in new Error();
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -14331,7 +14331,6 @@ return 'fileName' in new Error();
 <td class="no obsolete" data-browser="ie10">No</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="yes obsolete" data-browser="firefox91">Yes</td>
-<td class="yes obsolete" data-browser="firefox101">Yes</td>
 <td class="yes" data-browser="firefox102">Yes</td>
 <td class="yes obsolete" data-browser="firefox103">Yes</td>
 <td class="yes obsolete" data-browser="firefox104">Yes</td>
@@ -14344,9 +14343,10 @@ return 'fileName' in new Error();
 <td class="yes obsolete" data-browser="firefox111">Yes</td>
 <td class="yes obsolete" data-browser="firefox112">Yes</td>
 <td class="yes obsolete" data-browser="firefox113">Yes</td>
-<td class="yes" data-browser="firefox114">Yes</td>
-<td class="yes unstable" data-browser="firefox115">Yes</td>
+<td class="yes obsolete" data-browser="firefox114">Yes</td>
+<td class="yes" data-browser="firefox115">Yes</td>
 <td class="yes unstable" data-browser="firefox116">Yes</td>
+<td class="yes unstable" data-browser="firefox117">Yes</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -14471,7 +14471,6 @@ return 'description' in new Error();
 <td class="yes obsolete" data-browser="ie10">Yes</td>
 <td class="yes" data-browser="ie11">Yes</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -14484,9 +14483,10 @@ return 'description' in new Error();
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -14608,7 +14608,6 @@ return 'description' in new Error();
 <td class="tally obsolete" data-browser="ie10" data-tally="0">0/2</td>
 <td class="tally" data-browser="ie11" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox91" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox101" data-tally="0">0/2</td>
 <td class="tally" data-browser="firefox102" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox103" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox104" data-tally="0">0/2</td>
@@ -14621,9 +14620,10 @@ return 'description' in new Error();
 <td class="tally obsolete" data-browser="firefox111" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox112" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="firefox113" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox114" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox115" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox114" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox115" data-tally="0">0/2</td>
 <td class="tally unstable" data-browser="firefox116" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox117" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome102" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="chrome103" data-tally="0">0/2</td>
@@ -14748,7 +14748,6 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -14761,9 +14760,10 @@ return typeof global === &apos;object&apos; &amp;&amp; global &amp;&amp; global 
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -14893,7 +14893,6 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -14906,9 +14905,10 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
@@ -15036,7 +15036,6 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="unknown obsolete" data-browser="ie10">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no obsolete" data-browser="firefox91">No</td>
-<td class="no obsolete" data-browser="firefox101">No</td>
 <td class="no" data-browser="firefox102">No</td>
 <td class="no obsolete" data-browser="firefox103">No</td>
 <td class="no obsolete" data-browser="firefox104">No</td>
@@ -15049,9 +15048,10 @@ return Object.getOwnPropertyNames(P) + &apos;&apos; === &quot;a,a,b,b&quot;;
 <td class="no obsolete" data-browser="firefox111">No</td>
 <td class="no obsolete" data-browser="firefox112">No</td>
 <td class="no obsolete" data-browser="firefox113">No</td>
-<td class="no" data-browser="firefox114">No</td>
-<td class="no unstable" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox114">No</td>
+<td class="no" data-browser="firefox115">No</td>
 <td class="no unstable" data-browser="firefox116">No</td>
+<td class="no unstable" data-browser="firefox117">No</td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome102">No</td>
 <td class="no obsolete" data-browser="chrome103">No</td>
