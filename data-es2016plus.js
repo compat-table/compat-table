@@ -7219,10 +7219,11 @@ exports.tests = [
     name: 'ArrayBuffer.prototype.transfer',
     category: '2024 features',
     significance: 'small',
-    spec: 'https://github.com/domenic/proposal-arraybuffer-transfer/',
+    spec: 'https://github.com/tc39/proposal-arraybuffer-transfer',
     subtests: [
       {
         name: 'ArrayBuffer.prototype.transfer()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer',
         exec: function () {/*
           const buffer1 = new Uint8Array([1, 2]).buffer;
           const buffer2 = buffer1.transfer();
@@ -7233,6 +7234,11 @@ exports.tests = [
           ie11: false,
           firefox10: false,
           firefox52: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'firefox-arraybuffer',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.arraybuffer_transfer</code> setting under <code>about:config</code>.'
+          },
           firefox122: true,
           chrome70: false,
           chrome126: true,
