@@ -6654,6 +6654,7 @@ exports.tests = [
           firefox68: false,
           firefox78: false,
           firefox91: true,
+          firefox116: false,
           safari15: true,
           chrome90: false,
           graalvm21_3_3: graalvm.esStagingFlag,

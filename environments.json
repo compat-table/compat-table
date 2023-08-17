@@ -1779,7 +1779,7 @@
     "short": "FF 91 ESR",
     "release": "2021-08-10",
     "retire": "2022-08-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox92": {
     "full": "Firefox 92",
@@ -1875,7 +1875,7 @@
     "short": "FF 103",
     "release": "2022-07-26",
     "retire": "2022-08-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox104": {
     "full": "Firefox 104",
@@ -1978,22 +1978,30 @@
     "short": "FF 116",
     "release": "2023-08-01",
     "retire": "2023-08-29",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox117": {
-    "full": "Firefox 117 Beta",
+    "full": "Firefox 117",
     "family": "SpiderMonkey",
     "short": "FF 117",
     "release": "2023-08-29",
     "retire": "2023-09-26",
-    "unstable": true
+    "obsolete": false
   },
   "firefox118": {
-    "full": "Firefox 118 Nightly",
+    "full": "Firefox 118 Beta",
     "family": "SpiderMonkey",
     "short": "FF 118",
     "release": "2023-09-26",
     "retire": "2023-10-24",
+    "unstable": true
+  },
+  "firefox119": {
+    "full": "Firefox 119 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 119",
+    "release": "2023-10-24",
+    "retire": "2023-11-21",
     "unstable": true
   },
   "opera7": {
