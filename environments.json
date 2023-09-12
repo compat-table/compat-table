@@ -3000,56 +3000,56 @@
     "family": "V8",
     "short": "CH 102",
     "release": "2022-05-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome103": {
     "full": "Chrome 103",
     "family": "V8",
     "short": "CH 103",
     "release": "2022-06-21",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome104": {
     "full": "Chrome 104",
     "family": "V8",
     "short": "CH 104",
     "release": "2022-08-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome105": {
     "full": "Chrome 105",
     "family": "V8",
     "short": "CH 105",
     "release": "2022-08-30",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome106": {
     "full": "Chrome 106",
     "family": "V8",
     "short": "CH 106",
     "release": "2022-09-27",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome107": {
     "full": "Chrome 107",
     "family": "V8",
     "short": "CH 107",
     "release": "2022-10-25",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome108": {
     "full": "Chrome 108",
     "family": "V8",
     "short": "CH 108",
     "release": "2022-11-29",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome109": {
     "full": "Chrome 109",
     "family": "V8",
     "short": "CH 109",
     "release": "2023-01-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome110": {
     "full": "Chrome 110",
@@ -3077,20 +3077,55 @@
     "family": "V8",
     "short": "CH 113",
     "release": "2023-04-26",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome114": {
-    "full": "Chrome 114 Beta",
+    "full": "Chrome 114",
     "family": "V8",
     "short": "CH 114",
     "release": "2023-05-24",
-    "unstable": true
+    "obsolete": true
   },
   "chrome115": {
-    "full": "Chrome 115 Canary",
+    "full": "Chrome 115",
     "family": "V8",
     "short": "CH 115",
     "release": "2023-07-12",
+    "obsolete": true
+  },
+  "chrome116": {
+    "full": "Chrome 116",
+    "family": "V8",
+    "short": "CH 116",
+    "release": "2023-08-15",
+    "obsolete": false
+  },
+  "chrome117": {
+    "full": "Chrome 117",
+    "family": "V8",
+    "short": "CH 117",
+    "release": "2023-09-12",
+    "obsolete": false
+  },
+  "chrome118": {
+    "full": "Chrome 118",
+    "family": "V8",
+    "short": "CH 118 Beta",
+    "release": "2023-10-10",
+    "unstable": true
+  },
+  "chrome119": {
+    "full": "Chrome 119",
+    "family": "V8",
+    "short": "CH 119 Dev",
+    "release": "2023-10-31",
+    "unstable": true
+  },
+  "chrome120": {
+    "full": "Chrome 120",
+    "family": "V8",
+    "short": "CH 120 Canary",
+    "release": "2023-10-31",
     "unstable": true
   },
   "edge12": {
@@ -3717,6 +3752,13 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.5",
     "release": "2023-05-18",
+    "obsolete": false
+  },
+  "safari16_6": {
+    "full": "Safari 16.6",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.6",
+    "release": "2023-07-24",
     "obsolete": false
   },
   "safaritp": {
@@ -6297,7 +6339,7 @@
     "equals": "chrome110",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2023-02-24",
     "short": "Deno 1.31",
@@ -6314,7 +6356,7 @@
     "equals": "chrome112",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2023-03-23",
     "short": "Deno 1.32",
@@ -6348,10 +6390,44 @@
     "equals": "chrome115",
     "family": "V8",
     "full": "Deno",
-    "obsolete": false,
+    "obsolete": true,
     "platformtype": "engine",
     "release": "2023-05-24",
     "short": "Deno 1.34",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_35": {
+    "equals": "chrome116",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2023-07-05",
+    "short": "Deno 1.35",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_36": {
+    "equals": "chrome116",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": false,
+    "platformtype": "engine",
+    "release": "2023-08-03",
+    "short": "Deno 1.36",
     "test_suites": [
       "es5",
       "es6",
@@ -6738,6 +6814,15 @@
     "platformtype": "mobile",
     "equals": "safari16_5",
     "release": "2023-05-18",
+    "obsolete": true
+  },
+  "ios16_6": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.6",
+    "platformtype": "mobile",
+    "equals": "safari16_6",
+    "release": "2023-07-24",
     "obsolete": false
   },
   "samsung1": {
@@ -6915,7 +7000,7 @@
     "platformtype": "mobile",
     "equals": "chrome99",
     "release": "2022-08-06",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung19": {
     "full": "Samsung Internet for Android 19",
@@ -6942,6 +7027,15 @@
     "platformtype": "mobile",
     "equals": "chrome110",
     "release": "2023-05-19",
+    "obsolete": true
+  },
+  "samsung22": {
+    "full": "Samsung Internet for Android 22",
+    "family": "Samsung",
+    "short": "Samsung 22",
+    "platformtype": "mobile",
+    "equals": "chrome111",
+    "release": "2023-07-14",
     "obsolete": false
   },
   "opera_mobile10_1": {
@@ -7464,7 +7558,7 @@
     "platformtype": "mobile",
     "equals": "chrome102",
     "release": "2022-06-30",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile71": {
     "full": "Opera Mobile for Android 71",
@@ -7473,7 +7567,7 @@
     "platformtype": "mobile",
     "equals": "chrome104",
     "release": "2022-09-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile72": {
     "full": "Opera Mobile for Android 72",
@@ -7509,7 +7603,7 @@
     "platformtype": "mobile",
     "equals": "chrome112",
     "release": "2023-05-17",
-    "obsolete": false
+    "obsolete": true
   },
   "opera_mobile76": {
     "full": "Opera Mobile for Android 76",
@@ -7518,6 +7612,15 @@
     "platformtype": "mobile",
     "equals": "chrome114",
     "release": "2023-06-26",
+    "obsolete": true
+  },
+  "opera_mobile77": {
+    "full": "Opera Mobile for Android 77",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 77",
+    "platformtype": "mobile",
+    "equals": "chrome115",
+    "release": "2023-09-01",
     "obsolete": false
   },
   "reactnative0_70_3": {
