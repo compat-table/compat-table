@@ -3281,28 +3281,191 @@ exports.tests = [
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-regexp-unicode-property-escapes',
     mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes',
-    exec: function () {/*
-    const regexGreekSymbol = /\p{Script=Greek}/u;
-    return regexGreekSymbol.test('π');
-  */},
-    res: {
-      babel6corejs2: true,
-      ie11: false,
-      firefox2: false,
-      firefox77: false,
-      firefox78: true,
-      opera10_50: false,
-      chrome59: chrome.harmony,
-      chrome64: true,
-      safari11_1: true,
-      safaritp: true,
-      duktape2_0: false,
-      jerryscript2_3_0: false,
-      graalvm19: true,
-      hermes0_7_0: false,
-      reactnative0_70_3: true,
-      rhino1_7_13: false
-    }
+    subtests: [
+      {
+        name: 'basic',
+        exec: function () {/*
+        const regexGreekSymbol = /\p{Script=Greek}/u;
+        return regexGreekSymbol.test('π');
+      */},
+        res: {
+          babel6corejs2: true,
+          ie11: false,
+          firefox2: false,
+          firefox77: false,
+          firefox78: true,
+          opera10_50: false,
+          chrome59: chrome.harmony,
+          chrome64: true,
+          safari11_1: true,
+          safaritp: true,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          graalvm19: true,
+          hermes0_7_0: false,
+          reactnative0_70_3: true,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Unicode 11',
+        // 2018	June 5
+        exec: function () {/*
+        return /\p{Extended_Pictographic}/u.test("\xA9") && /\p{Emoji}/u.test("🥰");
+      */},
+        res: {
+          chrome67: false,
+          chrome68: true,
+          firefox77: false,
+          firefox78: true,
+          safari14: false,
+          safari14_1: true,
+          node10_9: false,
+          node11_0: true,
+          duktape2_0: false,
+          ie11: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 12',
+        // 2019	March 5
+        exec: function () {/*
+        return /\p{Script=Elymaic}/u.test("\u{10fe0}") && /\p{Emoji}/u.test("🥱");
+      */},
+        res: {
+          chrome74: false,
+          chrome75: true,
+          firefox77: false,
+          firefox78: true,
+          safari14: false,
+          safari14_1: true,
+          node12_0: false,
+          node12_5: true,
+          duktape2_0: false,
+          ie11: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 12.1',
+        // 2019	May 7
+        exec: function () {/*
+        return /\p{Other_Symbol}/u.test("\u32FF");
+      */},
+        res: {
+          chrome74: false,
+          chrome75: true,
+          firefox77: false,
+          firefox78: true,
+          safari14: false,
+          safari14_1: true,
+          node12_0: false,
+          node12_5: true,
+          duktape2_0: false,
+          ie11: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 13',
+        // 2020	March 10
+        exec: function () {/*
+        return /\p{Script=Chorasmian}/u.test("\u{10fb0}") && /\p{Emoji}/u.test("🥲");
+      */},
+        res: {
+          chrome83: false,
+          chrome84: true,
+          firefox77: false,
+          firefox78: true,
+          safari14: false,
+          safari14_1: true,
+          node13_2: false,
+          node14_0: true,
+          duktape2_0: false,
+          ie11: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 14',
+        // 2021	September 14
+        exec: function () {/*
+        return /\p{Script=Vithkuqi}/u.test("\u{10570}") && /\p{Emoji}/u.test("🫠");
+      */},
+        res: {
+          ie11: false,
+          chrome97: false,
+          chrome98: true,
+          firefox95: false,
+          firefox96: true,
+          safari15_3: false,
+          safari15_4: true,
+          node16_11: false,
+          node17_0: false,
+          node17_2: true,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 15',
+        // 2022	September 13
+        exec: function () {/*
+        return /\p{Script=Kawi}/u.test("\u{11f00}") && /\p{Emoji}/u.test("🫨");
+      */},
+        res: {
+          ie11: false,
+          chrome109: false,
+          chrome110: true,
+          firefox109: false,
+          firefox110: true,
+          safari11_1: false,
+          safari16_6: false,
+          safaritp: true,
+          node0_10: false,
+          node16_11: false,
+          node18_3: false,
+          node19_0: false,
+          node19_2: true,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 15.1',
+        // 2023 September 12
+        exec: function () {/*
+        return /\p{Unified_Ideograph}/u.test("\u{2ebf0}");
+      */},
+        res: {
+          ie11: false,
+          chrome117: false,
+          node20_0: false,
+          firefox2: false,
+          firefox117: false,
+          safari11_1: false,
+          safaritp: false,
+          safari16_6: false,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
+        }
+      }
+    ]
   },
   {
     name: 'Asynchronous Iterators',
@@ -6780,7 +6943,7 @@ exports.tests = [
   },
   {
     name: 'RegExp `v` flag',
-    category: 'finished (stage 4)',
+    category: '2024 features',
     significance: 'small',
     spec: 'https://github.com/tc39/proposal-regexp-v-flag',
     subtests: [
@@ -6799,7 +6962,8 @@ exports.tests = [
           firefox115: false,
           firefox116: true,
           ie11: false,
-          safari16: false,
+          safari16_6: false,
+          safaritp: true,
         }
       },
       {
@@ -6817,7 +6981,8 @@ exports.tests = [
           firefox115: false,
           firefox116: true,
           ie11: false,
-          safari16: false,
+          safari16_6: false,
+          safaritp: true,
         }
       },
       {
@@ -6834,7 +6999,8 @@ exports.tests = [
           firefox115: false,
           firefox116: true,
           ie11: false,
-          safari16: false,
+          safari16_6: false,
+          safaritp: true,
         }
       },
       {
@@ -6854,7 +7020,26 @@ exports.tests = [
           firefox115: false,
           firefox116: true,
           ie11: false,
-          safari16: false,
+          safari16_6: false,
+          safaritp: true,
+        }
+      },
+      {
+        name: 'Unicode 15.1',
+        exec: function() {/*
+        return /^\p{RGI_Emoji}$/v.test("🐦‍🔥");
+      */},
+        res: {
+          chrome117: false,
+          node20_0: false,
+          firefox117: false,
+          safaritp: false,
+          safari16_6: false,
+          ie11: false,
+          duktape2_0: false,
+          jerryscript2_3_0: false,
+          hermes0_7_0: false,
+          rhino1_7_13: false,
         }
       }
     ]
@@ -6863,7 +7048,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', '2024 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
