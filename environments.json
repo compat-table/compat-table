@@ -3049,7 +3049,7 @@
     "family": "V8",
     "short": "CH 109",
     "release": "2023-01-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome110": {
     "full": "Chrome 110",
@@ -3103,15 +3103,29 @@
   "chrome117": {
     "full": "Chrome 117",
     "family": "V8",
-    "short": "CH 117 Beta",
+    "short": "CH 117",
     "release": "2023-09-12",
-    "unstable": true
+    "obsolete": false
   },
   "chrome118": {
     "full": "Chrome 118",
     "family": "V8",
-    "short": "CH 118 Dev",
+    "short": "CH 118 Beta",
     "release": "2023-10-10",
+    "unstable": true
+  },
+  "chrome119": {
+    "full": "Chrome 119",
+    "family": "V8",
+    "short": "CH 119 Dev",
+    "release": "2023-10-31",
+    "unstable": true
+  },
+  "chrome120": {
+    "full": "Chrome 120",
+    "family": "V8",
+    "short": "CH 120 Canary",
+    "release": "2023-10-31",
     "unstable": true
   },
   "edge12": {
