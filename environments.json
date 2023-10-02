@@ -3717,7 +3717,7 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16",
     "release": "2022-09-12",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari16_1": {
     "full": "Safari 16.1",
@@ -3752,13 +3752,20 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.5",
     "release": "2023-05-18",
-    "obsolete": false
+    "obsolete": true
   },
   "safari16_6": {
     "full": "Safari 16.6",
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.6",
     "release": "2023-07-24",
+    "obsolete": false
+  },
+  "safari17": {
+    "full": "Safari 17",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;17.0",
+    "release": "2023-09-26",
     "obsolete": false
   },
   "safaritp": {
@@ -6760,7 +6767,7 @@
     "platformtype": "mobile",
     "equals": "safari15_5",
     "release": "2022-05-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios16": {
     "full": "iOS Safari",
@@ -6823,6 +6830,15 @@
     "platformtype": "mobile",
     "equals": "safari16_6",
     "release": "2023-07-24",
+    "obsolete": true
+  },
+  "ios17": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 17.0",
+    "platformtype": "mobile",
+    "equals": "safari17",
+    "release": "2023-09-18",
     "obsolete": false
   },
   "samsung1": {
