@@ -320,28 +320,6 @@ exports.tests = [
       }
     },
     {
-      name: 'exists on intl object',
-      exec: function(){/*
-        return typeof Intl.NumberFormat === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
-    },
-    {
       name: 'creates new NumberFormat instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
