@@ -59,26 +59,24 @@ function closestString(possibilities, input) {
   return closest;
 }
 
+const testSuites = {};
+
 // let prototypes declared below in this file be initialized
 process.nextTick(function () {
-  var es5 = require('./data-es5');
-  es5.browsers = pickBy(environments, byTestSuite('es5'));
-  handle(es5);
-  var es6 = require('./data-es6');
-  es6.browsers = pickBy(environments, byTestSuite('es6'));
-  handle(es6);
-  var es2016plus = require('./data-es2016plus');
-  es2016plus.browsers = pickBy(environments, byTestSuite('es2016plus'));
-  handle(es2016plus);
-  var esnext = require('./data-esnext');
-  esnext.browsers = pickBy(environments, byTestSuite('esnext'));
-  handle(esnext);
-  var esintl = require('./data-esintl');
-  esintl.browsers = pickBy(environments, byTestSuite('esintl'));
-  handle(esintl);
-  var nonStandard = require('./data-non-standard');
-  nonStandard.browsers = pickBy(environments, byTestSuite('non-standard'));
-  handle(nonStandard);
+  [
+    'es5',
+	'es6',
+	'es2016plus',
+	'esnext',
+	'esintl',
+	'non-standard',
+  ].forEach(name => {
+    const testSuite = testSuites[name] = require(`./test-${name}`);
+    testSuite.browsers = pickBy(environments, byTestSuite(name));
+    testSuite.results = require(`./results-${name}`);
+
+    handle(testSuite);
+  });
 
   // ES6 compilers
   if (!useCompilers) {
@@ -104,6 +102,7 @@ process.nextTick(function () {
   var esprima = require('esprima');
   var espree = require('espree');
   var jshint = require('jshint');
+
   [
     {
       name: 'es5-shim',
@@ -113,11 +112,12 @@ process.nextTick(function () {
       compiler: String,
     },
   ].forEach(function(e){
-    Object.assign(es5, e);
-    es5.browsers = {};
-    es5.skeleton_file = 'es5/compiler-skeleton.html';
-    handle(es5);
+  	Object.assign(testSuites.es5, e);
+  	testSuites.es5.browsers = {};
+  	testSuites.es5.skeleton_file = 'es5/compiler-skeleton.html';
+    handle(testSuites.es5);
   });
+
   [
     {
       name: 'es6-shim',
@@ -301,11 +301,12 @@ process.nextTick(function () {
     },
     */
   ].forEach(function(e){
-    Object.assign(es6, e);
-    es6.browsers = {};
-    es6.skeleton_file = 'es6/compiler-skeleton.html';
-    handle(es6);
+    Object.assign(testSuites.es6, e);
+    testSuites.es6.browsers = {};
+    testSuites.es6.skeleton_file = 'es6/compiler-skeleton.html';
+    handle(testSuites.es6);
   });
+
   [
     {
       name: 'babel + core-js',
@@ -341,11 +342,12 @@ process.nextTick(function () {
       compiler: ts.transpile
     },
   ].forEach(function(e){
-    Object.assign(esnext, e);
-    esnext.browsers = {};
-    esnext.skeleton_file = 'esnext/compiler-skeleton.html';
-    handle(esnext);
+    Object.assign(testSuites.esnext, e);
+    testSuites.esnext.browsers = {};
+    testSuites.esnext.skeleton_file = 'esnext/compiler-skeleton.html';
+    handle(testSuites.esnext);
   });
+
   [
     {
       name: 'babel + core-js',
@@ -381,17 +383,16 @@ process.nextTick(function () {
       compiler: ts.transpile
     },
   ].forEach(function(e){
-    Object.assign(es2016plus, e);
-    es2016plus.browsers = {};
-    es2016plus.skeleton_file = 'es2016plus/compiler-skeleton.html';
-    handle(es2016plus);
+    Object.assign(testSuites.es2016plus, e);
+    testSuites.es2016plus.browsers = {};
+    testSuites.es2016plus.skeleton_file = 'es2016plus/compiler-skeleton.html';
+    handle(testSuites.es2016plus);
   });
 });
 
-
 function handle(options) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
-  var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler);
+  var html = dataToHtml(skeleton, options.browsers, options.tests, options.results, options.compiler);
 
   var result = replaceAndIndent(html, [
     ["<!-- NAME -->", [options.name]],
@@ -414,7 +415,7 @@ function handle(options) {
   }
 }
 
-function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
+function dataToHtml(skeleton, rawBrowsers, tests, results, compiler) {
   var $ = cheerio.load(skeleton);
   var head = $('table thead tr:last-child');
   var body = $('table tbody');
@@ -500,7 +501,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     );
   });
 
-  interpolateAllResults(tests, environments);
+  interpolateAllResults(tests, results, environments);
 
   // Now print the results.
   tests.forEach(function(t, testNum) {
@@ -599,6 +600,8 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       return cell;
     }
 
+    const testResults = results[t.name];
+
     // Print all the results for the subtests
     if ("subtests" in t) {
       t.subtests.forEach(function(subtest) {
@@ -625,14 +628,16 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
           );
         body.append(subtestRow);
 
+        const subtestResult = testResults[subtest.name];
+
         // Add all the result cells
-        Object.keys(subtest.res).forEach(function(browserId) {
+        Object.keys(subtestResult).forEach(function(browserId) {
           if (!environments[browserId]) {
             throw new Error(browserId + " is not found in \"environments.json\"\n- Did you mean \"" + closestString(Object.keys(browsers), browserId) + "\"?");
           }
         });
         Object.keys(browsers).forEach(function(browserId) {
-          var result = subtest.res[browserId];
+          var result = subtestResult[browserId];
 
           subtestRow.append(resultCell(
             browserId,
@@ -647,11 +652,10 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
     Object.keys(browsers).forEach(function(browserId) {
       // For supertests, calculate the tally and total
       if ("subtests" in t) {
-
           var tally = 0, outOf = 0, flaggedTally = 0;
 
           t.subtests.forEach(function(e) {
-            var result = e.res[browserId];
+            var result = testResults[e.name][browserId];
 
             tally += testValue(result) === true;
             flaggedTally += ['flagged','strict'].indexOf(testValue(result)) > -1;
@@ -673,7 +677,7 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler) {
       }
       // For single tests:
       else {
-        var result = t.res[browserId];
+        var result = testResults[browserId];
 
         testRow.append(resultCell(
           browserId,

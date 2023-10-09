@@ -1,0 +1,2700 @@
+{
+	"SIMD (Single Instruction, Multiple Data)": {
+		"basic support": {
+			"ie11": false,
+			"edge12": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs",
+				"note_html": "The feature has to be enabled via <code>--experimental-options --js.simdjs</code> flag"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Float32x4": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Int32x4": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Int16x8": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Int8x16": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Uint32x4": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Uint16x8": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Uint8x16": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Bool32x4": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Bool16x8": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Bool8x16": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.abs": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.add": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%integerType%.addSaturate": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.and": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%booleanType%.anyTrue": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%booleanType%.allTrue": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.check": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.equal": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.extractLane": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.greaterThan": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.greaterThanOrEqual": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.lessThan": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.lessThanOrEqual": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.mul": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.div": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.load": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.load1": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.load2": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.load3": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.max": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.maxNum": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.min": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.minNum": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.neg": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.not": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.notEqual": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.or": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.reciprocalApproximation": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.reciprocalSqrtApproximation": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.replaceLane": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.select": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%integerType%.shiftLeftByScalar": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%integerType%.shiftRightByScalar": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.shuffle": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.splat": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%floatType%.sqrt": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.store": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.store1": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.store2": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.store3": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.sub": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%integerType%.subSaturate": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.swizzle": {
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.xor": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.fromTIMDBits": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SIMD.%type%.fromTIMD": {
+			"ie11": false,
+			"edge16": false,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox63": false,
+			"opera10_50": false,
+			"chrome37": {
+				"val": false,
+				"note_id": "chrome-simd",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-simd\"</code> flag"
+			},
+			"chrome58": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"duktape2_0": false,
+			"graalvm19": {
+				"val": "flagged",
+				"note_id": "graalvm-simdjs"
+			},
+			"graalvm20": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"decompilation": {
+		"uneval, existence": {
+			"ie11": false,
+			"firefox2": true,
+			"firefox74": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": true,
+			"duktape2_0": false,
+			"graalvm19": false
+		},
+		"built-in \"toSource\" methods": {
+			"ie11": false,
+			"firefox2": true,
+			"firefox74": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"besen": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": true,
+			"duktape2_0": false,
+			"graalvm19": false
+		},
+		"\"toSource\" method as hook for uneval": {
+			"ie11": false,
+			"firefox2": true,
+			"firefox74": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": true,
+			"duktape2_0": false,
+			"graalvm19": false
+		},
+		"eval(uneval(value)) is functionally equivalent to value": {
+			"ie11": false,
+			"firefox2": true,
+			"firefox74": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"besen": null,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false,
+			"duktape2_0": false,
+			"graalvm19": false
+		}
+	},
+	"optional \"scope\" argument of \"eval\"": {
+		"ie11": false,
+		"firefox2": true,
+		"firefox3": false,
+		"firefox3_5": true,
+		"firefox4": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"function \"caller\" property": {
+		"ie7": true,
+		"firefox2": true,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": true,
+		"chrome7": true,
+		"safari3_1": true,
+		"konq4_4": true,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": true,
+		"android4_0": true,
+		"duktape2_0": false,
+		"graalvm19": true
+	},
+	"function \"arity\" property": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox7": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"function \"arguments\" property": {
+		"ie7": true,
+		"firefox2": true,
+		"opera7_5": true,
+		"opera10_10": true,
+		"opera10_50": true,
+		"chrome7": true,
+		"safari3_1": true,
+		"konq4_4": true,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": true,
+		"android4_0": true,
+		"duktape2_0": false,
+		"graalvm19": true,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-v8-compat",
+			"note_html": "Requires the <code>--experimental-options --js.v8-compat</code> flags."
+		}
+	},
+	"Function.prototype.isGenerator": {
+		"ie7": false,
+		"firefox2": false,
+		"firefox5": true,
+		"firefox57": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"class extends null": {
+		"ie11": false,
+		"safari10_1": true,
+		"safari11_1": false,
+		"safaritp": false,
+		"webkit": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"__count__": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox4": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"__parent__": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox4": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"__noSuchMethod__": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox44": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": {
+			"val": "flagged",
+			"note_id": "graalvm-nashorn-compat",
+			"note_html": "The feature has to be enabled via the <code>--nashorn-compat</code> flag."
+		},
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-nashorn-compat",
+			"note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+		}
+	},
+	"Array generics": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox70": {
+			"val": true,
+			"note_id": "firefox-not-nightly",
+			"note_html": "The feature is disabled only in Firefox Nightly builds."
+		},
+		"firefox71": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"String generics": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox67": true,
+		"firefox68": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Array comprehensions (JS 1.8 style)": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox44": true,
+		"firefox46": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Array comprehensions (ES draft style)": {
+		"ie11": false,
+		"firefox2": false,
+		"firefox30": true,
+		"firefox57": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Expression closures": {
+		"ie7": false,
+		"firefox2": false,
+		"firefox3": true,
+		"firefox59": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-nashorn-compat",
+			"note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+		}
+	},
+	"ECMAScript for XML (E4X)": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox17": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"\"for each..in\" loops": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox20": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-nashorn-compat",
+			"note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+		}
+	},
+	"Sharp variables": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox12": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": null,
+		"konq4_9": false,
+		"besen": null,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Iterator": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox57": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"__iterator__": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox57": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Generators (JS 1.8)": {
+		"ie7": false,
+		"firefox2": false,
+		"firefox3": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Generator comprehensions (JS 1.8 style)": {
+		"ie7": false,
+		"firefox2": false,
+		"firefox3": true,
+		"firefox46": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Generator comprehensions (ES draft style)": {
+		"ie11": false,
+		"firefox2": false,
+		"firefox30": true,
+		"firefox57": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"RegExp \"x\" flag": {
+		"ie7": false,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10": true,
+		"opera10_50": true,
+		"opera12_10": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Callable RegExp": {
+		"ie7": false,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10_10": true,
+		"chrome7": true,
+		"chrome11": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"RegExp named groups": {
+		"ie7": false,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10": true,
+		"opera10_50": true,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": null,
+		"konq4_9": true,
+		"besen": null,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"String.prototype.quote": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox37": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": null,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"String.prototype.replace flags": {
+		"ie11": false,
+		"firefox2": true,
+		"firefox49": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Date.prototype.toLocaleFormat": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Date.parse produces NaN for invalid dates": {
+		"ie11": false,
+		"firefox2": true,
+		"firefox3_6": false,
+		"firefox49": true,
+		"safari3_1": true,
+		"opera7_5": false,
+		"opera10_10": true,
+		"opera10_50": true,
+		"chrome77": false,
+		"konq4_3": true,
+		"besen": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"ejs": true,
+		"android4_0": true,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Object.prototype.watch": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox58": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"opera7_5": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Object.prototype.unwatch": {
+		"ie7": false,
+		"firefox2": true,
+		"firefox58": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Object.prototype.eval": {
+		"ie7": false,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"Object.observe": {
+		"ie11": false,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10_50": false,
+		"chrome36": true,
+		"chrome49": false,
+		"node0_10": true,
+		"android5_0": true,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"error \"stack\"": {
+		"ie7": false,
+		"ie11": true,
+		"firefox2": true,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": true,
+		"chrome7": true,
+		"safari3_1": false,
+		"safari7_1": true,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false,
+		"rhino1_7_14": true,
+		"phantom1_9": false,
+		"android4_0": true,
+		"duktape2_0": true,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": true
+	},
+	"error \"lineNumber\"": {
+		"ie7": false,
+		"firefox2": true,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": true,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-nashorn-compat",
+			"note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+		}
+	},
+	"error \"columnNumber\"": {
+		"ie7": false,
+		"firefox2": false,
+		"firefox17": true,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-experimental-options-js-nashorn-compat",
+			"note_html": "Requires the <code>--experimental-options --js.nashorn-compat</code> flags."
+		}
+	},
+	"error \"fileName\"": {
+		"ie7": false,
+		"firefox2": true,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true,
+		"phantom1_9": false,
+		"duktape2_0": true,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"graalvm19": false
+	},
+	"error \"description\"": {
+		"ie7": true,
+		"firefox2": false,
+		"opera7_5": false,
+		"opera10_10": false,
+		"opera10_50": false,
+		"chrome7": false,
+		"safari3_1": false,
+		"konq4_4": false,
+		"besen": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false,
+		"phantom1_9": false,
+		"duktape2_0": false,
+		"graalvm19": false
+	},
+	"global": {
+		"\"global\" global property is global object": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox53": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"safari10_1": false,
+			"safaritp": false,
+			"webkit": false,
+			"node0_10": true,
+			"node0_12": true,
+			"node4": true,
+			"node6": true,
+			"node6_5": true,
+			"node7": true,
+			"node7_6": true,
+			"node8": true,
+			"node8_3": true,
+			"node8_7": true,
+			"duktape2_0": false,
+			"duktape2_1": true,
+			"duktape2_5": false,
+			"graalvm19": true,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-global-property",
+				"note_html": "Requires the <code>--experimental-options --js.global-property</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"\"global\" global property has correct property descriptor": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox53": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"safaritp": false,
+			"safari10_1": false,
+			"webkit": false,
+			"node0_10": false,
+			"node0_12": false,
+			"node4": false,
+			"node6": false,
+			"node6_5": false,
+			"node7": false,
+			"node7_6": false,
+			"node8": false,
+			"node8_3": false,
+			"node8_7": false,
+			"duktape2_0": false,
+			"duktape2_1": true,
+			"duktape2_5": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-global-property",
+				"note_html": "Requires the <code>--experimental-options --js.global-property</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets (ES 2017 semantics)": {
+		"ie11": false,
+		"edge16": true,
+		"firefox2": false,
+		"firefox51": true,
+		"firefox56": true,
+		"firefox57": false,
+		"opera10_50": false,
+		"chrome51": true,
+		"chrome75": false,
+		"safari10": true,
+		"safari10_1": true,
+		"safari13": false,
+		"duktape2_0": true,
+		"graalvm19": true,
+		"graalvm20": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	}
+}

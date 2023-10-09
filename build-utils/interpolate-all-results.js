@@ -1,12 +1,14 @@
 var parseEnvsVersions = require("./parse-envs-versions");
 
-module.exports = function interpolateAllResults(tests, envs) {
+module.exports = function interpolateAllResults(tests, results, envs) {
   var envsTree = buildEnvsTree(envs);
 
   tests.forEach(function (t) {
+    const testResults = t.subtests ? results[t.name] : results; 
+
     // Calculate the result totals for tests which consist solely of subtests.
     [].concat(t.subtests || t).forEach(function (e) {
-      interpolateTestResults(e.res, envsTree);
+      interpolateTestResults(testResults[e.name], envsTree);
     });
   });
 };
