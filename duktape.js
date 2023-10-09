@@ -1,11 +1,15 @@
 /*
- *  Node.js test runner for running test-*.js tests with Duktape 'duk' command.
+ * Node.js test runner for running test-*.js tests with Duktape 'duk' command.
  *
- *  Reports discrepancies to console; fix them manually in results-*.js files.
- *  Expects a './duk' command in the current directory.  Example:
+ * Expects a './duk' command in the current directory
  *
- *    $ cp /path/to/duk ./duk
- *    $ node duktape.js
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
+ *
+ * $ cp /path/to/duk ./duk
+ * $ node duktape.js
+ * or
+ * $ node duktape.js -o
  */
 
 var child_process = require('child_process');
@@ -13,7 +17,7 @@ var runner_support = require('./runner_support');
 
 var dukCommand = './duk';
 
-// Key for .res (e.g. test.res.duktape2_0), automatic based on Duktape.version.
+// Key against which the results will be stored (e.g. .duktape2_0), automatic based on Duktape.version.
 var dukKey = (function () {
     var stdout = child_process.execFileSync(dukCommand, [ '-e', 'print(Duktape.version)' ], {
         encoding: 'utf-8'
@@ -25,7 +29,7 @@ var dukKey = (function () {
     }
     return 'duktape' + (Math.floor(dukVersion / 10000)) + '_' + (Math.floor(dukVersion / 100 % 100));
 })();
-console.log('Duktape result key is: test.res.' + dukKey);
+console.log('Duktape result key is: ' + dukKey);
 
 function dukRunner(testFilename) {
     try {

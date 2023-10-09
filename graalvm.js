@@ -1,15 +1,18 @@
 /*
- *  Node.js test runner for running `test-*.js` tests with GraalVM's `js` command.
-
- *  The runner will always pass the `--js.intl-402` flag needed to enable Intl support.
- *  Furthermore, it will try to figure out which tests require additional flags in order
- *  to pass.
- * 
- *  Reports discrepancies to console; fix them manually in `results-*.js` files.
- *  Expects GraalVM's `js` command in the path. * 
- *  Examples:
+ * Node.js test runner for running `test-*.js` tests with GraalVM's `js` command.
  *
- *    $ node graalvm.js
+ * The runner will always pass the `--js.intl-402` flag needed to enable Intl support.
+ * Furthermore, it will try to figure out which tests require additional flags in order
+ * to pass.
+ *
+ * Expects GraalVM's `js` command in the path
+ *
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
+ *
+ * $ node graalvm.js
+ * or
+ * $ node graalvm.js -u
  */
 
 var child_process = require('child_process');
@@ -27,7 +30,7 @@ var flagsForSuite = {
     'non-standard': [ [ '--experimental-options', '--js.nashorn-compat' ], [ '--experimental-options', '--js.v8-compat' ], [ '--experimental-options', '--js.global-property' ] ]
 };
 
-// Key for .res (e.g. test.res.graalvm), automatic based on GraalVM version.
+// Key against which the results will be stored (e.g. .graalvm), automatic based on GraalVM version.
 var graalvmKey = (function () {
     var stdout = child_process.execFileSync(jsCommand, [ '--version' ], {
         encoding: 'utf-8'
@@ -37,7 +40,7 @@ var graalvmKey = (function () {
     console.log('GraalVM version is: ' + version);
     return 'graalvm' + version.replace(/\.0(?:$|(?=\.))/g, '').replace(/\./g, '_');
 })();
-console.log('GraalVM result key is: test.res.' + graalvmKey);
+console.log('GraalVM result key is: ' + graalvmKey);
 
 function exec(flags, testFilename) {
     try {
