@@ -1,7 +1,7 @@
 /*
- *  Node.js test runner for running data-*.js tests with Hermes 'hermes' command.
+ *  Node.js test runner for running test-*.js tests with Hermes 'hermes' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console; fix them manually in results-*.js files.
  *  Expects 'hermes' to be already built.  Example:
  *
  *  $ node hermes.js --hermes-bin /path/to/hermes --suite suitename

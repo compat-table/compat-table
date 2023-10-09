@@ -1,11 +1,11 @@
 /*
- *  Node.js test runner for running `data-*.js` tests with GraalVM's `js` command.
+ *  Node.js test runner for running `test-*.js` tests with GraalVM's `js` command.
 
  *  The runner will always pass the `--js.intl-402` flag needed to enable Intl support.
  *  Furthermore, it will try to figure out which tests require additional flags in order
  *  to pass.
  * 
- *  Reports discrepancies to console; fix them manually in `data-*.js` files.
+ *  Reports discrepancies to console; fix them manually in `results-*.js` files.
  *  Expects GraalVM's `js` command in the path. * 
  *  Examples:
  *

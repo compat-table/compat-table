@@ -1,11 +1,11 @@
 /*
- *  Node.js test runner for running data-*.js tests with Nashorn 'jjs' command
+ *  Node.js test runner for running test-*.js tests with Nashorn 'jjs' command
  *  running in es6 mode (a.k.a.: jjs --language=es6).
  * 
  *  If the environment variable JAVA_HOME is defined it will use it to
  *  construct the path to 'jjs' as $JAVA_HOME/bin/jjs
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console; fix them manually in results-*.js files.
  *  Expects a 'jjs' command in the path.  Example:
  *
  *    $ node nashorn.js

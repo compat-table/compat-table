@@ -1,7 +1,7 @@
 /*
- *  Node.js test runner for running data-*.js tests with Duktape 'duk' command.
+ *  Node.js test runner for running test-*.js tests with Duktape 'duk' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console; fix them manually in results-*.js files.
  *  Expects a './duk' command in the current directory.  Example:
  *
  *    $ cp /path/to/duk ./duk

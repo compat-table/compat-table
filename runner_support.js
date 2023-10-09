@@ -231,7 +231,7 @@ exports.runTests = function runTests(runner, key, family, options) {
     }
 
     fs.readdirSync('.').forEach(function (filename) {
-        var datafile = /^data-(.*)\.js$/.exec(filename);
+        var datafile = /^test-(.*)\.js$/.exec(filename);
         if (!datafile) {
             return;
         }
@@ -245,12 +245,12 @@ exports.runTests = function runTests(runner, key, family, options) {
         console.log('**** ' + suitename + ' ****');
         console.log('');
 
-        var testsuite = require('./data-' + suitename + '.js');
+        var testsuite = require('./test-' + suitename + '.js');
         testsuite.tests.forEach(function (test) {
             runTest([ suitename ], test);
         });
     });
 
     console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-    console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+    console.log(testOutOfDate + ' tests are out of date (test-*.js file .res)');
 };

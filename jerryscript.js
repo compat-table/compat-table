@@ -1,7 +1,7 @@
 /*
- *  Node.js test runner for running data-*.js tests with JerryScript 'jerry' command.
+ *  Node.js test runner for running test-*.js tests with JerryScript 'jerry' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
+ *  Reports discrepancies to console; fix them manually in results-*.js files.
  *  Expects 'jerry' to be already built.  Example:
  *
  *    $ node jerryscript.js /path/to/jerry [suitename]
