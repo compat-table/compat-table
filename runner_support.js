@@ -197,7 +197,6 @@ exports.runTests = function runTests(runner, key, family, options) {
                 actual = 'skip';
             }
 
-
             if (actual !== 'skip') {
                 testCount++;
 
@@ -241,7 +240,8 @@ exports.runTests = function runTests(runner, key, family, options) {
 
         if (test.subtests) {
             test.subtests.forEach(function (subtest) {
-                if (values.update && !recordedResults[subtest.name]) recordedResults[subtest.name] = {};
+                // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
+                if (values.update && !recordedResults.hasOwnProperty(subtest.name)) recordedResults[subtest.name] = {};
 
                 runTest(parents.concat(test.name), subtest, recordedResults[subtest.name]);
             });
@@ -268,13 +268,10 @@ exports.runTests = function runTests(runner, key, family, options) {
         const results = require('./results-' + suitename);
 
         testsuite.tests.forEach(function (test) {
-            let result = results[test.name];
+            // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
+            if (values.update && !results.hasOwnProperty(test.name)) results[test.name] = {};
 
-            if (values.update && !result) {
-                result = results[test.name] = {};
-            }
-
-            runTest([ suitename ], test, result);
+            runTest([ suitename ], test, results[test.name]); // es2016plus, 'Object.prototype getter/setter methods'
         });
 
         if (values.update) {
