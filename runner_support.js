@@ -140,20 +140,30 @@ exports.runTests = function runTests(runner, key, family, options) {
                     script += createIterableHelper;
                 }
 
+                script += `var testCode = ${JSON.stringify(evalcode)};`;
+
                 if (/\basyncTestPassed\b/.test(evalcode)) {
-                    script += asyncTestHelperHead + '\n' + evalcode + '\n\n' + asyncTestHelperTail;
+                    script += `
+                        try {
+                            ${asyncTestHelperHead}
+                            eval(testCode);
+                            ${asyncTestHelperTail}
+                        } catch (e) {};`;
                 } else if (/\bglobal\.test\b/.test(evalcode)) {
-                    script += 'global.test = function (expression) {\n' +
-                              '    if (expression) {\n' +
-                              '        console.log("[SUCCESS]");\n' +
-                              '    }\n' +
-                              '}\n' +
-                              evalcode;
+                    script += `
+                        global.test = function (expression) {
+                            if (expression) console.log("[SUCCESS]");
+                        }
+                        try {
+                            eval(testCode);
+                        } catch (e) {}
+                    `;
                 } else {
-                    script += 'var result = ' + evalcode + ';\n' + 
-                              'if (result) {\n' + 
-                              '    print("[SUCCESS]");\n' +
-                              '}\n';
+                    script += `
+                        try {
+                            if (eval(testCode)) print("[SUCCESS]");
+                        } catch(e) {}
+                    `;
                 }
 
                 fs.writeFileSync(testFilename, script);
