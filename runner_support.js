@@ -240,11 +240,11 @@ exports.runTests = function runTests(runner, key, family, options) {
 
         if (test.subtests) {
             test.subtests.forEach(function (subtest) {
-                // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
-                if (values.update && !recordedResults.hasOwnProperty(subtest.name)) recordedResults[subtest.name] = {};
+            let result = recordedResults.hasOwnProperty(subtest.name) ? recordedResults[subtest.name] : null; // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
 
-                runTest(parents.concat(test.name), subtest, recordedResults[subtest.name]);
-            });
+            if (values.update && !result) result = recordedResults[subtest.name] = {};
+
+            runTest(parents.concat(test.name), subtest, result);
         }
     }
 
@@ -268,10 +268,11 @@ exports.runTests = function runTests(runner, key, family, options) {
         const results = require('./results-' + suitename);
 
         testsuite.tests.forEach(function (test) {
-            // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
-            if (values.update && !results.hasOwnProperty(test.name)) results[test.name] = {};
+            let result = results.hasOwnProperty(test.name) ? results[test.name] : null; // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
 
-            runTest([ suitename ], test, results[test.name]); // es2016plus, 'Object.prototype getter/setter methods'
+            if (values.update && !result) result = results[test.name] = {};
+
+            runTest([ suitename ], test, result);
         });
 
         if (values.update) {
