@@ -1,25 +1,5 @@
 var fs = require('fs');
-
-exports.createIterableHelper =
-'function __createIterableObject(arr, methods) {\n' +
-'    methods = methods || {};\n' +
-'    if (typeof Symbol !== "function" || !Symbol.iterator)\n' +
-'        return {};\n' +
-'    arr.length++;\n' +
-'    var iterator = {\n' +
-'        next: function() {\n' +
-'            return { value: arr.shift(), done: arr.length <= 0 };\n' +
-'        },\n' +
-'        "return": methods["return"],\n' +
-'        "throw": methods["throw"]\n' +
-'    };\n' +
-'    var iterable = {};\n' +
-'    iterable[Symbol.iterator] = function(){ return iterator; };\n' +
-'    return iterable;\n' +
-'}\n' +
-'if (typeof global !== "undefined") {\n' +
-'    global.__createIterableObject = __createIterableObject;\n' +
-'}\n';
+var createIterableHelper = require('./test-utils/testHelpers').createIterableHelper;
 
 exports.runTests = function runTests(runner, key, family, options) {
     options = options === undefined ? {} : options;
@@ -157,7 +137,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                               '}\n';
                 }
                 if (/\b__createIterableObject\b/.test(evalcode)) {
-                    script += exports.createIterableHelper;
+                    script += createIterableHelper;
                 }
 
                 if (/\basyncTestPassed\b/.test(evalcode)) {
