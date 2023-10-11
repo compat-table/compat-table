@@ -192,7 +192,11 @@ exports.runTests = function runTests(runner, key, family, options) {
 
                 fs.writeFileSync(testFilename, script);
 
-                actual = runner(testFilename, parents[0]);
+                try {
+                    actual = /^\[SUCCESS\]$/m.test(runner(testFilename, parents[0]));
+                } catch {
+                    actual = false;
+                }
             } else {
                 actual = 'skip';
             }

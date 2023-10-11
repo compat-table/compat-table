@@ -49,14 +49,4 @@ var rhinoKey = values.version ? values.version : (function () {
 })();
 console.log('rhino result key is: ' + rhinoKey);
 
-function rhinoRunner(testFilename) {
-    try {
-        var stdout = executeScript(testFilename);
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        return false;
-    }
-}
-
-runner_support.runTests(rhinoRunner, rhinoKey, 'Rhino');
+runner_support.runTests(executeScript, rhinoKey, 'Rhino');

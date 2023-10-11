@@ -32,15 +32,9 @@ var dukKey = (function () {
 console.log('Duktape result key is: ' + dukKey);
 
 function dukRunner(testFilename) {
-    try {
-        var stdout = child_process.execFileSync(dukCommand, [ testFilename ], {
-            encoding: 'utf-8'
-        });
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        return false;
-    }
+    return child_process.execFileSync(dukCommand, [ testFilename ], {
+        encoding: 'utf-8'
+    });
 }
 
 runner_support.runTests(dukRunner, dukKey, 'Duktape');

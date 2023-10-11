@@ -45,15 +45,9 @@ var jjsKey = (function () {
 console.log('jjs result key is: ' + jjsKey);
 
 function jjsRunner(testFilename) {
-    try {
-        var stdout = child_process.execFileSync(jjsCommand, [ '--language=es6', testFilename ], {
-            encoding: 'utf-8'
-        });
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        return false;
-    }
+    return child_process.execFileSync(jjsCommand, [ '--language=es6', testFilename ], {
+        encoding: 'utf-8'
+    });
 }
 
 runner_support.runTests(jjsRunner, jjsKey, 'Nashorn');

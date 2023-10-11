@@ -116,16 +116,9 @@ function testRunner(testFilename) {
         fs.writeFileSync(testFilename, traspilerStdout.toString());
     }
 
-    try {
-        var stdout = child_process.execFileSync(hermesCommand, processArgs, {
-            encoding: 'utf-8'
-        });
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        // console.log(e);
-        return false;
-    }
+    return child_process.execFileSync(hermesCommand, processArgs, {
+        encoding: 'utf-8'
+    });
 }
 
 function resultsMatch(expect, actual) {

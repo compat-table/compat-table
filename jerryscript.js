@@ -34,17 +34,9 @@ console.log('JerryScript result key is: ' + jerryKey);
 // jerryKey = "jerryscript2_4_0" // uncomment this line to test pre 2.4.0
 
 function jerryRunner(testFilename) {
-    try {
-        var stdout = child_process.execFileSync(jerryCommand, [ testFilename ], {
-            encoding: 'utf-8'
-        });
-        //console.log(stdout);
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        //console.log(e);
-        return false;
-    }
+    return child_process.execFileSync(jerryCommand, [ testFilename ], {
+        encoding: 'utf-8'
+    });
 }
 
 runner_support.runTests(jerryRunner, jerryKey, 'JerryScript', { suites: suites });
