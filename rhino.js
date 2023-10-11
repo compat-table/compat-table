@@ -60,4 +60,6 @@ function rhinoRunner(testFilename) {
     }
 }
 
-runner_support.runTests(rhinoRunner, rhinoKey, 'Rhino');
+runner_support.runTests(rhinoRunner, rhinoKey, 'Rhino', {
+	logCommand: 'print'
+});
