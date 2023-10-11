@@ -17,6 +17,7 @@ exports.runTests = function runTests(runner, key, family, options) {
     }
     var testName = options.testName;
     var bail = options.bail;
+    var logCommand = options.logCommand ?? 'console.log';
 
     var testCount = 0;
     var testSuccess = 0;
@@ -28,7 +29,7 @@ exports.runTests = function runTests(runner, key, family, options) {
 
     var asyncTestHelperHead =
         'function asyncTestPassed() {\n' +
-        '   print("[SUCCESS]");\n' +
+        '   ' + logCommand + '("[SUCCESS]");\n' +
         '}\n' +
         '\n' +
         'var jobQueue = [];\n' +
@@ -43,7 +44,7 @@ exports.runTests = function runTests(runner, key, family, options) {
         '    });\n' +
         '}\n';
     var asyncTestHelperTail =
-        'function flushQueue() {\n' +            
+        'function flushQueue() {\n' +
         '    var curTime = Date.now();\n' +
         '    var empty = true;\n' +
         '    for (var runTime in jobQueue) {\n' +
@@ -152,7 +153,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                 } else if (/\bglobal\.test\b/.test(evalcode)) {
                     script += `
                         global.test = function (expression) {
-                            if (expression) console.log("[SUCCESS]");
+                            if (expression) ${logCommand}("[SUCCESS]");
                         }
                         try {
                             eval(testCode);
@@ -161,7 +162,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                 } else {
                     script += `
                         try {
-                            if (eval(testCode)) print("[SUCCESS]");
+                            if (eval(testCode)) ${logCommand}("[SUCCESS]");
                         } catch(e) {}
                     `;
                 }
