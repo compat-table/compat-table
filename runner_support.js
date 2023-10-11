@@ -17,7 +17,7 @@ exports.runTests = function runTests(runner, key, family, options) {
     }
     var testName = options.testName;
     var bail = options.bail;
-    var logCommand = options.logCommand ?? 'console.log';
+    var logCommand = options.logCommand || 'console.log';
 
     var testCount = 0;
     var testSuccess = 0;
@@ -153,7 +153,9 @@ exports.runTests = function runTests(runner, key, family, options) {
                 } else if (/\bglobal\.test\b/.test(evalcode)) {
                     script += `
                         global.test = function (expression) {
-                            if (expression) ${logCommand}("[SUCCESS]");
+                            if (expression) {
+                                ${logCommand}("[SUCCESS]");
+                            }
                         }
                         try {
                             eval(testCode);
@@ -162,8 +164,10 @@ exports.runTests = function runTests(runner, key, family, options) {
                 } else {
                     script += `
                         try {
-                            if (eval(testCode)) ${logCommand}("[SUCCESS]");
-                        } catch(e) {}
+                            if (eval(testCode)) {
+                                ${logCommand}("[SUCCESS]");
+                            }
+                        } catch (e) {}
                     `;
                 }
 
