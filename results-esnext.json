@@ -1,0 +1,1427 @@
+{
+	"ShadowRealm": {
+		"ie11": false,
+		"firefox10": false,
+		"firefox52": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Legacy RegExp features in JavaScript": {
+		"RegExp \"lastMatch\"": {
+			"ie7": true,
+			"firefox2": true,
+			"opera7_5": false,
+			"opera10_10": false,
+			"opera10_50": true,
+			"chrome7": true,
+			"safari3_1": true,
+			"konq4_4": true,
+			"besen": false,
+			"rhino1_7_13": true,
+			"phantom1_9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true
+		},
+		"RegExp.$1-$9": {
+			"ie7": true,
+			"firefox2": true,
+			"opera7_5": true,
+			"opera10_10": true,
+			"opera10_50": true,
+			"chrome7": true,
+			"safari3_1": true,
+			"konq4_4": true,
+			"besen": false,
+			"rhino1_7_13": true,
+			"phantom1_9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true
+		}
+	},
+	"Generator function.sent Meta Property": {
+		"babel6corejs2": true,
+		"ie11": false,
+		"firefox2": false,
+		"opera10_50": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Class and Property Decorators": {
+		"class decorators": {
+			"babel6corejs2": {
+				"val": false,
+				"note_id": "babel-decorators-legacy",
+				"note_html": "Babel 6 still has no official support decorators, but you can use <a href='https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy'>this plugin</a>."
+			},
+			"typescript1corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"throw expressions": {
+		"logical": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"parameter initializers": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"arrow function bodies": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"conditionals": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"opera10_50": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Set methods": {
+		"Set.prototype.intersection": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"safari17": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.union": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"safari17": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.difference": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"safari17": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.symmetricDifference": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"safari17": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.isDisjointFrom": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20_1": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.isSubsetOf": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Set.prototype.isSupersetOf": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-experimental-options-js-new-set-methods",
+				"note_html": "Requires the <code>--experimental-options --js.new-set-methods</code> flags."
+			},
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"ArrayBuffer.prototype.transfer": {
+		"ArrayBuffer.prototype.transfer()": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"chrome70": false,
+			"safari12": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"ArrayBuffer.prototype.realloc()": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"chrome70": false,
+			"safari12": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Map.prototype.upsert": {
+		"Map.prototype.upsert": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"WeakMap.prototype.upsert": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Array.isTemplateObject": {
+		"babel6corejs2": false,
+		"babel7corejs3": {
+			"val": true,
+			"note_id": "babel-core-js",
+			"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"typescript1corejs2": {
+			"val": "needs-polyfill-or-native",
+			"note_id": "typescript-es6",
+			"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+		},
+		"typescript3_2corejs3": {
+			"val": true,
+			"note_id": "typescript-core-js",
+			"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"ie11": false,
+		"firefox10": false,
+		"firefox60": false,
+		"chrome77": false,
+		"duktape2_0": false,
+		"graalvm21_3_3": false,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Iterator Helpers": {
+		"instanceof Iterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"extends Iterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.from, iterable": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.from, iterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.asIndexedPairs": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.drop": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.every": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.filter": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.find": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.flatMap": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.forEach": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.map": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.reduce": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.some": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.take": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype.toArray": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Iterator.prototype[@@toStringTag]": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"instanceof AsyncIterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"extends AsyncIterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.from, async iterable": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.from, iterable": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.from, iterator": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.asIndexedPairs": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.drop": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.every": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.filter": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.find": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.flatMap": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.forEach": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.map": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.reduce": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.some": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.take": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype.toArray": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AsyncIterator.prototype[@@toStringTag]": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"chrome77": false,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	}
+}

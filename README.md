@@ -8,9 +8,12 @@ ECMAScript compatibility tables
 Editing the tests
 -----------------
 
-Edit the `data-es5.js`, `data-es6.js`, `data-esnext.js`, or `data-non-standard.js` files to adjust the tests and their recorded browser results. Run `node build.js` to build the HTML files from these JavaScript sources.
+Edit the `test-*.js` files to add/modify/remove tests.
+Edit the `results-*.json` files add/modify/remove test results per environment.
+Run `node build.js` to build the Compat Table HTML files the combined test-*.js and results-*.json files.
 
 The ES6 tests themselves should be written in pure ES3, *except* for the sole ES6 feature being tested (as well as any ES5 features strictly required to use the ES6 feature). ES Next tests may use any ES5 features that they wish, and only the ES6 features strictly required to use the ES Next feature.
+Each (sub)test needs to have unique name. This name is also used to store the results against, so modifying a (sub)test name also requires remapping of the already recorded results for that test!
 
 The test code is placed in multi-line comments (as in [this hack](http://tomasz.janczuk.org/2013/05/multi-line-strings-in-javascript-and.html)), so that Node.js can parse the data scripts without throwing syntax errors when encountering features it does not support. The `build.js` script will wrap the code in an `eval` call inside a `try`, so the tests themselves do not need to catch errors that non-supporting platforms may throw.
 

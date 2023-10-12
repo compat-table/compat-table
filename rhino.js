@@ -1,14 +1,18 @@
 /*
- *  Node.js test runner for running data-*.js tests with Rhino's interpreter
- *  running in es6 mode (a.k.a.: -version 200).
- * 
- *  If the environment variable JAVA_HOME is defined it will use it to
+ * Node.js test runner for running test-*.js tests with Rhino's interpreter
+ * running in es6 mode (a.k.a.: -version 200).
+ *
+ * If the environment variable JAVA_HOME is defined it will use it to
  *  construct the path to 'java' as $JAVA_HOME/bin/java
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects a 'rhino.jar' file in this directory.  Example:
+ * Expects a 'rhino.jar' file in this directory
  *
- *    $ node rhino.js
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
+ *
+ * $ node rhino.js
+ * or
+ * $ node rhino.js -u
  */
 
 var fs = require('fs');
@@ -31,8 +35,8 @@ function executeScript(scriptName) {
     });
 }
 
-// Key for .res (e.g. test.res.rhino1_7_13), automatic based on rhino version.
-var rhinoKey = (function () {
+// Key against which the results will be stored (e.g. .rhino1_7_13), automatic based on rhino version.
+var rhinoKey = values.version ? values.version : (function () {
     var script = 'print(org.mozilla.javascript.ImplementationVersion.get());\n' +
                  'quit()\n';
 
@@ -43,16 +47,6 @@ var rhinoKey = (function () {
     var match = stdout.match(/Rhino (\d+)\.(\d+)\.(\d+)/);
     return 'rhino' + match[1] + "_" + match[2] + "_" + match[3];
 })();
-console.log('rhino result key is: test.res.' + rhinoKey);
+console.log('rhino result key is: ' + rhinoKey);
 
-function rhinoRunner(testFilename) {
-    try {
-        var stdout = executeScript(testFilename);
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        return false;
-    }
-}
-
-runner_support.runTests(rhinoRunner, rhinoKey, 'Rhino');
+runner_support.runTests(executeScript, rhinoKey, 'Rhino');

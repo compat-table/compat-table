@@ -1,14 +1,18 @@
 /*
- *  Node.js test runner for running data-*.js tests with Nashorn 'jjs' command
- *  running in es6 mode (a.k.a.: jjs --language=es6).
- * 
- *  If the environment variable JAVA_HOME is defined it will use it to
- *  construct the path to 'jjs' as $JAVA_HOME/bin/jjs
+ * Node.js test runner for running test-*.js tests with Nashorn 'jjs' command
+ * running in es6 mode (a.k.a.: jjs --language=es6).
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects a 'jjs' command in the path.  Example:
+ * If the environment variable JAVA_HOME is defined it will use it to
+ * construct the path to 'jjs' as $JAVA_HOME/bin/jjs
  *
- *    $ node nashorn.js
+ * Expects a 'jjs' command in the path
+ *
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
+ *
+ * $ node nashorn.js
+ * or
+ * $ node nashorn.js -u
  */
 
 var fs = require('fs');
@@ -25,7 +29,7 @@ if (process.env.JAVA_HOME) {
     jjsCommand = path.resolve(jdkBin, 'jjs');
 }
 
-// Key for .res (e.g. test.res.nashorn), automatic based on nashorn version.
+// Key against which the results will be stored (e.g. .nashorn), automatic based on nashorn version.
 var jjsKey = (function () {
     var script = 'print(java.lang.System.getProperty("java.specification.version"));\n' +
                  'quit()\n';
@@ -38,18 +42,12 @@ var jjsKey = (function () {
     console.log('jjs version is: ' + stdout);
     return 'nashorn' + stdout.replace('.', '_');
 })();
-console.log('jjs result key is: test.res.' + jjsKey);
+console.log('jjs result key is: ' + jjsKey);
 
 function jjsRunner(testFilename) {
-    try {
-        var stdout = child_process.execFileSync(jjsCommand, [ '--language=es6', testFilename ], {
-            encoding: 'utf-8'
-        });
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        return false;
-    }
+    return child_process.execFileSync(jjsCommand, [ '--language=es6', testFilename ], {
+        encoding: 'utf-8'
+    });
 }
 
 runner_support.runTests(jjsRunner, jjsKey, 'Nashorn');

@@ -1,7 +1,3 @@
-var common = require('./data-common');
-
-var firefox = common.firefox;
-
 exports.name = 'ES Intl';
 exports.target_file = 'esintl/index.html';
 exports.skeleton_file = 'esintl/skeleton.html';
@@ -16,45 +12,13 @@ exports.tests = [
       name: 'exists on global',
       exec: function(){/*
         return typeof Intl === 'object';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'has prototype of Object',
       exec: function(){/*
         return Intl.constructor === Object;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     }
   ],
 },
@@ -67,71 +31,23 @@ exports.tests = [
       name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.Collator === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'creates new Collator instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.Collator() instanceof Intl.Collator;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'constructor called without new creates instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.Collator() instanceof Intl.Collator;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling Collator with Collator instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -146,7 +62,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,
@@ -178,23 +98,7 @@ exports.tests = [
         } catch(e) {
           return false;
         }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome29: true,
-        safari10_1: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'rejects invalid language tags',
@@ -218,19 +122,7 @@ exports.tests = [
         } catch(e) {
           return true;
         }
-      */},
-      res: {
-        edge18: false,
-        firefox76: true,
-        chrome81: true,
-        safari14: false,
-        duktape2_0: false,
-        graalvm19: false,
-        graalvm20_1: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -243,23 +135,7 @@ exports.tests = [
       name: 'exists on Collator prototype',
       exec: function(){/*
         return typeof Intl.Collator().compare === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     }
   ],
 },
@@ -272,23 +148,7 @@ exports.tests = [
       name: 'exists on Collator prototype',
       exec: function(){/*
         return typeof Intl.Collator().resolvedOptions === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     }
   ],
 },
@@ -301,93 +161,23 @@ exports.tests = [
       name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.NumberFormat === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
-    },
-    {
-      name: 'exists on intl object',
-      exec: function(){/*
-        return typeof Intl.NumberFormat === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'creates new NumberFormat instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.NumberFormat() instanceof Intl.NumberFormat;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'constructor called without new creates instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.NumberFormat() instanceof Intl.NumberFormat;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling NumberFormat with NumberFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -402,7 +192,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,
@@ -434,23 +228,7 @@ exports.tests = [
         } catch(e) {
           return false;
         }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome29: true,
-        safari10_1: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'rejects invalid language tags',
@@ -474,18 +252,7 @@ exports.tests = [
         } catch(e) {
           return true;
         }
-      */},
-      res: {
-        edge18: false,
-        firefox76: true,
-        chrome81: true,
-        safari14: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -498,71 +265,23 @@ exports.tests = [
       name: 'exists on intl object',
       exec: function(){/*
         return typeof Intl.DateTimeFormat === 'function';
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'creates new DateTimeFormat instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.3.1',
       exec: function(){/*
         return new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'constructor called without new creates instances',
       spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.2.1',
       exec: function(){/*
         return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -577,7 +296,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,
@@ -609,23 +332,7 @@ exports.tests = [
         } catch(e) {
           return false;
         }
-      */},
-      res: {
-        ie11: true,
-        edge12: true,
-        firefox2: false,
-        firefox29: firefox.nomob,
-        firefox56: true,
-        chrome29: true,
-        safari10_1: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'rejects invalid language tags',
@@ -649,48 +356,14 @@ exports.tests = [
         } catch(e) {
           return true;
         }
-      */},
-      res: {
-        edge18: false,
-        firefox76: true,
-        chrome81: true,
-        duktape2_0: false,
-        graalvm19: false,
-        graalvm20_1: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     },
     {
       name: 'resolvedOptions().timeZone defaults to the host environment',
       exec: function () {/*
         var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         return tz !== void undefined && tz.length > 0;
-      */},
-      res: {
-        ie9: false,
-        edge12: false,
-        edge14: true,
-        firefox2: false,
-        firefox52: true,
-        chrome24: null,
-        chrome29: true,
-        safari3_1: false,
-        safari6: null,
-        safari7: false,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        opera12: null,
-        android4_0: null,
-        ios7: false,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'accepts IANA timezone names',
@@ -704,23 +377,7 @@ exports.tests = [
         } catch (e) {
           return false;
         }
-      */},
-      res: {
-        ie9: false,
-        edge12: false,
-        edge14: true,
-        firefox2: false, // Firefox bug #1266290
-        firefox52: true,
-        chrome24: true,
-        safari10: true,
-        opera10_50: false,
-        node0_12: true,
-        duktape2_0: false,
-        graalvm19: true,
-        hermes0_7_0: false,
-        reactnative0_70_3: true,
-        rhino1_7_13: false
-      }
+      */}
     }
   ],
 },
@@ -733,27 +390,7 @@ exports.tests = [
       name: 'exists on String prototype',
       exec: function(){/*
         return typeof String.prototype.localeCompare === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -766,27 +403,7 @@ exports.tests = [
       name: 'exists on Number prototype',
       exec: function(){/*
         return typeof Number.prototype.toLocaleString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -799,27 +416,7 @@ exports.tests = [
       name: 'exists on Array prototype',
       exec: function(){/*
         return typeof Array.prototype.toLocaleString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -832,27 +429,7 @@ exports.tests = [
       name: 'exists on Object prototype',
       exec: function(){/*
         return typeof Object.prototype.toLocaleString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -865,27 +442,7 @@ exports.tests = [
       name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -898,27 +455,7 @@ exports.tests = [
       name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleDateString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },
@@ -931,27 +468,7 @@ exports.tests = [
       name: 'exists on Date prototype',
       exec: function(){/*
         return typeof Date.prototype.toLocaleTimeString === 'function';
-      */},
-      res: {
-        ie9: true,
-        edge12: true,
-        firefox2: true,
-        chrome22: true,
-        safari3_1: true,
-        opera10_50: true,
-        opera12: true,
-        ios7: true,
-        node0_10: true,
-        android4_0: true,
-        duktape2_0: true,
-        nashorn1_8: true,
-        nashorn9: true,
-        nashorn10: true,
-        graalvm19: true,
-        hermes0_7_0: true,
-        reactnative0_70_3: true,
-        rhino1_7_13: true
-      }
+      */}
     }
   ],
 },

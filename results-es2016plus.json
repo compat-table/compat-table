@@ -1,0 +1,6595 @@
+{
+	"exponentiation (**) operator": {
+		"basic support": {
+			"tr": true,
+			"babel6corejs2": true,
+			"closure": true,
+			"typescript1corejs2": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge14": true,
+			"firefox2": false,
+			"firefox42": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox52": true,
+			"opera10_50": false,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome52": true,
+			"safari10_1": true,
+			"duktape2_0": true,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"assignment": {
+			"tr": true,
+			"babel6corejs2": true,
+			"closure": true,
+			"typescript1corejs2": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge14": true,
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox52": true,
+			"opera10_50": false,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome52": true,
+			"safari10_1": true,
+			"duktape2_0": true,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"early syntax error for unary negation without parens": {
+			"babel6corejs2": true,
+			"closure": true,
+			"ie11": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome52": true,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		}
+	},
+	"Array.prototype.includes": {
+		"Array.prototype.includes": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"safari9": true,
+			"chrome47": true,
+			"ie11": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox43": true,
+			"opera10_50": false,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"Array.prototype.includes handles sparse arrays": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"safari9": true,
+			"chrome47": true,
+			"ie11": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox43": true,
+			"firefox99": false,
+			"firefox102": true,
+			"opera10_50": false,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"Array.prototype.includes is generic": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20180402": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"safari9": true,
+			"chrome47": true,
+			"ie11": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox43": true,
+			"opera10_50": false,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"%TypedArray%.prototype.includes": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"chrome47": true,
+			"ie11": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox43": true,
+			"opera10_50": false,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"generator functions can't be used with \"new\"": {
+		"ie11": false,
+		"edge13": true,
+		"firefox2": false,
+		"firefox43": true,
+		"opera10_50": false,
+		"chrome50": true,
+		"safari10": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"generator throw() caught by inner generator": {
+		"babel7corejs3": true,
+		"closure": false,
+		"closure20180319": true,
+		"typescript1corejs2": {
+			"val": true,
+			"note_id": "typescript-downlevel-iteration",
+			"note_html": "Requires the <code>downlevelIteration</code> compile option."
+		},
+		"ie11": false,
+		"edge14": true,
+		"firefox2": false,
+		"firefox27": true,
+		"opera10_50": false,
+		"chrome39": true,
+		"node0_12": "flagged",
+		"node4": true,
+		"safari10": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": true
+	},
+	"strict fn w/ non-strict non-simple params is error": {
+		"babel7corejs3": true,
+		"ie11": false,
+		"edge12": true,
+		"firefox2": false,
+		"firefox52": true,
+		"opera10_50": false,
+		"chrome47": true,
+		"safari10": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"nested rest destructuring, declarations": {
+		"babel6corejs2": true,
+		"closure": true,
+		"ie11": false,
+		"edge13": {
+			"val": "flagged",
+			"note_id": "edge-experimental-flag",
+			"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+		},
+		"edge14": true,
+		"firefox2": false,
+		"firefox47": true,
+		"opera10_50": false,
+		"chrome49": true,
+		"safari10_1": true,
+		"typescript1corejs2": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"nested rest destructuring, parameters": {
+		"babel6corejs2": true,
+		"closure": true,
+		"ie11": false,
+		"edge13": {
+			"val": "flagged",
+			"note_id": "edge-experimental-flag",
+			"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+		},
+		"edge14": true,
+		"firefox2": false,
+		"firefox47": true,
+		"opera10_50": false,
+		"typescript1corejs2": true,
+		"chrome49": true,
+		"safari10_1": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"Proxy, \"enumerate\" handler removed": {
+		"ie11": false,
+		"edge15": true,
+		"firefox2": false,
+		"firefox18": true,
+		"firefox25": false,
+		"firefox47": true,
+		"opera10_50": false,
+		"chrome50": true,
+		"safari10": true,
+		"duktape2_0": true,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"Proxy internal calls, Array.prototype.includes": {
+		"firefox2": false,
+		"firefox43": true,
+		"opera10_50": false,
+		"chrome49": true,
+		"ie11": false,
+		"edge14": true,
+		"safari10": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"Object static methods": {
+		"Object.values": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"firefox2": false,
+			"firefox45": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox47": true,
+			"opera10_50": false,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome54": true,
+			"ie11": false,
+			"edge14": true,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"Object.entries": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"firefox2": false,
+			"firefox45": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox47": true,
+			"opera10_50": false,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome54": true,
+			"ie11": false,
+			"edge14": true,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"Object.getOwnPropertyDescriptors": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"es7shim": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge15": true,
+			"chrome51": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome54": true,
+			"firefox2": false,
+			"firefox50": true,
+			"opera10_50": false,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"Object.getOwnPropertyDescriptors doesn't provide undefined descriptors": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge15": true,
+			"firefox2": false,
+			"firefox50": true,
+			"opera10_50": false,
+			"chrome54": true,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"String padding": {
+		"String.prototype.padStart": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"es7shim": true,
+			"firefox2": false,
+			"firefox48": true,
+			"opera10_50": false,
+			"ie11": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome57": true,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"String.prototype.padEnd": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"es7shim": true,
+			"firefox2": false,
+			"firefox48": true,
+			"opera10_50": false,
+			"ie11": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome57": true,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"trailing commas in function syntax": {
+		"in parameter lists": {
+			"babel6corejs2": true,
+			"closure": true,
+			"typescript2corejs2": true,
+			"ie11": false,
+			"edge14": true,
+			"chrome57": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome58": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"in argument lists": {
+			"babel6corejs2": true,
+			"closure": true,
+			"typescript2corejs2": true,
+			"ie11": false,
+			"edge14": true,
+			"chrome57": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome58": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"async functions": {
+		"return": {
+			"tr": true,
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"throw": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"no line break between async and function": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs3": true,
+			"closure": true,
+			"typescript1corejs2": null,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"no \"prototype\" property": {
+			"tr": null,
+			"babel6corejs2": null,
+			"closure": false,
+			"typescript1corejs2": false,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"await": {
+			"tr": true,
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"await, rejection": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"must await a value": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs3": true,
+			"closure": true,
+			"typescript1corejs2": null,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"can await non-Promise values": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"cannot await in parameters": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs3": true,
+			"closure": false,
+			"closure20200614": true,
+			"typescript1corejs2": null,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"async methods, object literals": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"async methods, classes": {
+			"tr": null,
+			"babel6corejs2": null,
+			"babel7corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"async arrow functions in methods, classes": {
+			"tr": true,
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10": false,
+			"safari10_1": false,
+			"safari11": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"async arrow functions": {
+			"tr": true,
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-regenerator",
+				"note_html": "This feature requires native generators or <code>regenerator-runtime</code>, it's a part of <code>babel-polyfill</code> or <code>babel-runtime</code>."
+			},
+			"closure": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-downlevel-iteration",
+				"note_html": "Requires the <code>downlevelIteration</code> compile option."
+			},
+			"chrome52": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome55": true,
+			"ie11": false,
+			"edge13": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"correct prototype chain": {
+			"tr": null,
+			"babel6corejs2": null,
+			"closure": false,
+			"typescript1corejs2": false,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"async function prototype, Symbol.toStringTag": {
+			"tr": null,
+			"babel6corejs2": null,
+			"closure": false,
+			"typescript1corejs2": false,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": false,
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"async function constructor": {
+			"tr": null,
+			"babel6corejs2": null,
+			"closure": false,
+			"typescript1corejs2": false,
+			"chrome52": null,
+			"chrome55": true,
+			"ie11": false,
+			"edge13": false,
+			"edge14": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge15": true,
+			"firefox2": false,
+			"firefox52": true,
+			"opera10_50": false,
+			"safari10_1": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"shared memory and atomics": {
+		"SharedArrayBuffer": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre",
+				"note_html": "The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs."
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre",
+				"note_html": "The feature was <a href=\"https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/\">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs. It can be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox77": {
+				"val": false,
+				"note_id": "fx-shared-memory-esr-disable",
+				"note_html": "The feature was intentionally disabled to prepare for Firefox 78 ESR"
+			},
+			"firefox79": {
+				"val": true,
+				"note_id": "fx-shared-memory-cors-isolation",
+				"note_html": "The feature is available with <a href=\"https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/\">properly set CORS isolation headers</a> or via enabling <code>dom.postMessage.sharedArrayBuffer.bypassCOOP_COEP.insecure.enabled</code> setting under <code>about:config</code>"
+			},
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre",
+				"note_html": "The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs."
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre",
+				"note_html": "The feature was <a href=\"https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/\">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs."
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SharedArrayBuffer[Symbol.species]": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox52": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox77": {
+				"val": false,
+				"note_id": "fx-shared-memory-esr-disable"
+			},
+			"firefox79": {
+				"val": true,
+				"note_id": "fx-shared-memory-cors-isolation"
+			},
+			"opera10_50": false,
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SharedArrayBuffer.prototype.byteLength": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox77": {
+				"val": false,
+				"note_id": "fx-shared-memory-esr-disable"
+			},
+			"firefox79": {
+				"val": true,
+				"note_id": "fx-shared-memory-cors-isolation"
+			},
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari11": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SharedArrayBuffer.prototype.slice": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox52": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox77": {
+				"val": false,
+				"note_id": "fx-shared-memory-esr-disable"
+			},
+			"firefox79": {
+				"val": true,
+				"note_id": "fx-shared-memory-cors-isolation"
+			},
+			"opera10_50": false,
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"SharedArrayBuffer.prototype[Symbol.toStringTag]": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox52": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox77": {
+				"val": false,
+				"note_id": "fx-shared-memory-esr-disable"
+			},
+			"firefox79": {
+				"val": true,
+				"note_id": "fx-shared-memory-cors-isolation"
+			},
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.add": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.and": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.compareExchange": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.exchange": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.wait": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.notify": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox48": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.isLockFree": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.load": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.or": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.store": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.sub": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"Atomics.xor": {
+			"ie11": false,
+			"edge15": {
+				"val": "flagged",
+				"note_id": "edge-experimental-flag",
+				"note_html": "Flagged features have to be enabled via \"Enable experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"edge16": true,
+			"edge17": {
+				"val": false,
+				"note_id": "edg-shared-memory-spectre"
+			},
+			"firefox2": false,
+			"firefox46": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox51": {
+				"val": "flagged",
+				"note_id": "firefox-developer",
+				"note_html": "The feature is available only in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox53": {
+				"val": "flagged",
+				"note_id": "firefox-sharedmem",
+				"note_html": "The feature has to be enabled via <code>javascript.options.shared_memory</code> setting under <code>about:config</code>.  It is enabled by default in Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox55": true,
+			"firefox57": {
+				"val": "flagged",
+				"note_id": "fx-shared-memory-spectre"
+			},
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-beta",
+				"note_html": "The feature is available only in Firefox Beta, Firefox Developer Edition and Firefox Nightly builds."
+			},
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome48": {
+				"val": "flagged",
+				"note_id": "chrome-sharedmem",
+				"note_html": "The feature has to be enabled via \"Experimental enabled SharedArrayBuffer support in JavaScript.\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"chrome63": {
+				"val": false,
+				"note_id": "chr-shared-memory-spectre"
+			},
+			"chrome68": true,
+			"safari10_1": true,
+			"safari11_1": {
+				"val": false,
+				"note_id": "sf-shared-memory-spectre"
+			},
+			"safari15_2": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"RegExp \"u\" flag, case folding": {
+		"ie11": false,
+		"firefox2": false,
+		"firefox54": true,
+		"opera10_50": false,
+		"chrome59": true,
+		"safari10": true,
+		"safari10_1": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"arguments.caller removed": {
+		"ie11": false,
+		"edge16": true,
+		"firefox2": false,
+		"firefox53": true,
+		"opera10_50": false,
+		"chrome56": true,
+		"node8": true,
+		"safari10_1": true,
+		"duktape2_0": false,
+		"duktape2_4": true,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Object.prototype getter/setter methods": {
+		"__defineGetter__": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari4": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__defineGetter__, symbols": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox36": true,
+			"opera10_50": false,
+			"chrome30": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome38": true,
+			"node0_12": true,
+			"safari9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__defineGetter__, ToObject(this)": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge16": true,
+			"firefox2": false,
+			"firefox48": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome60": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome62": true,
+			"safari5_1": true,
+			"safari9": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__defineSetter__": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari4": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__defineSetter__, symbols": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox36": true,
+			"opera10_50": false,
+			"chrome30": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome38": true,
+			"node0_12": true,
+			"safari9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__defineSetter__, ToObject(this)": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge16": true,
+			"firefox2": false,
+			"firefox48": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome60": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome62": true,
+			"safari5_1": true,
+			"safari9": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupGetter__": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": true,
+			"opera10_50": true,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari3_1": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupGetter__, prototype chain": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari4": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupGetter__, symbols": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox36": true,
+			"opera10_50": false,
+			"chrome30": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome38": true,
+			"node0_12": true,
+			"safari9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupGetter__, ToObject(this)": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox24": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome60": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome62": true,
+			"safari5_1": true,
+			"safari9": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupGetter__, data properties can shadow accessors": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome57": true,
+			"node8": true,
+			"safari4": true,
+			"safari9": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupSetter__": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": true,
+			"opera10_50": true,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari3_1": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupSetter__, prototype chain": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome30": true,
+			"node0_12": true,
+			"safari4": true,
+			"safari9": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"__lookupSetter__, symbols": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox36": true,
+			"opera10_50": false,
+			"chrome30": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome38": true,
+			"node0_12": true,
+			"safari9": true,
+			"android4_0": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupSetter__, ToObject(this)": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": true,
+			"firefox2": false,
+			"firefox24": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome60": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome62": true,
+			"safari5_1": true,
+			"safari9": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupSetter__, data properties can shadow accessors": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox4": true,
+			"opera10_50": false,
+			"opera12": true,
+			"chrome57": true,
+			"node8": true,
+			"safari4": true,
+			"safari9": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"duktape2_2": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Proxy internal calls, getter/setter methods": {
+		"__defineGetter__": {
+			"firefox2": false,
+			"firefox18": true,
+			"opera10_50": false,
+			"ie11": false,
+			"edge13": true,
+			"chrome52": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__defineSetter__": {
+			"firefox2": false,
+			"firefox18": true,
+			"opera10_50": false,
+			"ie11": false,
+			"edge13": true,
+			"chrome52": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupGetter__": {
+			"ie11": false,
+			"edge14": true,
+			"chrome57": true,
+			"firefox2": false,
+			"firefox49": true,
+			"opera10_50": false,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"__lookupSetter__": {
+			"ie11": false,
+			"edge14": true,
+			"chrome57": true,
+			"firefox2": false,
+			"firefox49": true,
+			"opera10_50": false,
+			"node8": true,
+			"safari10": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"assignments allowed in for-in head in non-strict mode": {
+		"tr": true,
+		"babel7corejs3": true,
+		"ie10": true,
+		"edge12": true,
+		"firefox2": true,
+		"firefox31": true,
+		"firefox40": false,
+		"firefox52": true,
+		"opera10_50": true,
+		"chrome30": true,
+		"safari3_1": true,
+		"safari9": false,
+		"safari10_1": true,
+		"node0_12": true,
+		"android4_0": true,
+		"ios5_1": true,
+		"duktape2_0": true,
+		"nashorn1_8": true,
+		"nashorn9": true,
+		"nashorn10": true,
+		"jerryscript2_3_0": false,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": true
+	},
+	"object rest/spread properties": {
+		"object rest properties": {
+			"babel6corejs2": true,
+			"closure": true,
+			"closure20181028": {
+				"val": false,
+				"note_id": "closure-object-assign",
+				"note_html": "Requires native support for <code>Object.assign</code>"
+			},
+			"closure20210906": true,
+			"typescript2_1corejs2": true,
+			"jsx": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox55": true,
+			"opera10_50": false,
+			"chrome58": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"safari11": false,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"object spread properties": {
+			"babel6corejs2": true,
+			"closure": true,
+			"closure20190121": {
+				"val": false,
+				"note_id": "closure-object-assign"
+			},
+			"closure20210906": true,
+			"jsx": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox55": true,
+			"opera10_50": false,
+			"chrome58": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome60": true,
+			"typescript2_1corejs2": true,
+			"safari11": false,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Promise.prototype.finally": {
+		"basic support": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20180402": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge18": true,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"opera10_50": false,
+			"chrome61": {
+				"val": false,
+				"note_id": "chrome-promise",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-promise-finally\"</code> flag"
+			},
+			"chrome63": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"don't change resolution value": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20180402": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge18": true,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"opera10_50": false,
+			"chrome61": {
+				"val": false,
+				"note_id": "chrome-promise",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-promise-finally\"</code> flag"
+			},
+			"chrome63": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"change rejection value": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20180402": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge18": true,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"opera10_50": false,
+			"safari11_1": true,
+			"safaritp": true,
+			"chrome61": {
+				"val": false,
+				"note_id": "chrome-promise",
+				"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-promise-finally\"</code> flag"
+			},
+			"chrome63": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"s (dotAll) flag for regular expressions": {
+		"es6tr": null,
+		"tr": null,
+		"babel6corejs2": true,
+		"closure": false,
+		"jsx": null,
+		"typescript1corejs2": null,
+		"es6shim": null,
+		"konq4_14": null,
+		"ie7": null,
+		"ie10": false,
+		"firefox1": null,
+		"firefox2": false,
+		"firefox77": false,
+		"firefox78": true,
+		"opera10_50": false,
+		"chrome1": null,
+		"chrome60": {
+			"val": "flagged",
+			"note_id": "chrome-harmony",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+		},
+		"chrome62": true,
+		"safari11_1": true,
+		"safaritp": true,
+		"webkit": true,
+		"xs6": null,
+		"jxa": null,
+		"node0_10": null,
+		"duktape2_0": false,
+		"duktape2_2": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"android1_5": null,
+		"ios4": null,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"RegExp named capture groups": {
+		"babel6corejs2": true,
+		"ie11": false,
+		"firefox2": false,
+		"firefox77": false,
+		"firefox78": true,
+		"opera10_50": false,
+		"chrome60": {
+			"val": "flagged",
+			"note_id": "chrome-harmony",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+		},
+		"chrome64": true,
+		"safari11_1": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"graalvm19": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"RegExp Lookbehind Assertions": {
+		"babel7corejs3": false,
+		"ie11": false,
+		"firefox2": false,
+		"firefox77": false,
+		"firefox78": true,
+		"opera10_50": false,
+		"chrome50": {
+			"val": "flagged",
+			"note_id": "chrome-harmony",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+		},
+		"chrome62": true,
+		"safari13_1": false,
+		"safari16_4": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false,
+		"safaritp": true
+	},
+	"RegExp Unicode Property Escapes": {
+		"basic": {
+			"babel6corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox77": false,
+			"firefox78": true,
+			"opera10_50": false,
+			"chrome59": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome64": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"Unicode 11": {
+			"chrome67": false,
+			"chrome68": true,
+			"firefox77": false,
+			"firefox78": true,
+			"safari14": false,
+			"safari14_1": true,
+			"node10_9": false,
+			"node11_0": true,
+			"duktape2_0": false,
+			"ie11": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 12": {
+			"chrome74": false,
+			"chrome75": true,
+			"firefox77": false,
+			"firefox78": true,
+			"safari14": false,
+			"safari14_1": true,
+			"node12_0": false,
+			"node12_5": true,
+			"duktape2_0": false,
+			"ie11": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 12.1": {
+			"chrome74": false,
+			"chrome75": true,
+			"firefox77": false,
+			"firefox78": true,
+			"safari14": false,
+			"safari14_1": true,
+			"node12_0": false,
+			"node12_5": true,
+			"duktape2_0": false,
+			"ie11": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 13": {
+			"chrome83": false,
+			"chrome84": true,
+			"firefox77": false,
+			"firefox78": true,
+			"safari14": false,
+			"safari14_1": true,
+			"node13_2": false,
+			"node14_0": true,
+			"duktape2_0": false,
+			"ie11": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 14": {
+			"ie11": false,
+			"chrome97": false,
+			"chrome98": true,
+			"firefox95": false,
+			"firefox96": true,
+			"safari15_3": false,
+			"safari15_4": true,
+			"node16_11": false,
+			"node17_0": false,
+			"node17_2": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 15": {
+			"ie11": false,
+			"chrome109": false,
+			"chrome110": true,
+			"firefox109": false,
+			"firefox110": true,
+			"safari11_1": false,
+			"safari16_6": false,
+			"safari17": true,
+			"safaritp": true,
+			"node0_10": false,
+			"node16_11": false,
+			"node18_3": false,
+			"node19_0": false,
+			"node19_2": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		},
+		"Unicode 15.1": {
+			"ie11": false,
+			"chrome117": false,
+			"node20_0": false,
+			"firefox2": false,
+			"firefox117": false,
+			"safari11_1": false,
+			"safaritp": false,
+			"safari17": false,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Asynchronous Iterators": {
+		"async generators": {
+			"babel6corejs2": true,
+			"closure": false,
+			"closure20180805": true,
+			"chrome62": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome63": true,
+			"typescript2_3corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox55": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox57": true,
+			"opera10_50": false,
+			"safari12": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"for-await-of loops": {
+			"babel6corejs2": true,
+			"closure": false,
+			"closure20180910": true,
+			"chrome62": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome63": true,
+			"typescript2_3corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox55": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox57": true,
+			"opera10_50": false,
+			"safari12": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets": {
+		"edge16": false,
+		"chrome75": true,
+		"firefox57": true,
+		"firefox70": true,
+		"safari13": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": false,
+		"graalvm20": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"template literal revision": {
+		"babel7corejs3": true,
+		"closure": false,
+		"closure20181008": true,
+		"closure20200315": false,
+		"closure20200517": true,
+		"ie11": false,
+		"firefox2": false,
+		"firefox53": true,
+		"opera10_50": false,
+		"chrome59": {
+			"val": "flagged",
+			"note_id": "chrome-harmony",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+		},
+		"chrome62": true,
+		"safari11": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"graalvm19": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false,
+		"rhino1_7_14": true
+	},
+	"Symbol.prototype.description": {
+		"basic": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190301": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox63": true,
+			"chrome67": false,
+			"chrome69": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome70": true,
+			"safari11": false,
+			"safari12": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"empty description": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190301": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox63": true,
+			"chrome67": false,
+			"chrome69": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome70": true,
+			"safari11": false,
+			"safari12": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"undefined description": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox63": true,
+			"chrome67": false,
+			"chrome69": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome70": true,
+			"safari11": false,
+			"safari12": false,
+			"safari12_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Object.fromEntries": {
+		"babel6corejs2": false,
+		"babel7corejs3": {
+			"val": true,
+			"note_id": "babel-core-js",
+			"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"closure": false,
+		"closure20190325": true,
+		"typescript1corejs2": {
+			"val": "needs-polyfill-or-native",
+			"note_id": "typescript-es6",
+			"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+		},
+		"typescript3_2corejs3": {
+			"val": true,
+			"note_id": "typescript-core-js",
+			"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"ie11": false,
+		"firefox10": false,
+		"firefox52": false,
+		"firefox62": false,
+		"firefox63": true,
+		"safari12_1": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"chrome73": true,
+		"chrome74": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false,
+		"rhino1_7_14": true
+	},
+	"string trimming": {
+		"String.prototype.trimLeft": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190709": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox3_5": true,
+			"firefox3_6": true,
+			"firefox4": true,
+			"chrome7": true,
+			"opera10_10": false,
+			"konq4_4": false,
+			"konq4_9": true,
+			"besen": false,
+			"phantom1_9": true,
+			"node0_12": true,
+			"safari3": false,
+			"safari4": true,
+			"safari12": true,
+			"webkit": true,
+			"es7shim": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"String.prototype.trimRight": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190709": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"edge12": true,
+			"firefox2": false,
+			"firefox3_5": true,
+			"firefox3_6": true,
+			"firefox4": true,
+			"chrome7": true,
+			"opera10_10": false,
+			"konq4_4": false,
+			"konq4_9": true,
+			"besen": false,
+			"phantom1_9": true,
+			"node0_12": true,
+			"safari3": false,
+			"safari4": true,
+			"safari12": true,
+			"webkit": true,
+			"es7shim": true,
+			"android4_0": true,
+			"ios5_1": true,
+			"duktape2_0": false,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"String.prototype.trimStart": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190325": {
+				"val": false,
+				"note_id": "closure-string-trimstart",
+				"note_html": "Requires native support for String.prototype.trimLeft."
+			},
+			"closure20190709": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox59": false,
+			"firefox60": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox61": true,
+			"chrome66": true,
+			"opera10_50": false,
+			"safari12": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"String.prototype.trimEnd": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190325": {
+				"val": false,
+				"note_id": "closure-string-trimend",
+				"note_html": "Requires native support for String.prototype.trimRight."
+			},
+			"closure20190709": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox59": false,
+			"firefox60": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox61": true,
+			"chrome66": true,
+			"opera10_50": false,
+			"safari12": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Array.prototype.{flat, flatMap}": {
+		"Array.prototype.flat": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190301": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox58": false,
+			"firefox59": {
+				"val": false,
+				"note_id": "ffox-flatten",
+				"note_html": "Older Firefox Nightly builds support only the obsolete draft function name <code>Array.prototype.flatten()</code>."
+			},
+			"firefox62": true,
+			"chrome69": true,
+			"opera10_50": false,
+			"safari12": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"Array.prototype.flatMap": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20190301": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox58": false,
+			"firefox59": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox62": true,
+			"chrome69": true,
+			"opera10_50": false,
+			"safari12": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"flat and flatMap in Array.prototype[@@unscopables]": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox58": false,
+			"firefox59": false,
+			"firefox62": false,
+			"firefox67": true,
+			"chrome69": false,
+			"chrome73": true,
+			"chrome74": true,
+			"opera10_50": false,
+			"safari12": false,
+			"safari13": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"optional catch binding": {
+		"basic": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20190215": true,
+			"typescript2_5corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"opera10_50": false,
+			"chrome65": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"await": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20190215": true,
+			"typescript2_5corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"opera10_50": false,
+			"chrome65": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"yield": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20190215": true,
+			"typescript2_5corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox57": false,
+			"firefox58": true,
+			"chrome65": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"safari11_1": true,
+			"safaritp": true,
+			"webkit": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm20": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Function.prototype.toString revision": {
+		"functions created with the Function constructor": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox54": true,
+			"opera10_50": false,
+			"chrome59": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"arrows": {
+			"node4": true,
+			"firefox2": false,
+			"firefox51": true,
+			"opera10_50": false,
+			"chrome50": true,
+			"safari10": true,
+			"ie11": false,
+			"edge13": true,
+			"duktape2_0": false,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"[native code]": {
+			"node4": true,
+			"firefox2": false,
+			"firefox10": true,
+			"firefox45": true,
+			"opera10_50": true,
+			"chrome50": true,
+			"safari3_1": true,
+			"ie11": true,
+			"edge13": true,
+			"duktape2_0": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"class expression with implicit constructor": {
+			"node4": true,
+			"firefox2": false,
+			"firefox55": true,
+			"opera10_50": false,
+			"chrome50": true,
+			"safari10": true,
+			"ie11": false,
+			"edge14": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"class expression with explicit constructor": {
+			"node4": true,
+			"firefox2": false,
+			"firefox55": true,
+			"opera10_50": false,
+			"chrome50": true,
+			"safari10": true,
+			"ie11": false,
+			"edge14": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"unicode escape sequences in identifiers": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox54": true,
+			"opera10_50": false,
+			"chrome59": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"safari17": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"methods and computed property names": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox54": true,
+			"opera10_50": false,
+			"chrome59": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome66": true,
+			"safari17": true,
+			"duktape2_0": false,
+			"nashorn9": true,
+			"nashorn10": true,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"JSON superset": {
+		"LINE SEPARATOR can appear in string literals": {
+			"closure": false,
+			"closure20190215": true,
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox61": false,
+			"firefox62": true,
+			"chrome65": false,
+			"chrome66": true,
+			"safari11": false,
+			"safari12": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"PARAGRAPH SEPARATOR can appear in string literals": {
+			"closure": false,
+			"closure20190215": true,
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox61": false,
+			"firefox62": true,
+			"chrome65": false,
+			"chrome66": true,
+			"safari11": false,
+			"safari12": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		}
+	},
+	"Well-formed JSON.stringify": {
+		"babel6corejs2": false,
+		"babel7corejs3": {
+			"val": true,
+			"note_id": "babel-core-js",
+			"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"typescript1corejs2": {
+			"val": "needs-polyfill-or-native",
+			"note_id": "typescript-es6",
+			"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+		},
+		"typescript3_2corejs3": {
+			"val": true,
+			"note_id": "typescript-core-js",
+			"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"ie11": false,
+		"edge16": false,
+		"firefox10": false,
+		"firefox52": false,
+		"firefox63": false,
+		"firefox64": true,
+		"chrome70": false,
+		"chrome71": false,
+		"chrome72": true,
+		"safari1": false,
+		"safari12_1": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"String.prototype.matchAll": {
+		"basic functionality": {
+			"babel6corejs2": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20200101": true,
+			"typescript1corejs2": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox65": false,
+			"firefox66": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox67": true,
+			"chrome67": false,
+			"chrome68": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome73": true,
+			"chrome74": true,
+			"opera10_50": false,
+			"safari13": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"throws on non-global regex": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20200101": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox60": false,
+			"firefox72": false,
+			"firefox73": true,
+			"chrome67": false,
+			"chrome68": false,
+			"chrome73": false,
+			"chrome74": false,
+			"chrome80": true,
+			"opera10_50": false,
+			"safari13": false,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"BigInt": {
+		"basic functionality": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"constructor": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"BigInt.asUintN": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"BigInt.asIntN": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"BigInt64Array": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox67": false,
+			"firefox68": true,
+			"chrome67": true,
+			"safari15": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"BigUint64Array": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox67": false,
+			"firefox68": true,
+			"chrome67": true,
+			"safari15": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"DataView.prototype.getBigInt64": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari15": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"DataView.prototype.getBigUint64": {
+			"ie11": false,
+			"firefox10": false,
+			"firefox45": false,
+			"firefox66": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-bigint",
+				"note_html": "The feature has to be enabled via <code>javascript.options.bigint</code> setting under <code>about:config</code>."
+			},
+			"firefox68": true,
+			"chrome67": true,
+			"safari15": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Promise.allSettled": {
+		"babel6corejs2": false,
+		"babel7corejs3": {
+			"val": true,
+			"note_id": "babel-core-js",
+			"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"closure": false,
+		"closure20191027": true,
+		"typescript1corejs2": {
+			"val": "needs-polyfill-or-native",
+			"note_id": "typescript-es6",
+			"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+		},
+		"typescript3_2corejs3": {
+			"val": true,
+			"note_id": "typescript-core-js",
+			"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"ie11": false,
+		"firefox10": false,
+		"firefox68": {
+			"val": "flagged",
+			"note_id": "firefox-nightly",
+			"note_html": "The feature is available only in Firefox Nightly builds."
+		},
+		"firefox71": true,
+		"chrome76": true,
+		"safari13": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"graalvm19": false,
+		"graalvm20": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-2020",
+			"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+		},
+		"graalvm20_1": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"globalThis": {
+		"\"globalThis\" global property is global object": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20200101": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox53": false,
+			"firefox65": true,
+			"chrome70": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome71": true,
+			"opera10_50": false,
+			"safari10_1": false,
+			"safari12_1": true,
+			"safaritp": true,
+			"node0_10": false,
+			"node0_12": false,
+			"node4": false,
+			"node6": false,
+			"node6_5": false,
+			"node7": false,
+			"node7_6": false,
+			"node8": false,
+			"node8_3": false,
+			"node8_7": false,
+			"duktape2_0": false,
+			"duktape2_5": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		},
+		"\"globalThis\" global property has correct property descriptor": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20200101": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox2": false,
+			"firefox53": false,
+			"firefox65": true,
+			"chrome70": {
+				"val": "flagged",
+				"note_id": "chrome-experimental",
+				"note_html": "The feature has to be enabled via \"Experimental Javascript features\" setting under <code>about:flags</code>"
+			},
+			"chrome71": true,
+			"opera10_50": false,
+			"safari10_1": false,
+			"safari12_1": true,
+			"safaritp": true,
+			"node0_10": false,
+			"node0_12": false,
+			"node4": false,
+			"node6": false,
+			"node6_5": false,
+			"node7": false,
+			"node7_6": false,
+			"node8": false,
+			"node8_3": false,
+			"node8_7": false,
+			"duktape2_0": false,
+			"duktape2_5": true,
+			"jerryscript2_3_0": false,
+			"jerryscript2_4_0": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false,
+			"rhino1_7_14": true
+		}
+	},
+	"optional chaining operator (?.)": {
+		"optional property access": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20200927": true,
+			"typescript3_7corejs3": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"firefox73": false,
+			"firefox74": true,
+			"chrome77": false,
+			"chrome78": {
+				"val": "flagged",
+				"note_id": "chrome-optional-chaining",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"
+			},
+			"chrome80": true,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"optional bracket access": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20200927": true,
+			"typescript3_7corejs3": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"firefox73": false,
+			"firefox74": true,
+			"chrome77": false,
+			"chrome78": {
+				"val": "flagged",
+				"note_id": "chrome-optional-chaining"
+			},
+			"chrome80": true,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"optional method call": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20200927": true,
+			"typescript3_7corejs3": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"firefox73": false,
+			"firefox74": true,
+			"chrome77": false,
+			"chrome78": {
+				"val": "flagged",
+				"note_id": "chrome-optional-chaining"
+			},
+			"chrome80": true,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"optional function call": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20200927": true,
+			"typescript3_7corejs3": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"firefox73": false,
+			"firefox74": true,
+			"chrome77": false,
+			"chrome78": {
+				"val": "flagged",
+				"note_id": "chrome-optional-chaining"
+			},
+			"chrome80": true,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2020",
+				"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+			},
+			"graalvm20_1": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"spread parameters after optional chaining": {
+			"babel7corejs3": true,
+			"closure": false,
+			"closure20200927": true,
+			"ie11": false,
+			"firefox10": false,
+			"firefox52": false,
+			"firefox73": false,
+			"firefox74": true,
+			"chrome77": false,
+			"chrome80": false,
+			"chrome89": false,
+			"chrome90": false,
+			"chrome91": true,
+			"safari13_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"nullish coalescing operator (??)": {
+		"babel7corejs2": true,
+		"closure": false,
+		"closure20200315": true,
+		"typescript3_7corejs3": true,
+		"ie11": false,
+		"firefox10": false,
+		"firefox52": false,
+		"firefox72": true,
+		"chrome77": false,
+		"chrome78": {
+			"val": "flagged",
+			"note_id": "chrome-nullish",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"
+		},
+		"chrome80": true,
+		"safari13_1": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": false,
+		"graalvm20": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-2020",
+			"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+		},
+		"graalvm20_1": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"String.prototype.replaceAll": {
+		"babel6corejs2": false,
+		"babel7corejs3": {
+			"val": true,
+			"note_id": "babel-core-js",
+			"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"closure": false,
+		"closure20210808": true,
+		"typescript1corejs2": {
+			"val": "needs-polyfill-or-native",
+			"note_id": "typescript-es6",
+			"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+		},
+		"typescript3_2corejs3": {
+			"val": true,
+			"note_id": "typescript-core-js",
+			"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+		},
+		"ie11": false,
+		"firefox10": false,
+		"firefox52": false,
+		"firefox71": false,
+		"firefox72": {
+			"val": "flagged",
+			"note_id": "firefox-nightly",
+			"note_html": "The feature is available only in Firefox Nightly builds."
+		},
+		"firefox77": true,
+		"chrome77": false,
+		"chrome80": {
+			"val": "flagged",
+			"note_id": "chrome-string-prototype-replace-all",
+			"note_html": "The feature is considered unstable, but can be enabled via <code>--js-flags=\"--harmony-string-replaceall\"</code> flag"
+		},
+		"chrome85": true,
+		"safari13_1": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": false,
+		"graalvm20": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-2020",
+			"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+		},
+		"graalvm20_1": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-2021",
+			"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+		},
+		"graalvm21": true,
+		"ios13_4": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"Promise.any": {
+		"fulfillment": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20210808": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome77": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-promise-any",
+				"note_html": "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."
+			},
+			"chrome85": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"AggregateError": {
+			"babel6corejs2": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure": false,
+			"closure20210808": true,
+			"typescript1corejs2": {
+				"val": "needs-polyfill-or-native",
+				"note_id": "typescript-es6",
+				"note_html": "TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"firefox10": false,
+			"firefox60": false,
+			"firefox72": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome77": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-promise-any",
+				"note_html": "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=9808'><code>--js-flags=\"--harmony-promise-any\"</code></a> flag in V8."
+			},
+			"chrome85": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true
+		}
+	},
+	"WeakReferences": {
+		"WeakRef minimal support": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox74": {
+				"val": "flagged",
+				"note_id": "firefox-weakrefs",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>."
+			},
+			"firefox79": true,
+			"opera10_50": false,
+			"chrome65": false,
+			"chrome74": {
+				"val": "flagged",
+				"note_id": "chrome-weakrefs",
+				"note_html": "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8."
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"FinalizationRegistry minimal support": {
+			"ie11": false,
+			"firefox2": false,
+			"firefox74": false,
+			"firefox78": {
+				"val": "flagged",
+				"note_id": "firefox-weakrefs"
+			},
+			"firefox79": true,
+			"opera10_50": false,
+			"chrome65": false,
+			"chrome74": false,
+			"chrome85": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm19": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Logical Assignment": {
+		"||= basic support": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment",
+				"note_html": "Available behind the <a href='https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070'><code>--js-flags=\"--logical-assignment\"</code></a> flag in V8."
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"||= short-circuiting behaviour": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"||= setter not unecessarily invoked": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"&&= basic support": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"&&= short-circuiting behaviour": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"&&= setter not unecessarily invoked": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"??= basic support": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"??= short-circuiting behaviour": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"??= setter not unecessarily invoked": {
+			"babel7corejs2": true,
+			"closure": false,
+			"closure20210808": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox76": false,
+			"firefox77": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox79": true,
+			"chrome80": false,
+			"chrome84": {
+				"val": "flagged",
+				"note_id": "chrome-logical-assignment"
+			},
+			"chrome85": true,
+			"safari13": false,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"graalvm20_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2021",
+				"note_html": "Requires the <code>--js.ecmascript-version=2021</code> flag."
+			},
+			"graalvm21": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"numeric separators": {
+		"babel7corejs2": true,
+		"closure": false,
+		"closure20210808": true,
+		"typescript1corejs2": false,
+		"typescript2_7corejs2": true,
+		"ie11": false,
+		"firefox2": false,
+		"firefox10": false,
+		"firefox67": false,
+		"firefox68": {
+			"val": "flagged",
+			"note_id": "firefox-nightly",
+			"note_html": "The feature is available only in Firefox Nightly builds."
+		},
+		"firefox70": true,
+		"opera10_50": false,
+		"chrome67": {
+			"val": "flagged",
+			"note_id": "chrome-harmony",
+			"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+		},
+		"chrome75": true,
+		"safari13": true,
+		"safaritp": true,
+		"duktape2_0": false,
+		"jerryscript2_3_0": false,
+		"jerryscript2_4_0": true,
+		"graalvm19": false,
+		"graalvm20": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-2020",
+			"note_html": "Requires the <code>--js.ecmascript-version=2020</code> flag."
+		},
+		"graalvm20_1": true,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false,
+		"rhino1_7_14": true
+	},
+	"instance class fields": {
+		"public instance class fields": {
+			"babel6corejs2": true,
+			"tr": true,
+			"typescript1corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox67": {
+				"val": "flagged",
+				"note_id": "firefox-class-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>."
+			},
+			"firefox69": true,
+			"opera10_50": false,
+			"chrome65": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome72": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"private instance class fields basic support": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox67": {
+				"val": false,
+				"note_id": "firefox-private-class-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
+			},
+			"firefox80": {
+				"val": "flagged",
+				"note_id": "fx-private-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome66": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome74": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"private instance class fields initializers": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox67": {
+				"val": false,
+				"note_id": "firefox-private-class-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
+			},
+			"firefox80": {
+				"val": "flagged",
+				"note_id": "fx-private-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome66": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome74": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"optional private instance class fields access": {
+			"babel7corejs2": true,
+			"babel7corejs3": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox80": {
+				"val": "flagged",
+				"note_id": "fx-private-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"chrome1": false,
+			"chrome83": false,
+			"chrome84": true,
+			"safari1": false,
+			"safari13_1": false,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"opera10_50": false,
+			"graalvm20": false,
+			"graalvm20_3": true,
+			"typescript3_8corejs3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"optional deep private instance class fields access": {
+			"babel7corejs2": true,
+			"babel7corejs3": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox74": {
+				"val": false,
+				"note_id": "firefox-private-class-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>. Private fields are supported by parser, but behave as public fields."
+			},
+			"firefox80": {
+				"val": "flagged",
+				"note_id": "fx-private-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"chrome1": false,
+			"chrome78": {
+				"val": "flagged",
+				"note_id": "chrome-optional-chaining",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"
+			},
+			"chrome80": true,
+			"safari1": false,
+			"safari13_1": false,
+			"safari14_1": true,
+			"safaritp": true,
+			"opera10_50": false,
+			"duktape2_0": false,
+			"graalvm20": false,
+			"graalvm20_3": true,
+			"typescript3_8corejs3": false,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"computed instance class fields": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox66": false,
+			"firefox68": {
+				"val": "flagged",
+				"note_id": "firefox-class-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.fields</code> setting under <code>about:config</code>."
+			},
+			"firefox69": true,
+			"opera10_50": false,
+			"chrome73": true,
+			"safari14": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"static class fields": {
+		"public static class fields": {
+			"babel6corejs2": true,
+			"tr": true,
+			"typescript1corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox74": false,
+			"firefox75": true,
+			"opera10_50": false,
+			"chrome71": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome72": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"static class fields use [[Define]]": {
+			"chrome73": true,
+			"chrome90": true,
+			"chrome94": true,
+			"chrome96": true,
+			"chrome97": false,
+			"chrome98": true,
+			"firefox95": true,
+			"firefox96": true,
+			"node11_0": false,
+			"node12_0": true,
+			"node12_5": true,
+			"node12_9": true,
+			"node12_11": true,
+			"node13_0": true,
+			"node13_2": true,
+			"node14_0": true,
+			"node14_5": true,
+			"node14_6": true,
+			"node15_0": true,
+			"node16_0": true,
+			"node16_9": true,
+			"node16_11": true,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true
+		},
+		"private static class fields": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox80": {
+				"val": "flagged",
+				"note_id": "fx-private-fields",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> setting under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome74": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"computed static class fields": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox2": false,
+			"firefox74": false,
+			"firefox75": true,
+			"opera10_50": false,
+			"chrome73": true,
+			"safari14_1": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"private class methods": {
+		"private instance methods": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox68": false,
+			"firefox75": false,
+			"firefox81": {
+				"val": "flagged",
+				"note_id": "ff-private-instance-methods-and-accessors",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.private_fields</code> and <code>javascript.options.experimental.private_methods</code> settings under <code>about:config</code>."
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome79": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome84": true,
+			"duktape2_0": false,
+			"safari13": false,
+			"safari15": true,
+			"safaritp": true,
+			"graalvm20": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"private static methods": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox68": false,
+			"firefox75": false,
+			"firefox82": {
+				"val": "flagged",
+				"note_id": "ff-private-instance-methods-and-accessors"
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome79": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome84": true,
+			"duktape2_0": false,
+			"safari13": false,
+			"safari15": true,
+			"safaritp": true,
+			"graalvm20": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"private accessor properties": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox68": false,
+			"firefox75": false,
+			"firefox81": {
+				"val": "flagged",
+				"note_id": "ff-private-instance-methods-and-accessors"
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome79": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome84": true,
+			"duktape2_0": false,
+			"safari13": false,
+			"safari15": true,
+			"safaritp": true,
+			"graalvm20": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"private static accessor properties": {
+			"babel7corejs2": true,
+			"ie11": false,
+			"firefox60": false,
+			"firefox68": false,
+			"firefox75": false,
+			"firefox82": {
+				"val": "flagged",
+				"note_id": "ff-private-instance-methods-and-accessors"
+			},
+			"firefox90": true,
+			"opera10_50": false,
+			"chrome79": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome84": true,
+			"duktape2_0": false,
+			"safari13": false,
+			"safari15": true,
+			"safaritp": true,
+			"graalvm20": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Ergonomic brand checks for private fields": {
+		"babel6corejs2": false,
+		"babel7corejs2": true,
+		"babel7corejs3": true,
+		"chrome1": false,
+		"chrome91": true,
+		"edge18": false,
+		"firefox2": false,
+		"firefox90": true,
+		"ie11": false,
+		"opera10_50": false,
+		"safari12": false,
+		"safari15": true,
+		"duktape2_0": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-staging",
+			"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+		},
+		"graalvm22_2": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	".at() method on the built-in indexables": {
+		"Array.prototype.at()": {
+			"closure": false,
+			"closure20220502": {
+				"val": false,
+				"note_id": "closure-at-method",
+				"note_html": "Requires native support for <code>Math.trunc</code>"
+			},
+			"closure20220719": true,
+			"ie11": false,
+			"firefox68": false,
+			"firefox85": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox90": true,
+			"chrome85": false,
+			"chrome92": true,
+			"safari14_1": {
+				"val": "flagged",
+				"note_id": "safari-at-method",
+				"note_html": "The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag."
+			},
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript4corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"graalvm21": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2022",
+				"note_html": "Requires the <code>--js.ecmascript-version=2022</code> flag."
+			},
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"String.prototype.at()": {
+			"closure": false,
+			"closure20220502": {
+				"val": false,
+				"note_id": "closure-at-method"
+			},
+			"closure20220719": true,
+			"ie11": false,
+			"firefox68": false,
+			"firefox85": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox90": true,
+			"chrome85": false,
+			"chrome92": true,
+			"safari14_1": {
+				"val": "flagged",
+				"note_id": "safari-at-method"
+			},
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript4corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"graalvm21": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2022",
+				"note_html": "Requires the <code>--js.ecmascript-version=2022</code> flag."
+			},
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		},
+		"%TypedArray%.prototype.at()": {
+			"closure": false,
+			"closure20220502": {
+				"val": false,
+				"note_id": "closure-typed-array",
+				"note_html": "Requires native support for typed arrays"
+			},
+			"ie11": false,
+			"firefox68": false,
+			"firefox85": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox90": true,
+			"chrome85": false,
+			"chrome92": true,
+			"safari14_1": {
+				"val": "flagged",
+				"note_id": "safari-at-method"
+			},
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript4corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"graalvm21": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-2022",
+				"note_html": "Requires the <code>--js.ecmascript-version=2022</code> flag."
+			},
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_13": false
+		}
+	},
+	"Object.hasOwn": {
+		"Basic functionality": {
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure20220719": true,
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"chrome1": false,
+			"chrome90": false,
+			"chrome93": true,
+			"edge18": false,
+			"firefox2": false,
+			"firefox90": false,
+			"firefox91": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox92": true,
+			"opera10_50": false,
+			"safari12": false,
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"ToObject called before ToPropertyKey": {
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"closure20220719": true,
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"chrome1": false,
+			"chrome90": false,
+			"chrome93": true,
+			"edge18": false,
+			"firefox2": false,
+			"firefox90": false,
+			"firefox91": {
+				"val": "flagged",
+				"note_id": "firefox-nightly",
+				"note_html": "The feature is available only in Firefox Nightly builds."
+			},
+			"firefox92": true,
+			"opera10_50": false,
+			"safari12": false,
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Class static initialization blocks": {
+		"babel6corejs2": false,
+		"babel7corejs2": true,
+		"babel7corejs3": true,
+		"chrome1": false,
+		"chrome91": {
+			"val": "flagged",
+			"note_id": "ch-static-init-blocks",
+			"note_html": "The feature has to be enabled via <code>harmony_class_static_blocks</code> flag."
+		},
+		"chrome94": true,
+		"safari13": false,
+		"edge18": false,
+		"firefox2": false,
+		"firefox87": false,
+		"firefox90": {
+			"val": "flagged",
+			"note_id": "ff-static-init-blocks",
+			"note_html": "The feature has to be enabled via <code>javascript.options.experimental.class_static_blocks=true</code> flag."
+		},
+		"firefox93": true,
+		"ie11": false,
+		"opera10_50": false,
+		"safari16_4": true,
+		"duktape2_0": false,
+		"graalvm21_3_3": {
+			"val": "flagged",
+			"note_id": "graalvm-js-ecmascript-version-staging",
+			"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+		},
+		"graalvm22_2": true,
+		"hermes0_7_0": false,
+		"reactnative0_70_3": false,
+		"rhino1_7_13": false
+	},
+	"Error.cause property": {
+		"Error has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"Error.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"EvalError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"EvalError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"RangeError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"RangeError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"ReferenceError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"ReferenceError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"SyntaxError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"SyntaxError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"TypeError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"TypeError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"URIError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": false
+		},
+		"URIError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": true,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_14": true
+		},
+		"AggregateError has cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_14": false
+		},
+		"AggregateError.prototype lacks cause": {
+			"ie11": false,
+			"chrome1": false,
+			"chrome92": false,
+			"chrome93": false,
+			"chrome94": true,
+			"edge90": false,
+			"firefox45": false,
+			"firefox90": false,
+			"firefox91": true,
+			"safari14": false,
+			"safari15": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false,
+			"rhino1_7_14": false
+		}
+	},
+	"RegExp Match Indices (`hasIndices` / `d` flag)": {
+		"constructor supports it": {
+			"firefox68": false,
+			"firefox78": false,
+			"firefox91": true,
+			"safari15": true,
+			"chrome90": true,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false
+		},
+		"shows up in flags": {
+			"node16_0": false,
+			"firefox68": false,
+			"firefox78": false,
+			"firefox91": true,
+			"firefox116": false,
+			"safari15": true,
+			"chrome90": false,
+			"graalvm21_3_3": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"graalvm22_2": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": false
+		}
+	},
+	"Array find from last": {
+		"Array.prototype.findLast": {
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"chrome1": false,
+			"chrome90": false,
+			"chrome96": false,
+			"chrome97": true,
+			"edge18": false,
+			"firefox2": false,
+			"firefox89": false,
+			"firefox102": false,
+			"firefox103": {
+				"val": "flagged",
+				"note_id": "firefox-arrayfindfromlast",
+				"note_html": "The feature has to be enabled via <code>javascript.options.experimental.array_find_last</code> setting under <code>about:config</code>."
+			},
+			"firefox104": true,
+			"opera10_50": false,
+			"safari12": false,
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"Array.prototype.findLastIndex": {
+			"babel7corejs3": {
+				"val": true,
+				"note_id": "babel-core-js",
+				"note_html": "This feature is supported when using Babel with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"typescript3_2corejs3": {
+				"val": true,
+				"note_id": "typescript-core-js",
+				"note_html": "This feature is supported when using TypeScript with <a href='https://github.com/zloirock/core-js'>core-js</a>."
+			},
+			"ie11": false,
+			"chrome1": false,
+			"chrome90": false,
+			"chrome96": false,
+			"chrome97": true,
+			"edge18": false,
+			"firefox2": false,
+			"firefox89": false,
+			"firefox102": false,
+			"firefox103": {
+				"val": "flagged",
+				"note_id": "firefox-arrayfindfromlast"
+			},
+			"firefox104": true,
+			"opera10_50": false,
+			"safari12": false,
+			"safari15_4": true,
+			"safaritp": true,
+			"duktape2_0": false,
+			"graalvm21_3_3": false,
+			"graalvm22_2": {
+				"val": "flagged",
+				"note_id": "graalvm-js-ecmascript-version-staging",
+				"note_html": "Requires the <code>--js.ecmascript-version=staging</code> flag."
+			},
+			"hermes0_7_0": false,
+			"hermes0_12_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Hashbang Grammar": {
+		"chrome1": false,
+		"chrome74": true,
+		"firefox2": false,
+		"firefox67": true,
+		"ie11": false,
+		"opera10_50": false,
+		"edge18": false,
+		"safari1": false,
+		"safari13": false,
+		"safari13_1": true,
+		"duktape2_0": false,
+		"graalvm19": false,
+		"graalvm20_1": true,
+		"babel7corejs3": false,
+		"typescript3_2corejs3": false,
+		"closure": false,
+		"hermes0_7_0": true,
+		"reactnative0_70_3": true,
+		"rhino1_7_13": false
+	},
+	"RegExp `v` flag": {
+		"set notations": {
+			"chrome110": false,
+			"chrome111": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome112": true,
+			"firefox91": false,
+			"firefox102": false,
+			"firefox115": false,
+			"firefox116": true,
+			"ie11": false,
+			"safari16_6": false,
+			"safaritp": true
+		},
+		"properties of Strings": {
+			"chrome110": false,
+			"chrome111": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome112": true,
+			"firefox91": false,
+			"firefox102": false,
+			"firefox115": false,
+			"firefox116": true,
+			"ie11": false,
+			"safari16_6": false,
+			"safaritp": true
+		},
+		"constructor supports it": {
+			"chrome110": false,
+			"chrome111": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome112": true,
+			"firefox91": false,
+			"firefox102": false,
+			"firefox115": false,
+			"firefox116": true,
+			"ie11": false,
+			"safari16_6": false,
+			"safaritp": true
+		},
+		"shows up in flags": {
+			"chrome110": false,
+			"chrome111": {
+				"val": "flagged",
+				"note_id": "chrome-harmony",
+				"note_html": "The feature has to be enabled via <code>--js-flags=\"--harmony\"</code> flag"
+			},
+			"chrome112": true,
+			"firefox91": false,
+			"firefox102": false,
+			"firefox115": false,
+			"firefox116": true,
+			"ie11": false,
+			"safari16_6": false,
+			"safaritp": true
+		},
+		"Unicode 15.1": {
+			"chrome117": false,
+			"node20_0": false,
+			"firefox117": false,
+			"safaritp": false,
+			"safari16_6": false,
+			"ie11": false,
+			"duktape2_0": false,
+			"jerryscript2_3_0": false,
+			"hermes0_7_0": false,
+			"rhino1_7_13": false
+		}
+	}
+}

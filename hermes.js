@@ -1,12 +1,16 @@
 /*
- *  Node.js test runner for running data-*.js tests with Hermes 'hermes' command.
+ * Node.js test runner for running test-*.js tests with Hermes 'hermes' command.
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects 'hermes' to be already built.  Example:
+ * Expects 'hermes' to be already built
  *
- *  $ node hermes.js --hermes-bin /path/to/hermes --suite suitename
- * 
- *  suitename can be 'all'
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
+ *
+ * $ node hermes.js --hermes-bin /path/to/hermes --suite suitename
+ * or 
+ * $ node hermes.js --hermes-bin /path/to/hermes --suite suitename -u
+ *
+ * suitename can be 'all'
  */
 
 var fs = require('fs');
@@ -54,7 +58,7 @@ suites = suites === 'all' ? '' : suites;
 
 var testFamily = argv.reactNativeBundler ? 'React-Native': 'Hermes';
 
-// Key for .res (e.g. test.res.hermes0_7_0), automatic based on `hermes -version`.
+// Key against which the results will be stored (e.g. .hermes0_7_0), automatic based on `hermes -version`.
 var testKey = (function () {
     var stdout = child_process.execFileSync(hermesCommand, ['-version'], {
         encoding: 'utf-8'
@@ -76,7 +80,7 @@ var testKey = (function () {
     }
     throw new Error('Invalid Hermes version');
 })();
-console.log('Hermes result key is: test.res.' + testKey);
+console.log('Hermes result key is: ' + testKey);
 
 function getArgs(testFilename) {
     var processArgs = [
@@ -112,16 +116,9 @@ function testRunner(testFilename) {
         fs.writeFileSync(testFilename, traspilerStdout.toString());
     }
 
-    try {
-        var stdout = child_process.execFileSync(hermesCommand, processArgs, {
-            encoding: 'utf-8'
-        });
-
-        return /^\[SUCCESS\]$/m.test(stdout);
-    } catch (e) {
-        // console.log(e);
-        return false;
-    }
+    return child_process.execFileSync(hermesCommand, processArgs, {
+        encoding: 'utf-8'
+    });
 }
 
 function resultsMatch(expect, actual) {

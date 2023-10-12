@@ -1,0 +1,561 @@
+{
+	"Intl object": {
+		"exists on global": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"has prototype of Object": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Intl.Collator": {
+		"exists on intl object": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"creates new Collator instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"constructor called without new creates instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"accepts valid language tags": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome29": true,
+			"safari10_1": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"rejects invalid language tags": {
+			"edge18": false,
+			"firefox76": true,
+			"chrome81": true,
+			"safari14": false,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Intl.Collator.prototype.compare": {
+		"exists on Collator prototype": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"Intl.Collator.prototype.resolvedOptions": {
+		"exists on Collator prototype": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"NumberFormat": {
+		"exists on intl object": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"creates new NumberFormat instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"constructor called without new creates instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"accepts valid language tags": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome29": true,
+			"safari10_1": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"rejects invalid language tags": {
+			"edge18": false,
+			"firefox76": true,
+			"chrome81": true,
+			"safari14": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"DateTimeFormat": {
+		"exists on intl object": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"creates new DateTimeFormat instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"constructor called without new creates instances": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"accepts valid language tags": {
+			"ie11": true,
+			"edge12": true,
+			"firefox2": false,
+			"firefox29": {
+				"val": "flagged",
+				"note_id": "firefox-nomob",
+				"note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+			},
+			"firefox56": true,
+			"chrome29": true,
+			"safari10_1": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"rejects invalid language tags": {
+			"edge18": false,
+			"firefox76": true,
+			"chrome81": true,
+			"duktape2_0": false,
+			"graalvm19": false,
+			"graalvm20_1": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		},
+		"resolvedOptions().timeZone defaults to the host environment": {
+			"ie9": false,
+			"edge12": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox52": true,
+			"chrome24": null,
+			"chrome29": true,
+			"safari3_1": false,
+			"safari6": null,
+			"safari7": false,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"opera12": null,
+			"android4_0": null,
+			"ios7": false,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		},
+		"accepts IANA timezone names": {
+			"ie9": false,
+			"edge12": false,
+			"edge14": true,
+			"firefox2": false,
+			"firefox52": true,
+			"chrome24": true,
+			"safari10": true,
+			"opera10_50": false,
+			"node0_12": true,
+			"duktape2_0": false,
+			"graalvm19": true,
+			"hermes0_7_0": false,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": false
+		}
+	},
+	"String.prototype.localeCompare": {
+		"exists on String prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Number.prototype.toLocaleString": {
+		"exists on Number prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Array.prototype.toLocaleString": {
+		"exists on Array prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Object.prototype.toLocaleString": {
+		"exists on Object prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Date.prototype.toLocaleString": {
+		"exists on Date prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Date.prototype.toLocaleDateString": {
+		"exists on Date prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	},
+	"Date.prototype.toLocaleTimeString": {
+		"exists on Date prototype": {
+			"ie9": true,
+			"edge12": true,
+			"firefox2": true,
+			"chrome22": true,
+			"safari3_1": true,
+			"opera10_50": true,
+			"opera12": true,
+			"ios7": true,
+			"node0_10": true,
+			"android4_0": true,
+			"duktape2_0": true,
+			"nashorn1_8": true,
+			"nashorn9": true,
+			"nashorn10": true,
+			"graalvm19": true,
+			"hermes0_7_0": true,
+			"reactnative0_70_3": true,
+			"rhino1_7_13": true
+		}
+	}
+}
