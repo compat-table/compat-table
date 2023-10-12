@@ -1,10 +1,3 @@
-var common = require('./data-common');
-
-var firefox = common.firefox;
-var chrome = common.chrome;
-var edge = common.edge;
-var graalvm = common.graalvm;
-
 exports.name = 'Non-standard';
 exports.target_file = 'non-standard/index.html';
 exports.skeleton_file = 'non-standard/skeleton.html';

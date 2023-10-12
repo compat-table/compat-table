@@ -1,8 +1,3 @@
-var common = require('./data-common');
-
-var sparseNote = common.sparseNote;
-var hermes = common.hermes;
-
 exports.name = 'ES5';
 exports.target_file = 'es5/index.html';
 exports.skeleton_file = 'es5/skeleton.html';

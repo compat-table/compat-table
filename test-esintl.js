@@ -1,7 +1,3 @@
-var common = require('./data-common');
-
-var firefox = common.firefox;
-
 exports.name = 'ES Intl';
 exports.target_file = 'esintl/index.html';
 exports.skeleton_file = 'esintl/skeleton.html';
@@ -51,7 +47,7 @@ exports.tests = [
         return Intl.Collator() instanceof Intl.Collator;
       */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling Collator with Collator instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -66,7 +62,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,
@@ -177,7 +177,7 @@ exports.tests = [
         return Intl.NumberFormat() instanceof Intl.NumberFormat;
       */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling NumberFormat with NumberFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -192,7 +192,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,
@@ -277,7 +281,7 @@ exports.tests = [
         return Intl.DateTimeFormat() instanceof Intl.DateTimeFormat;
       */}
     },
-// The spec was updated making this test invalid.  It was disabled until it can be fixed
+// The spec was updated making this test invalid.  It was disabled until it can be fixed. When this happens, the .res: needs to be moved to results-esintl.json
 //    {
 //      name: 'calling DateTimeFormat with DateTimeFormat instance throws error',
 //      spec: 'http://www.ecma-international.org/ecma-402/1.0/#sec-10.1.1.1',
@@ -292,7 +296,11 @@ exports.tests = [
 //      res: {
 //        ie11: true,
 //        edge12: true,
-//        firefox29: firefox.nomob,
+//        firefox29: {
+//          "val": "flagged",
+//          "note_id": "firefox-nomob",
+//          "note_html": "The feature is available on desktop versions only, it is not available on mobile versions yet."
+//        },
 //        firefox56: true,
 //        chrome24: true,
 //        node0_12: true,

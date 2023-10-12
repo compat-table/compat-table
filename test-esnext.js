@@ -1,10 +1,3 @@
-var common = require('./data-common');
-
-var babel = common.babel;
-var typescript = common.typescript;
-// var firefox = common.firefox;
-var graalvm = common.graalvm;
-
 exports.name = 'ES Next';
 exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
@@ -79,20 +72,7 @@ exports.tests = [
         } catch (e) {
           return a + e === 42;
         }
-      */},
-      res : {
-        babel7corejs2: true,
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        opera10_50: false,
-        chrome77: false,
-        duktape2_0: false,
-        graalvm19: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'parameter initializers',
@@ -108,20 +88,7 @@ exports.tests = [
         } catch (e) {
           return e === 42;
         }
-      */},
-      res : {
-        babel7corejs2: true,
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        opera10_50: false,
-        chrome77: false,
-        duktape2_0: false,
-        graalvm19: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'arrow function bodies',
@@ -132,20 +99,7 @@ exports.tests = [
         } catch (e) {
           return e === 42;
         }
-      */},
-      res : {
-        babel7corejs2: true,
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        opera10_50: false,
-        chrome77: false,
-        duktape2_0: false,
-        graalvm19: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
+      */}
     },
     {
       name: 'conditionals',
@@ -156,20 +110,7 @@ exports.tests = [
         } catch (e) {
           return e === 21;
         }
-      */},
-      res : {
-        babel7corejs2: true,
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        opera10_50: false,
-        chrome77: false,
-        duktape2_0: false,
-        graalvm19: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
+      */}
     }
   ]
 },

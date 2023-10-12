@@ -1,12 +1,3 @@
-var common = require('./data-common');
-
-var babel = common.babel;
-var typescript = common.typescript;
-var firefox = common.firefox;
-var chrome = common.chrome;
-var edge = common.edge;
-var graalvm = common.graalvm;
-
 exports.name = 'ES2016+';
 exports.target_file = 'es2016plus/index.html';
 exports.skeleton_file = 'es2016plus/skeleton.html';
@@ -1180,43 +1171,7 @@ exports.tests = [
     exec: function(){/*
     const regex = /foo.bar/s;
     return regex.test('foo\nbar');
-  */},
-    res : {
-      es6tr: null,
-      tr: null,
-      babel6corejs2: true,
-      closure: false,
-      jsx: null,
-      typescript1corejs2: null,
-      es6shim: null,
-      konq4_14: null,
-      ie7: null,
-      ie10: false,
-      firefox1: null,
-      firefox2: false,
-      firefox77: false,
-      firefox78: true,
-      opera10_50: false,
-      chrome1: null,
-      chrome60: chrome.harmony,
-      chrome62: true,
-      safari11_1: true,
-      safaritp: true,
-      webkit: true,
-      xs6: null,
-      jxa: null,
-      node0_10: null,
-      duktape2_0: false,
-      duktape2_2: false,
-      jerryscript2_3_0: false,
-      jerryscript2_4_0: true,
-      android1_5: null,
-      ios4: null,
-      graalvm19: true,
-      hermes0_7_0: true,
-      reactnative0_70_3: true,
-      rhino1_7_13: false
-    }
+  */}
   },
   {
     name: 'RegExp named capture groups',
@@ -1233,25 +1188,7 @@ exports.tests = [
         && result[1] === '2016'
         && result[2] === '03'
         && result[3] === '11';
-      */},
-    res : {
-      babel6corejs2: true,
-      ie11: false,
-      firefox2: false,
-      firefox77: false,
-      firefox78: true,
-      opera10_50: false,
-      chrome60: chrome.harmony,
-      chrome64: true,
-      safari11_1: true,
-      safaritp: true,
-      duktape2_0: false,
-      jerryscript2_3_0: false,
-      graalvm19: true,
-      hermes0_7_0: false,
-      reactnative0_70_3: false,
-      rhino1_7_13: false
-    }
+      */}
   },
   {
     name: 'RegExp Lookbehind Assertions',
@@ -1262,26 +1199,7 @@ exports.tests = [
     exec: function(){/*
     return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
            !/(?<=a)b/.test('b');
-  */},
-    res : {
-      babel7corejs3: false,
-      ie11: false,
-      firefox2: false,
-      firefox77: false,
-      firefox78: true,
-      opera10_50: false,
-      chrome50: chrome.harmony,
-      chrome62: true,
-      safari13_1: false,
-      safari16_4: true,
-      duktape2_0: false,
-      jerryscript2_3_0: false,
-      graalvm19: true,
-      hermes0_7_0: true,
-      reactnative0_70_3: true,
-      rhino1_7_13: false,
-      safaritp: true
-    }
+  */}
   },
   {
     name: 'RegExp Unicode Property Escapes',
@@ -1454,96 +1372,20 @@ exports.tests = [
         name: 'basic',
         exec: function(){/*
           return Symbol('foo').description === 'foo';
-        */},
-        res : {
-          babel6corejs2: false,
-          babel7corejs3: babel.corejs,
-          closure: false,
-          closure20190301: true,
-          typescript1corejs2: typescript.fallthrough,
-          typescript3_2corejs3: typescript.corejs,
-          ie11: false,
-          firefox10: false,
-          firefox45: false,
-          firefox63: true,
-          chrome67: false,
-          chrome69: chrome.harmony,
-          chrome70: true,
-          safari11: false,
-          safari12: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          hermes0_7_0: false,
-          hermes0_12_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'empty description',
         exec: function(){/*
           return Symbol('').description === '';
-        */},
-        res : {
-          babel6corejs2: false,
-          babel7corejs3: babel.corejs,
-          closure: false,
-          closure20190301: true,
-          typescript1corejs2: typescript.fallthrough,
-          typescript3_2corejs3: typescript.corejs,
-          ie11: false,
-          firefox10: false,
-          firefox45: false,
-          firefox63: true,
-          chrome67: false,
-          chrome69: chrome.harmony,
-          chrome70: true,
-          safari11: false,
-          safari12: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          hermes0_7_0: false,
-          hermes0_12_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'undefined description',
         exec: function(){/*
           return Symbol.prototype.hasOwnProperty('description')
             && Symbol().description === void undefined;
-        */},
-        res : {
-          babel6corejs2: false,
-          babel7corejs3: babel.corejs,
-          typescript1corejs2: typescript.fallthrough,
-          typescript3_2corejs3: typescript.corejs,
-          ie11: false,
-          firefox10: false,
-          firefox45: false,
-          firefox63: true,
-          chrome67: false,
-          chrome69: chrome.harmony,
-          chrome70: true,
-          safari11: false,
-          safari12: false,
-          safari12_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          hermes0_7_0: false,
-          reactnative0_70_3: false,
-          rhino1_7_13: false
-        }
+        */}
       }
     ]
   },
@@ -1608,55 +1450,13 @@ exports.tests = [
         name: 'LINE SEPARATOR can appear in string literals',
         exec: function(){/*
           return eval("'\u2028'") === "\u2028";
-        */},
-        res : {
-          closure: false,
-          closure20190215: true,
-          babel7corejs2: true,
-          ie11: false,
-          firefox2: false,
-          firefox61: false,
-          firefox62: true,
-          chrome65: false,
-          chrome66: true,
-          safari11: false,
-          safari12: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false,
-          rhino1_7_14: true,
-        }
+        */}
       },
       {
         name: 'PARAGRAPH SEPARATOR can appear in string literals',
         exec: function(){/*
           return eval("'\u2029'") === "\u2029";
-        */},
-        res : {
-          closure: false,
-          closure20190215: true,
-          babel7corejs2: true,
-          ie11: false,
-          firefox2: false,
-          firefox61: false,
-          firefox62: true,
-          chrome65: false,
-          chrome66: true,
-          safari11: false,
-          safari12: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          jerryscript2_4_0: true,
-          graalvm19: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false,
-          rhino1_7_14: true,
-        }
+        */}
       }
     ]
   },
@@ -1920,31 +1720,7 @@ exports.tests = [
           var foo = { baz: 42 };
           var bar = null;
           return foo?.baz === 42 && bar?.baz === void undefined;
-        */},
-        res : {
-          babel7corejs2: true,
-          closure: false,
-          closure20200927: true,
-          typescript3_7corejs3: true,
-          ie11: false,
-          firefox10: false,
-          firefox52: false,
-          firefox73: false,
-          firefox74: true,
-          chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-optional-chaining\"</code> flag"},
-          chrome80: true,
-          safari13_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20: graalvm.es2020flag,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'optional bracket access',
@@ -1952,31 +1728,7 @@ exports.tests = [
           var foo = { baz: 42 };
           var bar = null;
           return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
-        */},
-        res : {
-          babel7corejs2: true,
-          closure: false,
-          closure20200927: true,
-          typescript3_7corejs3: true,
-          ie11: false,
-          firefox10: false,
-          firefox52: false,
-          firefox73: false,
-          firefox74: true,
-          chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
-          chrome80: true,
-          safari13_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20: graalvm.es2020flag,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'optional method call',
@@ -1984,31 +1736,7 @@ exports.tests = [
           var foo = { baz: function () { return this.value; }, value: 42 };
           var bar = null;
           return foo?.baz() === 42 && bar?.baz() === void undefined;
-        */},
-        res : {
-          babel7corejs2: true,
-          closure: false,
-          closure20200927: true,
-          typescript3_7corejs3: true,
-          ie11: false,
-          firefox10: false,
-          firefox52: false,
-          firefox73: false,
-          firefox74: true,
-          chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
-          chrome80: true,
-          safari13_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20: graalvm.es2020flag,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'optional function call',
@@ -2018,31 +1746,7 @@ exports.tests = [
           function baz() { return 42; };
           var n;
           return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
-        */},
-        res : {
-          babel7corejs2: true,
-          closure: false,
-          closure20200927: true,
-          typescript3_7corejs3: true,
-          ie11: false,
-          firefox10: false,
-          firefox52: false,
-          firefox73: false,
-          firefox74: true,
-          chrome77: false,
-          chrome78: {val: 'flagged', note_id: "chrome-optional-chaining"},
-          chrome80: true,
-          safari13_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20: graalvm.es2020flag,
-          graalvm20_1: true,
-          hermes0_7_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'spread parameters after optional chaining',
@@ -2052,30 +1756,7 @@ exports.tests = [
           var o = {};
 
           return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
-        */},
-        res : {
-          babel7corejs3: true,
-          closure: false,
-          closure20200927: true,
-          ie11: false,
-          firefox10: false,
-          firefox52: false,
-          firefox73: false,
-          firefox74: true,
-          chrome77: false,
-          chrome80: false,
-          chrome89: false,
-          chrome90: false,
-          chrome91: true,
-          safari13_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          graalvm21_3_3: true,
-          hermes0_7_0: false,
-          hermes0_12_0: true,
-          reactnative0_70_3: true,
-          rhino1_7_13: false
-        }
+        */}
       }
     ]
   },
@@ -2092,31 +1773,7 @@ exports.tests = [
         ('' ?? 42) === '' &&
         (0 ?? 42) === 0 &&
         isNaN(NaN ?? 42);
-    */},
-    res : {
-      babel7corejs2: true,
-      closure: false,
-      closure20200315: true,
-      typescript3_7corejs3: true,
-      ie11: false,
-      firefox10: false,
-      firefox52: false,
-      firefox72: true,
-      chrome77: false,
-      chrome78: {val: 'flagged', note_id: "chrome-nullish", note_html: "The feature has to be enabled via <code>--js-flags=\"--harmony-nullish\"</code> flag"},
-      chrome80: true,
-      safari13_1: true,
-      safaritp: true,
-      duktape2_0: false,
-      jerryscript2_3_0: false,
-      jerryscript2_4_0: true,
-      graalvm19: false,
-      graalvm20: graalvm.es2020flag,
-      graalvm20_1: true,
-      hermes0_7_0: true,
-      reactnative0_70_3: true,
-      rhino1_7_13: false
-    }
+    */}
   },
   {
     name: 'String.prototype.replaceAll',
@@ -2175,32 +1832,7 @@ exports.tests = [
           var O = {};
           var weakref = new WeakRef(O);
           return weakref.deref() === O;
-        */},
-        res : {
-          ie11: false,
-          firefox2: false,
-          firefox74: {
-            val: 'flagged',
-            note_id: 'firefox-weakrefs',
-            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.weakrefs</code> setting under <code>about:config</code>.'
-          },
-          firefox79: true,
-          opera10_50: false,
-          chrome65: false,
-          chrome74: {val: 'flagged', note_id: "chrome-weakrefs", note_html: "Available behind the <a href='https://bugs.chromium.org/p/v8/issues/detail?id=8179'><code>--js-flags=\"--harmony-weak-refs --expose-gc\"</code></a> flag in V8."},
-          chrome85: true,
-          safari13: false,
-          safari14_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20: graalvm.es2021flag,
-          graalvm21: true,
-          hermes0_7_0: false,
-          reactnative0_70_3: false,
-          rhino1_7_13: false
-        }
+        */}
       },
       {
         name: 'FinalizationRegistry minimal support',
@@ -2208,28 +1840,7 @@ exports.tests = [
         exec: function(){/*
           var fr = new FinalizationRegistry(function() {});
           return Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;
-        */},
-        res : {
-          ie11: false,
-          firefox2: false,
-          firefox74: false,
-          firefox78: { val: 'flagged', note_id: 'firefox-weakrefs' },
-          firefox79: true,
-          opera10_50: false,
-          chrome65: false,
-          chrome74: false,
-          chrome85: true,
-          safari14_1: true,
-          safaritp: true,
-          duktape2_0: false,
-          jerryscript2_3_0: false,
-          graalvm19: false,
-          graalvm20_3: graalvm.es2021flag,
-          graalvm21: true,
-          hermes0_7_0: false,
-          reactnative0_70_3: false,
-          rhino1_7_13: false
-        }
+        */}
       }
     ]
   },
@@ -2342,35 +1953,7 @@ exports.tests = [
     exec: function(){/*
       return 1_000_000.000_001 === 1000000.000001 &&
         0b1010_0001_1000_0101 === 0b1010000110000101;
-    */},
-    res : {
-      babel7corejs2: true,
-      closure: false,
-      closure20210808: true,
-      typescript1corejs2: false,
-      typescript2_7corejs2: true,
-      ie11: false,
-      firefox2: false,
-      firefox10: false,
-      firefox67: false,
-      firefox68: firefox.nightly,
-      firefox70: true,
-      opera10_50: false,
-      chrome67: chrome.harmony,
-      chrome75: true,
-      safari13: true,
-      safaritp: true,
-      duktape2_0: false,
-      jerryscript2_3_0: false,
-      jerryscript2_4_0: true,
-      graalvm19: false,
-      graalvm20: graalvm.es2020flag,
-      graalvm20_1: true,
-      hermes0_7_0: true,
-      reactnative0_70_3: true,
-      rhino1_7_13: false,
-      rhino1_7_14: true,
-    }
+    */}
   },
   {
     name: 'instance class fields',
