@@ -1,5 +1,43 @@
+/* jshint esversion: 11 */
 var fs = require('fs');
 var createIterableHelper = require('./test-utils/testHelpers').createIterableHelper;
+
+function getKeys(key, family, environments) {
+    var res = [];
+    for (var k in environments) {
+        var env = environments[k];
+        if (env.family !== family) {
+            continue;
+        }
+        res.push(k);
+        if (k === key) {
+            // Include versions up to 'key' but not newer.
+            break;
+        }
+    }
+    return res;
+}
+
+function removeIndent(str) {
+    var indentation = /^[\t ]+/m.exec(str);
+    return str.replace(new RegExp('^' + indentation[0], 'gm'), '');
+}
+
+function testCode(exec) {
+	if (typeof exec === 'function') {
+        var src = exec.toString();
+        var functionBody = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
+        if (functionBody) {
+            return '(function () { ' + removeIndent(functionBody[1]) + ' })()';
+        } else {
+            return '(' + src + ')()';
+        }
+    } else if (Array.isArray(exec)) {
+        return exec.map(function (e) { return testCode(e.script); }).join("; ");
+    } else {
+        return undefined;
+    }
+}
 
 exports.runTests = function runTests(runner, key, family, options) {
     options = options === undefined ? {} : options;
@@ -65,43 +103,8 @@ exports.runTests = function runTests(runner, key, family, options) {
         'Promise.resolve().then(flushQueue);\n';
 
     // List of keys for inheriting results from previous versions.
-    var keyList = (function () {
-        var res = [];
-        for (var k in environments) {
-            var env = environments[k];
-            if (env.family !== family) {
-                continue;
-            }
-            res.push(k);
-            if (k === key) {
-                // Include versions up to 'key' but not newer.
-                break;
-            }
-        }
-        return res;
-    })();
+    var keyList = getKeys(key, family, environments);
     console.log(family + ' key list for inheriting results is:', keyList);
-
-    function testCode(exec) {
-        if (typeof exec === 'function') {
-            var src = exec.toString();
-            var functionBody = /^function\s*\w*\s*\(.*?\)\s*\{\s*\/\*([\s\S]*?)\*\/\s*\}$/m.exec(src);
-            if (functionBody) {
-                return '(function () { ' + removeIndent(functionBody[1]) + ' })()';
-            } else {
-                return '(' + src + ')()';
-            }
-        } else if (Array.isArray(exec)) {
-            return exec.map(function (e) { return testCode(e.script); }).join("; ");
-        } else {
-            return undefined;
-        }
-    }
-
-    function removeIndent(str) {
-        var indentation = /^[\t ]+/m.exec(str);
-        return str.replace(new RegExp('^' + indentation[0], 'gm'), '');
-    }
 
     // Run test / subtests, recursively.  Report results, indicate data files
     // which are out of date.
@@ -172,7 +175,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                 }
 
                 fs.writeFileSync(testFilename, script);
-            
+
                 actual = runner(testFilename, parents[0]);
             } else {
                 actual = 'skip';
@@ -185,7 +188,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                 if (actual) {
                     testSuccess++;
                 }
-    
+
                 if (test.res) {
                     // Take expected result from newest engine version not newer
                     // than current version.
@@ -217,8 +220,8 @@ exports.runTests = function runTests(runner, key, family, options) {
         }
 
         if (test.subtests) {
-            var newParents = parents.slice(0);
-            newParents.push(test.name);
+            var newParents = parents.concat(test.name);
+
             test.subtests.forEach(function (subtest) {
                 runTest(newParents, subtest);
             });
