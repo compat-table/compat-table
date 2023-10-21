@@ -301,7 +301,7 @@
     "short": "Closure 2020.06",
     "family": "Closure",
     "platformtype": "compiler",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -383,6 +383,18 @@
   "closure20220719": {
     "full": "Closure Compiler >=v20220719",
     "short": "Closure 2022.07",
+    "family": "Closure",
+    "platformtype": "compiler",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "closure20230228": {
+    "full": "Closure Compiler >=v20230228",
+    "short": "Closure 2023.02",
     "family": "Closure",
     "platformtype": "compiler",
     "obsolete": false,
@@ -1767,7 +1779,7 @@
     "short": "FF 91 ESR",
     "release": "2021-08-10",
     "retire": "2022-08-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox92": {
     "full": "Firefox 92",
@@ -1847,14 +1859,15 @@
     "short": "FF 101",
     "release": "2022-05-31",
     "retire": "2022-06-28",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox102": {
     "full": "Firefox 102 Extended Support Release",
     "family": "SpiderMonkey",
     "short": "FF 102 ESR",
     "release": "2022-06-28",
-    "obsolete": false
+    "retire": "2023-08-29",
+    "obsolete": true
   },
   "firefox103": {
     "full": "Firefox 103",
@@ -1862,7 +1875,7 @@
     "short": "FF 103",
     "release": "2022-07-26",
     "retire": "2022-08-23",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox104": {
     "full": "Firefox 104",
@@ -1870,7 +1883,7 @@
     "short": "FF 104",
     "release": "2022-08-23",
     "retire": "2022-09-20",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox105": {
     "full": "Firefox 105",
@@ -1950,22 +1963,53 @@
     "short": "FF 114",
     "release": "2023-06-06",
     "retire": "2023-07-04",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox115": {
-    "full": "Firefox 115 Beta",
+    "full": "Firefox 115 Extended Support Release",
     "family": "SpiderMonkey",
-    "short": "FF 115",
+    "short": "FF 115 ESR",
     "release": "2023-07-04",
-    "retire": "2023-08-01",
-    "unstable": true
+    "obsolete": false
   },
   "firefox116": {
-    "full": "Firefox 116 Nightly",
+    "full": "Firefox 116",
     "family": "SpiderMonkey",
     "short": "FF 116",
     "release": "2023-08-01",
     "retire": "2023-08-29",
+    "obsolete": true
+  },
+  "firefox117": {
+    "full": "Firefox 117",
+    "family": "SpiderMonkey",
+    "short": "FF 117",
+    "release": "2023-08-29",
+    "retire": "2023-09-26",
+    "obsolete": true
+  },
+  "firefox118": {
+    "full": "Firefox 118",
+    "family": "SpiderMonkey",
+    "short": "FF 118",
+    "release": "2023-09-26",
+    "retire": "2023-10-24",
+    "obsolete": false
+  },
+  "firefox119": {
+    "full": "Firefox 119 Beta",
+    "family": "SpiderMonkey",
+    "short": "FF 119",
+    "release": "2023-10-24",
+    "retire": "2023-11-21",
+    "unstable": true
+  },
+  "firefox120": {
+    "full": "Firefox 120 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 120",
+    "release": "2023-11-21",
+    "retire": "2023-12-19",
     "unstable": true
   },
   "opera7": {
@@ -2964,56 +3008,56 @@
     "family": "V8",
     "short": "CH 102",
     "release": "2022-05-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome103": {
     "full": "Chrome 103",
     "family": "V8",
     "short": "CH 103",
     "release": "2022-06-21",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome104": {
     "full": "Chrome 104",
     "family": "V8",
     "short": "CH 104",
     "release": "2022-08-02",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome105": {
     "full": "Chrome 105",
     "family": "V8",
     "short": "CH 105",
     "release": "2022-08-30",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome106": {
     "full": "Chrome 106",
     "family": "V8",
     "short": "CH 106",
     "release": "2022-09-27",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome107": {
     "full": "Chrome 107",
     "family": "V8",
     "short": "CH 107",
     "release": "2022-10-25",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome108": {
     "full": "Chrome 108",
     "family": "V8",
     "short": "CH 108",
     "release": "2022-11-29",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome109": {
     "full": "Chrome 109",
     "family": "V8",
     "short": "CH 109",
     "release": "2023-01-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome110": {
     "full": "Chrome 110",
@@ -3041,20 +3085,55 @@
     "family": "V8",
     "short": "CH 113",
     "release": "2023-04-26",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome114": {
-    "full": "Chrome 114 Beta",
+    "full": "Chrome 114",
     "family": "V8",
     "short": "CH 114",
     "release": "2023-05-24",
-    "unstable": true
+    "obsolete": true
   },
   "chrome115": {
-    "full": "Chrome 115 Canary",
+    "full": "Chrome 115",
     "family": "V8",
     "short": "CH 115",
     "release": "2023-07-12",
+    "obsolete": true
+  },
+  "chrome116": {
+    "full": "Chrome 116",
+    "family": "V8",
+    "short": "CH 116",
+    "release": "2023-08-15",
+    "obsolete": false
+  },
+  "chrome117": {
+    "full": "Chrome 117",
+    "family": "V8",
+    "short": "CH 117",
+    "release": "2023-09-12",
+    "obsolete": false
+  },
+  "chrome118": {
+    "full": "Chrome 118",
+    "family": "V8",
+    "short": "CH 118 Beta",
+    "release": "2023-10-10",
+    "unstable": true
+  },
+  "chrome119": {
+    "full": "Chrome 119",
+    "family": "V8",
+    "short": "CH 119 Dev",
+    "release": "2023-10-31",
+    "unstable": true
+  },
+  "chrome120": {
+    "full": "Chrome 120",
+    "family": "V8",
+    "short": "CH 120 Canary",
+    "release": "2023-10-31",
     "unstable": true
   },
   "edge12": {
@@ -3646,7 +3725,7 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16",
     "release": "2022-09-12",
-    "obsolete": true
+    "obsolete": "very"
   },
   "safari16_1": {
     "full": "Safari 16.1",
@@ -3674,6 +3753,27 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.4",
     "release": "2023-03-27",
+    "obsolete": true
+  },
+  "safari16_5": {
+    "full": "Safari 16.5",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.5",
+    "release": "2023-05-18",
+    "obsolete": true
+  },
+  "safari16_6": {
+    "full": "Safari 16.6",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;16.6",
+    "release": "2023-07-24",
+    "obsolete": false
+  },
+  "safari17": {
+    "full": "Safari 17",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;17.0",
+    "release": "2023-09-26",
     "obsolete": false
   },
   "safaritp": {
@@ -4877,7 +4977,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome74",
     "release": "2019-04-23",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4895,7 +4995,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome75",
     "release": "2019-06-26",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4913,7 +5013,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome76",
     "release": "2019-08-20",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4926,13 +5026,32 @@
   "node12_11": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=12.11 &lt;13",
+    "short": "Node &gt;=12.11 &lt;12.16",
     "platformtype": "engine",
     "note_id": "harmony-flag",
     "equals": "chrome77",
     "release": "2019-09-25",
     "retire": "2022-04-30",
-    "obsolete": true,
+    "obsolete": "very",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node12_16": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=12.16 &lt;13",
+    "platformtype": "engine",
+    "note_id": "harmony-flag",
+    "equals": "chrome78",
+    "release": "2020-02-11",
+    "retire": "2022-04-30",
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4950,7 +5069,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome78",
     "release": "2019-10-22",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4968,7 +5087,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome79",
     "release": "2019-11-21",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -4986,7 +5105,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome81",
     "release": "2020-04-21",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5004,7 +5123,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome83",
     "release": "2020-06-30",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5022,7 +5141,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome84",
     "release": "2020-07-20",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -5040,7 +5159,7 @@
     "note_id": "harmony-flag",
     "equals": "chrome86",
     "release": "2020-10-20",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es5",
       "es6",
@@ -5142,6 +5261,7 @@
     "platformtype": "engine",
     "equals": "chrome101",
     "release": "2022-04-18",
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -5170,10 +5290,45 @@
   "node19_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=19",
+    "short": "Node &gt;=19 &lt;19.2",
     "platformtype": "engine",
     "equals": "chrome107",
     "release": "2022-10-17",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node19_2": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=19.2 &lt;20",
+    "platformtype": "engine",
+    "equals": "chrome108",
+    "release": "2022-11-29",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node20_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=20",
+    "platformtype": "engine",
+    "equals": "chrome113",
+    "release": "2023-04-18",
+    "obsolete": false,
     "test_suites": [
       "es5",
       "es6",
@@ -5995,7 +6150,7 @@
     "equals": "chrome99",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-02-17",
     "short": "Deno 1.19",
@@ -6012,7 +6167,7 @@
     "equals": "chrome100",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-03-17",
     "short": "Deno 1.20",
@@ -6029,7 +6184,7 @@
     "equals": "chrome100",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-04-21",
     "short": "Deno 1.21",
@@ -6046,7 +6201,7 @@
     "equals": "chrome100",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-05-18",
     "short": "Deno 1.22",
@@ -6063,7 +6218,7 @@
     "equals": "chrome104",
     "family": "V8",
     "full": "Deno",
-    "obsolete": true,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-06-15",
     "short": "Deno 1.23",
@@ -6080,10 +6235,214 @@
     "equals": "chrome104",
     "family": "V8",
     "full": "Deno",
-    "obsolete": false,
+    "obsolete": "very",
     "platformtype": "engine",
     "release": "2022-07-20",
     "short": "Deno 1.24",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_25": {
+    "equals": "chrome106",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-08-25",
+    "short": "Deno 1.25",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_26": {
+    "equals": "chrome107",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-09-29",
+    "short": "Deno 1.26",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_27": {
+    "equals": "chrome108",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-10-27",
+    "short": "Deno 1.27",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_28": {
+    "equals": "chrome109",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-11-13",
+    "short": "Deno 1.28",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_29": {
+    "equals": "chrome109",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2022-12-15",
+    "short": "Deno 1.29",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_30": {
+    "equals": "chrome109",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2023-01-26",
+    "short": "Deno 1.30",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_31": {
+    "equals": "chrome110",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2023-02-24",
+    "short": "Deno 1.31",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_32": {
+    "equals": "chrome112",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": "very",
+    "platformtype": "engine",
+    "release": "2023-03-23",
+    "short": "Deno 1.32",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_33": {
+    "equals": "chrome114",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2023-04-28",
+    "short": "Deno 1.33",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_34": {
+    "equals": "chrome115",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2023-05-24",
+    "short": "Deno 1.34",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_35": {
+    "equals": "chrome116",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": true,
+    "platformtype": "engine",
+    "release": "2023-07-05",
+    "short": "Deno 1.35",
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "deno1_36": {
+    "equals": "chrome116",
+    "family": "V8",
+    "full": "Deno",
+    "obsolete": false,
+    "platformtype": "engine",
+    "release": "2023-08-03",
+    "short": "Deno 1.36",
     "test_suites": [
       "es5",
       "es6",
@@ -6416,7 +6775,7 @@
     "platformtype": "mobile",
     "equals": "safari15_5",
     "release": "2022-05-16",
-    "obsolete": true
+    "obsolete": "very"
   },
   "ios16": {
     "full": "iOS Safari",
@@ -6460,7 +6819,34 @@
     "short": "iOS 16.4",
     "platformtype": "mobile",
     "equals": "safari16_4",
-    "release": "2022-03-27",
+    "release": "2023-03-27",
+    "obsolete": true
+  },
+  "ios16_5": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.5",
+    "platformtype": "mobile",
+    "equals": "safari16_5",
+    "release": "2023-05-18",
+    "obsolete": true
+  },
+  "ios16_6": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 16.6",
+    "platformtype": "mobile",
+    "equals": "safari16_6",
+    "release": "2023-07-24",
+    "obsolete": true
+  },
+  "ios17": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 17.0",
+    "platformtype": "mobile",
+    "equals": "safari17",
+    "release": "2023-09-18",
     "obsolete": false
   },
   "samsung1": {
@@ -6620,7 +7006,7 @@
     "platformtype": "mobile",
     "equals": "chrome92",
     "release": "2021-11-26",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung17": {
     "full": "Samsung Internet for Android 17",
@@ -6629,7 +7015,7 @@
     "platformtype": "mobile",
     "equals": "chrome96",
     "release": "2022-06-14",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung18": {
     "full": "Samsung Internet for Android 18",
@@ -6638,7 +7024,7 @@
     "platformtype": "mobile",
     "equals": "chrome99",
     "release": "2022-08-06",
-    "obsolete": true
+    "obsolete": "very"
   },
   "samsung19": {
     "full": "Samsung Internet for Android 19",
@@ -6647,6 +7033,33 @@
     "platformtype": "mobile",
     "equals": "chrome102",
     "release": "2022-11-01",
+    "obsolete": true
+  },
+  "samsung20": {
+    "full": "Samsung Internet for Android 20",
+    "family": "Samsung",
+    "short": "Samsung 20",
+    "platformtype": "mobile",
+    "equals": "chrome106",
+    "release": "2023-02-10",
+    "obsolete": true
+  },
+  "samsung21": {
+    "full": "Samsung Internet for Android 21",
+    "family": "Samsung",
+    "short": "Samsung 21",
+    "platformtype": "mobile",
+    "equals": "chrome110",
+    "release": "2023-05-19",
+    "obsolete": true
+  },
+  "samsung22": {
+    "full": "Samsung Internet for Android 22",
+    "family": "Samsung",
+    "short": "Samsung 22",
+    "platformtype": "mobile",
+    "equals": "chrome111",
+    "release": "2023-07-14",
     "obsolete": false
   },
   "opera_mobile10_1": {
@@ -7124,7 +7537,7 @@
     "platformtype": "mobile",
     "equals": "chrome92",
     "release": "2021-10-13",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile66": {
     "full": "Opera Mobile for Android 66",
@@ -7133,7 +7546,7 @@
     "platformtype": "mobile",
     "equals": "chrome96",
     "release": "2021-12-14",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile67": {
     "full": "Opera Mobile for Android 67",
@@ -7142,7 +7555,7 @@
     "platformtype": "mobile",
     "equals": "chrome96",
     "release": "2022-02-07",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile68": {
     "full": "Opera Mobile for Android 68",
@@ -7151,7 +7564,7 @@
     "platformtype": "mobile",
     "equals": "chrome99",
     "release": "2022-04-01",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile69": {
     "full": "Opera Mobile for Android 69",
@@ -7160,7 +7573,7 @@
     "platformtype": "mobile",
     "equals": "chrome100",
     "release": "2022-05-12",
-    "obsolete": true
+    "obsolete": "very"
   },
   "opera_mobile70": {
     "full": "Opera Mobile for Android 70",
@@ -7169,7 +7582,7 @@
     "platformtype": "mobile",
     "equals": "chrome102",
     "release": "2022-06-30",
-    "obsolete": false
+    "obsolete": "very"
   },
   "opera_mobile71": {
     "full": "Opera Mobile for Android 71",
@@ -7178,6 +7591,60 @@
     "platformtype": "mobile",
     "equals": "chrome104",
     "release": "2022-09-02",
+    "obsolete": "very"
+  },
+  "opera_mobile72": {
+    "full": "Opera Mobile for Android 72",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 72",
+    "platformtype": "mobile",
+    "equals": "chrome106",
+    "release": "2022-10-21",
+    "obsolete": true
+  },
+  "opera_mobile73": {
+    "full": "Opera Mobile for Android 73",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 73",
+    "platformtype": "mobile",
+    "equals": "chrome108",
+    "release": "2023-01-17",
+    "obsolete": true
+  },
+  "opera_mobile74": {
+    "full": "Opera Mobile for Android 74",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 74",
+    "platformtype": "mobile",
+    "equals": "chrome110",
+    "release": "2023-03-13",
+    "obsolete": true
+  },
+  "opera_mobile75": {
+    "full": "Opera Mobile for Android 75",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 75",
+    "platformtype": "mobile",
+    "equals": "chrome112",
+    "release": "2023-05-17",
+    "obsolete": true
+  },
+  "opera_mobile76": {
+    "full": "Opera Mobile for Android 76",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 76",
+    "platformtype": "mobile",
+    "equals": "chrome114",
+    "release": "2023-06-26",
+    "obsolete": true
+  },
+  "opera_mobile77": {
+    "full": "Opera Mobile for Android 77",
+    "family": "Opera Mobile",
+    "short": "Opera Mobile 77",
+    "platformtype": "mobile",
+    "equals": "chrome115",
+    "release": "2023-09-01",
     "obsolete": false
   },
   "reactnative0_70_3": {
