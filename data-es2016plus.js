@@ -3453,10 +3453,10 @@ exports.tests = [
       */},
         res: {
           ie11: false,
-          chrome117: false,
-          node20_0: false,
+          chrome118: false,
+          node21_0: false,
           firefox2: false,
-          firefox117: false,
+          firefox118: false,
           safari11_1: false,
           safaritp: false,
           safari17: false,
@@ -7033,9 +7033,9 @@ exports.tests = [
         return /^\p{RGI_Emoji}$/v.test("🐦‍🔥");
       */},
         res: {
-          chrome117: false,
-          node20_0: false,
-          firefox117: false,
+          chrome118: false,
+          node21_0: false,
+          firefox118: false,
           safaritp: false,
           safari16_6: false,
           ie11: false,
