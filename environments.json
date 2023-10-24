@@ -3077,7 +3077,7 @@
     "family": "V8",
     "short": "CH 110",
     "release": "2023-02-07",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome111": {
     "full": "Chrome 111",
@@ -3119,7 +3119,7 @@
     "family": "V8",
     "short": "CH 116",
     "release": "2023-08-15",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome117": {
     "full": "Chrome 117",
@@ -3131,22 +3131,29 @@
   "chrome118": {
     "full": "Chrome 118",
     "family": "V8",
-    "short": "CH 118 Beta",
+    "short": "CH 118",
     "release": "2023-10-10",
-    "unstable": true
+    "obsolete": false
   },
   "chrome119": {
     "full": "Chrome 119",
     "family": "V8",
-    "short": "CH 119 Dev",
+    "short": "CH 119 Beta",
     "release": "2023-10-31",
     "unstable": true
   },
   "chrome120": {
     "full": "Chrome 120",
     "family": "V8",
-    "short": "CH 120 Canary",
-    "release": "2023-10-31",
+    "short": "CH 120 Dev",
+    "release": "2023-12-05",
+    "unstable": true
+  },
+  "chrome121": {
+    "full": "Chrome 121",
+    "family": "V8",
+    "short": "CH 121 Canary",
+    "release": "2024-01-23",
     "unstable": true
   },
   "edge12": {
@@ -5324,7 +5331,7 @@
     "platformtype": "engine",
     "equals": "chrome108",
     "release": "2022-11-29",
-    "obsolete": false,
+    "obsolete": true,
     "test_suites": [
       "es5",
       "es6",
@@ -5337,10 +5344,27 @@
   "node20_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=20",
+    "short": "Node &gt;=20 &lt;21",
     "platformtype": "engine",
     "equals": "chrome113",
     "release": "2023-04-18",
+    "obsolete": false,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node21_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=21",
+    "platformtype": "engine",
+    "equals": "chrome118",
+    "release": "2023-10-24",
     "obsolete": false,
     "test_suites": [
       "es5",
