@@ -6990,6 +6990,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
+          safari17: true,
           safaritp: true,
           rhino1_7_15: false,
         }
@@ -7010,6 +7011,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
+          safari17: true,
           safaritp: true,
           rhino1_7_15: false,
         }
@@ -7029,6 +7031,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
+          safari17: true,
           safaritp: true,
           rhino1_7_15: false,
         }
@@ -7051,6 +7054,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
+          safari17: true,
           safaritp: true,
           rhino1_7_15: false,
         }
