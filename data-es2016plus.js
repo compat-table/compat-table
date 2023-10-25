@@ -6966,7 +6966,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
-          safaritp: true,
+          safari17: true,
         }
       },
       {
@@ -6985,7 +6985,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
-          safaritp: true,
+          safari17: true,
         }
       },
       {
@@ -7003,7 +7003,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
-          safaritp: true,
+          safari17: true,
         }
       },
       {
@@ -7024,7 +7024,7 @@ exports.tests = [
           firefox116: true,
           ie11: false,
           safari16_6: false,
-          safaritp: true,
+          safari17: true,
         }
       },
       {
