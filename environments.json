@@ -3780,7 +3780,7 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;16.6",
     "release": "2023-07-24",
-    "obsolete": false
+    "obsolete": true
   },
   "safari17": {
     "full": "Safari 17",
@@ -3789,8 +3789,15 @@
     "release": "2023-09-26",
     "obsolete": false
   },
+  "safari17_1": {
+    "full": "Safari 17.1",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;17.1",
+    "release": "2023-10-25",
+    "obsolete": false
+  },
   "safaritp": {
-    "full": "Safari Technology Preview Release 171",
+    "full": "Safari Technology Preview Release 181",
     "family": "JavaScriptCore",
     "short": "SF TP",
     "unstable": true
