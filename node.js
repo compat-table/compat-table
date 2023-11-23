@@ -4,7 +4,7 @@ var fs = require('fs');
 var chalk = require('chalk');
 var path = require('path');
 var cheerio = require('cheerio');
-var runner_support = require('./runner_support');
+var createIterableHelper = require('./test-utils/testHelpers').createIterableHelper;
 
 var page = fs.readFileSync(path.join(__dirname, String(process.argv[2] || 'es6').toLowerCase(), 'index.html')).toString().replace(/data-source="[^"]*"/g,'');
 var $ = cheerio.load(page);
@@ -26,7 +26,7 @@ $('#body tbody tr').each(function (index) {
   global.asyncPassed = function asyncPassed() {
     results[index] = true;
   };
-  eval(runner_support.createIterableHelper);
+  eval(createIterableHelper);
 
   results[index] = null;
 
