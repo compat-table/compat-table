@@ -1,24 +1,6 @@
-// jshint ignore:start
-var _gaq = [
-  ['_setAccount', 'UA-1128111-24'],
-  ['_trackPageview']
-];
-// jshint ignore:end
-
-
 if (!document.scripts) { // Create "live list" for all scripts if it doesn't exist
   document.scripts = document.getElementsByTagName("script");
 }
-
-(function() {
-  var ga = document.createElement('script');
-  ga.type = 'text/javascript';
-  ga.async = true;
-  ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') +
-            '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(ga, s);
-})();
 
 window.test = function(expression) {
   var result = (typeof expression === "string" ? expression : !!expression ? 'Yes' : 'No');

@@ -5,9 +5,8 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <meta name="viewport" content="width=device-width">
     <title>ECMAScript extensions compatibility table</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../master.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../jquery.min.js"></script>
     <script src="../master.js"></script>
     <script>
       var __script_executed = {};
@@ -16,17 +15,6 @@
         window.global = this;
       }
     </script>
-    <script>
-      (function() {
-        var s = document.createElement('script'),
-            t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto&uid=kangax';
-        t.parentNode.insertBefore(s, t);
-      })();
-    </script>
-
   </head>
   <body class="non-standard">
     <div id="header">
@@ -42,26 +30,6 @@
           --><a href="../non-standard" class="current">non-standard</a>
         </span>
         <span class="hidden-mobile">compatibility table</span>
-      </div>
-
-      <div class="social">
-
-        <span class="hidden-tablet">
-          <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://kangax.github.io/compat-table/es5/"></a>
-        </span>
-
-        <script async src="https://www.google-analytics.com/ga.js"></script>
-        <span class="by">
-          by
-          <a href="https://twitter.com/kangax" style="color:#eee">kangax</a>
-          &amp;
-          <a href="https://twitter.com/webbedspace" style="color:#eee">webbedspace</a>
-          &amp;
-          <a href="https://github.com/zloirock" style="color:#eee">zloirock</a>
-        </span>
-
-        <iframe class="hidden-tablet" src="https://ghbtns.com/github-btn.html?user=kangax&repo=compat-table&type=fork&count=true"
-          frameborder="0" scrolling="0" width="90px" height="20px" style="margin-left: 10px"></iframe>
       </div>
     </div>
     <div id="body">
