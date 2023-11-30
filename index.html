@@ -1,3 +1,37 @@
-<!doctype html>
-<link rel="shortcut icon" href="favicon.ico">
-<meta http-equiv="refresh" content="0; url=./es6/">
+<html>
+  <body>
+    <h1 id="data">Done</h1>
+    <script>
+      if (window.location.hash === "#stop") {
+      } else if (window.location.hash === "#scraper") {
+        var params = {};
+        var paramsStart = window.location.search.indexOf("?");
+        if (paramsStart !== -1) {
+          var search = window.location.search.slice(paramsStart + 1);
+          while (search !== "") {
+            var valueSep = search.indexOf("=");
+            var paramSep = search.indexOf("&");
+            if (paramSep === -1) paramSep = search.length;
+            var valueName = search.slice(0, valueSep);
+            var value = search.slice(valueSep + 1, paramSep);
+            params[valueName] = decodeURI(value);
+            search = search.slice(paramSep + 1);
+          }
+        }
+        if (!params.osVersion) {
+          document.getElementById("data").innerText =
+            "OS Version was not set on the URL query!";
+        } else if (!params.playerVersion) {
+          document.getElementById("data").innerText =
+            "Player Version was not set on the URL query!";
+        } else {
+          window.localStorage.setItem("playerOsVersion", params.osVersion);
+          window.localStorage.setItem("playerPlayerVersion", params.playerVersion);
+          window.location.href = "/es5/index_scraper.html";
+        }
+      } else {
+        window.location.href = "/es5";
+      }
+    </script>
+  </body>
+</html>

@@ -18,7 +18,9 @@
         this.lacksGlobalThis = true;
         window.globalThis = this;
       }
+      window.CURRENT_PAGE = "es5";
     </script>
+    <!-- SCRAPE_SCRIPT -->
 </head>
 <body class="es5">
   <div id="header">
@@ -26,52 +28,17 @@
     <div id="nav">
       <span class="hidden-mobile">ECMAScript</span>
       <span class="versions">
-        <a href="../es5" class="current">5</a><!--
-        --><a href="../es6">6</a><!--
-        --><a href="../es2016plus">2016+</a><!--
-        --><a href="../esnext">next</a><!--
-        --><a href="../esintl">intl</a><!--
-        --><a href="../non-standard">non-standard</a>
+        <a href="../es5" class="current">5</a>
+        <a href="../es6">6</a>
+        <a href="../es2016plus">2016+</a>
+        <!-- <a href="../esnext">next</a>
+        <a href="../esintl">intl</a>
+        <a href="../non-standard">non-standard</a> -->
       </span>
       <span class="hidden-mobile">compatibility table</span>
     </div>
   </div>
   <div id="body">
-    <div class="controls">
-      <label for="sort">
-        Sort by
-        <select id="sort">
-          <option value="engine-types">Engine types</option>
-          <option value="features">Features</option>
-          <option value="flagged-features">Flagged features</option>
-        </select>
-      </label>
-
-      <label for="show-obsolete">
-        Show obsolete platforms
-        <input id="show-obsolete" type="checkbox">
-      </label>
-
-      <label for="show-unstable">
-        Show unstable platforms
-        <input id="show-unstable" type="checkbox" checked>
-      </label>
-    </div><!--
-
-    --><div class="legend">
-      <span><span class="swatch" style="background-color:hsla(79, 100%, 37%, .8)"></span>V8</span>
-      <span><span class="swatch" style="background-color:hsla(35, 100%, 50%, .8)"></span>SpiderMonkey</span>
-      <span><span class="swatch" style="background-color:hsla(220, 25%, 70%, .8)"></span>JavaScriptCore</span>
-      <span><span class="swatch" style="background-color:hsla(217, 85%, 54%, .8)"></span>Chakra</span>
-      <span><span class="swatch" style="background-color:hsla(358, 86%, 43%, .8)"></span>Carakan</span>
-      <span><span class="swatch" style="background-color:hsla(200, 100%, 74%, .8)"></span>KJS</span>
-      <span><span class="swatch" style="background-color:hsla(52, 85%, 63%, .8)"></span>Other</span>
-      <br>
-      <span><span style="opacity:0.2;font-size:3px;">⬤</span> Minor difference (1 point)</span>
-      <span><span style="opacity:0.2;font-size:6px;">⬤</span> Small feature (2 points)</span>
-      <span><span style="opacity:0.2;font-size:9px;">⬤</span> Medium feature (4 points)</span>
-      <span><span style="opacity:0.2;font-size:14px;">⬤</span> Large feature (8 points)</span>
-    </div>
 
     <table id="table-wrapper">
       <thead>
@@ -79,7 +46,7 @@
           <th colspan="3" class="platformtype"></th>
           <th class="platformtype" id="compiler-header" style="background: #ffdfa4">Compilers/polyfills</th>
           <th class="platformtype" id="desktop-header" style="background: #fff4c3">Desktop browsers</th>
-          <th class="platformtype" id="engine-header" style="background: #f8e8a0">Servers/runtimes</th>
+          <th class="platformtype" id="engine-header" style="background: #f8e8a0">Platform</th>
           <th class="platformtype" id="mobile-header" style="background: #f8daa0">Mobile</th>
         </tr>
         <tr>

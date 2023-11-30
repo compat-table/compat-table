@@ -72,16 +72,6 @@ $(function() {
   }
   /** -- End Sticky header -- */
 
-  // Set up the Show Obsolete checkbox
-  $('#show-obsolete, #show-unstable').on('click', function() {
-    $('body').toggleClass(this.id, this.checked);
-    setTimeout(function() {
-      setColSpans();
-    }, 100);
-  }).each(function() {
-    if (this.checked) $(this).triggerHandler("click");
-  });
-
   window.__updateSupertest = function() {
     var tr = $(this);
     var isNonStandardTable = $('.non-standard table').length > 0;
@@ -428,57 +418,8 @@ $(function() {
   setColSpans();
 
   // Cached arrays of sort orderings
-  var ordering = { };
-
-  var defaultSortVal = 'engine-types';
   var noPlatformtype = $(".platformtype").length === 0;
   if (noPlatformtype) {
     $('body').addClass('hide-platformtype');
-  }
-
-  $('#sort').on('change', function() {
-
-    var sortSpecMap = {
-      'features':         {attr: 'data-features', order: 1, hidePlatformtype: true},
-      'flagged-features': {attr: 'data-flagged-features', order: 1, hidePlatformtype: true},
-      'engine-types':     {attr: 'data-num', order: -1, hidePlatformtype: false}
-    };
-
-    var sortSpec = sortSpecMap[this.value];
-    var sortAttr = sortSpec.attr;
-
-    // First, hide the platformtype bar if we're sorting by features.
-    $('body').toggleClass('hide-platformtype', noPlatformtype || sortSpec.hidePlatformtype);
-
-    // Next, cache the sort orderings
-    if (!ordering[sortAttr]) {
-      // Sort the platforms
-
-      var cells = $('th.platform').toArray().sort(function(a, b) {
-        return sortSpec.order * (parseFloat(b.getAttribute(sortAttr)) - parseFloat(a.getAttribute(sortAttr)));
-      });
-      ordering[sortAttr] = $.map(cells, platformOf);
-    }
-
-    var ord = ordering[sortAttr];
-
-    // Define a comparison function using the orderings
-    var comparator = function(a, b) {
-      return ord.indexOf(platformOf(a)) - ord.indexOf(platformOf(b));
-    };
-
-    // Now sort the columns using the comparison function
-    table.detach().find('tr').each(function(i, row) {
-
-      var cells = $(row.cells).slice(3).toArray().sort(comparator);
-
-      for (var j = 0, jlen = cells.length; j < jlen; j++) {
-        row.appendChild(cells[j]);
-      }
-    });
-    table.insertBefore('#footnotes');
-  });
-  if ($("#sort").val() !== defaultSortVal) {
-    $("#sort").triggerHandler('change');
   }
 });

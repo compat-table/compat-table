@@ -22,7 +22,7 @@
 
 require('object.assign').shim();
 var pickBy = require('lodash.pickby');
-const { parseArgs } = require('@pkgjs/parseargs');
+var process = require('process');
 
 var interpolateAllResults = require('./build-utils/interpolate-all-results');
 
@@ -33,11 +33,29 @@ var cheerio = require('cheerio');
 var fl = require('fast-levenshtein');
 // var child_process = require('child_process');
 
-const {values: {environments: environmentsPath = './environments.json', customResults: customResultsPath }, flags, positionals} = parseArgs();
+const args = {};
+const flags = {};
+for (let i = 2; i < process.argv.length; i++) {
+  const arg = process.argv[i];
+  if (arg.startsWith("--")) {
+    const argValues = arg.slice(2).split("=", 2);
+    args[argValues[0]] = argValues[1];
+  } else if (arg.startsWith("-")) {
+    flags[arg.slice(1)] = true;
+  } else {
+    throw "Invalid argument" + arg;
+  }
+}
+
+const scrape = flags.s || flags.scrape;
+const excludeCurrentBrowser = flags.x || flags.exclude;
+
+const environmentsPath = args.environments || './environments.json';
+const customResultsPath = args.customResults;
+
+const useCompilers = false;
 
 const environments = JSON.parse(fs.readFileSync(__dirname + path.sep + environmentsPath, 'utf-8'));
-const useCompilers = positionals.includes('compilers');
-const excludeCurrentBrowser = flags.x === true;
 const customResults = customResultsPath && JSON.parse(fs.readFileSync(__dirname + path.sep + customResultsPath, 'utf-8'));
 
 var STAGE2 = 'draft (stage 2)';
@@ -403,15 +421,21 @@ function handle(options) {
   var skeleton = fs.readFileSync(__dirname + path.sep + options.skeleton_file, 'utf-8');
   var html = dataToHtml(skeleton, options.browsers, options.tests, options.compiler, options.customResults);
 
-  var result = replaceAndIndent(html, [
+  var replacements = [
     ["<!-- NAME -->", [options.name]],
     ["<!-- URL -->", [options.name.link(options.url)]],
     ["<!-- POLYFILLS -->", !options.polyfills ? [] : options.polyfills.map(function(e) {
       return '<script>' + fs.readFileSync(__dirname + path.sep + e, 'utf-8').replace(/<(?=\/script>)/g,'\\u003c') + '</script>\n';
     })],
-  ]).replace(/\t/g, '  ');
+  ];
+  var filename = options.target_file;
+  if (scrape) {
+    replacements.push(["<!-- SCRAPE_SCRIPT -->", ['<script src="../scraper.js"></script>']]);
+    filename = filename.replace(".html", "_scraper.html");
+  }
+  var result = replaceAndIndent(html, replacements).replace(/\t/g, '  ');
 
-  var target_file = __dirname + path.sep + options.target_file;
+  var target_file = __dirname + path.sep + filename;
   var old_result;
   try {
     old_result = fs.readFileSync(target_file, 'utf-8');
@@ -656,12 +680,6 @@ function dataToHtml(skeleton, rawBrowsers, tests, compiler, customResults) {
           );
         body.append(subtestRow);
 
-        // Add all the result cells
-        Object.keys(subtest.res).forEach(function(browserId) {
-          if (!environments[browserId]) {
-            throw new Error(browserId + " is not found in \"environments.json\"\n- Did you mean \"" + closestString(Object.keys(browsers), browserId) + "\"?");
-          }
-        });
         Object.keys(browsers).forEach(function(browserId) {
           var result = subtest.res[browserId];
 
