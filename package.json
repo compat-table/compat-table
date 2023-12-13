@@ -37,8 +37,8 @@
   "scripts": {
     "lint": "jshint .",
     "build": "node build.js",
-    "buildInternal": "node build.js --environments=./custom/internalEnv.json --customResults=./custom/internalResults.json -x",
-    "buildScraper": "node build.js --environments=./custom/emptyEnv.json --customResults=./custom/emptyResults.json -s",
+    "buildInternal": "node build.js --environments=./custom/internalEnvs.json --customResults=./custom/internalResults.json -x",
+    "buildScraper": "node build.js --environments=./custom/emptyEnvs.json --customResults=./custom/emptyResults.json -s",
     "pretest": "npm run lint",
     "build:compilers": "node build.js compilers",
     "git:clean": "if type git > /dev/null 2>&1; then git stash save --keep-index; fi",

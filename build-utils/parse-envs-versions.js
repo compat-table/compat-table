@@ -1,7 +1,7 @@
 var compareVersions = require("./compare-versions");
 
 var RE = {
-  engine: /^(\w+?)(tp|[\d_]+)?(?:corejs[23])?$/,
+  engine: /^(\w+?)_(tp|[\d_]+)?(?:corejs[23])?(-native)?$/,
   version: /^(\d{4})(\d{2})(\d{2})$|^(\d+)(?:_(\d+))?(?:_(\d+))?$/
 };
 
