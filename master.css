@@ -7,7 +7,10 @@ html {
 body {
     background-color: #fff;
     color: #000;
-    font-family: 'Open Sans', sans-serif; margin: 0; font-weight: 300; display: inline-block;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    font-weight: 300;
+    display: inline-block;
     width: 100%;
 }
 :target {
@@ -568,4 +571,9 @@ body.hide-platformtype sup.num-features {
   table#table-wrapper thead th.current + th {
     left:423px;
   }
+}
+
+.platform {
+    max-width: 200px;
+    white-space: break-spaces;
 }

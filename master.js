@@ -289,7 +289,7 @@ $(function() {
       else if (elem.is('.browser-name')) {
         // This assumes that all <td>s in the column have a class that matches
         // the browser-name's ID.
-        highlightSelected(table.find('td' + currentBrowserSelector + ', td[data-browser="' + elem.attr('href').slice(1) + '"]'));
+        highlightSelected(table.find('td[data-browser="' + elem.attr('href').slice(1) + '"]'));
       }
     }
   };

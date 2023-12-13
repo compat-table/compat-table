@@ -1,8 +1,9 @@
 <html>
   <body>
-    <h1 id="data">Done</h1>
+    <h1 id="data"></h1>
     <script>
       if (window.location.hash === "#stop") {
+        document.getElementById("data").innerText = "Done!";
       } else if (window.location.hash === "#scraper") {
         var params = {};
         var paramsStart = window.location.search.indexOf("?");
@@ -27,10 +28,10 @@
         } else {
           window.localStorage.setItem("playerOsVersion", params.osVersion);
           window.localStorage.setItem("playerPlayerVersion", params.playerVersion);
-          window.location.href = "/es5/index_scraper.html";
+          window.location.href = "es5/index_scraper.html";
         }
       } else {
-        window.location.href = "/es5";
+        window.location.href = "es5/";
       }
     </script>
   </body>
