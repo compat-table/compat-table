@@ -39,21 +39,29 @@ for child in upload_folder.iterdir():
     player_version = child_data["playerVersion"]
     child_results = child_data["results"]
 
-    if os_version.startswith("Windows"):
-        major = player_version.split(".")[0]
-        if major >= "10":
-            short_version = "Windows/Linux/MacOS player >= 10"
+    id_version = os_version
+    full_version = os_version
+    short_version = os_version
+    # We use \u00A0 as a non-breakable whitespace
+    try:
+        if os_version.startswith("Windows"):
+            major = int(player_version.split(".")[0])
+            if major >= 10:
+                short_version = "Windows/Linux/macOS Player\u00A0>=\u00A010"
+            else:
+                short_version = "Windows/Linux/macOS Player\u00A0< 10"
+
+            id_version = f"QT {player_version}"
+            full_version = short_version.replace("\u00A0", " ")
         else:
-            short_version = "Windows/Linux/MacOS player < 10"
+            short_version = RE_OS_VERSION.match(os_version)[1].replace("BrightSign", "BrightSignOS")
 
-        id_version = f"QT {player_version}"
-    else:
-        try:
-            short_version = RE_OS_VERSION.match(os_version)[1]
-        except Exception:
-            short_version = os_version
-
-        id_version = short_version
+            id_version = short_version
+            full_version = short_version
+            short_version = short_version.replace(" ", "\u00A0")
+    except Exception:
+        short_version = short_version.replace(" ", "\u00A0")
+        pass
 
     id_version = id_version.replace(" ", "_").replace(".", "_")
 
@@ -62,7 +70,7 @@ for child in upload_folder.iterdir():
             continue
 
     envs[id_version] = {
-        "full": os_version,
+        "full": full_version,
         "short": short_version,
         "family": "",
         "release": "1970-01-01",
