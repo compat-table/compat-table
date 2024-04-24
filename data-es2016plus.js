@@ -7040,6 +7040,7 @@ exports.tests = [
           chrome118: false,
           node20_0: false,
           node21_0: false,
+          node22_0: true,
           firefox117: false,
           firefox118: false,
           safaritp: false,

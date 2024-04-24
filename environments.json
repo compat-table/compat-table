@@ -3126,35 +3126,56 @@
     "family": "V8",
     "short": "CH 117",
     "release": "2023-09-12",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome118": {
     "full": "Chrome 118",
     "family": "V8",
     "short": "CH 118",
     "release": "2023-10-10",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome119": {
     "full": "Chrome 119",
     "family": "V8",
-    "short": "CH 119 Beta",
+    "short": "CH 119",
     "release": "2023-10-31",
-    "unstable": true
+    "obsolete": true
   },
   "chrome120": {
     "full": "Chrome 120",
     "family": "V8",
-    "short": "CH 120 Dev",
+    "short": "CH 120",
     "release": "2023-12-05",
-    "unstable": true
+    "obsolete": true
   },
   "chrome121": {
     "full": "Chrome 121",
     "family": "V8",
-    "short": "CH 121 Canary",
+    "short": "CH 121",
     "release": "2024-01-23",
-    "unstable": true
+    "obsolete": true
+  },
+  "chrome122": {
+    "full": "Chrome 122",
+    "family": "V8",
+    "short": "CH 122",
+    "release": "2024-02-20",
+    "obsolete": true
+  },
+  "chrome123": {
+    "full": "Chrome 123",
+    "family": "V8",
+    "short": "CH 123",
+    "release": "2024-03-19",
+    "obsolete": false
+  },
+  "chrome124": {
+    "full": "Chrome 124",
+    "family": "V8",
+    "short": "CH 124",
+    "release": "2024-04-16",
+    "obsolete": false
   },
   "edge12": {
     "full": "Microsoft Edge 12",
@@ -5361,10 +5382,27 @@
   "node21_0": {
     "full": "Node.js",
     "family": "Node.js",
-    "short": "Node &gt;=21",
+    "short": "Node &gt;=21 &lt;22",
     "platformtype": "engine",
     "equals": "chrome118",
     "release": "2023-10-24",
+    "obsolete": true,
+    "test_suites": [
+      "es5",
+      "es6",
+      "es2016plus",
+      "esnext",
+      "esintl",
+      "non-standard"
+    ]
+  },
+  "node22_0": {
+    "full": "Node.js",
+    "family": "Node.js",
+    "short": "Node &gt;=22",
+    "platformtype": "engine",
+    "equals": "chrome124",
+    "release": "2024-04-24",
     "obsolete": false,
     "test_suites": [
       "es5",
