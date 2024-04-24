@@ -7046,12 +7046,34 @@ exports.tests = [
         }
       }
     ]
+  },
+  {
+    name: 'Duplicate named capturing groups',
+    category: '2025 features',
+    significance: 'tiny',
+    spec: 'https://github.com/tc39/proposal-duplicate-named-capturing-groups',
+    exec: function() {/*
+    return /(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/.test("12-1995");
+    */},
+    res: {
+      chrome123: false,
+      deno1_42: false,
+      node21_0: false,
+      firefox124: false,
+      safari17_4: true,
+      safaritp: true,
+      ie11: false,
+      duktape2_0: false,
+      jerryscript2_3_0: false,
+      hermes0_7_0: false,
+      rhino1_7_13: false,
+    }
   }
 ];
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', '2024 features', 'finished (stage 4)'].indexOf(e.category);
+  var index = ['2016 features', '2016 misc', '2017 features', '2017 misc', '2017 annex b', '2018 features', '2018 misc', '2019 features', '2019 misc', '2020 features', '2021 features', '2022 features', '2023 features', '2024 features', '2025 features', 'finished (stage 4)'].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ES2016+ category!');
   }
