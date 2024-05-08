@@ -6,9 +6,14 @@
  *  construct the path to 'java' as $JAVA_HOME/bin/java
  *
  *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects a 'rhino.jar' file in this directory.  Example:
+ *  Expects a 'rhino.jar' file in this directory. Example:
  *
  *    $ node rhino.js
+ *
+ *  Any syntax tested that is unsupported by Rhino will output to stderr. To make the
+ *  output of this file more useful, redirect stderr to /dev/null or elsewhere. Example:
+ *
+ *    $ node rhino.js 2>/dev/null
  */
 
 var fs = require('fs');
