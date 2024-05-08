@@ -61,7 +61,8 @@ exports.tests = [
         jerryscript2_0: false,
         hermes0_7_0: false,
         reactnative0_70_3: false,
-        rhino1_7_13: true
+        rhino1_7_13: false,
+        rhino1_7_15: false,
       }
     },
     {
@@ -98,7 +99,8 @@ exports.tests = [
         jerryscript2_0: false,
         hermes0_7_0: false,
         reactnative0_70_3: false,
-        rhino1_7_13: true
+        rhino1_7_13: false,
+        rhino1_7_15: false,
       }
     }
   ]
@@ -20465,7 +20467,6 @@ exports.tests = [
         hermes0_7_0: true,
         reactnative0_70_3: true,
         rhino1_7_13: false,
-        rhino1_7_15: true,
       }
     },
     {

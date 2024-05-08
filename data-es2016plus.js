@@ -6991,7 +6991,7 @@ exports.tests = [
           ie11: false,
           safari16_6: false,
           safaritp: true,
-          rhino1_7_15: true,
+          rhino1_7_15: false,
         }
       },
       {
@@ -7011,7 +7011,7 @@ exports.tests = [
           ie11: false,
           safari16_6: false,
           safaritp: true,
-          rhino1_7_15: true,
+          rhino1_7_15: false,
         }
       },
       {
@@ -7030,7 +7030,7 @@ exports.tests = [
           ie11: false,
           safari16_6: false,
           safaritp: true,
-          rhino1_7_15: true,
+          rhino1_7_15: false,
         }
       },
       {
@@ -7052,7 +7052,7 @@ exports.tests = [
           ie11: false,
           safari16_6: false,
           safaritp: true,
-          rhino1_7_15: true,
+          rhino1_7_15: false,
         }
       },
       {
