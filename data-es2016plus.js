@@ -5776,6 +5776,26 @@ exports.tests = [
           reactnative0_70_3: true,
           rhino1_7_13: false
         }
+      },
+      {
+        name: 'resolving identifier in parent scope',
+        exec: function () {/*
+          {
+            let a = ["hello world"];
+            class MyClass {
+              // The parenthesis below are required to trigger https://bugs.webkit.org/show_bug.cgi?id=236843
+              c = a[(0)]; 
+            }
+            return new MyClass().c === a[0];
+          }
+        */},
+        res: {
+          chrome124: true,
+          safari15: false,
+          safari16: true,
+          safari17: true,
+          safaritp: true,
+        }
       }
     ]
   },
