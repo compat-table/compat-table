@@ -5790,6 +5790,7 @@ exports.tests = [
           }
         */},
         res: {
+          firefox122: true,
           chrome124: true,
           safari15: false,
           safari16: true,
@@ -7117,7 +7118,9 @@ exports.tests = [
       chrome126: true,
       deno1_42: false,
       node21_0: false,
-      firefox124: false,
+      firefox115: false,
+      firefox128: false,
+      firefox129: true,
       safari17_4: true,
       safaritp: true,
       ie11: false,
