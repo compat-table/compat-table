@@ -211,58 +211,6 @@ exports.tests = [
   ]
 },
 {
-  name: 'ArrayBuffer.prototype.transfer',
-  category: STAGE2,
-  significance: 'small',
-  spec: 'https://github.com/domenic/proposal-arraybuffer-transfer/',
-  subtests: [
-    {
-      name: 'ArrayBuffer.prototype.transfer()',
-      exec: function () {/*
-        const buffer1 = new Uint8Array([1, 2]).buffer;
-        const buffer2 = buffer1.transfer();
-        return buffer1.byteLength === 0
-          && buffer2.byteLength === 2;
-      */},
-      res: {
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        firefox122: true,
-        chrome70: false,
-        chrome126: true,
-        safari12: false,
-        duktape2_0: false,
-        graalvm21_3_3: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
-    },
-    {
-      name: 'ArrayBuffer.prototype.realloc()',
-      exec: function () {/*
-        const buffer1 = new ArrayBuffer(1024);
-        const buffer2 = buffer1.realloc(256);
-        return buffer1.byteLength === 0
-          && buffer2.byteLength === 256;
-      */},
-      res: {
-        ie11: false,
-        firefox10: false,
-        firefox52: false,
-        chrome70: false,
-        safari12: false,
-        duktape2_0: false,
-        graalvm21_3_3: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
-    }
-  ]
-},
-{
   name: 'Legacy RegExp features in JavaScript',
   category: STAGE3,
   significance: 'small',
