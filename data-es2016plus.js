@@ -7131,6 +7131,187 @@ exports.tests = [
       hermes0_7_0: false,
       rhino1_7_13: false,
     }
+  },
+  {
+    name: 'Set methods',
+    category: '2025 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-set-methods',
+    subtests: [
+      {
+        name: 'Set.prototype.intersection',
+        exec: function () {/*
+          var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
+          return set.size === 2
+            && set.has(2)
+            && set.has(3);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox127: true,
+          chrome77: false,
+          chrome126: true,
+          safari17: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.union',
+        exec: function () {/*
+          var set = new Set([1, 2]).union(new Set([2, 3]));
+          return set.size === 3
+            && set.has(1)
+            && set.has(2)
+            && set.has(3);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox127: true,
+          chrome77: false,
+          chrome126: true,
+          safari17: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.difference',
+        exec: function () {/*
+          var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
+          return set.size === 2
+            && set.has(1)
+            && set.has(2);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox127: true,
+          chrome77: false,
+          chrome126: true,
+          safari17: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.symmetricDifference',
+        exec: function () {/*
+          var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
+          return set.size === 2
+            && set.has(1)
+            && set.has(3);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          firefox127: true,
+          chrome77: false,
+          chrome126: true,
+          safari17: true,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.isDisjointFrom',
+        exec: function () {/*
+          return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          chrome77: false,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm20_1: graalvm.es2021flag,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.isSubsetOf',
+        exec: function () {/*
+          return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          chrome77: false,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Set.prototype.isSupersetOf',
+        exec: function () {/*
+          return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox2: false,
+          chrome77: false,
+          duktape2_0: false,
+          graalvm19: false,
+          graalvm21_3_3: graalvm.newSetMethodsFlag,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      }
+    ]
   }
 ];
 
