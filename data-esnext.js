@@ -10,6 +10,7 @@ exports.target_file = 'esnext/index.html';
 exports.skeleton_file = 'esnext/skeleton.html';
 
 var STAGE2 = 'Stage 2';
+var STAGE27 = 'Stage 2.7';
 var STAGE3 = 'Stage 3';
 
 exports.tests = [
@@ -42,7 +43,7 @@ exports.tests = [
 },
 {
   name: 'Class and Property Decorators',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'medium',
   spec: 'https://github.com/tc39/proposal-decorators',
   subtests: [
@@ -78,7 +79,7 @@ exports.tests = [
 },
 {
   name: 'ShadowRealm',
-  category: STAGE3,
+  category: STAGE27,
   significance: 'large',
   spec: 'https://github.com/tc39/proposal-shadowrealm',
   exec: function () {/*
@@ -363,7 +364,7 @@ exports.tests = [
 },
 {
   name: 'Iterator Helpers',
-  category: STAGE2,
+  category: STAGE3,
   significance: 'large',
   spec: 'https://github.com/tc39/proposal-iterator-helpers',
   subtests: [
@@ -1240,7 +1241,7 @@ exports.tests = [
 
 //Shift annex B features to the bottom
 exports.tests = exports.tests.reduce(function(a,e) {
-  var index = [STAGE3, STAGE2].indexOf(e.category);
+  var index = [STAGE3, STAGE27, STAGE2].indexOf(e.category);
   if (index === -1) {
     console.log('"' + a.category + '" is not an ESnext category!');
   }
