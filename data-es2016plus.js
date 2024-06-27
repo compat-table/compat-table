@@ -7087,6 +7087,7 @@ exports.tests = [
         res: {
           chrome117: false,
           chrome118: false,
+          chrome126: true,
           node20_0: false,
           node21_0: false,
           node22_0: true,
@@ -7113,6 +7114,7 @@ exports.tests = [
     */},
     res: {
       chrome123: false,
+      chrome126: true,
       deno1_42: false,
       node21_0: false,
       firefox124: false,
