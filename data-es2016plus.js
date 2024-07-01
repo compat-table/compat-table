@@ -5784,14 +5784,16 @@ exports.tests = [
             let a = ["hello world"];
             class MyClass {
               // The parenthesis below are required to trigger https://bugs.webkit.org/show_bug.cgi?id=236843
-              c = a[(0)]; 
+              c = a[(0)];
             }
             return new MyClass().c === a[0];
           }
         */},
         res: {
           firefox122: true,
+          chrome74: true,
           chrome124: true,
+          firefox69: true,
           safari15: false,
           safari16: true,
           safari17: true,
