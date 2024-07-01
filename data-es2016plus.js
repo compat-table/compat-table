@@ -7205,6 +7205,12 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.new_set_methods</code> setting under <code>about:config</code>.'
+          },
           firefox127: true,
           chrome77: false,
           chrome126: true,
@@ -7233,6 +7239,11 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
           chrome126: true,
@@ -7260,6 +7271,11 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
           chrome126: true,
@@ -7287,6 +7303,11 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
           chrome126: true,
