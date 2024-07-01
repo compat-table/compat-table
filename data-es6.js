@@ -16888,7 +16888,8 @@ exports.tests = [
       name: 'duplicate identifier',
       exec: function(){/*
         try {
-          eval('var d = function d([d]) { return d };if (d([true]) !== true) return false;');
+          eval('var d = function d([d]) { return d };');
+          if (d([true]) !== true) return false;
         } catch (e) {
           return !(e instanceof SyntaxError);
         }
