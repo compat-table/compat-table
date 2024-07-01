@@ -6715,22 +6715,22 @@ return typeof ShadowRealm === &quot;function&quot;
 <td class="unknown obsolete" data-browser="typescript5_4corejs3">?</td>
 <td class="unknown" data-browser="typescript5_5corejs3">?</td>
 <td class="no obsolete" data-browser="firefox102">No</td>
-<td class="no obsolete" data-browser="firefox114">No</td>
-<td class="no" data-browser="firefox115">No</td>
-<td class="no obsolete" data-browser="firefox116">No</td>
-<td class="no obsolete" data-browser="firefox117">No</td>
-<td class="no obsolete" data-browser="firefox118">No</td>
-<td class="no obsolete" data-browser="firefox119">No</td>
-<td class="no obsolete" data-browser="firefox120">No</td>
-<td class="no obsolete" data-browser="firefox121">No</td>
-<td class="no obsolete" data-browser="firefox122">No</td>
-<td class="no obsolete" data-browser="firefox123">No</td>
-<td class="no obsolete" data-browser="firefox124">No</td>
-<td class="no obsolete" data-browser="firefox125">No</td>
-<td class="no obsolete" data-browser="firefox126">No</td>
-<td class="no" data-browser="firefox127">No</td>
-<td class="no unstable" data-browser="firefox128">No</td>
-<td class="no unstable" data-browser="firefox129">No</td>
+<td class="no flagged obsolete" data-browser="firefox114">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="firefox115">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox116">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox117">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged" data-browser="firefox127">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox128">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox129">Flag<a href="#ff-shadow-realm-note"><sup>[9]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome115">No</td>
 <td class="no obsolete" data-browser="chrome116">No</td>
@@ -8414,7 +8414,7 @@ return !Array.isTemplateObject([])
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-decorators-legacy-note">  <sup>[5]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="babel-core-js-note">  <sup>[6]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-decorators-legacy-note">  <sup>[5]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="babel-core-js-note">  <sup>[6]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="ff-shadow-realm-note">  <sup>[9]</sup> The feature has to be enabled via <code>javascript.options.experimental.shadow_realms</code> setting under <code>about:config</code>.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

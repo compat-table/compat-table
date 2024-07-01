@@ -92,6 +92,12 @@ exports.tests = [
     ie11: false,
     firefox10: false,
     firefox52: false,
+    firefox103: false,
+    firefox107: {
+      val: 'flagged',
+      note_id: 'ff-shadow-realm',
+      note_html: 'The feature has to be enabled via <code>javascript.options.experimental.shadow_realms</code> setting under <code>about:config</code>.'
+    },
     opera10_50: false,
     chrome77: false,
     duktape2_0: false,
