@@ -1,6 +1,7 @@
 var common = require('./data-common');
 
 var babel = common.babel;
+var chrome = common.chrome;
 var typescript = common.typescript;
 // var firefox = common.firefox;
 // var graalvm = common.graalvm;
@@ -1458,6 +1459,59 @@ exports.tests = [
     }
   ]
 },
+{
+  name: 'RegExp Pattern Modifiers',
+  category: STAGE3,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-regexp-modifiers',
+  subtests: [
+    {
+      name: 'i flag',
+      exec: function () {/*
+        const regex = /^[a-z](?-i:[a-z])$/i;
+        return regex.test("ab") && regex.test("Ab") && !regex.test("aB");
+      */},
+      res: {
+        chrome121: false,
+        chrome122: chrome.harmony,
+        chrome124: chrome.harmony,
+        chrome125: true,
+        firefox127: false,
+        safari17_5: false,
+      }
+    },
+    {
+      name: 'm flag',
+      exec: function () {/*
+        const regex = /^a|(?m:^b)/;
+        return regex.test("a") && regex.test("b") && regex.test("c\nb") && !regex.test("c\na");
+      */},
+      res: {
+        chrome121: false,
+        chrome122: chrome.harmony,
+        chrome124: chrome.harmony,
+        chrome125: true,
+        firefox127: false,
+        safari17_5: false,
+      }
+    },
+    {
+      name: 's flag',
+      exec: function () {/*
+        const regex = /.(?-s:.)/s;
+        return regex.test("\na") && regex.test("aa") && !regex.test("\n\n");
+      */},
+      res: {
+        chrome121: false,
+        chrome122: chrome.harmony,
+        chrome124: chrome.harmony,
+        chrome125: true,
+        firefox127: false,
+        safari17_5: false,
+      }
+    },
+  ]
+}
 ];
 
 
