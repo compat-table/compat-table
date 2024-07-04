@@ -3461,6 +3461,8 @@ exports.tests = [
           ie11: false,
           chrome117: false,
           chrome118: false,
+          chrome124: false,
+          chrome125: true,
           node20_0: false,
           node21_0: false,
           node22_0: true,
@@ -7090,6 +7092,8 @@ exports.tests = [
         res: {
           chrome117: false,
           chrome118: false,
+          chrome124: false,
+          chrome125: true,
           chrome126: true,
           node20_0: false,
           node21_0: false,
