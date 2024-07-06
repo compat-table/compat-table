@@ -6994,6 +6994,110 @@ exports.tests = [
     }
   },
   {
+    name: 'Change Array by copy',
+    category: '2023 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-change-array-by-copy',
+    subtests: [
+      {
+        name: "Array.prototype.toReversed",
+        exec: function () {/*
+          var arr = [1, 2, 3];
+          return arr.toReversed()[0] === 3 && arr[0] === 1;
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome109: false,
+          chrome110: true,
+          edge109: false,
+          edge110: true,
+          firefox114: false,
+          firefox115: true,
+          firefox102: false,
+          safari15_5: false,
+          safari16: true,
+          node16_11: false,
+          node18_3: false,
+          node20_0: true,
+        }
+      },
+      {
+        name: "Array.prototype.toSorted",
+        exec: function () {/*
+          var arr = ['C', 'A', 'B'];
+          return arr.toSorted()[0] === 'A' && arr[0] === 'C';
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome109: false,
+          chrome110: true,
+          edge109: false,
+          edge110: true,
+          firefox114: false,
+          firefox115: true,
+          firefox102: false,
+          safari15_5: false,
+          safari16: true,
+          node16_11: false,
+          node18_3: false,
+          node20_0: true,
+        }
+      },
+      {
+        name: "Array.prototype.toSpliced",
+        exec: function () {/*
+          var arr = ['A', 'C'];
+          return arr.toSpliced(1, 0, 'B')[1] === 'B' && arr[1] === 'C';
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome109: false,
+          chrome110: true,
+          edge109: false,
+          edge110: true,
+          firefox114: false,
+          firefox115: true,
+          firefox102: false,
+          safari15_5: false,
+          safari16: true,
+          node16_11: false,
+          node18_3: false,
+          node20_0: true,
+        }
+      },
+      {
+        name: "Array.prototype.with",
+        exec: function () {/*
+          var arr = ['A', 'X', 'C'];
+          return arr.with(1, 'B')[1] === 'B' && arr[1] === 'X';
+        */},
+        res: {
+          babel7corejs3: babel.corejs,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          chrome109: false,
+          chrome110: true,
+          edge109: false,
+          edge110: true,
+          firefox114: false,
+          firefox115: true,
+          firefox102: false,
+          safari15_5: false,
+          safari16: true,
+          node16_11: false,
+          node18_3: false,
+          node20_0: true,
+        }
+      }
+    ]
+  },
+  {
     name: 'RegExp `v` flag',
     category: '2024 features',
     significance: 'small',
