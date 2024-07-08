@@ -3477,6 +3477,19 @@ exports.tests = [
           hermes0_7_0: false,
           rhino1_7_13: false,
         }
+      },
+      {
+        name: 'Unicode 16.0',
+        // 2024 September 10
+        exec: function () {/*
+          return /\p{Script=Todhri}/u.test("\u{105c0}") && /\p{Emoji}/u.test("🫩");
+        */},
+        res: {
+          chrome128: false,
+          node22_0: false,
+          firefox130: false,
+          safari17_6: false,
+        }
       }
     ]
   },
@@ -7262,6 +7275,18 @@ exports.tests = [
           jerryscript2_3_0: false,
           hermes0_7_0: false,
           rhino1_7_13: false,
+        }
+      },
+      {
+        name: 'Unicode 16.0',
+        exec: function() {/*
+        return /^\p{RGI_Emoji}$/v.test("🇨🇶");
+      */},
+        res: {
+          chrome128: false,
+          node22_0: false,
+          firefox130: false,
+          safari17_6: false,
         }
       }
     ]
