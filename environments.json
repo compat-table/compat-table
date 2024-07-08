@@ -2015,7 +2015,7 @@
     "short": "FF 114",
     "release": "2023-06-06",
     "retire": "2023-07-04",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox115": {
     "full": "Firefox 115 Extended Support Release",
@@ -2119,22 +2119,29 @@
     "short": "FF 127",
     "release": "2024-06-11",
     "retire": "2024-07-08",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox128": {
-    "full": "Firefox 128 Beta",
+    "full": "Firefox 128 Extended Support Release",
     "family": "SpiderMonkey",
-    "short": "FF 128",
+    "short": "FF 128 ESR",
     "release": "2024-07-09",
-    "retire": "2024-08-06",
-    "unstable": true
+    "obsolete": false
   },
   "firefox129": {
-    "full": "Firefox 129 Nightly",
+    "full": "Firefox 129 Beta",
     "family": "SpiderMonkey",
     "short": "FF 129",
     "release": "2024-08-06",
     "retire": "2024-09-03",
+    "unstable": true
+  },
+  "firefox130": {
+    "full": "Firefox 130 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 130",
+    "release": "2024-09-03",
+    "retire": "2024-10-01",
     "unstable": true
   },
   "opera7": {
