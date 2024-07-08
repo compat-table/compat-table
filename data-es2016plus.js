@@ -7297,9 +7297,10 @@ exports.tests = [
     category: '2025 features',
     significance: 'medium',
     spec: 'https://github.com/tc39/proposal-set-methods',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#instance_methods',
     subtests: [
       {
-        name: 'Set.prototype.intersection',
+        name: 'Set.prototype.intersection()',
         exec: function () {/*
           var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
           return set.size === 2
@@ -7313,9 +7314,15 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.new_set_methods</code> setting under <code>about:config</code>.'
+          },
           firefox127: true,
           chrome77: false,
-          chrome126: true,
+          chrome122: true,
           safari17: true,
           duktape2_0: false,
           graalvm19: false,
@@ -7326,7 +7333,7 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.union',
+        name: 'Set.prototype.union()',
         exec: function () {/*
           var set = new Set([1, 2]).union(new Set([2, 3]));
           return set.size === 3
@@ -7341,9 +7348,14 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
-          chrome126: true,
+          chrome122: true,
           safari17: true,
           duktape2_0: false,
           graalvm19: false,
@@ -7354,7 +7366,7 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.difference',
+        name: 'Set.prototype.difference()',
         exec: function () {/*
           var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
           return set.size === 2
@@ -7368,9 +7380,14 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
-          chrome126: true,
+          chrome122: true,
           safari17: true,
           duktape2_0: false,
           graalvm19: false,
@@ -7381,7 +7398,7 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.symmetricDifference',
+        name: 'Set.prototype.symmetricDifference()',
         exec: function () {/*
           var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
           return set.size === 2
@@ -7395,9 +7412,14 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
           firefox127: true,
           chrome77: false,
-          chrome126: true,
+          chrome122: true,
           safari17: true,
           duktape2_0: false,
           graalvm19: false,
@@ -7408,9 +7430,9 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.isDisjointFrom',
+        name: 'Set.prototype.isDisjointFrom()',
         exec: function () {/*
-          return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
+          return new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));
         */},
         res: {
           babel6corejs2: false,
@@ -7419,7 +7441,15 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
+          firefox127: true,
           chrome77: false,
+          chrome122: true,
+          safari17: true,
           duktape2_0: false,
           graalvm19: false,
           graalvm20_1: graalvm.es2021flag,
@@ -7430,9 +7460,9 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.isSubsetOf',
+        name: 'Set.prototype.isSubsetOf()',
         exec: function () {/*
-          return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);
+          return new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));
         */},
         res: {
           babel6corejs2: false,
@@ -7441,7 +7471,15 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
+          firefox127: true,
           chrome77: false,
+          chrome122: true,
+          safari17: true,
           duktape2_0: false,
           graalvm19: false,
           graalvm21_3_3: graalvm.newSetMethodsFlag,
@@ -7451,9 +7489,9 @@ exports.tests = [
         }
       },
       {
-        name: 'Set.prototype.isSupersetOf',
+        name: 'Set.prototype.isSupersetOf()',
         exec: function () {/*
-          return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);
+          return new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));
         */},
         res: {
           babel6corejs2: false,
@@ -7462,7 +7500,15 @@ exports.tests = [
           typescript3_2corejs3: typescript.corejs,
           ie11: false,
           firefox2: false,
+          firefox117: false,
+          firefox118: {
+            val: 'flagged',
+            note_id: 'ff-new-set-methods'
+          },
+          firefox127: true,
           chrome77: false,
+          chrome122: true,
+          safari17: true,
           duktape2_0: false,
           graalvm19: false,
           graalvm21_3_3: graalvm.newSetMethodsFlag,
