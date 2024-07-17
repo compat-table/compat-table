@@ -1,9 +1,9 @@
 ECMAScript compatibility tables
 ==================================================
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.ru)](https://gitter.im/kangax/compat-table.ru)(utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.ru)](https://gitter.im/kangax/compat-table.ru)(utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge.ru)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kangax/es5-compat-table/trend.ru)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge.ru](https://d2weczhvl823v0.cloudfront.net/kangax/es5-compat-table/trend.ru)](https://bitdeli.com/free "Bitdeli Badge")
 
 Editing the tests
 -----------------
