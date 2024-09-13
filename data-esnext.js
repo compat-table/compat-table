@@ -394,6 +394,7 @@ exports.tests = [
           note_id: 'ff-iterator-helpers',
           note_html: 'The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.iterator_helpers</code> setting under <code>about:config</code>.'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -423,6 +424,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -453,6 +455,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -488,6 +491,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -536,6 +540,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -563,6 +568,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -590,6 +596,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -617,6 +624,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -644,6 +652,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -673,6 +682,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -700,6 +710,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -727,6 +738,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -754,6 +766,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -781,6 +794,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -809,6 +823,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,
@@ -836,6 +851,7 @@ exports.tests = [
           val: 'flagged',
           note_id: 'ff-iterator-helpers'
         },
+        firefox131: true,
         chrome77: false,
         chrome126: true,
         duktape2_0: false,

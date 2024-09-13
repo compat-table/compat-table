@@ -3467,6 +3467,7 @@ exports.tests = [
           node21_0: false,
           node22_0: true,
           firefox2: false,
+          firefox115: false,
           firefox117: false,
           firefox118: false,
           safari11_1: false,
@@ -3488,6 +3489,7 @@ exports.tests = [
         res: {
           chrome128: false,
           node22_0: false,
+          firefox115: false,
           firefox130: false,
           safari17_6: false,
           safari18: false,
@@ -7269,6 +7271,7 @@ exports.tests = [
           node20_0: false,
           node21_0: false,
           node22_0: true,
+          firefox115: false,
           firefox117: false,
           firefox118: false,
           safaritp: false,
@@ -7289,6 +7292,7 @@ exports.tests = [
         res: {
           chrome128: false,
           node22_0: false,
+          firefox115: false,
           firefox130: false,
           safari17_6: false,
         }
