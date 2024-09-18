@@ -4125,6 +4125,20 @@
     "family": "JavaScriptCore",
     "short": "SF&nbsp;17.5",
     "release": "2024-05-13",
+    "obsolete": true
+  },
+  "safari17_6": {
+    "full": "Safari 17.6",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;17.6",
+    "release": "2024-07-29",
+    "obsolete": false
+  },
+  "safari18": {
+    "full": "Safari 18",
+    "family": "JavaScriptCore",
+    "short": "SF&nbsp;18",
+    "release": "2024-09-16",
     "obsolete": false
   },
   "safaritp": {
@@ -7346,6 +7360,15 @@
     "platformtype": "mobile",
     "equals": "safari17",
     "release": "2023-09-18",
+    "obsolete": true
+  },
+  "ios18": {
+    "full": "iOS Safari",
+    "family": "iOS Safari",
+    "short": "iOS 18.0",
+    "platformtype": "mobile",
+    "equals": "safari18",
+    "release": "2024-09-16",
     "obsolete": false
   },
   "samsung1": {

@@ -3472,6 +3472,7 @@ exports.tests = [
           safari11_1: false,
           safaritp: false,
           safari17: false,
+          safari18: true,
           duktape2_0: false,
           jerryscript2_3_0: false,
           hermes0_7_0: false,
@@ -3489,6 +3490,7 @@ exports.tests = [
           node22_0: false,
           firefox130: false,
           safari17_6: false,
+          safari18: false,
         }
       }
     ]
@@ -3832,7 +3834,8 @@ exports.tests = [
         graalvm19: true,
         hermes0_7_0: false,
         reactnative0_70_3: false,
-        rhino1_7_13: false
+        rhino1_7_13: false,
+        safari18: true,
       }
     }, {
       name: 'arrows',
@@ -7270,6 +7273,7 @@ exports.tests = [
           firefox118: false,
           safaritp: false,
           safari16_6: false,
+          safari18: true,
           ie11: false,
           duktape2_0: false,
           jerryscript2_3_0: false,
