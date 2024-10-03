@@ -6161,6 +6161,7 @@ exports.tests = [
     subtests: [
       {
         name: 'Array.prototype.at()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at',
         exec: function() {/*
         var arr = [1, 2, 3];
         return arr.at(0) === 1
@@ -6207,6 +6208,7 @@ exports.tests = [
       },
       {
         name: 'String.prototype.at()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at',
         exec: function() {/*
         var str = 'abc';
         return str.at(0) === 'a'
@@ -6911,6 +6913,7 @@ exports.tests = [
     subtests: [
       {
         name: "Array.prototype.findLast",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast',
         exec: function () {/*
           var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
           return arr.findLast(function (o) { return o.x === 1; }) === arr[2];
@@ -6948,6 +6951,7 @@ exports.tests = [
       },
       {
         name: "Array.prototype.findLastIndex",
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex',
         exec: function () {/*
           var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];
           return arr.findLastIndex(function (o) { return o.x === 1; }) === 2;

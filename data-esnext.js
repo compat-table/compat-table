@@ -374,6 +374,7 @@ exports.tests = [
   category: STAGE3,
   significance: 'large',
   spec: 'https://github.com/tc39/proposal-iterator-helpers',
+  mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers',
   subtests: [
     {
       name: 'instanceof Iterator',
@@ -436,6 +437,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.from, iterable',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/from',
       exec: function () {/*
         const iterator = Iterator.from([1, 2, 3]);
         return 'next' in iterator
@@ -467,6 +469,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.from, iterator',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/from',
       exec: function () {/*
         const iterator = Iterator.from({
           i: 0,
@@ -524,6 +527,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.drop',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop',
       exec: function () {/*
         return Array.from([1, 2, 3].values().drop(1)).join() === '2,3';
       */},
@@ -552,6 +556,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.every',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every',
       exec: function () {/*
         return [1, 2, 3].values().every(it => typeof it === 'number');
       */},
@@ -580,6 +585,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.filter',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter',
       exec: function () {/*
         return Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';
       */},
@@ -608,6 +614,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.find',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find',
       exec: function () {/*
         return [1, 2, 3].values().find(it => it % 2) === 1;
       */},
@@ -636,6 +643,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.flatMap',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap',
       exec: function () {/*
         return Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';
       */},
@@ -664,6 +672,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.forEach',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/forEach',
       exec: function () {/*
         let result = '';
         [1, 2, 3].values().forEach(it => result += it);
@@ -694,6 +703,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.map',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map',
       exec: function () {/*
         return Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';
       */},
@@ -722,6 +732,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.reduce',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce',
       exec: function () {/*
         return [1, 2, 3].values().reduce((a, b) => a + b) === 6;
       */},
@@ -750,6 +761,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.some',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some',
       exec: function () {/*
         return [1, 2, 3].values().some(it => typeof it === 'number');
       */},
@@ -778,6 +790,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.take',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take',
       exec: function () {/*
         return Array.from([1, 2, 3].values().take(2)).join() === '1,2';
       */},
@@ -806,6 +819,7 @@ exports.tests = [
     },
     {
       name: 'Iterator.prototype.toArray',
+      mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray',
       exec: function () {/*
         const array = [1, 2, 3].values().toArray();
         return Array.isArray(array) && array.join() === '1,2,3';
