@@ -3276,21 +3276,21 @@
     "family": "V8",
     "short": "CH 116",
     "release": "2023-08-15",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome117": {
     "full": "Chrome 117",
     "family": "V8",
     "short": "CH 117",
     "release": "2023-09-12",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome118": {
     "full": "Chrome 118",
     "family": "V8",
     "short": "CH 118",
     "release": "2023-10-10",
-    "obsolete": true
+    "obsolete": "very"
   },
   "chrome119": {
     "full": "Chrome 119",
@@ -3353,12 +3353,32 @@
     "family": "V8",
     "short": "CH 127",
     "release": "2024-07-23",
-    "obsolete": false
+    "obsolete": true
   },
   "chrome128": {
-    "full": "Chrome 128 Beta",
+    "full": "Chrome 128",
     "family": "V8",
     "short": "CH 128",
+    "release": "2024-08-20",
+    "obsolete": true
+  },
+  "chrome129": {
+    "full": "Chrome 129",
+    "family": "V8",
+    "short": "CH 129",
+    "release": "2024-09-17",
+    "obsolete": false
+  },
+  "chrome130": {
+    "full": "Chrome 130 Beta",
+    "family": "V8",
+    "short": "CH 130",
+    "unstable": true
+  },
+  "chrome131": {
+    "full": "Chrome 131 Dev",
+    "family": "V8",
+    "short": "CH 131",
     "unstable": true
   },
   "edge12": {
@@ -3722,7 +3742,7 @@
     "short": "Edge 116",
     "equals": "chrome116",
     "release": "2023-08-21",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge117": {
     "full": "Microsoft Edge 117",
@@ -3730,7 +3750,7 @@
     "short": "Edge 117",
     "equals": "chrome117",
     "release": "2023-09-15",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge118": {
     "full": "Microsoft Edge 118",
@@ -3810,13 +3830,29 @@
     "short": "Edge 127",
     "equals": "chrome127",
     "release": "2024-07-25",
-    "obsolete": false
+    "obsolete": true
   },
   "edge128": {
-    "full": "Microsoft Edge 128 Beta",
+    "full": "Microsoft Edge 128",
     "family": "V8",
     "short": "Edge 128",
     "equals": "chrome128",
+    "release": "2024-08-22",
+    "obsolete": true
+  },
+  "edge129": {
+    "full": "Microsoft Edge 129",
+    "family": "V8",
+    "short": "Edge 129",
+    "equals": "chrome129",
+    "release": "2024-09-19",
+    "obsolete": false
+  },
+  "edge130": {
+    "full": "Microsoft Edge 130 Beta",
+    "family": "V8",
+    "short": "Edge 130",
+    "equals": "chrome130",
     "unstable": true
   },
   "safari1": {
