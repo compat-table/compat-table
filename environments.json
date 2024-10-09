@@ -860,7 +860,7 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2023-08-24",
-    "obsolete": true,
+    "obsolete": "very",
     "test_suites": [
       "es6",
       "es2016plus",
@@ -899,6 +899,19 @@
     "family": "TypeScript",
     "platformtype": "compiler",
     "release": "2024-06-20",
+    "obsolete": true,
+    "test_suites": [
+      "es6",
+      "es2016plus",
+      "esnext"
+    ]
+  },
+  "typescript5_6corejs3": {
+    "full": "TypeScript 5.6 + core-js 3",
+    "short": "Type-<br />Script +<br /><nobr>core-js 3</nobr>",
+    "family": "TypeScript",
+    "platformtype": "compiler",
+    "release": "2024-09-09",
     "obsolete": false,
     "test_suites": [
       "es6",
