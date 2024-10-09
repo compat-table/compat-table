@@ -7612,6 +7612,586 @@ exports.tests = [
         }
       }
     ]
+  },
+  {
+    name: 'RegExp Pattern Modifiers',
+    category: '2025 features',
+    significance: 'medium',
+    spec: 'https://github.com/tc39/proposal-regexp-modifiers',
+    subtests: [
+      {
+        name: 'i flag',
+        exec: function () {/*
+          const regex = /^[a-z](?-i:[a-z])$/i;
+          return regex.test("ab") && regex.test("Ab") && !regex.test("aB");
+        */},
+        res: {
+          chrome121: false,
+          chrome122: chrome.harmony,
+          chrome124: chrome.harmony,
+          chrome125: true,
+          firefox127: false,
+          firefox129: false,
+          firefox130: {
+            val: 'flagged',
+            note_id: 'ff-regexp-modidiers',
+            note_html: 'The feature has to be enabled via <code>javascript.options.experimental.regexp_modifiers</code> setting under <code>about:config</code>.'
+          },
+          firefox132: true,
+          safari17_5: false,
+        }
+      },
+      {
+        name: 'm flag',
+        exec: function () {/*
+          const regex = /^a|(?m:^b)/;
+          return regex.test("a") && regex.test("b") && regex.test("c\nb") && !regex.test("c\na");
+        */},
+        res: {
+          chrome121: false,
+          chrome122: chrome.harmony,
+          chrome124: chrome.harmony,
+          chrome125: true,
+          firefox127: false,
+          firefox129: false,
+          firefox130: {
+            val: 'flagged',
+            note_id: 'ff-regexp-modidiers',
+          },
+          firefox132: true,
+          safari17_5: false,
+        }
+      },
+      {
+        name: 's flag',
+        exec: function () {/*
+          const regex = /.(?-s:.)/s;
+          return regex.test("\na") && regex.test("aa") && !regex.test("\n\n");
+        */},
+        res: {
+          chrome121: false,
+          chrome122: chrome.harmony,
+          chrome124: chrome.harmony,
+          chrome125: true,
+          firefox127: false,
+          firefox129: false,
+          firefox130: {
+            val: 'flagged',
+            note_id: 'ff-regexp-modidiers',
+          },
+          firefox132: true,
+          safari17_5: false,
+        }
+      },
+    ]
+  },
+  {
+    name: 'Iterator Helpers',
+    category: '2025 features',
+    significance: 'large',
+    spec: 'https://github.com/tc39/proposal-iterator-helpers',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers',
+    subtests: [
+      {
+        name: 'instanceof Iterator',
+        exec: function () {/*
+          return [1, 2, 3].values() instanceof Iterator;
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers',
+            note_html: 'The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.iterator_helpers</code> setting under <code>about:config</code>.'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'extends Iterator',
+        exec: function () {/*
+          class Class extends Iterator { }
+          const instance = new Class();
+          return instance[Symbol.iterator]() === instance;
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.from, iterable',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/from',
+        exec: function () {/*
+          const iterator = Iterator.from([1, 2, 3]);
+          return 'next' in iterator
+            && iterator instanceof Iterator
+            && Array.from(iterator).join() === '1,2,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.from, iterator',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/from',
+        exec: function () {/*
+          const iterator = Iterator.from({
+            i: 0,
+            next() {
+              return { value: ++this.i, done: this.i > 3 };
+            }
+          });
+          return 'next' in iterator
+            && iterator instanceof Iterator
+            && Array.from(iterator).join() === '1,2,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.asIndexedPairs',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().asIndexedPairs()).join() === '0,1,1,2,2,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          chrome77: false,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.drop',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().drop(1)).join() === '2,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.every',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every',
+        exec: function () {/*
+          return [1, 2, 3].values().every(it => typeof it === 'number');
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.filter',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.find',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find',
+        exec: function () {/*
+          return [1, 2, 3].values().find(it => it % 2) === 1;
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.flatMap',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.forEach',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/forEach',
+        exec: function () {/*
+          let result = '';
+          [1, 2, 3].values().forEach(it => result += it);
+          return result === '123';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.map',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.reduce',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce',
+        exec: function () {/*
+          return [1, 2, 3].values().reduce((a, b) => a + b) === 6;
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.some',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some',
+        exec: function () {/*
+          return [1, 2, 3].values().some(it => typeof it === 'number');
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.take',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take',
+        exec: function () {/*
+          return Array.from([1, 2, 3].values().take(2)).join() === '1,2';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype.toArray',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray',
+        exec: function () {/*
+          const array = [1, 2, 3].values().toArray();
+          return Array.isArray(array) && array.join() === '1,2,3';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+      {
+        name: 'Iterator.prototype[@@toStringTag]',
+        exec: function () {/*
+          return Iterator.prototype[Symbol.toStringTag] === 'Iterator';
+        */},
+        res: {
+          babel6corejs2: false,
+          babel7corejs3: babel.corejs,
+          typescript1corejs2: typescript.fallthrough,
+          typescript3_2corejs3: typescript.corejs,
+          ie11: false,
+          firefox10: false,
+          firefox60: false,
+          firefox116: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'ff-iterator-helpers'
+          },
+          firefox131: true,
+          chrome77: false,
+          chrome126: true,
+          duktape2_0: false,
+          graalvm21_3_3: false,
+          hermes0_7_0: false,
+          reactnative0_70_3: false,
+          rhino1_7_13: false
+        }
+      },
+    ]
   }
 ];
 
