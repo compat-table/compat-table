@@ -998,6 +998,7 @@ exports.tests = [
         chrome122: chrome.harmony,
         chrome124: chrome.harmony,
         chrome125: true,
+        firefox115: false,
         firefox127: false,
         firefox129: false,
         firefox130: {
@@ -1005,6 +1006,7 @@ exports.tests = [
           note_id: 'ff-regexp-modidiers',
           note_html: 'The feature has to be enabled via <code>javascript.options.experimental.regexp_modifiers</code> setting under <code>about:config</code>.'
         },
+        firefox132: true,
         safari17_5: false,
       }
     },
@@ -1019,12 +1021,14 @@ exports.tests = [
         chrome122: chrome.harmony,
         chrome124: chrome.harmony,
         chrome125: true,
+        firefox115: false,
         firefox127: false,
         firefox129: false,
         firefox130: {
           val: 'flagged',
           note_id: 'ff-regexp-modidiers',
         },
+        firefox132: true,
         safari17_5: false,
       }
     },
@@ -1039,12 +1043,14 @@ exports.tests = [
         chrome122: chrome.harmony,
         chrome124: chrome.harmony,
         chrome125: true,
+        firefox115: false,
         firefox127: false,
         firefox129: false,
         firefox130: {
           val: 'flagged',
           note_id: 'ff-regexp-modidiers',
         },
+        firefox132: true,
         safari17_5: false,
       }
     },
