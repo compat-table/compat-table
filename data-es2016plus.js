@@ -7329,8 +7329,9 @@ exports.tests = [
           },
           firefox122: true,
           chrome70: false,
-          chrome126: true,
+          chrome114: true,
           safari12: false,
+          safari17_4: true,
           duktape2_0: false,
           graalvm21_3_3: false,
           hermes0_7_0: false,
@@ -7339,26 +7340,46 @@ exports.tests = [
         }
       },
       {
-        name: 'ArrayBuffer.prototype.realloc()',
+        name: 'ArrayBuffer.prototype.transferToFixedLength()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength',
         exec: function () {/*
-          const buffer1 = new ArrayBuffer(1024);
-          const buffer2 = buffer1.realloc(256);
+          const buffer1 = new Uint8Array([1, 2]).buffer;
+          const buffer2 = buffer1.transferToFixedLength();
           return buffer1.byteLength === 0
-            && buffer2.byteLength === 256;
+            && buffer2.byteLength === 2;
         */},
         res: {
           ie11: false,
-          firefox10: false,
-          firefox52: false,
-          chrome70: false,
-          safari12: false,
-          duktape2_0: false,
-          graalvm21_3_3: false,
-          hermes0_7_0: false,
-          reactnative0_70_3: false,
-          rhino1_7_13: false
+          firefox115: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'firefox-arraybuffer',
+          },
+          firefox122: true,
+          chrome114: true,
+          safari17_4: true,
         }
-      }
+      },
+      {
+        name: 'ArrayBuffer.prototype.detached',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached',
+        exec: function () {/*
+          const buffer1 = new Uint8Array([1, 2]).buffer;
+          const buffer2 = buffer1.transfer();
+          return buffer1.detached && !buffer2.detached;
+        */},
+        res: {
+          ie11: false,
+          firefox115: false,
+          firefox117: {
+            val: 'flagged',
+            note_id: 'firefox-arraybuffer',
+          },
+          firefox122: true,
+          chrome114: true,
+          safari17_4: true,
+        }
+      },
     ]
   },
   {
