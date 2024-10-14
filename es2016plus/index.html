@@ -41942,11 +41942,501 @@ return obj instanceof Object
 <td class="unknown" data-browser="opera_mobile77">?</td>
 <td class="unknown" data-browser="reactnative0_70_3">?</td>
 </tr>
+<tr class="supertest" significance="0.25"><td id="test-Array_Grouping"><span><a class="anchor" href="#test-Array_Grouping">&#xA7;</a><a href="https://github.com/tc39/proposal-array-grouping">Array Grouping</a></span></td>
+<td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="babel6corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="babel7corejs2" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20200927" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20210808" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20210906" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20211006" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20211107" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20220502" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20220719" data-tally="0">0/2</td>
+<td class="tally" data-browser="closure20230228" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_9corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3_9corejs3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript4_9corejs3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript5_3corejs3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript5_4corejs3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript5_5corejs3" data-tally="0">0/2</td>
+<td class="tally" data-browser="typescript5_6corejs3" data-tally="0">0/2</td>
+<td class="tally" data-browser="es7shim" data-tally="0">0/2</td>
+<td class="tally" data-browser="ie11" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox115" data-tally="0" data-flagged-tally="1">0/2</td>
+<td class="tally obsolete" data-browser="firefox118" data-tally="0" data-flagged-tally="1">0/2</td>
+<td class="tally obsolete" data-browser="firefox119" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox120" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox121" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox122" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox123" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox124" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox125" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox126" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox127" data-tally="1">2/2</td>
+<td class="tally" data-browser="firefox128" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox129" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="firefox130" data-tally="1">2/2</td>
+<td class="tally" data-browser="firefox131" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox132" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="firefox133" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome119" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome120" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome121" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome122" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome123" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome124" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome125" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome126" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome127" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="chrome128" data-tally="1">2/2</td>
+<td class="tally" data-browser="chrome129" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome130" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="chrome131" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge18" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge118" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge119" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge120" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge121" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge122" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge123" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge124" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge125" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge126" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge127" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="edge128" data-tally="1">2/2</td>
+<td class="tally" data-browser="edge129" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="edge130" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="safari15_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari16_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_4" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="safari17_5" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari17_6" data-tally="1">2/2</td>
+<td class="tally" data-browser="safari18" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera102" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera103" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera104" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera105" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera106" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera107" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera108" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera109" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="opera110" data-tally="1">2/2</td>
+<td class="tally" data-browser="opera111" data-tally="1">2/2</td>
+<td class="tally unstable" data-browser="opera112" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_13" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_14" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_15" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_8" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node0_12" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node14_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node16_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node16_9" data-tally="0">0/2</td>
+<td class="tally" data-browser="node16_11" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node17_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node17_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node18_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="node18_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node19_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node19_2" data-tally="0">0/2</td>
+<td class="tally" data-browser="node20_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node21_0" data-tally="1">2/2</td>
+<td class="tally" data-browser="node22_0" data-tally="1">2/2</td>
+<td class="tally" data-browser="node23_0" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/2</td>
+<td class="tally" data-browser="duktape2_7" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="jerryscript2_3_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="jerryscript2_4_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm19_3_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm22_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="hermes0_7_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="hermes0_12_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_33" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_34" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_35" data-tally="0">0/2</td>
+<td class="tally" data-browser="deno1_36" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios12_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios13_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios14_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios16_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_4" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="ios17_5" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="ios17_6" data-tally="1">2/2</td>
+<td class="tally" data-browser="ios18" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="samsung19" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung20" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung21" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung22" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile72" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile73" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile74" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile75" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile76" data-tally="0">0/2</td>
+<td class="tally" data-browser="opera_mobile77" data-tally="0">0/2</td>
+<td class="tally" data-browser="reactnative0_70_3" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="Array_Grouping" id="test-Array_Grouping_Object.groupBy()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Array_Grouping_Object.groupBy()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Object.groupBy() <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
+const array = [1, 2, 3, 4];
+const obj = Object.groupBy(array, (num, index) =&gt; {
+  return num % 2 === 0 ? &apos;even&apos;: &apos;odd&apos;;
+});
+return !(&apos;toString&apos; in obj) &amp;&amp; obj.even[0] == 2 &amp;&amp; obj.odd[0] == 1;
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("255");try{return Function("asyncTestPassed","\nconst array = [1, 2, 3, 4];\nconst obj = Object.groupBy(array, (num, index) => {\n  return num % 2 === 0 ? 'even': 'odd';\n});\nreturn !('toString' in obj) && obj.even[0] == 2 && obj.odd[0] == 1;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("255");return Function("asyncTestPassed","'use strict';"+"\nconst array = [1, 2, 3, 4];\nconst obj = Object.groupBy(array, (num, index) => {\n  return num % 2 === 0 ? 'even': 'odd';\n});\nreturn !('toString' in obj) && obj.even[0] == 2 && obj.odd[0] == 1;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown obsolete" data-browser="tr">?</td>
+<td class="unknown obsolete" data-browser="babel6corejs2">?</td>
+<td class="unknown obsolete" data-browser="babel7corejs2">?</td>
+<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="unknown obsolete" data-browser="closure20200927">?</td>
+<td class="unknown obsolete" data-browser="closure20210808">?</td>
+<td class="unknown obsolete" data-browser="closure20210906">?</td>
+<td class="unknown obsolete" data-browser="closure20211006">?</td>
+<td class="unknown obsolete" data-browser="closure20211107">?</td>
+<td class="unknown obsolete" data-browser="closure20220502">?</td>
+<td class="unknown obsolete" data-browser="closure20220719">?</td>
+<td class="unknown" data-browser="closure20230228">?</td>
+<td class="unknown obsolete" data-browser="typescript2_9corejs2">?</td>
+<td class="unknown obsolete" data-browser="typescript3_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript4_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_3corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_4corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_5corejs3">?</td>
+<td class="unknown" data-browser="typescript5_6corejs3">?</td>
+<td class="unknown" data-browser="es7shim">?</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no flagged" data-browser="firefox115">Flag<a href="#ff-array-grouping-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-array-grouping-note"><sup>[36]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox119">Yes</td>
+<td class="yes obsolete" data-browser="firefox120">Yes</td>
+<td class="yes obsolete" data-browser="firefox121">Yes</td>
+<td class="yes obsolete" data-browser="firefox122">Yes</td>
+<td class="yes obsolete" data-browser="firefox123">Yes</td>
+<td class="yes obsolete" data-browser="firefox124">Yes</td>
+<td class="yes obsolete" data-browser="firefox125">Yes</td>
+<td class="yes obsolete" data-browser="firefox126">Yes</td>
+<td class="yes obsolete" data-browser="firefox127">Yes</td>
+<td class="yes" data-browser="firefox128">Yes</td>
+<td class="yes obsolete" data-browser="firefox129">Yes</td>
+<td class="yes obsolete" data-browser="firefox130">Yes</td>
+<td class="yes" data-browser="firefox131">Yes</td>
+<td class="yes unstable" data-browser="firefox132">Yes</td>
+<td class="yes unstable" data-browser="firefox133">Yes</td>
+<td class="unknown obsolete" data-browser="opera12_10">?</td>
+<td class="yes obsolete" data-browser="chrome119">Yes</td>
+<td class="yes obsolete" data-browser="chrome120">Yes</td>
+<td class="yes obsolete" data-browser="chrome121">Yes</td>
+<td class="yes obsolete" data-browser="chrome122">Yes</td>
+<td class="yes obsolete" data-browser="chrome123">Yes</td>
+<td class="yes obsolete" data-browser="chrome124">Yes</td>
+<td class="yes obsolete" data-browser="chrome125">Yes</td>
+<td class="yes obsolete" data-browser="chrome126">Yes</td>
+<td class="yes obsolete" data-browser="chrome127">Yes</td>
+<td class="yes obsolete" data-browser="chrome128">Yes</td>
+<td class="yes" data-browser="chrome129">Yes</td>
+<td class="yes unstable" data-browser="chrome130">Yes</td>
+<td class="yes unstable" data-browser="chrome131">Yes</td>
+<td class="no obsolete" data-browser="edge18">No</td>
+<td class="yes obsolete" data-browser="edge118">Yes</td>
+<td class="yes obsolete" data-browser="edge119">Yes</td>
+<td class="yes obsolete" data-browser="edge120">Yes</td>
+<td class="yes obsolete" data-browser="edge121">Yes</td>
+<td class="yes obsolete" data-browser="edge122">Yes</td>
+<td class="yes obsolete" data-browser="edge123">Yes</td>
+<td class="yes obsolete" data-browser="edge124">Yes</td>
+<td class="yes obsolete" data-browser="edge125">Yes</td>
+<td class="yes obsolete" data-browser="edge126">Yes</td>
+<td class="yes obsolete" data-browser="edge127">Yes</td>
+<td class="yes obsolete" data-browser="edge128">Yes</td>
+<td class="yes" data-browser="edge129">Yes</td>
+<td class="yes unstable" data-browser="edge130">Yes</td>
+<td class="unknown obsolete" data-browser="safari15_6">?</td>
+<td class="unknown obsolete" data-browser="safari16_6">?</td>
+<td class="unknown obsolete" data-browser="safari17">?</td>
+<td class="unknown obsolete" data-browser="safari17_1">?</td>
+<td class="unknown obsolete" data-browser="safari17_2">?</td>
+<td class="unknown obsolete" data-browser="safari17_3">?</td>
+<td class="yes obsolete" data-browser="safari17_4">Yes</td>
+<td class="yes obsolete" data-browser="safari17_5">Yes</td>
+<td class="yes" data-browser="safari17_6">Yes</td>
+<td class="yes" data-browser="safari18">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="unknown obsolete" data-browser="opera102">?</td>
+<td class="yes obsolete" data-browser="opera103">Yes</td>
+<td class="yes obsolete" data-browser="opera104">Yes</td>
+<td class="yes obsolete" data-browser="opera105">Yes</td>
+<td class="yes obsolete" data-browser="opera106">Yes</td>
+<td class="yes obsolete" data-browser="opera107">Yes</td>
+<td class="yes obsolete" data-browser="opera108">Yes</td>
+<td class="yes obsolete" data-browser="opera109">Yes</td>
+<td class="yes obsolete" data-browser="opera110">Yes</td>
+<td class="yes" data-browser="opera111">Yes</td>
+<td class="yes unstable" data-browser="opera112">Yes</td>
+<td class="unknown obsolete" data-browser="rhino1_7_13">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_14">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_15">?</td>
+<td class="unknown obsolete" data-browser="phantom2_1">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="unknown obsolete" data-browser="node0_8">?</td>
+<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_12">?</td>
+<td class="unknown obsolete" data-browser="node14_6">?</td>
+<td class="unknown obsolete" data-browser="node16_0">?</td>
+<td class="unknown obsolete" data-browser="node16_9">?</td>
+<td class="unknown" data-browser="node16_11">?</td>
+<td class="unknown obsolete" data-browser="node17_0">?</td>
+<td class="unknown obsolete" data-browser="node17_2">?</td>
+<td class="unknown obsolete" data-browser="node18_0">?</td>
+<td class="unknown" data-browser="node18_3">?</td>
+<td class="unknown obsolete" data-browser="node19_0">?</td>
+<td class="unknown obsolete" data-browser="node19_2">?</td>
+<td class="unknown" data-browser="node20_0">?</td>
+<td class="yes obsolete" data-browser="node21_0">Yes</td>
+<td class="yes" data-browser="node22_0">Yes</td>
+<td class="yes" data-browser="node23_0">Yes</td>
+<td class="unknown obsolete" data-browser="duktape2_6">?</td>
+<td class="unknown" data-browser="duktape2_7">?</td>
+<td class="unknown obsolete" data-browser="jerryscript2_3_0">?</td>
+<td class="unknown" data-browser="jerryscript2_4_0">?</td>
+<td class="unknown obsolete" data-browser="graalvm19">?</td>
+<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
+<td class="unknown obsolete" data-browser="graalvm20">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm21">?</td>
+<td class="unknown" data-browser="graalvm21_3_3">?</td>
+<td class="unknown" data-browser="graalvm22_2">?</td>
+<td class="unknown obsolete" data-browser="hermes0_7_0">?</td>
+<td class="unknown" data-browser="hermes0_12_0">?</td>
+<td class="unknown obsolete" data-browser="deno1_33">?</td>
+<td class="unknown obsolete" data-browser="deno1_34">?</td>
+<td class="unknown obsolete" data-browser="deno1_35">?</td>
+<td class="unknown" data-browser="deno1_36">?</td>
+<td class="unknown obsolete" data-browser="android4_4">?</td>
+<td class="unknown obsolete" data-browser="android4_4_3">?</td>
+<td class="unknown obsolete" data-browser="ios12_2">?</td>
+<td class="unknown obsolete" data-browser="ios13_4">?</td>
+<td class="unknown obsolete" data-browser="ios14_5">?</td>
+<td class="unknown obsolete" data-browser="ios16_6">?</td>
+<td class="unknown obsolete" data-browser="ios17">?</td>
+<td class="unknown obsolete" data-browser="ios17_1">?</td>
+<td class="unknown obsolete" data-browser="ios17_2">?</td>
+<td class="unknown obsolete" data-browser="ios17_3">?</td>
+<td class="yes obsolete" data-browser="ios17_4">Yes</td>
+<td class="yes obsolete" data-browser="ios17_5">Yes</td>
+<td class="yes obsolete" data-browser="ios17_6">Yes</td>
+<td class="yes" data-browser="ios18">Yes</td>
+<td class="unknown obsolete" data-browser="samsung19">?</td>
+<td class="unknown obsolete" data-browser="samsung20">?</td>
+<td class="unknown obsolete" data-browser="samsung21">?</td>
+<td class="unknown" data-browser="samsung22">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile72">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile73">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile74">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile75">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile76">?</td>
+<td class="unknown" data-browser="opera_mobile77">?</td>
+<td class="unknown" data-browser="reactnative0_70_3">?</td>
+</tr>
+<tr class="subtest" data-parent="Array_Grouping" id="test-Array_Grouping_Map.groupBy()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Array_Grouping_Map.groupBy()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Map.groupBy() <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
+const array = [1, 2, 3, 4];
+const odd  = { odd: true };
+const even = { even: true };
+const map = Map.groupBy(array, (num, index) =&gt; {
+  return num % 2 === 0 ? even: odd;
+});
+return map instanceof Map &amp;&amp; map.get(even)[0] === 2 &amp;&amp; map.get(odd)[0] === 1;
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("256");try{return Function("asyncTestPassed","\nconst array = [1, 2, 3, 4];\nconst odd  = { odd: true };\nconst even = { even: true };\nconst map = Map.groupBy(array, (num, index) => {\n  return num % 2 === 0 ? even: odd;\n});\nreturn map instanceof Map && map.get(even)[0] === 2 && map.get(odd)[0] === 1;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("256");return Function("asyncTestPassed","'use strict';"+"\nconst array = [1, 2, 3, 4];\nconst odd  = { odd: true };\nconst even = { even: true };\nconst map = Map.groupBy(array, (num, index) => {\n  return num % 2 === 0 ? even: odd;\n});\nreturn map instanceof Map && map.get(even)[0] === 2 && map.get(odd)[0] === 1;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown obsolete" data-browser="tr">?</td>
+<td class="unknown obsolete" data-browser="babel6corejs2">?</td>
+<td class="unknown obsolete" data-browser="babel7corejs2">?</td>
+<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="unknown obsolete" data-browser="closure20200927">?</td>
+<td class="unknown obsolete" data-browser="closure20210808">?</td>
+<td class="unknown obsolete" data-browser="closure20210906">?</td>
+<td class="unknown obsolete" data-browser="closure20211006">?</td>
+<td class="unknown obsolete" data-browser="closure20211107">?</td>
+<td class="unknown obsolete" data-browser="closure20220502">?</td>
+<td class="unknown obsolete" data-browser="closure20220719">?</td>
+<td class="unknown" data-browser="closure20230228">?</td>
+<td class="unknown obsolete" data-browser="typescript2_9corejs2">?</td>
+<td class="unknown obsolete" data-browser="typescript3_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript4_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_3corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_4corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_5corejs3">?</td>
+<td class="unknown" data-browser="typescript5_6corejs3">?</td>
+<td class="unknown" data-browser="es7shim">?</td>
+<td class="no" data-browser="ie11">No</td>
+<td class="no flagged" data-browser="firefox115">Flag<a href="#ff-array-grouping-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-array-grouping-note"><sup>[36]</sup></a></td>
+<td class="yes obsolete" data-browser="firefox119">Yes</td>
+<td class="yes obsolete" data-browser="firefox120">Yes</td>
+<td class="yes obsolete" data-browser="firefox121">Yes</td>
+<td class="yes obsolete" data-browser="firefox122">Yes</td>
+<td class="yes obsolete" data-browser="firefox123">Yes</td>
+<td class="yes obsolete" data-browser="firefox124">Yes</td>
+<td class="yes obsolete" data-browser="firefox125">Yes</td>
+<td class="yes obsolete" data-browser="firefox126">Yes</td>
+<td class="yes obsolete" data-browser="firefox127">Yes</td>
+<td class="yes" data-browser="firefox128">Yes</td>
+<td class="yes obsolete" data-browser="firefox129">Yes</td>
+<td class="yes obsolete" data-browser="firefox130">Yes</td>
+<td class="yes" data-browser="firefox131">Yes</td>
+<td class="yes unstable" data-browser="firefox132">Yes</td>
+<td class="yes unstable" data-browser="firefox133">Yes</td>
+<td class="unknown obsolete" data-browser="opera12_10">?</td>
+<td class="yes obsolete" data-browser="chrome119">Yes</td>
+<td class="yes obsolete" data-browser="chrome120">Yes</td>
+<td class="yes obsolete" data-browser="chrome121">Yes</td>
+<td class="yes obsolete" data-browser="chrome122">Yes</td>
+<td class="yes obsolete" data-browser="chrome123">Yes</td>
+<td class="yes obsolete" data-browser="chrome124">Yes</td>
+<td class="yes obsolete" data-browser="chrome125">Yes</td>
+<td class="yes obsolete" data-browser="chrome126">Yes</td>
+<td class="yes obsolete" data-browser="chrome127">Yes</td>
+<td class="yes obsolete" data-browser="chrome128">Yes</td>
+<td class="yes" data-browser="chrome129">Yes</td>
+<td class="yes unstable" data-browser="chrome130">Yes</td>
+<td class="yes unstable" data-browser="chrome131">Yes</td>
+<td class="no obsolete" data-browser="edge18">No</td>
+<td class="yes obsolete" data-browser="edge118">Yes</td>
+<td class="yes obsolete" data-browser="edge119">Yes</td>
+<td class="yes obsolete" data-browser="edge120">Yes</td>
+<td class="yes obsolete" data-browser="edge121">Yes</td>
+<td class="yes obsolete" data-browser="edge122">Yes</td>
+<td class="yes obsolete" data-browser="edge123">Yes</td>
+<td class="yes obsolete" data-browser="edge124">Yes</td>
+<td class="yes obsolete" data-browser="edge125">Yes</td>
+<td class="yes obsolete" data-browser="edge126">Yes</td>
+<td class="yes obsolete" data-browser="edge127">Yes</td>
+<td class="yes obsolete" data-browser="edge128">Yes</td>
+<td class="yes" data-browser="edge129">Yes</td>
+<td class="yes unstable" data-browser="edge130">Yes</td>
+<td class="unknown obsolete" data-browser="safari15_6">?</td>
+<td class="unknown obsolete" data-browser="safari16_6">?</td>
+<td class="unknown obsolete" data-browser="safari17">?</td>
+<td class="unknown obsolete" data-browser="safari17_1">?</td>
+<td class="unknown obsolete" data-browser="safari17_2">?</td>
+<td class="unknown obsolete" data-browser="safari17_3">?</td>
+<td class="yes obsolete" data-browser="safari17_4">Yes</td>
+<td class="yes obsolete" data-browser="safari17_5">Yes</td>
+<td class="yes" data-browser="safari17_6">Yes</td>
+<td class="yes" data-browser="safari18">Yes</td>
+<td class="yes unstable" data-browser="safaritp">Yes</td>
+<td class="yes unstable" data-browser="webkit">Yes</td>
+<td class="unknown obsolete" data-browser="opera102">?</td>
+<td class="yes obsolete" data-browser="opera103">Yes</td>
+<td class="yes obsolete" data-browser="opera104">Yes</td>
+<td class="yes obsolete" data-browser="opera105">Yes</td>
+<td class="yes obsolete" data-browser="opera106">Yes</td>
+<td class="yes obsolete" data-browser="opera107">Yes</td>
+<td class="yes obsolete" data-browser="opera108">Yes</td>
+<td class="yes obsolete" data-browser="opera109">Yes</td>
+<td class="yes obsolete" data-browser="opera110">Yes</td>
+<td class="yes" data-browser="opera111">Yes</td>
+<td class="yes unstable" data-browser="opera112">Yes</td>
+<td class="unknown obsolete" data-browser="rhino1_7_13">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_14">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_15">?</td>
+<td class="unknown obsolete" data-browser="phantom2_1">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="unknown obsolete" data-browser="node0_8">?</td>
+<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_12">?</td>
+<td class="unknown obsolete" data-browser="node14_6">?</td>
+<td class="unknown obsolete" data-browser="node16_0">?</td>
+<td class="unknown obsolete" data-browser="node16_9">?</td>
+<td class="unknown" data-browser="node16_11">?</td>
+<td class="unknown obsolete" data-browser="node17_0">?</td>
+<td class="unknown obsolete" data-browser="node17_2">?</td>
+<td class="unknown obsolete" data-browser="node18_0">?</td>
+<td class="unknown" data-browser="node18_3">?</td>
+<td class="unknown obsolete" data-browser="node19_0">?</td>
+<td class="unknown obsolete" data-browser="node19_2">?</td>
+<td class="unknown" data-browser="node20_0">?</td>
+<td class="yes obsolete" data-browser="node21_0">Yes</td>
+<td class="yes" data-browser="node22_0">Yes</td>
+<td class="yes" data-browser="node23_0">Yes</td>
+<td class="unknown obsolete" data-browser="duktape2_6">?</td>
+<td class="unknown" data-browser="duktape2_7">?</td>
+<td class="unknown obsolete" data-browser="jerryscript2_3_0">?</td>
+<td class="unknown" data-browser="jerryscript2_4_0">?</td>
+<td class="unknown obsolete" data-browser="graalvm19">?</td>
+<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
+<td class="unknown obsolete" data-browser="graalvm20">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm21">?</td>
+<td class="unknown" data-browser="graalvm21_3_3">?</td>
+<td class="unknown" data-browser="graalvm22_2">?</td>
+<td class="unknown obsolete" data-browser="hermes0_7_0">?</td>
+<td class="unknown" data-browser="hermes0_12_0">?</td>
+<td class="unknown obsolete" data-browser="deno1_33">?</td>
+<td class="unknown obsolete" data-browser="deno1_34">?</td>
+<td class="unknown obsolete" data-browser="deno1_35">?</td>
+<td class="unknown" data-browser="deno1_36">?</td>
+<td class="unknown obsolete" data-browser="android4_4">?</td>
+<td class="unknown obsolete" data-browser="android4_4_3">?</td>
+<td class="unknown obsolete" data-browser="ios12_2">?</td>
+<td class="unknown obsolete" data-browser="ios13_4">?</td>
+<td class="unknown obsolete" data-browser="ios14_5">?</td>
+<td class="unknown obsolete" data-browser="ios16_6">?</td>
+<td class="unknown obsolete" data-browser="ios17">?</td>
+<td class="unknown obsolete" data-browser="ios17_1">?</td>
+<td class="unknown obsolete" data-browser="ios17_2">?</td>
+<td class="unknown obsolete" data-browser="ios17_3">?</td>
+<td class="yes obsolete" data-browser="ios17_4">Yes</td>
+<td class="yes obsolete" data-browser="ios17_5">Yes</td>
+<td class="yes obsolete" data-browser="ios17_6">Yes</td>
+<td class="yes" data-browser="ios18">Yes</td>
+<td class="unknown obsolete" data-browser="samsung19">?</td>
+<td class="unknown obsolete" data-browser="samsung20">?</td>
+<td class="unknown obsolete" data-browser="samsung21">?</td>
+<td class="unknown" data-browser="samsung22">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile72">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile73">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile74">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile75">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile76">?</td>
+<td class="unknown" data-browser="opera_mobile77">?</td>
+<td class="unknown" data-browser="reactnative0_70_3">?</td>
+</tr>
 <tr class="category"><td colspan="159"><span>2025 features</span></td>
 </tr>
 <tr significance="0.125"><td id="test-Duplicate_named_capturing_groups"><span><a class="anchor" href="#test-Duplicate_named_capturing_groups">&#xA7;</a><a href="https://github.com/tc39/proposal-duplicate-named-capturing-groups">Duplicate named capturing groups</a></span><script data-source="
 return /(?&lt;year&gt;[0-9]{4})-[0-9]{2}|[0-9]{2}-(?&lt;year&gt;[0-9]{4})/.test(&quot;12-1995&quot;);
-">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("254");try{return Function("asyncTestPassed","\nreturn /(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/.test(\"12-1995\");\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("254");return Function("asyncTestPassed","'use strict';"+"\nreturn /(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/.test(\"12-1995\");\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("257");try{return Function("asyncTestPassed","\nreturn /(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/.test(\"12-1995\");\n")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("257");return Function("asyncTestPassed","'use strict';"+"\nreturn /(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/.test(\"12-1995\");\n")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -42268,7 +42758,7 @@ var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
 return set.size === 2
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("256");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("256");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("259");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("259");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));\nreturn set.size === 2\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -42292,15 +42782,15 @@ return set.size === 2
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -42393,8 +42883,8 @@ return set.size === 2
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -42433,7 +42923,7 @@ return set.size === 3
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2)
   &amp;&amp; set.has(3);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("257");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("257");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("260");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("260");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -42457,15 +42947,15 @@ return set.size === 3
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -42558,8 +43048,8 @@ return set.size === 3
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -42597,7 +43087,7 @@ var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(2);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("258");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("258");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("261");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("261");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -42621,15 +43111,15 @@ return set.size === 2
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -42722,8 +43212,8 @@ return set.size === 2
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -42761,7 +43251,7 @@ var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
 return set.size === 2
   &amp;&amp; set.has(1)
   &amp;&amp; set.has(3);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("259");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("259");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("262");try{return Function("asyncTestPassed","\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("262");return Function("asyncTestPassed","'use strict';"+"\nvar set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -42785,15 +43275,15 @@ return set.size === 2
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -42886,8 +43376,8 @@ return set.size === 2
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -42922,7 +43412,7 @@ return set.size === 2
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isDisjointFrom()"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isDisjointFrom()">&#xA7;</a>Set.prototype.isDisjointFrom()</span><script data-source="
 return new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("260");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("260");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("263");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("263");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -42946,15 +43436,15 @@ return new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -43047,8 +43537,8 @@ return new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));
 <td class="no flagged obsolete" data-browser="graalvm20_3">Flag<a href="#graalvm-js-ecmascript-version-2021-note"><sup>[24]</sup></a></td>
 <td class="no flagged obsolete" data-browser="graalvm20_3_1">Flag<a href="#graalvm-js-ecmascript-version-2021-note"><sup>[24]</sup></a></td>
 <td class="no flagged obsolete" data-browser="graalvm21">Flag<a href="#graalvm-js-ecmascript-version-2021-note"><sup>[24]</sup></a></td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -43083,7 +43573,7 @@ return new Set([1, 2, 3]).isDisjointFrom(new Set([4, 5, 6]));
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isSubsetOf()"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isSubsetOf()">&#xA7;</a>Set.prototype.isSubsetOf()</span><script data-source="
 return new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("261");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("261");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("264");try{return Function("asyncTestPassed","\nreturn new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("264");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -43107,15 +43597,15 @@ return new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -43208,8 +43698,8 @@ return new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -43244,7 +43734,7 @@ return new Set([1, 2, 3]).isSubsetOf(new Set([5, 4, 3, 2, 1]));
 </tr>
 <tr class="subtest" data-parent="Set_methods" id="test-Set_methods_Set.prototype.isSupersetOf()"><td><span><a class="anchor" href="#test-Set_methods_Set.prototype.isSupersetOf()">&#xA7;</a>Set.prototype.isSupersetOf()</span><script data-source="
 return new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("262");try{return Function("asyncTestPassed","\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("262");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("265");try{return Function("asyncTestPassed","\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("265");return Function("asyncTestPassed","'use strict';"+"\nreturn new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -43268,15 +43758,15 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[36]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-new-set-methods-note"><sup>[37]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox127">Yes</td>
 <td class="yes" data-browser="firefox128">Yes</td>
 <td class="yes obsolete" data-browser="firefox129">Yes</td>
@@ -43369,8 +43859,8 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
-<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[37]</sup></a></td>
+<td class="no flagged" data-browser="graalvm21_3_3">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
+<td class="no flagged" data-browser="graalvm22_2">Flag<a href="#graalvm-experimental-options-js-new-set-methods-note"><sup>[38]</sup></a></td>
 <td class="no obsolete" data-browser="hermes0_7_0">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
 <td class="no obsolete" data-browser="deno1_33">No</td>
@@ -43564,7 +44054,7 @@ return new Set([5, 4, 3, 2, 1]).isSupersetOf(new Set([1, 2, 3]));
 <tr class="subtest" data-parent="RegExp_Pattern_Modifiers" id="test-RegExp_Pattern_Modifiers_i_flag"><td><span><a class="anchor" href="#test-RegExp_Pattern_Modifiers_i_flag">&#xA7;</a>i flag</span><script data-source="
 const regex = /^[a-z](?-i:[a-z])$/i;
 return regex.test(&quot;ab&quot;) &amp;&amp; regex.test(&quot;Ab&quot;) &amp;&amp; !regex.test(&quot;aB&quot;);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("264");try{return Function("asyncTestPassed","\nconst regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("264");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("267");try{return Function("asyncTestPassed","\nconst regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("267");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -43600,8 +44090,8 @@ return regex.test(&quot;ab&quot;) &amp;&amp; regex.test(&quot;Ab&quot;) &amp;&am
 <td class="no obsolete" data-browser="firefox127">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
-<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
+<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
@@ -43726,7 +44216,7 @@ return regex.test(&quot;ab&quot;) &amp;&amp; regex.test(&quot;Ab&quot;) &amp;&am
 <tr class="subtest" data-parent="RegExp_Pattern_Modifiers" id="test-RegExp_Pattern_Modifiers_m_flag"><td><span><a class="anchor" href="#test-RegExp_Pattern_Modifiers_m_flag">&#xA7;</a>m flag</span><script data-source="
 const regex = /^a|(?m:^b)/;
 return regex.test(&quot;a&quot;) &amp;&amp; regex.test(&quot;b&quot;) &amp;&amp; regex.test(&quot;c\nb&quot;) &amp;&amp; !regex.test(&quot;c\na&quot;);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("265");try{return Function("asyncTestPassed","\nconst regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("265");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("268");try{return Function("asyncTestPassed","\nconst regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("268");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -43762,8 +44252,8 @@ return regex.test(&quot;a&quot;) &amp;&amp; regex.test(&quot;b&quot;) &amp;&amp;
 <td class="no obsolete" data-browser="firefox127">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
-<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
+<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
@@ -43888,7 +44378,7 @@ return regex.test(&quot;a&quot;) &amp;&amp; regex.test(&quot;b&quot;) &amp;&amp;
 <tr class="subtest" data-parent="RegExp_Pattern_Modifiers" id="test-RegExp_Pattern_Modifiers_s_flag"><td><span><a class="anchor" href="#test-RegExp_Pattern_Modifiers_s_flag">&#xA7;</a>s flag</span><script data-source="
 const regex = /.(?-s:.)/s;
 return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&amp; !regex.test(&quot;\n\n&quot;);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("266");try{return Function("asyncTestPassed","\nconst regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("266");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("269");try{return Function("asyncTestPassed","\nconst regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("269");return Function("asyncTestPassed","'use strict';"+"\nconst regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -43924,8 +44414,8 @@ return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&a
 <td class="no obsolete" data-browser="firefox127">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
-<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[38]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
+<td class="no flagged" data-browser="firefox131">Flag<a href="#ff-regexp-modidiers-note"><sup>[39]</sup></a></td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
@@ -44207,7 +44697,7 @@ return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&a
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_instanceof_Iterator"><td><span><a class="anchor" href="#test-Iterator_Helpers_instanceof_Iterator">&#xA7;</a>instanceof Iterator</span><script data-source="
 return [1, 2, 3].values() instanceof Iterator;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("268");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values() instanceof Iterator;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("268");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values() instanceof Iterator;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("271");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values() instanceof Iterator;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("271");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values() instanceof Iterator;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -44231,19 +44721,19 @@ return [1, 2, 3].values() instanceof Iterator;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -44370,7 +44860,7 @@ return [1, 2, 3].values() instanceof Iterator;
 class Class extends Iterator { }
 const instance = new Class();
 return instance[Symbol.iterator]() === instance;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("269");try{return Function("asyncTestPassed","\nclass Class extends Iterator { }\nconst instance = new Class();\nreturn instance[Symbol.iterator]() === instance;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("269");return Function("asyncTestPassed","'use strict';"+"\nclass Class extends Iterator { }\nconst instance = new Class();\nreturn instance[Symbol.iterator]() === instance;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("272");try{return Function("asyncTestPassed","\nclass Class extends Iterator { }\nconst instance = new Class();\nreturn instance[Symbol.iterator]() === instance;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("272");return Function("asyncTestPassed","'use strict';"+"\nclass Class extends Iterator { }\nconst instance = new Class();\nreturn instance[Symbol.iterator]() === instance;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -44394,19 +44884,19 @@ return instance[Symbol.iterator]() === instance;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -44534,7 +45024,7 @@ const iterator = Iterator.from([1, 2, 3]);
 return &apos;next&apos; in iterator
   &amp;&amp; iterator instanceof Iterator
   &amp;&amp; Array.from(iterator).join() === &apos;1,2,3&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("270");try{return Function("asyncTestPassed","\nconst iterator = Iterator.from([1, 2, 3]);\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("270");return Function("asyncTestPassed","'use strict';"+"\nconst iterator = Iterator.from([1, 2, 3]);\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");try{return Function("asyncTestPassed","\nconst iterator = Iterator.from([1, 2, 3]);\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("273");return Function("asyncTestPassed","'use strict';"+"\nconst iterator = Iterator.from([1, 2, 3]);\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -44558,19 +45048,19 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -44703,7 +45193,7 @@ const iterator = Iterator.from({
 return &apos;next&apos; in iterator
   &amp;&amp; iterator instanceof Iterator
   &amp;&amp; Array.from(iterator).join() === &apos;1,2,3&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("271");try{return Function("asyncTestPassed","\nconst iterator = Iterator.from({\n  i: 0,\n  next() {\n    return { value: ++this.i, done: this.i > 3 };\n  }\n});\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("271");return Function("asyncTestPassed","'use strict';"+"\nconst iterator = Iterator.from({\n  i: 0,\n  next() {\n    return { value: ++this.i, done: this.i > 3 };\n  }\n});\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("274");try{return Function("asyncTestPassed","\nconst iterator = Iterator.from({\n  i: 0,\n  next() {\n    return { value: ++this.i, done: this.i > 3 };\n  }\n});\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("274");return Function("asyncTestPassed","'use strict';"+"\nconst iterator = Iterator.from({\n  i: 0,\n  next() {\n    return { value: ++this.i, done: this.i > 3 };\n  }\n});\nreturn 'next' in iterator\n  && iterator instanceof Iterator\n  && Array.from(iterator).join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -44727,19 +45217,19 @@ return &apos;next&apos; in iterator
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -44864,7 +45354,7 @@ return &apos;next&apos; in iterator
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.drop_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.drop_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.drop <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("272");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().drop(1)).join() === '2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("272");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().drop(1)).join() === '2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("275");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().drop(1)).join() === '2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("275");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().drop(1)).join() === '2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -44888,19 +45378,19 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45025,7 +45515,7 @@ return Array.from([1, 2, 3].values().drop(1)).join() === &apos;2,3&apos;;
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.every_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.every_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.every <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("273");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().every(it => typeof it === 'number');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("273");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().every(it => typeof it === 'number');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("276");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().every(it => typeof it === 'number');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("276");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().every(it => typeof it === 'number');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45049,19 +45539,19 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45186,7 +45676,7 @@ return [1, 2, 3].values().every(it =&gt; typeof it === &apos;number&apos;);
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.filter_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.filter_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.filter <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1,3&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("274");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("274");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("277");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("277");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().filter(it => it % 2)).join() === '1,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45210,19 +45700,19 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45347,7 +45837,7 @@ return Array.from([1, 2, 3].values().filter(it =&gt; it % 2)).join() === &apos;1
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.find_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.find_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.find <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("275");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().find(it => it % 2) === 1;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("275");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().find(it => it % 2) === 1;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("278");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().find(it => it % 2) === 1;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("278");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().find(it => it % 2) === 1;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45371,19 +45861,19 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45508,7 +45998,7 @@ return [1, 2, 3].values().find(it =&gt; it % 2) === 1;
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.flatMap_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.flatMap_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.flatMap <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos;1,0,2,0,3,0&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("276");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("276");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("279");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("279");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().flatMap(it => [it, 0])).join() === '1,0,2,0,3,0';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45532,19 +46022,19 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45671,7 +46161,7 @@ return Array.from([1, 2, 3].values().flatMap(it =&gt; [it, 0])).join() === &apos
 let result = &apos;&apos;;
 [1, 2, 3].values().forEach(it =&gt; result += it);
 return result === &apos;123&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("277");try{return Function("asyncTestPassed","\nlet result = '';\n[1, 2, 3].values().forEach(it => result += it);\nreturn result === '123';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("277");return Function("asyncTestPassed","'use strict';"+"\nlet result = '';\n[1, 2, 3].values().forEach(it => result += it);\nreturn result === '123';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("280");try{return Function("asyncTestPassed","\nlet result = '';\n[1, 2, 3].values().forEach(it => result += it);\nreturn result === '123';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("280");return Function("asyncTestPassed","'use strict';"+"\nlet result = '';\n[1, 2, 3].values().forEach(it => result += it);\nreturn result === '123';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45695,19 +46185,19 @@ return result === &apos;123&apos;;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45832,7 +46322,7 @@ return result === &apos;123&apos;;
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.map_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.map_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.map <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4,9&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("278");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("278");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("281");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("281");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().map(it => it * it)).join() === '1,4,9';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -45856,19 +46346,19 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -45993,7 +46483,7 @@ return Array.from([1, 2, 3].values().map(it =&gt; it * it)).join() === &apos;1,4
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.reduce_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.reduce_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.reduce <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("279");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().reduce((a, b) => a + b) === 6;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("279");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().reduce((a, b) => a + b) === 6;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("282");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().reduce((a, b) => a + b) === 6;\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("282");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().reduce((a, b) => a + b) === 6;\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -46017,19 +46507,19 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -46154,7 +46644,7 @@ return [1, 2, 3].values().reduce((a, b) =&gt; a + b) === 6;
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.some_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.some_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.some <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("280");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().some(it => typeof it === 'number');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("280");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().some(it => typeof it === 'number');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("283");try{return Function("asyncTestPassed","\nreturn [1, 2, 3].values().some(it => typeof it === 'number');\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("283");return Function("asyncTestPassed","'use strict';"+"\nreturn [1, 2, 3].values().some(it => typeof it === 'number');\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -46178,19 +46668,19 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -46315,7 +46805,7 @@ return [1, 2, 3].values().some(it =&gt; typeof it === &apos;number&apos;);
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.take_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.take_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.take <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("281");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().take(2)).join() === '1,2';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("281");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().take(2)).join() === '1,2';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");try{return Function("asyncTestPassed","\nreturn Array.from([1, 2, 3].values().take(2)).join() === '1,2';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("284");return Function("asyncTestPassed","'use strict';"+"\nreturn Array.from([1, 2, 3].values().take(2)).join() === '1,2';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -46339,19 +46829,19 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -46477,7 +46967,7 @@ return Array.from([1, 2, 3].values().take(2)).join() === &apos;1,2&apos;;
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype.toArray_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype.toArray_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Iterator.prototype.toArray <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 const array = [1, 2, 3].values().toArray();
 return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("282");try{return Function("asyncTestPassed","\nconst array = [1, 2, 3].values().toArray();\nreturn Array.isArray(array) && array.join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("282");return Function("asyncTestPassed","'use strict';"+"\nconst array = [1, 2, 3].values().toArray();\nreturn Array.isArray(array) && array.join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("285");try{return Function("asyncTestPassed","\nconst array = [1, 2, 3].values().toArray();\nreturn Array.isArray(array) && array.join() === '1,2,3';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("285");return Function("asyncTestPassed","'use strict';"+"\nconst array = [1, 2, 3].values().toArray();\nreturn Array.isArray(array) && array.join() === '1,2,3';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -46501,19 +46991,19 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -46638,7 +47128,7 @@ return Array.isArray(array) &amp;&amp; array.join() === &apos;1,2,3&apos;;
 </tr>
 <tr class="subtest" data-parent="Iterator_Helpers" id="test-Iterator_Helpers_Iterator.prototype[@@toStringTag]"><td><span><a class="anchor" href="#test-Iterator_Helpers_Iterator.prototype[@@toStringTag]">&#xA7;</a>Iterator.prototype[@@toStringTag]</span><script data-source="
 return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("283");try{return Function("asyncTestPassed","\nreturn Iterator.prototype[Symbol.toStringTag] === 'Iterator';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("283");return Function("asyncTestPassed","'use strict';"+"\nreturn Iterator.prototype[Symbol.toStringTag] === 'Iterator';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("286");try{return Function("asyncTestPassed","\nreturn Iterator.prototype[Symbol.toStringTag] === 'Iterator';\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("286");return Function("asyncTestPassed","'use strict';"+"\nreturn Iterator.prototype[Symbol.toStringTag] === 'Iterator';\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -46662,19 +47152,19 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="unknown" data-browser="es7shim">?</td>
 <td class="no" data-browser="ie11">No</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[39]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox118">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox119">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox120">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox121">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox122">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox123">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox124">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox125">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox126">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox127">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-iterator-helpers-note"><sup>[40]</sup></a></td>
 <td class="yes" data-browser="firefox131">Yes</td>
 <td class="yes unstable" data-browser="firefox132">Yes</td>
 <td class="yes unstable" data-browser="firefox133">Yes</td>
@@ -46807,7 +47297,7 @@ var p2 = Promise.try(function () {
 }, [p, 2]);
 
 return p instanceof Promise &amp;&amp; called &amp;&amp; argsMatch;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("284");try{return Function("asyncTestPassed","\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("284");return Function("asyncTestPassed","'use strict';"+"\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");try{return Function("asyncTestPassed","\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("287");return Function("asyncTestPassed","'use strict';"+"\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -46845,8 +47335,8 @@ return p instanceof Promise &amp;&amp; called &amp;&amp; argsMatch;
 <td class="unknown obsolete" data-browser="firefox129">?</td>
 <td class="unknown obsolete" data-browser="firefox130">?</td>
 <td class="unknown" data-browser="firefox131">?</td>
-<td class="no flagged unstable" data-browser="firefox132">Flag<a href="#firefox-nightly-note"><sup>[40]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox133">Flag<a href="#firefox-nightly-note"><sup>[40]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox132">Flag<a href="#firefox-nightly-note"><sup>[41]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox133">Flag<a href="#firefox-nightly-note"><sup>[41]</sup></a></td>
 <td class="unknown obsolete" data-browser="opera12_10">?</td>
 <td class="unknown obsolete" data-browser="chrome119">?</td>
 <td class="unknown obsolete" data-browser="chrome120">?</td>
@@ -46970,7 +47460,7 @@ return p instanceof Promise &amp;&amp; called &amp;&amp; argsMatch;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-core-js-note">  <sup>[5]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[7]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[8]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="typescript-downlevel-iteration-note">  <sup>[9]</sup> Requires the <code>downlevelIteration</code> compile option.</p><p id="strict-fn-non-strict-params-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[13]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[14]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="fx-shared-memory-cors-isolation-note">  <sup>[15]</sup> The feature is available with <a href="https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/">properly set CORS isolation headers</a> or via enabling <code>dom.postMessage.sharedArrayBuffer.bypassCOOP_COEP.insecure.enabled</code> setting under <code>about:config</code></p><p id="edg-shared-memory-spectre-note">  <sup>[16]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="sf-shared-memory-spectre-note">  <sup>[17]</sup> The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.</p><p id="chrome-experimental-note">  <sup>[18]</sup> The feature has to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="closure-object-assign-note">  <sup>[19]</sup> Requires native support for <code>Object.assign</code></p><p id="typescript-es6-note">  <sup>[20]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="flatten-compat-issue-note">  <sup>[21]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="graalvm-js-ecmascript-version-2020-note">  <sup>[22]</sup> Requires the <code>--js.ecmascript-version=2020</code> flag.</p><p id="chrome-string-prototype-replace-all-note">  <sup>[23]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-string-replaceall&quot;</code> flag</p><p id="graalvm-js-ecmascript-version-2021-note">  <sup>[24]</sup> Requires the <code>--js.ecmascript-version=2021</code> flag.</p><p id="chrome-promise-any-note">  <sup>[25]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=9808"><code>--js-flags=&quot;--harmony-promise-any&quot;</code></a> flag in V8.</p><p id="chrome-weakrefs-note">  <sup>[26]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=&quot;--harmony-weak-refs --expose-gc&quot;</code></a> flag in V8.</p><p id="chrome-logical-assignment-note">  <sup>[27]</sup> Available behind the <a href="https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070"><code>--js-flags=&quot;--logical-assignment&quot;</code></a> flag in V8.</p><p id="graalvm-js-ecmascript-version-staging-note">  <sup>[28]</sup> Requires the <code>--js.ecmascript-version=staging</code> flag.</p><p id="closure-at-method-note">  <sup>[29]</sup> Requires native support for <code>Math.trunc</code></p><p id="graalvm-js-ecmascript-version-2022-note">  <sup>[30]</sup> Requires the <code>--js.ecmascript-version=2022</code> flag.</p><p id="safari-at-method-note">  <sup>[31]</sup> The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.</p><p id="closure-typed-array-note">  <sup>[32]</sup> Requires native support for typed arrays</p><p id="ch-static-init-blocks-note">  <sup>[33]</sup> The feature has to be enabled via <code>harmony_class_static_blocks</code> flag.</p><p id="chrome-harmony-note">  <sup>[34]</sup> The feature has to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-arraybuffer-note">  <sup>[35]</sup> The feature has to be enabled via <code>javascript.options.experimental.arraybuffer_transfer</code> setting under <code>about:config</code>.</p><p id="ff-new-set-methods-note">  <sup>[36]</sup> The feature has to be enabled via <code>javascript.options.experimental.new_set_methods</code> setting under <code>about:config</code>.</p><p id="graalvm-experimental-options-js-new-set-methods-note">  <sup>[37]</sup> Requires the <code>--experimental-options --js.new-set-methods</code> flags.</p><p id="ff-regexp-modidiers-note">  <sup>[38]</sup> The feature has to be enabled via <code>javascript.options.experimental.regexp_modifiers</code> setting under <code>about:config</code>.</p><p id="ff-iterator-helpers-note">  <sup>[39]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.iterator_helpers</code> setting under <code>about:config</code>.</p><p id="firefox-nightly-note">  <sup>[40]</sup> The feature is available only in Firefox Nightly builds.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-core-js-note">  <sup>[5]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-core-js-note">  <sup>[6]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="new-gen-fn-note">  <sup>[7]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#67-new--generatorfunction">TC39 meeting notes from July 28, 2015.</a></p><p id="gen-throw-note">  <sup>[8]</sup> <a href="https://github.com/tc39/ecma262/issues/293">&apos;Semantics of yield* in throw case&apos; GitHub issue in ECMA-262 repo.</a></p><p id="typescript-downlevel-iteration-note">  <sup>[9]</sup> Requires the <code>downlevelIteration</code> compile option.</p><p id="strict-fn-non-strict-params-note">  <sup>[10]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-29.md#611-the-scope-of-use-strict-with-respect-to-destructuring-in-parameter-lists">TC39 meeting notes from July 29, 2015.</a></p><p id="nested-rest-destruct-decl-note">  <sup>[11]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="nested-rest-destruct-params-note">  <sup>[12]</sup> <a href="https://github.com/rwaldron/tc39-notes/blob/master/es7/2015-07/july-28.md#66-bindingrestelement-should-allow-a-bindingpattern-ala-assignmentrestelement">TC39 meeting notes from July 28, 2015.</a></p><p id="proxy-enumerate-removed-note">  <sup>[13]</sup> <a href="https://github.com/tc39/ecma262/pull/367">&apos;Normative: Remove [[Enumerate]] and associated reflective capabilities&apos; GitHub Pull Request in ECMA-262 repo.</a></p><p id="babel-regenerator-note">  <sup>[14]</sup> This feature requires native generators or <code>regenerator-runtime</code>, it&apos;s a part of <code>babel-polyfill</code> or <code>babel-runtime</code>.</p><p id="fx-shared-memory-cors-isolation-note">  <sup>[15]</sup> The feature is available with <a href="https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/">properly set CORS isolation headers</a> or via enabling <code>dom.postMessage.sharedArrayBuffer.bypassCOOP_COEP.insecure.enabled</code> setting under <code>about:config</code></p><p id="edg-shared-memory-spectre-note">  <sup>[16]</sup> The feature was temporarily disabled to mitigate the Meltdown and Spectre CPU bugs.</p><p id="sf-shared-memory-spectre-note">  <sup>[17]</sup> The feature was <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">temporarily disabled</a> to mitigate the Meltdown and Spectre CPU bugs.</p><p id="chrome-experimental-note">  <sup>[18]</sup> The feature has to be enabled via &quot;Experimental Javascript features&quot; setting under <code>about:flags</code></p><p id="closure-object-assign-note">  <sup>[19]</sup> Requires native support for <code>Object.assign</code></p><p id="typescript-es6-note">  <sup>[20]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="flatten-compat-issue-note">  <sup>[21]</sup> Name of <code>Array.prototype.flatten()</code> changed to <code>Array.prototype.flat()</code> due to <a href="https://github.com/tc39/proposal-flatMap/pull/56">web compatibility issues.</a></p><p id="graalvm-js-ecmascript-version-2020-note">  <sup>[22]</sup> Requires the <code>--js.ecmascript-version=2020</code> flag.</p><p id="chrome-string-prototype-replace-all-note">  <sup>[23]</sup> The feature is considered unstable, but can be enabled via <code>--js-flags=&quot;--harmony-string-replaceall&quot;</code> flag</p><p id="graalvm-js-ecmascript-version-2021-note">  <sup>[24]</sup> Requires the <code>--js.ecmascript-version=2021</code> flag.</p><p id="chrome-promise-any-note">  <sup>[25]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=9808"><code>--js-flags=&quot;--harmony-promise-any&quot;</code></a> flag in V8.</p><p id="chrome-weakrefs-note">  <sup>[26]</sup> Available behind the <a href="https://bugs.chromium.org/p/v8/issues/detail?id=8179"><code>--js-flags=&quot;--harmony-weak-refs --expose-gc&quot;</code></a> flag in V8.</p><p id="chrome-logical-assignment-note">  <sup>[27]</sup> Available behind the <a href="https://github.com/v8/v8/commit/b151d8db22be308738192497a68c2c7c0d8d4070"><code>--js-flags=&quot;--logical-assignment&quot;</code></a> flag in V8.</p><p id="graalvm-js-ecmascript-version-staging-note">  <sup>[28]</sup> Requires the <code>--js.ecmascript-version=staging</code> flag.</p><p id="closure-at-method-note">  <sup>[29]</sup> Requires native support for <code>Math.trunc</code></p><p id="graalvm-js-ecmascript-version-2022-note">  <sup>[30]</sup> Requires the <code>--js.ecmascript-version=2022</code> flag.</p><p id="safari-at-method-note">  <sup>[31]</sup> The feature has to be enabled via <code>jscOptions=--useAtMethod=true</code> flag.</p><p id="closure-typed-array-note">  <sup>[32]</sup> Requires native support for typed arrays</p><p id="ch-static-init-blocks-note">  <sup>[33]</sup> The feature has to be enabled via <code>harmony_class_static_blocks</code> flag.</p><p id="chrome-harmony-note">  <sup>[34]</sup> The feature has to be enabled via <code>--js-flags=&quot;--harmony&quot;</code> flag</p><p id="firefox-arraybuffer-note">  <sup>[35]</sup> The feature has to be enabled via <code>javascript.options.experimental.arraybuffer_transfer</code> setting under <code>about:config</code>.</p><p id="ff-array-grouping-note">  <sup>[36]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.array_grouping</code> setting under <code>about:config</code>.</p><p id="ff-new-set-methods-note">  <sup>[37]</sup> The feature has to be enabled via <code>javascript.options.experimental.new_set_methods</code> setting under <code>about:config</code>.</p><p id="graalvm-experimental-options-js-new-set-methods-note">  <sup>[38]</sup> Requires the <code>--experimental-options --js.new-set-methods</code> flags.</p><p id="ff-regexp-modidiers-note">  <sup>[39]</sup> The feature has to be enabled via <code>javascript.options.experimental.regexp_modifiers</code> setting under <code>about:config</code>.</p><p id="ff-iterator-helpers-note">  <sup>[40]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.iterator_helpers</code> setting under <code>about:config</code>.</p><p id="firefox-nightly-note">  <sup>[41]</sup> The feature is available only in Firefox Nightly builds.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

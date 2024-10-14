@@ -7444,6 +7444,61 @@ exports.tests = [
     }
   },
   {
+    name: 'Array Grouping',
+    category: '2024 features',
+    significance: 'small',
+    spec: 'https://github.com/tc39/proposal-array-grouping',
+    subtests: [
+      {
+        name: 'Object.groupBy()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy',
+        exec: function () {/*
+          const array = [1, 2, 3, 4];
+          const obj = Object.groupBy(array, (num, index) => {
+            return num % 2 === 0 ? 'even': 'odd';
+          });
+          return !('toString' in obj) && obj.even[0] == 2 && obj.odd[0] == 1;
+        */},
+        res: {
+          ie11: false,
+          chrome117: true,
+          firefox97: false,
+          firefox98: {
+            val: 'flagged',
+            note_id: 'ff-array-grouping',
+            note_html: 'The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.array_grouping</code> setting under <code>about:config</code>.'
+          },
+          firefox119: true,
+          safari17_4: true,
+        }
+      },
+      {
+        name: 'Map.groupBy()',
+        mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy',
+        exec: function () {/*
+          const array = [1, 2, 3, 4];
+          const odd  = { odd: true };
+          const even = { even: true };
+          const map = Map.groupBy(array, (num, index) => {
+            return num % 2 === 0 ? even: odd;
+          });
+          return map instanceof Map && map.get(even)[0] === 2 && map.get(odd)[0] === 1;
+        */},
+        res: {
+          ie11: false,
+          chrome117: true,
+          firefox97: false,
+          firefox98: {
+            val: 'flagged',
+            note_id: 'ff-array-grouping',
+          },
+          firefox119: true,
+          safari17_4: true,
+        }
+      },
+    ]
+  },
+  {
     name: 'Duplicate named capturing groups',
     category: '2025 features',
     significance: 'tiny',
