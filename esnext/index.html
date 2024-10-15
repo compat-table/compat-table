@@ -1708,6 +1708,165 @@ return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&a
 <td class="unknown" data-browser="opera_mobile77">?</td>
 <td class="unknown" data-browser="reactnative0_70_3">?</td>
 </tr>
+<tr significance="0.5"><td id="test-RegExp_Escaping"><span><a class="anchor" href="#test-RegExp_Escaping">&#xA7;</a><a href="https://github.com/tc39/proposal-regex-escaping">RegExp Escaping</a></span><script data-source="
+return RegExp.escape(&quot;The Quick Brown Fox&quot;) === &quot;The\\ Quick\\ Brown\\ Fox&quot; &amp;&amp;
+  RegExp.escape(&quot;(*.*)&quot;) === &quot;\\(\\*\\.\\*\\)&quot; &amp;&amp;
+  RegExp.escape(&quot;&#xFF61;^&#xFF65;&#xFF6A;&#xFF65;^&#xFF61;&quot;) === &quot;&#xFF61;\\^&#xFF65;&#xFF6A;&#xFF65;\\^&#xFF61;&quot; &amp;&amp;
+  RegExp.escape(&quot;\\d \\D (?:)&quot;) === &quot;\\\\d \\\\D \\(\\?\\:\\)&quot;;
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nreturn RegExp.escape(\"The Quick Brown Fox\") === \"The\\\\ Quick\\\\ Brown\\\\ Fox\" &&\n  RegExp.escape(\"(*.*)\") === \"\\\\(\\\\*\\\\.\\\\*\\\\)\" &&\n  RegExp.escape(\"｡^･ｪ･^｡\") === \"｡\\\\^･ｪ･\\\\^｡\" &&\n  RegExp.escape(\"\\\\d \\\\D (?:)\") === \"\\\\\\\\d \\\\\\\\D \\\\(\\\\?\\\\:\\\\)\";\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nreturn RegExp.escape(\"The Quick Brown Fox\") === \"The\\\\ Quick\\\\ Brown\\\\ Fox\" &&\n  RegExp.escape(\"(*.*)\") === \"\\\\(\\\\*\\\\.\\\\*\\\\)\" &&\n  RegExp.escape(\"｡^･ｪ･^｡\") === \"｡\\\\^･ｪ･\\\\^｡\" &&\n  RegExp.escape(\"\\\\d \\\\D (?:)\") === \"\\\\\\\\d \\\\\\\\D \\\\(\\\\?\\\\:\\\\)\";\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown obsolete" data-browser="tr">?</td>
+<td class="unknown obsolete" data-browser="babel6corejs2">?</td>
+<td class="unknown obsolete" data-browser="babel7corejs2">?</td>
+<td class="unknown" data-browser="babel7corejs3">?</td>
+<td class="unknown obsolete" data-browser="closure20200927">?</td>
+<td class="unknown obsolete" data-browser="closure20210808">?</td>
+<td class="unknown obsolete" data-browser="closure20210906">?</td>
+<td class="unknown obsolete" data-browser="closure20211006">?</td>
+<td class="unknown obsolete" data-browser="closure20211107">?</td>
+<td class="unknown obsolete" data-browser="closure20220502">?</td>
+<td class="unknown obsolete" data-browser="closure20220719">?</td>
+<td class="unknown" data-browser="closure20230228">?</td>
+<td class="unknown obsolete" data-browser="typescript2_9corejs2">?</td>
+<td class="unknown obsolete" data-browser="typescript3_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript4_9corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_3corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_4corejs3">?</td>
+<td class="unknown obsolete" data-browser="typescript5_5corejs3">?</td>
+<td class="unknown" data-browser="typescript5_6corejs3">?</td>
+<td class="no" data-browser="firefox115">No</td>
+<td class="no obsolete" data-browser="firefox118">No</td>
+<td class="no obsolete" data-browser="firefox119">No</td>
+<td class="no obsolete" data-browser="firefox120">No</td>
+<td class="no obsolete" data-browser="firefox121">No</td>
+<td class="no obsolete" data-browser="firefox122">No</td>
+<td class="no obsolete" data-browser="firefox123">No</td>
+<td class="no obsolete" data-browser="firefox124">No</td>
+<td class="no obsolete" data-browser="firefox125">No</td>
+<td class="no obsolete" data-browser="firefox126">No</td>
+<td class="no obsolete" data-browser="firefox127">No</td>
+<td class="no" data-browser="firefox128">No</td>
+<td class="no obsolete" data-browser="firefox129">No</td>
+<td class="no obsolete" data-browser="firefox130">No</td>
+<td class="no" data-browser="firefox131">No</td>
+<td class="no unstable" data-browser="firefox132">No</td>
+<td class="no unstable" data-browser="firefox133">No</td>
+<td class="unknown obsolete" data-browser="opera12_10">?</td>
+<td class="unknown obsolete" data-browser="chrome119">?</td>
+<td class="unknown obsolete" data-browser="chrome120">?</td>
+<td class="unknown obsolete" data-browser="chrome121">?</td>
+<td class="unknown obsolete" data-browser="chrome122">?</td>
+<td class="unknown obsolete" data-browser="chrome123">?</td>
+<td class="unknown obsolete" data-browser="chrome124">?</td>
+<td class="unknown obsolete" data-browser="chrome125">?</td>
+<td class="unknown obsolete" data-browser="chrome126">?</td>
+<td class="unknown obsolete" data-browser="chrome127">?</td>
+<td class="unknown obsolete" data-browser="chrome128">?</td>
+<td class="no" data-browser="chrome129">No</td>
+<td class="no unstable" data-browser="chrome130">No</td>
+<td class="no unstable" data-browser="chrome131">No</td>
+<td class="unknown obsolete" data-browser="edge18">?</td>
+<td class="unknown obsolete" data-browser="edge118">?</td>
+<td class="unknown obsolete" data-browser="edge119">?</td>
+<td class="unknown obsolete" data-browser="edge120">?</td>
+<td class="unknown obsolete" data-browser="edge121">?</td>
+<td class="unknown obsolete" data-browser="edge122">?</td>
+<td class="unknown obsolete" data-browser="edge123">?</td>
+<td class="unknown obsolete" data-browser="edge124">?</td>
+<td class="unknown obsolete" data-browser="edge125">?</td>
+<td class="unknown obsolete" data-browser="edge126">?</td>
+<td class="unknown obsolete" data-browser="edge127">?</td>
+<td class="unknown obsolete" data-browser="edge128">?</td>
+<td class="no" data-browser="edge129">No</td>
+<td class="no unstable" data-browser="edge130">No</td>
+<td class="unknown obsolete" data-browser="safari15_6">?</td>
+<td class="unknown obsolete" data-browser="safari16_6">?</td>
+<td class="unknown obsolete" data-browser="safari17">?</td>
+<td class="unknown obsolete" data-browser="safari17_1">?</td>
+<td class="unknown obsolete" data-browser="safari17_2">?</td>
+<td class="unknown obsolete" data-browser="safari17_3">?</td>
+<td class="unknown obsolete" data-browser="safari17_4">?</td>
+<td class="unknown obsolete" data-browser="safari17_5">?</td>
+<td class="unknown" data-browser="safari17_6">?</td>
+<td class="unknown" data-browser="safari18">?</td>
+<td class="unknown unstable" data-browser="safaritp">?</td>
+<td class="unknown unstable" data-browser="webkit">?</td>
+<td class="unknown obsolete" data-browser="opera102">?</td>
+<td class="unknown obsolete" data-browser="opera103">?</td>
+<td class="unknown obsolete" data-browser="opera104">?</td>
+<td class="unknown obsolete" data-browser="opera105">?</td>
+<td class="unknown obsolete" data-browser="opera106">?</td>
+<td class="unknown obsolete" data-browser="opera107">?</td>
+<td class="unknown obsolete" data-browser="opera108">?</td>
+<td class="unknown obsolete" data-browser="opera109">?</td>
+<td class="unknown obsolete" data-browser="opera110">?</td>
+<td class="unknown" data-browser="opera111">?</td>
+<td class="unknown unstable" data-browser="opera112">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_13">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_14">?</td>
+<td class="unknown obsolete" data-browser="rhino1_7_15">?</td>
+<td class="unknown obsolete" data-browser="phantom2_1">?</td>
+<td class="unknown obsolete" data-browser="node0_4">?</td>
+<td class="unknown obsolete" data-browser="node0_6">?</td>
+<td class="unknown obsolete" data-browser="node0_8">?</td>
+<td class="unknown obsolete" data-browser="node0_10">?</td>
+<td class="unknown obsolete" data-browser="node0_12">?</td>
+<td class="unknown obsolete" data-browser="node14_6">?</td>
+<td class="unknown obsolete" data-browser="node16_0">?</td>
+<td class="unknown obsolete" data-browser="node16_9">?</td>
+<td class="unknown" data-browser="node16_11">?</td>
+<td class="unknown obsolete" data-browser="node17_0">?</td>
+<td class="unknown obsolete" data-browser="node17_2">?</td>
+<td class="unknown obsolete" data-browser="node18_0">?</td>
+<td class="unknown" data-browser="node18_3">?</td>
+<td class="unknown obsolete" data-browser="node19_0">?</td>
+<td class="unknown obsolete" data-browser="node19_2">?</td>
+<td class="unknown" data-browser="node20_0">?</td>
+<td class="unknown obsolete" data-browser="node21_0">?</td>
+<td class="unknown" data-browser="node22_0">?</td>
+<td class="no" data-browser="node23_0">No</td>
+<td class="unknown obsolete" data-browser="duktape2_6">?</td>
+<td class="unknown" data-browser="duktape2_7">?</td>
+<td class="unknown obsolete" data-browser="graalvm19">?</td>
+<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
+<td class="unknown obsolete" data-browser="graalvm20">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm21">?</td>
+<td class="unknown" data-browser="graalvm21_3_3">?</td>
+<td class="unknown" data-browser="graalvm22_2">?</td>
+<td class="unknown" data-browser="hermes0_12_0">?</td>
+<td class="unknown obsolete" data-browser="deno1_33">?</td>
+<td class="unknown obsolete" data-browser="deno1_34">?</td>
+<td class="unknown obsolete" data-browser="deno1_35">?</td>
+<td class="unknown" data-browser="deno1_36">?</td>
+<td class="unknown obsolete" data-browser="android4_4">?</td>
+<td class="unknown obsolete" data-browser="android4_4_3">?</td>
+<td class="unknown obsolete" data-browser="ios12_2">?</td>
+<td class="unknown obsolete" data-browser="ios13_4">?</td>
+<td class="unknown obsolete" data-browser="ios14_5">?</td>
+<td class="unknown obsolete" data-browser="ios16_6">?</td>
+<td class="unknown obsolete" data-browser="ios17">?</td>
+<td class="unknown obsolete" data-browser="ios17_1">?</td>
+<td class="unknown obsolete" data-browser="ios17_2">?</td>
+<td class="unknown obsolete" data-browser="ios17_3">?</td>
+<td class="unknown obsolete" data-browser="ios17_4">?</td>
+<td class="unknown obsolete" data-browser="ios17_5">?</td>
+<td class="unknown obsolete" data-browser="ios17_6">?</td>
+<td class="unknown" data-browser="ios18">?</td>
+<td class="unknown obsolete" data-browser="samsung19">?</td>
+<td class="unknown obsolete" data-browser="samsung20">?</td>
+<td class="unknown obsolete" data-browser="samsung21">?</td>
+<td class="unknown" data-browser="samsung22">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile72">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile73">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile74">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile75">?</td>
+<td class="unknown obsolete" data-browser="opera_mobile76">?</td>
+<td class="unknown" data-browser="opera_mobile77">?</td>
+<td class="unknown" data-browser="reactnative0_70_3">?</td>
+</tr>
 <tr class="category"><td colspan="154"><span>Stage 2.7</span></td>
 </tr>
 <tr significance="1"><td id="test-ShadowRealm"><span><a class="anchor" href="#test-ShadowRealm">&#xA7;</a><a href="https://github.com/tc39/proposal-shadowrealm">ShadowRealm</a></span><script data-source="
@@ -1715,7 +1874,7 @@ return typeof ShadowRealm === &quot;function&quot;
   &amp;&amp; [&quot;evaluate&quot;, &quot;importValue&quot;].every(function(key){
     return key in ShadowRealm.prototype;
   });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1879,7 +2038,7 @@ function* generator() {
 var iter = generator();
 iter.next(&apos;tromple&apos;);
 return result === &apos;tromple&apos;;
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nvar result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="yes obsolete" data-browser="babel6corejs2">Yes</td>
@@ -2194,7 +2353,7 @@ try {
 } catch (e) {
   return a + e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nvar a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2360,7 +2519,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nfunction fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2521,7 +2680,7 @@ try {
 } catch (e) {
   return e === 42;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\nvar fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2682,7 +2841,7 @@ try {
 } catch (e) {
   return e === 21;
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\ntrue ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2994,7 +3153,7 @@ const map = new Map([[&apos;a&apos;, 1]]);
 if (map.upsert(&apos;a&apos;, it =&gt; 2, () =&gt; 3) !== 2) return false;
 if (map.upsert(&apos;b&apos;, it =&gt; 2, () =&gt; 3) !== 3) return false;
 return Array.from(map).join() === &apos;a,2,b,3&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -3154,7 +3313,7 @@ const map = new WeakMap([[a, 1]]);
 if (map.upsert(a, it =&gt; 2, () =&gt; 3) !== 2) return false;
 if (map.upsert(b, it =&gt; 2, () =&gt; 3) !== 3) return false;
 return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -3311,7 +3470,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <tr significance="0.25"><td id="test-Array.isTemplateObject"><span><a class="anchor" href="#test-Array.isTemplateObject">&#xA7;</a><a href="https://github.com/tc39/proposal-array-is-template-object">Array.isTemplateObject</a></span><script data-source="
 return !Array.isTemplateObject([])
   &amp;&amp; Array.isTemplateObject((it =&gt; it)`a${1}c`);
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn !Array.isTemplateObject([])\n  && Array.isTemplateObject((it => it)`a${1}c`);\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -3620,7 +3779,7 @@ return !Array.isTemplateObject([])
 </tr>
 <tr class="subtest" data-parent="Async_Iterator_Helpers" id="test-Async_Iterator_Helpers_instanceof_AsyncIterator"><td><span><a class="anchor" href="#test-Async_Iterator_Helpers_instanceof_AsyncIterator">&#xA7;</a>instanceof AsyncIterator</span><script data-source="
 return (async function*() {})() instanceof AsyncIterator;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nreturn (async function*() {})() instanceof AsyncIterator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function*() {})() instanceof AsyncIterator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nreturn (async function*() {})() instanceof AsyncIterator;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nreturn (async function*() {})() instanceof AsyncIterator;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -3778,7 +3937,7 @@ return (async function*() {})() instanceof AsyncIterator;
 class Class extends AsyncIterator { }
 const instance = new Class();
 return instance[Symbol.asyncIterator]() === instance;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nclass Class extends AsyncIterator { }\nconst instance = new Class();\nreturn instance[Symbol.asyncIterator]() === instance;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nclass Class extends AsyncIterator { }\nconst instance = new Class();\nreturn instance[Symbol.asyncIterator]() === instance;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nclass Class extends AsyncIterator { }\nconst instance = new Class();\nreturn instance[Symbol.asyncIterator]() === instance;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nclass Class extends AsyncIterator { }\nconst instance = new Class();\nreturn instance[Symbol.asyncIterator]() === instance;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -3946,7 +4105,7 @@ if (!(&apos;next&apos; in iterator) || !(iterator instanceof AsyncIterator)) ret
 toArray(iterator).then(it =&gt; {
   if (it.join() === &apos;1,2,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from(async function*() { yield * [1, 2, 3] }());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4114,7 +4273,7 @@ if (!(&apos;next&apos; in iterator) || !(iterator instanceof AsyncIterator)) ret
 toArray(iterator).then(it =&gt; {
   if (it.join() === &apos;1,2,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("24");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3]);\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("24");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3]);\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3]);\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3]);\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4282,7 +4441,7 @@ if (!(&apos;next&apos; in iterator) || !(iterator instanceof AsyncIterator)) ret
 toArray(iterator).then(it =&gt; {
   if (it.join() === &apos;1,2,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("25");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3].values());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("25");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3].values());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3].values());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\nconst iterator = AsyncIterator.from([1, 2, 3].values());\n\nif (!('next' in iterator) || !(iterator instanceof AsyncIterator)) return false;\n\ntoArray(iterator).then(it => {\n  if (it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4446,7 +4605,7 @@ async function toArray(iterator) {
 toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
   if (it.join() === &apos;2,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("26");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {\n  if (it.join() === '2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("26");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {\n  if (it.join() === '2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {\n  if (it.join() === '2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {\n  if (it.join() === '2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4604,7 +4763,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 (async function*() { yield * [1, 2, 3] })().every(it =&gt; typeof it === &apos;number&apos;).then(it =&gt; {
   if (it === true) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("27");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().every(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("27");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().every(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().every(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().every(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4768,7 +4927,7 @@ async function toArray(iterator) {
 toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(it =&gt; {
   if (it.join() === &apos;1,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("28");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {\n  if (it.join() === '1,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("28");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {\n  if (it.join() === '1,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {\n  if (it.join() === '1,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().filter(it => it % 2)).then(it => {\n  if (it.join() === '1,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -4926,7 +5085,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 (async function*() { yield * [1, 2, 3] })().find(it =&gt; it % 2).then(it =&gt; {
   if (it === 1) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("29");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().find(it => it % 2).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("29");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().find(it => it % 2).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().find(it => it % 2).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().find(it => it % 2).then(it => {\n  if (it === 1) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5090,7 +5249,7 @@ async function toArray(iterator) {
 toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).then(it =&gt; {
   if (it.join() === &apos;1,0,2,0,3,0&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {\n  if (it.join() === '1,0,2,0,3,0') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {\n  if (it.join() === '1,0,2,0,3,0') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {\n  if (it.join() === '1,0,2,0,3,0') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().flatMap(it => [it, 0])).then(it => {\n  if (it.join() === '1,0,2,0,3,0') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5249,7 +5408,7 @@ let result = &apos;&apos;;
 (async function*() { yield * [1, 2, 3] })().forEach(it =&gt; result += it).then(() =&gt; {
   if (result === &apos;123&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("31");try{return Function("asyncTestPassed","\nlet result = '';\n(async function*() { yield * [1, 2, 3] })().forEach(it => result += it).then(() => {\n  if (result === '123') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("31");return Function("asyncTestPassed","'use strict';"+"\nlet result = '';\n(async function*() { yield * [1, 2, 3] })().forEach(it => result += it).then(() => {\n  if (result === '123') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nlet result = '';\n(async function*() { yield * [1, 2, 3] })().forEach(it => result += it).then(() => {\n  if (result === '123') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nlet result = '';\n(async function*() { yield * [1, 2, 3] })().forEach(it => result += it).then(() => {\n  if (result === '123') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5413,7 +5572,7 @@ async function toArray(iterator) {
 toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it =&gt; {
   if (it.join() === &apos;1,4,9&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("32");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {\n  if (it.join() === '1,4,9') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("32");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {\n  if (it.join() === '1,4,9') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {\n  if (it.join() === '1,4,9') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().map(it => it * it)).then(it => {\n  if (it.join() === '1,4,9') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5571,7 +5730,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 (async function*() { yield * [1, 2, 3] })().reduce((a, b) =&gt; a + b).then(it =&gt; {
   if (it === 6) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("33");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().reduce((a, b) => a + b).then(it => {\n  if (it === 6) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("33");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().reduce((a, b) => a + b).then(it => {\n  if (it === 6) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().reduce((a, b) => a + b).then(it => {\n  if (it === 6) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().reduce((a, b) => a + b).then(it => {\n  if (it === 6) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5729,7 +5888,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 (async function*() { yield * [1, 2, 3] })().some(it =&gt; typeof it === &apos;number&apos;).then(it =&gt; {
   if (it === true) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().some(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().some(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().some(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().some(it => typeof it === 'number').then(it => {\n  if (it === true) asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -5893,7 +6052,7 @@ async function toArray(iterator) {
 toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
   if (it.join() === &apos;1,2&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("35");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {\n  if (it.join() === '1,2') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("35");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {\n  if (it.join() === '1,2') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {\n  if (it.join() === '1,2') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nasync function toArray(iterator) {\n  const result = [];\n  for await (const it of iterator) result.push(it);\n  return result;\n}\n\ntoArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it => {\n  if (it.join() === '1,2') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -6051,7 +6210,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 (async function*() { yield * [1, 2, 3] })().toArray().then(it =&gt; {
   if (Array.isArray(it) &amp;&amp; it.join() === &apos;1,2,3&apos;) asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().toArray().then(it => {\n  if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().toArray().then(it => {\n  if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\n(async function*() { yield * [1, 2, 3] })().toArray().then(it => {\n  if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\n(async function*() { yield * [1, 2, 3] })().toArray().then(it => {\n  if (Array.isArray(it) && it.join() === '1,2,3') asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -6207,7 +6366,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 </tr>
 <tr class="subtest" data-parent="Async_Iterator_Helpers" id="test-Async_Iterator_Helpers_AsyncIterator.prototype[@@toStringTag]"><td><span><a class="anchor" href="#test-Async_Iterator_Helpers_AsyncIterator.prototype[@@toStringTag]">&#xA7;</a>AsyncIterator.prototype[@@toStringTag]</span><script data-source="
 return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("37");try{return Function("asyncTestPassed","\nreturn AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("37");return Function("asyncTestPassed","'use strict';"+"\nreturn AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("38");try{return Function("asyncTestPassed","\nreturn AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("38");return Function("asyncTestPassed","'use strict';"+"\nreturn AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>

@@ -1017,7 +1017,23 @@ exports.tests = [
       }
     },
   ]
-}
+},
+{
+  name: 'RegExp Escaping',
+  category: STAGE3,
+  significance: 'medium',
+  spec: 'https://github.com/tc39/proposal-regex-escaping',
+  exec: function () {/*
+    return RegExp.escape("The Quick Brown Fox") === "The\\ Quick\\ Brown\\ Fox" &&
+      RegExp.escape("(*.*)") === "\\(\\*\\.\\*\\)" &&
+      RegExp.escape("｡^･ｪ･^｡") === "｡\\^･ｪ･\\^｡" &&
+      RegExp.escape("\\d \\D (?:)") === "\\\\d \\\\D \\(\\?\\:\\)";
+  */},
+  res: {
+    chrome129: false,
+    firefox115: false,
+  }
+},
 ];
 
 
