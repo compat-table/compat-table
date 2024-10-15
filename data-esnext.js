@@ -958,6 +958,97 @@ exports.tests = [
     firefox115: false,
   }
 },
+{
+  name: 'Uint8Array to/from base64 and hex',
+  category: STAGE3,
+  significance: 'small',
+  spec: 'https://github.com/tc39/proposal-arraybuffer-base64',
+  subtests: [
+    {
+      name: 'Uint8Array.toBase64()',
+      exec: function () {/*
+        const arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        return arr.toBase64() === "SGVsbG8gV29ybGQ=";
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+    {
+      name: 'Uint8Array.fromBase64()',
+      exec: function () {/*
+        const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        const arr2 = Uint8Array.fromBase64("SGVsbG8gV29ybGQ=");
+        return arr1.length === arr2.length &&
+               arr1.every((element, index) => element === arr2[index]);
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+    {
+      name: 'Uint8Array.setFromBase64()',
+      exec: function () {/*
+        const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        let arr2 = new Uint8Array(16);
+        let { read, written } = arr2.setFromBase64("SGVsbG8gV29ybGQ=");
+        return read == 16 && written == 11 &&
+               arr1.every((element, index) => element === arr2[index]);
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+    {
+      name: 'Uint8Array.toHex()',
+      exec: function () {/*
+        const arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        return arr.toHex() === "48656c6c6f20576f726c64";
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+    {
+      name: 'Uint8Array.fromHex()',
+      exec: function () {/*
+        const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        const arr2 = Uint8Array.fromHex("48656c6c6f20576f726c64");
+        return arr1.length === arr2.length &&
+               arr1.every((element, index) => element === arr2[index]);
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+        {
+      name: 'Uint8Array.setFromHex()',
+      exec: function () {/*
+        const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
+        let arr2 = new Uint8Array(16);
+        let { read, written } = arr2.setFromHex("48656c6c6f20576f726c64");
+        return read == 22 && written == 11 &&
+               arr1.every((element, index) => element === arr2[index]);
+      */},
+      res: {
+        ie11: false,
+        chrome129: false,
+        firefox115: false,
+      }
+    },
+
+  ]
+},
 ];
 
 
