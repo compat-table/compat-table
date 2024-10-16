@@ -7383,6 +7383,26 @@ exports.tests = [
     ]
   },
   {
+    name: 'Promise.withResolvers',
+    category: '2024 features',
+    significance: 'tiny',
+    spec: 'https://tc39.es/proposal-promise-with-resolvers/',
+    exec: function () {/*
+      var obj = Promise.withResolvers();
+      return obj instanceof Object
+        && obj.promise instanceof Promise
+        && typeof obj.resolve === 'function'
+        && typeof obj.reject === 'function';
+    */},
+    res: {
+      chrome119: true,
+      firefox121: true,
+      node22_0: true,
+      safari17_6: true,
+      safaritp: true,
+    }
+  },
+  {
     name: 'Duplicate named capturing groups',
     category: '2025 features',
     significance: 'tiny',
