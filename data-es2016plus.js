@@ -7842,27 +7842,6 @@ exports.tests = [
         }
       },
       {
-        name: 'Iterator.prototype.asIndexedPairs',
-        exec: function () {/*
-          return Array.from([1, 2, 3].values().asIndexedPairs()).join() === '0,1,1,2,2,3';
-        */},
-        res: {
-          babel6corejs2: false,
-          babel7corejs3: babel.corejs,
-          typescript1corejs2: typescript.fallthrough,
-          typescript3_2corejs3: typescript.corejs,
-          ie11: false,
-          firefox10: false,
-          firefox60: false,
-          chrome77: false,
-          duktape2_0: false,
-          graalvm21_3_3: false,
-          hermes0_7_0: false,
-          reactnative0_70_3: false,
-          rhino1_7_13: false
-        }
-      },
-      {
         name: 'Iterator.prototype.drop',
         mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop',
         exec: function () {/*

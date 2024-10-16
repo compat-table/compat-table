@@ -538,44 +538,6 @@ exports.tests = [
       }
     },
     {
-      name: 'AsyncIterator.prototype.asIndexedPairs',
-      exec: function () {/*
-        async function toArray(iterator) {
-          const result = [];
-          for await (const it of iterator) result.push(it);
-          return result;
-        }
-
-        toArray((async function*() { yield * [1, 2, 3] })().asIndexedPairs()).then(it => {
-          if (it.join() === '0,1,1,2,2,3') asyncTestPassed();
-        });
-      */},
-      res: {
-        babel6corejs2: false,
-        babel7corejs3: babel.corejs,
-        typescript1corejs2: typescript.fallthrough,
-        typescript3_2corejs3: typescript.corejs,
-        ie11: false,
-        firefox10: false,
-        firefox60: false,
-        firefox116: false,
-        firefox117: {
-          val: 'flagged',
-          note_id: 'ff-iterator-helpers'
-        },
-        firefox128: {
-          val: 'flagged',
-          note_id: 'ff-async-iterator-helpers'
-        },
-        chrome77: false,
-        duktape2_0: false,
-        graalvm21_3_3: false,
-        hermes0_7_0: false,
-        reactnative0_70_3: false,
-        rhino1_7_13: false
-      }
-    },
-    {
       name: 'AsyncIterator.prototype.drop',
       exec: function () {/*
         async function toArray(iterator) {
