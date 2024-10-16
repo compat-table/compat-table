@@ -239,6 +239,7 @@
 <th class="platform node20_0 engine" data-browser="node20_0"><a href="#node20_0" class="browser-name"><abbr title="Node.js">Node &gt;=20 &lt;21</abbr></a></th>
 <th class="platform node21_0 engine obsolete" data-browser="node21_0"><a href="#node21_0" class="browser-name"><abbr title="Node.js">Node &gt;=21 &lt;22</abbr></a></th>
 <th class="platform node22_0 engine" data-browser="node22_0"><a href="#node22_0" class="browser-name"><abbr title="Node.js">Node &gt;=22</abbr></a></th>
+<th class="platform node23_0 engine" data-browser="node23_0"><a href="#node23_0" class="browser-name"><abbr title="Node.js">Node &gt;=23</abbr></a></th>
 <th class="platform duktape2_6 engine obsolete" data-browser="duktape2_6"><a href="#duktape2_6" class="browser-name"><abbr title="Duktape 2.6">DUK 2.6</abbr></a></th>
 <th class="platform duktape2_7 engine" data-browser="duktape2_7"><a href="#duktape2_7" class="browser-name"><abbr title="Duktape 2.7">DUK 2.7</abbr></a></th>
 <th class="platform graalvm19 engine obsolete" data-browser="graalvm19"><a href="#graalvm19" class="browser-name"><abbr title="GraalVM JavaScript 19.3.1">GraalVM 19.3.1</abbr></a><a href="#graalvm-node-mode-note"><sup>[3]</sup></a></th>
@@ -285,7 +286,7 @@
       </thead>
       <tbody>
         <!-- TABLE BODY -->
-      <tr class="category"><td colspan="153"><span>Stage 3</span></td>
+      <tr class="category"><td colspan="154"><span>Stage 3</span></td>
 </tr>
 <tr class="supertest" significance="0.5"><td id="test-Class_and_Property_Decorators"><span><a class="anchor" href="#test-Class_and_Property_Decorators">&#xA7;</a><a href="https://github.com/tc39/proposal-decorators">Class and Property Decorators</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/1</td>
@@ -397,6 +398,7 @@
 <td class="tally" data-browser="node20_0" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="0">0/1</td>
 <td class="tally" data-browser="node22_0" data-tally="0">0/1</td>
+<td class="tally" data-browser="node23_0" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/1</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/1</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/1</td>
@@ -560,6 +562,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -712,6 +715,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
 <td class="tally" data-browser="node20_0" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="1">2/2</td>
 <td class="tally" data-browser="node22_0" data-tally="1">2/2</td>
+<td class="tally" data-browser="node23_0" data-tally="1">2/2</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="1">2/2</td>
@@ -873,6 +877,7 @@ return RegExp.lastMatch === 'x';
 <td class="yes" data-browser="node20_0">Yes</td>
 <td class="yes obsolete" data-browser="node21_0">Yes</td>
 <td class="yes" data-browser="node22_0">Yes</td>
+<td class="yes" data-browser="node23_0">Yes</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="yes obsolete" data-browser="graalvm19">Yes</td>
@@ -1036,6 +1041,7 @@ return true;
 <td class="yes" data-browser="node20_0">Yes</td>
 <td class="yes obsolete" data-browser="node21_0">Yes</td>
 <td class="yes" data-browser="node22_0">Yes</td>
+<td class="yes" data-browser="node23_0">Yes</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="yes obsolete" data-browser="graalvm19">Yes</td>
@@ -1188,6 +1194,7 @@ return true;
 <td class="tally" data-browser="node20_0" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="0">0/3</td>
 <td class="tally" data-browser="node22_0" data-tally="0" data-flagged-tally="1">0/3</td>
+<td class="tally" data-browser="node23_0" data-tally="1">3/3</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/3</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/3</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/3</td>
@@ -1344,6 +1351,7 @@ return regex.test(&quot;ab&quot;) &amp;&amp; regex.test(&quot;Ab&quot;) &amp;&am
 <td class="unknown" data-browser="node20_0">?</td>
 <td class="unknown obsolete" data-browser="node21_0">?</td>
 <td class="no flagged" data-browser="node22_0">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="node23_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape2_6">?</td>
 <td class="unknown" data-browser="duktape2_7">?</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -1500,6 +1508,7 @@ return regex.test(&quot;a&quot;) &amp;&amp; regex.test(&quot;b&quot;) &amp;&amp;
 <td class="unknown" data-browser="node20_0">?</td>
 <td class="unknown obsolete" data-browser="node21_0">?</td>
 <td class="no flagged" data-browser="node22_0">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="node23_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape2_6">?</td>
 <td class="unknown" data-browser="duktape2_7">?</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -1656,6 +1665,7 @@ return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&a
 <td class="unknown" data-browser="node20_0">?</td>
 <td class="unknown obsolete" data-browser="node21_0">?</td>
 <td class="no flagged" data-browser="node22_0">Flag<a href="#chrome-harmony-note"><sup>[7]</sup></a></td>
+<td class="yes" data-browser="node23_0">Yes</td>
 <td class="unknown obsolete" data-browser="duktape2_6">?</td>
 <td class="unknown" data-browser="duktape2_7">?</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -1698,7 +1708,7 @@ return regex.test(&quot;\na&quot;) &amp;&amp; regex.test(&quot;aa&quot;) &amp;&a
 <td class="unknown" data-browser="opera_mobile77">?</td>
 <td class="unknown" data-browser="reactnative0_70_3">?</td>
 </tr>
-<tr class="category"><td colspan="153"><span>Stage 2.7</span></td>
+<tr class="category"><td colspan="154"><span>Stage 2.7</span></td>
 </tr>
 <tr significance="1"><td id="test-ShadowRealm"><span><a class="anchor" href="#test-ShadowRealm">&#xA7;</a><a href="https://github.com/tc39/proposal-shadowrealm">ShadowRealm</a></span><script data-source="
 return typeof ShadowRealm === &quot;function&quot;
@@ -1816,6 +1826,7 @@ return typeof ShadowRealm === &quot;function&quot;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -1858,7 +1869,7 @@ return typeof ShadowRealm === &quot;function&quot;
 <td class="no" data-browser="opera_mobile77">No</td>
 <td class="no" data-browser="reactnative0_70_3">No</td>
 </tr>
-<tr class="category"><td colspan="153"><span>Stage 2</span></td>
+<tr class="category"><td colspan="154"><span>Stage 2</span></td>
 </tr>
 <tr significance="0.25"><td id="test-Generator_function.sent_Meta_Property"><span><a class="anchor" href="#test-Generator_function.sent_Meta_Property">&#xA7;</a><a href="https://github.com/tc39/proposal-function.sent">Generator function.sent Meta Property</a></span><script data-source="
 var result;
@@ -1979,6 +1990,7 @@ return result === &apos;tromple&apos;;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -2131,6 +2143,7 @@ return result === &apos;tromple&apos;;
 <td class="tally" data-browser="node20_0" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="0">0/4</td>
 <td class="tally" data-browser="node22_0" data-tally="0">0/4</td>
+<td class="tally" data-browser="node23_0" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/4</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/4</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/4</td>
@@ -2292,6 +2305,7 @@ try {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -2457,6 +2471,7 @@ try {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -2617,6 +2632,7 @@ try {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -2777,6 +2793,7 @@ try {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="no obsolete" data-browser="graalvm19">No</td>
@@ -2929,6 +2946,7 @@ try {
 <td class="tally" data-browser="node20_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="0">0/2</td>
 <td class="tally" data-browser="node22_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="node23_0" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/2</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/2</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/2</td>
@@ -3087,6 +3105,7 @@ return Array.from(map).join() === &apos;a,2,b,3&apos;;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -3246,6 +3265,7 @@ return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -3402,6 +3422,7 @@ return !Array.isTemplateObject([])
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -3554,6 +3575,7 @@ return !Array.isTemplateObject([])
 <td class="tally" data-browser="node20_0" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="node21_0" data-tally="0">0/17</td>
 <td class="tally" data-browser="node22_0" data-tally="0">0/17</td>
+<td class="tally" data-browser="node23_0" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/17</td>
 <td class="tally" data-browser="duktape2_7" data-tally="0">0/17</td>
 <td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/17</td>
@@ -3709,6 +3731,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -3866,6 +3889,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4033,6 +4057,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4200,6 +4225,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4367,6 +4393,7 @@ toArray(iterator).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4530,6 +4557,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4687,6 +4715,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -4850,6 +4879,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5007,6 +5037,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5170,6 +5201,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5328,6 +5360,7 @@ let result = &apos;&apos;;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5491,6 +5524,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5648,6 +5682,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5805,6 +5840,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -5968,6 +6004,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -6125,6 +6162,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
@@ -6280,6 +6318,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="no" data-browser="node20_0">No</td>
 <td class="no obsolete" data-browser="node21_0">No</td>
 <td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
 <td class="no obsolete" data-browser="duktape2_6">No</td>
 <td class="no" data-browser="duktape2_7">No</td>
 <td class="unknown obsolete" data-browser="graalvm19">?</td>
