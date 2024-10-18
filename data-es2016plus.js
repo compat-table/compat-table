@@ -2811,6 +2811,7 @@ exports.tests = [
       return false;
     */},
     res: {
+      ie11: false,
       edge16: false,
       chrome75: true,
       firefox57: true,
@@ -6897,6 +6898,7 @@ exports.tests = [
             return new RegExp('a', 'd') instanceof RegExp;
         */},
         res: {
+          ie11: false,
           firefox68: false,
           firefox78: false,
           firefox91: true,
@@ -6930,6 +6932,7 @@ exports.tests = [
           return true;
         */},
         res: {
+          ie11: false,
           node16_0: false,
           firefox68: false,
           firefox78: false,
@@ -7335,6 +7338,7 @@ exports.tests = [
         return /^\p{RGI_Emoji}$/v.test("🇨🇶");
       */},
         res: {
+          ie11: false,
           chrome128: false,
           node22_0: false,
           firefox115: false,
@@ -7437,6 +7441,7 @@ exports.tests = [
         && typeof obj.reject === 'function';
     */},
     res: {
+      ie11: false,
       chrome119: true,
       firefox115: false,
       firefox121: true,
@@ -8327,6 +8332,7 @@ exports.tests = [
       return p instanceof Promise && called && argsMatch;
     */},
     res: {
+      ie11: false,
       chrome128: true,
       firefox132: firefox.nightly,
       node23: true,
