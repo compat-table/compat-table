@@ -47288,16 +47288,28 @@ return Iterator.prototype[Symbol.toStringTag] === &apos;Iterator&apos;;
 <td class="no" data-browser="reactnative0_70_3">No</td>
 </tr>
 <tr significance="0.125"><td id="test-Promise.try"><span><a class="anchor" href="#test-Promise.try">&#xA7;</a>Promise.try</span><script data-source="
+if (!(&apos;try&apos; in Promise)) {
+  return false;
+}
 var called = false;
 var argsMatch = false;
 var p = Promise.try(function () { called = true; })
 var p2 = Promise.try(function () {
   &apos;use strict&apos;;
-  argsMatch = this === undefined &amp;&amp; arguments.length === 2 &amp;&amp; args[0] === p &amp;&amp; args[1] === 2;
-}, [p, 2]);
+  argsMatch = this === undefined &amp;&amp; arguments.length === 2 &amp;&amp; arguments[0] === p &amp;&amp; arguments[1] === 2;
+}, p, 2);
 
-return p instanceof Promise &amp;&amp; called &amp;&amp; argsMatch;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");try{return Function("asyncTestPassed","\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("287");return Function("asyncTestPassed","'use strict';"+"\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+if (!(p instanceof Promise) || !(p2 instanceof Promise)) {
+  return false;
+}
+
+p2.then(function () {
+  if (!called || !argsMatch) {
+    return;
+  }
+  asyncTestPassed();
+});
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");try{return Function("asyncTestPassed","\nif (!('try' in Promise)) {\n  return false;\n}\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && arguments[0] === p && arguments[1] === 2;\n}, p, 2);\n\nif (!(p instanceof Promise) || !(p2 instanceof Promise)) {\n  return false;\n}\n\np2.then(function () {\n  if (!called || !argsMatch) {\n    return;\n  }\n  asyncTestPassed();\n});\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("287");return Function("asyncTestPassed","'use strict';"+"\nif (!('try' in Promise)) {\n  return false;\n}\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && arguments[0] === p && arguments[1] === 2;\n}, p, 2);\n\nif (!(p instanceof Promise) || !(p2 instanceof Promise)) {\n  return false;\n}\n\np2.then(function () {\n  if (!called || !argsMatch) {\n    return;\n  }\n  asyncTestPassed();\n});\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
