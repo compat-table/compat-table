@@ -6912,31 +6912,17 @@ exports.tests = [
       {
         name: 'shows up in flags',
         exec: function () {/*
-          var expected = ['hasIndices'];
-          // Sorted alphabetically by shortname – "dgimsuy".
-          if ('global' in RegExp.prototype) expected.push('global');
-          if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
-          if ('multiline' in RegExp.prototype) expected.push('multiline');
-          if ('dotAll' in RegExp.prototype) expected.push('dotAll');
-          if ('unicode' in RegExp.prototype) expected.push('unicode');
-          if ('sticky' in RegExp.prototype) expected.push('sticky');
-          var actual = [];
-          var p = new Proxy({}, { get: function (o, k) { actual.push(k); return o[k]; }});
+          var flags = [];
+          var p = new Proxy({}, { get: function (o, k) { flags.push(k); return o[k]; }});
           Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
-          if (expected.length !== actual.length) return false;
-          for (var i = 0; i < expected.length; i++) {
-            if (expected[i] !== actual[i]) return false;
-          }
-          return true;
+          return flags.indexOf("hasIndices") !== -1;
         */},
         res: {
-          node16_0: false,
           firefox68: false,
           firefox78: false,
           firefox91: true,
-          firefox116: false,
           safari15: true,
-          chrome90: false,
+          chrome90: true,
           graalvm21_3_3: graalvm.esStagingFlag,
           graalvm22_2: true,
           hermes0_7_0: false,

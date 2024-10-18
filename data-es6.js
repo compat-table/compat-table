@@ -12219,7 +12219,7 @@ exports.tests = [
       exec: function() {/*
         // RegExp.prototype.flags -> Get -> [[Get]]
         var expected = [];
-        // Sorted alphabetically by shortname – "gimsuy".
+        // Sorted alphabetically by shortname – "gimsuvy".
         if ('hasIndices' in RegExp.prototype) expected.push('hasIndices');
         if ('global' in RegExp.prototype) expected.push('global');
         if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
@@ -12246,9 +12246,11 @@ exports.tests = [
         opera10_50: false,
         xs6: true,
         chrome49: true,
+        chrome112: { val: false, note_id: 'v8-regex-flags-order', note_html: 'The "unicodeSets" flag is added after the "sticky" flag, instead of before it, as the spec requires.' },
         ie11: false,
         edge14: edge.experimental,
         safari10: true,
+        node16_0: { val: false, note_id: 'v8-regex-flags-order' },
         duktape2_0: true,
         graalvm19: true,
         graalvm22_2: graalvm.es6flag,
