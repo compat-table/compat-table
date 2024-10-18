@@ -768,13 +768,15 @@ var a = 2; a **= 3; return a === 8;
 <td class="yes" data-browser="reactnative0_70_3">Yes</td>
 </tr>
 <tr class="subtest" data-parent="exponentiation_(**)_operator" id="test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens"><td><span><a class="anchor" href="#test-exponentiation_(**)_operator_early_syntax_error_for_unary_negation_without_parens">&#xA7;</a>early syntax error for unary negation without parens</span><script data-source="
-if (2 ** 3 !== 8) { return false; }
+if (2 ** 3 !== 8) {
+  return false;
+}
 try {
-  function (&quot;-5 ** 2&quot;)();
+  Function(&quot;-5 ** 2&quot;)();
 } catch (e) {
   return true;
 }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8) { return false; }\ntry {\n  function (\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8) { return false; }\ntry {\n  function (\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("3");try{return Function("asyncTestPassed","\nif (2 ** 3 !== 8) {\n  return false;\n}\ntry {\n  Function(\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("3");return Function("asyncTestPassed","'use strict';"+"\nif (2 ** 3 !== 8) {\n  return false;\n}\ntry {\n  Function(\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="yes obsolete" data-browser="babel6corejs2">Yes</td>
@@ -2126,11 +2128,11 @@ return iter[&apos;throw&apos;]().value === &apos;bar&apos;;
 <tr significance="0.125"><td id="test-strict_fn_w/_non-strict_non-simple_params_is_error"><span><a class="anchor" href="#test-strict_fn_w/_non-strict_non-simple_params_is_error">&#xA7;</a><a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-functiondeclarationinstantiation">strict fn w/ non-strict non-simple params is error</a><a href="#strict-fn-non-strict-params-note"><sup>[10]</sup></a></span><script data-source="
 function foo(...a) {}
 try {
-  function (&quot;function bar(...a) {&apos;use strict&apos;;}&quot;)();
+  Function(&quot;function bar(...a) {&apos;use strict&apos;;}&quot;)();
 } catch (e) {
 return true;
 }
-     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nfunction foo(...a) {}\ntry {\n  function (\"function bar(...a) {'use strict';}\")();\n} catch (e) {\nreturn true;\n}\n     ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a) {}\ntry {\n  function (\"function bar(...a) {'use strict';}\")();\n} catch (e) {\nreturn true;\n}\n     ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+     ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nfunction foo(...a) {}\ntry {\n  Function(\"function bar(...a) {'use strict';}\")();\n} catch (e) {\nreturn true;\n}\n     ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nfunction foo(...a) {}\ntry {\n  Function(\"function bar(...a) {'use strict';}\")();\n} catch (e) {\nreturn true;\n}\n     ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -5255,8 +5257,12 @@ p.catch (function (result) {
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_no_line_break_between_async_and_function"><td><span><a class="anchor" href="#test-async_functions_no_line_break_between_async_and_function">&#xA7;</a>no line break between async and function</span><script data-source="
 async function a() {}
-try { function (&quot;async\n function a() {await 0}&quot;)(); } catch (e) { return true; }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nasync function a() {}\ntry { function (\"async\\n function a() {await 0}\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nasync function a() {}\ntry { function (\"async\\n function a() {await 0}\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+try {
+  Function(&quot;async\n function a() {await 0}&quot;)();
+} catch (e) {
+  return true;
+}
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("30");try{return Function("asyncTestPassed","\nasync function a() {}\ntry {\n  Function(\"async\\n function a() {await 0}\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("30");return Function("asyncTestPassed","'use strict';"+"\nasync function a() {}\ntry {\n  Function(\"async\\n function a() {await 0}\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -5916,9 +5922,15 @@ return !a.hasOwnProperty(&quot;prototype&quot;);
 <td class="yes" data-browser="reactnative0_70_3">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_must_await_a_value"><td><span><a class="anchor" href="#test-async_functions_must_await_a_value">&#xA7;</a>must await a value</span><script data-source="
-async function a() { await Promise.resolve(); }
-try { function (&quot;(async function a() { await; }())&quot;)(); } catch (e) { return true; }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nasync function a() { await Promise.resolve(); }\ntry { function (\"(async function a() { await; }())\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nasync function a() { await Promise.resolve(); }\ntry { function (\"(async function a() { await; }())\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+async function a() {
+  await Promise.resolve();
+}
+try {
+  Function(&quot;(async function a() { await; }())&quot;)();
+} catch (e) {
+  return true;
+}
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("34");try{return Function("asyncTestPassed","\nasync function a() {\n  await Promise.resolve();\n}\ntry {\n  Function(\"(async function a() { await; }())\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("34");return Function("asyncTestPassed","'use strict';"+"\nasync function a() {\n  await Promise.resolve();\n}\ntry {\n  Function(\"(async function a() { await; }())\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -6245,9 +6257,15 @@ try { function (&quot;(async function a() { await; }())&quot;)(); } catch (e) { 
 <td class="yes" data-browser="reactnative0_70_3">Yes</td>
 </tr>
 <tr class="subtest" data-parent="async_functions" id="test-async_functions_cannot_await_in_parameters"><td><span><a class="anchor" href="#test-async_functions_cannot_await_in_parameters">&#xA7;</a>cannot await in parameters</span><script data-source="
-async function a() { await Promise.resolve(); }
-try { function (&quot;(async function a(b = await Promise.resolve()) {}())&quot;)(); } catch (e) { return true; }
-        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nasync function a() { await Promise.resolve(); }\ntry { function (\"(async function a(b = await Promise.resolve()) {}())\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nasync function a() { await Promise.resolve(); }\ntry { function (\"(async function a(b = await Promise.resolve()) {}())\")(); } catch (e) { return true; }\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+async function a() {
+  await Promise.resolve();
+}
+try {
+  Function(&quot;(async function a(b = await Promise.resolve()) {}())&quot;)();
+} catch (e) {
+  return true;
+}
+        ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("36");try{return Function("asyncTestPassed","\nasync function a() {\n  await Promise.resolve();\n}\ntry {\n  Function(\"(async function a(b = await Promise.resolve()) {}())\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("36");return Function("asyncTestPassed","'use strict';"+"\nasync function a() {\n  await Promise.resolve();\n}\ntry {\n  Function(\"(async function a(b = await Promise.resolve()) {}())\")();\n} catch (e) {\n  return true;\n}\n        ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -21870,10 +21888,10 @@ return it.throw().value;
 <td class="tally" data-browser="reactnative0_70_3" data-tally="0.14285714285714285" style="background-color:hsl(17,79%,50%)">1/7</td>
 </tr>
 <tr class="subtest" data-parent="Function.prototype.toString_revision" id="test-Function.prototype.toString_revision_functions_created_with_the_Function_constructor"><td><span><a class="anchor" href="#test-Function.prototype.toString_revision_functions_created_with_the_Function_constructor">&#xA7;</a>functions created with the Function constructor</span><script data-source="
-var fn = function (&apos;a&apos;, &apos; /\x2A a \x2A/ b, c /\x2A b \x2A/ //&apos;, &apos;/\x2A c \x2A/ ; /\x2A d \x2A/ //&apos;);
+var fn = Function(&apos;a&apos;, &apos; /\x2A a \x2A/ b, c /\x2A b \x2A/ //&apos;, &apos;/\x2A c \x2A/ ; /\x2A d \x2A/ //&apos;);
 var str = &apos;function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}&apos;;
 return fn + &apos;&apos; === str;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nvar fn = function ('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nvar fn = function ('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("131");try{return Function("asyncTestPassed","\nvar fn = Function('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("131");return Function("asyncTestPassed","'use strict';"+"\nvar fn = Function('a', ' /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //', '/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //');\nvar str = 'function anonymous(a, /\\x2A a \\x2A/ b, c /\\x2A b \\x2A/ //\\n) {\\n/\\x2A c \\x2A/ ; /\\x2A d \\x2A/ //\\n}';\nreturn fn + '' === str;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -25932,10 +25950,10 @@ Promise.allSettled([
 <td class="tally" data-browser="reactnative0_70_3" data-tally="1">2/2</td>
 </tr>
 <tr class="subtest" data-parent="globalThis" id="test-globalThis_globalThis_global_property_is_global_object"><td><span><a class="anchor" href="#test-globalThis_globalThis_global_property_is_global_object">&#xA7;</a>&quot;globalThis&quot; global property is global object</span><script data-source="
-var actualGlobal = function (&apos;return this&apos;)();
+var actualGlobal = Function(&apos;return this&apos;)();
 actualGlobal.__system_global_test__ = 42;
 return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp; globalThis === actualGlobal &amp;&amp; !globalThis.lacksGlobalThis &amp;&amp; globalThis.__system_global_test__ === 42;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("156");try{return Function("asyncTestPassed","\nvar actualGlobal = function ('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("156");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = function ('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("156");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("156");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
@@ -26095,14 +26113,14 @@ return typeof globalThis === &apos;object&apos; &amp;&amp; globalThis &amp;&amp;
 <td class="yes" data-browser="reactnative0_70_3">Yes</td>
 </tr>
 <tr class="subtest" data-parent="globalThis" id="test-globalThis_globalThis_global_property_has_correct_property_descriptor"><td><span><a class="anchor" href="#test-globalThis_globalThis_global_property_has_correct_property_descriptor">&#xA7;</a>&quot;globalThis&quot; global property has correct property descriptor</span><script data-source="
-var actualGlobal = function (&apos;return this&apos;)();
+var actualGlobal = Function(&apos;return this&apos;)();
 if (typeof globalThis !== &apos;object&apos;) { return false; }
 if (!(&apos;globalThis&apos; in actualGlobal)) { return false; }
 if (Object.prototype.propertyIsEnumerable.call(actualGlobal, &apos;globalThis&apos;)) { return false; }
 
 var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, &apos;globalThis&apos;);
 return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;&amp; descriptor.configurable &amp;&amp; descriptor.writable;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("157");try{return Function("asyncTestPassed","\nvar actualGlobal = function ('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("157");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = function ('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("157");try{return Function("asyncTestPassed","\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("157");return Function("asyncTestPassed","'use strict';"+"\nvar actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>

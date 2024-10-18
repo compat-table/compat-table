@@ -80,9 +80,11 @@ exports.tests = [
       {
         name: 'early syntax error for unary negation without parens',
         exec: function () {/*
-          if (2 ** 3 !== 8) { return false; }
+          if (2 ** 3 !== 8) {
+            return false;
+          }
           try {
-            function ("-5 ** 2")();
+            Function("-5 ** 2")();
           } catch (e) {
             return true;
           }
@@ -660,7 +662,11 @@ exports.tests = [
         name: 'no line break between async and function',
         exec: function () {/*
           async function a() {}
-          try { function ("async\n function a() {await 0}")(); } catch (e) { return true; }
+          try {
+            Function("async\n function a() {await 0}")();
+          } catch (e) {
+            return true;
+          }
         */},
         res: {
           tr: null,
@@ -793,8 +799,14 @@ exports.tests = [
       {
         name: 'must await a value',
         exec: function () {/*
-          async function a() { await Promise.resolve(); }
-          try { function ("(async function a() { await; }())")(); } catch (e) { return true; }
+          async function a() {
+            await Promise.resolve();
+          }
+          try {
+            Function("(async function a() { await; }())")();
+          } catch (e) {
+            return true;
+          }
         */},
         res: {
           tr: null,
@@ -858,8 +870,14 @@ exports.tests = [
       {
         name: 'cannot await in parameters',
         exec: function () {/*
-          async function a() { await Promise.resolve(); }
-          try { function ("(async function a(b = await Promise.resolve()) {}())")(); } catch (e) { return true; }
+          async function a() {
+            await Promise.resolve();
+          }
+          try {
+            Function("(async function a(b = await Promise.resolve()) {}())")();
+          } catch (e) {
+            return true;
+          }
         */},
         res: {
           tr: null,
@@ -1918,7 +1936,7 @@ exports.tests = [
     exec: function () {/*
       function foo(...a) {}
       try {
-        function ("function bar(...a) {'use strict';}")();
+        Function("function bar(...a) {'use strict';}")();
       } catch (e) {
       return true;
       }
@@ -3861,7 +3879,7 @@ exports.tests = [
     subtests: [{
       name: 'functions created with the Function constructor',
       exec: function () {/*
-        var fn = function ('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+        var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
         var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
         return fn + '' === str;
     */},
@@ -4794,7 +4812,7 @@ exports.tests = [
     subtests: [{
       name: '"globalThis" global property is global object',
       exec: function () {/*
-      var actualGlobal = function ('return this')();
+      var actualGlobal = Function('return this')();
       actualGlobal.__system_global_test__ = 42;
       return typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;
     */},
@@ -4838,7 +4856,7 @@ exports.tests = [
     }, {
       name: '"globalThis" global property has correct property descriptor',
       exec: function () {/*
-      var actualGlobal = function ('return this')();
+      var actualGlobal = Function('return this')();
       if (typeof globalThis !== 'object') { return false; }
       if (!('globalThis' in actualGlobal)) { return false; }
       if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }
