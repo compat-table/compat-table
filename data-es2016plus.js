@@ -8315,6 +8315,8 @@ exports.tests = [
     name: 'Promise.try',
     category: '2025 features',
     significance: 'tiny',
+    spec: 'https://github.com/tc39/proposal-promise-try',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/try',
     exec: function () {/*
       var called = false;
       var argsMatch = false;
@@ -8328,7 +8330,13 @@ exports.tests = [
     */},
     res: {
       chrome128: true,
-      firefox132: firefox.nightly,
+      firefox115: false,
+      firefox131: false,
+      firefox132: {
+        val: 'flagged',
+        note_id: 'ff-promise-try',
+        note_html: 'The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.promise_try</code> setting under <code>about:config</code>.'
+      },
       node23: true,
     }
   }
