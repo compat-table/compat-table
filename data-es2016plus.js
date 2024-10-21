@@ -7428,6 +7428,7 @@ exports.tests = [
     category: '2024 features',
     significance: 'tiny',
     spec: 'https://tc39.es/proposal-promise-with-resolvers/',
+    mdn: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers',
     exec: function () {/*
       var obj = Promise.withResolvers();
       return obj instanceof Object
@@ -7437,6 +7438,7 @@ exports.tests = [
     */},
     res: {
       chrome119: true,
+      firefox115: false,
       firefox121: true,
       node22_0: true,
       safari17_6: true,
