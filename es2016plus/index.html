@@ -47582,10 +47582,10 @@ var p = Promise.try(function () { called = true; })
 var p2 = Promise.try(function () {
   &apos;use strict&apos;;
   argsMatch = this === undefined &amp;&amp; arguments.length === 2 &amp;&amp; args[0] === p &amp;&amp; args[1] === 2;
-}, [p, 2]);
+}, p, 2);
 
 return p instanceof Promise &amp;&amp; called &amp;&amp; argsMatch;
-    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");try{return Function("asyncTestPassed","\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("287");return Function("asyncTestPassed","'use strict';"+"\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, [p, 2]);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+    ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("287");try{return Function("asyncTestPassed","\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, p, 2);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("287");return Function("asyncTestPassed","'use strict';"+"\nvar called = false;\nvar argsMatch = false;\nvar p = Promise.try(function () { called = true; })\nvar p2 = Promise.try(function () {\n  'use strict';\n  argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;\n}, p, 2);\n\nreturn p instanceof Promise && called && argsMatch;\n    ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>

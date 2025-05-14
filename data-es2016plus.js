@@ -8337,7 +8337,7 @@ exports.tests = [
       var p2 = Promise.try(function () {
         'use strict';
         argsMatch = this === undefined && arguments.length === 2 && args[0] === p && args[1] === 2;
-      }, [p, 2]);
+      }, p, 2);
 
       return p instanceof Promise && called && argsMatch;
     */},
