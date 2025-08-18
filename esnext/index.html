@@ -988,6 +988,430 @@ return true;
 <td class="yes" data-browser="opera_mobile77">Yes</td>
 <td class="yes" data-browser="reactnative0_70_3">Yes</td>
 </tr>
+<tr class="supertest" significance="0.25"><td id="test-Map.prototype.upsert"><span><a class="anchor" href="#test-Map.prototype.upsert">&#xA7;</a><a href="https://github.com/tc39/proposal-upsert">Map.prototype.upsert</a></span></td>
+<td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="babel6corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="babel7corejs2" data-tally="0">0/2</td>
+<td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="closure20200927" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20210808" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20210906" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20211006" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20211107" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20220502" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="closure20220719" data-tally="0">0/2</td>
+<td class="tally" data-browser="closure20230228" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript2_9corejs2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="typescript3_9corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript4_9corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript5_6corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript5_7corejs3" data-tally="1">2/2</td>
+<td class="tally obsolete" data-browser="typescript5_8corejs3" data-tally="1">2/2</td>
+<td class="tally" data-browser="typescript5_9corejs3" data-tally="1">2/2</td>
+<td class="tally" data-browser="firefox115" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox128" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox129" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox130" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox131" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox132" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox133" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox134" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox135" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox136" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox137" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox138" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="firefox139" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox140" data-tally="0">0/2</td>
+<td class="tally" data-browser="firefox141" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox142" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="firefox143" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome128" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome129" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome130" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome131" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome132" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome133" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome134" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome135" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome136" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome137" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="chrome138" data-tally="0">0/2</td>
+<td class="tally" data-browser="chrome139" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome140" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="chrome141" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge128" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge129" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge130" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge131" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge132" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge133" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge134" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge135" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge136" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge137" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="edge138" data-tally="0">0/2</td>
+<td class="tally" data-browser="edge139" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="edge140" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari15_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari17_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari18" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari18_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari18_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="safari18_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="safari18_4" data-tally="0">0/2</td>
+<td class="tally" data-browser="safari18_5" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera102" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera103" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera104" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera105" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera106" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera107" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera108" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera109" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera110" data-tally="0">0/2</td>
+<td class="tally" data-browser="opera111" data-tally="0">0/2</td>
+<td class="tally unstable" data-browser="opera112" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="rhino1_7_15" data-tally="0">0/2</td>
+<td class="tally" data-browser="rhino1_8_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="node18_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="node20_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="node22_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="node23_0" data-tally="0">0/2</td>
+<td class="tally" data-browser="node24_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/2</td>
+<td class="tally" data-browser="duktape2_7" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm19_3_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="graalvm21" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm21_3_3" data-tally="0">0/2</td>
+<td class="tally" data-browser="graalvm22_2" data-tally="0">0/2</td>
+<td class="tally" data-browser="hermes0_12_0" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_33" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_34" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="deno1_35" data-tally="0">0/2</td>
+<td class="tally" data-browser="deno1_36" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios12_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios13_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios14_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios16_6" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_1" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_2" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_3" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_4" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_5" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="ios17_6" data-tally="0">0/2</td>
+<td class="tally" data-browser="ios18" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung24" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung25" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="samsung26" data-tally="0">0/2</td>
+<td class="tally" data-browser="samsung27" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile72" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile73" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile74" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile75" data-tally="0">0/2</td>
+<td class="tally obsolete" data-browser="opera_mobile76" data-tally="0">0/2</td>
+<td class="tally" data-browser="opera_mobile77" data-tally="0">0/2</td>
+<td class="tally" data-browser="reactnative0_70_3" data-tally="0">0/2</td>
+</tr>
+<tr class="subtest" data-parent="Map.prototype.upsert" id="test-Map.prototype.upsert_Map.prototype.upsert"><td><span><a class="anchor" href="#test-Map.prototype.upsert_Map.prototype.upsert">&#xA7;</a>Map.prototype.upsert</span><script data-source="
+const map = new Map([[&apos;a&apos;, 1]]);
+if (map.upsert(&apos;a&apos;, it =&gt; 2, () =&gt; 3) !== 2) return false;
+if (map.upsert(&apos;b&apos;, it =&gt; 2, () =&gt; 3) !== 3) return false;
+return Array.from(map).join() === &apos;a,2,b,3&apos;;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown obsolete" data-browser="tr">?</td>
+<td class="no obsolete" data-browser="babel6corejs2">No</td>
+<td class="no obsolete" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
+<td class="unknown obsolete" data-browser="closure20200927">?</td>
+<td class="unknown obsolete" data-browser="closure20210808">?</td>
+<td class="unknown obsolete" data-browser="closure20210906">?</td>
+<td class="unknown obsolete" data-browser="closure20211006">?</td>
+<td class="unknown obsolete" data-browser="closure20211107">?</td>
+<td class="unknown obsolete" data-browser="closure20220502">?</td>
+<td class="unknown obsolete" data-browser="closure20220719">?</td>
+<td class="unknown" data-browser="closure20230228">?</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="no" data-browser="firefox115">No</td>
+<td class="no" data-browser="firefox128">No</td>
+<td class="no obsolete" data-browser="firefox129">No</td>
+<td class="no obsolete" data-browser="firefox130">No</td>
+<td class="no obsolete" data-browser="firefox131">No</td>
+<td class="no obsolete" data-browser="firefox132">No</td>
+<td class="no obsolete" data-browser="firefox133">No</td>
+<td class="no obsolete" data-browser="firefox134">No</td>
+<td class="no obsolete" data-browser="firefox135">No</td>
+<td class="no obsolete" data-browser="firefox136">No</td>
+<td class="no obsolete" data-browser="firefox137">No</td>
+<td class="no obsolete" data-browser="firefox138">No</td>
+<td class="no obsolete" data-browser="firefox139">No</td>
+<td class="no" data-browser="firefox140">No</td>
+<td class="no" data-browser="firefox141">No</td>
+<td class="no unstable" data-browser="firefox142">No</td>
+<td class="no unstable" data-browser="firefox143">No</td>
+<td class="unknown obsolete" data-browser="opera12_10">?</td>
+<td class="no obsolete" data-browser="chrome128">No</td>
+<td class="no obsolete" data-browser="chrome129">No</td>
+<td class="no obsolete" data-browser="chrome130">No</td>
+<td class="no obsolete" data-browser="chrome131">No</td>
+<td class="no obsolete" data-browser="chrome132">No</td>
+<td class="no obsolete" data-browser="chrome133">No</td>
+<td class="no obsolete" data-browser="chrome134">No</td>
+<td class="no obsolete" data-browser="chrome135">No</td>
+<td class="no obsolete" data-browser="chrome136">No</td>
+<td class="no obsolete" data-browser="chrome137">No</td>
+<td class="no obsolete" data-browser="chrome138">No</td>
+<td class="no" data-browser="chrome139">No</td>
+<td class="no unstable" data-browser="chrome140">No</td>
+<td class="no unstable" data-browser="chrome141">No</td>
+<td class="no obsolete" data-browser="edge128">No</td>
+<td class="no obsolete" data-browser="edge129">No</td>
+<td class="no obsolete" data-browser="edge130">No</td>
+<td class="no obsolete" data-browser="edge131">No</td>
+<td class="no obsolete" data-browser="edge132">No</td>
+<td class="no obsolete" data-browser="edge133">No</td>
+<td class="no obsolete" data-browser="edge134">No</td>
+<td class="no obsolete" data-browser="edge135">No</td>
+<td class="no obsolete" data-browser="edge136">No</td>
+<td class="no obsolete" data-browser="edge137">No</td>
+<td class="no obsolete" data-browser="edge138">No</td>
+<td class="no" data-browser="edge139">No</td>
+<td class="no unstable" data-browser="edge140">No</td>
+<td class="unknown obsolete" data-browser="safari15_6">?</td>
+<td class="unknown obsolete" data-browser="safari17_5">?</td>
+<td class="unknown obsolete" data-browser="safari17_6">?</td>
+<td class="unknown obsolete" data-browser="safari18">?</td>
+<td class="unknown obsolete" data-browser="safari18_1">?</td>
+<td class="unknown obsolete" data-browser="safari18_2">?</td>
+<td class="unknown obsolete" data-browser="safari18_3">?</td>
+<td class="unknown" data-browser="safari18_4">?</td>
+<td class="unknown" data-browser="safari18_5">?</td>
+<td class="unknown unstable" data-browser="safaritp">?</td>
+<td class="unknown unstable" data-browser="webkit">?</td>
+<td class="no obsolete" data-browser="opera102">No</td>
+<td class="no obsolete" data-browser="opera103">No</td>
+<td class="no obsolete" data-browser="opera104">No</td>
+<td class="no obsolete" data-browser="opera105">No</td>
+<td class="no obsolete" data-browser="opera106">No</td>
+<td class="no obsolete" data-browser="opera107">No</td>
+<td class="no obsolete" data-browser="opera108">No</td>
+<td class="no obsolete" data-browser="opera109">No</td>
+<td class="no obsolete" data-browser="opera110">No</td>
+<td class="no" data-browser="opera111">No</td>
+<td class="no unstable" data-browser="opera112">No</td>
+<td class="no obsolete" data-browser="rhino1_7_15">No</td>
+<td class="no" data-browser="rhino1_8_0">No</td>
+<td class="unknown obsolete" data-browser="phantom2_1">?</td>
+<td class="no obsolete" data-browser="node18_3">No</td>
+<td class="no" data-browser="node20_0">No</td>
+<td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
+<td class="no" data-browser="node24_0">No</td>
+<td class="no obsolete" data-browser="duktape2_6">No</td>
+<td class="no" data-browser="duktape2_7">No</td>
+<td class="unknown obsolete" data-browser="graalvm19">?</td>
+<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
+<td class="unknown obsolete" data-browser="graalvm20">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm21">?</td>
+<td class="no" data-browser="graalvm21_3_3">No</td>
+<td class="no" data-browser="graalvm22_2">No</td>
+<td class="no" data-browser="hermes0_12_0">No</td>
+<td class="no obsolete" data-browser="deno1_33">No</td>
+<td class="no obsolete" data-browser="deno1_34">No</td>
+<td class="no obsolete" data-browser="deno1_35">No</td>
+<td class="no" data-browser="deno1_36">No</td>
+<td class="unknown obsolete" data-browser="android4_4">?</td>
+<td class="unknown obsolete" data-browser="android4_4_3">?</td>
+<td class="unknown obsolete" data-browser="ios12_2">?</td>
+<td class="unknown obsolete" data-browser="ios13_4">?</td>
+<td class="unknown obsolete" data-browser="ios14_5">?</td>
+<td class="unknown obsolete" data-browser="ios16_6">?</td>
+<td class="unknown obsolete" data-browser="ios17">?</td>
+<td class="unknown obsolete" data-browser="ios17_1">?</td>
+<td class="unknown obsolete" data-browser="ios17_2">?</td>
+<td class="unknown obsolete" data-browser="ios17_3">?</td>
+<td class="unknown obsolete" data-browser="ios17_4">?</td>
+<td class="unknown obsolete" data-browser="ios17_5">?</td>
+<td class="unknown obsolete" data-browser="ios17_6">?</td>
+<td class="unknown" data-browser="ios18">?</td>
+<td class="no obsolete" data-browser="samsung24">No</td>
+<td class="no obsolete" data-browser="samsung25">No</td>
+<td class="no obsolete" data-browser="samsung26">No</td>
+<td class="no" data-browser="samsung27">No</td>
+<td class="no obsolete" data-browser="opera_mobile72">No</td>
+<td class="no obsolete" data-browser="opera_mobile73">No</td>
+<td class="no obsolete" data-browser="opera_mobile74">No</td>
+<td class="no obsolete" data-browser="opera_mobile75">No</td>
+<td class="no obsolete" data-browser="opera_mobile76">No</td>
+<td class="no" data-browser="opera_mobile77">No</td>
+<td class="no" data-browser="reactnative0_70_3">No</td>
+</tr>
+<tr class="subtest" data-parent="Map.prototype.upsert" id="test-Map.prototype.upsert_WeakMap.prototype.upsert"><td><span><a class="anchor" href="#test-Map.prototype.upsert_WeakMap.prototype.upsert">&#xA7;</a>WeakMap.prototype.upsert</span><script data-source="
+const a = {}, b = {};
+const map = new WeakMap([[a, 1]]);
+if (map.upsert(a, it =&gt; 2, () =&gt; 3) !== 2) return false;
+if (map.upsert(b, it =&gt; 2, () =&gt; 3) !== 3) return false;
+return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+</script></td>
+<td class="unknown obsolete" data-browser="tr">?</td>
+<td class="no obsolete" data-browser="babel6corejs2">No</td>
+<td class="no obsolete" data-browser="babel7corejs2">No</td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
+<td class="unknown obsolete" data-browser="closure20200927">?</td>
+<td class="unknown obsolete" data-browser="closure20210808">?</td>
+<td class="unknown obsolete" data-browser="closure20210906">?</td>
+<td class="unknown obsolete" data-browser="closure20211006">?</td>
+<td class="unknown obsolete" data-browser="closure20211107">?</td>
+<td class="unknown obsolete" data-browser="closure20220502">?</td>
+<td class="unknown obsolete" data-browser="closure20220719">?</td>
+<td class="unknown" data-browser="closure20230228">?</td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="no" data-browser="firefox115">No</td>
+<td class="no" data-browser="firefox128">No</td>
+<td class="no obsolete" data-browser="firefox129">No</td>
+<td class="no obsolete" data-browser="firefox130">No</td>
+<td class="no obsolete" data-browser="firefox131">No</td>
+<td class="no obsolete" data-browser="firefox132">No</td>
+<td class="no obsolete" data-browser="firefox133">No</td>
+<td class="no obsolete" data-browser="firefox134">No</td>
+<td class="no obsolete" data-browser="firefox135">No</td>
+<td class="no obsolete" data-browser="firefox136">No</td>
+<td class="no obsolete" data-browser="firefox137">No</td>
+<td class="no obsolete" data-browser="firefox138">No</td>
+<td class="no obsolete" data-browser="firefox139">No</td>
+<td class="no" data-browser="firefox140">No</td>
+<td class="no" data-browser="firefox141">No</td>
+<td class="no unstable" data-browser="firefox142">No</td>
+<td class="no unstable" data-browser="firefox143">No</td>
+<td class="unknown obsolete" data-browser="opera12_10">?</td>
+<td class="no obsolete" data-browser="chrome128">No</td>
+<td class="no obsolete" data-browser="chrome129">No</td>
+<td class="no obsolete" data-browser="chrome130">No</td>
+<td class="no obsolete" data-browser="chrome131">No</td>
+<td class="no obsolete" data-browser="chrome132">No</td>
+<td class="no obsolete" data-browser="chrome133">No</td>
+<td class="no obsolete" data-browser="chrome134">No</td>
+<td class="no obsolete" data-browser="chrome135">No</td>
+<td class="no obsolete" data-browser="chrome136">No</td>
+<td class="no obsolete" data-browser="chrome137">No</td>
+<td class="no obsolete" data-browser="chrome138">No</td>
+<td class="no" data-browser="chrome139">No</td>
+<td class="no unstable" data-browser="chrome140">No</td>
+<td class="no unstable" data-browser="chrome141">No</td>
+<td class="no obsolete" data-browser="edge128">No</td>
+<td class="no obsolete" data-browser="edge129">No</td>
+<td class="no obsolete" data-browser="edge130">No</td>
+<td class="no obsolete" data-browser="edge131">No</td>
+<td class="no obsolete" data-browser="edge132">No</td>
+<td class="no obsolete" data-browser="edge133">No</td>
+<td class="no obsolete" data-browser="edge134">No</td>
+<td class="no obsolete" data-browser="edge135">No</td>
+<td class="no obsolete" data-browser="edge136">No</td>
+<td class="no obsolete" data-browser="edge137">No</td>
+<td class="no obsolete" data-browser="edge138">No</td>
+<td class="no" data-browser="edge139">No</td>
+<td class="no unstable" data-browser="edge140">No</td>
+<td class="unknown obsolete" data-browser="safari15_6">?</td>
+<td class="unknown obsolete" data-browser="safari17_5">?</td>
+<td class="unknown obsolete" data-browser="safari17_6">?</td>
+<td class="unknown obsolete" data-browser="safari18">?</td>
+<td class="unknown obsolete" data-browser="safari18_1">?</td>
+<td class="unknown obsolete" data-browser="safari18_2">?</td>
+<td class="unknown obsolete" data-browser="safari18_3">?</td>
+<td class="unknown" data-browser="safari18_4">?</td>
+<td class="unknown" data-browser="safari18_5">?</td>
+<td class="unknown unstable" data-browser="safaritp">?</td>
+<td class="unknown unstable" data-browser="webkit">?</td>
+<td class="no obsolete" data-browser="opera102">No</td>
+<td class="no obsolete" data-browser="opera103">No</td>
+<td class="no obsolete" data-browser="opera104">No</td>
+<td class="no obsolete" data-browser="opera105">No</td>
+<td class="no obsolete" data-browser="opera106">No</td>
+<td class="no obsolete" data-browser="opera107">No</td>
+<td class="no obsolete" data-browser="opera108">No</td>
+<td class="no obsolete" data-browser="opera109">No</td>
+<td class="no obsolete" data-browser="opera110">No</td>
+<td class="no" data-browser="opera111">No</td>
+<td class="no unstable" data-browser="opera112">No</td>
+<td class="no obsolete" data-browser="rhino1_7_15">No</td>
+<td class="no" data-browser="rhino1_8_0">No</td>
+<td class="unknown obsolete" data-browser="phantom2_1">?</td>
+<td class="no obsolete" data-browser="node18_3">No</td>
+<td class="no" data-browser="node20_0">No</td>
+<td class="no" data-browser="node22_0">No</td>
+<td class="no" data-browser="node23_0">No</td>
+<td class="no" data-browser="node24_0">No</td>
+<td class="no obsolete" data-browser="duktape2_6">No</td>
+<td class="no" data-browser="duktape2_7">No</td>
+<td class="unknown obsolete" data-browser="graalvm19">?</td>
+<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
+<td class="unknown obsolete" data-browser="graalvm20">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
+<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
+<td class="unknown obsolete" data-browser="graalvm21">?</td>
+<td class="no" data-browser="graalvm21_3_3">No</td>
+<td class="no" data-browser="graalvm22_2">No</td>
+<td class="no" data-browser="hermes0_12_0">No</td>
+<td class="no obsolete" data-browser="deno1_33">No</td>
+<td class="no obsolete" data-browser="deno1_34">No</td>
+<td class="no obsolete" data-browser="deno1_35">No</td>
+<td class="no" data-browser="deno1_36">No</td>
+<td class="unknown obsolete" data-browser="android4_4">?</td>
+<td class="unknown obsolete" data-browser="android4_4_3">?</td>
+<td class="unknown obsolete" data-browser="ios12_2">?</td>
+<td class="unknown obsolete" data-browser="ios13_4">?</td>
+<td class="unknown obsolete" data-browser="ios14_5">?</td>
+<td class="unknown obsolete" data-browser="ios16_6">?</td>
+<td class="unknown obsolete" data-browser="ios17">?</td>
+<td class="unknown obsolete" data-browser="ios17_1">?</td>
+<td class="unknown obsolete" data-browser="ios17_2">?</td>
+<td class="unknown obsolete" data-browser="ios17_3">?</td>
+<td class="unknown obsolete" data-browser="ios17_4">?</td>
+<td class="unknown obsolete" data-browser="ios17_5">?</td>
+<td class="unknown obsolete" data-browser="ios17_6">?</td>
+<td class="unknown" data-browser="ios18">?</td>
+<td class="no obsolete" data-browser="samsung24">No</td>
+<td class="no obsolete" data-browser="samsung25">No</td>
+<td class="no obsolete" data-browser="samsung26">No</td>
+<td class="no" data-browser="samsung27">No</td>
+<td class="no obsolete" data-browser="opera_mobile72">No</td>
+<td class="no obsolete" data-browser="opera_mobile73">No</td>
+<td class="no obsolete" data-browser="opera_mobile74">No</td>
+<td class="no obsolete" data-browser="opera_mobile75">No</td>
+<td class="no obsolete" data-browser="opera_mobile76">No</td>
+<td class="no" data-browser="opera_mobile77">No</td>
+<td class="no" data-browser="reactnative0_70_3">No</td>
+</tr>
 <tr class="supertest" significance="0.25"><td id="test-Uint8Array_to/from_base64_and_hex"><span><a class="anchor" href="#test-Uint8Array_to/from_base64_and_hex">&#xA7;</a><a href="https://github.com/tc39/proposal-arraybuffer-base64">Uint8Array to/from base64 and hex</a></span></td>
 <td class="tally obsolete" data-browser="tr" data-tally="0">0/6</td>
 <td class="tally obsolete" data-browser="babel6corejs2" data-tally="0">0/6</td>
@@ -1128,7 +1552,7 @@ return true;
 <tr class="subtest" data-parent="Uint8Array_to/from_base64_and_hex" id="test-Uint8Array_to/from_base64_and_hex_Uint8Array.toBase64()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Uint8Array_to/from_base64_and_hex_Uint8Array.toBase64()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Uint8Array.toBase64() <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 const arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
 return arr.toBase64() === &quot;SGVsbG8gV29ybGQ=&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("6");try{return Function("asyncTestPassed","\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toBase64() === \"SGVsbG8gV29ybGQ=\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("6");return Function("asyncTestPassed","'use strict';"+"\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toBase64() === \"SGVsbG8gV29ybGQ=\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toBase64() === \"SGVsbG8gV29ybGQ=\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toBase64() === \"SGVsbG8gV29ybGQ=\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1150,11 +1574,11 @@ return arr.toBase64() === &quot;SGVsbG8gV29ybGQ=&quot;;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -1271,7 +1695,7 @@ const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 const arr2 = Uint8Array.fromBase64(&quot;SGVsbG8gV29ybGQ=&quot;);
 return arr1.length === arr2.length &amp;&amp;
        arr1.every((element, index) =&gt; element === arr2[index]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("7");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("7");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1293,11 +1717,11 @@ return arr1.length === arr2.length &amp;&amp;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -1415,7 +1839,7 @@ let arr2 = new Uint8Array(16);
 let { read, written } = arr2.setFromBase64(&quot;SGVsbG8gV29ybGQ=&quot;);
 return read == 16 &amp;&amp; written == 11 &amp;&amp;
        arr1.every((element, index) =&gt; element === arr2[index]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("8");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn read == 16 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("8");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn read == 16 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn read == 16 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromBase64(\"SGVsbG8gV29ybGQ=\");\nreturn read == 16 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1437,11 +1861,11 @@ return read == 16 &amp;&amp; written == 11 &amp;&amp;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -1556,7 +1980,7 @@ return read == 16 &amp;&amp; written == 11 &amp;&amp;
 <tr class="subtest" data-parent="Uint8Array_to/from_base64_and_hex" id="test-Uint8Array_to/from_base64_and_hex_Uint8Array.toHex()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;"><td><span><a class="anchor" href="#test-Uint8Array_to/from_base64_and_hex_Uint8Array.toHex()_a_href=_https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex_title=_MDN_documentation_img_src=_../mdn.png_alt=_MDN_(Mozilla_Development_Network)_logo_width=_15_height=_13_/_/a_nbsp;">&#xA7;</a>Uint8Array.toHex() <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex" title="MDN documentation"><img src="../mdn.png" alt="MDN (Mozilla Development Network) logo" width="15" height="13"></a>&#xA0;</span><script data-source="
 const arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);
 return arr.toHex() === &quot;48656c6c6f20576f726c64&quot;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("9");try{return Function("asyncTestPassed","\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toHex() === \"48656c6c6f20576f726c64\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("9");return Function("asyncTestPassed","'use strict';"+"\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toHex() === \"48656c6c6f20576f726c64\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("12");try{return Function("asyncTestPassed","\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toHex() === \"48656c6c6f20576f726c64\";\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("12");return Function("asyncTestPassed","'use strict';"+"\nconst arr = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nreturn arr.toHex() === \"48656c6c6f20576f726c64\";\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1578,11 +2002,11 @@ return arr.toHex() === &quot;48656c6c6f20576f726c64&quot;;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -1699,7 +2123,7 @@ const arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 const arr2 = Uint8Array.fromHex(&quot;48656c6c6f20576f726c64&quot;);
 return arr1.length === arr2.length &amp;&amp;
        arr1.every((element, index) =&gt; element === arr2[index]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("10");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromHex(\"48656c6c6f20576f726c64\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("10");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromHex(\"48656c6c6f20576f726c64\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromHex(\"48656c6c6f20576f726c64\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nconst arr2 = Uint8Array.fromHex(\"48656c6c6f20576f726c64\");\nreturn arr1.length === arr2.length &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1721,11 +2145,11 @@ return arr1.length === arr2.length &amp;&amp;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -1843,7 +2267,7 @@ let arr2 = new Uint8Array(16);
 let { read, written } = arr2.setFromHex(&quot;48656c6c6f20576f726c64&quot;);
 return read == 22 &amp;&amp; written == 11 &amp;&amp;
        arr1.every((element, index) =&gt; element === arr2[index]);
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("11");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromHex(\"48656c6c6f20576f726c64\");\nreturn read == 22 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("11");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromHex(\"48656c6c6f20576f726c64\");\nreturn read == 22 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromHex(\"48656c6c6f20576f726c64\");\nreturn read == 22 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nconst arr1 = new Uint8Array([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]);\nlet arr2 = new Uint8Array(16);\nlet { read, written } = arr2.setFromHex(\"48656c6c6f20576f726c64\");\nreturn read == 22 && written == 11 &&\n       arr1.every((element, index) => element === arr2[index]);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -1865,11 +2289,11 @@ return read == 22 &amp;&amp; written == 11 &amp;&amp;
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
 <td class="no" data-browser="firefox115">No</td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[6]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-uint8-hex-base64-note"><sup>[9]</sup></a></td>
 <td class="yes obsolete" data-browser="firefox133">Yes</td>
 <td class="yes obsolete" data-browser="firefox134">Yes</td>
 <td class="yes obsolete" data-browser="firefox135">Yes</td>
@@ -2129,7 +2553,7 @@ var resource = {
   using _ = resource;
 }
 return resource.disposed
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("13");try{return Function("asyncTestPassed","\nvar resource = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  using _ = resource;\n}\nreturn resource.disposed\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("13");return Function("asyncTestPassed","'use strict';"+"\nvar resource = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  using _ = resource;\n}\nreturn resource.disposed\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar resource = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  using _ = resource;\n}\nreturn resource.disposed\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar resource = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  using _ = resource;\n}\nreturn resource.disposed\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2157,13 +2581,13 @@ return resource.disposed
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -2284,7 +2708,7 @@ var resource2 = {
   for (using _ of [resource1, resource2]);
 }
 return resource1.disposed &amp;&amp; resource2.disposed;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("14");try{return Function("asyncTestPassed","\nvar resource1 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  for (using _ of [resource1, resource2]);\n}\nreturn resource1.disposed && resource2.disposed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("14");return Function("asyncTestPassed","'use strict';"+"\nvar resource1 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  for (using _ of [resource1, resource2]);\n}\nreturn resource1.disposed && resource2.disposed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar resource1 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  for (using _ of [resource1, resource2]);\n}\nreturn resource1.disposed && resource2.disposed;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar resource1 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  [Symbol.dispose]() {\n    this.disposed = true;\n  }\n};\n{\n  for (using _ of [resource1, resource2]);\n}\nreturn resource1.disposed && resource2.disposed;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2312,13 +2736,13 @@ return resource1.disposed &amp;&amp; resource2.disposed;
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -2435,7 +2859,7 @@ return resource1.disposed &amp;&amp; resource2.disposed;
   }
   return resource.disposed &amp;&amp; asyncTestPassed();
 }());
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("15");try{return Function("asyncTestPassed","\n(async function () {\n  var resource = {\n    disposed: false,\n    async [Symbol.asyncDispose]() {\n      this.disposed = true;\n    }\n  };\n  {\n    await using _ = resource;\n  }\n  return resource.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("15");return Function("asyncTestPassed","'use strict';"+"\n(async function () {\n  var resource = {\n    disposed: false,\n    async [Symbol.asyncDispose]() {\n      this.disposed = true;\n    }\n  };\n  {\n    await using _ = resource;\n  }\n  return resource.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\n(async function () {\n  var resource = {\n    disposed: false,\n    async [Symbol.asyncDispose]() {\n      this.disposed = true;\n    }\n  };\n  {\n    await using _ = resource;\n  }\n  return resource.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\n(async function () {\n  var resource = {\n    disposed: false,\n    async [Symbol.asyncDispose]() {\n      this.disposed = true;\n    }\n  };\n  {\n    await using _ = resource;\n  }\n  return resource.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2463,13 +2887,13 @@ return resource1.disposed &amp;&amp; resource2.disposed;
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -2590,7 +3014,7 @@ var resource2 = {
   for (await using _ of [resource1, resource2]);
   return resource1.disposed &amp;&amp; resource2.disposed &amp;&amp; asyncTestPassed();
 }());
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("16");try{return Function("asyncTestPassed","\nvar resource1 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\n(async function () {\n  for (await using _ of [resource1, resource2]);\n  return resource1.disposed && resource2.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("16");return Function("asyncTestPassed","'use strict';"+"\nvar resource1 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\n(async function () {\n  for (await using _ of [resource1, resource2]);\n  return resource1.disposed && resource2.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nvar resource1 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\n(async function () {\n  for (await using _ of [resource1, resource2]);\n  return resource1.disposed && resource2.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nvar resource1 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\nvar resource2 = {\n  disposed: false,\n  async [Symbol.asyncDispose]() {\n    this.disposed = true;\n  }\n};\n(async function () {\n  for (await using _ of [resource1, resource2]);\n  return resource1.disposed && resource2.disposed && asyncTestPassed();\n}());\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2618,13 +3042,13 @@ var resource2 = {
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -2745,7 +3169,7 @@ try {
     &amp;&amp; e.suppressed.suppressed === err3
   );
 }
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("17");try{return Function("asyncTestPassed","\nvar err1 = new Error();\nvar err2 = new Error();\nvar err3 = new Error();\ntry {\n  using _1 = { [Symbol.dispose]() { throw err1 } },\n        _2 = { [Symbol.dispose]() { throw err2 } };\n  throw err3;\n} catch (e) {\n  return (\n    e instanceof SuppressedError\n    && e.error === err1\n    && e.suppressed instanceof SuppressedError\n    && e.suppressed.error === err2\n    && e.suppressed.suppressed === err3\n  );\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("17");return Function("asyncTestPassed","'use strict';"+"\nvar err1 = new Error();\nvar err2 = new Error();\nvar err3 = new Error();\ntry {\n  using _1 = { [Symbol.dispose]() { throw err1 } },\n        _2 = { [Symbol.dispose]() { throw err2 } };\n  throw err3;\n} catch (e) {\n  return (\n    e instanceof SuppressedError\n    && e.error === err1\n    && e.suppressed instanceof SuppressedError\n    && e.suppressed.error === err2\n    && e.suppressed.suppressed === err3\n  );\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nvar err1 = new Error();\nvar err2 = new Error();\nvar err3 = new Error();\ntry {\n  using _1 = { [Symbol.dispose]() { throw err1 } },\n        _2 = { [Symbol.dispose]() { throw err2 } };\n  throw err3;\n} catch (e) {\n  return (\n    e instanceof SuppressedError\n    && e.error === err1\n    && e.suppressed instanceof SuppressedError\n    && e.suppressed.error === err2\n    && e.suppressed.suppressed === err3\n  );\n}\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nvar err1 = new Error();\nvar err2 = new Error();\nvar err3 = new Error();\ntry {\n  using _1 = { [Symbol.dispose]() { throw err1 } },\n        _2 = { [Symbol.dispose]() { throw err2 } };\n  throw err3;\n} catch (e) {\n  return (\n    e instanceof SuppressedError\n    && e.error === err1\n    && e.suppressed instanceof SuppressedError\n    && e.suppressed.error === err2\n    && e.suppressed.suppressed === err3\n  );\n}\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2773,13 +3197,13 @@ try {
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -2898,7 +3322,7 @@ return (
   &amp;&amp; resource2.disposed &amp;&amp; deferred === undefined
   &amp;&amp; resource3.disposed &amp;&amp; used === resource3
 );
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("18");try{return Function("asyncTestPassed","\nvar stack1 = new DisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, [Symbol.dispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, function (r) { r.disposed = true });\nvar deferred = stack1.defer(function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.dispose();\nreturn (\n  resource1.disposed && adopted === resource1\n  && resource2.disposed && deferred === undefined\n  && resource3.disposed && used === resource3\n);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("18");return Function("asyncTestPassed","'use strict';"+"\nvar stack1 = new DisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, [Symbol.dispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, function (r) { r.disposed = true });\nvar deferred = stack1.defer(function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.dispose();\nreturn (\n  resource1.disposed && adopted === resource1\n  && resource2.disposed && deferred === undefined\n  && resource3.disposed && used === resource3\n);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("21");try{return Function("asyncTestPassed","\nvar stack1 = new DisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, [Symbol.dispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, function (r) { r.disposed = true });\nvar deferred = stack1.defer(function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.dispose();\nreturn (\n  resource1.disposed && adopted === resource1\n  && resource2.disposed && deferred === undefined\n  && resource3.disposed && used === resource3\n);\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("21");return Function("asyncTestPassed","'use strict';"+"\nvar stack1 = new DisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, [Symbol.dispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, function (r) { r.disposed = true });\nvar deferred = stack1.defer(function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.dispose();\nreturn (\n  resource1.disposed && adopted === resource1\n  && resource2.disposed && deferred === undefined\n  && resource3.disposed && used === resource3\n);\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -2926,13 +3350,13 @@ return (
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -3051,7 +3475,7 @@ stack2.disposeAsync().then(function () {
   resource3.disposed &amp;&amp; used === resource3 &amp;&amp;
   asyncTestPassed();
 });
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("19");try{return Function("asyncTestPassed","\nvar stack1 = new AsyncDisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, async [Symbol.asyncDispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, async function (r) { r.disposed = true });\nvar deferred = stack1.defer(async function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.disposeAsync().then(function () {\n  resource1.disposed && adopted === resource1 &&\n  resource2.disposed && deferred === undefined &&\n  resource3.disposed && used === resource3 &&\n  asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("19");return Function("asyncTestPassed","'use strict';"+"\nvar stack1 = new AsyncDisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, async [Symbol.asyncDispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, async function (r) { r.disposed = true });\nvar deferred = stack1.defer(async function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.disposeAsync().then(function () {\n  resource1.disposed && adopted === resource1 &&\n  resource2.disposed && deferred === undefined &&\n  resource3.disposed && used === resource3 &&\n  asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nvar stack1 = new AsyncDisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, async [Symbol.asyncDispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, async function (r) { r.disposed = true });\nvar deferred = stack1.defer(async function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.disposeAsync().then(function () {\n  resource1.disposed && adopted === resource1 &&\n  resource2.disposed && deferred === undefined &&\n  resource3.disposed && used === resource3 &&\n  asyncTestPassed();\n});\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nvar stack1 = new AsyncDisposableStack();\nvar resource1 = { disposed: false };\nvar resource2 = { disposed: false };\nvar resource3 = { disposed: false, async [Symbol.asyncDispose]() { this.disposed = true } };\nvar adopted = stack1.adopt(resource1, async function (r) { r.disposed = true });\nvar deferred = stack1.defer(async function (r) { resource2.disposed = true });\nvar stack2 = stack1.move();\nvar used = stack2.use(resource3);\nstack2.disposeAsync().then(function () {\n  resource1.disposed && adopted === resource1 &&\n  resource2.disposed && deferred === undefined &&\n  resource3.disposed && used === resource3 &&\n  asyncTestPassed();\n});\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -3079,13 +3503,13 @@ stack2.disposeAsync().then(function () {
 <td class="no obsolete" data-browser="firefox131">No</td>
 <td class="no obsolete" data-browser="firefox132">No</td>
 <td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[7]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-explicit-resource-management-note"><sup>[10]</sup></a></td>
 <td class="yes" data-browser="firefox141">Yes</td>
 <td class="yes unstable" data-browser="firefox142">Yes</td>
 <td class="yes unstable" data-browser="firefox143">Yes</td>
@@ -3196,7 +3620,7 @@ return typeof ShadowRealm === &quot;function&quot;
   &amp;&amp; [&quot;evaluate&quot;, &quot;importValue&quot;].every(function(key){
     return key in ShadowRealm.prototype;
   });
-  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("20");try{return Function("asyncTestPassed","\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("20");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
+  ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nreturn typeof ShadowRealm === \"function\"\n  && [\"evaluate\", \"importValue\"].every(function(key){\n    return key in ShadowRealm.prototype;\n  });\n  ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
 </script></td>
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="unknown obsolete" data-browser="babel6corejs2">?</td>
@@ -3217,23 +3641,23 @@ return typeof ShadowRealm === &quot;function&quot;
 <td class="unknown obsolete" data-browser="typescript5_7corejs3">?</td>
 <td class="unknown obsolete" data-browser="typescript5_8corejs3">?</td>
 <td class="unknown" data-browser="typescript5_9corejs3">?</td>
-<td class="no flagged" data-browser="firefox115">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox133">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged" data-browser="firefox141">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox142">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
-<td class="no flagged unstable" data-browser="firefox143">Flag<a href="#ff-shadow-realm-note"><sup>[8]</sup></a></td>
+<td class="no flagged" data-browser="firefox115">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged" data-browser="firefox128">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox130">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox131">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox132">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox133">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox134">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox135">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox136">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox137">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox138">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged obsolete" data-browser="firefox139">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged" data-browser="firefox140">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged" data-browser="firefox141">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox142">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
+<td class="no flagged unstable" data-browser="firefox143">Flag<a href="#ff-shadow-realm-note"><sup>[11]</sup></a></td>
 <td class="no obsolete" data-browser="opera12_10">No</td>
 <td class="no obsolete" data-browser="chrome128">No</td>
 <td class="no obsolete" data-browser="chrome129">No</td>
@@ -3301,430 +3725,6 @@ return typeof ShadowRealm === &quot;function&quot;
 <td class="no obsolete" data-browser="graalvm20_3">No</td>
 <td class="no obsolete" data-browser="graalvm20_3_1">No</td>
 <td class="no obsolete" data-browser="graalvm21">No</td>
-<td class="no" data-browser="graalvm21_3_3">No</td>
-<td class="no" data-browser="graalvm22_2">No</td>
-<td class="no" data-browser="hermes0_12_0">No</td>
-<td class="no obsolete" data-browser="deno1_33">No</td>
-<td class="no obsolete" data-browser="deno1_34">No</td>
-<td class="no obsolete" data-browser="deno1_35">No</td>
-<td class="no" data-browser="deno1_36">No</td>
-<td class="unknown obsolete" data-browser="android4_4">?</td>
-<td class="unknown obsolete" data-browser="android4_4_3">?</td>
-<td class="unknown obsolete" data-browser="ios12_2">?</td>
-<td class="unknown obsolete" data-browser="ios13_4">?</td>
-<td class="unknown obsolete" data-browser="ios14_5">?</td>
-<td class="unknown obsolete" data-browser="ios16_6">?</td>
-<td class="unknown obsolete" data-browser="ios17">?</td>
-<td class="unknown obsolete" data-browser="ios17_1">?</td>
-<td class="unknown obsolete" data-browser="ios17_2">?</td>
-<td class="unknown obsolete" data-browser="ios17_3">?</td>
-<td class="unknown obsolete" data-browser="ios17_4">?</td>
-<td class="unknown obsolete" data-browser="ios17_5">?</td>
-<td class="unknown obsolete" data-browser="ios17_6">?</td>
-<td class="unknown" data-browser="ios18">?</td>
-<td class="no obsolete" data-browser="samsung24">No</td>
-<td class="no obsolete" data-browser="samsung25">No</td>
-<td class="no obsolete" data-browser="samsung26">No</td>
-<td class="no" data-browser="samsung27">No</td>
-<td class="no obsolete" data-browser="opera_mobile72">No</td>
-<td class="no obsolete" data-browser="opera_mobile73">No</td>
-<td class="no obsolete" data-browser="opera_mobile74">No</td>
-<td class="no obsolete" data-browser="opera_mobile75">No</td>
-<td class="no obsolete" data-browser="opera_mobile76">No</td>
-<td class="no" data-browser="opera_mobile77">No</td>
-<td class="no" data-browser="reactnative0_70_3">No</td>
-</tr>
-<tr class="supertest" significance="0.25"><td id="test-Map.prototype.upsert"><span><a class="anchor" href="#test-Map.prototype.upsert">&#xA7;</a><a href="https://github.com/tc39/proposal-upsert">Map.prototype.upsert</a></span></td>
-<td class="tally obsolete" data-browser="tr" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="babel6corejs2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="babel7corejs2" data-tally="0">0/2</td>
-<td class="tally" data-browser="babel7corejs3" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="closure20200927" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20210808" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20210906" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20211006" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20211107" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20220502" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="closure20220719" data-tally="0">0/2</td>
-<td class="tally" data-browser="closure20230228" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="typescript2_9corejs2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="typescript3_9corejs3" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript4_9corejs3" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript5_6corejs3" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript5_7corejs3" data-tally="1">2/2</td>
-<td class="tally obsolete" data-browser="typescript5_8corejs3" data-tally="1">2/2</td>
-<td class="tally" data-browser="typescript5_9corejs3" data-tally="1">2/2</td>
-<td class="tally" data-browser="firefox115" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox128" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox129" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox130" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox131" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox132" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox133" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox134" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox135" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox136" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox137" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox138" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="firefox139" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox140" data-tally="0">0/2</td>
-<td class="tally" data-browser="firefox141" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox142" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="firefox143" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera12_10" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome128" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome129" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome130" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome131" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome132" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome133" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome134" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome135" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome136" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome137" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="chrome138" data-tally="0">0/2</td>
-<td class="tally" data-browser="chrome139" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="chrome140" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="chrome141" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge128" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge129" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge130" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge131" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge132" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge133" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge134" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge135" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge136" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge137" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="edge138" data-tally="0">0/2</td>
-<td class="tally" data-browser="edge139" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="edge140" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari15_6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari17_5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari17_6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari18" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari18_1" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari18_2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="safari18_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari18_4" data-tally="0">0/2</td>
-<td class="tally" data-browser="safari18_5" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="safaritp" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="webkit" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera102" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera103" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera104" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera105" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera106" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera107" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera108" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera109" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera110" data-tally="0">0/2</td>
-<td class="tally" data-browser="opera111" data-tally="0">0/2</td>
-<td class="tally unstable" data-browser="opera112" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="rhino1_7_15" data-tally="0">0/2</td>
-<td class="tally" data-browser="rhino1_8_0" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="phantom2_1" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="node18_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="node20_0" data-tally="0">0/2</td>
-<td class="tally" data-browser="node22_0" data-tally="0">0/2</td>
-<td class="tally" data-browser="node23_0" data-tally="0">0/2</td>
-<td class="tally" data-browser="node24_0" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="duktape2_6" data-tally="0">0/2</td>
-<td class="tally" data-browser="duktape2_7" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm19" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm19_3_6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm20" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm20_1" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm20_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm20_3_1" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="graalvm21" data-tally="0">0/2</td>
-<td class="tally" data-browser="graalvm21_3_3" data-tally="0">0/2</td>
-<td class="tally" data-browser="graalvm22_2" data-tally="0">0/2</td>
-<td class="tally" data-browser="hermes0_12_0" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="deno1_33" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="deno1_34" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="deno1_35" data-tally="0">0/2</td>
-<td class="tally" data-browser="deno1_36" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android4_4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="android4_4_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios12_2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios13_4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios14_5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios16_6" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_1" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_2" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_3" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_4" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_5" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="ios17_6" data-tally="0">0/2</td>
-<td class="tally" data-browser="ios18" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung24" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung25" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="samsung26" data-tally="0">0/2</td>
-<td class="tally" data-browser="samsung27" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera_mobile72" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera_mobile73" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera_mobile74" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera_mobile75" data-tally="0">0/2</td>
-<td class="tally obsolete" data-browser="opera_mobile76" data-tally="0">0/2</td>
-<td class="tally" data-browser="opera_mobile77" data-tally="0">0/2</td>
-<td class="tally" data-browser="reactnative0_70_3" data-tally="0">0/2</td>
-</tr>
-<tr class="subtest" data-parent="Map.prototype.upsert" id="test-Map.prototype.upsert_Map.prototype.upsert"><td><span><a class="anchor" href="#test-Map.prototype.upsert_Map.prototype.upsert">&#xA7;</a>Map.prototype.upsert</span><script data-source="
-const map = new Map([[&apos;a&apos;, 1]]);
-if (map.upsert(&apos;a&apos;, it =&gt; 2, () =&gt; 3) !== 2) return false;
-if (map.upsert(&apos;b&apos;, it =&gt; 2, () =&gt; 3) !== 3) return false;
-return Array.from(map).join() === &apos;a,2,b,3&apos;;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("22");try{return Function("asyncTestPassed","\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("22");return Function("asyncTestPassed","'use strict';"+"\nconst map = new Map([['a', 1]]);\nif (map.upsert('a', it => 2, () => 3) !== 2) return false;\nif (map.upsert('b', it => 2, () => 3) !== 3) return false;\nreturn Array.from(map).join() === 'a,2,b,3';\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="unknown obsolete" data-browser="tr">?</td>
-<td class="no obsolete" data-browser="babel6corejs2">No</td>
-<td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
-<td class="unknown obsolete" data-browser="closure20200927">?</td>
-<td class="unknown obsolete" data-browser="closure20210808">?</td>
-<td class="unknown obsolete" data-browser="closure20210906">?</td>
-<td class="unknown obsolete" data-browser="closure20211006">?</td>
-<td class="unknown obsolete" data-browser="closure20211107">?</td>
-<td class="unknown obsolete" data-browser="closure20220502">?</td>
-<td class="unknown obsolete" data-browser="closure20220719">?</td>
-<td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="firefox115">No</td>
-<td class="no" data-browser="firefox128">No</td>
-<td class="no obsolete" data-browser="firefox129">No</td>
-<td class="no obsolete" data-browser="firefox130">No</td>
-<td class="no obsolete" data-browser="firefox131">No</td>
-<td class="no obsolete" data-browser="firefox132">No</td>
-<td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no obsolete" data-browser="firefox134">No</td>
-<td class="no obsolete" data-browser="firefox135">No</td>
-<td class="no obsolete" data-browser="firefox136">No</td>
-<td class="no obsolete" data-browser="firefox137">No</td>
-<td class="no obsolete" data-browser="firefox138">No</td>
-<td class="no obsolete" data-browser="firefox139">No</td>
-<td class="no" data-browser="firefox140">No</td>
-<td class="no" data-browser="firefox141">No</td>
-<td class="no unstable" data-browser="firefox142">No</td>
-<td class="no unstable" data-browser="firefox143">No</td>
-<td class="unknown obsolete" data-browser="opera12_10">?</td>
-<td class="no obsolete" data-browser="chrome128">No</td>
-<td class="no obsolete" data-browser="chrome129">No</td>
-<td class="no obsolete" data-browser="chrome130">No</td>
-<td class="no obsolete" data-browser="chrome131">No</td>
-<td class="no obsolete" data-browser="chrome132">No</td>
-<td class="no obsolete" data-browser="chrome133">No</td>
-<td class="no obsolete" data-browser="chrome134">No</td>
-<td class="no obsolete" data-browser="chrome135">No</td>
-<td class="no obsolete" data-browser="chrome136">No</td>
-<td class="no obsolete" data-browser="chrome137">No</td>
-<td class="no obsolete" data-browser="chrome138">No</td>
-<td class="no" data-browser="chrome139">No</td>
-<td class="no unstable" data-browser="chrome140">No</td>
-<td class="no unstable" data-browser="chrome141">No</td>
-<td class="no obsolete" data-browser="edge128">No</td>
-<td class="no obsolete" data-browser="edge129">No</td>
-<td class="no obsolete" data-browser="edge130">No</td>
-<td class="no obsolete" data-browser="edge131">No</td>
-<td class="no obsolete" data-browser="edge132">No</td>
-<td class="no obsolete" data-browser="edge133">No</td>
-<td class="no obsolete" data-browser="edge134">No</td>
-<td class="no obsolete" data-browser="edge135">No</td>
-<td class="no obsolete" data-browser="edge136">No</td>
-<td class="no obsolete" data-browser="edge137">No</td>
-<td class="no obsolete" data-browser="edge138">No</td>
-<td class="no" data-browser="edge139">No</td>
-<td class="no unstable" data-browser="edge140">No</td>
-<td class="unknown obsolete" data-browser="safari15_6">?</td>
-<td class="unknown obsolete" data-browser="safari17_5">?</td>
-<td class="unknown obsolete" data-browser="safari17_6">?</td>
-<td class="unknown obsolete" data-browser="safari18">?</td>
-<td class="unknown obsolete" data-browser="safari18_1">?</td>
-<td class="unknown obsolete" data-browser="safari18_2">?</td>
-<td class="unknown obsolete" data-browser="safari18_3">?</td>
-<td class="unknown" data-browser="safari18_4">?</td>
-<td class="unknown" data-browser="safari18_5">?</td>
-<td class="unknown unstable" data-browser="safaritp">?</td>
-<td class="unknown unstable" data-browser="webkit">?</td>
-<td class="no obsolete" data-browser="opera102">No</td>
-<td class="no obsolete" data-browser="opera103">No</td>
-<td class="no obsolete" data-browser="opera104">No</td>
-<td class="no obsolete" data-browser="opera105">No</td>
-<td class="no obsolete" data-browser="opera106">No</td>
-<td class="no obsolete" data-browser="opera107">No</td>
-<td class="no obsolete" data-browser="opera108">No</td>
-<td class="no obsolete" data-browser="opera109">No</td>
-<td class="no obsolete" data-browser="opera110">No</td>
-<td class="no" data-browser="opera111">No</td>
-<td class="no unstable" data-browser="opera112">No</td>
-<td class="no obsolete" data-browser="rhino1_7_15">No</td>
-<td class="no" data-browser="rhino1_8_0">No</td>
-<td class="unknown obsolete" data-browser="phantom2_1">?</td>
-<td class="no obsolete" data-browser="node18_3">No</td>
-<td class="no" data-browser="node20_0">No</td>
-<td class="no" data-browser="node22_0">No</td>
-<td class="no" data-browser="node23_0">No</td>
-<td class="no" data-browser="node24_0">No</td>
-<td class="no obsolete" data-browser="duktape2_6">No</td>
-<td class="no" data-browser="duktape2_7">No</td>
-<td class="unknown obsolete" data-browser="graalvm19">?</td>
-<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
-<td class="unknown obsolete" data-browser="graalvm20">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
-<td class="unknown obsolete" data-browser="graalvm21">?</td>
-<td class="no" data-browser="graalvm21_3_3">No</td>
-<td class="no" data-browser="graalvm22_2">No</td>
-<td class="no" data-browser="hermes0_12_0">No</td>
-<td class="no obsolete" data-browser="deno1_33">No</td>
-<td class="no obsolete" data-browser="deno1_34">No</td>
-<td class="no obsolete" data-browser="deno1_35">No</td>
-<td class="no" data-browser="deno1_36">No</td>
-<td class="unknown obsolete" data-browser="android4_4">?</td>
-<td class="unknown obsolete" data-browser="android4_4_3">?</td>
-<td class="unknown obsolete" data-browser="ios12_2">?</td>
-<td class="unknown obsolete" data-browser="ios13_4">?</td>
-<td class="unknown obsolete" data-browser="ios14_5">?</td>
-<td class="unknown obsolete" data-browser="ios16_6">?</td>
-<td class="unknown obsolete" data-browser="ios17">?</td>
-<td class="unknown obsolete" data-browser="ios17_1">?</td>
-<td class="unknown obsolete" data-browser="ios17_2">?</td>
-<td class="unknown obsolete" data-browser="ios17_3">?</td>
-<td class="unknown obsolete" data-browser="ios17_4">?</td>
-<td class="unknown obsolete" data-browser="ios17_5">?</td>
-<td class="unknown obsolete" data-browser="ios17_6">?</td>
-<td class="unknown" data-browser="ios18">?</td>
-<td class="no obsolete" data-browser="samsung24">No</td>
-<td class="no obsolete" data-browser="samsung25">No</td>
-<td class="no obsolete" data-browser="samsung26">No</td>
-<td class="no" data-browser="samsung27">No</td>
-<td class="no obsolete" data-browser="opera_mobile72">No</td>
-<td class="no obsolete" data-browser="opera_mobile73">No</td>
-<td class="no obsolete" data-browser="opera_mobile74">No</td>
-<td class="no obsolete" data-browser="opera_mobile75">No</td>
-<td class="no obsolete" data-browser="opera_mobile76">No</td>
-<td class="no" data-browser="opera_mobile77">No</td>
-<td class="no" data-browser="reactnative0_70_3">No</td>
-</tr>
-<tr class="subtest" data-parent="Map.prototype.upsert" id="test-Map.prototype.upsert_WeakMap.prototype.upsert"><td><span><a class="anchor" href="#test-Map.prototype.upsert_WeakMap.prototype.upsert">&#xA7;</a>WeakMap.prototype.upsert</span><script data-source="
-const a = {}, b = {};
-const map = new WeakMap([[a, 1]]);
-if (map.upsert(a, it =&gt; 2, () =&gt; 3) !== 2) return false;
-if (map.upsert(b, it =&gt; 2, () =&gt; 3) !== 3) return false;
-return map.get(a) === 2 &amp;&amp; map.get(b) === 3;
-      ">test(function(){try{var asyncTestPassed=global.__asyncPassedFn && __asyncPassedFn("23");try{return Function("asyncTestPassed","\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)}catch(e){asyncTestPassed=global.__strictAsyncPassedFn && __strictAsyncPassedFn("23");return Function("asyncTestPassed","'use strict';"+"\nconst a = {}, b = {};\nconst map = new WeakMap([[a, 1]]);\nif (map.upsert(a, it => 2, () => 3) !== 2) return false;\nif (map.upsert(b, it => 2, () => 3) !== 3) return false;\nreturn map.get(a) === 2 && map.get(b) === 3;\n      ")(asyncTestPassed)&&"Strict"}}catch(e){return false;}}());
-</script></td>
-<td class="unknown obsolete" data-browser="tr">?</td>
-<td class="no obsolete" data-browser="babel6corejs2">No</td>
-<td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
-<td class="unknown obsolete" data-browser="closure20200927">?</td>
-<td class="unknown obsolete" data-browser="closure20210808">?</td>
-<td class="unknown obsolete" data-browser="closure20210906">?</td>
-<td class="unknown obsolete" data-browser="closure20211006">?</td>
-<td class="unknown obsolete" data-browser="closure20211107">?</td>
-<td class="unknown obsolete" data-browser="closure20220502">?</td>
-<td class="unknown obsolete" data-browser="closure20220719">?</td>
-<td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="no" data-browser="firefox115">No</td>
-<td class="no" data-browser="firefox128">No</td>
-<td class="no obsolete" data-browser="firefox129">No</td>
-<td class="no obsolete" data-browser="firefox130">No</td>
-<td class="no obsolete" data-browser="firefox131">No</td>
-<td class="no obsolete" data-browser="firefox132">No</td>
-<td class="no obsolete" data-browser="firefox133">No</td>
-<td class="no obsolete" data-browser="firefox134">No</td>
-<td class="no obsolete" data-browser="firefox135">No</td>
-<td class="no obsolete" data-browser="firefox136">No</td>
-<td class="no obsolete" data-browser="firefox137">No</td>
-<td class="no obsolete" data-browser="firefox138">No</td>
-<td class="no obsolete" data-browser="firefox139">No</td>
-<td class="no" data-browser="firefox140">No</td>
-<td class="no" data-browser="firefox141">No</td>
-<td class="no unstable" data-browser="firefox142">No</td>
-<td class="no unstable" data-browser="firefox143">No</td>
-<td class="unknown obsolete" data-browser="opera12_10">?</td>
-<td class="no obsolete" data-browser="chrome128">No</td>
-<td class="no obsolete" data-browser="chrome129">No</td>
-<td class="no obsolete" data-browser="chrome130">No</td>
-<td class="no obsolete" data-browser="chrome131">No</td>
-<td class="no obsolete" data-browser="chrome132">No</td>
-<td class="no obsolete" data-browser="chrome133">No</td>
-<td class="no obsolete" data-browser="chrome134">No</td>
-<td class="no obsolete" data-browser="chrome135">No</td>
-<td class="no obsolete" data-browser="chrome136">No</td>
-<td class="no obsolete" data-browser="chrome137">No</td>
-<td class="no obsolete" data-browser="chrome138">No</td>
-<td class="no" data-browser="chrome139">No</td>
-<td class="no unstable" data-browser="chrome140">No</td>
-<td class="no unstable" data-browser="chrome141">No</td>
-<td class="no obsolete" data-browser="edge128">No</td>
-<td class="no obsolete" data-browser="edge129">No</td>
-<td class="no obsolete" data-browser="edge130">No</td>
-<td class="no obsolete" data-browser="edge131">No</td>
-<td class="no obsolete" data-browser="edge132">No</td>
-<td class="no obsolete" data-browser="edge133">No</td>
-<td class="no obsolete" data-browser="edge134">No</td>
-<td class="no obsolete" data-browser="edge135">No</td>
-<td class="no obsolete" data-browser="edge136">No</td>
-<td class="no obsolete" data-browser="edge137">No</td>
-<td class="no obsolete" data-browser="edge138">No</td>
-<td class="no" data-browser="edge139">No</td>
-<td class="no unstable" data-browser="edge140">No</td>
-<td class="unknown obsolete" data-browser="safari15_6">?</td>
-<td class="unknown obsolete" data-browser="safari17_5">?</td>
-<td class="unknown obsolete" data-browser="safari17_6">?</td>
-<td class="unknown obsolete" data-browser="safari18">?</td>
-<td class="unknown obsolete" data-browser="safari18_1">?</td>
-<td class="unknown obsolete" data-browser="safari18_2">?</td>
-<td class="unknown obsolete" data-browser="safari18_3">?</td>
-<td class="unknown" data-browser="safari18_4">?</td>
-<td class="unknown" data-browser="safari18_5">?</td>
-<td class="unknown unstable" data-browser="safaritp">?</td>
-<td class="unknown unstable" data-browser="webkit">?</td>
-<td class="no obsolete" data-browser="opera102">No</td>
-<td class="no obsolete" data-browser="opera103">No</td>
-<td class="no obsolete" data-browser="opera104">No</td>
-<td class="no obsolete" data-browser="opera105">No</td>
-<td class="no obsolete" data-browser="opera106">No</td>
-<td class="no obsolete" data-browser="opera107">No</td>
-<td class="no obsolete" data-browser="opera108">No</td>
-<td class="no obsolete" data-browser="opera109">No</td>
-<td class="no obsolete" data-browser="opera110">No</td>
-<td class="no" data-browser="opera111">No</td>
-<td class="no unstable" data-browser="opera112">No</td>
-<td class="no obsolete" data-browser="rhino1_7_15">No</td>
-<td class="no" data-browser="rhino1_8_0">No</td>
-<td class="unknown obsolete" data-browser="phantom2_1">?</td>
-<td class="no obsolete" data-browser="node18_3">No</td>
-<td class="no" data-browser="node20_0">No</td>
-<td class="no" data-browser="node22_0">No</td>
-<td class="no" data-browser="node23_0">No</td>
-<td class="no" data-browser="node24_0">No</td>
-<td class="no obsolete" data-browser="duktape2_6">No</td>
-<td class="no" data-browser="duktape2_7">No</td>
-<td class="unknown obsolete" data-browser="graalvm19">?</td>
-<td class="unknown obsolete" data-browser="graalvm19_3_6">?</td>
-<td class="unknown obsolete" data-browser="graalvm20">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_1">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_3">?</td>
-<td class="unknown obsolete" data-browser="graalvm20_3_1">?</td>
-<td class="unknown obsolete" data-browser="graalvm21">?</td>
 <td class="no" data-browser="graalvm21_3_3">No</td>
 <td class="no" data-browser="graalvm22_2">No</td>
 <td class="no" data-browser="hermes0_12_0">No</td>
@@ -4637,7 +4637,7 @@ return !Array.isTemplateObject([])
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -4646,13 +4646,13 @@ return !Array.isTemplateObject([])
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
@@ -4914,7 +4914,7 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -4923,13 +4923,13 @@ return (async function*() {})() instanceof AsyncIterator;
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -5056,7 +5056,7 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5065,13 +5065,13 @@ return instance[Symbol.asyncIterator]() === instance;
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -5208,7 +5208,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5217,13 +5217,13 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
@@ -5360,7 +5360,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5369,13 +5369,13 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
@@ -5512,7 +5512,7 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5521,13 +5521,13 @@ toArray(iterator).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
@@ -5660,7 +5660,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5669,13 +5669,13 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -5802,7 +5802,7 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5811,13 +5811,13 @@ toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -5950,7 +5950,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -5959,13 +5959,13 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6092,7 +6092,7 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6101,13 +6101,13 @@ toArray(async function*() { yield * [1, 2, 3] }().filter(it =&gt; it % 2)).then(
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6240,7 +6240,7 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6249,13 +6249,13 @@ toArray(async function*() { yield * [1, 2, 3] }().flatMap(it =&gt; [it, 0])).the
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6383,7 +6383,7 @@ let result = &apos;&apos;;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6392,13 +6392,13 @@ let result = &apos;&apos;;
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6531,7 +6531,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6540,13 +6540,13 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6673,7 +6673,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6682,13 +6682,13 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6815,7 +6815,7 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6824,13 +6824,13 @@ toArray(async function*() { yield * [1, 2, 3] }().map(it =&gt; it * it)).then(it
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -6963,7 +6963,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -6972,13 +6972,13 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -7105,7 +7105,7 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -7114,13 +7114,13 @@ toArray(async function*() { yield * [1, 2, 3] }().take(2)).then(it =&gt; {
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no flagged" data-browser="firefox128">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
 <td class="no flagged obsolete" data-browser="firefox129">Flag<a href="#ff-async-iterator-helpers-note"><sup>[12]</sup></a></td>
@@ -7245,7 +7245,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown obsolete" data-browser="tr">?</td>
 <td class="no obsolete" data-browser="babel6corejs2">No</td>
 <td class="no obsolete" data-browser="babel7corejs2">No</td>
-<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[9]</sup></a></td>
+<td class="yes" data-browser="babel7corejs3">Yes<a href="#babel-core-js-note"><sup>[6]</sup></a></td>
 <td class="unknown obsolete" data-browser="closure20200927">?</td>
 <td class="unknown obsolete" data-browser="closure20210808">?</td>
 <td class="unknown obsolete" data-browser="closure20210906">?</td>
@@ -7254,13 +7254,13 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
 <td class="unknown obsolete" data-browser="closure20220502">?</td>
 <td class="unknown obsolete" data-browser="closure20220719">?</td>
 <td class="unknown" data-browser="closure20230228">?</td>
-<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[10]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
-<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[11]</sup></a></td>
+<td class="no needs-polyfill-or-native obsolete" title="Requires native support or a polyfill." data-browser="typescript2_9corejs2">?<a href="#typescript-es6-note"><sup>[7]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript3_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript4_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_6corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_7corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes obsolete" data-browser="typescript5_8corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
+<td class="yes" data-browser="typescript5_9corejs3">Yes<a href="#typescript-core-js-note"><sup>[8]</sup></a></td>
 <td class="no" data-browser="firefox115">No</td>
 <td class="no" data-browser="firefox128">No</td>
 <td class="no obsolete" data-browser="firefox129">No</td>
@@ -7382,7 +7382,7 @@ return AsyncIterator.prototype[Symbol.toStringTag] === &apos;AsyncIterator&apos;
     </table>
     <div id="footnotes">
       <!-- FOOTNOTES -->
-    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-decorators-legacy-note">  <sup>[5]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="ff-uint8-hex-base64-note">  <sup>[6]</sup> The feature has to be enabled via <code>javascript.options.experimental.uint8array_base64</code> setting under <code>about:config</code>.</p><p id="ff-explicit-resource-management-note">  <sup>[7]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.explicit_resource_management</code> setting under <code>about:config</code>.</p><p id="ff-shadow-realm-note">  <sup>[8]</sup> The feature has to be enabled via <code>javascript.options.experimental.shadow_realms</code> setting under <code>about:config</code>.</p><p id="babel-core-js-note">  <sup>[9]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[10]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[11]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="ff-async-iterator-helpers-note">  <sup>[12]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.async_iterator_helpers</code> setting under <code>about:config</code>.</p></div>
+    <p id="harmony-flag-old-note">  <sup>[1]</sup> Flagged features have to be enabled via <code>--harmony</code> flag</p><p id="harmony-flag-note">  <sup>[2]</sup> Flagged features have to be enabled via <code>--harmony</code> or <code>--es_staging</code> flag</p><p id="graalvm-node-mode-note">  <sup>[3]</sup> Executed in Node.js/JVM mode via <code>graalvm/bin/node --jvm</code>.</p><p id="graalvm-js-intl-mode-note">  <sup>[4]</sup> Executed using <code>js --js.intl-402</code>.</p><p id="babel-decorators-legacy-note">  <sup>[5]</sup> Babel 6 still has no official support decorators, but you can use <a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">this plugin</a>.</p><p id="babel-core-js-note">  <sup>[6]</sup> This feature is supported when using Babel with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="typescript-es6-note">  <sup>[7]</sup> TypeScript&apos;s compiler will accept code using this feature if the <code>--target ES6</code> flag is set, but passes it through unmodified and does not supply a runtime polyfill.</p><p id="typescript-core-js-note">  <sup>[8]</sup> This feature is supported when using TypeScript with <a href="https://github.com/zloirock/core-js">core-js</a>.</p><p id="ff-uint8-hex-base64-note">  <sup>[9]</sup> The feature has to be enabled via <code>javascript.options.experimental.uint8array_base64</code> setting under <code>about:config</code>.</p><p id="ff-explicit-resource-management-note">  <sup>[10]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.explicit_resource_management</code> setting under <code>about:config</code>.</p><p id="ff-shadow-realm-note">  <sup>[11]</sup> The feature has to be enabled via <code>javascript.options.experimental.shadow_realms</code> setting under <code>about:config</code>.</p><p id="ff-async-iterator-helpers-note">  <sup>[12]</sup> The feature is only available on Nightly builds, and has to be enabled via <code>javascript.options.experimental.async_iterator_helpers</code> setting under <code>about:config</code>.</p></div>
   </div>
   <pre class="info-tooltip" style="display:none"></pre>
 </body>

@@ -288,7 +288,7 @@ exports.tests = [
 },
 {
   name: 'Map.prototype.upsert',
-  category: STAGE27,
+  category: STAGE3,
   significance: 'small',
   spec: 'https://github.com/tc39/proposal-upsert',
   subtests: [
