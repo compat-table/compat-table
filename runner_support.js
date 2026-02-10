@@ -1,5 +1,20 @@
 /* jshint esversion: 11 */
-var fs = require('fs');
+const fs = require('fs');
+const { parseArgs } =  require('node:util');
+
+const {
+  values,
+} = parseArgs({
+	strict: false,
+	options: {
+		update: {
+			type: 'boolean',
+			short: 'u',
+            default: false,
+		},
+	},
+});
+
 var createIterableHelper = require('./test-utils/testHelpers').createIterableHelper;
 
 function getKeys(key, family, environments) {
@@ -108,13 +123,12 @@ exports.runTests = function runTests(runner, key, family, options) {
 
     // Run test / subtests, recursively.  Report results, indicate data files
     // which are out of date.
-    function runTest(parents, test) {
+    function runTest(parents, test, recordedResults) {
         if (!testName || (test.name.indexOf(testName) !== -1 || parents.some(function (p) { return p.indexOf(testName) !== -1; }))) {
             var testPath = parents.join(' -> ') + ' -> ' + test.name;
-
             var evalcode = testCode(test.exec);
+            var actual = 'skip';
 
-            var actual;
             if (evalcode) {
                 var script = '';
                 if (/\blacksGlobal\b/.test(evalcode)) {
@@ -177,10 +191,7 @@ exports.runTests = function runTests(runner, key, family, options) {
                 fs.writeFileSync(testFilename, script);
 
                 actual = runner(testFilename, parents[0]);
-            } else {
-                actual = 'skip';
             }
-
 
             if (actual !== 'skip') {
                 testCount++;
@@ -189,28 +200,34 @@ exports.runTests = function runTests(runner, key, family, options) {
                     testSuccess++;
                 }
 
-                if (test.res) {
+                if (recordedResults) {
                     // Take expected result from newest engine version not newer
                     // than current version.
                     var expect;
+
                     keyList.forEach(function (k) {
-                        if (test.res[k] !== undefined) {
-                            expect = test.res[k];
+                        if (recordedResults[k] !== undefined) {
+                            expect = recordedResults[k];
                         }
                     });
 
-                    if (resultsMatch(expect, actual)) {
-                        // Matches.
-                    } else if (expect === undefined) {
+                    if (!resultsMatch(expect, actual)) {
                         testOutOfDate++;
-                        console.log(testPath + ': test result missing, res: ' + JSON.stringify(expect) + ', actual: ' + JSON.stringify(actual));
-                    } else {
-                        testOutOfDate++;
-                        console.log(testPath + ': test result out of date, res: ' + JSON.stringify(expect) + ', actual: ' + JSON.stringify(actual));
+
+                        var msg = expect === undefined
+                            ? ': test result missing, expected: '
+                            : ': test result out of date, expected: ';
+
+                        console.log(testPath + msg + JSON.stringify(expect) + ', actual: ' + JSON.stringify(actual));
+
+                        if (values.update) {
+                            recordedResults[key] = actual;
+                        }
                     }
                 } else {
                     testOutOfDate++;
-                    console.log(testPath + ': test.res missing');
+
+                    console.log(testPath + ': not test result recorded yet');
                 }
             }
         }
@@ -223,13 +240,22 @@ exports.runTests = function runTests(runner, key, family, options) {
             var newParents = parents.concat(test.name);
 
             test.subtests.forEach(function (subtest) {
-                runTest(newParents, subtest);
+                // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
+                let result = recordedResults.hasOwnProperty(subtest.name)
+                    ? recordedResults[subtest.name]
+                    : null;
+
+                if (values.update && !result) {
+                    result = recordedResults[subtest.name] = {};
+                }
+
+                runTest(newParents, subtest, result);
             });
         }
     }
 
     fs.readdirSync('.').forEach(function (filename) {
-        var datafile = /^data-(.*)\.js$/.exec(filename);
+        var datafile = /^test-(.*)\.js$/.exec(filename);
         if (!datafile) {
             return;
         }
@@ -243,12 +269,29 @@ exports.runTests = function runTests(runner, key, family, options) {
         console.log('**** ' + suitename + ' ****');
         console.log('');
 
-        var testsuite = require('./data-' + suitename + '.js');
+        var testsuite = require('./test-' + suitename + '.js');
+        const results = require('./results-' + suitename);
+
         testsuite.tests.forEach(function (test) {
-            runTest([ suitename ], test);
+            // important to use .hasOwnProperty as some tests have a name equal to prototype properties, like __defineGetter__ for example
+            let result = results.hasOwnProperty(test.name) ? results[test.name] : null;
+
+            if (values.update && !result) {
+                result = results[test.name] = {};
+            }
+
+            runTest([ suitename ], test, result);
         });
+
+        if (values.update) {
+            fs.writeFileSync(
+                `results-${suitename}.json`, 
+                JSON.stringify(results, null, '\t'),
+                'utf8'
+            );
+        }
     });
 
     console.log(testCount + ' tests executed: ' + testSuccess + ' success, ' + (testCount - testSuccess) + ' fail');
-    console.log(testOutOfDate + ' tests are out of date (data-*.js file .res)');
+    console.log(testOutOfDate + ' tests are out of date');
 };
