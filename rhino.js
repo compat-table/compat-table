@@ -1,18 +1,22 @@
 /*
- *  Node.js test runner for running data-*.js tests with Rhino's interpreter (use rhino-all.jar distribution).
+ * Node.js test runner for running test-*.js tests with Rhino's interpreter (use rhino-all.jar distribution).
  * 
- *  If the environment variable JAVA_HOME is defined it will use it to
- *  construct the path to 'java' as $JAVA_HOME/bin/java
+ * If the environment variable JAVA_HOME is defined it will use it to
+ * construct the path to 'java' as $JAVA_HOME/bin/java
+ * 
+ * Expects a 'rhino.jar' file in this directory
  *
- *  Reports discrepancies to console; fix them manually in data-*.js files.
- *  Expects a 'rhino.jar' file in this directory. Example:
+ * Discrepancies will be reported in the console
+ * Either update the results-*.js files manually or use the -u/--update flag.
  *
- *    $ node rhino.js
+ * $ node rhino.js
+ * or
+ * $ node rhino.js -u
  *
- *  Any syntax tested that is unsupported by Rhino will output to stderr. To make the
- *  output of this file more useful, redirect stderr to /dev/null or elsewhere. Example:
+ * Any syntax tested that is unsupported by Rhino will output to stderr. To make the
+ * output of this file more useful, redirect stderr to /dev/null or elsewhere. Example:
  *
- *    $ node rhino.js 2>/dev/null
+ * $ node rhino.js 2>/dev/null
  */
 
 var fs = require('fs');
@@ -35,7 +39,7 @@ function executeScript(scriptName) {
     });
 }
 
-// Key for .res (e.g. test.res.rhino1_7_13), automatic based on rhino version.
+// Key against which the results will be stored (e.g. rhino1_7_13), automatic based on rhino version.
 var rhinoKey = (function () {
     var script = 'print(org.mozilla.javascript.ImplementationVersion.get());\n' +
                  'quit()\n';
@@ -47,7 +51,7 @@ var rhinoKey = (function () {
     var match = stdout.match(/Rhino (\d+)\.(\d+)\.(\d+)/);
     return 'rhino' + match[1] + "_" + match[2] + "_" + match[3];
 })();
-console.log('rhino result key is: test.res.' + rhinoKey);
+console.log('rhino result key is: ' + rhinoKey);
 
 function rhinoRunner(testFilename) {
     try {
