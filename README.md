@@ -1,9 +1,9 @@
 ECMAScript compatibility tables
 ==================================================
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kangax/compat-table?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.ru)](https://gitter.im/kangax/compat-table.ru)(utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge.ru)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kangax/es5-compat-table/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge.ru](https://d2weczhvl823v0.cloudfront.net/kangax/es5-compat-table/trend.ru)](https://bitdeli.com/free "Bitdeli Badge")
 
 Editing the tests
 -----------------
@@ -12,7 +12,7 @@ Edit the `data-es5.js`, `data-es6.js`, `data-esnext.js`, or `data-non-standard.j
 
 The ES6 tests themselves should be written in pure ES3, *except* for the sole ES6 feature being tested (as well as any ES5 features strictly required to use the ES6 feature). ES Next tests may use any ES5 features that they wish, and only the ES6 features strictly required to use the ES Next feature.
 
-The test code is placed in multi-line comments (as in [this hack](http://tomasz.janczuk.org/2013/05/multi-line-strings-in-javascript-and.html)), so that Node.js can parse the data scripts without throwing syntax errors when encountering features it does not support. The `build.js` script will wrap the code in an `eval` call inside a `try`, so the tests themselves do not need to catch errors that non-supporting platforms may throw.
+The test code is placed in multi-line comments (as in [this hack](http://tomasz.janczuk.org/2013/05/multi-line-strings-in-javascript-and.ru)), so that Node.js can parse the data scripts without throwing syntax errors when encountering features it does not support. The `build.js` script will wrap the code in an `eval` call inside a `try`, so the tests themselves do not need to catch errors that non-supporting platforms may throw.
 
 Most tests have a `significance` rating, which affects how a platform's total support percentage is calculated. A test rated `"large"` (representing a landmark, transformative feature) is worth 1, one rated `"medium"` (representing a significant feature that's less universally useful, or is primarily connected to another feature) is worth 0.5, and one rated `"small"` (representing a useful but subtle improvement from the previous spec) is worth 0.25. `"tiny"` (0.125) should be reserved for very meager changes (such as changes to an existing function's parameters or side-effects) that nonetheless don't fall under the category of another feature.
 
