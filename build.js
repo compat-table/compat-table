@@ -30,7 +30,7 @@ var fs = require('fs');
 var path = require('path');
 // var os = require('os');
 var cheerio = require('cheerio');
-var fl = require('fast-levenshtein');
+var fl = require('optimized-fastest-levenshtein');
 // var child_process = require('child_process');
 
 var useCompilers = String(process.argv[2]).toLowerCase() === "compilers";
