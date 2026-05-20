@@ -1855,6 +1855,7 @@ exports.tests = [
      */},
   res: {
     ie11: false,
+    firefox140: false,
     safari10_1: true,
     safari11_1: false,
     safaritp: false,
