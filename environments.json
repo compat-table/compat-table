@@ -4285,7 +4285,7 @@
     "short": "Edge 139",
     "equals": "chrome139",
     "release": "2025-08-07",
-    "obsolete": true
+    "obsolete": "very"
   },
   "edge140": {
     "full": "Microsoft Edge 140",
@@ -4373,13 +4373,21 @@
     "short": "Edge 150",
     "equals": "chrome150",
     "release": "2026-07-02",
-    "obsolete": false
+    "obsolete": true
   },
   "edge151": {
-    "full": "Microsoft Edge 151 Beta",
+    "full": "Microsoft Edge 151",
     "family": "V8",
     "short": "Edge 151",
     "equals": "chrome151",
+    "release": "2026-07-30",
+    "obsolete": false
+  },
+  "edge152": {
+    "full": "Microsoft Edge 152 Beta",
+    "family": "V8",
+    "short": "Edge 152",
+    "equals": "chrome152",
     "unstable": true
   },
   "safari1": {
