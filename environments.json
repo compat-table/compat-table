@@ -2400,22 +2400,30 @@
     "short": "FF 154",
     "release": "2026-08-18",
     "retire": "2026-09-01",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox155": {
-    "full": "Firefox 155 Beta",
+    "full": "Firefox 155",
     "family": "SpiderMonkey",
     "short": "FF 155",
     "release": "2026-09-01",
     "retire": "2026-09-15",
-    "unstable": true
+    "obsolete": false
   },
   "firefox156": {
-    "full": "Firefox 156 Nightly",
+    "full": "Firefox 156 Beta",
     "family": "SpiderMonkey",
     "short": "FF 156",
     "release": "2026-09-15",
     "retire": "2026-09-29",
+    "unstable": true
+  },
+  "firefox157": {
+    "full": "Firefox 157 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 157",
+    "release": "2026-09-29",
+    "retire": "2026-10-13",
     "unstable": true
   },
   "opera7": {
