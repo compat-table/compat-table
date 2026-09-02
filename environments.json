@@ -2088,7 +2088,7 @@
     "family": "SpiderMonkey",
     "short": "FF 115 ESR",
     "release": "2023-07-04",
-    "retire": "2026-08-18",
+    "retire": "2027-03-01",
     "obsolete": false
   },
   "firefox116": {
@@ -2265,7 +2265,7 @@
     "short": "FF 137",
     "release": "2025-04-01",
     "retire": "2025-04-29",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox138": {
     "full": "Firefox 138",
@@ -2273,7 +2273,7 @@
     "short": "FF 138",
     "release": "2025-04-29",
     "retire": "2025-05-27",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox139": {
     "full": "Firefox 139",
@@ -2281,7 +2281,7 @@
     "short": "FF 139",
     "release": "2025-05-27",
     "retire": "2025-06-24",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox140": {
     "full": "Firefox 140 Extended Support Release",
@@ -2297,7 +2297,7 @@
     "short": "FF 141",
     "release": "2025-07-22",
     "retire": "2025-08-19",
-    "obsolete": true
+    "obsolete": "very"
   },
   "firefox142": {
     "full": "Firefox 142",
@@ -2369,22 +2369,61 @@
     "short": "FF 150",
     "release": "2026-04-21",
     "retire": "2026-05-19",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox151": {
-    "full": "Firefox 151 Beta",
+    "full": "Firefox 151",
     "family": "SpiderMonkey",
     "short": "FF 151",
     "release": "2026-05-19",
     "retire": "2026-06-16",
-    "unstable": true
+    "obsolete": true
   },
   "firefox152": {
-    "full": "Firefox 152 Nightly",
+    "full": "Firefox 152",
     "family": "SpiderMonkey",
     "short": "FF 152",
     "release": "2026-06-16",
     "retire": "2026-07-21",
+    "obsolete": true
+  },
+  "firefox153": {
+    "full": "Firefox 153 Extended Support Release",
+    "family": "SpiderMonkey",
+    "short": "FF 153 ESR",
+    "release": "2026-07-21",
+    "obsolete": false
+  },
+  "firefox154": {
+    "full": "Firefox 154",
+    "family": "SpiderMonkey",
+    "short": "FF 154",
+    "release": "2026-08-18",
+    "retire": "2026-09-01",
+    "obsolete": true
+  },
+  "firefox155": {
+    "full": "Firefox 155",
+    "family": "SpiderMonkey",
+    "short": "FF 155",
+    "release": "2026-09-01",
+    "retire": "2026-09-15",
+    "obsolete": false
+  },
+  "firefox156": {
+    "full": "Firefox 156 Beta",
+    "family": "SpiderMonkey",
+    "short": "FF 156",
+    "release": "2026-09-15",
+    "retire": "2026-09-29",
+    "unstable": true
+  },
+  "firefox157": {
+    "full": "Firefox 157 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 157",
+    "release": "2026-09-29",
+    "retire": "2026-10-13",
     "unstable": true
   },
   "opera7": {
