@@ -2432,22 +2432,30 @@
     "short": "FF 158",
     "release": "2026-10-13",
     "retire": "2026-10-27",
-    "obsolete": false
+    "obsolete": true
   },
   "firefox159": {
-    "full": "Firefox 159 Beta",
+    "full": "Firefox 159",
     "family": "SpiderMonkey",
     "short": "FF 159",
     "release": "2026-10-27",
     "retire": "2026-11-10",
-    "unstable": true
+    "obsolete": false
   },
   "firefox160": {
-    "full": "Firefox 160 Nightly",
+    "full": "Firefox 160 Beta",
     "family": "SpiderMonkey",
     "short": "FF 160",
     "release": "2026-11-10",
     "retire": "2026-11-24",
+    "unstable": true
+  },
+  "firefox161": {
+    "full": "Firefox 161 Nightly",
+    "family": "SpiderMonkey",
+    "short": "FF 161",
+    "release": "2026-11-24",
+    "retire": "2026-12-08",
     "unstable": true
   },
   "opera7": {
